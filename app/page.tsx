@@ -36,13 +36,16 @@ const leagueRoles: LeagueRoles[] = [
 export default function Home() {
   const [gameTimer, setGameTimer] = useState<number | null>(null);
   const [elapsedTime, setElapsedTime] = useState<number>(0);
-  const [isSummonerIsTimed, setIsSummonerIsTimed] = useState({
+  const [isSummonerIsTimed, setIsSummonerIsTimed] = useState<{
+    [key: string]: boolean;
+  }>({
     TOP: false,
     JUNGLE: false,
     MID: false,
     SUPPORT: false,
     ADC: false,
   });
+
   const [cooldownTimers, setCooldownTimers] = useState<{
     [key: string]: string;
   }>({});
