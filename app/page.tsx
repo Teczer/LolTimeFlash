@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Input } from "@/components/ui/input";
+import { IoIosCopy } from "react-icons/io";
+import { useToast } from "@/components/ui/use-toast";
 
 interface LeagueRoles {
   name: string;
@@ -34,6 +37,8 @@ const leagueRoles: LeagueRoles[] = [
 ];
 
 export default function Home() {
+  const { toast } = useToast();
+
   const [gameTimer, setGameTimer] = useState<number | null>(null);
   const [elapsedTime, setElapsedTime] = useState<number>(0);
   const [isSummonerIsTimed, setIsSummonerIsTimed] = useState<{
@@ -45,10 +50,10 @@ export default function Home() {
     SUPPORT: false,
     ADC: false,
   });
-
   const [cooldownTimers, setCooldownTimers] = useState<{
     [key: string]: string;
   }>({});
+  const [copyPasteTimer, setCopyPasteTimer] = useState<string | null>(null);
 
   function startGame() {
     setGameTimer(new Date().getTime());
@@ -79,6 +84,16 @@ export default function Home() {
     }, 1000);
 
     setIsSummonerIsTimed((prevState) => ({ ...prevState, [role]: true }));
+
+    // Calcul de l'heure de fin du cooldown
+    const endCooldownTime = new Date(gameTimer + 5 * 60 * 1000);
+    const endCooldownHour = endCooldownTime.getHours();
+    const endCooldownMinutes = endCooldownTime.getMinutes();
+    const formattedEndCooldownTime = `${role}${endCooldownHour}:${String(
+      endCooldownMinutes
+    ).padStart(2, "0")}`;
+
+    setCopyPasteTimer(formattedEndCooldownTime);
   }
 
   useEffect(() => {
@@ -138,6 +153,28 @@ export default function Home() {
           Start Game
         </Button>
       )}
+      <div className="flex justify-center items-center gap-4">
+        <Input
+          type="text"
+          placeholder="Flash Timer"
+          value={copyPasteTimer || ""}
+          readOnly
+        />
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={() => {
+            if (copyPasteTimer) {
+              navigator.clipboard.writeText(copyPasteTimer);
+              toast({
+                title: "Your text has been copied to your clipboard!",
+              });
+            }
+          }}
+        >
+          <IoIosCopy className="h-4 w-4" />
+        </Button>
+      </div>
     </main>
   );
 }
