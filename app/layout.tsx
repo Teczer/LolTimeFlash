@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${GeistSans.variable} ${GeistMono.variable}`} lang="en">
+    <html className={`${GeistSans.className} ${GeistMono.className}`} lang="en">
       <body>
         <div className="image-bg">
           <Toaster />

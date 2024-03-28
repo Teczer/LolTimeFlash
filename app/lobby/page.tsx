@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -7,7 +9,6 @@ import {
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 
-import Link from "next/link";
 import { RxTrackPrevious } from "react-icons/rx";
 import { GoMoveToEnd } from "react-icons/go";
 
@@ -19,6 +20,7 @@ export default function Home() {
           <RxTrackPrevious className="h-4 w-4" />
         </Button>
       </Link>
+      {/* CREATE LOBBY */}
       <div className="flex flex-col justify-center items-center gap-4 sm:gap-8">
         <h1 className="text-xl">Create a Lobby</h1>
         <p className="text-sm">Choose a private room number</p>

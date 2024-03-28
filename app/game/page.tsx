@@ -1,14 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { IoIosCopy } from "react-icons/io";
 import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@/components/ui/toast";
-import Link from "next/link";
+
+import { cn } from "@/lib/utils";
+
+import { IoIosCopy } from "react-icons/io";
 import { RxTrackPrevious } from "react-icons/rx";
 
 interface LeagueRoles {
@@ -60,6 +64,9 @@ export default function Home() {
 
   function startGame() {
     setGameTimer(new Date().getTime());
+    toast({
+      title: "Your game has been started !",
+    });
   }
 
   function startFlashCooldown(role: string) {
@@ -214,6 +221,13 @@ export default function Home() {
           <IoIosCopy className="h-4 w-4" />
         </Button>
       </div>
+      {gameTimer ? (
+        <Button variant="outline" className="" onClick={startGame}>
+          Restart Game
+        </Button>
+      ) : (
+        <p></p>
+      )}
     </main>
   );
 }
