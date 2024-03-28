@@ -23,6 +23,7 @@ export default function Home() {
       <Link href={"/game"}>
         <Button variant="outline">Solo Lobby</Button>
       </Link>
+      <p className="fixed text-xs bottom-8">Designed and built by @Teczer_</p>
     </main>
   );
 }
