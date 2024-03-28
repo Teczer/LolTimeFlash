@@ -13,7 +13,7 @@ import { GoMoveToEnd } from "react-icons/go";
 
 export default function Home() {
   return (
-    <main className="font-mono flex justify-center items-center gap-28 min-h-screen">
+    <main className="font-mono flex justify-around items-center min-h-screen">
       <Link className="fixed top-10 left-20" href={"/"}>
         <Button variant="outline" size="icon">
           <RxTrackPrevious className="h-4 w-4" />
@@ -37,7 +37,7 @@ export default function Home() {
         </InputOTP>
         <Button variant="outline">Random Generate</Button>
       </div>
-      <div className="w-[1px] h-[500px] bg-border"></div>
+      <div className="w-[1px] h-[500px] bg-slate-500"></div>
       {/* JOIN LOBBY */}
       <div className="flex flex-col justify-center items-center gap-8">
         <h1 className="text-xl">Join a Lobby</h1>
