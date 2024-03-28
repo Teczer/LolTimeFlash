@@ -86,17 +86,23 @@ export default function Home() {
 
     setIsSummonerIsTimed((prevState) => ({ ...prevState, [role]: true }));
 
-    // Calcul de l'heure de fin du cooldown
-    const endCooldownTime = new Date(gameTimer + 5 * 60 * 1000);
-    const endCooldownHour = endCooldownTime.getHours();
-    const endCooldownMinutes = endCooldownTime.getMinutes();
-    const formattedEndCooldownTime = `${role}${endCooldownHour}:${String(
-      endCooldownMinutes
-    ).padStart(2, "0")}`;
+    // Ajout de 5 minutes à elapsedTime
+    const elapsedTimeInSeconds = elapsedTime + 5 * 60;
 
-    setCopyPasteTimer(formattedEndCooldownTime);
+    // Conversion en minutes et secondes
+    const minutes = Math.floor(elapsedTimeInSeconds / 60);
+    const seconds = elapsedTimeInSeconds % 60;
+
+    // Formatage de l'heure
+    const formattedTime = `${role}${minutes}:${String(seconds).padStart(
+      2,
+      "0"
+    )}`;
+
+    setCopyPasteTimer(formattedTime);
   }
 
+  // COUNTDOWN
   useEffect(() => {
     let interval: NodeJS.Timeout;
 
@@ -110,6 +116,16 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, [gameTimer]);
+
+  // AUTO PAST
+  useEffect(() => {
+    if (copyPasteTimer) {
+      navigator.clipboard.writeText(copyPasteTimer);
+      toast({
+        title: "Your text has been copied to your clipboard!",
+      });
+    }
+  }, [copyPasteTimer]);
 
   return (
     <main className="font-mono flex flex-col justify-center items-center gap-24 min-h-screen">
