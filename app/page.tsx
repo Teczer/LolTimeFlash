@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="font-mono flex flex-col justify-center items-center gap-24 min-h-screen">
-      <h1 className="text-3xl font-bold textstroke">
+      <h1 className="text-2xl font-bold textstroke sm:text-3xl">
         Welcome to LolTimeFlash!
       </h1>
       <Link href={"/lobby"}>

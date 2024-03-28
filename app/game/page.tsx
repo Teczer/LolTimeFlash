@@ -130,8 +130,8 @@ export default function Home() {
   }, [copyPasteTimer]);
 
   return (
-    <main className="font-mono flex flex-col justify-center items-center gap-24 min-h-screen">
-      <Link className="fixed top-10 left-20" href={"/"}>
+    <main className="min-h-screen font-mono flex flex-col justify-center items-center gap-14 sm:gap-24">
+      <Link className="fixed top-6 left-6 sm:top-10 sm:left-20" href={"/"}>
         <Button variant="outline" size="icon">
           <RxTrackPrevious className="h-4 w-4" />
         </Button>
