@@ -13,6 +13,7 @@ import { CiImageOn } from "react-icons/ci";
 import Image from "next/image";
 import { Input } from "../input";
 import { Button } from "../button";
+import { useRouter } from "next/navigation";
 
 // Définition des types
 type ChampionName = string;
@@ -23,7 +24,7 @@ const ChangeCoverButton: React.FC = () => {
     []
   );
   const [searchQuery, setSearchQuery] = useState<string>("");
-
+  const router = useRouter();
   useEffect(() => {
     // Appel à la fonction fetchChampions une seule fois après le rendu initial
     fetchChampions();
@@ -119,16 +120,15 @@ const ChangeCoverButton: React.FC = () => {
               </div>
               <ul className="w-full h-full flex flex-row flex-wrap justify-center items-start gap-6">
                 {/* Boucle à travers les skins d'un champion et affichage de leurs images */}
-                {[0, 1].map((skinNum: number) => (
+                {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((skinNum: number) => (
                   <li
                     key={skinNum}
                     onClick={() => {
-                      console.log("championName", championName);
-                      console.log("skinNum", skinNum);
                       localStorage.setItem(
                         "cover-bg",
                         `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_${skinNum}.jpg`
                       );
+                      location.reload();
                     }}
                   >
                     <Image

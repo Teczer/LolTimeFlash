@@ -13,8 +13,12 @@ const WrapperBackground = ({ children }: { children: React.ReactNode }) => {
 
     if (userCoverBackground) {
       setSelectedCover(userCoverBackground);
+    } else {
+      setSelectedCover(
+        "https://cdnb.artstation.com/p/assets/images/images/004/656/221/large/chengwei-pan-diana1.jpg?1485328717"
+      );
     }
-  }, [selectedCover]);
+  }, []);
 
   if (!selectedCover) return null;
 
