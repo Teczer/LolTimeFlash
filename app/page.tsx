@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { IoIosCopy } from "react-icons/io";
 import { useToast } from "@/components/ui/use-toast";
+import { ToastAction } from "@/components/ui/toast";
 
 interface LeagueRoles {
   name: string;
@@ -111,8 +112,8 @@ export default function Home() {
   }, [gameTimer]);
 
   return (
-    <main className="flex flex-col justify-center items-center gap-24 min-h-screen">
-      <div className="w-full flex justify-around items-center">
+    <main className="font-mono flex flex-col justify-center items-center gap-24 min-h-screen">
+      <div className="w-full flex flex-wrap items-center justify-center sm:flex sm:justify-around sm:items-center">
         {leagueRoles.map((role, index) => (
           <div
             className="flex flex-col justify-center items-center gap-4"
@@ -120,10 +121,26 @@ export default function Home() {
           >
             <button
               className="transition-all hover:scale-110"
-              onClick={() => startFlashCooldown(role.name)}
+              onClick={() => {
+                if (gameTimer === 0) {
+                  toast({
+                    variant: "destructive",
+                    title: "You have to start game before !",
+                    description:
+                      "How you would time your flash if you don't start the game ?",
+                    action: (
+                      <ToastAction onClick={startGame} altText="Try again">
+                        Start Game
+                      </ToastAction>
+                    ),
+                  });
+                  return;
+                }
+                startFlashCooldown(role.name);
+              }}
             >
               <Image
-                className={cn("object-cover", {
+                className={cn("w-28 object-cover sm:w-48", {
                   "filter brightness-50": isSummonerIsTimed[role.name] === true,
                 })}
                 width={600}
@@ -149,12 +166,13 @@ export default function Home() {
             .padStart(2, "0")}`}</p>
         </div>
       ) : (
-        <Button variant="outline" className="w-1/6" onClick={startGame}>
+        <Button variant="outline" className="" onClick={startGame}>
           Start Game
         </Button>
       )}
       <div className="flex justify-center items-center gap-4">
         <Input
+          className="font-sans"
           type="text"
           placeholder="Flash Timer"
           value={copyPasteTimer || ""}

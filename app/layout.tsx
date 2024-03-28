@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
-const inter = Inter({ subsets: ["latin"] });
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "LolTimeFlash",
@@ -17,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html className={`${GeistSans.variable} ${GeistMono.variable}`} lang="en">
+      <body>
         <div className="image-bg">
           <Toaster />
           <div className="min-h-screen max-w-screen-lg mx-auto">{children}</div>
