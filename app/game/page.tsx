@@ -173,7 +173,7 @@ export default function Home() {
               />
             </button>
             {isSummonerIsTimed[role.name] && (
-              <p className="absolute text-2xl font-bold">
+              <p className="absolute text-2xl font-bold textstroke">
                 {cooldownTimers[role.name]}
               </p>
             )}
@@ -182,11 +182,9 @@ export default function Home() {
       </div>
       {gameTimer ? (
         <div>
-          <p className="text-lg font-bold">{`${Math.floor(elapsedTime / 60)}:${(
-            elapsedTime % 60
-          )
-            .toString()
-            .padStart(2, "0")}`}</p>
+          <p className="text-lg font-bold textstroke">{`${Math.floor(
+            elapsedTime / 60
+          )}:${(elapsedTime % 60).toString().padStart(2, "0")}`}</p>
         </div>
       ) : (
         <Button variant="outline" className="" onClick={startGame}>
