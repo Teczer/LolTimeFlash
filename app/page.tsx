@@ -7,13 +7,15 @@ import ChangeCoverButton from "@/components/ui/dialogcover";
 export default function Home() {
   return (
     <main className="font-mono flex flex-col justify-center items-center gap-24 min-h-screen">
-      <ChangeCoverButton />
+      <div className="hidden sm:block">
+        <ChangeCoverButton />
+      </div>
       <div className="flex justify-center items-center gap-4">
-        <h1 className="text-2xl font-bold textstroke sm:text-3xl">
+        <h1 className="text-xl font-bold textstroke sm:text-3xl">
           Welcome to LolTimeFlash!
         </h1>
         <Image
-          className="w-20 object-cover rounded-md rotate-6"
+          className="w-10 object-cover rounded-md rotate-6 sm:w-20"
           width={500}
           height={500}
           src={"/flash-icon.webp"}
