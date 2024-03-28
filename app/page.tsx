@@ -16,30 +16,30 @@ interface LeagueRoles {
 const leagueRoles: LeagueRoles[] = [
   {
     name: "TOP",
-    src: "https://ih1.redbubble.net/image.2355783081.2767/st,small,507x507-pad,600x600,f8f8f8.jpg",
+    src: "/toprole-icon.png",
   },
   {
     name: "JUNGLE",
-    src: "https://ih1.redbubble.net/image.2354146454.1555/st,small,507x507-pad,600x600,f8f8f8.jpg",
+    src: "/junglerole-icon.png",
   },
   {
     name: "MID",
-    src: "https://ih1.redbubble.net/image.2354236031.4306/st,small,507x507-pad,600x600,f8f8f8.jpg",
+    src: "/midrole-icon.png",
   },
   {
     name: "ADC",
-    src: "https://ih1.redbubble.net/image.2354182272.2636/st,small,507x507-pad,600x600,f8f8f8.jpg",
+    src: "/adcrole-icon.png",
   },
   {
     name: "SUPPORT",
-    src: "https://ih1.redbubble.net/image.2354270772.5334/st,small,507x507-pad,600x600,f8f8f8.jpg",
+    src: "/supportrole-icon.png",
   },
 ];
 
 export default function Home() {
   const { toast } = useToast();
 
-  const [gameTimer, setGameTimer] = useState<number | null>(null);
+  const [gameTimer, setGameTimer] = useState<number>(0);
   const [elapsedTime, setElapsedTime] = useState<number>(0);
   const [isSummonerIsTimed, setIsSummonerIsTimed] = useState<{
     [key: string]: boolean;
@@ -123,7 +123,7 @@ export default function Home() {
               onClick={() => startFlashCooldown(role.name)}
             >
               <Image
-                className={cn("w-40 h-40", {
+                className={cn("object-cover", {
                   "filter brightness-50": isSummonerIsTimed[role.name] === true,
                 })}
                 width={600}
