@@ -9,7 +9,10 @@ const nextConfig = {
         hostname: "lh3.googleusercontent.com",
       },
       {
-        hostname: "images.unsplash.com",
+        hostname: "cdnb.artstation.com",
+      },
+      {
+        hostname: "ddragon.leagueoflegends.com",
       },
     ],
   },

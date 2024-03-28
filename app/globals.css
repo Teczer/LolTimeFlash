@@ -66,10 +66,20 @@
 }
 
 .image-bg {
+  /* Dégradé de rouge clair à rouge foncé */
+  /* background: radial-gradient(
+      ellipse at top,
+      rgba(12, 59, 106, 0.4),
+      rgba(3, 16, 30, 0.6),
+      rgba(3, 16, 30, 1),
+      rgba(3, 16, 30, 1),
+      rgba(3, 16, 30, 1)
+    ),
+    url(https://cdnb.artstation.com/p/assets/images/images/004/656/221/large/chengwei-pan-diana1.jpg?1485328717); */
+  background-image: url(https://res.cloudinary.com/dw3mwclgk/image/upload/v1711629209/hrwisiiionr1ukmpclrd.png);
   background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
-  background-image: url(https://res.cloudinary.com/dw3mwclgk/image/upload/v1711629209/hrwisiiionr1ukmpclrd.png);
 }
 
 .textstroke {

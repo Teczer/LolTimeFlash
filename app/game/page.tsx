@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -45,6 +45,7 @@ const leagueRoles: LeagueRoles[] = [
 
 export default function Home() {
   const { toast } = useToast();
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const [gameTimer, setGameTimer] = useState<number>(0);
   const [elapsedTime, setElapsedTime] = useState<number>(0);
@@ -70,6 +71,10 @@ export default function Home() {
   }
 
   function startFlashCooldown(role: string) {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.4;
+      audioRef.current.play(); // Commence la lecture du fichier audio
+    }
     const startTime = new Date().getTime();
     const endTime = startTime + 5 * 60 * 1000;
 
@@ -172,6 +177,7 @@ export default function Home() {
               <Image
                 className={cn("w-28 object-cover sm:w-48", {
                   "filter brightness-50": isSummonerIsTimed[role.name] === true,
+                  "cursor-not-allowed": gameTimer === 0,
                 })}
                 width={600}
                 height={600}
@@ -192,11 +198,14 @@ export default function Home() {
           <p className="text-lg font-bold textstroke">{`${Math.floor(
             elapsedTime / 60
           )}:${(elapsedTime % 60).toString().padStart(2, "0")}`}</p>
+          <audio ref={audioRef} src="/flash-song.mp3"></audio>
         </div>
       ) : (
-        <Button variant="outline" className="" onClick={startGame}>
-          Start Game
-        </Button>
+        <>
+          <Button variant="outline" className="" onClick={startGame}>
+            Start Game
+          </Button>
+        </>
       )}
       <div className="flex justify-center items-center gap-4">
         <Input

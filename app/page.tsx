@@ -1,10 +1,13 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
+import ChangeCoverButton from "@/components/ui/dialogcover";
 
 export default function Home() {
   return (
     <main className="font-mono flex flex-col justify-center items-center gap-24 min-h-screen">
+      <ChangeCoverButton />
       <div className="flex justify-center items-center gap-4">
         <h1 className="text-2xl font-bold textstroke sm:text-3xl">
           Welcome to LolTimeFlash!
@@ -23,7 +26,16 @@ export default function Home() {
       <Link href={"/game"}>
         <Button variant="outline">Solo Lobby</Button>
       </Link>
-      <p className="fixed text-xs bottom-8">Designed and built by @Teczer_</p>
+      <p className="flex gap-2 fixed text-xs bottom-8">
+        Designed and built by {""}
+        <Link
+          href={"https://github.com/Teczer"}
+          target="_blank"
+          className="block font-bold transition-all hover:scale-110"
+        >
+          @Teczer_
+        </Link>
+      </p>
     </main>
   );
 }
