@@ -132,6 +132,7 @@ const ChangeCoverButton: React.FC = () => {
                     }}
                   >
                     <Image
+                      unoptimized
                       quality={75}
                       className="w-[160px] object-cover rounded-sm cursor-pointer transition-all hover:scale-110"
                       src={getChampionSplashUrl(championName, skinNum)}
