@@ -102,12 +102,13 @@ const ChangeCoverButton: React.FC = () => {
           {/* Affichage de la liste des champions filtrée avec leurs images de splash art */}
           {filteredChampions.map((championName: ChampionName) => (
             <div
-              className="w-full h-[450px] bg-[#052431] flex flex-row justify-start items-start rounded-sm p-4"
+              className="w-full h-[130px] bg-[#052431] flex flex-row justify-start items-start rounded-sm p-4"
               key={championName}
             >
               <div className="h-full flex flex-col gap-2 justifty-start items-center px-4">
                 <Image
-                  className="w-14 h-14 object-cover border"
+                  unoptimized
+                  className="w-14 object-cover border"
                   key={championName}
                   src={getChampionSquareUrl(championName)}
                   alt={`${championName} Square`}
@@ -120,7 +121,7 @@ const ChangeCoverButton: React.FC = () => {
               </div>
               <ul className="w-full h-full flex flex-row flex-wrap justify-center items-start gap-6">
                 {/* Boucle à travers les skins d'un champion et affichage de leurs images */}
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((skinNum: number) => (
+                {[0, 1, 2].map((skinNum: number) => (
                   <li
                     key={skinNum}
                     onClick={() => {

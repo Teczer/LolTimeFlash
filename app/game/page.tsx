@@ -114,6 +114,17 @@ export default function Home() {
     )}`;
 
     setCopyPasteTimer(formattedTime);
+
+    // Retourner l'intervalle pour pouvoir le nettoyer plus tard
+    return interval;
+  }
+
+  function clearTimer(role: string) {
+    const intervalId = startFlashCooldown(role); // Obtenez l'identifiant de l'intervalle pour le nettoyer
+    clearInterval(intervalId);
+    setIsSummonerIsTimed((prevState) => ({ ...prevState, [role]: false }));
+    setCooldownTimers((prevTimers) => ({ ...prevTimers, [role]: "" }));
+    setCopyPasteTimer(null);
   }
 
   // COUNTDOWN
@@ -151,7 +162,7 @@ export default function Home() {
       <div className="w-full flex flex-wrap items-center justify-center sm:flex sm:justify-around sm:items-center">
         {leagueRoles.map((role, index) => (
           <div
-            className="flex flex-col justify-center items-center gap-4"
+            className="flex flex-col justify-center items-center gap-4 relative"
             key={index}
           >
             <button
@@ -189,6 +200,15 @@ export default function Home() {
               <p className="absolute text-2xl font-bold textstroke">
                 {cooldownTimers[role.name]}
               </p>
+            )}
+            {isSummonerIsTimed[role.name] && (
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => clearTimer(role.name)}
+              >
+                X
+              </Button>
             )}
           </div>
         ))}
