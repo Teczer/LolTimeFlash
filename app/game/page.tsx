@@ -6,18 +6,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { ToastAction } from "@/components/ui/toast";
 
 import { cn } from "@/lib/utils";
 
-import { IoIosCopy } from "react-icons/io";
 import { RxTrackPrevious } from "react-icons/rx";
+import { MdClear } from "react-icons/md";
 
 interface LeagueRoles {
   name: string;
   src: string;
+}
+
+interface SummonerData {
+  isFlashed: boolean | number;
+  lucidityBoots: boolean;
+  cosmicInsight: boolean;
 }
 
 const leagueRoles: LeagueRoles[] = [
@@ -47,148 +51,194 @@ export default function Home() {
   const { toast } = useToast();
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  const [gameTimer, setGameTimer] = useState<number>(0);
-  const [elapsedTime, setElapsedTime] = useState<number>(0);
   const [isSummonerIsTimed, setIsSummonerIsTimed] = useState<{
-    [key: string]: boolean;
+    [key: string]: SummonerData;
   }>({
-    TOP: false,
-    JUNGLE: false,
-    MID: false,
-    SUPPORT: false,
-    ADC: false,
+    TOP: {
+      isFlashed: false,
+      lucidityBoots: false,
+      cosmicInsight: false,
+    },
+    JUNGLE: {
+      isFlashed: false,
+      lucidityBoots: false,
+      cosmicInsight: false,
+    },
+    MID: {
+      isFlashed: false,
+      lucidityBoots: false,
+      cosmicInsight: false,
+    },
+    SUPPORT: {
+      isFlashed: false,
+      lucidityBoots: false,
+      cosmicInsight: false,
+    },
+    ADC: {
+      isFlashed: false,
+      lucidityBoots: false,
+      cosmicInsight: false,
+    },
   });
-  const [cooldownTimers, setCooldownTimers] = useState<{
-    [key: string]: string;
-  }>({});
-  const [copyPasteTimer, setCopyPasteTimer] = useState<string | null>(null);
 
-  function startGame() {
-    setGameTimer(new Date().getTime());
-    toast({
-      title: "Your game has been started !",
-    });
-  }
-
-  function startFlashCooldown(role: string) {
-    if (audioRef.current) {
-      audioRef.current.volume = 0.4;
-      audioRef.current.play(); // Commence la lecture du fichier audio
-    }
-    const startTime = new Date().getTime();
-    const endTime = startTime + 5 * 60 * 1000;
-
+  // COMPTE A REBOURS
+  useEffect(() => {
     const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const timeLeft = Math.max(0, Math.floor((endTime - now) / 1000));
-
-      if (timeLeft === 0) {
-        clearInterval(interval);
-        setIsSummonerIsTimed((prevState) => ({ ...prevState, [role]: false }));
-        setCooldownTimers((prevTimers) => ({ ...prevTimers, [role]: "" }));
-        return;
+      // Réduire le temps restant de chaque rôle actif
+      const updatedTimers = { ...isSummonerIsTimed };
+      for (const key in updatedTimers) {
+        if (updatedTimers[key].isFlashed) {
+          updatedTimers[key].isFlashed -= 1;
+          if (updatedTimers[key].isFlashed === 0) {
+            // Si le temps restant est écoulé, remettre à false
+            updatedTimers[key].isFlashed = false;
+          }
+        }
       }
-
-      const minutes = Math.floor(timeLeft / 60);
-      const seconds = timeLeft % 60;
-      const formattedTime = `${minutes}:${String(seconds).padStart(2, "0")}`;
-      setCooldownTimers((prevTimers) => ({
-        ...prevTimers,
-        [role]: formattedTime,
-      }));
+      setIsSummonerIsTimed(updatedTimers);
     }, 1000);
 
-    setIsSummonerIsTimed((prevState) => ({ ...prevState, [role]: true }));
-
-    // Ajout de 5 minutes à elapsedTime
-    const elapsedTimeInSeconds = elapsedTime + 5 * 60;
-
-    // Conversion en minutes et secondes
-    const minutes = Math.floor(elapsedTimeInSeconds / 60);
-    const seconds = elapsedTimeInSeconds % 60;
-
-    // Formatage de l'heure
-    const formattedTime = `${role}${minutes}:${String(seconds).padStart(
-      2,
-      "0"
-    )}`;
-
-    setCopyPasteTimer(formattedTime);
-
-    // Retourner l'intervalle pour pouvoir le nettoyer plus tard
-    return interval;
-  }
-
-  function clearTimer(role: string) {
-    const intervalId = startFlashCooldown(role); // Obtenez l'identifiant de l'intervalle pour le nettoyer
-    clearInterval(intervalId);
-    setIsSummonerIsTimed((prevState) => ({ ...prevState, [role]: false }));
-    setCooldownTimers((prevTimers) => ({ ...prevTimers, [role]: "" }));
-    setCopyPasteTimer(null);
-  }
-
-  // COUNTDOWN
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-
-    if (gameTimer !== null) {
-      interval = setInterval(() => {
-        const now = new Date().getTime();
-        const timeElapsed = Math.floor((now - gameTimer) / 1000);
-        setElapsedTime(timeElapsed);
-      }, 1000);
-    }
-
     return () => clearInterval(interval);
-  }, [gameTimer]);
+  }, [isSummonerIsTimed]);
 
-  // AUTO PAST
-  useEffect(() => {
-    if (copyPasteTimer) {
-      navigator.clipboard.writeText(copyPasteTimer);
-      toast({
-        title: "Your text has been copied to your clipboard!",
-      });
+  // Fonction pour commencer le cooldown du Flash
+  const startFlashCooldown = (role: string) => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.2;
+      audioRef.current.play(); // Commence la lecture du fichier audio
     }
-  }, [copyPasteTimer]);
+
+    const isBoots = isSummonerIsTimed[role].lucidityBoots;
+    const isRune = isSummonerIsTimed[role].cosmicInsight;
+
+    let summonerFlashTimeCalcul = 300; // Temps de recharge par défaut (5 minutes)
+
+    if (isBoots && isRune) {
+      summonerFlashTimeCalcul = 231; // 3 minutes et 51 secondes
+    } else if (isBoots || isRune) {
+      if (isBoots && !isRune) {
+        summonerFlashTimeCalcul = 268; // 4 minutes et 28 secondes si uniquement les bottes sont activées
+      } else if (!isBoots && isRune) {
+        summonerFlashTimeCalcul = 255; // 4 minutes et 15 secondes si uniquement la rune est activée
+      } else {
+        summonerFlashTimeCalcul = 231; // 3 minutes et 51 secondes si les deux sont activées
+      }
+    } else {
+      summonerFlashTimeCalcul = 300; // 5 minutes si aucun n'est activé
+    }
+
+    setIsSummonerIsTimed((prevState) => ({
+      ...prevState,
+      [role]: {
+        ...prevState[role],
+        isFlashed: summonerFlashTimeCalcul,
+      },
+    }));
+
+    // Afficher une notification
+    toast({
+      title: `${role} FLASHED !!!`,
+      description: "Jungle can u gank no summs...",
+    });
+  };
+
+  // Fonction pour annuler le cooldown du Flash
+  const clearTimer = (role: string) => {
+    setIsSummonerIsTimed((prevState) => ({
+      ...prevState,
+      [role]: {
+        ...prevState[role],
+        isFlashed: false,
+      },
+    }));
+  };
 
   return (
     <main className="min-h-screen font-mono flex flex-col justify-center items-center gap-14 sm:gap-24">
+      <audio ref={audioRef} src="/flash-song.mp3"></audio>
       <Link className="fixed top-6 left-6 sm:top-10 sm:left-20" href={"/"}>
         <Button variant="outline" size="icon">
           <RxTrackPrevious className="h-4 w-4" />
         </Button>
       </Link>
-      <div className="w-full flex flex-wrap items-center justify-center sm:flex sm:justify-around sm:items-center">
+      <div className="w-full h-[400px] flex items-center justify-center gap-2 sm:flex sm:justify-around sm:items-center">
         {leagueRoles.map((role, index) => (
           <div
-            className="flex flex-col justify-center items-center gap-4 relative"
+            className="w-full h-full flex flex-col items-center justify-center gap-8"
             key={index}
           >
+            <div className="w-full flex items-center justify-center gap-4">
+              <button
+                className="transition-all hover:scale-110"
+                onClick={() => {
+                  setIsSummonerIsTimed((prevState) => ({
+                    ...prevState,
+                    [role.name]: {
+                      ...prevState[role.name],
+                      cosmicInsight: !prevState[role.name].cosmicInsight,
+                    },
+                  }));
+                }}
+              >
+                <Image
+                  className={`w-14 h-14 object-cover filter ${
+                    isSummonerIsTimed[role.name].cosmicInsight
+                      ? "brightness-100"
+                      : "brightness-50"
+                  }`}
+                  width={600}
+                  height={600}
+                  src="/rune-cdr.webp"
+                  alt="rune-cdr"
+                />
+              </button>
+              <button
+                className="transition-all hover:scale-110"
+                onClick={() =>
+                  setIsSummonerIsTimed((prevState) => ({
+                    ...prevState,
+                    [role.name]: {
+                      ...prevState[role.name],
+                      lucidityBoots: !prevState[role.name].lucidityBoots,
+                    },
+                  }))
+                }
+              >
+                <Image
+                  className={`w-14 h-14 object-cover rounded-full filter ${
+                    isSummonerIsTimed[role.name].lucidityBoots
+                      ? "brightness-100"
+                      : "brightness-50"
+                  }`}
+                  width={600}
+                  height={600}
+                  src="/lucidity-boots.png"
+                  alt="lucidity-boots"
+                />
+              </button>
+            </div>
             <button
-              className="transition-all hover:scale-110"
+              className="w-52 h-52 transition-all hover:scale-110"
               onClick={() => {
-                if (gameTimer === 0) {
+                if (
+                  typeof isSummonerIsTimed[role.name].isFlashed === "number"
+                ) {
+                  // Afficher une notification si le bouton est désactivé (c'est-à-dire qu'un compte à rebours est en cours)
                   toast({
                     variant: "destructive",
-                    title: "You have to start game before !",
-                    description:
-                      "How you would time your flash if you don't start the game ?",
-                    action: (
-                      <ToastAction onClick={startGame} altText="Try again">
-                        Start Game
-                      </ToastAction>
-                    ),
+                    title: "You have to clear timer before retime summs",
+                    description: "Don't try to int your mates...",
                   });
-                  return;
+                } else {
+                  // Sinon, démarrer le compte à rebours normalement
+                  startFlashCooldown(role.name);
                 }
-                startFlashCooldown(role.name);
               }}
             >
               <Image
-                className={cn("w-28 object-cover sm:w-48", {
-                  "filter brightness-50": isSummonerIsTimed[role.name] === true,
-                  "cursor-not-allowed": gameTimer === 0,
+                className={cn("w-64 object-cover cursor-pointer", {
+                  "filter brightness-50 cursor-not-allowed":
+                    isSummonerIsTimed[role.name].isFlashed,
                 })}
                 width={600}
                 height={600}
@@ -196,67 +246,28 @@ export default function Home() {
                 alt={role.name}
               />
             </button>
-            {isSummonerIsTimed[role.name] && (
+            {isSummonerIsTimed[role.name].isFlashed && (
               <p className="absolute text-2xl font-bold textstroke">
-                {cooldownTimers[role.name]}
+                {Math.floor(isSummonerIsTimed[role.name].isFlashed / 60)}:
+                {isSummonerIsTimed[role.name].isFlashed % 60 < 10
+                  ? "0" + (isSummonerIsTimed[role.name].isFlashed % 60)
+                  : isSummonerIsTimed[role.name].isFlashed % 60}
               </p>
             )}
-            {isSummonerIsTimed[role.name] && (
+            {isSummonerIsTimed[role.name].isFlashed && (
               <Button
                 variant="outline"
                 size="icon"
-                onClick={() => clearTimer(role.name)}
+                onClick={() => {
+                  clearTimer(role.name);
+                }}
               >
-                X
+                <MdClear />
               </Button>
             )}
           </div>
         ))}
       </div>
-      {gameTimer ? (
-        <div>
-          <p className="text-lg font-bold textstroke">{`${Math.floor(
-            elapsedTime / 60
-          )}:${(elapsedTime % 60).toString().padStart(2, "0")}`}</p>
-          <audio ref={audioRef} src="/flash-song.mp3"></audio>
-        </div>
-      ) : (
-        <>
-          <Button variant="outline" className="" onClick={startGame}>
-            Start Game
-          </Button>
-        </>
-      )}
-      <div className="flex justify-center items-center gap-4">
-        <Input
-          className="font-sans"
-          type="text"
-          placeholder="Flash Timer"
-          value={copyPasteTimer || ""}
-          readOnly
-        />
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={() => {
-            if (copyPasteTimer) {
-              navigator.clipboard.writeText(copyPasteTimer);
-              toast({
-                title: "Your text has been copied to your clipboard!",
-              });
-            }
-          }}
-        >
-          <IoIosCopy className="h-4 w-4" />
-        </Button>
-      </div>
-      {gameTimer ? (
-        <Button variant="outline" className="" onClick={startGame}>
-          Restart Game
-        </Button>
-      ) : (
-        <p></p>
-      )}
     </main>
   );
 }
