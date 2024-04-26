@@ -87,8 +87,9 @@ export default function Home() {
       // Réduire le temps restant de chaque rôle actif
       const updatedTimers = { ...isSummonerIsTimed };
       for (const key in updatedTimers) {
-        if (updatedTimers[key].isFlashed) {
-          updatedTimers[key].isFlashed -= 1;
+        if (typeof updatedTimers[key].isFlashed === "number") {
+          updatedTimers[key].isFlashed =
+            (updatedTimers[key].isFlashed as number) - 1; // Conversion de type explicite
           if (updatedTimers[key].isFlashed === 0) {
             // Si le temps restant est écoulé, remettre à false
             updatedTimers[key].isFlashed = false;
@@ -248,10 +249,14 @@ export default function Home() {
             </button>
             {isSummonerIsTimed[role.name].isFlashed && (
               <p className="absolute text-2xl font-bold textstroke">
-                {Math.floor(isSummonerIsTimed[role.name].isFlashed / 60)}:
-                {isSummonerIsTimed[role.name].isFlashed % 60 < 10
-                  ? "0" + (isSummonerIsTimed[role.name].isFlashed % 60)
-                  : isSummonerIsTimed[role.name].isFlashed % 60}
+                {Math.floor(
+                  (isSummonerIsTimed[role.name].isFlashed as number) / 60
+                )}
+                :
+                {(isSummonerIsTimed[role.name].isFlashed as number) % 60 < 10
+                  ? "0" +
+                    ((isSummonerIsTimed[role.name].isFlashed as number) % 60)
+                  : (isSummonerIsTimed[role.name].isFlashed as number) % 60}
               </p>
             )}
             {isSummonerIsTimed[role.name].isFlashed && (
