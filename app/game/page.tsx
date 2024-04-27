@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 
 import { RxTrackPrevious } from "react-icons/rx";
 import { MdClear } from "react-icons/md";
+import { socket } from "../socket";
 
 interface LeagueRoles {
   name: string;
@@ -97,15 +98,38 @@ export default function Home() {
         }
       }
       setIsSummonerIsTimed(updatedTimers);
+
+      socket.emit("updateSummonerData", updatedTimers);
     }, 1000);
 
     return () => clearInterval(interval);
   }, [isSummonerIsTimed]);
 
+  // WEBSOCKETS
+  useEffect(() => {
+    socket.emit("client-ready");
+
+    socket.on("get-summoners-data", (serverSummonersData) => {
+      if (
+        JSON.stringify(isSummonerIsTimed) !==
+        JSON.stringify(serverSummonersData)
+      ) {
+        socket.emit("get-summoners-data");
+      }
+    });
+
+    socket.on("updateSummonerData", (newSummonersData) => {
+      setIsSummonerIsTimed((prevState) => ({
+        ...prevState,
+        ...newSummonersData,
+      }));
+    });
+  }, []);
+
   // Fonction pour commencer le cooldown du Flash
   const startFlashCooldown = (role: string) => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.2;
+      audioRef.current.volume = 0.05;
       audioRef.current.play(); // Commence la lecture du fichier audio
     }
 
@@ -128,13 +152,21 @@ export default function Home() {
       summonerFlashTimeCalcul = 300; // 5 minutes si aucun n'est activé
     }
 
-    setIsSummonerIsTimed((prevState) => ({
-      ...prevState,
-      [role]: {
-        ...prevState[role],
-        isFlashed: summonerFlashTimeCalcul,
-      },
-    }));
+    setIsSummonerIsTimed((prevState) => {
+      const updatedData = {
+        ...prevState,
+        [role]: {
+          ...prevState[role],
+          isFlashed: summonerFlashTimeCalcul,
+        },
+      };
+
+      // Utiliser l'état mis à jour pour émettre les données via le socket
+      socket.emit("updateSummonerData", updatedData);
+
+      // Retourner les données mises à jour pour mettre à jour l'état local si nécessaire
+      return updatedData;
+    });
 
     // Afficher une notification
     toast({
@@ -145,13 +177,21 @@ export default function Home() {
 
   // Fonction pour annuler le cooldown du Flash
   const clearTimer = (role: string) => {
-    setIsSummonerIsTimed((prevState) => ({
-      ...prevState,
-      [role]: {
-        ...prevState[role],
-        isFlashed: false,
-      },
-    }));
+    setIsSummonerIsTimed((prevState) => {
+      const updatedData = {
+        ...prevState,
+        [role]: {
+          ...prevState[role],
+          isFlashed: false,
+        },
+      };
+
+      // Utiliser l'état mis à jour pour émettre les données via le socket
+      socket.emit("updateSummonerData", updatedData);
+
+      // Retourner les données mises à jour pour mettre à jour l'état local si nécessaire
+      return updatedData;
+    });
   };
 
   return (
@@ -168,17 +208,27 @@ export default function Home() {
             className="w-full h-full flex flex-col items-center justify-center gap-8"
             key={index}
           >
+            {/* COSMIC + LUCIDITY */}
             <div className="w-full flex items-center justify-center gap-4">
+              {/* COSMIC */}
               <button
                 className="transition-all hover:scale-110"
                 onClick={() => {
-                  setIsSummonerIsTimed((prevState) => ({
-                    ...prevState,
-                    [role.name]: {
-                      ...prevState[role.name],
-                      cosmicInsight: !prevState[role.name].cosmicInsight,
-                    },
-                  }));
+                  console.log("cosmic");
+                  // Mettre à jour l'état local avec setIsSummonerIsTimed
+                  setIsSummonerIsTimed((prevState) => {
+                    const updatedData = {
+                      ...prevState,
+                      [role.name]: {
+                        ...prevState[role.name],
+                        cosmicInsight: !prevState[role.name].cosmicInsight,
+                      },
+                    };
+
+                    socket.emit("updateSummonerData", updatedData);
+                    // Retourner les données mises à jour pour mettre à jour l'état local si nécessaire
+                    return updatedData;
+                  });
                 }}
               >
                 <Image
@@ -193,17 +243,29 @@ export default function Home() {
                   alt="rune-cdr"
                 />
               </button>
+              {/* LUCIDITY */}
               <button
                 className="transition-all hover:scale-110"
-                onClick={() =>
-                  setIsSummonerIsTimed((prevState) => ({
-                    ...prevState,
-                    [role.name]: {
-                      ...prevState[role.name],
-                      lucidityBoots: !prevState[role.name].lucidityBoots,
-                    },
-                  }))
-                }
+                onClick={() => {
+                  setIsSummonerIsTimed((prevState) => {
+                    const updatedData = {
+                      ...prevState,
+                      [role.name]: {
+                        ...prevState[role.name],
+                        lucidityBoots: !prevState[role.name].lucidityBoots,
+                      },
+                    };
+
+                    // Afficher les données mises à jour dans la console
+                    console.log("updatedData", updatedData);
+
+                    // Utiliser l'état mis à jour pour émettre les données via le socket
+                    socket.emit("updateSummonerData", updatedData);
+
+                    // Retourner les données mises à jour pour mettre à jour l'état local si nécessaire
+                    return updatedData;
+                  });
+                }}
               >
                 <Image
                   className={`w-14 h-14 object-cover rounded-full filter ${
@@ -218,6 +280,7 @@ export default function Home() {
                 />
               </button>
             </div>
+            {/* FLASH ROLE */}
             <button
               className="w-52 h-52 transition-all hover:scale-110"
               onClick={() => {
@@ -247,6 +310,7 @@ export default function Home() {
                 alt={role.name}
               />
             </button>
+            {/* TIMER */}
             {isSummonerIsTimed[role.name].isFlashed && (
               <p className="absolute text-2xl font-bold textstroke">
                 {Math.floor(
@@ -259,6 +323,7 @@ export default function Home() {
                   : (isSummonerIsTimed[role.name].isFlashed as number) % 60}
               </p>
             )}
+            {/* CANCEL BUTTON */}
             {isSummonerIsTimed[role.name].isFlashed && (
               <Button
                 variant="outline"
