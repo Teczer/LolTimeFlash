@@ -1,41 +1,40 @@
-"use client";
+'use client'
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import Link from 'next/link'
 
-import { RxTrackPrevious } from "react-icons/rx";
-import { socket } from "../socket";
+import { RxTrackPrevious } from 'react-icons/rx'
 
-import { GrFormNextLink } from "react-icons/gr";
+import { GrFormNextLink } from 'react-icons/gr'
 
 export default function Home() {
-  const [joinLobbyCode, setJoinLobbyCode] = useState("");
-  const [lobbyCode, setLobbyCode] = useState("");
-  const router = useRouter();
+  const [joinLobbyCode, setJoinLobbyCode] = useState('')
+  const [lobbyCode, setLobbyCode] = useState('')
+  const router = useRouter()
 
   function makeid(length: number) {
-    var result = "";
+    var result = ''
     var characters =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    var charactersLength = characters.length;
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    var charactersLength = characters.length
     for (var i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      result += characters.charAt(Math.floor(Math.random() * charactersLength))
     }
-    return result;
+    return result
   }
 
   function createLobbyCode() {
-    const code = makeid(10);
-    setLobbyCode(code);
+    const code = makeid(10)
+    setLobbyCode(code)
   }
 
   return (
     <main className="font-mono min-h-screen flex flex-col items-center justify-center gap-8 sm:flex sm:flex-row sm:justify-around sm:gap-0">
-      <Link className="fixed top-6 left-6 sm:top-10 sm:left-20" href={"/"}>
+      <Link className="fixed top-6 left-6 sm:top-10 sm:left-20" href={'/'}>
         <Button variant="outline" size="icon">
           <RxTrackPrevious className="h-4 w-4" />
         </Button>
@@ -52,7 +51,7 @@ export default function Home() {
         {lobbyCode && (
           <Button
             onClick={() => {
-              router.push(`/game/${lobbyCode}`);
+              router.push(`/game/${lobbyCode}`)
             }}
             variant="outline"
             size="icon"
@@ -78,7 +77,7 @@ export default function Home() {
             variant="outline"
             size="icon"
             onClick={() => {
-              router.push(`/game/${joinLobbyCode}`);
+              router.push(`/game/${joinLobbyCode}`)
             }}
           >
             <GrFormNextLink className="h-4 w-4" />
@@ -86,5 +85,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-  );
+  )
 }

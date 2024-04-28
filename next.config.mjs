@@ -4,18 +4,18 @@ const nextConfig = {
     unoptimized: true,
     remotePatterns: [
       {
-        hostname: "ih1.redbubble.net",
+        hostname: 'ih1.redbubble.net',
       },
       {
-        hostname: "lh3.googleusercontent.com",
+        hostname: 'lh3.googleusercontent.com',
       },
       {
-        hostname: "cdnb.artstation.com",
+        hostname: 'cdnb.artstation.com',
       },
       {
-        hostname: "ddragon.leagueoflegends.com",
+        hostname: 'ddragon.leagueoflegends.com',
       },
     ],
   },
-};
-export default nextConfig;
+}
+export default nextConfig

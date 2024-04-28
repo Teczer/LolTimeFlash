@@ -1,6 +1,6 @@
-"use client";
+'use client'
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 import {
   Dialog,
   DialogContent,
@@ -8,71 +8,69 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { CiImageOn } from "react-icons/ci";
-import Image from "next/image";
-import { Input } from "../input";
-import { Button } from "../button";
-import { useRouter } from "next/navigation";
+} from '@/components/ui/dialog'
+import { CiImageOn } from 'react-icons/ci'
+import Image from 'next/image'
+import { Input } from '../input'
+import { Button } from '../button'
+import { useRouter } from 'next/navigation'
 
 // Définition des types
-type ChampionName = string;
+type ChampionName = string
 
 const ChangeCoverButton: React.FC = () => {
-  const [rawChampions, setRawChampions] = useState<ChampionName[]>([]);
-  const [filteredChampions, setFilteredChampions] = useState<ChampionName[]>(
-    []
-  );
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const router = useRouter();
+  const [rawChampions, setRawChampions] = useState<ChampionName[]>([])
+  const [filteredChampions, setFilteredChampions] = useState<ChampionName[]>([])
+  const [searchQuery, setSearchQuery] = useState<string>('')
+  const router = useRouter()
   useEffect(() => {
     // Appel à la fonction fetchChampions une seule fois après le rendu initial
-    fetchChampions();
-  }, []); // Dépendance vide pour garantir que le useEffect ne s'exécute qu'une seule fois
+    fetchChampions()
+  }, []) // Dépendance vide pour garantir que le useEffect ne s'exécute qu'une seule fois
 
   // Fonction pour récupérer les données des champions depuis l'API
   const fetchChampions = async () => {
     try {
       const response = await fetch(
-        "https://ddragon.leagueoflegends.com/cdn/14.6.1/data/en_US/champion.json"
-      );
-      const data = await response.json();
+        'https://ddragon.leagueoflegends.com/cdn/14.6.1/data/en_US/champion.json',
+      )
+      const data = await response.json()
       // Récupérer les noms des champions
-      const championNames: ChampionName[] = Object.keys(data.data);
+      const championNames: ChampionName[] = Object.keys(data.data)
       // Stocker les noms des champions dans l'état
-      setRawChampions(championNames);
-      setFilteredChampions(championNames);
+      setRawChampions(championNames)
+      setFilteredChampions(championNames)
     } catch (error) {
-      console.error("Error fetching champion data:", error);
+      console.error('Error fetching champion data:', error)
     }
-  };
+  }
 
   // Fonction pour construire l'URL de l'image du splash art d'un champion
   const getChampionSplashUrl = (
     championName: ChampionName,
-    skinNum: number
+    skinNum: number,
   ) => {
-    return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_${skinNum}.jpg`;
-  };
+    return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_${skinNum}.jpg`
+  }
 
   // Fonction pour construire l'URL de l'image du splash art d'un champion
   const getChampionSquareUrl = (championName: ChampionName) => {
-    return `https://ddragon.leagueoflegends.com/cdn/14.6.1/img/champion/${championName}.png`;
-  };
+    return `https://ddragon.leagueoflegends.com/cdn/14.6.1/img/champion/${championName}.png`
+  }
 
   // Filtrer les champions en fonction de la recherche de l'utilisateur
   const handleSearch = (query: string) => {
-    setSearchQuery(query);
-    if (query === "") {
-      setFilteredChampions(rawChampions);
+    setSearchQuery(query)
+    if (query === '') {
+      setFilteredChampions(rawChampions)
     } else {
       setFilteredChampions(
         rawChampions.filter((championName) =>
-          championName.toLowerCase().startsWith(query.toLowerCase())
-        )
-      );
+          championName.toLowerCase().startsWith(query.toLowerCase()),
+        ),
+      )
     }
-  };
+  }
 
   return (
     <Dialog>
@@ -86,7 +84,7 @@ const ChangeCoverButton: React.FC = () => {
         </Button>
       </DialogTrigger>
       <DialogContent
-        className={"lg:max-w-screen-lg overflow-y-scroll max-h-[65%]"}
+        className={'lg:max-w-screen-lg overflow-y-scroll max-h-[65%]'}
       >
         <DialogHeader>
           <DialogTitle className="text-center">Select a new Cover</DialogTitle>
@@ -126,10 +124,10 @@ const ChangeCoverButton: React.FC = () => {
                     key={skinNum}
                     onClick={() => {
                       localStorage.setItem(
-                        "cover-bg",
-                        `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_${skinNum}.jpg`
-                      );
-                      location.reload();
+                        'cover-bg',
+                        `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_${skinNum}.jpg`,
+                      )
+                      location.reload()
                     }}
                   >
                     <Image
@@ -150,7 +148,7 @@ const ChangeCoverButton: React.FC = () => {
         </DialogDescription>
       </DialogContent>
     </Dialog>
-  );
-};
+  )
+}
 
-export default ChangeCoverButton;
+export default ChangeCoverButton

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "node server.js",
+    "prettier": "bunx prettier . --write",
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
   },
