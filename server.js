@@ -18,7 +18,7 @@ app.prepare().then(() => {
   const io = new Server(httpServer);
 
   let summonersData = {
-    1: {
+    defaultServer: {
       TOP: {
         isFlashed: false,
         lucidityBoots: false,
@@ -52,8 +52,8 @@ app.prepare().then(() => {
     console.log("Nouvelle connexion :", socket.id);
 
     socket.on("join-room", (room) => {
+      socket.emit("get-summoners-data", room);
       socket.join(room);
-      socket.to(room).emit("get-summoners-data", room);
     });
 
     // Gestion de l'événement "get-summoners-data"
@@ -68,8 +68,8 @@ app.prepare().then(() => {
         ...summonersData,
         [room]: data,
       };
-
-      io.emit("updateSummonerData", summonersData);
+      console.log("summonersData", summonersData[room]);
+      socket.in(room).emit("updateSummonerData", summonersData[room]);
     });
   });
 

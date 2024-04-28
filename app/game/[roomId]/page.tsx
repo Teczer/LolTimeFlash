@@ -115,14 +115,11 @@ export default function Home() {
     socket.emit("join-room", params.roomId);
 
     socket.on("updateSummonerData", (newSummonersData) => {
-      if (typeof params.roomId === "string") {
-        const newData = newSummonersData[params.roomId];
-
-        setIsSummonerIsTimed((prevState) => ({
-          ...prevState,
-          ...newData,
-        }));
-      }
+      // console.log("newSummonersData", newSummonersData);
+      setIsSummonerIsTimed((prevState) => ({
+        ...prevState,
+        ...newSummonersData,
+      }));
     });
 
     socket.on("get-summoners-data", (serverSummonersData) => {
