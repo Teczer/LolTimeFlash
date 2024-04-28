@@ -1,28 +1,28 @@
-"use client";
+'use client'
 
-import useMediaQuery from "@/hooks/useMediaQuery";
-import { useEffect, useState } from "react";
+import useMediaQuery from '@/hooks/useMediaQuery'
+import { useEffect, useState } from 'react'
 
 const WrapperBackground = ({ children }: { children: React.ReactNode }) => {
-  const [selectedCover, setSelectedCover] = useState<string>("");
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const [selectedCover, setSelectedCover] = useState<string>('')
+  const isMobile = useMediaQuery('(max-width: 768px)')
 
   useEffect(() => {
     const userCoverBackground =
-      typeof window !== "undefined"
-        ? (localStorage.getItem("cover-bg") as string)
-        : undefined;
+      typeof window !== 'undefined'
+        ? (localStorage.getItem('cover-bg') as string)
+        : undefined
 
     if (userCoverBackground) {
-      setSelectedCover(userCoverBackground);
+      setSelectedCover(userCoverBackground)
     } else {
       setSelectedCover(
-        "https://cdnb.artstation.com/p/assets/images/images/004/656/221/large/chengwei-pan-diana1.jpg?1485328717"
-      );
+        'https://cdnb.artstation.com/p/assets/images/images/004/656/221/large/chengwei-pan-diana1.jpg?1485328717',
+      )
     }
-  }, []);
+  }, [])
 
-  if (!selectedCover) return null;
+  if (!selectedCover) return null
 
   return (
     <div
@@ -41,7 +41,7 @@ const WrapperBackground = ({ children }: { children: React.ReactNode }) => {
     >
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default WrapperBackground;
+export default WrapperBackground

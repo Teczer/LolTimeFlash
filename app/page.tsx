@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { Button } from "@/components/ui/button";
-import ChangeCoverButton from "@/components/ui/dialogcover";
+import { Button } from '@/components/ui/button'
+import ChangeCoverButton from '@/components/ui/dialogcover'
 
 export default function Home() {
   return (
@@ -18,20 +18,20 @@ export default function Home() {
           className="w-10 object-cover rounded-md rotate-6 sm:w-20"
           width={500}
           height={500}
-          src={"/flash-icon.webp"}
+          src={'/flash-icon.webp'}
           alt="flash-icon"
         />
       </div>
-      <Link href={"/lobby"}>
+      <Link href={'/lobby'}>
         <Button variant="outline">Create or join a lobby</Button>
       </Link>
-      <Link href={"/game/198381"}>
+      <Link href={'/game/198381'}>
         <Button variant="outline">Solo Lobby</Button>
       </Link>
       <p className="flex gap-2 fixed text-xs bottom-8">
-        Designed and built by {""}
+        Designed and built by {''}
         <Link
-          href={"https://github.com/Teczer"}
+          href={'https://github.com/Teczer'}
           target="_blank"
           className="block font-bold transition-all hover:scale-110"
         >
@@ -39,5 +39,5 @@ export default function Home() {
         </Link>
       </p>
     </main>
-  );
+  )
 }
