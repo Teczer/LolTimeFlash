@@ -25,7 +25,7 @@ export default function Home() {
       <Link href={"/lobby"}>
         <Button variant="outline">Create or join a lobby</Button>
       </Link>
-      <Link href={"/game"}>
+      <Link href={"/game/198381"}>
         <Button variant="outline">Solo Lobby</Button>
       </Link>
       <p className="flex gap-2 fixed text-xs bottom-8">

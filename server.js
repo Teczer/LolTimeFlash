@@ -18,30 +18,32 @@ app.prepare().then(() => {
   const io = new Server(httpServer);
 
   let summonersData = {
-    TOP: {
-      isFlashed: false,
-      lucidityBoots: false,
-      cosmicInsight: false,
-    },
-    JUNGLE: {
-      isFlashed: false,
-      lucidityBoots: false,
-      cosmicInsight: false,
-    },
-    MID: {
-      isFlashed: false,
-      lucidityBoots: false,
-      cosmicInsight: false,
-    },
-    SUPPORT: {
-      isFlashed: false,
-      lucidityBoots: false,
-      cosmicInsight: false,
-    },
-    ADC: {
-      isFlashed: false,
-      lucidityBoots: false,
-      cosmicInsight: false,
+    1: {
+      TOP: {
+        isFlashed: false,
+        lucidityBoots: false,
+        cosmicInsight: false,
+      },
+      JUNGLE: {
+        isFlashed: false,
+        lucidityBoots: false,
+        cosmicInsight: false,
+      },
+      MID: {
+        isFlashed: false,
+        lucidityBoots: false,
+        cosmicInsight: false,
+      },
+      SUPPORT: {
+        isFlashed: false,
+        lucidityBoots: false,
+        cosmicInsight: false,
+      },
+      ADC: {
+        isFlashed: false,
+        lucidityBoots: false,
+        cosmicInsight: false,
+      },
     },
   };
 
@@ -49,24 +51,25 @@ app.prepare().then(() => {
   io.on("connection", (socket) => {
     console.log("Nouvelle connexion :", socket.id);
 
-    // Gestion de l'événement "client-ready"
-    socket.on("client-ready", () => {
-      // Émission de l'événement "get-summoners-data" pour demander les données des invocateurs
-      socket.emit("get-summoners-data");
+    socket.on("join-room", (room) => {
+      socket.join(room);
+      socket.to(room).emit("get-summoners-data", room);
     });
 
     // Gestion de l'événement "get-summoners-data"
-    socket.on("get-summoners-data", () => {
+    socket.on("get-summoners-data", (room) => {
       // Émission des données des invocateurs au client
-      socket.emit("updateSummonerData", summonersData);
+      socket.emit("updateSummonerData", summonersData[room], room);
     });
 
     // Gestion de l'événement "updateSummonerData"
-    socket.on("updateSummonerData", (newSummonersData) => {
-      console.log("Données des invocateurs mises à jour :", newSummonersData);
-      summonersData = newSummonersData;
-      // Émission des données mises à jour à tous les clients connectés
-      io.emit("updateSummonerData", newSummonersData);
+    socket.on("updateSummonerData", (data, room) => {
+      summonersData = {
+        ...summonersData,
+        [room]: data,
+      };
+
+      io.emit("updateSummonerData", summonersData);
     });
   });
 

@@ -12,7 +12,9 @@ import { cn } from "@/lib/utils";
 
 import { RxTrackPrevious } from "react-icons/rx";
 import { MdClear } from "react-icons/md";
-import { socket } from "../socket";
+import { useParams } from "next/navigation";
+
+import { socket } from "@/app/socket";
 
 interface LeagueRoles {
   name: string;
@@ -51,6 +53,8 @@ const leagueRoles: LeagueRoles[] = [
 export default function Home() {
   const { toast } = useToast();
   const audioRef = useRef<HTMLAudioElement>(null);
+
+  const params = useParams();
 
   const [isSummonerIsTimed, setIsSummonerIsTimed] = useState<{
     [key: string]: SummonerData;
@@ -97,34 +101,39 @@ export default function Home() {
           }
         }
       }
+
       setIsSummonerIsTimed(updatedTimers);
 
-      socket.emit("updateSummonerData", updatedTimers);
+      socket.emit("updateSummonerData", updatedTimers, params.roomId);
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [isSummonerIsTimed]);
+  }, [isSummonerIsTimed, params.roomId]);
 
   // WEBSOCKETS
   useEffect(() => {
-    socket.emit("client-ready");
+    socket.emit("join-room", params.roomId);
+
+    socket.on("updateSummonerData", (newSummonersData) => {
+      if (typeof params.roomId === "string") {
+        const newData = newSummonersData[params.roomId];
+
+        setIsSummonerIsTimed((prevState) => ({
+          ...prevState,
+          ...newData,
+        }));
+      }
+    });
 
     socket.on("get-summoners-data", (serverSummonersData) => {
       if (
         JSON.stringify(isSummonerIsTimed) !==
         JSON.stringify(serverSummonersData)
       ) {
-        socket.emit("get-summoners-data");
+        socket.emit("get-summoners-data", params.roomId);
       }
     });
-
-    socket.on("updateSummonerData", (newSummonersData) => {
-      setIsSummonerIsTimed((prevState) => ({
-        ...prevState,
-        ...newSummonersData,
-      }));
-    });
-  }, []);
+  }, [params.roomId]);
 
   // Fonction pour commencer le cooldown du Flash
   const startFlashCooldown = (role: string) => {
@@ -162,7 +171,7 @@ export default function Home() {
       };
 
       // Utiliser l'état mis à jour pour émettre les données via le socket
-      socket.emit("updateSummonerData", updatedData);
+      socket.emit("updateSummonerData", updatedData, params.roomId);
 
       // Retourner les données mises à jour pour mettre à jour l'état local si nécessaire
       return updatedData;
@@ -187,7 +196,7 @@ export default function Home() {
       };
 
       // Utiliser l'état mis à jour pour émettre les données via le socket
-      socket.emit("updateSummonerData", updatedData);
+      socket.emit("updateSummonerData", updatedData, params.roomId);
 
       // Retourner les données mises à jour pour mettre à jour l'état local si nécessaire
       return updatedData;
@@ -202,6 +211,7 @@ export default function Home() {
           <RxTrackPrevious className="h-4 w-4" />
         </Button>
       </Link>
+      <h1>ROOM ID: {params.roomId}</h1>
       <div className="w-full h-[400px] flex items-center justify-center gap-2 sm:flex sm:justify-around sm:items-center">
         {leagueRoles.map((role, index) => (
           <div
@@ -225,7 +235,11 @@ export default function Home() {
                       },
                     };
 
-                    socket.emit("updateSummonerData", updatedData);
+                    socket.emit(
+                      "updateSummonerData",
+                      updatedData,
+                      params.roomId
+                    );
                     // Retourner les données mises à jour pour mettre à jour l'état local si nécessaire
                     return updatedData;
                   });
@@ -260,7 +274,11 @@ export default function Home() {
                     console.log("updatedData", updatedData);
 
                     // Utiliser l'état mis à jour pour émettre les données via le socket
-                    socket.emit("updateSummonerData", updatedData);
+                    socket.emit(
+                      "updateSummonerData",
+                      updatedData,
+                      params.roomId
+                    );
 
                     // Retourner les données mises à jour pour mettre à jour l'état local si nécessaire
                     return updatedData;
