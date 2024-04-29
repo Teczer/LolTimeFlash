@@ -1,0 +1,1849 @@
+{
+  "id": 518,
+  "key": "Neeko",
+  "name": "Neeko",
+  "title": "the Curious Chameleon",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Neeko.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "MAGIC_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 610,
+      "percent": 0,
+      "perLevel": 104,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 7.5,
+      "percent": 0,
+      "perLevel": 0.75,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 450,
+      "percent": 0,
+      "perLevel": 30,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 7,
+      "percent": 0,
+      "perLevel": 0.7,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 21,
+      "percent": 0,
+      "perLevel": 5.2,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 48,
+      "percent": 0,
+      "perLevel": 2.5,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 340,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 600,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 90,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 3.5,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.67,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3100000023841858,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.54999995231628,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 550,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "BURST",
+    "CATCHER",
+    "MAGE",
+    "SUPPORT"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 3,
+    "mobility": 1,
+    "utility": 1,
+    "abilityReliance": 80,
+    "difficulty": 1
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Inherent Glamour",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Neeko has a collection of disguises to take on the appearance of allied champions. She can choose a new champion to switch her disguise or select herself to deactivate her disguise, placing Inherent Glamour on a 0.5-second cooldown. Taking damage from a champion or turret puts Inherent Glamour on a 2-second cooldown.",
+            "leveling": []
+          },
+          {
+            "description": "Standing by the nearest visible allied or neutral non-champion non-structure unit while not disguised will gather its Sho'Ma over 2 seconds, adding its disguise to the collection. Activating this disguise places Inherent Glamour on a 1-second cooldown. Neeko can collect only one Sho'Ma, but can discard or consume it. She can store Sho'Ma from the following units:\n\nNon-epic monsters\n Minions\n Traps\n Wards\n Pets\nJungle plants",
+            "leveling": []
+          },
+          {
+            "description": "While disguised, Neeko can use basic attacks while keeping her form. Her disguise breaks if her form takes lethal damage or if she becomes immobilized, deals damage to a structure with a non-champion form, or uses a damaging ability, summoner spell, or item active.",
+            "leveling": []
+          },
+          {
+            "description": "Inherent Glamour's disguise is not deactivated from Pop Blossom until after 0.5 seconds of its cast. Neeko cannot activate Inherent Glamour while she is unable to cast abilities.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Neeko can store up the Sho'Ma of multiple units at a time.\nInherent Glamour's cooldown only prevents Neeko from activating disguises; she can still store and remove Sho'Ma while the passive is on cooldown.\nIf Neeko attempts to activate a disguise while near and for the trap, ward, or jungle plant she stored Sho'Ma for, she will leap to that unit's exact position over 1 second and then become disguised. If she does so for a monster and is near its respective jungle camp, she will leap to that monster's usual position in the camp.\nShe will fail to activate the disguise after the leap if she is affected by the same conditions that would break a disguise.\nNeeko will copy aesthetics as well as superficial mechanical statistics. She will fake a number of readings:\nHealth bar (original's current amount becomes her apparent maximum)\nSecondary resource - e.g. mana, energy or none at all (original's current amount becomes her apparent maximum)\nStats\nBuffs and debuffs with their respective icons and VFX/SFX (there are exceptions)\nNeeko sees the buffs that are actually applied to her, while enemies see the disguised champion's buffs.\nKill feed icon\nA number of attributes she actually adopts are:\nBase movement speed\nThe melee or ranged classification of the champion\nBase attack speed and attack ratio\nThe projectile or non-projectile quality of their attack\nAttack range (adopt the new form attack range)\nSize (including size modifiers and base champion size)\nDefault transformation toggle (non-innate)\nVoice lines\nCharacter interactions (jokes, taunts, dances, laughs, toggle effects), as well as their  Recall animation\nNeeko can copy  Samira's taunt animation but she will not actually throw the coin via the  Taunt ability.\nInherent Glamour's disguise is broken by the following spell casts:\nCasting  Blooming Burst or  Tangle-Barbs.\nCasting  Pop Blossom will not break the disguise immediately, but after a delay.\nUsing  Exhaust,  Ignite, or  Smite.\nActivating  Hextech Rocketbelt,  Stridebreaker),  Redemption or  Minion Dematerializer.\nThe scoreboard's question mark of Neeko (which indicates an enemy is not currently visible to your team) will disappear, if the  disguised Neeko is visible. Therefore, it can be used to determine, whether a unit is Neeko or not.",
+        "blurb": "Innate:  Neeko has a collection of disguises to take on the appearance of allied champions. She can choose a new champion to switch her disguise or select herself to deactivate her disguise. Standing near a non-champion unit will collect its Sho'Ma, adding its disguise to the collection. She can collect only one Sho'Ma, but can discard or consume it.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Blooming Burst",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Neeko tosses a seed that blooms at the target location, dealing magic damage to nearby enemies.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      80,
+                      125,
+                      170,
+                      215,
+                      260
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If the bloom kills an enemy or hits a champion or large monster, it will bloom again after 0.75 seconds to deal magic damage. This may occur up to 2 times per cast.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      35,
+                      60,
+                      85,
+                      110,
+                      135
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      25,
+                      25,
+                      25,
+                      25,
+                      25
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Maximum Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      150,
+                      245,
+                      340,
+                      435,
+                      530
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Each bloom deals bonus magic damage against monsters.",
+            "leveling": [
+              {
+                "attribute": "Bonus Monster Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      35,
+                      50,
+                      65,
+                      80,
+                      95
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Blooming Burst will cast at max range if cast beyond that.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                50,
+                60,
+                70,
+                80,
+                90
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                9,
+                8.5,
+                8,
+                7.5,
+                7
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "special",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Spell shield blocks an instance of damage but does not prevent subsequent Blooms.",
+        "blurb": "Active:  Neeko tosses a seed that blooms at the target location, dealing magic damage to nearby enemies.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "250",
+        "targetRange": null
+      }
+    ],
+    "W": [
+      {
+        "name": "Shapesplitter",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/w",
+        "effects": [
+          {
+            "description": "Passive: Neeko's basic attacks on-hit generate a stack of Shapesplitter, which refreshes on subsequent attacks and stacks up to 2 times. At 2 stacks, her next basic attack on-attack consumes them all to become non-projectile, deal bonus magic damage and grant her bonus movement speed for 1 second. This attack deals 75 bonus magic damage against monsters.",
+            "leveling": [
+              {
+                "attribute": "Bonus Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      75,
+                      110,
+                      145,
+                      180
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      60,
+                      60,
+                      60,
+                      60,
+                      60
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Bonus Movement Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      10,
+                      17.5,
+                      25,
+                      32.5,
+                      40
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Active: Neeko creates a clone of her current form, after which they both instantly become invisible for 0.5 seconds and gain bonus movement speed for 3 seconds. Shapesplitter can be recast at any time while the clone is active.",
+            "leveling": [
+              {
+                "attribute": "Bonus Movement Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      20,
+                      25,
+                      30,
+                      35,
+                      40
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "The clone lasts for 3 seconds, starts running a fixed distance in the target direction, and is untargetable to allies and for the first 0.5 seconds of its lifespan to enemies.Additionally, the clone plays the animations for Blooming Burst and Tangle-Barbs whenever Neeko casts them. She can also command the clone once to play the animation of her next emote or Recall for a set duration that overrides its original duration.",
+            "leveling": []
+          },
+          {
+            "description": "Recast: Neeko sends her clone to the target location if it is not playing an emote or Recall animation.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                16,
+                15,
+                14,
+                13,
+                12
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Proc",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "When Neeko forces her clone to play an emote or  Recall animation, she modifies its duration based on the animation played.\nJoke - 8 seconds.\nDance - 8 seconds.\nTaunt - 4.25 seconds.\nLaugh - 3 seconds.\n Recall - 8 seconds.\n Empowered Recall - 4 seconds.\nBoth Neeko and the clone use the same running animation.\nThe clone can still be targeted by allied  auto-targeted effects (e.g.  Heal,  Celestial Blessing).\nThe empowered attack will not trigger against wards and jungle plants.",
+        "blurb": "Passive:  Neeko's basic attacks generate stacks of Shapesplitter. At 2 stacks, her next basic attack will consume them all to become  non-projectile, deal bonus magic damage, and briefly grant her  bonus move speed.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": "900"
+      }
+    ],
+    "E": [
+      {
+        "name": "Tangle-Barbs",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Neeko slings a magical spiral in the target direction that deals magic damage to enemies hit and roots them for a duration.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      105,
+                      140,
+                      175,
+                      210
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      65,
+                      65,
+                      65,
+                      65,
+                      65
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Root Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      0.7,
+                      0.9,
+                      1.1,
+                      1.3,
+                      1.5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If the spiral hits at least one enemy, it grows in size and its speed and root duration is increased.",
+            "leveling": [
+              {
+                "attribute": "Empowered Root Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      1.8,
+                      2.1,
+                      2.4,
+                      2.7,
+                      3
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                60,
+                65,
+                70,
+                75,
+                80
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                12,
+                11.5,
+                11,
+                10.5,
+                10
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "AoE",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "This ability will cast from wherever the caster is at the end of the cast time.",
+        "blurb": "Active:  Neeko slings a magical spiral in the target direction that deals magic damage and  roots enemies hit.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1300 / 1500",
+        "width": "140 / 200",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "R": [
+      {
+        "name": "Pop Blossom",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Neeko winds up spiritual essence over 1.25 seconds and highlights an area around herself, which is visible to enemies unless she is disguised. If Neeko is in a disguise, it will break after 0.5 seconds into the duration.",
+            "leveling": []
+          },
+          {
+            "description": "After winding up, the cast time begins and Neeko leaps upward, knocking up nearby enemies for 0.6 seconds.",
+            "leveling": []
+          },
+          {
+            "description": "When the cast time ends, she lands to emit a burst of energy that deals magic damage to nearby enemies and stuns them for 0.75 seconds.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      150,
+                      350,
+                      550
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      120,
+                      120,
+                      120
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                120,
+                105,
+                90
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Enemies, Self",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Ability details:\nThe wind up uses a special bar similar to cast bars to represent when Pop Blossom's cast time will start.\nThe wind up has no special interactions.\nThe highlighted area is fixed around Neeko.\n Shapesplitter clones disappear when Pop Blossom's cast time starts.\nThis ability will cast from wherever the caster is at the end of the cast time.\nInteractions:\n\nOn-cast effects are applied on activation.\nPop Blossom can start its cast time during  stasis.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+        "blurb": "Active:  Neeko briefly winds up spiritual essence and highlights the area around her, which is visible to enemies unless she is  disguised.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.6",
+        "effectRadius": "600",
+        "targetRange": null
+      }
+    ]
+  },
+  "releaseDate": "2018-12-05",
+  "releasePatch": "8.24",
+  "patchLastChanged": "14.7",
+  "price": {
+    "blueEssence": 4800,
+    "rp": 880,
+    "saleRp": 0
+  },
+  "lore": "Hailing from a long lost tribe of vastaya, Neeko can blend into any crowd by borrowing the appearances of others, even absorbing something of their emotional state to tell friend from foe in an instant. No one is ever sure where—or who—Neeko might be, but those who intend to do her harm will soon witness her true colors revealed, and feel the full power of her primordial spirit magic unleashed upon them.",
+  "faction": "ixtal",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 518000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Hailing from a long lost tribe of vastaya, Neeko can blend into any crowd by borrowing the appearances of others, even absorbing something of their emotional state to tell friend from foe in an instant. No one is ever sure where—or who—Neeko might be, but those who intend to do her harm will soon witness her true colors revealed, and feel the full power of her primordial spirit magic unleashed upon them.",
+      "release": "2018-12-05",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/518/518000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/518/518000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/518/518000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/base/neekoloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Flora Paulita"
+      ],
+      "splashArtist": [
+        "Jennifer Wuestling"
+      ]
+    },
+    {
+      "name": "Winter Wonder",
+      "id": 518001,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Winter Wonder",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 518006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518006.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 518004,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518004.png",
+          "colors": [
+            "#B6E084",
+            "#B6E084"
+          ],
+          "descriptions": [
+            {
+              "description": "Obtained through Influencer audience giveaways.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 518008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518008.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 518003,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518003.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rainbow",
+          "id": 518009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518009.png",
+          "colors": [
+            "#C1F2FF",
+            "#C1F2FF"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 518007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518007.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            },
+            {
+              "rarity": 1,
+              "region": "tencent"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 518002,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518002.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive during 2018.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 518005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518005.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "An ancient and mysterious winter sprite, Neeko regards the world around her with an almost childlike curiosity. Having recently returned from beyond the Poro King's vast domain, she has become enamored with the civilization that has risen in her absence.",
+      "release": "2018-12-05",
+      "set": [
+        "Winter Wonder"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/518/518001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/518/518001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/518/518001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/skin01/neekoloadscreen_1.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/skin01/neekoloadscreen_1_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Flora Paulita"
+      ],
+      "splashArtist": [
+        "Atey Ghailan"
+      ]
+    },
+    {
+      "name": "Star Guardian",
+      "id": 518010,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Star Guardian",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [],
+      "lore": "A member of Ahri's original team of Star Guardians, Neeko watched her teammates fall against Zoe's dark powers, going into hiding when she, too, was thought dead. Revealing herself to the newly assembled Star Guardians at the eve of their greatest battle, the wide-eyed adventurer has vowed that this time, she won't run.",
+      "release": "2019-09-12",
+      "set": [
+        "Star Guardian Season 3"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/518/518010.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/518/518010.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/518/518010.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/skin10/neekoloadscreen_10.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/skin10/neekoloadscreen_10_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Flora Paulita"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Prestige Star Guardian",
+      "id": 518011,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Prestige Star Guardian",
+      "lootEligible": true,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "200 Mythic Essence",
+      "rarity": "Mythic",
+      "chromas": [],
+      "lore": "Neeko and the Star Guardians emerge from their battle forever changed, friendships reforged in the face of stunning victory and brutal loss. They will save their lost companion—perhaps not now, but one day—and they will do it together.",
+      "release": "2019-09-12",
+      "set": [
+        "Star Guardian Season 3"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/518/518011.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/518/518011.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/518/518011.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/skin11/neekoloadscreen_11.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/skin11/neekoloadscreen_11_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Flora Paulita"
+      ],
+      "splashArtist": [
+        "Rudy Siswanto"
+      ]
+    },
+    {
+      "name": "Shan Hai Scrolls",
+      "id": 518012,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Shan Hai Scrolls",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 518014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518014.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Granite",
+          "id": 518020,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518020.png",
+          "colors": [
+            "#85827F",
+            "#85827F"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 518019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518019.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 518018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518018.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 518015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518015.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 518013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518013.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 518016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518016.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 518017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518017.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "A kindly god of the Shan Hai Scrolls who remembers her counterpart, Jhin, from before he succumbed to madness, Neeko believes she can return Jhin to the side of good before the painting's magic fades and doom befalls the multiverse, but she knows such an expenditure of power may destroy her in the process.",
+      "release": "2021-01-28",
+      "set": [
+        "Shan Hai Scrolls"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/518/518012.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/518/518012.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/518/518012.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/skin12/neekoloadscreen_12.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Flora Paulita"
+      ],
+      "splashArtist": [
+        "Horace 'Hozure' Hsu"
+      ]
+    },
+    {
+      "name": "Prestige Star Guardian (2022)",
+      "id": 518021,
+      "isBase": false,
+      "availability": "Limited",
+      "formatName": "Prestige Star Guardian Neeko (2022)",
+      "lootEligible": false,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "Given to players who owned the original skin prior to patch 12.5",
+      "rarity": "Mythic",
+      "chromas": [],
+      "lore": "Neeko and the Star Guardians emerge from their battle forever changed, friendships reforged in the face of stunning victory and brutal loss. They will save their lost companion—perhaps not now, but one day—and they will do it together.",
+      "release": "2022-04-01",
+      "set": [
+        "Star Guardian Season 3"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/518/518021.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/518/518021.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/518/518021.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/skin21/neekoloadscreen_21.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Flora Paulita"
+      ],
+      "splashArtist": [
+        "Rudy Siswanto"
+      ]
+    },
+    {
+      "name": "Bewitching",
+      "id": 518022,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Bewitching",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Citrine",
+          "id": 518024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518024.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 518027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518027.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 518029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518029.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 518030,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518030.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 518028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518028.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 518023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518023.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 518026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518026.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 518025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518025.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Neeko never remembers to buy a costume for the yearly festivities. Her delightful disguises come courtesy of her transfigurative talents and shapeshifting spells. Wait… are there two Nidalees at this party? Nope. That's just Neeko, pulling one of her classic pranks.",
+      "release": "2022-10-20",
+      "set": [
+        "Bewitching"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/518/518022.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/518/518022.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/518/518022.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/skin22/neekoloadscreen_22.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/skin22/neekoloadscreen_22_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Flora Paulita"
+      ],
+      "splashArtist": [
+        "Hendry Iwanaga",
+        "Caravan Studio"
+      ]
+    },
+    {
+      "name": "Street Demons",
+      "id": 518031,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Street Demons",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 518037,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518037.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 518033,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518033.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 518038,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518038.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 518039,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518039.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 518036,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518036.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 518032,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518032.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 518035,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518035.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 518034,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/518/518034.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "An up-and-coming young kappa new to the Styxbridge scene, Neeko is ready to make her magical mark on the walls of this city. Though she is a veritable creative chameleon, able to adopt any artistic style, her own signature work is known for its bright and bubbly attitude, bringing a smile to anyone who sees her tags.",
+      "release": "2023-09-13",
+      "set": [
+        "Street Demons"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/518/518031.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/518/518031.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/518/518031.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/skin31/neekoloadscreen_31.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Flora Paulita"
+      ],
+      "splashArtist": [
+        "Ina Wong",
+        "West Studio"
+      ]
+    }
+  ]
+}

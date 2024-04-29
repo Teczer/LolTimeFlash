@@ -1,0 +1,2316 @@
+{
+  "id": 235,
+  "key": "Senna",
+  "name": "Senna",
+  "title": "the Redeemer",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Senna.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 530,
+      "percent": 0,
+      "perLevel": 89,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 3.5,
+      "percent": 0,
+      "perLevel": 0.55,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 350,
+      "percent": 0,
+      "perLevel": 45,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 11.5,
+      "percent": 0,
+      "perLevel": 0.7,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 28,
+      "percent": 0,
+      "perLevel": 4.7,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 50,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 330,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 800,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 115,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 4,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.4,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.5,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.60000002384185,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 600,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 0.94,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "ENCHANTER",
+    "MARKSMAN",
+    "SUPPORT"
+  ],
+  "attributeRatings": {
+    "damage": 2,
+    "toughness": 1,
+    "control": 2,
+    "mobility": 1,
+    "utility": 3,
+    "abilityReliance": 30,
+    "difficulty": 2
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Absolution",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate - Weakened Soul: Senna's basic attacks on-hit and ability hits against enemy champions apply a stack of Mist for 4 seconds, modified to 0.75 seconds if Senna starts winding up a basic attack on them, and limited to once per target per cast. Subsequent hits will collect Mist and deal bonus physical damage equal to 1% − 10% (based on level) of target's current health, rendering the target immune to further Mist infliction for a few seconds. This damage applies life steal at 100% effectiveness.",
+            "leveling": []
+          },
+          {
+            "description": "Enemies that die near Senna may spawn a Mist Wraith from their corpse. A Mist Wraith lasts 8 seconds and Senna can basic attack or hit it with Piercing Darkness or Dawning Shadow to kill them instantly, granting her 8 and collecting their Mist.\nEnemy champions and large monsters will spawn a Mist Wraith.\nEpic monsters will spawn 2 Mist Wraiths.\n Minions and lesser monsters that Senna kills have a 8.4% chance to spawn a Mist Wraith.\nLarge minions that Senna does not kill will spawn a Mist Wraith, while lesser minions and lesser monsters that Senna does not kill have a 28% chance to spawn.\nLesser minions executed by an allied champion's Quest item have a 8.4% chance to spawn a Mist Wraith.",
+            "leveling": []
+          },
+          {
+            "description": "Mist: For each stack of Mist, Senna gains 0.75 bonus attack damage. For every 20 stacks, she also gains 20 bonus attack range and 10% critical strike chance, capped at 100% critical strike chance. Additionally, 35% of the generated excess critical strike chance is converted into life steal.",
+            "leveling": []
+          },
+          {
+            "description": "Innate - Relic Cannon: Senna's basic attacks on-hit deal 20% AD bonus physical damage and grant her 10 / 15 / 20% (based on level) of the target's movement speed as bonus movement speed for 0.5 seconds. This damage applies life steal at 100% effectiveness.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self, Enemies",
+        "spellshieldable": "False",
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Despite Senna dealing 1 damage to Mist Wraiths, attacking them will calculate the attack's damage (including  critical strike modifiers) and any on-hit effects for the purposes of  life steal and  drain effects.\nRelic Cannon is only applied if the attack deals more than 0 damage.\nHence, it is not applied if the target is  invulnerable or Senna's basic attack's  attack damage is reduced to 0 or below.\nDealing 0 damage is valid for marking and collecting Mist from champions, but dealing no damage at all is not.\nHence, Senna can mark and collect from  invulnerable enemies.\n Dodge prevents marking and collecting a Mist via Senna's basic attacks and  Piercing Darkness.\n PENDING FOR TEST:: Mist interaction with  block and  blind.\n Nunu & Willump spawn a wraith each.\nEnemies will not see newly spawned wraiths while Senna is not visible.\nA wraith can be hit by  Cosmic Binding and it will interact with it the same way minions or monsters interact with Cosmic Binding but it will not take damage.\nMist Wraith has a spawn animation, but is targetable immediately.\nMist Wraith grants a small amount of  sight around itself.\n Runaan's Hurricane secondary bolts will ignore Mist Wraiths.\nAttacking a Mist Wraith will not consume energized stacks, but you can benefit from the range increase of  Rapid Firecannon when collecting wraiths.\nExcluding the range increase and the bonus shielding on  Dawning Shadow, one stack of Mist is worth approximately  44.55 ( +8 from Mist Wraith pickup),  32.8125 if the critical chance is converted to life steal. The bonuses have a gross value of  46.25 ( 32.8125 with life steal).\n 0.75 AD is worth  26.25‬.\n 0.5% critical strike chance is worth  20. Absolution reduces its efficiency by 8.5%, making the value  18.3.\n 0.175% life steal is worth ≈ 6.5625.\nThe bonus on-hit damage does not apply an additional stack of  Black Cleaver's Carve to offset Senna's low attack speed.(bug)",
+        "blurb": "Innate - Weakened Soul:  Senna's basic attacks and abilities against enemy  champions apply a stack of Mist for a few seconds. Subsequent hits collect the Mist, dealing bonus physical damage based on the target's current health and rendering the target immune to further Mist applications for a few seconds.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": "6 / 5 / 4 (based on level)",
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": "2000",
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Piercing Darkness",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Senna fires a spectral laser in the direction of the target unit, healing herself and allied champions hit, and dealing physical damage to enemies hit in a thinner line. Enemies hit are slowed by 15% (+ 10% per 100 bonus AD) (+ 6% per 100 AP) for a duration. The damage against champions applies life steal at 100% effectiveness.",
+            "leveling": [
+              {
+                "attribute": "Healing",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      50,
+                      60,
+                      70,
+                      80
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      30,
+                      30,
+                      30,
+                      30,
+                      30
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      40,
+                      40,
+                      40,
+                      40
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      1.6,
+                      1.6,
+                      1.6,
+                      1.6,
+                      1.6
+                    ],
+                    "units": [
+                      " per 1 Lethality",
+                      " per 1 Lethality",
+                      " per 1 Lethality",
+                      " per 1 Lethality",
+                      " per 1 Lethality"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      30,
+                      60,
+                      90,
+                      120,
+                      150
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      40,
+                      40,
+                      40,
+                      40
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Slow Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      1,
+                      1.25,
+                      1.5,
+                      1.75,
+                      2
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Upon being hit, enemy turrets, wards, jungle plants, Mist Wraiths and any other attack-interactive units are considered basic attacked once, while champions and turrets* are applied on-hit effects at 100% effectiveness.",
+            "leveling": []
+          },
+          {
+            "description": "Piercing Darkness' current cooldown is reduced by 1 second on-hit.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                70,
+                80,
+                90,
+                100,
+                110
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Unit",
+        "affects": "Allies, Enemies, Turrets, Wards",
+        "spellshieldable": "special",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "AoE",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Piercing Darkness also applies most on-attack effects to one enemy champion struck, and ocassionally to two.(bug)\n Hail of Blades will spend a stack on hitting a champion with Piercing Darkness but only if  Hail of Blades was activated first by an auto-attack.\nPiercing Darkness' cast time is always 80% of the caster's attack windup time.\nBecause Senna's windup percent scales down with levels but her windup time also only scales with 60% attack speed, the precise numbers get complicated quickly.\nAt base attack speed and level 1, Senna's attack windup is 0.5 seconds.\nReducing Senna's attack speed via  attack speed reductions also increases Piercing Darkness' cast time by 60% of the fraction.\nPiercing Darkness' cast time reduction per level via her own windup-per-level-reduction mirrors  Lucian's  Piercing Light's cast time values.\nSenna can generally target anything that is not either explicitly  untargetable or herself.\nValid targets include anything that can be targeted by a basic attack from someone.\nPiercing Darkness will attempt to lead the target if it is moving but does not adjust further during cast time (enemies can dodge the laser if they change their position by a sufficient amount during the cast time).\nIt leads by (up-to?) 80 units.\nOn-hit effects are applied in order of struck units' spawn IDs. This matters for effects that are consumed on-hit (e.g.  Spellblade), which are applied to the target with the lowest Spawn ID.\n\"Spawn ID\" is an unofficial abbreviation to describe the spawn order for all units at the beginning of games, below are some examples.\nIf Senna targets an enemy champion but hits at least one more enemy champion simultaneously,  Press the Attack's first stack will be applied to that target. If no champion was targeted, it will default to the champion with the lowest Spawn ID out of the ones struck by the ability. Whether the effect stacks up on a champion or not when multiple enemy champions are stuck also depends on Spawn ID.\nIf Piercing Darkness struck an enemy champion and turret simultaneously, with  Rapid Firecannon fully charged, the passive effect will most likely proc on the turret since towers are often spawned before champions.\nFor on-attack effects, they are also applied in order of struck units' spawn IDs. However, there are some specific on-attack effects that will apply to both the target of Piercing Darkness and the target with the lowest Spawn ID if the two unit is not identical. (bug) Confirmed cases:\nEnergized effects are stacked 2 stacks\nSpectral Waltz are granted 2 stacks\n PENDING FOR TEST:\n Spell shield will not prevent on-hit effects from being applied.\n PENDING FOR TEST:: Piercing Darkness interaction with  dodging,  blocking, and  blinding effects.",
+        "blurb": "Active:  Senna fires a spectral laser toward the target unit,  healing herself and allied  champions hit while dealing physical damage and  slowing enemies hit for a short time.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": "100 / 280",
+        "angle": null,
+        "castTime": "0.4-0.25",
+        "effectRadius": null,
+        "targetRange": "600 - 1100"
+      }
+    ],
+    "W": [
+      {
+        "name": "Last Embrace",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Senna throws a globule of Black Mist in the target direction that deals physical damage to the first enemy hit and attaches to them for 1 second.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      115,
+                      160,
+                      205,
+                      250
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      70,
+                      70,
+                      70,
+                      70,
+                      70
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "After the duration or when the target dies, the Black Mist spreads out of the target, rooting them and surrounding enemies for a few seconds.",
+            "leveling": [
+              {
+                "attribute": "Root Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      1,
+                      1.25,
+                      1.5,
+                      1.75,
+                      2
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                50,
+                55,
+                60,
+                65,
+                70
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                11,
+                11,
+                11,
+                11,
+                11
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spell",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Last Embrace will not  root the primary target if they are  untargetable.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+        "blurb": "Active:  Senna throws a globule of Black Mist in the target direction that deals physical damage to the first enemy hit and sticks onto them.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1200",
+        "width": "140",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "280",
+        "targetRange": "1300"
+      }
+    ],
+    "E": [
+      {
+        "name": "Curse of the Black Mist",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Senna surrounds herself with an aura of mist and gains camouflage for a duration. If Senna breaks the camouflage, she regains it after 1.75 seconds without performing actions that break stealth.",
+            "leveling": [
+              {
+                "attribute": "Effect Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      6,
+                      6.5,
+                      7,
+                      7.5,
+                      8
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Allied champions who enter the mist gain Wraith Form for a duration equal to the aura's remaining duration.",
+            "leveling": []
+          },
+          {
+            "description": "Wraith Form: Gain camouflage. Enemies will have obscured vision of camouflaged Wraiths moving outside of the mist. Wraith Form can be regained if lost by breaking the camouflage after 1.75 seconds without performing actions that break stealth. Wraith Form ends immediately upon Senna's death.",
+            "leveling": []
+          },
+          {
+            "description": "Senna and allies camouflaged by Curse of the Black Mist also gain 20% (+ 5% per 100 AP) bonus movement speed.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                70,
+                70,
+                70,
+                70,
+                70
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                26,
+                24.5,
+                23,
+                21.5,
+                20
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Senna can move while casting Curse of the Black Mist.\nAllies affected by the Curse of the Blast Mist aura receive a buff called Cloak of Mist.\nObscured units appear as Wraiths, hence the name. The wraith model does not distinguish which champion is obscured.\nOn the mini-map, obscured champions will be displayed as wraith icons instead of champion icons to the enemy team.\nIn-game, the 'Cloak of Mist' buff grants camouflage and the 'Wraith Form' buff obscures the unit and grants movement speed. However, 'Cloak of Mist' has the unspecified effect of negating the obscuring effects of 'Wraith Form' (i.e. the unit is not a wraith while inside the mist); the unit has the bonus movement speed even when they are not a wraith (e.g. inside the mist or an enemy is nearby); and 'Wraith Form' also grants the functionality of camouflage (i.e. the unit is treated as a camouflaged unit with regards to  True Sight,  Control Wards, and enemy  champions).\nGiven this overly complex interaction between the two buffs granted as well as the overlapping effects, it is easier to describe the effects as a single buff that is modified in specific circumstances rather than trying to establish a new game mechanic.\nSenna likewise has her aura buff and the 'Wraith Form' buff, but her 'Wraith Form' does not share gameplay functionality with other allies benefiting from Wraith Form. For Senna, the appearance of being a wraith is a form-swap while camouflaged (similar to  Evelynn's  Demon Shade). Senna will remain in her wraith form when she is detected so long as the camouflage effect isn't broken, and her wraith's appearance is very distinct from other wraiths.\nAllied champions who enter the mist and have  stealth of their own will still gain the Wraith Form buff but they will not grant  obscured vision of themselves to the enemy while out of the mist nor will they appear as a Wraith.\nAllies who have their own  camouflage and also have Wraith Form will be revealed to enemies from their stealth's detection range, not Wraith Form's.\nCurse of the Black Mist will not activate if Senna enters  resurrection during the cast time.\nWraith Form will not be granted to allies that are in a  zombie state or are  channeling. It will be granted to allies even if they are  untargetable.",
+        "blurb": "Active:  Senna creates an aura of mist and gains  camouflage for a few seconds. She will quickly regain camouflage after breaking stealth.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "1",
+        "effectRadius": "400",
+        "targetRange": null
+      }
+    ],
+    "R": [
+      {
+        "name": "Dawning Shadow",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Senna fires two waves of spectral light in the target direction, granting sight of the area briefly along the path. The center wave deals physical damage to enemy champions hit and reveals them for 3 seconds. It also collects Mist Wraiths it hits.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      250,
+                      400,
+                      550
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      115,
+                      115,
+                      115
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      70,
+                      70,
+                      70
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "The broad wave grants a shield to Senna and allied champions hit for 3 seconds.",
+            "leveling": [
+              {
+                "attribute": "Shield Strength",
+                "modifiers": [
+                  {
+                    "values": [
+                      100,
+                      150,
+                      200
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      40,
+                      40
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      1.5,
+                      1.5,
+                      1.5
+                    ],
+                    "units": [
+                      " per Mist collected",
+                      " per Mist collected",
+                      " per Mist collected"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                140,
+                120,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Allies / Enemies",
+        "spellshieldable": "true",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "aoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "This ability will cast from wherever the caster is at the start of the cast time.\nSenna reveals herself during the cast time.",
+        "blurb": "Active:  Senna fires two waves of spectral light in the target direction. The center wave deals physical damage to enemy champions hit and  reveals them for a short time.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "20000",
+        "width": "320 / 2400",
+        "angle": null,
+        "castTime": "1",
+        "effectRadius": null,
+        "targetRange": "Global"
+      }
+    ]
+  },
+  "releaseDate": "2019-11-10",
+  "releasePatch": "9.22",
+  "patchLastChanged": "14.7",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 790,
+    "saleRp": 0
+  },
+  "lore": "Cursed from childhood to be haunted by the supernatural Black Mist, Senna joined a sacred order known as the Sentinels of Light, and fiercely fought back—only to be killed, her soul imprisoned in a lantern by the cruel wraith Thresh. But refusing to lose hope, within the lantern Senna learned to use the Mist, and reemerged to new life, forever changed. Now wielding darkness along with light, Senna seeks to end the Black Mist by turning it against itself—with every blast of her relic weapon, redeeming the souls lost within.",
+  "faction": "unaffiliated",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 235000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Cursed from childhood to be haunted by the supernatural Black Mist, Senna joined a sacred order known as the Sentinels of Light, and fiercely fought back—only to be killed, her soul imprisoned in a lantern by the cruel wraith Thresh. But refusing to lose hope, within the lantern Senna learned to use the Mist, and reemerged to new life, forever changed. Now wielding darkness along with light, Senna seeks to end the Black Mist by turning it against itself—with every blast of her relic weapon, redeeming the souls lost within.",
+      "release": "2019-11-10",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/235/235000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/235/235000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/235/235000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/base/sennaloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Cynthia Kaye McWilliams"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "True Damage",
+      "id": 235001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "True Damage",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 235004,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235004.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 235003,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235003.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 235005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235005.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Freestyle",
+          "id": 235002,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235002.png",
+          "colors": [
+            "#BD1357",
+            "#19182A"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in 2019.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 235008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235008.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 235007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235007.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2019.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 235006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235006.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Senna rose to fame with her stunning vocal range and iconic sense of style, but when a shady adversary from her past imprisoned her in a restrictive record deal that took away her creative independence, she vanished from the spotlight. After years of living in the shadows, she now emerges as the lead singer of True Damage with her mind set on defining her legacy on her own terms.",
+      "release": "2019-11-10",
+      "set": [
+        "True Damage"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/235/235001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/235/235001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/235/235001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin01/sennaloadscreen_1.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin01/sennaloadscreen_1_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": true,
+      "voiceActor": [
+        "Cynthia Kaye McWilliams"
+      ],
+      "splashArtist": [
+        "Jennifer Wuestling"
+      ]
+    },
+    {
+      "name": "Prestige True Damage",
+      "id": 235009,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Prestige True Damage",
+      "lootEligible": true,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "150 Mythic Essence",
+      "rarity": "Mythic",
+      "chromas": [],
+      "lore": "Having topped the charts once more, Senna finds herself in the familiar space of fame and celebrity. Between cosmetics deals and fashion shows, she offers a clear message to fans and haters alike: Don't call it comeback. Senna's been here for years.",
+      "release": "2020-02-04",
+      "set": [
+        "True Damage"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/235/235009.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/235/235009.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/235/235009.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin09/sennaloadscreen_9.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin09/sennaloadscreen_9_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": true,
+      "voiceActor": [
+        "Cynthia Kaye McWilliams"
+      ],
+      "splashArtist": [
+        "Esben Lash Rasmussen"
+      ]
+    },
+    {
+      "name": "High Noon",
+      "id": 235010,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "High Noon",
+      "lootEligible": true,
+      "cost": 1820,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Legendary",
+      "chromas": [
+        {
+          "name": "Emerald",
+          "id": 235013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235013.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 235015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235015.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Mythic",
+          "id": 235037,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235037.png",
+          "colors": [
+            "#CFC0A7",
+            "#59C3F2"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 4,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 235014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235014.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 235011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235011.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 235012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235012.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Once the greatest gunslinger on the continent, Senna's life would have ended when her heart was torn out by the devil—save for the intervention of a higher authority. Mysteriously resurrected with the heart of an angel and a demonic steed, she has returned to the west to restore the balance of Heaven and Hell... however she sees fit.",
+      "release": "2020-06-18",
+      "set": [
+        "High Noon"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/235/235010.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/235/235010.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/235/235010.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin10/sennaloadscreen_10.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin10/sennaloadscreen_10_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Cynthia Kaye McWilliams"
+      ],
+      "splashArtist": [
+        "Kelly Aleshire"
+      ]
+    },
+    {
+      "name": "PROJECT",
+      "id": 235016,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "PROJECT: Senna",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 235021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235021.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 235018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235018.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 235024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235024.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 235023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235023.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Peridot",
+          "id": 235019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235019.png",
+          "colors": [
+            "#B6E084",
+            "#B6E084"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Reckoning",
+          "id": 235025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235025.png",
+          "colors": [
+            "#FF5500",
+            "#162B30"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2021 PROJECT event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 235022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235022.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 235017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235017.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 235020,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235020.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "A PROJECT volunteer who supposedly died during the elevation of her consciousness, Senna's mind was decoupled from the physical world and escaped into cyberspace, becoming a digital ghost. Inhabiting a body of her own design as Mordekaiser assumed control of the City, she is one of the few who understands the true threat of his ever-expanding directives. ",
+      "release": "2021-05-27",
+      "set": [
+        "PROJECT"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/235/235016.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/235/235016.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/235/235016.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin16/sennaloadscreen_16.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin16/sennaloadscreen_16_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Cynthia Kaye McWilliams"
+      ],
+      "splashArtist": [
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Lunar Eclipse",
+      "id": 235026,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Lunar Eclipse",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Citrine",
+          "id": 235029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235029.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 235030,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235030.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 235034,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235034.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 235033,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235033.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 235028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235028.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 235031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235031.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 235032,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235032.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 235035,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235035.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "An ancient knight long thought dead, freed from the Eclipse Cathedral's catacombs as Kayle began to stir from her ancient slumber. Senna now aids her knighthood against the new threat of the Coven, saving whoever she can from the resurrected Old Gods… though she remains ever vigilant, as the sun-eater's return is now inevitable.",
+      "release": "2022-04-28",
+      "set": [
+        "Eclipse"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/235/235026.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/235/235026.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/235/235026.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin26/sennaloadscreen_26.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Cynthia Kaye McWilliams"
+      ],
+      "splashArtist": [
+        "Augusto Quirino",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Prestige Lunar Eclipse",
+      "id": 235027,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Prestige Lunar Eclipse",
+      "lootEligible": true,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "150 Mythic Essence",
+      "rarity": "Mythic",
+      "chromas": [],
+      "lore": "Burning up the runway in a look inspired by an ancient order of magical knights, Senna brings a cold, but determined energy to the Gala proceedings. Evil beware — these looks can kill... and kill again.",
+      "release": "2022-04-28",
+      "set": [
+        "Eclipse"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/235/235027.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/235/235027.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/235/235027.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin27/sennaloadscreen_27.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin27/sennaloadscreen_27_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Cynthia Kaye McWilliams"
+      ],
+      "splashArtist": [
+        "Julia Yurtsev"
+      ]
+    },
+    {
+      "name": "Bewitching",
+      "id": 235036,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Bewitching",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 235039,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235039.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 235040,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235040.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 235045,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235045.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 235044,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235044.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 235043,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235043.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 235038,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235038.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 235041,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235041.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 235042,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235042.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "When she was just a young witch, a warlock bound Senna's soul to a tome of spells, hoping to rid himself of her rising power. But her time spent disembodied only made her stronger. While others party, the overly serious Senna searches for ghouls and ghosts, planning to send them to the grave... again.",
+      "release": "2022-10-20",
+      "set": [
+        "Bewitching"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/235/235036.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/235/235036.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/235/235036.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin36/sennaloadscreen_36.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin36/sennaloadscreen_36_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Cynthia Kaye McWilliams"
+      ],
+      "splashArtist": [
+        "Huyy Nugyen",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Star Guardian",
+      "id": 235046,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Star Guardian",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 235049,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235049.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 235050,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235050.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 235053,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235053.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 235052,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235052.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rainbow",
+          "id": 235055,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235055.png",
+          "colors": [
+            "#C1F2FF",
+            "#C1F2FF"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 235048,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235048.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 235051,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235051.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 235054,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235054.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Years spent battling the darkness alone has strengthened Senna's resolve, but it also hardened her heart. After all, when you're a Star Guardian, you know losing loved ones is inevitable. Still, she'll keep fighting now, harder than ever. Reuniting her new friend Xayah with her evil ex-boyfriend is a powerful motivator.",
+      "release": "2023-07-20",
+      "set": [
+        "Star Guardian Season 4"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/235/235046.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/235/235046.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/235/235046.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin46/sennaloadscreen_46.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin46/sennaloadscreen_46_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Cynthia Kaye McWilliams"
+      ],
+      "splashArtist": [
+        "Mingchen Shen",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Winterblessed",
+      "id": 235056,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Winterblessed",
+      "lootEligible": true,
+      "cost": 1820,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Legendary",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 235058,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235058.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rainbow",
+          "id": 235060,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235060.png",
+          "colors": [
+            "#C1F2FF",
+            "#C1F2FF"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 235059,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235059.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 235057,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235057.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 235061,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235061.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Wreathguard",
+          "id": 235062,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/235/235062.png",
+          "colors": [
+            "#BF2020",
+            "#368B25"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2023 Winterblessed event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Senna woke in the dreamlike embrace of the Aurora. Clad in regal dress she didn't recognize, she had no memory of how she got there, nor could she remember anything else, save for flashes of warmth: a love, lost in shadow. \"Who am I?\" she wondered.",
+      "release": "2023-12-06",
+      "set": [
+        "Winterblessed"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/235/235056.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/235/235056.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/235/235056.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin56/sennaloadscreen_56.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin56/sennaloadscreen_56_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Cynthia Kaye McWilliams"
+      ],
+      "splashArtist": [
+        "Pandart Studio"
+      ]
+    }
+  ]
+}

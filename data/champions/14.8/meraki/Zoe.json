@@ -1,0 +1,1793 @@
+{
+  "id": 142,
+  "key": "Zoe",
+  "name": "Zoe",
+  "title": "the Aspect of Twilight",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Zoe.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "MAGIC_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 630,
+      "percent": 0,
+      "perLevel": 106,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 7.5,
+      "percent": 0,
+      "perLevel": 0.6,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 425,
+      "percent": 0,
+      "perLevel": 25,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 8,
+      "percent": 0,
+      "perLevel": 0.65,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 21,
+      "percent": 0,
+      "perLevel": 4.7,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 58,
+      "percent": 0,
+      "perLevel": 3.3,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 340,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 550,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 120,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.658,
+      "percent": 0,
+      "perLevel": 2.5,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.138541668653488,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 550,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1.1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "BURST",
+    "MAGE",
+    "SUPPORT"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 2,
+    "mobility": 2,
+    "utility": 1,
+    "abilityReliance": 100,
+    "difficulty": 3
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "More Sparkles!",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: After casting an ability, Zoe empowers her next basic attack or Spell Thief bolt within 5 seconds to become non-projectile and deal 16 − 130 (based on level) (+ 20% AP) bonus magic damage.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Enemies",
+        "spellshieldable": "False",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Proc",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The empowered attack will trigger but not be consumed against wards.",
+        "blurb": "Innate: After casting an ability,  Zoe's next basic attack or  Spell Thief bolt within a few seconds will deal bonus magic damage.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Paddle Star",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Zoe shoots a star in the target direction that explodes upon hitting an enemy, dealing magic damage to nearby enemies hit, reduced to 80% for enemies hit beyond the first. The total damage is increased by 0% − 150% (based on distance traveled).",
+            "leveling": [
+              {
+                "attribute": "Minimum Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      7,
+                      9.529411764705882,
+                      12.058823529411764,
+                      14.588235294117647,
+                      17.11764705882353,
+                      19.647058823529413,
+                      22.176470588235293,
+                      24.705882352941174,
+                      27.235294117647058,
+                      29.764705882352942,
+                      32.294117647058826,
+                      34.8235294117647,
+                      37.35294117647059,
+                      39.88235294117647,
+                      42.41176470588235,
+                      44.94117647058823,
+                      47.470588235294116,
+                      50
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      80,
+                      110,
+                      140,
+                      170
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      60,
+                      60,
+                      60,
+                      60,
+                      60
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      17.5,
+                      23.823529411764707,
+                      30.147058823529413,
+                      36.470588235294116,
+                      42.794117647058826,
+                      49.11764705882353,
+                      55.44117647058823,
+                      61.76470588235294,
+                      68.08823529411765,
+                      74.41176470588235,
+                      80.73529411764706,
+                      87.05882352941177,
+                      93.38235294117646,
+                      99.70588235294117,
+                      106.02941176470588,
+                      112.35294117647058,
+                      118.67647058823529,
+                      125
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      125,
+                      200,
+                      275,
+                      350,
+                      425
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      150,
+                      150,
+                      150,
+                      150,
+                      150
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "The star lingers at maximum range for 1 second, during which Paddle Star can be recast after 0.25 seconds in the duration.",
+            "leveling": []
+          },
+          {
+            "description": "Recast: Zoe redirects the star in the target path, empowering it with increased speed and radius, and resetting its damage modifier on cast. The redirected star can travel until it reaches 800-units outbound from Zoe.",
+            "leveling": []
+          },
+          {
+            "description": "Paddle Star's recast can be used while affected by cast-inhibiting crowd control.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                45,
+                50,
+                55,
+                60
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                8.5,
+                8,
+                7.5,
+                7,
+                6.5
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  More Sparkles!,  Spellblade and triggering  Force Pulse's passive.\nThe recast radius matches the initial cast radius of the ability, but Zoe can move any amount of distance away from the projectile before reactivating.\nPaddle Star's effect radius is centered around the location of the missile as it collides.\nPaddle Star plays new SFX while an enemy is affected by  Sleepy Trouble Bubble.",
+        "blurb": "Active:  Zoe shoots a star in the target direction that explodes upon hitting an enemy, dealing magic damage to nearby enemies hit based on the distance travelled.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1200 / 2500",
+        "width": "100 / 140",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "180",
+        "targetRange": null
+      }
+    ],
+    "W": [
+      {
+        "name": "Spell Thief",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/w",
+        "effects": [
+          {
+            "description": "Passive - Wheeeee: Whenever Zoe casts Spell Thief or a summoner spell, she gains bonus movement speed for a duration, and summons three bolts that orbit her for the next 10 seconds.",
+            "leveling": [
+              {
+                "attribute": "Bonus Movement Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      30,
+                      40,
+                      50,
+                      60,
+                      70
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Bonus Movement Speed Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      2,
+                      2.25,
+                      2.5,
+                      2.75,
+                      3
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If Zoe is not affected by complete crowd control, she shoots one bolt at a time at the nearest non- sleeping enemy in range, prioritizing her attack target, dealing magic damage with each bolt.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage Per Bolt",
+                "modifiers": [
+                  {
+                    "values": [
+                      25,
+                      35,
+                      45,
+                      55,
+                      65
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      13.3,
+                      13.3,
+                      13.3,
+                      13.3,
+                      13.3
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      75,
+                      105,
+                      135,
+                      165,
+                      195
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      40,
+                      40,
+                      40,
+                      40
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Passive: Whenever an enemy champion casts a summoner spell or item active, they drop the corresponding Spell Shard onto the ground that grants sight over a 100-radius area and remains for 40 seconds. Enemy minions have a 10% chance to spawn with a random Spell Shard that drops and remains for 20 seconds if Zoe kills them. Allied champions that kill them will cause the orb to drop only if Zoe is nearby.",
+            "leveling": []
+          },
+          {
+            "description": "Zoe can collect a Spell Shard for 60 seconds, and replace it by moving directly onto another Spell Shard.",
+            "leveling": []
+          },
+          {
+            "description": "Active: Zoe mimics the active of the collected Spell Shard.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                0.25,
+                0.25,
+                0.25,
+                0.25,
+                0.25
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Varied",
+        "affects": "Varied",
+        "spellshieldable": "Special",
+        "resource": "OTHER",
+        "damageType": "OTHER_DAMAGE",
+        "spellEffects": "Special",
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Mimics the details of the mimicked active.\nZoe will cast Spell Thief in place of her own summoner spells if she has either of them as a collected Spell Shard, even if she tries to cast the summoner spell while it is on cooldown.\nMinions that can drop Spell Shards are marked with a tied cosmic balloon that floats above them.\nMinions do not drop a shard for  Teleport.\nZoe utilizes an attack-like animation whenever one of the bubbles hurls itself at an enemy, making it look as if she can attack while moving.\nZoe cannot steal consumables, trinkets, component items, or items that create deployable or persistent effects. Some actives are excluded.\n\n\nItem\n\nStealable\n\n\n Anathema's Chains\n\n\n\n Black Spear\n\n\n\n Farsight Alteration\n\n\n\n Hextech Rocketbelt\n\n\n\n Knight's Vow\n\n\n\n Locket of the Iron Solari\n\n\n\n Mercurial Scimitar\n\n\n\n Mikael's Blessing\n\n\n\n Oracle Lens\n\n\n\n Predator Boots\n\n\n\n Quicksilver Sash\n\n\n\n Randuin's Omen\n\n\n\n Redemption\n\n\n\n Scarecrow Effigy\n\n\n\n Shurelya's Battlesong\n\n\n\n Stridebreaker\n\n\n\n Warding Totem\n\n\n\n Watchful Wardstone\n\n\n\n Vigilant Wardstone\n\n\n\n Youmuu's Ghostblade\n\n\n\n Zeke's Convergence\n\n\n\n Zhonya's Hourglass\n\n\n\n\nKey\n\n\n\n\nCan be stolen.\n\n\n\n\nCannot be stolen.\n\n\n\n\nNot applicable to be stolen.\n\n\n\n\nUntested",
+        "blurb": "Passive - Wheeeee: Whenever  Zoe casts Spell Thief or a summoner spell, she gains  bonus movement speed for a short time. She also conjures 3 orbiting bolts for a period that will each shoot to the nearest enemy, dealing magic damage.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": "2200 / Global / 1500 /  525",
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Sleepy Trouble Bubble",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Zoe kicks a bubble in the target direction that bursts upon the first enemy hit, otherwise lingering at maximum range over 1 second, then becoming a trap for 5 seconds that bursts upon contact with an enemy. The bubble can move through terrain only once, but travels the entire distance as bonus range, and will fall short if it would enter terrain again.",
+            "leveling": []
+          },
+          {
+            "description": "The burst deals magic damage to the target and inflicts them with drowsy for 1.4 seconds, which gradually slows them until they fall asleep for 2.25 seconds. While the target is asleep, they are inflicted with 30% magic resistance reduction.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      110,
+                      150,
+                      190,
+                      230
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      45,
+                      45,
+                      45,
+                      45,
+                      45
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      10,
+                      15,
+                      20,
+                      25,
+                      30
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "The next instance of non- persistent damage that the sleeping target takes from champions, large monsters or structures consumes the debuff to deal bonus true damage equal to the post-mitigation damage dealt, capped at Sleepy Trouble Bubble's damage. The bonus damage is dealt before the triggering damage.",
+            "leveling": [
+              {
+                "attribute": "Bonus Damage Cap",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      110,
+                      150,
+                      190,
+                      230
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      45,
+                      45,
+                      45,
+                      45,
+                      45
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Mixed Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      140,
+                      220,
+                      300,
+                      380,
+                      460
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      90,
+                      90,
+                      90,
+                      90,
+                      90
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                80,
+                80,
+                80,
+                80,
+                80
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                16,
+                15,
+                14,
+                13,
+                12
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "true",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Single target",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Zoe will gain  obscured vision of the target while they're  asleep if they are not  visible.\nIf exceptionally close to terrain, the bubble will pass through without detection and will still be able to pass through a second piece of terrain - although it sacrifices any range its already used going through the first piece.\nSleepy Trouble Bubble can interact with player-generated terrain.\nSleepy Trouble Bubble's range will be extended if Zoe casts it right before blinking back from  Portal Jump. This is due to the range of the missile being measured at the start of the cast time and Zoe already having blinked back once the cast time finishes.\nAt the end of the path of the initial missile, before continuing with the short bounce, Sleepy Trouble Bubble checks for targets in a  100 radius to immediately collide with.\nThis \"lollipop\" is one of only a few that is larger than the ability's missile width.\nSleepy Trouble Bubble can still be collided with during the short bounce between end of initial missile and the trap being formed.\nThis seems to use a  very small or negative collision radius, rather than normal missile collision.\nThis ability will cast from wherever the caster is at the end of the cast time.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+        "blurb": "Active:  Zoe kicks a bubble in the target direction that bursts upon the first enemy hit. At max range, it will linger as a trap for a few seconds that bursts upon enemy contact.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1850",
+        "width": "100 / 200",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "250",
+        "targetRange": null
+      }
+    ],
+    "R": [
+      {
+        "name": "Portal Jump",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Zoe blinks in the target direction and remains there for 0.75 seconds, during which she sets her movement speed to a static 0 and has unobstructed vision. Afterwards, she blinks back to her casting position.",
+            "leveling": []
+          },
+          {
+            "description": "Portal Jump resets Zoe's basic attack timer. Zoe is unable to basic attack and cast her abilities and movement spells for 0.75 seconds after casting Portal Jump and for 0.5 seconds after blinking back.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                40,
+                40
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                11,
+                8,
+                5
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Zoe will always  blink back.\nShe will still be considered to blink even if she fails to move her intended location while  attached (e.g. if she were affected by  The Show Stopper).\nZoe can attack and cast abilities and movement spells at the target location for 0.5 seconds after she is able to use them again.\nUpon reaching her destination, Zoe will either raspberry at the nearest enemy champion, or lick an ice cream cone when there are no enemy champions in  sight.\nZoe's return position is shifted by 25 units in the target direction from her cast location.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+        "blurb": "Active:  Zoe  blinks in the target direction, after which she cannot move for a brief moment.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ]
+  },
+  "releaseDate": "2017-11-21",
+  "releasePatch": "7.23",
+  "patchLastChanged": "14.7",
+  "price": {
+    "blueEssence": 4800,
+    "rp": 880,
+    "saleRp": 0
+  },
+  "lore": "As the embodiment of mischief, imagination, and change, Zoe acts as the cosmic messenger of Targon, heralding major events that reshape worlds. Her mere presence warps the arcane mathematics governing realities, sometimes causing cataclysms without conscious effort or malice. This perhaps explains the breezy nonchalance with which Zoe approaches her duties, giving her plenty of time to focus on playing games, tricking mortals, or otherwise amusing herself. An encounter with Zoe can be joyous and life affirming, but it is always more than it appears and often extremely dangerous.",
+  "faction": "mount-targon",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 142000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "As the embodiment of mischief, imagination, and change, Zoe acts as the cosmic messenger of Targon, heralding major events that reshape worlds. Her mere presence warps the arcane mathematics governing realities, sometimes causing cataclysms without conscious effort or malice. This perhaps explains the breezy nonchalance with which Zoe approaches her duties, giving her plenty of time to focus on playing games, tricking mortals, or otherwise amusing herself. An encounter with Zoe can be joyous and life affirming, but it is always more than it appears and often extremely dangerous.",
+      "release": "2017-11-21",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/142/142000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/142/142000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/142/142000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/base/zoeloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Erica Lindbeck"
+      ],
+      "splashArtist": [
+        "Jessica 'OwleyCat' Oyhenart"
+      ]
+    },
+    {
+      "name": "Cyber Pop",
+      "id": 142001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Cyber Pop",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [],
+      "lore": null,
+      "release": "2017-11-21",
+      "set": [
+        "Cyber Pop"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/142/142001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/142/142001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/142/142001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/skin01/zoeloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": true,
+      "voiceActor": [
+        "Erica Lindbeck"
+      ],
+      "splashArtist": [
+        "Zeen Chin",
+        "Jessica 'OwleyCat' Oyhenart"
+      ]
+    },
+    {
+      "name": "Pool Party",
+      "id": 142002,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Pool Party",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 142006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142006.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 142004,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142004.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rainbow",
+          "id": 142007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142007.png",
+          "colors": [
+            "#C1F2FF",
+            "#C1F2FF"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 142008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142008.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 142003,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142003.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive during 2018.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 142005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142005.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Who let this ageless, cosmic child in here unattended? This a public pool, not some sort of ageless, cosmic daycare.",
+      "release": "2018-08-02",
+      "set": [
+        "Pool Party"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/142/142002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/142/142002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/142/142002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/skin02/zoeloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Erica Lindbeck"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "Star Guardian",
+      "id": 142009,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Star Guardian",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Aquamarine",
+          "id": 142014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142014.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Amethyst",
+          "id": 142011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142011.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 142013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142013.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 142017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142017.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": "Obtained through Influencer audience giveaways.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Jasper",
+          "id": 142010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142010.png",
+          "colors": [
+            "#9F4A25",
+            "#9F4A25"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 142012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142012.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 142016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142016.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 142015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142015.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2019.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "A member of the ancient, first group of Star Guardians, Zoe's heart desired not love, but chaos   twisting her newfound power into a malignant expression of cosmic madness. After numberless eons of hunting the First Star's chosen, she has finally come to Valoran City, hoping to destroy the latest generation of Guardians as she has countless others.",
+      "release": "2019-09-12",
+      "set": [
+        "Star Guardian Season 3"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/142/142009.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/142/142009.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/142/142009.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/skin09/zoeloadscreen_9.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/skin09/zoeloadscreen_9_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": true,
+      "voiceActor": [
+        "Erica Lindbeck"
+      ],
+      "splashArtist": [
+        "Jennifer Wuestling"
+      ]
+    },
+    {
+      "name": "Arcanist",
+      "id": 142018,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Arcanist",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [],
+      "lore": "A promising student of magic at the Arcanist Academy, Zoe has ignored the advice of her headmaster and embarked upon a grand adventure the likes of which she is utterly unprepared for. Considering her penchant for sewing chaos wherever she goes, the world might be more unprepared than she is.",
+      "release": "2020-07-09",
+      "set": [
+        "Arcanists"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/142/142018.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/142/142018.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/142/142018.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/skin18/zoeloadscreen_18.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Erica Lindbeck"
+      ],
+      "splashArtist": [
+        "Zuoan Dong",
+        "Kudos Productions"
+      ]
+    },
+    {
+      "name": "Prestige Arcanist",
+      "id": 142019,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Prestige Arcanist",
+      "lootEligible": true,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "200 Mythic Essence",
+      "rarity": "Mythic",
+      "chromas": [],
+      "lore": "Having temporarily outsmarted the mad Arcanist Shaco and absconded with his precious tome of magic, Zoe's power has been elevated beyond even some of her instructors. Her instructors are extremely worried about this. Most people are extremely worried about this.",
+      "release": "2020-07-09",
+      "set": [
+        "Arcanists"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/142/142019.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/142/142019.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/142/142019.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/skin19/zoeloadscreen_19.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/skin19/zoeloadscreen_19_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Erica Lindbeck"
+      ],
+      "splashArtist": [
+        "Sanhua Chen",
+        "Kudos Productions"
+      ]
+    },
+    {
+      "name": "EDG",
+      "id": 142020,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "EDG",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Elite",
+          "id": 142021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142021.png",
+          "colors": [
+            "#131521",
+            "#9E1517"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive during MSI 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tenfold Triumph",
+          "id": 142032,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142032.png",
+          "colors": [
+            "#FF1515",
+            "#E8CD6B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Honoring Scout's winning performance as Zoe during the 2021 World Championship.",
+      "release": "2022-05-12",
+      "set": [
+        "World Champions: 2021"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/142/142020.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/142/142020.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/142/142020.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/skin20/zoeloadscreen_20.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/skin20/zoeloadscreen_20_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Erica Lindbeck"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "Winterblessed",
+      "id": 142022,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Winterblessed",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Aquamarine",
+          "id": 142025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142025.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 142024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142024.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 142027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142027.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Peridot",
+          "id": 142026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142026.png",
+          "colors": [
+            "#B6E084",
+            "#B6E084"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rainbow",
+          "id": 142030,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142030.png",
+          "colors": [
+            "#C1F2FF",
+            "#C1F2FF"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 142028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142028.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 142023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142023.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 142029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142029.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Wreathguard",
+          "id": 142031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/142/142031.png",
+          "colors": [
+            "#BF2020",
+            "#368B25"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the Season 2023 event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "An impatient Warden Zoe strode past the waiting Sage to make her plea. Everyone relied on her flock and crops, and her harvest would be unequaled with the Aurora's blessings. Polaris considered the three leaders' wishes, and with a wave of her hand, conjured the Aurora into two shapes: a sinewy mass of teeth and fur, and a tireless, smiling soldier.",
+      "release": "2022-12-08",
+      "set": [
+        "Winterblessed"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/142/142022.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/142/142022.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/142/142022.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/skin22/zoeloadscreen_22.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/skin22/zoeloadscreen_22_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Erica Lindbeck"
+      ],
+      "splashArtist": []
+    }
+  ]
+}

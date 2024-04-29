@@ -1,0 +1,1563 @@
+{
+  "id": 13,
+  "key": "Ryze",
+  "name": "Ryze",
+  "title": "the Rune Mage",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Ryze.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "MAGIC_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 645,
+      "percent": 0,
+      "perLevel": 124,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 8,
+      "percent": 0,
+      "perLevel": 0.8,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 300,
+      "percent": 0,
+      "perLevel": 70,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 8,
+      "percent": 0,
+      "perLevel": 1,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 22,
+      "percent": 0,
+      "perLevel": 4.2,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 58,
+      "percent": 0,
+      "perLevel": 3,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 340,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 575,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 120,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.658,
+      "percent": 0,
+      "perLevel": 2.11,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.100000001490116,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 550,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "BATTLEMAGE",
+    "FIGHTER",
+    "MAGE"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 2,
+    "mobility": 2,
+    "utility": 2,
+    "abilityReliance": 100,
+    "difficulty": 2
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Arcane Mastery",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Ryze increases his maximum mana by (10% per 100 AP).",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The increase in maximum mana differenciates between base and bonus mana, similar to  Overgrowth. The product base off of base mana does not count as bonus mana.\nWith  Rabadon's Deathcap, a total of (40% AP) ability power and (14% AP)% maximum mana is gained.\nArcane Mastery together with any converter of  mana to  health ( Winter's Approach,  Fimbulwinter or the U.R.F. buff) creates a recursive stat loop:  ability power giving  mana and so on.",
+        "blurb": "Innate:  Ryze gains  maximum mana based on his  ability power.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Overload",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/q",
+        "effects": [
+          {
+            "description": "Passive: Ryze's other basic ability casts reset Overload's cooldown and charge a Rune stack for 4 seconds, refreshing on subsequent casts and stacking up to 2 times.",
+            "leveling": []
+          },
+          {
+            "description": "Active: Ryze unleashes a runic blast in the target direction that deals magic damage to the first enemy hit and consumes all Rune stacks.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      90,
+                      110,
+                      130,
+                      150
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      55,
+                      55,
+                      55,
+                      55,
+                      55
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "units": [
+                      "% bonus mana",
+                      "% bonus mana",
+                      "% bonus mana",
+                      "% bonus mana",
+                      "% bonus mana"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If Ryze consumed 2 stacks, he gains bonus movement speed for 2 seconds.",
+            "leveling": [
+              {
+                "attribute": "Bonus Movement Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      28,
+                      32,
+                      36,
+                      40,
+                      44
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Flux Bonus: Overload deals 10 / 40 / 70 / 100% (based on Realm Warp's Rank) increased damage and spreads to surrounding Fluxed enemies.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                38,
+                36,
+                34,
+                32
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Special",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Overload can be buffered 0.5 seconds before it comes off cooldown.\nOverload can be buffered while casting either  Spell Flux or  Rune Prison to cast immediately after the previous spell's cast time.\nApplies  spell damage to the primary target and  area damage to secondary targets affected by  Flux.\nThis ability will cast from wherever the caster is at the start of the cast time.",
+        "blurb": "Passive:  Ryze's other basic ability casts  reset Overload's cooldown and generate a  Rune stack, stacking up to 2 times.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1700",
+        "width": "110",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": "1000"
+      }
+    ],
+    "W": [
+      {
+        "name": "Rune Prison",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Ryze seizes the target enemy, dealing magic damage and slowing them by 35% for 1.5 seconds.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      80,
+                      110,
+                      140,
+                      170,
+                      200
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      70,
+                      70,
+                      70,
+                      70,
+                      70
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      4,
+                      4,
+                      4,
+                      4,
+                      4
+                    ],
+                    "units": [
+                      "% bonus mana",
+                      "% bonus mana",
+                      "% bonus mana",
+                      "% bonus mana",
+                      "% bonus mana"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Flux Bonus: The target is rooted instead of slowed.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                55,
+                70,
+                85,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                13,
+                12,
+                11,
+                10,
+                9
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Unit",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Single target",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Rune Prison can be buffered 0.5 seconds before it comes off cooldown.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+        "blurb": "Active:  Ryze seizes the target enemy, dealing magic damage and briefly  slowing them.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": "550"
+      }
+    ],
+    "E": [
+      {
+        "name": "Spell Flux",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Ryze projects an orb upon the target enemy that deals magic damage.\nThe target and surrounding enemies are also marked with Flux for 4 seconds. Ryze's basic abilities against Flux targets consume the mark to become empowered with an additional effect.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      60,
+                      90,
+                      120,
+                      150,
+                      180
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "units": [
+                      "% bonus mana",
+                      "% bonus mana",
+                      "% bonus mana",
+                      "% bonus mana",
+                      "% bonus mana"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Flux Bonus: Spell Flux spreads farther.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                35,
+                45,
+                55,
+                65,
+                75
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                3.5,
+                3.25,
+                3,
+                2.75,
+                2.5
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Unit",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spell",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Spell Flux's second cast on a target will apply a new Flux debuff as well as triggering the previous one (effectively refreshing the duration).\n PENDING FOR TEST: bounce range  to-edge or  to-center?\nGame data notes additional range checks of 400 (bounce range) and 500 (Q damage bounce range) against 'large' enemies.\nSpell Flux can be buffered 0.5 seconds before it comes off cooldown.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+        "blurb": "Active:  Ryze projects an orb upon the target enemy that deals magic damage.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "4000 / 1500",
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "350",
+        "targetRange": "550"
+      }
+    ],
+    "R": [
+      {
+        "name": "Realm Warp",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/r",
+        "effects": [
+          {
+            "description": "Passive: Overload's Flux empowered damage is increased.",
+            "leveling": [
+              {
+                "attribute": "Bonus Overload Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      70,
+                      100
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Active: Ryze channels for 2 seconds to open a portal beneath him, marking the target location as its destination and granting sight of the area. Ryze is able to act while channeling, but the portal will cancel if he is interrupted.",
+            "leveling": []
+          },
+          {
+            "description": "Upon completion, Ryze and allied units within will blink to the location and become rooted, disarmed, silenced and untargetable for 0.75 seconds.",
+            "leveling": []
+          },
+          {
+            "description": "Realm Warp will cast at max range if cast beyond that.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                210,
+                180,
+                150
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Allies",
+        "spellshieldable": null,
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Realm Warp will try to predict whether an ally is trying to run out of it or not and will not teleport allies that are very near the edge and move click outside of it.\nBlinked units retain the same relative positions to one another upon arrival.\nIf no  champions but one or more  minions are teleported, Realm Warp will not teleport the minion closest to its center, and furthermore shuffles the positions of the other teleported minions.(bug)\nIf a champion is present, the innermost minion is teleported on top the outermost champion's new position, and the remaining minions are teleported to their proper intended positions.(bug)\nRealm Warp will teleport allies even if they are in a  zombie state, are  untargetable, or are affected by  crowd control.\nRealm Warp will not teleport allies that are using an ability that preloads UnstoppableForceMarker or are being affected by another ally's Realm Warp first.\nRealm Warp will still teleport an allied  Rift Herald that is winding up its leap.\nRealm Warp has various interactions with  channeled abilities that are being performed by an ally. Some channels will prevent their caster from being teleported and others will not.\nFor channels that do not prevent the teleport, Realm Warp will specifically not apply its  silence to the caster.\nCast times will not prevent the teleport.\nThe following channels will prevent the teleport:\n Caitlyn's  Ace in the Hole\n Galio's  Hero's Entrance\n Kayn's  Umbral Trespass\n Jhin's  Curtain Call\n Warwick's  Jaws of the Beast\n Xerath's  Rite of the Arcane\n Recall /  Empowered Recall\n Teleport /  Unleashed Teleport\nThe following table refers for interactions while Ryze is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nAllowed\n\n\nAbilities\n\nAllowed\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Zhonya's Hourglass\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Recall  Hexflash  Mark  Dash\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection Grounding effects Immobilizing effects Cast-inhibiting effects",
+        "blurb": "Passive:  Overload's  Flux empowered damage is increased.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "365 / 465 /  515",
+        "targetRange": "3000 / 1000"
+      }
+    ]
+  },
+  "releaseDate": "2009-02-21",
+  "releasePatch": "Alpha Week 2",
+  "patchLastChanged": "14.7",
+  "price": {
+    "blueEssence": 4800,
+    "rp": 260,
+    "saleRp": 0
+  },
+  "lore": "Widely considered one of the most adept sorcerers on Runeterra, Ryze is an ancient, hard-bitten archmage with an impossibly heavy burden to bear. Armed with immense arcane power and a boundless constitution, he tirelessly hunts for World Runes—fragments of the raw magic that once shaped the world from nothingness. He must retrieve these artifacts before they fall into the wrong hands, for Ryze understands the horrors they could unleash on Runeterra.",
+  "faction": "unaffiliated",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 13000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 260,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Widely considered one of the most adept sorcerers on Runeterra, Ryze is an ancient, hard-bitten archmage with an impossibly heavy burden to bear. Armed with immense arcane power and a boundless constitution, he tirelessly hunts for World Runes—fragments of the raw magic that once shaped the world from nothingness. He must retrieve these artifacts before they fall into the wrong hands, for Ryze understands the horrors they could unleash on Runeterra.",
+      "release": "2009-02-21",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/base/ryzeloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Joshua 'HUGEnFAST' Brian Smith"
+      ]
+    },
+    {
+      "name": "Young",
+      "id": 13001,
+      "isBase": false,
+      "availability": "Limited",
+      "formatName": "Young",
+      "lootEligible": false,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "Pre-order Retail Collector's edition",
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Given to players who pre-ordered the Retail Collector's Edition of League of Legends.",
+      "release": "2009-07-17",
+      "set": [
+        "Collector's Edition"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin01/ryzeloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Tribal",
+      "id": 13002,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Tribal",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": null,
+      "release": "2010-03-04",
+      "set": [
+        "Prehistoric Hunters"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin02/ryzeloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Uncle",
+      "id": 13003,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Uncle",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Uncle Ryze wants YOU… to get on the rift!",
+      "release": "2010-07-03",
+      "set": [
+        "Wonders of the World"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13003.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13003.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13003.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin03/ryzeloadscreen_3.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "Triumphant",
+      "id": 13004,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Triumphant",
+      "lootEligible": false,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "Tournament Participation",
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": null,
+      "release": "2010-08-31",
+      "set": [
+        "Triumphant"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13004.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13004.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13004.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin04/ryzeloadscreen_4.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "Professor",
+      "id": 13005,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Professor",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "TO ALL STUDENTS OF RUNIC SIGILS 101: Professor Ryze is on sabbatical to promote the most recent edition of his coursebook, Runic Sigils & Hidden Magic [17th edition]. A substitute lecturer will be provided, and out of date coursebooks must be replaced at the current cover price of seven thousand dollars.",
+      "release": "2010-10-05",
+      "set": [
+        "Academy"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13005.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13005.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13005.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin05/ryzeloadscreen_5.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Xi Zhang"
+      ]
+    },
+    {
+      "name": "Zombie",
+      "id": 13006,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Zombie",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Obsessed with discovering the cure for a mutagenic virus that had ravaged the population, Ryze scoured the globe for every shred of esoteric medical research he could find—getting tantalizingly close to his goal before succumbing to the very mutation he was trying to eradicate.",
+      "release": "2010-10-19",
+      "set": [
+        "Zombies VS Slayers"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13006.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13006.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13006.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin06/ryzeloadscreen_6.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin06/ryzeloadscreen_6_le.jpg",
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Viktor Titov",
+        "Grafit Studio"
+      ]
+    },
+    {
+      "name": "Dark Crystal",
+      "id": 13007,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Dark Crystal",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": null,
+      "release": "2012-02-20",
+      "set": [
+        "Bloodstone"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13007.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13007.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13007.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin07/ryzeloadscreen_7.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Mike Azevedo"
+      ]
+    },
+    {
+      "name": "Pirate",
+      "id": 13008,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Pirate",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "In another world and time, when the stress of preventing another Rune War was just too much, Ryze left behind his previous life to terrorize the high seas of Runeterra! With his trusty cannon on his back, and magic coursing through his veins like gold through his fingers, Pirate Ryze warps from ship to ship and coast to coast, taking what he will.",
+      "release": "2012-10-26",
+      "set": [
+        "Bilgewater: Burning Tides"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13008.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13008.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13008.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin08/ryzeloadscreen_8.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Mist XG"
+      ]
+    },
+    {
+      "name": "Ryze Whitebeard",
+      "id": 13009,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Ryze Whitebeard",
+      "lootEligible": true,
+      "cost": 750,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Ryze likes to take time out of his rune hunting to play games of Riftquest as a tome-wielding, scroll protecting wizard also named Ryze. The difference, he will often point out, is that his own beard is black—Ryze Whitebeard's beard is white, plus he has hat.",
+      "release": "2015-12-07",
+      "set": [
+        "Rift Quest"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13009.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13009.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13009.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin09/ryzeloadscreen_9.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "SKT T1",
+      "id": 13010,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "SKT T1",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Honoring Faker's winning performance as Ryze during the 2015 World Championship. This is Faker's second World Champion skin, following his win with SKT at the 2013 World Championship.",
+      "release": "2016-08-17",
+      "set": [
+        "World Champions: 2015"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13010.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13010.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13010.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin10/ryzeloadscreen_10.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Victor '3rdColossus' Maury"
+      ]
+    },
+    {
+      "name": "Worlds 2019",
+      "id": 13011,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Worlds 2019",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Golden",
+          "id": 13012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13012.png",
+          "colors": [
+            "#FFC948",
+            "#FFC948"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive during a Worlds event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Celebrating Worlds 2019 in Europe.",
+      "release": "2019-09-26",
+      "set": [
+        "World Championship"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13011.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13011.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13011.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin11/ryzeloadscreen_11.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin11/ryzeloadscreen_11_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Guardian of the Sands",
+      "id": 13013,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Guardian of the Sands",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 13018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13018.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Aquamarine",
+          "id": 13015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13015.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 13019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13019.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 13017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13017.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 13014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13014.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 13016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13016.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Ryze, the eternal conservator—ancient guardian of the sands, we invoke thee to protect us from an evil of our own making. Let no man tread upon these hallowed grounds, lest your righteous magic entomb them beneath the dunes.",
+      "release": "2020-01-22",
+      "set": [
+        "Guardian of the Sands"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13013.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13013.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13013.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin13/ryzeloadscreen_13.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "David Villegas",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Arcana",
+      "id": 13020,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Arcana",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 13023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13023.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 13022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13022.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 13026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13026.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 13027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13027.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 13028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13028.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 13025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13025.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 13021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13021.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 13024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/13/13024.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "A secret-keeper and didact, whose power dwells in his mind and hands. Tasked with quietly solving the problems of the worlds with little fanfare or recognition, he prepares to fix whatever chaos the fated lovers cause before retreating back to obscurity—serving as a role model to the talented but forgotten.",
+      "release": "2022-04-14",
+      "set": [
+        "Arcana"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/13/13020.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/13/13020.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/13/13020.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/skin20/ryzeloadscreen_20.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Francis Tneh",
+        "West Studio"
+      ]
+    }
+  ]
+}

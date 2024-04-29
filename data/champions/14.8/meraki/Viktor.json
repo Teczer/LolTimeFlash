@@ -1,0 +1,1547 @@
+{
+  "id": 112,
+  "key": "Viktor",
+  "name": "Viktor",
+  "title": "the Machine Herald",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Viktor.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "MAGIC_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 600,
+      "percent": 0,
+      "perLevel": 104,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 8,
+      "percent": 0,
+      "perLevel": 0.65,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 405,
+      "percent": 0,
+      "perLevel": 45,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 8,
+      "percent": 0,
+      "perLevel": 0.8,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 23,
+      "percent": 0,
+      "perLevel": 5.2,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 53,
+      "percent": 0,
+      "perLevel": 3,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 335,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 525,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 160,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.658,
+      "percent": 0,
+      "perLevel": 2.11,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.657999992370605,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.11999999731779,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 525,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "BATTLEMAGE",
+    "MAGE"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 2,
+    "mobility": 1,
+    "utility": 1,
+    "abilityReliance": 90,
+    "difficulty": 3
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Glorious Evolution",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Viktor can augment each of his basic abilities at the cost of 100 Hex Fragments, which he gains from killing enemies:\n Minions and monsters generate 1 Hex Fragment.\nSiege minions, super minions, and epic monsters generate 5 Hex Fragments.\nEnemy champion takedowns generate 25 Hex Fragments.",
+            "leveling": []
+          },
+          {
+            "description": "Chaos Storm becomes augmented once all of Viktor's basic abilities have been augmented.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Viktor can only have up to 100 Hex Fragments, and must upgrade an ability before obtaining any more.",
+        "blurb": "Innate:  Viktor collects Hex Fragments from enemies he kills and enemy champion  takedowns, he can augment each of his basic abilities at the cost of max Hex Fragments.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Siphon Power",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Viktor throws a device at the target enemy that deals magic damage. He also grants himself a shield for 27 − 105 (based on level) (+ 18% AP) for 2.5 seconds and gains Discharge for 3.5 seconds.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      60,
+                      75,
+                      90,
+                      105,
+                      120
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      40,
+                      40,
+                      40,
+                      40
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Discharge: Viktor's next basic attack is empowered to become non-projectile and deal modified magic damage.",
+            "leveling": [
+              {
+                "attribute": "Modified Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      20,
+                      45,
+                      70,
+                      95,
+                      120
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      60,
+                      60,
+                      60,
+                      60,
+                      60
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      80,
+                      120,
+                      160,
+                      200,
+                      240
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Augment: Turbocharge: After the device hits, Viktor gains 30% bonus movement speed for 2.5 seconds and the shield's strength is increased by 60%, up to 48 − 184 (based on level) (+ 32% AP).",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                45,
+                50,
+                55,
+                60,
+                65
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                9,
+                8,
+                7,
+                6,
+                5
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Unit",
+        "affects": "Enemies / Self",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spell",
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "All damage dealt by  Spellblade on the enhanced attack is converted into magic damage.\n Spell shield does not prevent Viktor from gaining Discharge.\n Critical strike and  life steal only interact with the basic attack damage component.\nOnly the initial projectile can be  intercepted.\nDischarge's empowered attack can be  blocked (damage is negated and the empowered attack will still be consumed).\nThe empowered attack will trigger but not be consumed nor apply its effects against structures nor wards.\n PENDING FOR TEST:: Discharge's interaction with parrying effects ( dodge and  blind).\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+        "blurb": "Active:  Viktor throws a device at the target enemy that deals magic damage. He also gains Discharge and  shields himself for a short time.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "2000",
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": "600"
+      }
+    ],
+    "W": [
+      {
+        "name": "Gravity Field",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Viktor deploys a gravity field at the target location for 4 seconds. After a 0.75-second delay, it activates to slow enemies within, persisting for 0.25 seconds after leaving the area or generating 3 stacks.",
+            "leveling": [
+              {
+                "attribute": "Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      30,
+                      34,
+                      38,
+                      42,
+                      45
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "The field applies a stack to enemies within every 0.5 seconds, stacking up to 3 times. The third stack consumes them all to knock down and stun the target for 1.5 seconds. The target then becomes immune to Gravity Field's effects, occurring once per cast.",
+            "leveling": []
+          },
+          {
+            "description": "Augment: Magnetize: Viktor's other abilities, excluding Chaos Storm's persistent damage, slow enemies hit by 20% for 1 second.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                65,
+                65,
+                65,
+                65,
+                65
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                17,
+                16,
+                15,
+                14,
+                13
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Gravity Field will remain active if Viktor dies.\nGravity Field's animation can be seen by both teams through fog of war.\nIf an enemy enters the area of effect while  untargetable, they may generate stacks even after becoming stunned once, causing them to get stunned up-to 3 times by a single Gravity Field.(bug)",
+        "blurb": "Active:  Viktor deploys a gravity field that remains at the target location for a few seconds. After a brief delay, it activates to continually  slow enemies within and inflict stacks of Gravity Field.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": "800"
+      }
+    ],
+    "E": [
+      {
+        "name": "Death Ray",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Viktor fires an energy beam along the target path that deals magic damage to enemies hit and briefly grants sight of the area.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      110,
+                      150,
+                      190,
+                      230
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Augment: Aftershock: The path explodes along the beam's wake after 1 second, dealing magic damage to enemies hit.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      20,
+                      50,
+                      80,
+                      110,
+                      140
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      80,
+                      80,
+                      80,
+                      80,
+                      80
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      90,
+                      160,
+                      230,
+                      300,
+                      370
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      130,
+                      130,
+                      130,
+                      130,
+                      130
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                70,
+                80,
+                90,
+                100,
+                110
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                12,
+                11,
+                10,
+                9,
+                8
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Vector",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Viktor may freely act while the ray is traveling.\nThe effected area is set upon casting, no matter how far away Viktor moves. Unlike a leash, Death Ray will not break off its own effect.\nThe laser grants a moderate area of  sight around where the beam strikes the ground.\nIf Death Ray is  intercepted, the initial ray is not destroyed.\nHowever, the capability to be blocked only applies to the laser as it hits the ground. Viktor can cast the ability over the wall and it will not be destroyed or intercepted.\nAugmented Death Ray will still cause the entire target area to explode even if the laser is blocked.\nIf Viktor dies while he is firing the beam it only deals damage up to the location at the time of his death.",
+        "blurb": "Active:  Viktor fires an energy beam along the target path that deals magic damage to enemies hit.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1050 / 1500",
+        "width": "90",
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "500",
+        "targetRange": "550"
+      }
+    ],
+    "R": [
+      {
+        "name": "Chaos Storm",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Viktor conjures an arcane singularity at the target location, dealing magic damage to enemies within the area and disrupting their channeled abilities.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      100,
+                      175,
+                      250
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "The singularity then remains active for 6.5 seconds, dealing magic damage to enemies within it every second and granting sight of the area. The singularity targets the nearest champion hit by its initial damage and will follow them, moving faster based on its proximity to Viktor.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage Per Tick",
+                "modifiers": [
+                  {
+                    "values": [
+                      65,
+                      105,
+                      145
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      45,
+                      45,
+                      45
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      490,
+                      805,
+                      1120
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      320,
+                      320,
+                      320
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Chaos Storm can be recast at any time while the singularity is active.",
+            "leveling": []
+          },
+          {
+            "description": "Recast: Viktor directs the singularity to the target location or enemy champion.",
+            "leveling": []
+          },
+          {
+            "description": "Augment: Perfect Storm: The singularity moves 25% faster.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                120,
+                100,
+                80
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The  disrupt is 'wrapped' into a status effect that says the target is  Silenced for 0.25 seconds, but it does not actually silence. It however makes sure that the disrupt is prevented by  immunity to silences.\nViktor can command the singularity regardless of how far away he is from it.\nThe singularity will remain active even if Viktor dies. Any commands it was issued prior to his death will not be interrupted.\nChaos Storm reaches its maximum speed at 300 units and minimum speed at 900 units away from Viktor.\nIncluding the initial damage, Chaos Storm deals 7 instances of damage.\nThe storm will follow its target even if they are not  visible, effectively giving away their position.\nChaos Storm can be recast to follow Viktor. However, upon reaching him, the singularity will stop following Viktor.\nChaos Storm is not obstructed by terrain.",
+        "blurb": "Active:  Viktor conjures a singularity at the target location that deals magic damage to enemies within and  disrupts their channeled abilities. The singularity remains for a few seconds to continually deal magic damage, and automatically follows the nearest enemy  champion hit upon cast.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "200 / 300 / 250 / 375",
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "350 / 700",
+        "targetRange": "700"
+      }
+    ]
+  },
+  "releaseDate": "2011-12-29",
+  "releasePatch": "1.0.0.131",
+  "patchLastChanged": "14.5",
+  "price": {
+    "blueEssence": 4800,
+    "rp": 880,
+    "saleRp": 0
+  },
+  "lore": "The herald of a new age of technology, Viktor has devoted his life to the advancement of humankind. An idealist who seeks to lift the people of Zaun to a new level of understanding, he believes that only by embracing a glorious evolution of technology can humanity's full potential be realized. With a body augmented by steel and science, Viktor is zealous in his pursuit of this bright future.",
+  "faction": "zaun",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 112000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 880,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "The herald of a new age of technology, Viktor has devoted his life to the advancement of humankind. An idealist who seeks to lift the people of Zaun to a new level of understanding, he believes that only by embracing a glorious evolution of technology can humanity’s full potential be realized. With a body augmented by steel and science, Viktor is zealous in his pursuit of this bright future.",
+      "release": "2011-12-29",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/112/112000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/112/112000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/112/112000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viktor/skins/base/viktorloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Owen Thomas"
+      ],
+      "splashArtist": [
+        "Michal Ivan",
+        "Sixmorevodka Studio"
+      ]
+    },
+    {
+      "name": "Full Machine",
+      "id": 112001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Full Machine",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Created from the same circuitry as the Full Metal champion, Jayce, Viktor was cast into the tunnels beneath the robot fighting arenas to serve as a janitoribot—while his twin was groomed for glory, simulcast en español. Upgrading himself with the cast-offs of the destroyed, he has sworn la venganza.",
+      "release": "2011-12-29",
+      "set": [
+        "Heavy Metal"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/112/112001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/112/112001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/112/112001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viktor/skins/skin01/viktorloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Owen Thomas"
+      ],
+      "splashArtist": [
+        "Kirsten Zirngibl"
+      ]
+    },
+    {
+      "name": "Prototype",
+      "id": 112002,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Prototype",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": null,
+      "release": "2011-12-29",
+      "set": [
+        "Otherroads"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/112/112002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/112/112002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/112/112002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viktor/skins/skin02/viktorloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Owen Thomas"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Creator",
+      "id": 112003,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Creator",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [],
+      "lore": "The creator of the Battlecast machine army, Viktor has perfected the art of transplanting living brains into low-tech, mass-produced weapons. But his work is far from complete, and even now he tinkers on newer, deadlier creations to crush all who oppose him.",
+      "release": "2013-09-30",
+      "set": [
+        "Battlecast"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/112/112003.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/112/112003.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/112/112003.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viktor/skins/skin03/viktorloadscreen_3.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Owen Thomas"
+      ],
+      "splashArtist": [
+        "Michal Ivan",
+        "Puppetworks Animation Studio"
+      ]
+    },
+    {
+      "name": "Death Sworn",
+      "id": 112004,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Death Sworn",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [],
+      "lore": "On a cold, dreary night, a pioneering inventor was tried and hanged for preaching his glorious vision of the future—a world in which the living knelt before the dead. Death had to admire Viktor's conviction, and sent him back into the mortal world, blessed with powers beyond imagination.",
+      "release": "2017-10-25",
+      "set": [
+        "Death Sworn"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/112/112004.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/112/112004.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/112/112004.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viktor/skins/skin04/viktorloadscreen_4.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Owen Thomas"
+      ],
+      "splashArtist": [
+        "Alvin Lee"
+      ]
+    },
+    {
+      "name": "PsyOps",
+      "id": 112005,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "PsyOps",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 112009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112009.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Hunter",
+          "id": 112013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112013.png",
+          "colors": [
+            "#B2D1E4",
+            "#3CABFF"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2020 PsyOps event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 112011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112011.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Peridot",
+          "id": 112012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112012.png",
+          "colors": [
+            "#B6E084",
+            "#B6E084"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 112006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112006.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sandstone",
+          "id": 112007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112007.png",
+          "colors": [
+            "#DED6B0",
+            "#DED6B0"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 112008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112008.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 112010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112010.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Leader of the rogue military known as the Black Rose Group, Viktor is a psychic technomancer whose vision for a utopian world was abandoned when he suddenly departed High Command decades prior. Obsessed with an alien 'gate' uncovered during the Arctic Ops event, his experiments into human bioweapons would allow him to breach it and upend the global order.",
+      "release": "2020-09-17",
+      "set": [
+        "Black Rose Group"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/112/112005.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/112/112005.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/112/112005.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viktor/skins/skin05/viktorloadscreen_5.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viktor/skins/skin05/viktorloadscreen_5_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Owen Thomas"
+      ],
+      "splashArtist": [
+        "Francis Tneh",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "High Noon",
+      "id": 112014,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "High Noon",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 112016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112016.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 112017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112017.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": "Obtained through Influencer audience giveaways.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Nomad",
+          "id": 112023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112023.png",
+          "colors": [
+            "#95ECFF",
+            "#C33C3E"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the MSI 2022 High Noon event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 112021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112021.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 112022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112022.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 112020,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112020.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 112015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112015.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 112019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112019.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 112018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/112/112018.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Many a road to Hell was paved with good intent. Dr. Viktor may be the Mechanical Devil's kept engineer now, but his work began as charity: trying to “rehome” the souls of the dead in clockwork bodies, in order to circumvent mortality itself. Shame that Mordekaiser saw the good doctor's kindness and struck him a deal he could not deny.",
+      "release": "2022-05-26",
+      "set": [
+        "High Noon"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/112/112014.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/112/112014.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/112/112014.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viktor/skins/skin14/viktorloadscreen_14.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viktor/skins/skin14/viktorloadscreen_14_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Owen Thomas"
+      ],
+      "splashArtist": [
+        "Augusto Quirino",
+        "West Studio"
+      ]
+    }
+  ]
+}

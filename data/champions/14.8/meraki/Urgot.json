@@ -1,0 +1,1575 @@
+{
+  "id": 6,
+  "key": "Urgot",
+  "name": "Urgot",
+  "title": "the Dreadnought",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Urgot.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 655,
+      "percent": 0,
+      "perLevel": 102,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 7.5,
+      "percent": 0,
+      "perLevel": 0.7,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 340,
+      "percent": 0,
+      "perLevel": 45,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 7.25,
+      "percent": 0,
+      "perLevel": 0.8,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 36,
+      "percent": 0,
+      "perLevel": 5.45,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 2.05,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 63,
+      "percent": 0,
+      "perLevel": 4,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 330,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 550,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 136.111099243164,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 50,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 80,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 3.75,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.150000005960464,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 350,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 0.85,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1.15,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "FIGHTER",
+    "JUGGERNAUT",
+    "TANK"
+  ],
+  "attributeRatings": {
+    "damage": 2,
+    "toughness": 2,
+    "control": 2,
+    "mobility": 1,
+    "utility": 1,
+    "abilityReliance": 55,
+    "difficulty": 2
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Echoing Flames",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Urgot/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Urgot's six legs each conceal a shotgun that covers an arc, together forming a full circle of cover around him. Each shotgun can fire once before incurring a unique cooldown.",
+            "leveling": []
+          },
+          {
+            "description": "Urgot's next basic attack on-hit within the arc of a shotgun will cause it to fire in a cone, dealing 40% − 100% (based on level) AD (+ 2% − 6% (based on level) of target's maximum health) physical damage to enemies hit, capped at 100 − 360 (based on level) against monsters.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Enemies",
+        "spellshieldable": "false",
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Echoing Flames:\nShotgun attack range scales with bonus attack range.\nWill not trigger if the target is too far away or they are dead when the basic attack hits.\nWill not trigger while  blinded or if the basic attack is blocked by  Wind Wall or  Blade Whirl.\nIt bypasses  blocking and  dodging effects.\nWill not trigger against structures nor wards.\nWill trigger from  Runaan's Hurricane's additional bolts.\nWill not apply  life steal, but does apply on  spell vamp and omnivamp at 33% effectiveness.\nWill apply spell effects.\nWill not trigger when basic attacking certain units (e.g  Shaco's  Jack in the Box), however it will trigger when attacking them with  Purge.\nWill consume  Manaflow Band if it is available.\nWill not consume  Tear of the Goddess charges. (bug)\nUrgot's legs never change in orientation, with his body instead rotating on top of them; the leg that faces northeast will always face northeast. This does not affect Urgot's facing direction for the purposes of abilities such as  Petrifying Gaze.",
+        "blurb": "Innate:  Urgot's six legs each conceal a shotgun that covers an arc, together forming a circle around him. Each shotgun can fire once before incurring a unique  cooldown.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": "60°",
+        "castTime": null,
+        "effectRadius": "700",
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Corrosive Charge",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Urgot/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Urgot launches a canister at the target location. Upon landing, it explodes after 0.3 seconds to deal physical damage to enemies hit and slow them for 1.25 seconds.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      25,
+                      70,
+                      115,
+                      160,
+                      205
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      70,
+                      70,
+                      70,
+                      70,
+                      70
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      45,
+                      50,
+                      55,
+                      60,
+                      65
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                70,
+                70,
+                70,
+                70,
+                70
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                9.5,
+                9,
+                8.5,
+                8
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of Effect",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Corrosive Charge prevents  Purge from firing for 0.3 seconds.",
+        "blurb": "Active:  Urgot launches a canister at the target location that explodes after a brief delay, dealing physical damage and briefly  slowing enemies hit.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "210",
+        "targetRange": "800"
+      }
+    ],
+    "W": [
+      {
+        "name": "Purge",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Urgot/ability-icon/w",
+        "effects": [
+          {
+            "description": "Passive: Urgot's other abilities mark enemy champions hit for 5 seconds. Only one enemy can be marked at a time. Additionally, at maximum rank, Purge lasts indefinitely and becomes a toggled ability.",
+            "leveling": []
+          },
+          {
+            "description": "Active: Urgot equips his machine gun for 4 seconds, granting ghosting to minions and non-epic monsters around him and autonomously firing at the nearest enemy at a fixed 3.0 attack speed, prioritizing marked enemy champions and refreshing the mark with every attack. While firing, Urgot is able to move and gains 40% slow resist, but his base movement speed is reduced by 125.",
+            "leveling": []
+          },
+          {
+            "description": "Attacks with Purge deal modified physical damage, with a minimum threshold of 50 against monsters and minions, and apply on-hit and on-attack damage at 50% effectiveness, but they cannot critically strike. Urgot cannot perform attacks while unable to declare basic attacks.",
+            "leveling": [
+              {
+                "attribute": "Modified Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      12,
+                      12,
+                      12,
+                      12,
+                      12
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      20,
+                      23.5,
+                      27,
+                      30.5,
+                      34
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Purge can be recast after 0.5 seconds within the duration, and does so automatically afterwards.",
+            "leveling": []
+          },
+          {
+            "description": "Recast: Urgot ends Purge.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                30,
+                20,
+                10,
+                0
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                12,
+                9,
+                6,
+                3,
+                0
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": false
+        },
+        "targeting": "Auto",
+        "affects": "Enemies",
+        "spellshieldable": "false",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "basic",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Autonomous attack range scales with bonus attack range.\nPurge uses  edge range for enemy targets only; Its range is center-to-edge.\nUrgot's size increasing does not increase its range.\nThe initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nBefore maximum rank, if Purge is not manually recasted, the effect will end without being considered as an ability activation.\nUrgot's facing direction during Purge is in the direction he's moving and not in the direction of his attack target.\nBefore maximum rank, if continuously attacking without being interrupted or interrupting or canceling the cast, Urgot will attack 13 times.\nThe bolts are considered basic attacks and thus apply  life steal at full efficiency.\nDuring Purge, Urgot's  attack range is reduced by 200 and his attack commands instead issue movement commands to walk into the respective range of his target.\n Slow resist does not modify flat reductions in movement speed.\nPercentage  slows apply after the flat movement reduction.\nPurge's attacks do not interact with Urgot's basic attack timer.\nAfter ending Purge, he can usually attack again immediately.\nIf Urgot is  berserked or  taunted, he will fire at the unit he is forced to attack.\nPurge will fire while Urgot is  dashing (e.g. while taking  Thresh's  Dark Passage), with the exception of  Disdain's dash.\nEach shot counts as a separate hit for effects such as  Electrocute,  Muramana's Shock, and  Eclipse's Ever Rising Moon.\nPurge will apply  Runaan's Hurricane on every shot at 100% of the listed damage.\nOn-hit damage applied by the bolts are still reduced by Purge.\nThe movement speed stat tooltip erroneously reads that the bonus movement speed is being reduced before base movement speed.(bug)",
+        "blurb": "Passive:  Urgot's other abilities mark enemy  champions hit for a few seconds, only one enemy can be marked at a time. At max rank, Purge lasts indefinitely and becomes a toggled ability.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "2500",
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "490",
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Disdain",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Urgot/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Urgot grants himself a shield for 4 seconds.",
+            "leveling": [
+              {
+                "attribute": "Shield Strength",
+                "modifiers": [
+                  {
+                    "values": [
+                      55,
+                      75,
+                      95,
+                      115,
+                      135
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      135,
+                      135,
+                      135,
+                      135,
+                      135
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      13.5,
+                      13.5,
+                      13.5,
+                      13.5,
+                      13.5
+                    ],
+                    "units": [
+                      "% bonus health",
+                      "% bonus health",
+                      "% bonus health",
+                      "% bonus health",
+                      "% bonus health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "After the cast time, Urgot dashes in the target direction, though not through terrain, dealing physical damage to enemies he passes through, knocking them aside and stunning them for 1 second.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      90,
+                      120,
+                      150,
+                      180,
+                      210
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Urgot will stop upon hitting an enemy champion, stunning them for 1.5 seconds and, after 0.25 seconds, also flinging them to the location 100 units behind him, though not through terrain.",
+            "leveling": []
+          },
+          {
+            "description": "Purge can be cast during the dash.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                60,
+                70,
+                80,
+                90,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                16,
+                15.5,
+                15,
+                14.5,
+                14
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of Effect",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Urgot turns around when tossing an enemy over him, always facing his victim.\nThe target will be  flung to the location behind Urgot over 0.5 seconds given that they do not move nor are moved from the position at which they collided with him while  stunned.\nDisdain prevents  Purge from firing for 1.25 seconds.\nThe range indicator length is 475 units, but the dash only moves Urgot 450 units.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe  shield is granted at the start of the cast time while the  dash begins after.\nThe  fling will occur after 0.25 seconds regardless of how far away the target is.\n Displacement immunity will not resist the application of the  stun.",
+        "blurb": "Active:  Urgot  shields himself for a few seconds and  dashes in the target direction, dealing physical damage and briefly  stunning enemies hit,  knocking them aside.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1200 + 100% movement speed",
+        "width": null,
+        "angle": null,
+        "castTime": "0.45",
+        "effectRadius": null,
+        "targetRange": "450"
+      }
+    ],
+    "R": [
+      {
+        "name": "Fear Beyond Death",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Urgot/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Urgot fires a chem-drill in the target direction that impales the first enemy champion hit, dealing physical damage and leashing the target for 4 seconds, during which they are revealed and slowed by 0% − 75% (based on target's missing health).",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      100,
+                      225,
+                      350
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Fear Beyond Death can be recast if the leashed target is below 25% of their maximum health, and does so automatically if the chem-drill would kill the target, the ability is cast again while the target was above the threshold and is then brought within it, or the target is within the threshold at the end of the duration.",
+            "leveling": []
+          },
+          {
+            "description": "Recast - Mercy: Urgot launches chains at the leashed target, then channels for 1.5 seconds once they latch on. During this time, he reels them toward him, suppressing them, revealing them, rendering them untargetable, and preventing them from taking damage from other sources. If the target is near Urgot when the chains connect, they are pushed up to 1000 units away based on their proximity to him. This channel cannot be interrupted by crowd control.",
+            "leveling": []
+          },
+          {
+            "description": "Upon completing the channel, the target is executed. If the execution is successful, he fears nearby enemies for 1.5 seconds, during which they are slowed by 75%.",
+            "leveling": []
+          },
+          {
+            "description": "Fear Beyond Death's recast can be used while affected by cast-inhibiting crowd control.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                85,
+                70
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction / Auto",
+        "affects": "Enemies",
+        "spellshieldable": "Special",
+        "resource": "MANA",
+        "damageType": "MIXED_DAMAGE",
+        "spellEffects": "special",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Unlike most missiles, Fear Beyond Death can hit the edge of targets whose center is further than the missile range.\nHowever, it still cannot hit targets whose center is behind Urgot.\nApplies  spell damage on first cast and  raw damage on recast.\nUrgot is  revealed while the target is leashed and being reeled in.\nFear Beyond Death's execute against the enemy champion will aggro nearby enemy minions.\nWhile Fear Beyond Death is not on cooldown, all enemy champions will have an execution indicator on their health bar, and a visual indicator if below the execution threshold.\nMercy's granted  untargetability does not  destroy in-flight  projectiles for the target.\nUrgot will place himself onto the ground and interrupts  displacements affecting him upon starting the channel.\nIf the displacement effect is a knock up with no debuff source, the airborne status is not removed and he spends significantly less time in the air.\nThis ability will cast from wherever the caster is at the start of the cast time.\nFear Beyond Death prevents  Purge from firing for 0.8 seconds.\nThe recast prevents  Purge from firing for 1.5 seconds.\nIf Urgot is in cast time or is  dashing while the chains are in transit, Mercy's forced movement will be deferred (the debuff will continuously refresh) until the cast or dash is complete. The target will still be untargetable, prevented from taking damage from other sources, and suppressed during this time.\nIf Urgot is  channeling a spell, the channel is interrupted when the chains hit.\nRemoving or resisting the  slow has no effect on the mark debuff.\nThe initial cast always counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nIf the ability hits a target who is below the threshold, it will automatically recast itself and it won't be considered as an ability activation.\nIf the ability hits a target who is above the threshold and it's recast early, the recast will happen automatically when they reach the threshold and it won't be considered as an ability activation.\nIf the target got hit while above the threshold and it is recast after they fall below it, the recast will be considered as an ability activation.\nReactivating the ability early will reel the target as soon as they reach the 25% maximum health threshold.\nMercy can be cast and will automatically do so at the end of the duration if the target is below the execute threshold regardless of Urgot being affected by  crowd control, including self or enemy-imposed  stasis.\nFear Beyond Death can affect  clones and activates its fear when executing one.\nFear Beyond Death's recast cannot be used if the target is  untargetable.\nFear Beyond Death's recast cannot be used during  resurrection. Attempting to do so places the recast on a 5-second  cooldown.\nIf the target is below the threshold at the end of the duration and Urgot is revived, the recast will initiate regardless of this cooldown.\nThe recast's chains are classified as a  projectile and they will fail to affect their target if:\nUrgot or his target  dies or enters  resurrection.\nThe target becomes  untargetable, even if the granted source does not  destroy in-flight projectiles.\nUrgot will also fail to execute the target if they become  untargetable while the chains are being pulled.(bug)\nThey collide with  Wind Wall or  Unbreakable.\nIf  Unbreakable intercepts the chains and  Braum is not the target, they're destroyed.\nIf  Braum is the target, he will still be reeled in and executed as normal.\nThe target is  crowd control immune when the chains hit.\nThe target is  a zombie.\n Spell shield will not block the recast's chains.\nIf the target removes the  suppression by any means they will prevent themselves from being  executed and stop the forced movement from being renewed, though allowing the most recent one to be present and move them to Urgot's previous location.\nTheir untargetability and damage prevention of other sources granted by Fear Beyond Death is removed in the process.\nUrgot will still complete the full channel even if the target is freed.\nIf the target is  displacement immune when the chains collide, Urgot will not begin the channel until after their displacement immunity ends.\nThe target will be unaffected by Fear Beyond Death's forced movement during this time, but will still be suppressed, prevented from taking damage from other sources and rendered untargetable.\nIf the target's displacement immunity does not end within 10 seconds, Fear Beyond Death will cancel.\nWhen the chains start reeling in and suppressing a player's champion, chains will also cover the sides of their screen.\nThe target champion shrinks in size in several steps after reaching Urgot's grinder and before being executed.\nIf the suppression ends in any way, the target returns to its normal size.\nIf the execution is successful, the victim's corpse will be effectively invisible unless they enter a  zombie state.\nThe target will die regardless of their current health once the recast's chains hit, even if they are  healed.\nIf the target has  invulnerability that persists for the duration of the channel, it will protect them from the execution.\n Undying Rage will prevent  Tryndamere from dying by the execute. In this case, the execute will bypass his minimum health threshold though and reduce him to 1 health.\nThe effect will also not prevent the activation of  resurrection effects, such as  Guardian Angel or  Anivia's  Rebirth.\nPost-death events such as  Zombie State effects (e.g,  Karthus'  Death Defied,  Kog'Maw's  Icathian Surprise, and  Sion's  Glory in Death) will be triggered.\nOnly the target's current health will count as Urgot's damage in post-game statistics and  spell vamp healing.\nFear Beyond Death's initial cast will not perform the automatic recast from dealing enough damage to kill  Sion.\nFear Beyond Death's recast will be placed on a 5-second  cooldown if the target is below the threshold and becomes targetable again after completing the dash from  Hero's Entrance.\nThe following table refers for interactions while Urgot is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+        "blurb": "Active:  Urgot fires a chem-drill in the target direction that impales the first enemy champion hit, dealing physical damage and leashing them for a few seconds. The target is also  revealed and  slowed based on their missing health.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "3200",
+        "width": "160",
+        "angle": null,
+        "castTime": "0.5",
+        "effectRadius": "Global /  600",
+        "targetRange": "2500"
+      }
+    ]
+  },
+  "releaseDate": "2010-08-24",
+  "releasePatch": "1.0.0.99",
+  "patchLastChanged": "14.6",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 790,
+    "saleRp": 0
+  },
+  "lore": "Once a powerful Noxian headsman, Urgot was betrayed by the empire for which he had killed so many. Bound in iron chains, he was forced to learn the true meaning of strength in the Dredge—a prison mine deep beneath Zaun. Emerging in a disaster that spread chaos throughout the city, he now casts an imposing shadow over its criminal underworld. Raising his victims on the very chains that once enslaved him, he will purge his new home of the unworthy, making it a crucible of pain.",
+  "faction": "zaun",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 6000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 790,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Once a powerful Noxian headsman, Urgot was betrayed by the empire for which he had killed so many. Bound in iron chains, he was forced to learn the true meaning of strength in the Dredge—a prison mine deep beneath Zaun. Emerging in a disaster that spread chaos throughout the city, he now casts an imposing shadow over its criminal underworld. Raising his victims on the very chains that once enslaved him, he will purge his new home of the unworthy, making it a crucible of pain.",
+      "release": "2010-08-24",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/6/6000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/6/6000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/6/6000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/urgot/skins/base/urgotloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Paul M. Guyet"
+      ],
+      "splashArtist": [
+        "Victor '3rdColossus' Maury"
+      ]
+    },
+    {
+      "name": "Butcher",
+      "id": 6002,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Butcher",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": null,
+      "release": "2010-08-24",
+      "set": [
+        "Trick-or-Treat"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/6/6002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/6/6002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/6/6002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/urgot/skins/skin02/urgotloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Paul M. Guyet"
+      ],
+      "splashArtist": [
+        "Viktor Titov",
+        "Grafit Studio"
+      ]
+    },
+    {
+      "name": "Giant Enemy Crabgot",
+      "id": 6001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Giant Enemy Crabgot",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Emerging from the deep sea as the first of the kaiju menace, Crabgot has never been completely defeated by the forces of humanity. The best result when it emerges is to temporarily halt its advance, sending the massive crustacean back into the sea... until it can rise once more.",
+      "release": "2010-08-24",
+      "set": [
+        "Kaiju"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/6/6001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/6/6001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/6/6001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/urgot/skins/skin01/urgotloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Paul M. Guyet"
+      ],
+      "splashArtist": [
+        "Mike Azevedo"
+      ]
+    },
+    {
+      "name": "Battlecast",
+      "id": 6003,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Battlecast",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Obsidian",
+          "id": 6008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6008.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 6006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6006.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 6004,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6004.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 6005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6005.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 6007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6007.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "A titanium juggernaut used to crush pockets of particularly stubborn resistance, the Battlecast Urgot model is rarely seen but widely feared. Its extensive weapons systems are complemented by a massive, flesh-grinding spike mill, which it pulls fleeing opponents into for sheer spectacle.",
+      "release": "2012-03-05",
+      "set": [
+        "Battlecast"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/6/6003.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/6/6003.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/6/6003.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/urgot/skins/skin03/urgotloadscreen_3.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": true,
+      "voiceActor": [
+        "Paul M. Guyet"
+      ],
+      "splashArtist": [
+        "Izzy Medrano"
+      ]
+    },
+    {
+      "name": "High Noon",
+      "id": 6009,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "High Noon",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Pearl",
+          "id": 6013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6013.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 6012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6012.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive during 2018.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 6014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6014.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 6010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6010.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 6011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6011.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Jeremiah James was once a famed railroad baron and millionaire industrialist, who bet his own heart on a game of chance… and lost. Left alone in the desert to die, he bargained with a passing devil, trading his immortal soul for a twisted, monstrous body of gears and iron.",
+      "release": "2018-08-30",
+      "set": [
+        "High Noon"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/6/6009.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/6/6009.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/6/6009.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/urgot/skins/skin09/urgotloadscreen_9.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/urgot/skins/skin09/urgotloadscreen_9_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Paul M. Guyet"
+      ],
+      "splashArtist": [
+        "Mist XG"
+      ]
+    },
+    {
+      "name": "Pajama Guardian Cosplay",
+      "id": 6015,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Pajama Guardian Cosplay",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 6021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6021.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 6019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6019.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 6018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6018.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 6022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6022.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 6020,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6020.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 6017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6017.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 6016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6016.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "A Star Guardian superfan of almost impossible proportions, Urgot worked really hard on this outfit for the fan meet, so please be respectful.",
+      "release": "2020-04-01",
+      "set": [
+        "Definitely Not"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/6/6015.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/6/6015.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/6/6015.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/urgot/skins/skin15/urgotloadscreen_15.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/urgot/skins/skin09/urgotloadscreen_9_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Paul M. Guyet"
+      ],
+      "splashArtist": [
+        "Choe HeonHwa"
+      ]
+    },
+    {
+      "name": "Fright Night",
+      "id": 6023,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Fright Night",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 6030,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6030.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 6025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6025.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 6028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6028.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 6026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6026.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 6029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6029.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 6024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6024.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 6027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6027.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 6031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/6/6031.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Unctuous Uncle Urgot has no nose to smell<br>No feet or toes to stink, but he's still feeling swell<br>'Cause visitors arrive and ring the household bell<br>With new parts not so rotten for him, and tummy snacks as well!",
+      "release": "2022-09-22",
+      "set": [
+        "Fright Night"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/6/6023.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/6/6023.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/6/6023.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/urgot/skins/skin23/urgotloadscreen_23.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Paul M. Guyet"
+      ],
+      "splashArtist": [
+        "Alex 'alexplank' Flores"
+      ]
+    }
+  ]
+}

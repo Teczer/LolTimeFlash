@@ -1,0 +1,2043 @@
+{
+  "id": 41,
+  "key": "Gangplank",
+  "name": "Gangplank",
+  "title": "the Saltwater Scourge",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Gangplank.png",
+  "resource": "MANA",
+  "attackType": "MELEE",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 600,
+      "percent": 0,
+      "perLevel": 114,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 6,
+      "percent": 0,
+      "perLevel": 0.6,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 280,
+      "percent": 0,
+      "perLevel": 60,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 7.5,
+      "percent": 0,
+      "perLevel": 0.7,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 31,
+      "percent": 0,
+      "perLevel": 4.2,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 2.05,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 64,
+      "percent": 0,
+      "perLevel": 3.7,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 345,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 400,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 85,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.658,
+      "percent": 0,
+      "perLevel": 3.2,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.69,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.25,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.51999998092651,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 125,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "FIGHTER",
+    "SPECIALIST"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 1,
+    "mobility": 1,
+    "utility": 2,
+    "abilityReliance": 75,
+    "difficulty": 3
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Trial by Fire",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Periodically, Gangplank empowers his next basic attack to set the target on fire, dealing them[ 50 − 250 (based on level) (+ 100% bonus AD) (+ 2 per 1% critical strike chance) bonus true damage over 2.5 seconds. ][ 5 − 25 (based on level) (+ 10% bonus AD) (+ 0.2 per 1% critical strike chance) bonus true damage every 0.25 seconds over 2.5 seconds. ] Turrets are dealt 50% damage.",
+            "leveling": []
+          },
+          {
+            "description": "If Gangplank successfully hits a target with Trial by Fire, he gains 15% − 30% (based on level) bonus movement speed for 2 seconds. Every time a Powder Keg explodes, the cooldown for Trial by Fire resets and Gangplank gains its bonus movement speed.",
+            "leveling": []
+          },
+          {
+            "description": "Trial by Fire cannot be applied with Parrrley nor Powder Keg.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                15,
+                15,
+                15
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": false
+        },
+        "targeting": "Passive",
+        "affects": "Self, Enemies",
+        "spellshieldable": "False",
+        "resource": null,
+        "damageType": "TRUE_DAMAGE",
+        "spellEffects": "default",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Reapplying Trial by Fire before a previous application has run out will stack the full damage, instead of refreshing the duration.\nThe bonus true damage scaling based on critical strike chance is capped at 100% of the stat.\nIf the attack is  dodged or if Gangplank is  blinded, the effect is not applied nor does Trial by Fire go on cooldown. If the attack is  blocked, the effect is not applied, but Trial by Fire will go on cooldown.\nThe empowered attack will not trigger against non- turret structures nor wards.",
+        "blurb": "Innate: Every few seconds, Gangplank's next basic attack will burn the target, continually dealing bonus true damage and granting him  bonus movement speed.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Parrrley",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Gangplank fires a shot at the target enemy that deals physical damage and applies on-hit and on-attack effects at 100% effectiveness as a ranged attack. Parrrley can critically strike for (175% + 50%) total damage.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      10,
+                      40,
+                      70,
+                      100,
+                      130
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If Parrrley kills the target, Gangplank plunders gold and Silver Serpents. Each enemy killed by a Powder Keg explosion that was originally set off by Parrrley also counts for the plunder.",
+            "leveling": [
+              {
+                "attribute": "Gold Plunder",
+                "modifiers": [
+                  {
+                    "values": [
+                      3,
+                      4,
+                      5,
+                      6,
+                      7
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Silver Serpent Plunder",
+                "modifiers": [
+                  {
+                    "values": [
+                      4,
+                      5,
+                      6,
+                      7,
+                      8
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Silver Serpents can be spent in the shop to upgrade Cannon Barrage.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                55,
+                50,
+                45,
+                40,
+                35
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                4.5,
+                4.5,
+                4.5,
+                4.5,
+                4.5
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Unit",
+        "affects": "Enemies, Self",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "basic",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Parrrley deals  basic damage, but also triggers spell effects by dealing an additional 0  spell damage.\n On-hit effects that deal damage to secondary targets will allow Parrrley to plunder from enemies killed that way, much like with  Powder Kegs.\n Ravenous Hydra and  Titanic Hydra work like this and will grant additional plunder from enemies they kill when triggered by Parrrley as their cast instance.\nEven spell effects such as  Luden's Companion will work with this when triggered by Parrrley as their cast instance. Spell effects that do not belong to their triggering cast instance, such as  Liandry's Torment's damage debuff, do not grant plunder for enemies they kill.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+        "blurb": "Active:  Gangplank shoots the target enemy with his pistol, dealing physical damage and applying  on-hit and on-attack effects.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "2600",
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": "625"
+      }
+    ],
+    "W": [
+      {
+        "name": "Remove Scurvy",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Gangplank consumes a large quantity of citrus fruit, cleansing himself from all crowd control and healing himself.",
+            "leveling": [
+              {
+                "attribute": "Heal",
+                "modifiers": [
+                  {
+                    "values": [
+                      45,
+                      70,
+                      95,
+                      120,
+                      145
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      90,
+                      90,
+                      90,
+                      90,
+                      90
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      13,
+                      13,
+                      13,
+                      13,
+                      13
+                    ],
+                    "units": [
+                      "% missing health",
+                      "% missing health",
+                      "% missing health",
+                      "% missing health",
+                      "% missing health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                60,
+                70,
+                80,
+                90,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                22,
+                20,
+                18,
+                16,
+                14
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": "Heal",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Remove Scury does not remove debuffs other than  crowd control, even if both occur from the same effect. For example, Remove Scurvy will dispel the  slow from  Exhaust, but not its damage reduction.\nRemove Scurvy can remove the underlying  stun from  airborne, but a  blink or  dash ability is required to override the displacement.",
+        "blurb": "Active:  Gangplank eats citrus to  cleanse  crowd control effects and  heal based on his missing health.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Powder Keg",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Gangplank consumes a charge to place a powder keg at the target location that lasts for 25 seconds and will connect to other kegs with overlapping connection radius through a trail of black powder. The keg starts with 3 health and loses 1 every 2 / 1 / 0.5 (based on level) seconds until it is left with 1 health.",
+            "leveling": []
+          },
+          {
+            "description": "Gangplank periodically stocks a Powder Keg charge, up to a maximum.",
+            "leveling": [
+              {
+                "attribute": "Maximum charges",
+                "modifiers": [
+                  {
+                    "values": [
+                      3,
+                      3,
+                      4,
+                      4,
+                      5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Kegs can be basic attacked by enemies or Gangplank (including his Parrrley), dealing 1 damage to it. When an enemy destroys it, it is safely defused. When Gangplank destroys it, it explodes and also triggers a chain reaction that explodes other nearby connected kegs with a 0.33 seconds-delay between explosions. The explosions also grant sight of their radiuses for 2 seconds.",
+            "leveling": []
+          },
+          {
+            "description": "Enemies caught in an explosion are slowed for 2 seconds, and are dealt the triggering attack's damage, dealing bonus physical damage against champions. Each enemy can only be hit once per chain and the damage dealt ignores 40% of the target's armor.",
+            "leveling": [
+              {
+                "attribute": "Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      30,
+                      37.5,
+                      45,
+                      52.5,
+                      60
+                    ],
+                    "units": [
+                      "% (+ 0% − 25% (based on critical strike chance)",
+                      "% (+ 0% − 25% (based on critical strike chance)",
+                      "% (+ 0% − 25% (based on critical strike chance)",
+                      "% (+ 0% − 25% (based on critical strike chance)",
+                      "% (+ 0% − 25% (based on critical strike chance)"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Bonus Champion Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      75,
+                      105,
+                      135,
+                      165,
+                      195
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If the triggering attack was a critical strike, the explosions deal 5% more damage on top of the critical damage.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": false
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "CHARGE",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The triggering attack's damage can include  Parrrley's base damage and  Spellblade.\nWhen triggered with critical strike, Spellblade and the bonus damage to champions are added after the calculations, meaning that these effects are not increased by 5%.\nThe total damage can be easily calculated with this formula:{aDMG * [1.75 ( + 0.45)] * 1.05} + sDMG + cDMGWhere:\naDMG = Triggering attack's damage\nsDMG = Spellblade's damage\ncDMG = Bonus damage to champions\nKegs have special interactions with  Spellblade:\nIf the keg destroying attack was empowered with Spellblade, its damage will be added to the explosions' damage.\nIf the keg was not destroyed, it will consume the effect and the keg will store the damage it would have dealt. If the storing keg is the initial detonation of the chain, it will add its damage to the explosions' damage as if it was triggered with Spellblade.\nIf the storing keg was attacked with a new instance of Spellblade, it will override the previously stored damage (if different).\nDamage can only be stored if Spellblade was consumed by Gangplank.\nThe stored damage is static and will not change if Gangplank's base attack damage or ability power (see below) changes.\nSpecific  Spellblade item interactions:\n Trinity Force: Attacking kegs or dealing damage to champions with the explosion does not increase the base attack damage.\n Lich Bane: The magic damage will be added to the explosions' damage, but will be dealt as physical damage.\n Essence Reaver: Consuming the effect on kegs will restore mana. Explosions does not trigger this.\nPlaced barrels do not grant  vision until they explode, but they are revealed to Gangplank.\nIf Gangplank loses allied vision, for instance due to  nearsight, he will also lose vision on his barrels temporarily.\nBarrels prematurely grant  sight of their explosion radius (including across terrain and into bushes) if  Parrrley or a lit fuse is travelling towards them.\nThis area reveal happens even if  Parrrley is not going to make it explode.\nAn exploding Powder Keg will splash  Parrrley's bonus damage, and will also be modified if the attack  critically strikes.\nAttacks against Powder Kegs will apply on-hit effects (such as  Tiamat's Cleave), but  proc damage against the barrel itself is reduced to 0.\nDamage from on-hit effects will not increase the damage of the explosion.\n Spellblade is a special-cased exception.\n Dead Man's Plate's Crushing Blow will not trigger from Powder Kegs destroyed from Gangplank, even with  Parrrley.\nGangplank stocks Powder Kegs even if the ability hasn't been learned yet.\nThis is due to the recharge rate at level 1 being set the same as level 0.\nWhile at maximum charges, ranking up the ability to rank 3 or 5 grants the remaining charge immediately regardless of the recharge timer.\nIf a barrel is destroyed during the 0.33 seconds-delay between explosions, Gangplank will plunder  gold and  Silver Serpents upon killing enemies as if he had done so using  Parrrley.(bug)\nThis effect persists through  death and will only end upon killing an enemy with  Parrrley.",
+        "blurb": "Active:  Gangplank places a Powder Keg at the target location, which can be basic attacked or  shot to damage it. If an enemy destroys a Powder Keg, it is safely dismantled.",
+        "missileSpeed": null,
+        "rechargeRate": [
+          18,
+          17,
+          16,
+          15,
+          14
+        ],
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "345 /  360",
+        "targetRange": "1000"
+      }
+    ],
+    "R": [
+      {
+        "name": "Cannon Barrage",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Gangplank shoots a flare into the air, signaling his ship off-shore to fire upon the target location for 8 seconds, calling down 12 waves of cannonballs in clusters of 3 every 2 seconds, and granting sight of the area for the duration. Each wave deals magic damage to all enemies within the area and slows them by 30% for 0.5 seconds.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage Per Wave",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      70,
+                      100
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      10,
+                      10,
+                      10
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Magic Damage Per Cluster",
+                "modifiers": [
+                  {
+                    "values": [
+                      120,
+                      210,
+                      300
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      30,
+                      30,
+                      30
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      480,
+                      840,
+                      1200
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      120,
+                      120,
+                      120
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Gangplank can purchase upgrades for his ship in the store at the cost of 500 Silver Serpents each, which improve Cannon Barrage:",
+            "leveling": []
+          },
+          {
+            "description": "Death's Daughter: A large cannonball lands in the center of the barrage after the first cluster of waves occur, dealing a cluster's worth of true damage to enemies within the impact and slowing them by 75% for 1 second.",
+            "leveling": [
+              {
+                "attribute": "True Damage with Death's Daughter",
+                "modifiers": [
+                  {
+                    "values": [
+                      120,
+                      210,
+                      300
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      30,
+                      30,
+                      30
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Mixed Damage with Death's Daughter",
+                "modifiers": [
+                  {
+                    "values": [
+                      600,
+                      1050,
+                      1500
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      150,
+                      150,
+                      150
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Fire at Will: Cannon Barrage fires[ 6 additional waves ][ 2 additional clusters ] over its duration; 18 waves of cannonballs are called down in clusters of 3 every 1.33 seconds.",
+            "leveling": [
+              {
+                "attribute": "Total Magic Damage with Fire at Will",
+                "modifiers": [
+                  {
+                    "values": [
+                      720,
+                      1260,
+                      1800
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      180,
+                      180,
+                      180
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Mixed Total Damage with Fire at Will and Death's Daughter",
+                "modifiers": [
+                  {
+                    "values": [
+                      840,
+                      1470,
+                      2100
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      210,
+                      210,
+                      210
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Raise Morale: Cannon Barrage grants Gangplank and all allies within the area 40% bonus movement speed, lingering for 2 seconds.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                170,
+                150,
+                130
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "area",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Cannon Barrage's slow lingers for 0.25 seconds after affected enemies leave the target area.",
+        "blurb": "Active:  Gangplank orders a cannon bombardment to the target location, each blast deals magic damage and  slows enemies within.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": "170",
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "580",
+        "targetRange": "Global"
+      }
+    ]
+  },
+  "releaseDate": "2009-08-19",
+  "releasePatch": "0.9.22.15",
+  "patchLastChanged": "14.5",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 790,
+    "saleRp": 0
+  },
+  "lore": "As unpredictable as he is brutal, the dethroned reaver king Gangplank is feared far and wide. Once, he ruled the port city of Bilgewater, and while his reign is over, there are those who believe this has only made him more dangerous. Gangplank would see Bilgewater bathed in blood once more before letting someone else take it—and now with pistol, cutlass, and barrels of gunpowder, he is determined to reclaim what he has lost.",
+  "faction": "bilgewater",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 41000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 790,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "As unpredictable as he is brutal, the dethroned reaver king Gangplank is feared far and wide. Once, he ruled the port city of Bilgewater, and while his reign is over, there are those who believe this has only made him more dangerous. Gangplank would see Bilgewater bathed in blood once more before letting someone else take it—and now with pistol, cutlass, and barrels of gunpowder, he is determined to reclaim what he has lost.",
+      "release": "2009-08-18",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/base/gangplankloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": [
+        "Joshua 'HUGEnFAST' Brian Smith"
+      ]
+    },
+    {
+      "name": "Spooky",
+      "id": 41001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Spooky",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": null,
+      "release": "2010-03-16",
+      "set": [
+        "Trick-or-Treat"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin01/gangplankloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Minuteman",
+      "id": 41002,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Minuteman",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": null,
+      "release": "2010-07-03",
+      "set": [
+        "Legacy"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin02/gangplankloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Sailor",
+      "id": 41003,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Sailor",
+      "lootEligible": true,
+      "cost": 750,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "O, Bilgewater has been my home,<br>Since last time I was sailing!<br>But I'll not stay another day,<br>I'd sooner be out whaling.",
+      "release": "2011-01-10",
+      "set": [
+        "Day Job"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41003.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41003.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41003.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin03/gangplankloadscreen_3.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Toy Soldier",
+      "id": 41004,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Toy Soldier",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Gangplank is a model soldier in the toy army, racking up an impressive array of victories against the dolls and stuffed animals. He hopes to one day be named Toy General, leading his troops into glorious battle.",
+      "release": "2011-12-14",
+      "set": [
+        "Toy Box"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41004.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41004.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41004.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin04/gangplankloadscreen_4.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Special Forces",
+      "id": 41005,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Special Forces",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "How special are the special forces? Let's put it this way: they're the only unit in the military with unlimited access to oranges.",
+      "release": "2012-09-12",
+      "set": [
+        "Commando"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41005.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41005.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41005.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin05/gangplankloadscreen_5.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Sultan",
+      "id": 41006,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Sultan",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Gangplank is a ruler from a distant land, and tales of his battle prowess and flowing red beard have reached even the farthest-flung city-states. As all rulers from distant lands, he also sports a snappy hat.",
+      "release": "2013-11-13",
+      "set": [
+        "Wonders of the World"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41006.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41006.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41006.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin06/gangplankloadscreen_6.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": [
+        "Sperasoft Studio"
+      ]
+    },
+    {
+      "name": "Captain",
+      "id": 41007,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Captain",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Gangplank was a legendary murderer and cutthroat, prior to having his ship blown up while he was still on it. The silhouette of his famed captain's jacket is still burned into the memory of more than one unlucky sailor... with many convinced the man is somehow still alive.",
+      "release": "2015-08-09",
+      "set": [
+        "Bilgewater: Burning Tides"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41007.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41007.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41007.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin07/gangplankloadscreen_7.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": [
+        "Alex 'alexplank' Flores"
+      ]
+    },
+    {
+      "name": "Dreadnova",
+      "id": 41008,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Dreadnova",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Obsidian",
+          "id": 41013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41013.png",
+          "colors": [
+            "#27211C",
+            "#272100"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 41010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41010.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rogue",
+          "id": 41032,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41032.png",
+          "colors": [
+            "#FF70BA",
+            "#464646"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2022 Steel Valkyrie event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 41009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41009.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 41011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41011.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 41012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41012.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Once a high ranking admiral in the Royal Space Military, Gangplank's reign of terror began when he stole and proliferated blueprints for a former colleague's experimental superweapon. Ending a thousand-year civil war in an instant, he defected with a massive armed battalion and formed the interplanetary criminal network known as the Dreadnova Corps.",
+      "release": "2017-01-12",
+      "set": [
+        "Dreadnova"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41008.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41008.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41008.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin08/gangplankloadscreen_8.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": [
+        "Kelly Aleshire"
+      ]
+    },
+    {
+      "name": "Pool Party",
+      "id": 41014,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Pool Party",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 41016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41016.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 41018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41018.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 41015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41015.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 41020,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41020.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 41019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41019.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 41017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41017.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive during 2018.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Gangplank is the self-crowned King of the Grill, but his summer bod is the real life of the party. There should be a law against those abs.",
+      "release": "2018-08-02",
+      "set": [
+        "Pool Party"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41014.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41014.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41014.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin14/gangplankloadscreen_14.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "FPX",
+      "id": 41021,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "FPX",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Elite",
+          "id": 41022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41022.png",
+          "colors": [
+            "#0C0C0F",
+            "#9B1520"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Honoring GimGoon's winning performance as Gangplank during the 2019 World Championship.",
+      "release": "2020-04-30",
+      "set": [
+        "World Champions: 2019"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41021.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41021.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41021.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin21/gangplankloadscreen_21.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin21/gangplankloadscreen_21_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": [
+        "Pan Chengwei"
+      ]
+    },
+    {
+      "name": "Gangplank the Betrayer",
+      "id": 41023,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Gangplank the Betrayer",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Aquamarine",
+          "id": 41028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41028.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 41025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41025.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 41026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41026.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 41031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41031.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 41030,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41030.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 41029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41029.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 41024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41024.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 41027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41027.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Energized by a mysterious amulet containing Viego of Camavor and wielding the Blade of the Ruined King, Gangplank's personality erupted as he raged in search of the long-lost Isolde. Though ultimately freed of the King's influence by a group of heroes, he carries the experience with him... a reminder, perhaps, of true power.",
+      "release": "2022-05-05",
+      "set": [
+        "Ruined"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41023.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41023.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41023.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin23/gangplankloadscreen_23.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": [
+        "Edward Chee",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "PROJECT",
+      "id": 41033,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "PROJECT: Gangplank",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        null,
+        {
+          "name": "Citrine",
+          "id": 41035,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41035.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 41040,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41040.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Peridot",
+          "id": 41036,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41036.png",
+          "colors": [
+            "#B6E084",
+            "#B6E084"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 41038,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41038.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 41034,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41034.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2024.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 41037,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41037.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 41039,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/41/41039.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Leader of the Command Line with a merciless reputation, Gangplank's access to dangerous PROJECT tech allows him to rule the city with a cybernetic fist. But when an insubordinate program wreaks havoc on his domain, he resorts to manipulating former Outcasts to protect his legacy and wipe the virus out for good.",
+      "release": "2024-03-06",
+      "set": [
+        "PROJECT"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/41/41033.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/41/41033.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/41/41033.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/skin33/gangplankloadscreen_33.skins_gangplank_skin33.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Matthew Mercer"
+      ],
+      "splashArtist": [
+        "Eric Xie",
+        "West Studio"
+      ]
+    }
+  ]
+}

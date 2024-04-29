@@ -1,0 +1,1842 @@
+{
+  "id": 50,
+  "key": "Swain",
+  "name": "Swain",
+  "title": "the Noxian Grand General",
+  "fullName": "Jericho Swain",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Swain.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "MAGIC_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 595,
+      "percent": 0,
+      "perLevel": 99,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 7,
+      "percent": 0,
+      "perLevel": 0.65,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 468,
+      "percent": 0,
+      "perLevel": 29,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 8,
+      "percent": 0,
+      "perLevel": 0.8,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 26,
+      "percent": 0,
+      "perLevel": 5.2,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 58,
+      "percent": 0,
+      "perLevel": 2.7,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 330,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 525,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 100,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 2.11,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.159999996423721,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 525,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1.15,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 0.9,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 0.8,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "BATTLEMAGE",
+    "FIGHTER",
+    "MAGE"
+  ],
+  "attributeRatings": {
+    "damage": 2,
+    "toughness": 2,
+    "control": 2,
+    "mobility": 1,
+    "utility": 1,
+    "abilityReliance": 100,
+    "difficulty": 2
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Ravenous Flock",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Enemy champions that die will leave behind a Soul Fragment for 16 seconds, which can be collected by Swain after 1 second. Swain's ravens collect nearby Soul Fragments, as well as with Vision of Empire and Nevermove.\nSoul Fragment: For each stack, Swain gains 12 bonus health. Upon collection, he will heal for 3 / 4 / 5 / 6% (based on level) of his maximum health.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self, Enemies",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The ravens will only be seen by enemies if they have  vision of Swain.",
+        "blurb": "Innate: Enemy champions that  die will leave behind a Soul Fragment for some time.  Swain will collect nearby Soul Fragments, as well as with  Vision of Empire and  Nevermove.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1200",
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Death's Hand",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Swain unleashes five bolts of eldritch power over 0.264 seconds in a cone in the target direction that deal magic damage to enemies hit. Subsequent bolts against an enemy deal bonus magic damage.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      65,
+                      85,
+                      105,
+                      125,
+                      145
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      40,
+                      40,
+                      40,
+                      40
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Bonus Damage Per Bolt",
+                "modifiers": [
+                  {
+                    "values": [
+                      15,
+                      25,
+                      35,
+                      45,
+                      55
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      10,
+                      10,
+                      10,
+                      10,
+                      10
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      125,
+                      185,
+                      245,
+                      305,
+                      365
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      80,
+                      80,
+                      80,
+                      80,
+                      80
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                45,
+                50,
+                55,
+                60,
+                65
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                7,
+                6,
+                5,
+                4,
+                3
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Death's Hand will still cast and deal damage if Swain dies during the cast time.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe total damage to a single target will be split evenly among each bolt that hits, meaning that hitting with more bolts will deal less damage per hit (but more overall damage).\n Spell shield will block all bolts.",
+        "blurb": "Active:  Swain unleashes five bolts of eldritch power over 0.264 seconds in a cone in the target direction that deal magic damage to enemies hit. Subsequent bolts against an enemy deal bonus magic damage.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": "32°",
+        "castTime": "0.25",
+        "effectRadius": "725",
+        "targetRange": null
+      }
+    ],
+    "W": [
+      {
+        "name": "Vision of Empire",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Swain summons a demonic eye at the target location that grants sight of the area for 2 seconds and explodes after 1.5 seconds, dealing magic damage to enemies within, halved against minions, and slowing them for 2.5 seconds.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      80,
+                      115,
+                      150,
+                      185,
+                      220
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      55,
+                      55,
+                      55,
+                      55,
+                      55
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Minion Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      57.5,
+                      75,
+                      92.5,
+                      110
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      27.5,
+                      27.5,
+                      27.5,
+                      27.5,
+                      27.5
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      25,
+                      35,
+                      45,
+                      55,
+                      65
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Enemy champions hit are also revealed for a duration and have a Soul Fragment collected from them.",
+            "leveling": [
+              {
+                "attribute": "Reveal Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      4,
+                      5,
+                      6,
+                      7,
+                      8
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                60,
+                65,
+                70,
+                75,
+                80
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                22,
+                21,
+                20,
+                19,
+                18
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "Special",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Enemy  champions protected by a  spell shield do not have a Soul Fragment collected from them but are  revealed anyway.\nVision of Empire will grant Soul Fragments from hitting  clones.\nSwain will not receive the Soul Fragments if Vision of Empire hits enemy champions while he is dead.\nVision of Empire is visible and audible to enemies through the fog of war.\nHitting an enemy champion with Vision of Empire collects nearby Soul Fragments.",
+        "blurb": "Active:  Swain summons a demonic eye at the target location that explodes after a brief moment, dealing magic damage and  slowing enemies within for a short time.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "325",
+        "targetRange": "5500 / 6000 / 6500 / 7000 / 7500"
+      }
+    ],
+    "E": [
+      {
+        "name": "Nevermove",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Swain launches a demonic wave in the target direction that deals magic damage to enemies hit.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      35,
+                      70,
+                      105,
+                      140,
+                      175
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      25,
+                      25,
+                      25,
+                      25,
+                      25
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "At maximum range, the wave homes back to Swain and detonates upon the first enemy hit, dealing magic damage to nearby enemies and rooting them for 1.5 seconds, during which they are revealed. Nevermove can be recast while champions hit are rooted.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      35,
+                      45,
+                      55,
+                      65,
+                      75
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      25,
+                      25,
+                      25,
+                      25,
+                      25
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      115,
+                      160,
+                      205,
+                      250
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Recast: Swain pulls the rooted champions over 290 units and collects a Soul Fragment from each of them. If the targets would be brought past Swain, they are instead knocked back the excess distance.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                50,
+                50,
+                50,
+                50,
+                50
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "special",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Nevermove's missiles have their speed update to accelerate at specific times by the server. The client applies these speed increases after additional specified delays, while the hitbox behaviour itself only uses the timings noted above.\nNevermove's recast can be used during the cast time of other spells.\n Spell shields block either the pass-through or the detonation, not both.\nIf the root is not applied to or is removed from all champions, the recast does not become available.\nThe pull will interrupt  channels at the very beginning, but does not keep the target stunned for the rest of the movement.\n Channels can be started successfully during the pull, provided the previous crowd control does not prevent them still.\nThis ability will cast from wherever the caster is at the start of the cast time.\nif the target champion is rooted by Nevermove but becomes spell-immune before the pull, Swain will not receive a soul fragment on reactivation since the champion cannot be displaced.",
+        "blurb": "Active:  Swain launches a demonic wave in the target direction that deals magic damage to enemies hit.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "935 / 1235 / 1735 / 2735 (based on time) / 600 / 1400 / 2200 (based on time)",
+        "width": "170",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "100",
+        "targetRange": "850"
+      }
+    ],
+    "R": [
+      {
+        "name": "Demonic Ascension",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Swain frees the demon within himself, gaining Demonic Ascension and generating 50 Demonic Energy. Demonic Ascension is maintained with Demonic Energy, which decays by 5 every 0.5 seconds, increased to 7.5 after 5 seconds have elapsed. Swain generates 10 Demonic Energy every 0.5 seconds while draining from at least one enemy champion, and fully restores it to the maximum of 50 upon scoring a champion takedown.",
+            "leveling": []
+          },
+          {
+            "description": "Demonic Ascension: Swain is ghosted and drains the lifeforce of nearby enemies, both dealing magic damage and healing himself each second per target affected. The heal is reduced by 90% against minions and monsters. Nevermove's cooldown is also reduced by 20%.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage per Tick",
+                "modifiers": [
+                  {
+                    "values": [
+                      20,
+                      40,
+                      60
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      10,
+                      10,
+                      10
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Heal per Tick",
+                "modifiers": [
+                  {
+                    "values": [
+                      15,
+                      27.5,
+                      40
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      18,
+                      18,
+                      18
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Reduced Healing",
+                "modifiers": [
+                  {
+                    "values": [
+                      1.5,
+                      2.75,
+                      4
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      1.8,
+                      1.8,
+                      1.8
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "After 2 seconds, Swain can cast Demonflare, and does so automatically when Demonic Ascension expires.",
+            "leveling": []
+          },
+          {
+            "description": "The targets do not have to be visible to be hit by this ability.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                80,
+                60
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self, Enemies",
+        "spellshieldable": "False",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "aoedot",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Demonflare will not automatically cast at the end of Demonic Ascension if it occurs due to Swain's death.\nSwain can still move during Demonic Ascension's cast time.",
+        "blurb": "Active:  Swain frees the demon within, gaining Demonic Ascension and generating Demonic Energy. Demonic Ascension is maintained with Demonic Energy that gradually decays over time.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.5",
+        "effectRadius": "650",
+        "targetRange": null
+      },
+      {
+        "name": "Demonflare",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Swain releases a nova of soulfire that deals magic damage to nearby enemies and slows them by 60%, decaying over 1.5 seconds.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      150,
+                      225,
+                      300
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      60,
+                      60,
+                      60
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Auto",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Demon Flare counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDemon Flare passes through champions. Effects like  Yasuo's  Wind Wall and  Braum's  Unbreakable will block the portion of the nova they intercept.\nSwain can move during Demonflare's cast time.\nDemonflare will fire from wherever Swain is at the end of the cast time.",
+        "blurb": "Active: Swain emits a nova of soulfire that deals magic damage to nearby enemies and applies a  slow that decays over a brief moment.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "3000",
+        "width": "60",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "675",
+        "targetRange": null
+      }
+    ]
+  },
+  "releaseDate": "2010-10-05",
+  "releasePatch": "1.0.0.102",
+  "patchLastChanged": "14.2",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 790,
+    "saleRp": 0
+  },
+  "lore": "Jericho Swain is the visionary ruler of Noxus, an expansionist nation that reveres only strength. Though he was cast down and crippled in the Ionian wars, his left arm severed, he seized control of the empire with ruthless determination… and a new, demonic hand. Now, Swain commands from the front lines, marching against a coming darkness that only he can see—in glimpses gathered by shadowy ravens from the corpses all around him. In a swirl of sacrifice and secrets, the greatest secret of all is that the true enemy lies within.",
+  "faction": "noxus",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 50000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 880,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Jericho Swain is the visionary ruler of Noxus, an expansionist nation that reveres only strength. Though he was cast down and crippled in the Ionian wars, his left arm severed, he seized control of the empire with ruthless determination.. and a new, demonic hand. Now, Swain commands from the front lines, marching against a coming darkness that only he can see—in glimpses gathered by shadowy ravens from the corpses all around him. In a swirl of sacrifice and secrets, the greatest secret of all is that the true enemy lies within.",
+      "release": "2010-10-05",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/50/50000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/50/50000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/50/50000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/base/swainloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "James Faulkner"
+      ],
+      "splashArtist": [
+        "Victor '3rdColossus' Maury"
+      ]
+    },
+    {
+      "name": "Bilgewater",
+      "id": 50002,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Bilgewater",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "What is a ruthless dictator to do, when he tires of the burdens of empire? It's a pirate's life for Swain, m'hearties! Plying the seas outside Bilgewater, his flagship, the Beatrice prowls—searching for storm wracked and serpent-choked vessels, each carrying the promise of plunder and souls.",
+      "release": "2010-10-05",
+      "set": [
+        "Bilgewater: Burning Tides"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/50/50002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/50/50002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/50/50002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin02/swainloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "James Faulkner"
+      ],
+      "splashArtist": [
+        "Zeen Chin"
+      ]
+    },
+    {
+      "name": "Northern Front",
+      "id": 50001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Northern Front",
+      "lootEligible": true,
+      "cost": 750,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "They could have sent an army—twelve helicarriers boasting hypercoil cannons, pulse-jumping shocktroopers, and mechs to carve through the ice. But instead, a lone, grizzled veteran striding across the tundra. Some things are better left to the Grand General.",
+      "release": "2010-10-05",
+      "set": [
+        "Arctic Ops"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/50/50001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/50/50001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/50/50001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin01/swainloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "James Faulkner"
+      ],
+      "splashArtist": [
+        "Mike Azevedo"
+      ]
+    },
+    {
+      "name": "Tyrant",
+      "id": 50003,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Tyrant",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [],
+      "lore": "Swain, though a mighty leader of men, was no match for the ancient demon slumbering beneath Noxus. As dark energies flowed through his once-human body, the new Grand General gave his first decree: “Kneel before me, or die.”",
+      "release": "2012-05-22",
+      "set": [
+        "Otherroads"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/50/50003.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/50/50003.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/50/50003.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin03/swainloadscreen_3.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": true,
+      "voiceActor": [
+        "James Faulkner"
+      ],
+      "splashArtist": [
+        "Viktor Titov",
+        "Grafit Studio"
+      ]
+    },
+    {
+      "name": "Dragon Master",
+      "id": 50004,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Dragon Master",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Emerald",
+          "id": 50008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50008.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 50010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50010.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 50005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50005.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 50007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50007.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 50009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50009.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 50006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50006.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Seeking to turn the very essence of dragons against them, the great Dragonslayer Swain battled beneath the earth for the souls of ancient, long-dead wyrms. In his hubris, he was consumed by their power, emerging a corrupted thrall of the monsters he once swore to destroy.",
+      "release": "2018-02-22",
+      "set": [
+        "Dragon World"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/50/50004.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/50/50004.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/50/50004.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin04/swainloadscreen_4.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": true,
+      "voiceActor": [
+        "James Faulkner"
+      ],
+      "splashArtist": [
+        "Alvin Lee"
+      ]
+    },
+    {
+      "name": "Hextech",
+      "id": 50011,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Hextech",
+      "lootEligible": true,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "125 Mythic Essence",
+      "rarity": "Mythic",
+      "chromas": [],
+      "lore": "The hextech artificer known as Jericho Swain is an almost legendary figure among Piltover's growing upper crust. Though he professes not to meddle in city affairs, he has been quietly integrating various hextech components into his own body… and with them, unparalleled access to the eyes and ears of thousands of artificial creatures.",
+      "release": "2019-12-12",
+      "set": [
+        "Hextech"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/50/50011.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/50/50011.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/50/50011.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin11/swainloadscreen_11.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "James Faulkner"
+      ],
+      "splashArtist": [
+        "Maki Planas Mata"
+      ]
+    },
+    {
+      "name": "Crystal Rose",
+      "id": 50012,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Crystal Rose",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 50018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50018.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 50017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50017.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 50018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50018.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 50019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50019.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Peridot",
+          "id": 50015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50015.png",
+          "colors": [
+            "#B6E084",
+            "#B6E084"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 50016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50016.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 50013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50013.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 50014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50014.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tiffany & Co.",
+          "id": 50022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50022.png",
+          "colors": [
+            "#6ECFCC",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the Worlds 2022 event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Swain knows how important the alliances formed at the Festival of the Crystal Rose are… and how fragile. His determination to see the event go perfectly has gained him a connection with Zyra, the Rose's protector. With her help, he intends this to be the most successful festival ever—and that he will be celebrated as its architect.",
+      "release": "2021-02-11",
+      "set": [
+        "Crystal Rose"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/50/50012.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/50/50012.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/50/50012.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin12/swainloadscreen_12.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "James Faulkner"
+      ],
+      "splashArtist": [
+        "Clare Wong",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Winterblessed",
+      "id": 50021,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Winterblessed",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 50024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50024.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 50026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50026.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 50028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50028.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 50027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50027.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 50030,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50030.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 50023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50023.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 50025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50025.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 50029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50029.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Wreathguard",
+          "id": 50031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/50/50031.png",
+          "colors": [
+            "#BF2020",
+            "#368B25"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the Season 2023 event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "The Hunter Swain made no acknowledgment of his fellow leaders and was the first to put himself forward. He desired the Aurora's blessings to better provide meat and pelts for his people. After making his case, he gave the smallest of bows to Polaris, who watched with a face as serene as moonlit ice. Satisfied, Swain stepped aside and waited for his gift.",
+      "release": "2022-12-08",
+      "set": [
+        "Winterblessed"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/50/50021.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/50/50021.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/50/50021.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin21/swainloadscreen_21.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin21/swainloadscreen_21_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "James Faulkner"
+      ],
+      "splashArtist": [
+        "Eric Xie",
+        "West Studio"
+      ]
+    }
+  ]
+}

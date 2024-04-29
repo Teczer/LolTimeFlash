@@ -1,0 +1,1823 @@
+{
+  "id": 147,
+  "key": "Seraphine",
+  "name": "Seraphine",
+  "title": "the Starry-Eyed Songstress",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Seraphine.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "MAGIC_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 570,
+      "percent": 0,
+      "perLevel": 90,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 6.5,
+      "percent": 0,
+      "perLevel": 0.6,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 360,
+      "percent": 0,
+      "perLevel": 25,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 11.5,
+      "percent": 0,
+      "perLevel": 0.95,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 26,
+      "percent": 0,
+      "perLevel": 4.2,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 50,
+      "percent": 0,
+      "perLevel": 3,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 330,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 525,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 120,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.669,
+      "percent": 0,
+      "perLevel": 2,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.112999998,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 525,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1.2,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 0.85,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 0.8,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 0.8,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 0.92,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 0.8,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "BURST",
+    "ENCHANTER",
+    "MAGE",
+    "SUPPORT"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 3,
+    "mobility": 1,
+    "utility": 2,
+    "abilityReliance": 100,
+    "difficulty": 1
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Stage Presence",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate - Echo: Seraphine's basic abilities generate a stack of Echo, stacking up to 2 times. At 2 stacks, Seraphine's next basic ability casts an additional time for 1 mana after a 0.033 seconds delay, consuming all Echo stacks after the cast time of the second cast.Seraphine gains maximum stacks of Echo when the game starts and upon respawning.",
+            "leveling": []
+          },
+          {
+            "description": "Innate - Harmony: Seraphine's ability casts grant a Note to herself and nearby allied champions that lasts 6 seconds, refreshes on subsequent Notes and stacks up to 4 times on each unit.",
+            "leveling": []
+          },
+          {
+            "description": "While any amount of Notes are active, Seraphine's next basic attack is empowered to have an uncancellable windup, gain 25 bonus attack range per Note, and fire all Notes at the target, with each one dealing 4 − 25 (based on level) (+ 4% AP) magic damage, reduced by 75% for Notes from allies.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self, Allies, Enemies",
+        "spellshieldable": "false",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "proc",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Echo Details:\nEcho's stacks are represented by a stack counter underneath Seraphine's health bar.\nSeraphine's basic abilities alternate their icons between 3 different ones each, depending on the current amount of stacks she has.\nThe additional cast must complete for Echo stacks to be consumed; if the cast time does not finish or does not begin at all, or if the ability fails to cast when there is not enough  mana, Seraphine will keep her stacks.\nThe additional cast does not affect the  cooldown of the mimicked ability.\nThe additional cast counts as a separate cast instance for the purpose of e.g.  Electrocute or  Conqueror.\nHarmony Details:\n\nNotes orbit at a radius of 100 from the center of their holder and they fire from this location.\nThe empowered attack can  critically strike.\nThe empowered attack will not trigger against wards.\nNotes are fired one after another with a short delay.\nSeraphine can grant Notes to more than 4 allied champions.\nHarmony does not grant Notes to  clones.\nHarmony grants Notes even if the ally is  untargetable.\nThe Notes will fire from allies regardless of how far they are away from Seraphine.\nSeraphine gains a faint blue attack range indicator when there are Notes present.\nNotes do not discharge when attacking  wards, allowing Seraphine to attack them from increased range multiple times.\nOther Details:\n\nSeraphine, while alive, will play music if there is at least one ally champion nearby.\nThis is audible to Seraphine and all allied champions that are in range of Harmony, indicative of if they can receive a Note or not.",
+        "blurb": "Innate - Echo:  Seraphine's basic ability casts generate stacks of Echo. At max stacks, her next basic ability consumes them all to cast twice in quick succession.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "3000",
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": "800",
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "High Note",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Seraphine hurls a soundwave to the target location that quickly expands in a radius upon arrival, dealing magic damage to enemies within the area.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      60,
+                      85,
+                      110,
+                      135,
+                      160
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Against champions, the damage is increased by 0% − 60% (based on target's missing health).",
+            "leveling": [
+              {
+                "attribute": "Increased Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      96,
+                      136,
+                      176,
+                      216,
+                      256
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      80,
+                      80,
+                      80,
+                      80,
+                      80
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "High Note will cast at max range if cast beyond that.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                60,
+                70,
+                80,
+                90,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                8,
+                7.5,
+                7,
+                6.5,
+                6
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "true",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "High Note uses a modified icon for the  second and  third stack of  Stage Presence.\nThe maximum damage of High Note uses a  cosmetic critical strike.\nHigh Note will fire from wherever Seraphine is at the end of the cast time.\nThe impact delay depends solely on the missile speed. It is 0 seconds to 0.75 seconds (after end of cast time) within the standard cast radius, but can be increased further by Seraphine being moved away from the cast location during the cast time.\n PENDING FOR TEST: The area of effect is covered via expansion in several rings (similar to  Frozen Tomb's area of effect) and targets can only be hit once.\nThe range indicator for the target range has a radius of 950 units, but the center of High Note can only be cast up to 900 units. The area indicator shows the proper 350 area of effect radius and cast location.",
+        "blurb": "Active:  Seraphine hurls a soundwave to the target location that quickly expands upon arrival, dealing magic damage to enemies within based on their missing health.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1300",
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "350",
+        "targetRange": "900"
+      }
+    ],
+    "W": [
+      {
+        "name": "Surround Sound",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Seraphine grants a shield to herself and nearby allied champions for 2.5 seconds. For the same duration, she also gains 20% (+ 2% per 100 AP) decaying bonus movement speed and grants allies 8% (+ 1.6% per 100 AP) bonus movement speed.",
+            "leveling": [
+              {
+                "attribute": "Shield Strength",
+                "modifiers": [
+                  {
+                    "values": [
+                      60,
+                      85,
+                      110,
+                      135,
+                      160
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      20,
+                      20,
+                      20,
+                      20,
+                      20
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If Seraphine already had a shield at the time of cast, Surround Sound will pulse after the duration, healing herself and nearby allied champions, increased for each ally.",
+            "leveling": [
+              {
+                "attribute": "Heal Per Ally",
+                "modifiers": [
+                  {
+                    "values": [
+                      3,
+                      3.5,
+                      4,
+                      4.5,
+                      5
+                    ],
+                    "units": [
+                      "% of target's missing health",
+                      "% of target's missing health",
+                      "% of target's missing health",
+                      "% of target's missing health",
+                      "% of target's missing health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Surround Sound's effects can stack up to 2 times.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                70,
+                75,
+                80,
+                85,
+                90
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                22,
+                21,
+                20,
+                19,
+                18
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self, Allies",
+        "spellshieldable": null,
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": "Shield",
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Surround Sound uses a modified icon for the  second and  third stack of  Stage Presence.\nAll effects are gained at the start of the cast time.\nSeraphine can move during the cast time.\nSurround Sound's  shield buff can have up to 2 stacks, for a total of 200% shield strength at a time.\nMost shields in the game can only have one stack, refreshing their shield strength when reapplied.\n PENDING FOR TEST: StackingType\nSurround Sound will empower from any  shield that Seraphine has. It does not have to be sourced from Surround Sound.\nCasting Surround Sound during the 2.5-second delay refreshes the delay.\nThe  heal affects  clones and counts them for increasing the missing health percentage.\nA large indicator similar to  Redemption's signals the heal area of effect and delay.\nThe heal will be canceled and the indicator disappears when Seraphine dies.\nThe heal occurs instantly on Seraphine and all nearby allied champions once the delay ends.\nThere is a missile that flows through all allied champions which can be blocked by  Wind Wall. The heal is unaffected by this.\nSurround Sound will affect  untargetable allies.",
+        "blurb": "Active:  Seraphine  shields herself and nearby allied champions for a short time. She also gains a burst of  movement speed and grants allies  bonus movement speed.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "800",
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Beat Drop",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Seraphine fires a heavy soundwave in the target direction that deals magic damage to enemies hit, reduced to 70% against minions, and slows them by 99% for a few seconds.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      100,
+                      130,
+                      160,
+                      190
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Minion Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      49,
+                      70,
+                      91,
+                      112,
+                      133
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      35,
+                      35,
+                      35,
+                      35,
+                      35
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Disable Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      1.1,
+                      1.2,
+                      1.3,
+                      1.4,
+                      1.5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Enemies that are already slowed are also rooted for the same duration.",
+            "leveling": []
+          },
+          {
+            "description": "Enemies that are immobilized or grounded are also stunned for the same duration.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                60,
+                60,
+                60,
+                60,
+                60
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                11,
+                10.5,
+                10,
+                9.5,
+                9
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "true",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Beat Drop will only be empowered from  slows,  immobilizes, and  grounding effects applied by herself or her allies.\nBeat Drop uses a modified icon for the  second and  third stack of  Stage Presence.\nBeat Drop may still be empowered even if the disable ends shortly after the ability hits.\nThe  root and the  stun cannot apply at the same time.\nThe root will only apply if the target is  slowed and not  immobilized or  grounded.\nThe stun will apply as normal; it does not consider if the target is  slowed.\nThe root will be overridden by the stun if the target is hit by Beat Drop again while they were rooted by it.\nA quarter note will appear next to an enemy  champion while they are  slowed and two quarter notes tied will appear if they are  immobilized or  grounded.\nThis indicates if Beat Drop will apply an additional crowd control effect if it strikes the target.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+        "blurb": "Active:  Seraphine fires a heavy soundwave in the target direction that deals magic damage and briefly  slows enemies hit.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1200",
+        "width": "140",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": "1300"
+      }
+    ],
+    "R": [
+      {
+        "name": "Encore",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Seraphine projects a captivating force in the target direction that deals magic damage to enemies hit, charms them, during which they are revealed, and slows them by 40% for a duration, increasing by 15% every 0.25 seconds over the duration up to 99%.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      150,
+                      200,
+                      250
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      40,
+                      40
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Disable Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      1.25,
+                      1.5,
+                      1.75
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Encore's projectile resets its remaining travel distance whenever it hits an allied or enemy champion, excluding Seraphine. Allied champions hit gain 4 Notes.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                160,
+                140,
+                120
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "true",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Encore has two cast times. Both last 0.5 seconds. The wave will always project after the first cast time, and the second cast time only serves as a  lock out for Seraphine.\nSeraphine cannot buffer casts during the first cast time, but she may do so during the second cast time.\n Clones also count for Encore's extension.\nEncore will not extend on enemy champions that are  untargetable, but will do so for allied champions.\n Spell shield will also prevent Encore from extending.\nThis ability will cast from wherever the caster is at the end of the cast time.\nEncore fires from Seraphine's location at the end of the initial cast time.\nThere is no limit as to how many times the wave can extend.\nEach Encore cast cannot extend from the same  champion more than once.\n PENDING FOR TEST::  Champions that died, clearing marker buffs",
+        "blurb": "Active:  Seraphine projects a captivating force in the target direction that deals magic damage to enemies hit, briefly  charming,  slowing, and  revealing them.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1600",
+        "width": "320",
+        "angle": null,
+        "castTime": "0.5",
+        "effectRadius": null,
+        "targetRange": "1200"
+      }
+    ]
+  },
+  "releaseDate": "2020-10-29",
+  "releasePatch": "10.22",
+  "patchLastChanged": "14.5",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 790,
+    "saleRp": 0
+  },
+  "lore": "Born in Piltover to Zaunite parents, Seraphine can hear the souls of others—the world sings to her, and she sings back. Though these sounds overwhelmed her in her youth, she now draws on them for inspiration, turning the chaos into a symphony. She performs for the sister cities to remind their citizens that they're not alone, that they're stronger together, and that, in her eyes, their potential is limitless.",
+  "faction": "piltover",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 147000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Born in Piltover to Zaunite parents, Seraphine can hear the souls of others—the world sings to her, and she sings back. Though these sounds overwhelmed her in her youth, she now draws on them for inspiration, turning the chaos into a symphony. She performs for the sister cities to remind their citizens that they're not alone, that they're stronger together, and that, in her eyes, their potential is limitless.",
+      "release": "2020-10-29",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/147/147000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/147/147000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/147/147000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/base/seraphineloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Michele Panu"
+      ],
+      "splashArtist": [
+        "Jennifer Wuestling"
+      ]
+    },
+    {
+      "name": "KDA ALL OUT Indie",
+      "id": 147001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "K/DA ALL OUT Seraphine Indie",
+      "lootEligible": true,
+      "cost": 3250,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Ultimate",
+      "chromas": [],
+      "lore": "With a stunning voice and a sunny disposition, Seraphine has big dreams about her music and what she can offer the world. She knows that someday, if she just keeps trying, she'll make her beloved cat Bao proud.",
+      "release": "2020-10-29",
+      "set": [
+        "K/DA"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/147/147001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/147/147001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/147/147001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin01/seraphineloadscreen_1.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin01/seraphineloadscreen_1_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Michele Panu"
+      ],
+      "splashArtist": [
+        "Alex 'alexplank' Flores"
+      ]
+    },
+    {
+      "name": "Graceful Phoenix",
+      "id": 147004,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Graceful Phoenix",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Emerald",
+          "id": 147006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147006.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Golden Tiger",
+          "id": 147013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147013.png",
+          "colors": [
+            "#FF9D13",
+            "#B9FFC1"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2022 Lunar Revel event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            },
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 147009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147009.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 147011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147011.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 147007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147007.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 147005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147005.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            },
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 147008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147008.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 147010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147010.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 147012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147012.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        }
+      ],
+      "lore": "A champion of the common folk, Seraphine's music united her community in defense against a mysterious force that sought to wipe them out. The fenghuang heard Seraphine's graceful song, and blessed her with the power to fight the darkness back.",
+      "release": "2021-09-02",
+      "set": [
+        "Phoenixmancers"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/147/147004.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/147/147004.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/147/147004.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin04/seraphineloadscreen_4.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Michele Panu"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "Ocean Song",
+      "id": 147014,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Ocean Song",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 147021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147021.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 147019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147019.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 147020,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147020.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 147022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147022.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 147023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147023.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 147017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147017.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 147016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147016.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 147018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147018.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "After taking a break to recharge her creative spirit, Seraphine is back! Rather than dive straight into a solo tour, she's drawing on the relaxed energy of the Ocean Song Festival to ease herself back into singing. With no setlist, she's going to listen to her audience and let the musical current take her.",
+      "release": "2022-06-09",
+      "set": [
+        "Ocean Song"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/147/147014.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/147/147014.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/147/147014.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin14/seraphineloadscreen_14.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Michele Panu"
+      ],
+      "splashArtist": [
+        "Jeremy 'Jermu' Anninos"
+      ]
+    },
+    {
+      "name": "Prestige Ocean Song",
+      "id": 147015,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Prestige Ocean Song",
+      "lootEligible": true,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "200 Mythic Essence",
+      "rarity": "Mythic",
+      "chromas": [],
+      "lore": "Never content to swim with the tide, Seraphine's making waves with her new sea breeze look. Whether it's on the runway or the concert stage, beach season's open, and the water's warm.",
+      "release": "2022-06-09",
+      "set": [
+        "Ocean Song"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/147/147015.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/147/147015.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/147/147015.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin15/seraphineloadscreen_15.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin15/seraphineloadscreen_15_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Michele Panu"
+      ],
+      "splashArtist": [
+        "Sora Kim",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Faerie Court",
+      "id": 147024,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Faerie Court",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Aquamarine",
+          "id": 147028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147028.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 147026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147026.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 147029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147029.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 147031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147031.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 147027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147027.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 147025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147025.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 147030,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147030.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 147032,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147032.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Winsome",
+          "id": 147033,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147033.png",
+          "colors": [
+            "#866EFF",
+            "#8AE1E8"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2023 Faerie Court event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "A sunny siren of the Summer Court, it was Lady Seraphine's skillful makeover talents that helped get Karma and Kalista ready to face the nobility with style. She is a master of courtly manners and was more than happy to teach her new friends everything that really counts about being fabulous!",
+      "release": "2023-03-23",
+      "set": [
+        "Faerie Court"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/147/147024.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/147/147024.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/147/147024.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin24/seraphineloadscreen_24.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin24/seraphineloadscreen_24_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Michele Panu"
+      ],
+      "splashArtist": [
+        "Silvia Meiliani",
+        "Caravan Studio"
+      ]
+    },
+    {
+      "name": "Star Guardian",
+      "id": 147034,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Star Guardian",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Emerald",
+          "id": 147039,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147039.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 147041,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147041.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 147040,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147040.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rainbow",
+          "id": 147042,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147042.png",
+          "colors": [
+            "#C1F2FF",
+            "#C1F2FF"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 147037,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147037.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 147035,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147035.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 147036,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147036.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 147038,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/147/147038.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Seraphine has toured the entire galaxy as a solo act, but now it's time for a Star Guardian collab. She's ecstatic to team up with a new group of heroes, and she isn't afraid to share that enthusiasm. They're fighting for true love… what could be more romantic than that?!",
+      "release": "2023-06-28",
+      "set": [
+        "Star Guardian Season 4"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/147/147034.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/147/147034.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/147/147034.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin34/seraphineloadscreen_34.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin34/seraphineloadscreen_34_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Michele Panu"
+      ],
+      "splashArtist": [
+        "Forrest Imel",
+        "West Studio"
+      ]
+    }
+  ]
+}

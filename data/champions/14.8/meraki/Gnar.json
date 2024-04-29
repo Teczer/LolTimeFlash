@@ -1,0 +1,2152 @@
+{
+  "id": 150,
+  "key": "Gnar",
+  "name": "Gnar",
+  "title": "the Missing Link",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Gnar.png",
+  "resource": "RAGE",
+  "attackType": "RANGED",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 540,
+      "percent": 0,
+      "perLevel": 79,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 4.5,
+      "percent": 0,
+      "perLevel": 1.25,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 100,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 3.7,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 57,
+      "percent": 0,
+      "perLevel": 3,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 335,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 600,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 100,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 6,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.153999999165534,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 400,
+      "percent": 0,
+      "perLevel": 5.882,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 0.9,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1.1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "FIGHTER",
+    "SPECIALIST",
+    "TANK"
+  ],
+  "attributeRatings": {
+    "damage": 2,
+    "toughness": 1,
+    "control": 1,
+    "mobility": 2,
+    "utility": 1,
+    "abilityReliance": 45,
+    "difficulty": 3
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Rage Gene",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate - Rage Gene: Mini Gnar generates 4 / 7 / 11 (based on level) Rage over 2 seconds upon dealing or receiving damage. Against non-champions, basic attacks and Boomerang Throw instantly generate[ 0.5 / 0.875 / 1.375 (based on level) Rage. ][ 12.5% of the amount. ] Against champions, Boomerang Throw instantly generates[ 1 / 1.75 / 2.75 (based on level) Rage, ][ 25% of the amount, ]and basic attacks instantly generate[ 2 / 3.5 / 5.5 (based on level). ][ 50% of the amount. ] Boomerang Throw can only generate Rage once per cast, and grants Rage based on the first enemy hit. Gnar's Rage decays after being out of combat for 13 seconds.",
+            "leveling": []
+          },
+          {
+            "description": "At maximum Rage, Gnar's abilities are switched to Mega Gnar's abilities for 4 seconds. Casting one of Mega Gnar's abilities will cause him to transform into Mega Gnar, else he will transform automatically after the 4 seconds have elapsed.",
+            "leveling": []
+          },
+          {
+            "description": "Gnar's Mega form lasts for 15 seconds, with his Rage bar depleting as an indication of remaining time. Rage cannot be generated while in this form. Afterwards, Gnar returns to Mini Gnar, retaining his current percentage health and becoming too tired to generate Rage for 15 seconds.",
+            "leveling": []
+          },
+          {
+            "description": "Gnar gains different stat bonuses based on whether he is in Mini or Mega form. Both of Gnar's forms share their ability cooldowns.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The Rage generated upon dealing or receiving damage occurs over 2 seconds with 4 ticks every 0.5 seconds. It also does not stack but instead refreshes with subsequent applications (of dealing or receiving damage).\nThe bonus rage generation on basic attacks counts as an  on-hit effect, and is triggered by  Runaan's Hurricane and  Guinsoo's Rageblade.\nIn-game, the value on the Rage bar always displays rounded down to the nearest integer.\n Mega Gnar's gained health is not affected by healing modifiers such as  Grievous Wounds and those from items and runes.\nWhen returning to  Mini Gnar, Gnar will only retain his current health percentage, not current health total.\nThis is intentional to prevent Gnar from simply triggering  Rage Gene in order to heal himself over time.\nGnar's abilities share  cooldowns across forms.\nThe final stats, after  Rage Gene being applied, can be seen on Mini Gnar's and Mega Gnar's respective data template, in the front page.\nMini Gnar gains 5.5% − 99% (based on level) bonus attack speed.",
+        "blurb": "Gnar generates Rage while fighting. At maximum Rage, his next ability will be  Mega Gnar's as he transforms, losing Mini Gnar's passive effects in exchange for increased stats and new abilities.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Boomerang Throw",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Gnar throws a boomerang in a line in the target direction that deals physical damage to enemies in its path and slows them for 2 seconds. After reaching its maximum range or hitting an enemy, the boomerang flies back toward Gnar based on his current movement, dealing 50% damage to subsequent targets.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      5,
+                      45,
+                      85,
+                      125,
+                      165
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      115,
+                      115,
+                      115,
+                      115,
+                      115
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Reduced Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      2.5,
+                      22.5,
+                      42.5,
+                      62.5,
+                      82.5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      57.5,
+                      57.5,
+                      57.5,
+                      57.5,
+                      57.5
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      15,
+                      20,
+                      25,
+                      30,
+                      35
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Catching the boomerang while it is returning back refunds 40% of the ability's total cooldown.",
+            "leveling": []
+          },
+          {
+            "description": "Enemies can be hit only once per pass.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                20,
+                17.5,
+                15,
+                12.5,
+                10
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The boomerang return direction is determined at the apex of its flight by Gnar's current position and which direction Gnar is heading at the time.\nSince the cooldown between the two is shared, Mini Gnar may pick up a boulder and/or Mega Gnar may catch a boomerang.\nThis ability will cast from wherever the caster is at the start of the cast time.",
+        "blurb": "Active:  Mini Gnar throws a boomerang in the target direction that deals physical damage and  slows enemies hit. At maximum range or hitting an enemy, the boomerang flies back toward Gnar based on his current movement, dealing reduced damage.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "2500 - 1400 / 60 - 2600",
+        "width": "110 / 150",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Boulder Toss",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Gnar throws a boulder in the target direction that stops upon hitting an enemy, dealing physical damage to nearby enemies upon impact and slowing them for 2 seconds. The boulder then remains on the ground for 6 seconds.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      45,
+                      90,
+                      135,
+                      180,
+                      225
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      140,
+                      140,
+                      140,
+                      140,
+                      140
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      30,
+                      35,
+                      40,
+                      45,
+                      50
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "After 0.3 seconds, Gnar can pick up the boulder by moving within 90 units of it, refunding 70% of the ability's total cooldown.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                20,
+                17.5,
+                15,
+                12.5,
+                10
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Since the cooldown between the two is shared Mini Gnar may pick up a boulder and/or Mega Gnar may catch a boomerang.\nThe  Boulder will still drop to the ground if colliding with  Wind Wall or  Unbreakable.\nThis ability will cast from wherever the caster is at the start of the cast time.",
+        "blurb": "Active:  Mega Gnar throws a boulder in the target direction that stops upon the first enemy hit, dealing physical damage to nearby enemies  slowing them.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "2100",
+        "width": "180",
+        "angle": null,
+        "castTime": "0.5",
+        "effectRadius": "250",
+        "targetRange": null
+      }
+    ],
+    "W": [
+      {
+        "name": "Hyper",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/w",
+        "effects": [
+          {
+            "description": "Passive: Gnar's basic attacks on-hit and ability hits apply a stack of Hyper to enemies for 3.5 seconds, refreshing on subsequent applications and stacking up to 3 times.",
+            "leveling": []
+          },
+          {
+            "description": "The third stack against a target consumes them all to deal bonus magic damage, capped at 300 against monsters, and grant Gnar 20 / 40 / 60 / 80% (based on GNAR!'s rank) bonus movement speed that decays over 3 seconds.",
+            "leveling": [
+              {
+                "attribute": "Bonus Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      0,
+                      10,
+                      20,
+                      30,
+                      40
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      6,
+                      8,
+                      10,
+                      12,
+                      14
+                    ],
+                    "units": [
+                      "% of target's maximum health",
+                      "% of target's maximum health",
+                      "% of target's maximum health",
+                      "% of target's maximum health",
+                      "% of target's maximum health"
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Gnar gains Hyper's bonus movement speed when he leaves Mega form.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Enemies",
+        "spellshieldable": "False",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Proc",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The bonus movement speed's duration refreshes whenever Gnar would receive it (by hitting a target three times again).",
+        "blurb": "Passive:  Mini Gnar's basic attacks and damaging abilities apply stacks. The third stack deals bonus magic damage based on the target's maximum health, and grants a burst of  movement speed to Gnar.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Wallop",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Gnar slams his arm down in the target direction, dealing physical damage to all enemies struck within the area and stunning them for 1.25 seconds.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      45,
+                      75,
+                      105,
+                      135,
+                      165
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                7,
+                7,
+                7,
+                7,
+                7
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "No additional details.",
+        "blurb": "Active:  Mega Gnar slams his arm down in an area toward the target direction, dealing physical damage and  stunning enemies within.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": "200",
+        "angle": null,
+        "castTime": "0.6",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Hop",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Gnar leaps to the target location, then gains bonus attack speed for 6 seconds.",
+            "leveling": [
+              {
+                "attribute": "Bonus Attack Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      45,
+                      50,
+                      55,
+                      60
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If Gnar lands on a unit he will bounce 500 units further in the same direction.",
+            "leveling": []
+          },
+          {
+            "description": "Landing on an enemy deals them physical damage and slows them by 80% for 0.5 seconds.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      50,
+                      85,
+                      120,
+                      155,
+                      190
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      6,
+                      6,
+                      6,
+                      6,
+                      6
+                    ],
+                    "units": [
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Gnar will not bounce if he is immobilized, excluding from sleep(bug), during the first leap.",
+            "leveling": []
+          },
+          {
+            "description": "Boomerang Throw can be cast during the dash. Hop will cast at max range if cast beyond that.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                22,
+                19.5,
+                17,
+                14.5,
+                12
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Single target",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Hop does not allow Gnar to bounce off wards.\nHop does not grant bonus attack speed if used to transform.\nIf Hop generates Rage to maximum and Gnar bounces off an enemy, he may cast  GNAR! during the bounce.",
+        "blurb": "Active:  Mini Gnar  leaps to the target location and bounces off of any unit he lands on,  leaping forth again without a bounce. He also gains  bonus attack speed for a few seconds.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "150",
+        "targetRange": "475"
+      },
+      {
+        "name": "Crunch",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Gnar leaps to the target location and deals physical damage to nearby enemies upon impact. After a 0.25-second delay, Gnar sends out a shockwave, dealing the same damage to additional enemies in a larger radius.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      80,
+                      115,
+                      150,
+                      185,
+                      220
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      6,
+                      6,
+                      6,
+                      6,
+                      6
+                    ],
+                    "units": [
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If Crunch is used to transform, Gnar will still be able to bounce as per Hop. The shockwave will occur where Gnar lands.",
+            "leveling": []
+          },
+          {
+            "description": "Enemies Gnar lands directly on top of are affected by Hop's slow.",
+            "leveling": []
+          },
+          {
+            "description": "Crunch will cast at max range if cast beyond that.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                22,
+                19.5,
+                17,
+                14.5,
+                12
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Gnar is locked out of using any other abilities during Crunch, but he can still transform mid-air if he reaches 100  Rage during the  jump of  Hop.\nIf Crunch is cast to transform and Gnar bounces off of an enemy, he may cast  GNAR! during the bounce.\nIf Crunch is used to transform, the area of effect is missing at the first landing location, whether he bounces off a target or not.(bug)\nIf circumstances allow it, Crunch's shockwave from using it to transform can hit the target Gnar bounced off of.",
+        "blurb": "Active:  Mega Gnar  leaps to the target location,  slowing enemies he lands on and dealing physical damage to nearby enemies based on each target's maximum health.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": "200",
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "375",
+        "targetRange": "675"
+      }
+    ],
+    "R": [
+      {
+        "name": "GNAR!",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/r",
+        "effects": [
+          {
+            "description": "Mini Gnar - Passive: Hyper's bonus movement speed is increased.",
+            "leveling": [
+              {
+                "attribute": "Hyper Bonus Movement Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      60,
+                      80
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Mega Gnar - Active: Gnar thrusts in the target direction, knocking away nearby enemies up to 590 units in that direction, though not through terrain, and afterwards dealing them physical damage, as well as slowing them by 45% after a 0.4-second delay for a duration.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      200,
+                      300,
+                      400
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Disable Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      1.25,
+                      1.5,
+                      1.75
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Enemies that collide with terrain take 50% increased damage instantly and are stunned instead of slowed.",
+            "leveling": [
+              {
+                "attribute": "Increased Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      300,
+                      450,
+                      600
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      75,
+                      75,
+                      75
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      150,
+                      150,
+                      150
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                90,
+                60,
+                30
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "GNAR! can interact with player-generated terrain.\nThis ability will cast from wherever the caster is at the end of the cast time.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+        "blurb": "Passive:  Hyper's  bonus movement speed is increased.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "475",
+        "targetRange": null
+      }
+    ]
+  },
+  "releaseDate": "2014-08-14",
+  "releasePatch": "4.14",
+  "patchLastChanged": "13.17",
+  "price": {
+    "blueEssence": 4800,
+    "rp": 880,
+    "saleRp": 0
+  },
+  "lore": "Gnar is a primeval yordle whose playful antics can erupt into a toddler's outrage in an instant, transforming him into a massive beast bent on destruction. Frozen in True Ice for millennia, the curious creature broke free and now hops about a changed world he sees as exotic and wondrous. Delighted by danger, Gnar flings whatever he can at his enemies, be it his bonetooth boomerang, or a nearby building.",
+  "faction": "freljord",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 150000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 880,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Gnar is an excitable yordle whose playful antics can erupt into a toddler’s outrage in an instant, transforming him into a massive beast bent on destruction. Frozen in True Ice for millennia, the curious creature broke free and now hops about a changed world he sees as exotic and wondrous. Delighted by danger, Gnar flings whatever he can at his enemies, be it his bonetooth boomerang… or an uprooted tree.",
+      "release": "2014-08-13",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/150/150000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/150/150000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/150/150000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/base/gnarloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dorothy Fahn",
+        "Lucien Dodge"
+      ],
+      "splashArtist": [
+        "Alex 'alexplank' Flores"
+      ]
+    },
+    {
+      "name": "Dino",
+      "id": 150001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Dino",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 150012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150012.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Aquamarine",
+          "id": 150011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150011.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Astral",
+          "id": 150009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150009.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 150007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150007.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 150008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150008.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Peridot",
+          "id": 150010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150010.png",
+          "colors": [
+            "#B6E084",
+            "#B6E084"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 150006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150006.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 150005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150005.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": null,
+      "release": "2014-08-13",
+      "set": [
+        "Toy Box"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/150/150001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/150/150001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/150/150001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin01/gnarloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dorothy Fahn",
+        "Lucien Dodge"
+      ],
+      "splashArtist": [
+        "Evan 'Somnicidal' Monteiro"
+      ]
+    },
+    {
+      "name": "Gentleman",
+      "id": 150002,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Gentleman",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Some believe Gnar's wealth came from his groundbreaking research into economics and linguistics. Others question whether his investors favor him purely for his undeniable charm. Either way, he now finds himself receiving award after award—the latest being a sculpture of him in ice, rumored to never melt.",
+      "release": "2015-07-14",
+      "set": [
+        "High Society"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/150/150002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/150/150002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/150/150002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin02/gnarloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dorothy Fahn",
+        "Lucien Dodge"
+      ],
+      "splashArtist": [
+        "Jean 'Curing' Go"
+      ]
+    },
+    {
+      "name": "Snow Day",
+      "id": 150003,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Snow Day",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Gnar can't resist the call of a tussle in fresh powder, but woe to those who forget what they're dealing with. Mega Gnar lurks just beneath the surface, ready to take the snowball fight to the next level... and rip someone in half.",
+      "release": "2015-12-10",
+      "set": [
+        "Snow Day"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/150/150003.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/150/150003.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/150/150003.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin03/gnarloadscreen_3.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dorothy Fahn",
+        "Lucien Dodge"
+      ],
+      "splashArtist": [
+        "Kelly Aleshire"
+      ]
+    },
+    {
+      "name": "El León",
+      "id": 150004,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "El León",
+      "lootEligible": true,
+      "cost": 750,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "He's big. He's small. He's throwing pieces of the ring around like it's made of pixie dust and unicorn whispers. He's El León, the eighth wonder of the world, and he's here to say to his opponents: “Gnar!”",
+      "release": "2016-06-01",
+      "set": [
+        "Luchador"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/150/150004.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/150/150004.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/150/150004.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin04/gnarloadscreen_4.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dorothy Fahn",
+        "Lucien Dodge"
+      ],
+      "splashArtist": [
+        "Kelly Aleshire"
+      ]
+    },
+    {
+      "name": "Super Galaxy",
+      "id": 150013,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Super Galaxy",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [],
+      "lore": "Look, Gnar is still figuring out the pistol, okay? Just don't ask him too many questions, or you might have an unexpected Mecha-Gnar on your hands, walloping your face into deep space.",
+      "release": "2017-10-16",
+      "set": [
+        "Super Galaxy"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/150/150013.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/150/150013.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/150/150013.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin13/gnarloadscreen_13.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dorothy Fahn",
+        "Lucien Dodge"
+      ],
+      "splashArtist": [
+        "Rudy Siswanto"
+      ]
+    },
+    {
+      "name": "SSG",
+      "id": 150014,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "SSG",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [],
+      "lore": "Honoring CuVee's winning performance as Gnar during the 2017 World Championship. ",
+      "release": "2018-07-20",
+      "set": [
+        "World Champions: 2017"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/150/150014.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/150/150014.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/150/150014.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin14/gnarloadscreen_14.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin14/gnarloadscreen_14_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dorothy Fahn",
+        "Lucien Dodge"
+      ],
+      "splashArtist": [
+        "Rudy Siswanto",
+        "Pan Chengwei"
+      ]
+    },
+    {
+      "name": "Astronaut",
+      "id": 150015,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Astronaut",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Aquamarine",
+          "id": 150019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150019.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 150017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150017.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Chrono",
+          "id": 150021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150021.png",
+          "colors": [
+            "#162D57",
+            "#A50031"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2020 Pulsefire event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Granite",
+          "id": 150020,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150020.png",
+          "colors": [
+            "#85827F",
+            "#85827F"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 150018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150018.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 150016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150016.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Gnar knew he should be focusing on the mission at hand, but the strange little creatures he encountered on the planet's surface captivated his attention (and kept his wrath at bay… for now).",
+      "release": "2020-05-28",
+      "set": [
+        "Astronauts"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/150/150015.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/150/150015.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/150/150015.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin15/gnarloadscreen_15.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin15/gnarloadscreen_15_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dorothy Fahn",
+        "Lucien Dodge"
+      ],
+      "splashArtist": [
+        "David Villegas",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Elderwood",
+      "id": 150022,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Elderwood",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Citrine",
+          "id": 150024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150024.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 150025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150025.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 150030,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150030.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 150029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150029.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 150028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150028.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 150023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150023.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 150027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150027.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 150026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150026.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Stories have long been told of a monster that stalks the wood, rending massive oak trees asunder bare-handed—but few realize this titan is also the small, curious creature that collects baubles and bones and chitters through the treetops. The wise leave both to their devices. The foolish? Well, it depends which Gnar they meet.",
+      "release": "2022-01-06",
+      "set": [
+        "Elderwood"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/150/150022.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/150/150022.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/150/150022.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin22/gnarloadscreen_22.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin15/gnarloadscreen_15_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dorothy Fahn",
+        "Lucien Dodge"
+      ],
+      "splashArtist": [
+        "West Studio"
+      ]
+    },
+    {
+      "name": "La Ilusión",
+      "id": 150031,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "La Ilusión",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 150036,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150036.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 150033,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150033.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 150039,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150039.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 150034,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150034.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 150032,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150032.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 150035,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150035.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 150038,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150038.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 150037,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150037.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Vivida",
+          "id": 150040,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/150/150040.png",
+          "colors": [
+            "#EE3B93",
+            "#055939"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Abandoned to the streets, Gnar spent years scraping by, snarling at his misfortune, until he was found by a gentle orphaned girl. What started as simple gifts of food blossomed into a loving friendship, only for Gnar to suddenly fall ill and pass. Because of their familial love, Gnar now returns as an Eidola Vida, ready to protect his family from danger.",
+      "release": "2023-09-27",
+      "set": [
+        "La Ilusión"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/150/150031.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/150/150031.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/150/150031.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin31/gnarloadscreen_31.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/skin31/gnarloadscreen_31_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dorothy Fahn",
+        "Lucien Dodge"
+      ],
+      "splashArtist": [
+        "Terence 'Terrylefruit' Cantal"
+      ]
+    }
+  ]
+}

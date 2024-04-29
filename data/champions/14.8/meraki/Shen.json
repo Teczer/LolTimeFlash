@@ -1,0 +1,2224 @@
+{
+  "id": 98,
+  "key": "Shen",
+  "name": "Shen",
+  "title": "the Eye of Twilight",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Shen.png",
+  "resource": "ENERGY",
+  "attackType": "MELEE",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 610,
+      "percent": 0,
+      "perLevel": 99,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 8.5,
+      "percent": 0,
+      "perLevel": 0.75,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 400,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 50,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 34,
+      "percent": 0,
+      "perLevel": 4.2,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 2.05,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 64,
+      "percent": 0,
+      "perLevel": 3,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 340,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 400,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 100,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.751,
+      "percent": 0,
+      "perLevel": 3,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.651000022888183,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.266660004854202,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.53600001335144,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 125,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "TANK",
+    "WARDEN"
+  ],
+  "attributeRatings": {
+    "damage": 2,
+    "toughness": 3,
+    "control": 2,
+    "mobility": 2,
+    "utility": 3,
+    "abilityReliance": 45,
+    "difficulty": 2
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Ki Barrier",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: After completing an ability's effects, Shen grants himself a shield for 50 − 101 (based on level) (+ 12% bonus health) for 2.5 seconds. If Shen affects at least one other champion with an ability, Ki Barrier's cooldown is reduced by 4 − 7.5 (based on level) seconds.",
+            "leveling": []
+          },
+          {
+            "description": "Shen manifests a Spirit Blade that he can control with Twilight Assault and Spirit's Refuge.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                10,
+                10
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": false
+        },
+        "targeting": "Passive",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": "Shield",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The Spirit Blade spawns with Shen, teleports closer to him if he gets too far away, and instantly blinks to him if he uses any global  blink ( Teleport,  Recall, or  Stand United). It will also dissappear if Shen dies and reappear upon respawning.\nEnemies see an arrow pointing from Shen to the location of his Spirit Blade even if it is not visible.\n Twilight Assault will grant the shield if the Spirit Blade reaches Shen. If it is stopped, no shield is granted. It will grant the cooldown reduction upon hitting an enemy champion.\n Spirit's Refuge will grant the shield and/or the cooldown reduction after the protective zone disappears. It does not need to block attacks to trigger the cooldown reduction, just touch an ally champion at any point of the duration.\n Shadow Dash will grant the shield when the dash ends. It will grant the cooldown reduction upon hitting an enemy champion.\nIf the dash is  interrupted, the shield will instead be received the moment the  crowd control source is applied, before damage calculation (if any).\n Stand United will give the shield and/or the cooldown reduction upon completing the channel.",
+        "blurb": "Innate: Shen manifests a Spirit Blade that he can control with his abilities.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Twilight Assault",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Shen recalls his Spirit Blade to his location. Enemy champions hit are slowed for the next 2 seconds while moving away from Shen.",
+            "leveling": [
+              {
+                "attribute": "Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      15,
+                      20,
+                      25,
+                      30,
+                      35
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Once it arrives, Shen empowers his next 3 basic attacks within 8 seconds to gain 75 bonus range and deal bonus magic damage.",
+            "leveling": [
+              {
+                "attribute": "Bonus Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      10,
+                      11.764705882352942,
+                      13.529411764705882,
+                      15.294117647058822,
+                      17.058823529411764,
+                      18.823529411764707,
+                      20.588235294117645,
+                      22.352941176470587,
+                      24.11764705882353,
+                      25.88235294117647,
+                      27.647058823529413,
+                      29.41176470588235,
+                      31.176470588235293,
+                      32.94117647058823,
+                      34.705882352941174,
+                      36.470588235294116,
+                      38.23529411764706,
+                      40
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      2,
+                      2.5,
+                      3,
+                      3.5,
+                      4
+                    ],
+                    "units": [
+                      "% (+ 1.5% per 100 AP) of target's maximum health",
+                      "% (+ 1.5% per 100 AP) of target's maximum health",
+                      "% (+ 1.5% per 100 AP) of target's maximum health",
+                      "% (+ 1.5% per 100 AP) of target's maximum health",
+                      "% (+ 1.5% per 100 AP) of target's maximum health"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      30,
+                      35.294117647058826,
+                      40.588235294117645,
+                      45.88235294117647,
+                      51.17647058823529,
+                      56.470588235294116,
+                      61.76470588235294,
+                      67.05882352941177,
+                      72.35294117647058,
+                      77.64705882352942,
+                      82.94117647058823,
+                      88.23529411764706,
+                      93.52941176470588,
+                      98.82352941176471,
+                      104.11764705882352,
+                      109.41176470588235,
+                      114.70588235294117,
+                      120
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      6,
+                      7.5,
+                      9,
+                      10.5,
+                      12
+                    ],
+                    "units": [
+                      "% (+ 4.5% per 100 AP) of target's maximum health",
+                      "% (+ 4.5% per 100 AP) of target's maximum health",
+                      "% (+ 4.5% per 100 AP) of target's maximum health",
+                      "% (+ 4.5% per 100 AP) of target's maximum health",
+                      "% (+ 4.5% per 100 AP) of target's maximum health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If the Spirit Blade hit at least one enemy champion during the travel, the empowerment is enhanced to deal increased bonus magic damage and additionally grant Shen 50% bonus attack speed.",
+            "leveling": [
+              {
+                "attribute": "Increased Bonus Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      10,
+                      11.764705882352942,
+                      13.529411764705882,
+                      15.294117647058822,
+                      17.058823529411764,
+                      18.823529411764707,
+                      20.588235294117645,
+                      22.352941176470587,
+                      24.11764705882353,
+                      25.88235294117647,
+                      27.647058823529413,
+                      29.41176470588235,
+                      31.176470588235293,
+                      32.94117647058823,
+                      34.705882352941174,
+                      36.470588235294116,
+                      38.23529411764706,
+                      40
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      4,
+                      4.5,
+                      5,
+                      5.5,
+                      6
+                    ],
+                    "units": [
+                      "% (+ 2% per 100 AP) of target's maximum health",
+                      "% (+ 2% per 100 AP) of target's maximum health",
+                      "% (+ 2% per 100 AP) of target's maximum health",
+                      "% (+ 2% per 100 AP) of target's maximum health",
+                      "% (+ 2% per 100 AP) of target's maximum health"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Increased Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      30,
+                      35.294117647058826,
+                      40.588235294117645,
+                      45.88235294117647,
+                      51.17647058823529,
+                      56.470588235294116,
+                      61.76470588235294,
+                      67.05882352941177,
+                      72.35294117647058,
+                      77.64705882352942,
+                      82.94117647058823,
+                      88.23529411764706,
+                      93.52941176470588,
+                      98.82352941176471,
+                      104.11764705882352,
+                      109.41176470588235,
+                      114.70588235294117,
+                      120
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      12,
+                      13.5,
+                      15,
+                      16.5,
+                      18
+                    ],
+                    "units": [
+                      "% (+ 6% per 100 AP) of target's maximum health",
+                      "% (+ 6% per 100 AP) of target's maximum health",
+                      "% (+ 6% per 100 AP) of target's maximum health",
+                      "% (+ 6% per 100 AP) of target's maximum health",
+                      "% (+ 6% per 100 AP) of target's maximum health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Empowered attacks against monsters deal 100% bonus damage, but their total damage is capped.",
+            "leveling": [
+              {
+                "attribute": "Maximum Monster Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      120,
+                      140,
+                      160,
+                      180,
+                      200
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                140,
+                130,
+                120,
+                110,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                8,
+                7.25,
+                6.5,
+                5.75,
+                5
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "ENERGY",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Spell",
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The Spirit Blade will stop in place upon colliding with  Wind Wall or  Unbreakable. If this occurs, Shen will not receive the empowered attacks.\nWhen it is called, the Spirit Blade also checks for units which's  gameplay radius it overlaps which (equal to a  0 radius check) before flying off, allowing it to hit enemies whose center is behind the missile origin.\nThe empowered attack will not trigger against structures nor wards.",
+        "blurb": "Active:  Shen recalls his Spirit Blade to his location, which shortly  slows enemies hit while moving away from him.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "2000 - 5000",
+        "width": "160",
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "Global",
+        "targetRange": null
+      }
+    ],
+    "W": [
+      {
+        "name": "Spirit's Refuge",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Shen primes his Spirit Blade, creating an area around it. After 2 seconds, or when Shen or an allied champion enters the area, the Spirit Blade generates a protective zone for 1.75 seconds, blocking all non- turret basic attacks that hit Shen or allied champions in the area.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                40,
+                40,
+                40,
+                40
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                18,
+                16.5,
+                15,
+                13.5,
+                12
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Allies",
+        "spellshieldable": null,
+        "resource": "ENERGY",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Spirit's Refuge's protective zone can be moved while active if Shen uses  Twilight Assault.\nSpirit's Refuge cannot be ranked up at Level 1.\nSpirit's Refuge will also block damage from all abilities that use  basic damage ( Lunge,  Mystic Shot,  Steel Tempest).",
+        "blurb": "Active:  Shen primes his Spirit Blade, creating an area around it. After a short time, or when Shen or allied champions enter the area, the Spirit Blade briefly erupts a protective zone that  blocks enemy basic attacks that hit Shen or allied champions in the area.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "350",
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Shadow Dash",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/e",
+        "effects": [
+          {
+            "description": "Passive: Dealing damage with Twilight Assault or Shadow Dash restores 30 / 40 / 50 (based on level) energy.",
+            "leveling": []
+          },
+          {
+            "description": "Active: Shen dashes to the target location, dealing physical damage to enemy champions and monsters he passes through and taunting them for 1.5 seconds.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      60,
+                      85,
+                      110,
+                      135,
+                      160
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      15,
+                      15,
+                      15,
+                      15,
+                      15
+                    ],
+                    "units": [
+                      "% bonus health",
+                      "% bonus health",
+                      "% bonus health",
+                      "% bonus health",
+                      "% bonus health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Twilight Assault and Spirit's Refuge can be cast during the dash. Shadow Dash will cast at max range if cast beyond that.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                150,
+                150,
+                150,
+                150,
+                150
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                18,
+                16,
+                14,
+                12,
+                10
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "ENERGY",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Casting  Flash during Shadow Dash will end the dash prematurely, but the end-of-dash collision check will hit enemies at the blink's location still.\nThis still cannot affect the same enemy more than once.\nThe energy restore from Shadow Dash may only occur once.",
+        "blurb": "Passive: Dealing damage with  Twilight Assault or Shadow Dash will restore  energy.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": "50 / 60",
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "800 + 100% movement speed",
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": "600 / 300"
+      }
+    ],
+    "R": [
+      {
+        "name": "Stand United",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Shen focuses his will, channeling for 3 seconds and granting the target allied champion a shield for 5 seconds at the time of cast, increased by 0% − 60% (based on target's missing health).",
+            "leveling": [
+              {
+                "attribute": "Minimum Shield Strength",
+                "modifiers": [
+                  {
+                    "values": [
+                      130,
+                      290,
+                      450
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      135,
+                      135,
+                      135
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      16,
+                      16,
+                      16
+                    ],
+                    "units": [
+                      "% of his bonus health",
+                      "% of his bonus health",
+                      "% of his bonus health"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Shield Strength",
+                "modifiers": [
+                  {
+                    "values": [
+                      208,
+                      464,
+                      720
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      216,
+                      216,
+                      216
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      25.6,
+                      25.6,
+                      25.6
+                    ],
+                    "units": [
+                      "% of his bonus health",
+                      "% of his bonus health",
+                      "% of his bonus health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Upon completing the channel, Shen and his Spirit Blade blink to the target ally's location, placed between them and the nearest enemy champion. Shen also destroys any projectiles targeting him at the time of completion.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                200,
+                180,
+                160
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Unit",
+        "affects": "Allies",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": "Shield",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Due to several character stats needing to be recalculated each time a character spawns, casting Stand United immediately upon respawning will cause its cooldown to be unaffected by ability haste, and the shielding will not be increased by Shen's ability power, but will be increased by his bonus maximum health. (bug)\nStand United can target allies via the mini map or on their portraits or by using the F2 - F5 keys (none of this can be done if Shen is affected by  nearsight or his target is  untargetable).\nShen will turn to face towards his target ally at the start of the channel.\nIf the target is  stealthed, enemies could, in theory, use this to estimate their location.\nShen will channel so long as his target is alive (even if the granted shield is broken). If his target dies, the channel is canceled and Stand United goes on full cooldown.\n Interrupting Stand United's channel will not remove the shield prematurely.\nThe target's screen will glow purple to telegraph that Shen has targeted them with Stand United.\nIt will change back when the channel ends.\nShen finds the nearest visible enemy champion within 2000 range from the ally or the nearest invisible champion within 600 range to place himself 175 units from his ally towards that enemy.\nThe following table refers for interactions while Shen is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Recall  Hexflash  Mark  Dash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects",
+        "blurb": "Active:  Shen  channels for a short time,  shielding the target allied champion for a few seconds. The  shield is based on his bonus health and increases based on the target's missing health.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": "Global"
+      }
+    ]
+  },
+  "releaseDate": "2010-03-24",
+  "releasePatch": "1.0.0.81",
+  "patchLastChanged": "14.6",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 790,
+    "saleRp": 0
+  },
+  "lore": "Among the secretive, Ionian warriors known as the Kinkou, Shen serves as their leader, the Eye of Twilight. He longs to remain free from the confusion of emotion, prejudice, and ego, and walks the unseen path of dispassionate judgment between the spirit realm and the physical world. Tasked with enforcing the equilibrium between them, Shen wields blades of steel and arcane energy against any who would threaten it.",
+  "faction": "ionia",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 98000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 790,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Among the secretive, Ionian warriors known as the Kinkou, Shen serves as their leader, the Eye of Twilight. He longs to remain free from the confusion of emotion, prejudice, and ego, and walks the unseen path of dispassionate judgment between the spirit realm and the physical world. Tasked with enforcing the equilibrium between them, Shen wields blades of steel and arcane energy against any who would threaten it.",
+      "release": "2010-03-24",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/98/98000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/98/98000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/98/98000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/base/shenloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Keith Silverstein"
+      ],
+      "splashArtist": [
+        "Kelly Aleshire",
+        "Alex 'alexplank' Flores"
+      ]
+    },
+    {
+      "name": "Frozen",
+      "id": 98001,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Frozen",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Enduring the bitter cold, Shen roams the ice caps with his twin blades, hunting the terrifying demon hidden deep underneath.",
+      "release": "2010-03-24",
+      "set": [
+        "Glacial"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/98/98001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/98/98001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/98/98001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin01/shenloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Keith Silverstein"
+      ],
+      "splashArtist": [
+        "Xi Zhang"
+      ]
+    },
+    {
+      "name": "Yellow Jacket",
+      "id": 98002,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Yellow Jacket",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": null,
+      "release": "2010-03-24",
+      "set": [
+        "Legacy"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/98/98002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/98/98002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/98/98002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin02/shenloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Keith Silverstein"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Surgeon",
+      "id": 98003,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Surgeon",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [
+        {
+          "name": "Emerald",
+          "id": 98024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98024.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 98023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98023.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 98028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98028.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rainbow",
+          "id": 98030,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98030.png",
+          "colors": [
+            "#C1F2FF",
+            "#C1F2FF"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 98026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98026.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 98027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98027.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sandstone",
+          "id": 98029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98029.png",
+          "colors": [
+            "#DED6B0",
+            "#DED6B0"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 98025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98025.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Rest assured, anesthesia won't be part of the operation.",
+      "release": "2011-01-04",
+      "set": [
+        "Rift Hospital"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/98/98003.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/98/98003.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/98/98003.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin03/shenloadscreen_3.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin03/shenloadscreen_3_le.jpg",
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Keith Silverstein"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "Blood Moon",
+      "id": 98004,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Blood Moon",
+      "lootEligible": true,
+      "cost": 750,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "The most indomitable disciple, in mind and body, Shen's loyalty to the Blood Moon cult can never be shaken. He serves as the personal bodyguard of the group's most important figures, executing interlopers with a cool dispassion, suggesting part of his humanity has already been consumed.",
+      "release": "2011-06-07",
+      "set": [
+        "Blood Moon"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/98/98004.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/98/98004.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/98/98004.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin04/shenloadscreen_4.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Keith Silverstein"
+      ],
+      "splashArtist": [
+        "Viktor Titov",
+        "Grafit Studio"
+      ]
+    },
+    {
+      "name": "Warlord",
+      "id": 98005,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Warlord",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 98009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98009.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 98007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98007.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 98013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98013.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 98008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98008.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 98010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98010.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 98011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98011.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 98012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98012.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 98013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98013.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": null,
+      "release": "2012-04-17",
+      "set": [
+        "Legacy"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/98/98005.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/98/98005.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/98/98005.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin05/shenloadscreen_5.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Keith Silverstein"
+      ],
+      "splashArtist": [
+        "Mist XG"
+      ]
+    },
+    {
+      "name": "TPA",
+      "id": 98006,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "TPA",
+      "lootEligible": true,
+      "cost": 750,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Honoring Stanley's winning performance as Shen during the 2012 World Championship.",
+      "release": "2013-05-23",
+      "set": [
+        "World Champions: 2012"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/98/98006.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/98/98006.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/98/98006.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin06/shenloadscreen_6.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Keith Silverstein"
+      ],
+      "splashArtist": [
+        "Bo Lu"
+      ]
+    },
+    {
+      "name": "Pulsefire",
+      "id": 98015,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Pulsefire",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Chrono",
+          "id": 98031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98031.png",
+          "colors": [
+            "#000000",
+            "#000000"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2020 Pulsefire event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Over the millennia, Shen has been called many names: warlord, trespasser, conqueror. Even so, his mission to build an army for the ages seems never-ending. Seeking only the smartest and the strongest to join his ranks, he remains untroubled by emotion, casting his timeless gaze over those with hidden potential.",
+      "release": "2018-05-17",
+      "set": [
+        "Pulsefire"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/98/98015.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/98/98015.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/98/98015.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin15/shenloadscreen_15.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Keith Silverstein"
+      ],
+      "splashArtist": [
+        "Alex 'alexplank' Flores"
+      ]
+    },
+    {
+      "name": "Infernal",
+      "id": 98016,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Infernal",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 98018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98018.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 98020,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98020.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Peridot",
+          "id": 98021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98021.png",
+          "colors": [
+            "#B6E084",
+            "#B6E084"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 98019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98019.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 98017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98017.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2019.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "An Infernal warrior risen from the raging depths of the underworld, Shen appears on battlefields in the blink of an eye, shielding his fellow titans from even the most well-organized resistance.",
+      "release": "2019-09-05",
+      "set": [
+        "Infernal"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/98/98016.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/98/98016.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/98/98016.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin16/shenloadscreen_16.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Keith Silverstein"
+      ],
+      "splashArtist": [
+        "West Studio"
+      ]
+    },
+    {
+      "name": "PsyOps",
+      "id": 98022,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "PsyOps",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Emerald",
+          "id": 98035,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98035.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Hunter",
+          "id": 98039,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98039.png",
+          "colors": [
+            "#B2D1E4",
+            "#3CABFF"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2020 PsyOps event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 98033,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98033.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 98032,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98032.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sandstone",
+          "id": 98034,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98034.png",
+          "colors": [
+            "#DED6B0",
+            "#DED6B0"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 98038,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98038.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 98036,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98036.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 98037,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98037.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "A psychic soldier and field lieutenant within PsyOps, Shen's power is connected to a phantom child that follows him wherever he goes   granting him insight into the middens between the living and the dead. Where the boy came from only High Command knows, and they aren't talking.",
+      "release": "2020-09-03",
+      "set": [
+        "PsyOps"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/98/98022.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/98/98022.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/98/98022.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin22/shenloadscreen_22.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin22/shenloadscreen_22_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Keith Silverstein"
+      ],
+      "splashArtist": [
+        "Xiao Guang Sun",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Shockblade",
+      "id": 98040,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Shockblade",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 98045,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98045.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Aquamarine",
+          "id": 98044,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98044.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 98042,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98042.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 98043,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98043.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 98047,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98047.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 98046,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98046.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 98041,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98041.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 98048,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98048.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Once half of an elite operative duo for the Shockblade order, Shen stepped away from combat after he made a mistake that nearly cost the life of his partner, Zed. Now Shen mentors young shinobi training to join their ranks : but his new charge may inspire him to take up his sword and join the fight once more.",
+      "release": "2022-02-17",
+      "set": [
+        "Shockblade"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/98/98040.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/98/98040.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/98/98040.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin40/shenloadscreen_40.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Keith Silverstein"
+      ],
+      "splashArtist": [
+        "Félix Donadio",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Ashen Guardian",
+      "id": 98049,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Ashen Guardian",
+      "lootEligible": false,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "125 Mythic Essence",
+      "rarity": "Mythic",
+      "chromas": [
+        {
+          "name": "Emberwoken",
+          "id": 98050,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/98/98050.png",
+          "colors": [
+            "#9D0606",
+            "#2B263F"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 4,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "A devotee of the principles of his now slain leader, Shen still walks the castle grounds, wielding his master's blade alongside his own. Perhaps some small part of him recognizes, with each blow to his armor from travelers seeking ancient riches, that his guard is senseless. But life must have meaning. Even life as endless as this.",
+      "release": "2023-03-23",
+      "set": [
+        "Ashen Knights"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/98/98049.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/98/98049.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/98/98049.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin49/shenloadscreen_49.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin49/shenloadscreen_49_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Keith Silverstein"
+      ],
+      "splashArtist": [
+        "Huyy Nguyen",
+        "West Studio"
+      ]
+    }
+  ]
+}

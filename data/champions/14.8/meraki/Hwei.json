@@ -1,0 +1,2221 @@
+{
+  "id": 910,
+  "key": "Hwei",
+  "name": "Hwei",
+  "title": "the Visionary",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Hwei.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "MAGIC_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 580,
+      "percent": 0,
+      "perLevel": 109,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 5.5,
+      "percent": 0,
+      "perLevel": 0.55,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 480,
+      "percent": 0,
+      "perLevel": 30,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 7.5,
+      "percent": 0,
+      "perLevel": 0.75,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 21,
+      "percent": 0,
+      "perLevel": 4.7,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 54,
+      "percent": 0,
+      "perLevel": 3.3,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 330,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 600,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 135,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.69,
+      "percent": 0,
+      "perLevel": 2.5,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.658,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.28,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.495,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 550,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "ARTILLERY",
+    "MAGE"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 3,
+    "mobility": 1,
+    "utility": 2,
+    "abilityReliance": 90,
+    "difficulty": 3
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Signature of the Visionary",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Hwei's damaging abilities mark enemies hit for 4 seconds. Damaging them with a different ability consumes the mark to create an explosion beneath them, dealing 35 − 180 (based on level) (+ 30% AP) bonus magic damage to enemies in the area after 0.85 seconds.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self, Enemies",
+        "spellshieldable": "true",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "aoe",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Damaging a marked target with the same ability that marked them on a previous cast only refreshes the mark's duration.\nThe mark cannot be triggered from the same cast instance by any means, even if the triggering ability was empowered by  Stirring Lights.\n Spell shield will block both the mark and its consumption as well as the detonation.\nThe indicator for the effect telegraphs an unusually smaller radius than it actually hits.(bug)",
+        "blurb": "Innate:  Hwei's damaging abilities mark enemies hit for a short time. Damaging them with a different ability consumes the mark to create an explosion at their location that deals magic damage in an area.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": "285",
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Subject: Disaster",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Hwei enters a disastrous mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                80,
+                90,
+                100,
+                110,
+                120
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                9,
+                8,
+                7,
+                6
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": null,
+        "spellshieldable": null,
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": null,
+        "blurb": "Active: Hwei enters a disastrous mood, gaining access to its abilities as well as  Wash Brush. He will exit the mood upon casting any of them.\n Devastating Fire (QQ)\n Severing Bolt (QW)\n Molten Fissure (QE)",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Devastating Fire",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active - QQ: Hwei slings a fireball in the target direction that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to all nearby enemies. The damage based on the target's health ratio is capped at 250 against monsters.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      60,
+                      90,
+                      120,
+                      150,
+                      180
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      75,
+                      75,
+                      75,
+                      75,
+                      75
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      4,
+                      5,
+                      6,
+                      7,
+                      8
+                    ],
+                    "units": [
+                      "% of target's maximum health",
+                      "% of target's maximum health",
+                      "% of target's maximum health",
+                      "% of target's maximum health",
+                      "% of target's maximum health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "true",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "This ability will cast from wherever the caster is at the end of the cast time.",
+        "blurb": "Active - QQ:  Hwei slings a fireball in the target direction, dealing magic damage to enemies hit.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "2000",
+        "width": "100",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "200",
+        "targetRange": null
+      },
+      {
+        "name": "Severing Bolt",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active - QW: Hwei calls upon a lightning bolt to strike at the target location after 1 second, dealing magic damage to enemies within the area.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      80,
+                      100,
+                      120,
+                      140,
+                      160
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      25,
+                      25,
+                      25,
+                      25,
+                      25
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If Severing Bolt hits only one enemy or immobilized enemies, it deals increased damage based on the target's missing health. This bonus damage is capped at 300 against monsters.",
+            "leveling": [
+              {
+                "attribute": "Maximum Damage Increase",
+                "modifiers": [
+                  {
+                    "values": [
+                      200,
+                      237.5,
+                      275,
+                      312.5,
+                      350
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      160,
+                      237.5,
+                      330,
+                      437.5,
+                      560
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      59.375,
+                      68.75,
+                      78.125,
+                      87.5
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Severing Bolt deals 50% damage to minions and non-epic monsters.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "true",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Severing Bolt's damage against immobilized or isolated enemies is increased by an amount based on its rank.\nRank 1: 0% − 200%\nRank 2: 0% − 237.5%\nRank 3: 0% − 275%\nRank 4: 0% − 312.5%\nRank 5: 0% − 350%",
+        "blurb": "Active - QW:  Hwei strikes the target area with a lightning bolt, dealing magic damage to enemies within the area. Isolated or  immobilized enemies take  increased damage based on their missing health.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.5",
+        "effectRadius": "225",
+        "targetRange": "1900"
+      },
+      {
+        "name": "Molten Fissure",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active - QE: Hwei marks a blazing path in the target direction. After 0.6 seconds, the path erupts into volcanic explosions every 0.2 seconds from the point of cast. Each explosion creates a shockwave that deals magic damage to nearby enemies.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      20,
+                      40,
+                      60,
+                      80,
+                      100
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      30,
+                      30,
+                      30,
+                      30,
+                      30
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Each explosion also leaves a lava fissure in its wake. A fissure lasts for 2.5 seconds, dealing magic damage every 0.25 seconds to enemies within the area and slowing them by 30%.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage per Tick",
+                "modifiers": [
+                  {
+                    "values": [
+                      5,
+                      10,
+                      15,
+                      20,
+                      25
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      6.25,
+                      6.25,
+                      6.25,
+                      6.25,
+                      6.25
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      50,
+                      100,
+                      150,
+                      200,
+                      250
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      62.5,
+                      62.5,
+                      62.5,
+                      62.5,
+                      62.5
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Total Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      140,
+                      210,
+                      280,
+                      350
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      92.5,
+                      92.5,
+                      92.5,
+                      92.5,
+                      92.5
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Molten Fissure's damage is reduced to 60% against minions and increased to 135% against monsters.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "special",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "special",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Applies  area damage for the explosions and deals  persistent area damage for the lava.\nThe shockwaves can only hit each enemy once.\nEnemies will take damage over time for each lava fissure they are standing in.\n Spell shields block the explosions and they do not block the persistent lava damage.\nThis ability will cast from wherever the caster is at the start of the cast time.",
+        "blurb": "Active - QE:  Hwei marks a blazing path in a direction that erupts after a delay into explosions. Each explosion deals magic damage and leaves behind a volcanic fissure that continually deals magic damage and  slows enemies within.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": "225",
+        "angle": null,
+        "castTime": "0.35",
+        "effectRadius": "225",
+        "targetRange": null
+      }
+    ],
+    "W": [
+      {
+        "name": "Subject: Serenity",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Hwei enters a serene mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                90,
+                95,
+                100,
+                105,
+                110
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                18,
+                17.5,
+                17,
+                16.5,
+                16
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": null,
+        "spellshieldable": null,
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": null,
+        "blurb": "Active: Hwei enters a serene mood, gaining access to its abilities as well as  Wash Brush. He will exit the mood upon casting any of them.\n Fleeting Current (WQ)\n Pool of Reflection (WW)\n Stirring Lights (WE)",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Fleeting Current",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active - WQ: Hwei forms a current of water in the target direction, creating a path for a duration that grants him and allied champions bonus movement speed for 0.5 seconds, refreshing every 0.125 seconds while they remain in the area.",
+            "leveling": [
+              {
+                "attribute": "Path Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      4,
+                      4.5,
+                      5,
+                      5.5,
+                      6
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Bonus Movement Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      20,
+                      22.5,
+                      25,
+                      27.5,
+                      30
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  },
+                  {
+                    "values": [
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "units": [
+                      "% per 100 AP",
+                      "% per 100 AP",
+                      "% per 100 AP",
+                      "% per 100 AP",
+                      "% per 100 AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Direction",
+        "affects": "Self, Allies",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "This ability will cast from wherever the caster is at the start of the cast time.",
+        "blurb": "Active - WQ:  Hwei forms a current of water in the target direction that grants him and allied  champions  bonus movement speed while within it.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": "225",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Pool of Reflection",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active - WW: Hwei summons a pool of water at the target location, creating a protective zone for 3 seconds that grants him and allied champions a shield at the start of the cast time and for 0.5 seconds while within the area. The shield refreshes and increases in strength by an amount every 0.264 seconds over the duration while they remain in the area.",
+            "leveling": [
+              {
+                "attribute": "Initial Shield Strength",
+                "modifiers": [
+                  {
+                    "values": [
+                      50,
+                      62.5,
+                      75,
+                      87.5,
+                      100
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      30,
+                      30,
+                      30,
+                      30,
+                      30
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Bonus Shield per Tick",
+                "modifiers": [
+                  {
+                    "values": [
+                      8.33,
+                      10.42,
+                      12.5,
+                      14.58,
+                      16.67
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      5,
+                      5,
+                      5,
+                      5,
+                      5
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Maximum Shield",
+                "modifiers": [
+                  {
+                    "values": [
+                      100,
+                      125,
+                      150,
+                      175,
+                      200
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      60,
+                      60,
+                      60,
+                      60,
+                      60
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Pool of Reflection's shield strength is reduced to 50% for allies.",
+            "leveling": [
+              {
+                "attribute": "Ally Initial Shield",
+                "modifiers": [
+                  {
+                    "values": [
+                      22.5,
+                      27.5,
+                      32.5,
+                      37.5,
+                      42.5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      15,
+                      15,
+                      15,
+                      15,
+                      15
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Ally Bonus Shield per Tick",
+                "modifiers": [
+                  {
+                    "values": [
+                      3.75,
+                      4.58,
+                      5.42,
+                      6.25,
+                      7.08
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      2.5,
+                      2.5,
+                      2.5,
+                      2.5,
+                      2.5
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Ally Total Maximum Shield",
+                "modifiers": [
+                  {
+                    "values": [
+                      45,
+                      55,
+                      65,
+                      75,
+                      85
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      30,
+                      30,
+                      30,
+                      30,
+                      30
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Location",
+        "affects": "Self, Allies",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The pool is summoned at the start of the cast time.\nThe maximum shield defines the cap for the strength, and it takes approximately 1.5 seconds to gain the full shield.\nThe shield will be regenerated back to its cap if it mitigates damage.\nThe total amount of shield that can be generated given damage mitigated is far greater than this cap.\nThe initial shield amount is inconsistent due to one or two ticks of the bonus shield being granted on-cast.",
+        "blurb": "Active - WW:  Hwei summons a protective water pool at the target location that grants him and allied  champions a  shield for a few seconds that increases in strength if they remain within it.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.3",
+        "effectRadius": "350",
+        "targetRange": "650"
+      },
+      {
+        "name": "Stirring Lights",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active - WE: Hwei surrounds himself in swirling flares that empower his next 3 basic attacks or ability hits within 9 seconds to each deal bonus magic damage and restore mana.",
+            "leveling": [
+              {
+                "attribute": "Bonus Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      25,
+                      35,
+                      45,
+                      55,
+                      65
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      20,
+                      20,
+                      20,
+                      20,
+                      20
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      75,
+                      105,
+                      135,
+                      165,
+                      195
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      60,
+                      60,
+                      60,
+                      60,
+                      60
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Mana Restore",
+                "modifiers": [
+                  {
+                    "values": [
+                      45,
+                      50,
+                      55,
+                      60,
+                      65
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Mana Restore",
+                "modifiers": [
+                  {
+                    "values": [
+                      135,
+                      150,
+                      165,
+                      180,
+                      195
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Stirring Lights' bonus damage is reduced to 50% against minions or monsters if applied by his area of effect abilities.",
+            "leveling": [
+              {
+                "attribute": "Reduced Bonus Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      12.5,
+                      17.5,
+                      22.5,
+                      27.5,
+                      32.5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      10,
+                      10,
+                      10,
+                      10,
+                      10
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Auto",
+        "affects": "Self, Enemies",
+        "spellshieldable": "false",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "proc",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Stirring Lights'  bonus damage to non-champions is reduced if applied by  Devastating Fire,  Severing Bolt,  Molten Fissure,  Crushing Maw, or  Spiraling Despair.\n Spell shield will not block the bonus damage even if it is applied by an ability.(bug)",
+        "blurb": "Active - WE:  Hwei surrounds himself in swirling flares that empower his next 3 basic attacks or abilities to deal bonus magic damage and restore  mana.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Subject: Torment",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Hwei enters a tumultuous mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                50,
+                55,
+                60,
+                65,
+                70
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                12,
+                11.5,
+                11,
+                10.5,
+                10
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": null,
+        "spellshieldable": null,
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": null,
+        "blurb": "Active: Hwei enters a tumultuous mood, gaining access to its abilities as well as  Wash Brush. He will exit the mood upon casting any of them.\n Grim Visage (EQ)\n Gaze of the Abyss (EW)\n Crushing Maw (EE)",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Grim Visage",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active - EQ: Hwei launches a terrifying grin in the target direction that deals magic damage to the first enemy hit, knocks them down, and fears them for a duration, during which they are slowed by 60%.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      110,
+                      150,
+                      190,
+                      230
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      60,
+                      60,
+                      60,
+                      60,
+                      60
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Fear Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      1,
+                      1.125,
+                      1.25,
+                      1.375,
+                      1.5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "true",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spell",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "This ability will cast from wherever the caster is at the end of the cast time.",
+        "blurb": "Active - EQ:  Hwei launches a terrifying grin in the target direction that deals magic damage to the first enemy hit,  knocking them down and  fearing and  slowing them.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1300",
+        "width": "70",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Gaze of the Abyss",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active - EW: Hwei tosses an eyeball to the target location. Upon arrival, it expands over 0.2 seconds into a dark gaze lasting 3 seconds, granting sight in a larger area. After 0.7 seconds of being placed, the eye locks onto the nearest visible enemy champion, launching itself at the target after 0.3 seconds and colliding with the first enemy hit to deal magic damage, reveal them for 2.5 seconds, and root them for a duration.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      110,
+                      150,
+                      190,
+                      230
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      60,
+                      60,
+                      60,
+                      60,
+                      60
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Root Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      1.2,
+                      1.4,
+                      1.6,
+                      1.8,
+                      2
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "true",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spell",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The target that the eye locks onto and launches towards is  revealed during the missile's flight.\nThe lock-on missile's path is indicated by a dashed line\nIts launch range is about as wide as its vision range.\nThis is not to be confused with the eye's border which is the trigger range.",
+        "blurb": "Active - EW:  Hwei tosses an eyeball to the target location that expands into a dark gaze, granting  sight in a larger area and locking onto the nearest visible enemy  champion. The eye then launches itself at the locked-on target, dealing magic damage to the first enemy it collides with and  rooting them.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1700",
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "350 / 600 / 450",
+        "targetRange": "900"
+      },
+      {
+        "name": "Crushing Maw",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active - EE: Hwei conjures a jaw at the target location that snaps after 0.6 seconds, dealing magic damage to enemies in the area and slowing them by an amount that decays over 1.25 seconds. Enemies that are not standing at the center when the jaw snaps are pulled there.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      110,
+                      150,
+                      190,
+                      230
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      60,
+                      60,
+                      60,
+                      60,
+                      60
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      47.5,
+                      55,
+                      62.5,
+                      70
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "true",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Enemies that are pulled will be slowed after the displacement ends.\nThe jaws are made of two rectangles in an angle of each other.",
+        "blurb": "Active - EE:  Hwei summons a jaw at the target location that snaps, dealing magic damage to all enemies in the area and applying a decaying  slow to them. Enemies that are not standing at the center of the jaw when it snaps are  pulled there.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": "340",
+        "angle": null,
+        "castTime": "0.35",
+        "effectRadius": null,
+        "targetRange": "800"
+      }
+    ],
+    "R": [
+      {
+        "name": "Spiraling Despair",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Hwei launches a globule of pure despair in the target direction that collides with the first enemy champion hit, afflicting them with an aura that grows over 3 seconds, reveals the target, and grants sight within its radius. Enemies within are both dealt magic damage and applied a stack of Despair every 0.25 seconds.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage per Tick",
+                "modifiers": [
+                  {
+                    "values": [
+                      2.5,
+                      5,
+                      7.5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      1.25,
+                      1.25,
+                      1.25
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      30,
+                      60,
+                      90
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Despair: For each stack, the target is slowed by 10% for 0.25 seconds, stacking up to 12 times.",
+            "leveling": []
+          },
+          {
+            "description": "At the end of the duration or when the target dies, the aura explodes to deal magic damage to enemies within and remove all Despair stacks from affected enemies.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      200,
+                      300,
+                      400
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      80,
+                      80,
+                      80
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Total Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      230,
+                      360,
+                      490
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      95,
+                      95,
+                      95
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Spiraling Despair can only be cast if Hwei has not entered a mood.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                140,
+                115,
+                80
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "special",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "special",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Applies  persistent area damage for the aura and deals  area damage for the explosion.\n Spell shield can block the aura, explosion, and the application of the first Despair stack.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+        "blurb": "Active:  Hwei launches a globule in the target direction that collides with the first enemy  champion hit, afflicting them with an aura that grows over a few seconds. Enemies within are continually dealt magic damage and gradually  slowed.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1400",
+        "width": "180",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "500",
+        "targetRange": null
+      },
+      {
+        "name": "Wash Brush",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active - QR, WR, ER: Hwei exits his current mood without incurring its ability cost or cooldown.",
+            "leveling": []
+          },
+          {
+            "description": "Wash Brush can only be cast if Hwei has entered a mood.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Auto",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": null,
+        "blurb": "Active:  Hwei exits his current mood without incurring its ability cost or cooldown.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ]
+  },
+  "releaseDate": "2023-12-05",
+  "releasePatch": "13.24",
+  "patchLastChanged": "14.5",
+  "price": {
+    "blueEssence": 6300,
+    "rp": 975,
+    "saleRp": 0
+  },
+  "lore": "Hwei is a brooding painter who creates brilliant art in order to confront Ionia's criminals and comfort their victims. Beneath his melancholy roils a torn, emotional mind—haunted by both the vibrant visions of his imagination and the gruesome memories of his temple's massacre. Hwei seeks to understand this light and dark, which drives him inevitably toward the artist who unraveled him. With paintbrush and palette, Hwei shapes endless possibilities as he draws ever closer to earning closure or embracing despair.",
+  "faction": "ionia",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 910000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Hwei is a brooding painter who creates brilliant art in order to confront Ionia's criminals and comfort their victims. Beneath his melancholy roils a torn, emotional mind—haunted by both the vibrant visions of his imagination and the gruesome memories of his temple's massacre. Hwei seeks to understand this light and dark, which drives him inevitably toward the artist who unraveled him. With paintbrush and palette, Hwei shapes endless possibilities as he draws ever closer to earning closure or embracing despair.",
+      "release": "2023-12-06",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/910/910000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/910/910000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/910/910000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin0/hweiloadscreen_0.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Stephen Fu"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "Winterblessed",
+      "id": 910001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Winterblessed",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 910003,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/910/910003.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 910005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/910/910005.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 910008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/910/910008.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 910009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/910/910009.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 910007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/910/910007.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 910002,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/910/910002.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 910004,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/910/910004.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 910006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/910/910006.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Wreathguard",
+          "id": 910010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/910/910010.png",
+          "colors": [
+            "#BF2020",
+            "#368B25"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2023 Winterblessed event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "The herald of Polaris, Hwei, waited in a despondent mood. When Senna and Hecarim found him among the world of man, a violent blizzard raged overhead. As herald, he used his brush to paint the Aurora across the skies, bringing the first snow. At Hecarim's beckoning, he waved his brush, parting the clouds to reveal a barren sky. Where was the Aurora?",
+      "release": "2023-12-06",
+      "set": [
+        "Winterblessed"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/910/910001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/910/910001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/910/910001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin1/hweiloadscreen_1.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin1/hweiloadscreen_1_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Stephen Fu"
+      ],
+      "splashArtist": [
+        "Horace 'Hozure' Hsu"
+      ]
+    }
+  ]
+}

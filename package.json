@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node server.js",
-    "prettier": "bunx prettier . --write",
+    "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start",
+    "prettier": "bunx prettier . --write"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
@@ -15,6 +15,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "fs": "0.0.1-security",
     "geist": "^1.3.0",
     "input-otp": "^1.2.3",
     "next": "14.1.4",
@@ -23,11 +24,13 @@
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "sharp": "^0.33.3",
+    "shieldbow": "^2.3.1",
     "socket.io": "^4.7.5",
     "socket.io-client": "^4.7.5",
     "sonner": "^1.4.41",
     "tailwind-merge": "^2.2.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -37,6 +40,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
     "postcss": "^8",
+    "tailwind-scrollbar": "^3.1.0",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

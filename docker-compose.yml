@@ -1,0 +1,15 @@
+version: '3'
+services:
+  timeflashlol:
+    container_name: timeflashlol
+    image: timeflashlol:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    ports:
+      - 6444:6444
+
+volumes:
+  timeflashlolproject:
+

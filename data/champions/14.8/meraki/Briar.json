@@ -1,0 +1,1471 @@
+{
+  "id": 233,
+  "key": "Briar",
+  "name": "Briar",
+  "title": "the Restrained Hunger",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Briar.png",
+  "resource": "HEALTH",
+  "attackType": "MELEE",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 590,
+      "percent": 0,
+      "perLevel": 100,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 4.2,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 2.05,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 60,
+      "percent": 0,
+      "perLevel": 3,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 340,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 400,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 111.1111,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 55,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.644,
+      "percent": 0,
+      "perLevel": 2,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.669,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.553,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 125,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1.15,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "ASSASSIN",
+    "DIVER",
+    "FIGHTER"
+  ],
+  "attributeRatings": {
+    "damage": 2,
+    "toughness": 2,
+    "control": 3,
+    "mobility": 3,
+    "utility": 1,
+    "abilityReliance": 10,
+    "difficulty": 2
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Crimson Curse",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Briar's basic attacks and abilities inflict a bleed against enemies for 5 seconds, refreshing on subsequent applications, stacking up to 9 times and dealing 25% damage for stacks beyond the first. The bleed deals[ 10 − 50 (based on level) (+ 50% bonus AD) total physical damage over the duration, increased by 2.5 − 12.5 (based on level) (+ 12.5% bonus AD) for each subsequent stack and up to a maximum of 30 − 150 (based on level) (+ 150% bonus AD). ][ 1 − 5 (based on level) (+ 5% bonus AD) physical damage every 0.5 seconds, increased by 0.25 − 1.25 (based on level) (+ 1.25% bonus AD) for each subsequent stack and up to a maximum of 3 − 15 (based on level) (+ 15% bonus AD) per tick. ]Briar heals herself equal to 25% of the pre-mitigation damage dealt. If a target dies while bleeding, she will heal herself equal to 125% of the remaining bleed damage.",
+            "leveling": []
+          },
+          {
+            "description": "Briar has no base health regeneration, but she increases healing from all sources by 0% − 40% (based on missing health) (+ 0% − 2.5% (based on missing health) per 100 bonus health).",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Enemies, Self",
+        "spellshieldable": "true",
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "default",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Blood Frenzy's area of effect damage around the target does not apply bleed stacks.",
+        "blurb": "Innate:  Briar has no  base health regeneration but she gains increased healing from other sources based on her missing health.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Head Rush",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Briar leaps to the target unit. If the target is an enemy, she deals magic damage, applies on-hit and on-attack effects, stuns them for 0.85 seconds, and reduces their armor and magic resistance for 5 seconds.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      60,
+                      90,
+                      120,
+                      150,
+                      180
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      80,
+                      80,
+                      80,
+                      80,
+                      80
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      60,
+                      60,
+                      60,
+                      60,
+                      60
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Resistances Reduction",
+                "modifiers": [
+                  {
+                    "values": [
+                      10,
+                      12.5,
+                      15,
+                      17.5,
+                      20
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Head Rush resets Briar's basic attack timer.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                6,
+                6,
+                6,
+                6,
+                6
+              ],
+              "units": [
+                "%",
+                "%",
+                "%",
+                "%",
+                "%"
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                13,
+                12,
+                11,
+                10,
+                9
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Unit",
+        "affects": "Enemies, Self",
+        "spellshieldable": "true",
+        "resource": "CURRENT_HEALTH",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spell",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Head Rush can be cast on jungle plants, wards, and traps.\nIt cannot be cast on structures.\nHead Rush's damage benefits from life steal.\nHead Rush is a non-following dash.\nIt picks its dash destination ~100 units in front of enemy targets, 75 units in front enemy targets when already very close to them, 75 units in front of of allied targets.\nIf already within 75 units of her target, she dashes to her current location, which takes 0 time but still triggers dash effects such as  Sudden Impact.\nIt does not force the target's resistance values to update immediately outside of the natural stat update cycle, which means it will typically still be mitigated by the unreduced magic resistance value.",
+        "blurb": "Active:  Briar  leaps to the target unit. If the target is an enemy, she deals physical damage,  stuns them briefly, and additionally  reduces their armor for a few seconds.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": "400"
+      }
+    ],
+    "W": [
+      {
+        "name": "Blood Frenzy",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Briar dashes to the target location. If there is a nearby enemy upon her arrival, she gains Blood Frenzy for 5 seconds, during which she can cast Snack Attack.",
+            "leveling": []
+          },
+          {
+            "description": "Blood Frenzy: Briar breaks free from her pillory, causing her to become forced to basic attack the nearest enemy. She reveals the target and gains ghosting, bonus attack speed and bonus movement speed, as well as empowering her basic attacks to deal physical damage to enemies surrounding her target. This damage is affected by critical strike modifiers.",
+            "leveling": [
+              {
+                "attribute": "Bonus Attack Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      54,
+                      68,
+                      82,
+                      96,
+                      110
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Bonus Movement Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      24,
+                      33,
+                      42,
+                      51,
+                      60
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      60,
+                      70,
+                      80,
+                      90,
+                      100
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Briar prioritizes attacking champions, then large monsters or minions, and then any other unit. If she casts Head Rush on a non-champion, she will shift her target priority to large monsters or minions, then champions, and then any other unit.",
+            "leveling": []
+          },
+          {
+            "description": "Blood Frenzy causes Briar to become unable to receive movement and attack commands. The frenzy ends early if there are no longer any nearby valid targets or Chilling Scream is cast. Blood Frenzy resets Briar's basic attack timer. Head Rush and Certain Death can be cast during the dash.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                6,
+                6,
+                6,
+                6,
+                6
+              ],
+              "units": [
+                "%",
+                "%",
+                "%",
+                "%",
+                "%"
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                14,
+                13,
+                12,
+                11,
+                10
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies, Self",
+        "spellshieldable": null,
+        "resource": "CURRENT_HEALTH",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "default",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Blood Frenzy acquires targets regardless of if they are visible or not.\nThis does not apply to  stealthed targets.\nIf the main attack  critically strikes, the cleave damage will do so as well.\nThe following table refers for interactions while Briar is in her frenzy:\n Disarming crowd control will disable her forced attacks.\n Forced action crowd control will cause her forced attacks to be either overridden or disabled, depending on the actions being forced by the debuff.\n\n\nAttacking\n\nUncontrollable\n\n\nAbilities\n\n Head Rush can only be cast on targets within its radius.  Chilling Scream interrupts the frenzy.  Certain Death can be cast during the frenzy without interrupting it.\n\n\nMovement\n\nUncontrollable\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+        "blurb": "Active:  Briar  dashes and senses her surroundings. If there is a nearby enemy upon her arrival, she gains Blood Frenzy for a few seconds, during which she can cast  Snack Attack.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1200",
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "1000 / 275",
+        "targetRange": "75 - 300 / 650"
+      },
+      {
+        "name": "Snack Attack",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Briar empowers her next basic attack within 5 seconds during Blood Frenzy to take a bite out of the target enemy, having an uncancelable windup, gaining 50 bonus range, dealing bonus physical damage and healing her for 5% of her maximum health plus a percentage of the post-mitigation damage dealt.",
+            "leveling": [
+              {
+                "attribute": "Bonus Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      5,
+                      20,
+                      35,
+                      50,
+                      65
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      5,
+                      5,
+                      5,
+                      5,
+                      5
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      9,
+                      9,
+                      9,
+                      9,
+                      9
+                    ],
+                    "units": [
+                      "% (+ 2.5% per 100 bonus AD) of the target's missing health",
+                      "% (+ 2.5% per 100 bonus AD) of the target's missing health",
+                      "% (+ 2.5% per 100 bonus AD) of the target's missing health",
+                      "% (+ 2.5% per 100 bonus AD) of the target's missing health",
+                      "% (+ 2.5% per 100 bonus AD) of the target's missing health"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Heal Percentage",
+                "modifiers": [
+                  {
+                    "values": [
+                      24,
+                      28,
+                      32,
+                      36,
+                      40
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Snack Attack deals 110% damage against minions and monsters, with the damage based on the target's health ratio being capped at 400.",
+            "leveling": [
+              {
+                "attribute": "Non-Champion Bonus Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      5.5,
+                      22,
+                      38.5,
+                      55,
+                      71.5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      5.5,
+                      5.5,
+                      5.5,
+                      5.5,
+                      5.5
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      9.9,
+                      9.9,
+                      9.9,
+                      9.9,
+                      9.9
+                    ],
+                    "units": [
+                      "% (+ 2.75% per 100 bonus AD) of the target's missing health",
+                      "% (+ 2.75% per 100 bonus AD) of the target's missing health",
+                      "% (+ 2.75% per 100 bonus AD) of the target's missing health",
+                      "% (+ 2.75% per 100 bonus AD) of the target's missing health",
+                      "% (+ 2.75% per 100 bonus AD) of the target's missing health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Snack Attack resets Briar's basic attack timer.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Auto",
+        "affects": "Enemies, Self",
+        "spellshieldable": "false",
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "proc",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Snack Attack can only be used during  Blood Frenzy; if the frenzy ends at any point, the empowered attack will be lost immediately.",
+        "blurb": "Active:  Briar empowers her next attack during  Blood Frenzy to take a bite out of the target enemy. The attack gains increased  range, deals bonus physical damage based on the target's missing health and  heals Briar for a portion of the damage dealt.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Chilling Scream",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Briar charges for up to 1 second, during which she increases Chilling Scream's damage and range, and gains 35% damage reduction and heals herself every 0.25 seconds.",
+            "leveling": [
+              {
+                "attribute": "Heal Per Tick",
+                "modifiers": [
+                  {
+                    "values": [
+                      2.5,
+                      2.875,
+                      3.25,
+                      3.625,
+                      4
+                    ],
+                    "units": [
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Heal",
+                "modifiers": [
+                  {
+                    "values": [
+                      10,
+                      11.5,
+                      13,
+                      14.5,
+                      16
+                    ],
+                    "units": [
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Chilling Scream can be recast within the duration, and does so automatically afterwards. Chilling Scream's charge cannot be interrupted by crowd control.",
+            "leveling": []
+          },
+          {
+            "description": "Recast: Briar unleashes a scream in the target direction that deals magic damage to enemies hit and slows them by 80% for 0.5 seconds.",
+            "leveling": [
+              {
+                "attribute": "Maximum Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      80,
+                      115,
+                      150,
+                      185,
+                      220
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Minimum Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      2,
+                      2.875,
+                      3.75,
+                      4.625,
+                      5.5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      2.5,
+                      2.5,
+                      2.5,
+                      2.5,
+                      2.5
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      2.5,
+                      2.5,
+                      2.5,
+                      2.5,
+                      2.5
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If Chilling Scream was charged for its full duration, enemies hit are also knocked back 575 units. If they collide with terrain, they will rebound to take bonus magic damage and become knocked up for 0.5 seconds and stunned for 1.5 seconds.",
+            "leveling": [
+              {
+                "attribute": "Bonus Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      140,
+                      215,
+                      290,
+                      365,
+                      440
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      240,
+                      240,
+                      240,
+                      240,
+                      240
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      240,
+                      240,
+                      240,
+                      240,
+                      240
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      220,
+                      330,
+                      440,
+                      550,
+                      660
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      340,
+                      340,
+                      340,
+                      340,
+                      340
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      340,
+                      340,
+                      340,
+                      340,
+                      340
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                6,
+                6,
+                6,
+                6,
+                6
+              ],
+              "units": [
+                "%",
+                "%",
+                "%",
+                "%",
+                "%"
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto / Self",
+        "affects": "Enemies, Self",
+        "spellshieldable": "true",
+        "resource": "CURRENT_HEALTH",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Chilling Scream increases its damage by its minimum every 0.025 seconds over the duration.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe following table refers for interactions while Briar is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled, but can still use trinkets\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall\n\n\nInterrupted by\n\n Hexflash (Recasts)\n\n\nInterrupted by\n\nDeath",
+        "blurb": "Active:  Briar  charges to increase Chilling Scream's damage and range, gaining damage reduction and  healing herself. Chilling Scream can be recast within the duration, and does so automatically afterwards. The charge cannot be  interrupted.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1900 / 1800",
+        "width": "380",
+        "angle": null,
+        "castTime": "None / 0.291 (at base attack speed)",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "R": [
+      {
+        "name": "Certain Death",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Briar kicks her pillory's hemolith in the target direction, briefly granting sight of its surroundings as it travels and marking the first enemy champion hit as her prey. The mark's application disrupts the target's ongoing channels. While the target is marked, they are revealed.",
+            "leveling": []
+          },
+          {
+            "description": "If a target is hit, Briar cleanses herself from all crowd control and destroys her pillory over a cast time, afterwards dashing to them with displacement immunity. Upon arrival, she creates an explosion around the marked target that deals magic damage to them and nearby enemies and fears all non-marked targets for 1.5 seconds, during which they are slowed by 35%. She then enters a state of Hematomania.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      150,
+                      250,
+                      350
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      120,
+                      120,
+                      120
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Hematomania: Briar gains all effects of Blood Frenzy as well as bonus armor and bonus magic resistance equal to 20% AD, life steal, and additional bonus movement speed.",
+            "leveling": [
+              {
+                "attribute": "Life Steal",
+                "modifiers": [
+                  {
+                    "values": [
+                      10,
+                      15,
+                      20
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Additional Bonus Movement Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      10,
+                      20,
+                      30
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "While in the empowered frenzy, Briar prioritizes attacking the marked target over all other units and regardless of range. If that target becomes invalid, she will shift back to her normal targeting priority until the marked target can be attacked again. Hematomania lasts until the mark is dispelled by any means, including Briar's or the target's death.",
+            "leveling": []
+          },
+          {
+            "description": "Casting Chilling Scream ends Hematomania early. Head Rush's cast does not shift her targeting priority during Hematomania.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                6,
+                6,
+                6
+              ],
+              "units": [
+                "%",
+                "%",
+                "%"
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                120,
+                100,
+                80
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies, Self",
+        "spellshieldable": "true",
+        "resource": "CURRENT_HEALTH",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Briar will track the target if they change locations.\nBriar lands 100 units in front of her target at the end of the dash.\nBriar will not initiate the second cast if she is being  suppressed or is under  resurrection.\nSince Certain Death cleanses herself from all crowd control when the first cast hits, she will be able to start the second cast due to removing the suppression effect.\nBriar will still dash to the target even if they die before she reaches them.\nBriar gains the displacement immunity upon starting the second cast time.\nBriar will place herself onto the ground and interrupts  displacements affecting her upon starting the second cast time.\nHematomania's targeting priorities differ slightly from that of  Blood Frenzy's:\nShe will prioritize the marked target regardless of range and over all other units as long as it can be attacked.\nIf the marked target is not available, then she shifts her priority to the nearest other champion, then large monster or minion, and then any other unit.\nIf neither the marked target is valid or any other valid targets are close nearby, then she will prioritize targeting the nearest other champion, then large monster or minion, and then any other unit within a global radius.\nStarting the second cast interrupts any spells that Briar is channeling.\nThe mark will expire if Hematomania's buff is dispelled.\nCasting  Blood Frenzy during Hematomania will not grant any additional bonuses nor will it override Hematomania's effects.\nGaining Hematomania while Blood Frenzy is active will override the previous buff.\nThe  disrupt is 'wrapped' into a status effect that says the target is  Silenced for 0.3 seconds, but it does not actually silence. It however makes sure that the disrupt is prevented by  immunity to silences.\nThis ability will cast from wherever the caster is at the start of the cast time.\nThe following table refers for interactions while Briar is in either the first or second cast time:\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection\n\nThe following table refers for interactions while Briar is dashing:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath\n\nThe following table refers for interactions while Briar is in Hematomania:\n\n\nAttacking\n\nUncontrollable\n\n\nAbilities\n\n Head Rush can only be cast on targets within its radius.  Chilling Scream interrupts the frenzy.  Certain Death is disabled.\n\n\nMovement\n\nUncontrollable\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+        "blurb": "Active:  Briar kicks her pillory's hemolith a large distance toward the target direction which marks the first enemy  champion hit and  reveals them.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "2000 / 2500 - 5000",
+        "width": "320",
+        "angle": null,
+        "castTime": "1 / 1.25",
+        "effectRadius": "Global /  1500 /  575",
+        "targetRange": null
+      }
+    ]
+  },
+  "releaseDate": "2023-09-14",
+  "releasePatch": "13.18",
+  "patchLastChanged": "14.7",
+  "price": {
+    "blueEssence": 6300,
+    "rp": 975,
+    "saleRp": 0
+  },
+  "lore": "A failed experiment by the Black Rose, Briar's uncontrollable bloodlust required a special pillory to focus her frenzied mind. After years of confinement, this living weapon broke free from her restraints and unleashed herself into the world. Now she's controlled by no one—following only her hunger for knowledge and blood—and relishes the opportunities to let loose, even if reining back the frenzy isn't easy.",
+  "faction": "noxus",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 233000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "A failed experiment by the Black Rose, Briar's uncontrollable bloodlust required a special pillory to focus her frenzied mind. After years of confinement, this living weapon broke free from her restraints and unleashed herself into the world. Now she's controlled by no one—following only her hunger for knowledge and blood—and relishes the opportunities to let loose, even if reining back the frenzy isn't easy.",
+      "release": "2023-09-13",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/233/233000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/233/233000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/233/233000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/briar/skins/base/briarloadscreen_0.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Julie Nathanson"
+      ],
+      "splashArtist": [
+        "Horace 'Hozure' Hsu"
+      ]
+    },
+    {
+      "name": "Street Demons",
+      "id": 233001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Street Demons",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Emerald",
+          "id": 233003,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/233/233003.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 233008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/233/233008.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 233009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/233/233009.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 233004,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/233/233004.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 233002,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/233/233002.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 233007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/233/233007.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 233005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/233/233005.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 233006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/233/233006.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Whether you see her violently in-your-face tags that inspire audiences to get WILD, or her more relaxed art rife with cheeky humor, Briar's work makes an impression. As a jiangshi, she feeds off of the energy her art creates, so which style she uses really just depends on how hungry Briar is.",
+      "release": "2023-09-13",
+      "set": [
+        "Street Demons"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/233/233001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/233/233001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/233/233001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/briar/skins/skin01/briarloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Julie Nathanson"
+      ],
+      "splashArtist": [
+        "Herbie Wang",
+        "Kudos Productions"
+      ]
+    }
+  ]
+}

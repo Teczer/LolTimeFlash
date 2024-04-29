@@ -1,0 +1,2109 @@
+{
+  "id": 51,
+  "key": "Caitlyn",
+  "name": "Caitlyn",
+  "title": "the Sheriff of Piltover",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Caitlyn.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 580,
+      "percent": 0,
+      "perLevel": 107,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 3.5,
+      "percent": 0,
+      "perLevel": 0.55,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 315,
+      "percent": 0,
+      "perLevel": 40,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 7.4,
+      "percent": 0,
+      "perLevel": 0.7,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 27,
+      "percent": 0,
+      "perLevel": 4.7,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 60,
+      "percent": 0,
+      "perLevel": 3.8,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 325,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 800,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 120,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.681,
+      "percent": 0,
+      "perLevel": 4,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.568000018596649,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.122916668653488,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 650,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "MARKSMAN"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 2,
+    "mobility": 2,
+    "utility": 1,
+    "abilityReliance": 10,
+    "difficulty": 1
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Headshot",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Caitlyn's basic attacks generate a stack of Count on-attack, doubled if she is within brush. At 5 stacks, or 4 while in brush, her next basic attack consumes all stacks on-attack to become a Headshot.",
+            "leveling": []
+          },
+          {
+            "description": "Headshot: Caitlyn's basic attack is empowered to have an uncancellable windup and deal 60 / 90 / 120% (based on level) (+ (148.75% + 42.5%) critical strike chance) AD bonus physical damage, increased to 110 / 115 / 120% (based on level) (+ (148.75% + 42.5%) critical strike chance) AD against non-champions.",
+            "leveling": []
+          },
+          {
+            "description": "Enemies that step over a Yordle Snap Trap or are hit by 90 Caliber Net can grant an additional Headshot against them at 1300 range within 1.8 seconds, without consuming stacks. Each method grants only one Headshot at a time.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self",
+        "spellshieldable": "False",
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Basic",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "If Caitlyn's current target becomes trapped by  Yordle Snap Trap or  90 Caliber Net while her attack is on cooldown, this ongoing cooldown will be refunded partially so that her next attack on them can begin earlier.\nSwapping the target to an enemy trapped by  Yordle Snap Trap or  90 Caliber Net also reduces her ongoing attack cooldown.\n PENDING FOR TEST:: The exact attack cooldown refund appears to be 50% of the attack cooldown at current attack speed, but at a minimum amount it lets Caitlyn start the attack against the trapped target within 0.5 seconds of her previous attack windup completing.\nThe bonus range from  Rapid Firecannon will not have any effect during  trap and  net extended Headshot attacks.\nOnly the ordinary 100% attack damage portion of the attack can critically strike. The bonus from Headshot is added after the critical strike is rolled.\nThe full damage of Headshot applies  life steal.\nHeadshot is a single instance of damage, thus does not trigger  Amumu's  Tantrum's or  Warden's Mail passives twice.\nThe basic attack triggering Headshot can  critically strike, but Headshot's damage remains unchanged if it does.\nSince Caitlyn's Art and Sustainability Update, Ability-granted Headshots are the same as the original Headshot override attack, though what lets them cast at high range is still relatively special. They trigger on-attack effects (including stacking Headshot).\n PENDING FOR TEST:  Runaan's Hurricane's Wind's Fury, is special cased to search targets with the increased range as well.\nBecause Headshot stacks are generated on-attack,  Runaan's Hurricane bolts will not generate stacks towards Headshot.\nThe empowered attack will not trigger against wards.\nStacks will still be generated towards Headshot when attacking them.",
+        "blurb": "Innate:  Caitlyn's basic attacks generate stacks of Count. At maximum stacks, her next basic attack will fire a Headshot dealing bonus physical damage that scales with her  critical strike chance.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "3000",
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Piltover Peacemaker",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Caitlyn fires a piercing shot in the target direction that deals physical damage to the first enemy it passes through, after which it expands in width but deals only 50% damage to enemies it hits thereafter.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      50,
+                      90,
+                      130,
+                      170,
+                      210
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      125,
+                      145,
+                      165,
+                      185,
+                      205
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Reduced Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      25,
+                      45,
+                      65,
+                      85,
+                      105
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      62.5,
+                      72.5,
+                      82.5,
+                      92.5,
+                      102.5
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Enemies revealed by Yordle Snap Trap always take full damage from Piltover Peacemaker.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                55,
+                60,
+                65,
+                70,
+                75
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                9,
+                8,
+                7,
+                6
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Enemies hit while protected by a  spell shield will still be considered a target for calculating damage for subsequent hits.\nThis ability will cast from wherever the caster is at the start of the cast time.",
+        "blurb": "Active:  Caitlyn revs up her rifle to unleash a penetrating shot that deals physical damage to enemies hit.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "2200",
+        "width": "120 / 180",
+        "angle": null,
+        "castTime": "0.625",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "W": [
+      {
+        "name": "Yordle Snap Trap",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Caitlyn sets a visible trap at the target location that is untargetable and arms after 1 second, lasting for a duration. The trap grants sight of the area for 1 second after being placed.",
+            "leveling": [
+              {
+                "attribute": "Trap Duration",
+                "modifiers": [
+                  {
+                    "values": [
+                      30,
+                      35,
+                      40,
+                      45,
+                      50
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Caitlyn periodically stocks a Yordle Snap Trap charge, up to a maximum amount. Deploying traps beyond the maximum destroys the oldest one.",
+            "leveling": [
+              {
+                "attribute": "Maximum Traps",
+                "modifiers": [
+                  {
+                    "values": [
+                      3,
+                      3,
+                      4,
+                      4,
+                      5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "The next enemy champion that springs the trap is rooted for 1.5 seconds and revealed for 3 seconds, as well as takes additional damage from the Headshot granted by this ability. Trapped targets become immune to further Yordle Snap Traps for 3 seconds.",
+            "leveling": [
+              {
+                "attribute": "Headshot Damage Increase",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      85,
+                      130,
+                      175,
+                      220
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      50,
+                      60,
+                      70,
+                      80
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                20,
+                20,
+                20,
+                20,
+                20
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Immunity vs  Airborne moveblocks and  Kinematics?:\nIf multiple traps are placed under an enemy, they will spring all at once.",
+        "blurb": "Active:  Caitlyn sets a trap at the target location that lasts for a while. The trap springs when an enemy champion steps on it,  revealing and  rooting them.",
+        "missileSpeed": null,
+        "rechargeRate": [
+          30,
+          24,
+          19,
+          15,
+          12
+        ],
+        "collisionRadius": "15",
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": "800"
+      }
+    ],
+    "E": [
+      {
+        "name": "90 Caliber Net",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Caitlyn fires a net in the target direction and recoils 390 units in the opposite direction. The net deals magic damage to the first enemy hit and slows them by 50% for 1 second.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      80,
+                      130,
+                      180,
+                      230,
+                      280
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      80,
+                      80,
+                      80,
+                      80,
+                      80
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Caitlyn will not dash backwards if she is immobilized or grounded during the cast time. She can cast any of her abilities during the dash.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                75,
+                75,
+                75,
+                75,
+                75
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                16,
+                14,
+                12,
+                10,
+                8
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Self, Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Single target",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nThe recoil can be used to pass through terrain.\nIf Caitlyn buffers  Piltover Peacemaker during 90 Caliber Net's cast time,  Piltover Peacemaker will start after the cast time.\nIf Caitlyn buffers an ability or basic attack during this ability's cast time, the buffered ability or basic attack will instead start after the dash ends.\nOther abilities can be cast while  dashing if they are input after the cast time.\n90 Caliber Net's missile will fail to fire if Caitlyn is  suppressed during the cast time.(bug)",
+        "blurb": "Active:  Caitlyn fires a heavy net that  slows the first target hit and deals magic damage to them.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1600",
+        "width": null,
+        "angle": null,
+        "castTime": "0.15",
+        "effectRadius": "140",
+        "targetRange": null
+      }
+    ],
+    "R": [
+      {
+        "name": "Ace in the Hole",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Caitlyn locks onto the target enemy champion and channels for 1 second, revealing them as well as revealing herself.",
+            "leveling": []
+          },
+          {
+            "description": "Ace in the Hole is placed on a 5-second cooldown if canceled.",
+            "leveling": []
+          },
+          {
+            "description": "Once Caitlyn completes the channel, she fires a homing bullet toward the target that deals physical damage to the first enemy champion it hits, increased by 0% − 50% (based on critical strike chance).",
+            "leveling": [
+              {
+                "attribute": "Physical damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      300,
+                      500,
+                      700
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      170,
+                      170,
+                      170
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                90,
+                90,
+                90
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Unit",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spell",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The following will cancel Ace in the Hole's channel (mana expenditure is not compensated):\nCaitlyn is  interrupted.\nThe target becomes  untargetable.\nCaitlyn or her target  dies.\nAce in the Hole reveals the target and Caitlyn through a buff that lasts for up to 4 seconds.\nThe buff is applied to the target from the start of the cast time.\nThe buff ends prematurely when the channel is canceled or the bullet hits an enemy.\nThe target is revealed for 1 second if the buff is ended prematurely.\nIt is not removed if the cast time is cancelled or the bullet missile is destroyed.(bug)\nThe ability also goes on a 5-second  cooldown if Caitlyn enters  resurrection during the cast time.\nThe cast time does not end prematurely but the channel will be immediately canceled the moment the cast time completes.\nIf the target dies after the bullet has been fired, the shot will continue towards their corpse and may still hit other enemy champions.\nThe bullet has a  sight radius of 1500 attached to it.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nThis excludes losing sight of the target.\nThe following table refers for interactions while Caitlyn is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+        "blurb": "Active:  Caitlyn targets an enemy champion and takes time to line up the perfect shot, dealing massive physical damage to them at a huge range.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "3200",
+        "width": "80",
+        "angle": null,
+        "castTime": "0.375",
+        "effectRadius": null,
+        "targetRange": "3500"
+      }
+    ]
+  },
+  "releaseDate": "2011-01-04",
+  "releasePatch": "1.0.0.108",
+  "patchLastChanged": "14.7",
+  "price": {
+    "blueEssence": 450,
+    "rp": 260,
+    "saleRp": 0
+  },
+  "lore": "Renowned as its finest peacekeeper, Caitlyn is also Piltover's best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner's more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn's most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any lawbreakers foolish enough to operate in the City of Progress.",
+  "faction": "piltover",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 51000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 880,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [
+        {
+          "name": "Blue",
+          "id": 51009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51009.png",
+          "colors": [
+            "#426FC9",
+            "#A2A8AB"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Green",
+          "id": 51008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51008.png",
+          "colors": [
+            "#2E8B82",
+            "#F7E17F"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pink",
+          "id": 51007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51007.png",
+          "colors": [
+            "#DA769A",
+            "#F4E3D5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Renowned as its finest peacekeeper, Caitlyn is also Piltover’s best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner’s more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn’s most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any lawbreakers foolish enough to operate in the City of Progress.",
+      "release": "2011-01-04",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/base/caitlynloadscreen_0.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Jason Chan"
+      ]
+    },
+    {
+      "name": "Resistance",
+      "id": 51001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Resistance",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Caitlyn has never forgiven herself for letting Viktor's rise to power go unchecked for so long. Determined to fire the shot that ends the war for good, she has personally gunned down hundreds of Battlecast machines in her bloody search for absolution.",
+      "release": "2011-01-04",
+      "set": [
+        "Battlecast"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin01/caitlynloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Forrest Imel",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Sheriff",
+      "id": 51002,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Sheriff",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "The Old West lies far outside the government's jurisdiction, leaving local peacekeepers to enforce whatever passes for justice on the high frontier. As lone sheriff of the town of Progress, Caitlyn has found that the arm of the law is roughly as long as the range of her rifle.",
+      "release": "2011-01-04",
+      "set": [
+        "High Noon"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin02/caitlynloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Huyy Nguyen",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Safari",
+      "id": 51003,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Safari",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "When she isn't attending galas or teaching seminars, Dr. Caitlyn Kiramman can be found exploring ancient ruins in search of historical artifacts. Armed with her trusty rifle, a wealth of esoteric knowledge, and an accident-prone Ezreal, she braves the most mysterious places in the world to bring long-dead civilizations and their secrets into the light.",
+      "release": "2011-05-10",
+      "set": [
+        "Legacy"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51003.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51003.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51003.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin03/caitlynloadscreen_3.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Jiunn Kuo",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Officer",
+      "id": 51005,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Officer",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Most people assume that Caitlyn is the \"good cop\" between her and Vi. What they don't know is that her sharp eyes, quick wit, and dedication make her one of the toughest officers on the force. She doesn't mind being underestimated, especially if it gives her the upper hand.",
+      "release": "2011-10-05",
+      "set": [
+        "Cops and Robbers"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51005.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51005.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51005.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin05/caitlynloadscreen_5.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Edward Chee",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Arctic Warfare",
+      "id": 51004,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Arctic Warfare",
+      "lootEligible": true,
+      "cost": 750,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Very few snipers can cut it on the Arctic front. The cold is unforgiving, the winds are harsh, and any who dare brave the tundra find themselves at the mercy of Caitlyn, a sniper with deadly aim and a killer instinct.",
+      "release": "2011-12-29",
+      "set": [
+        "Arctic Ops"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51004.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51004.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51004.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin04/caitlynloadscreen_4.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Félix Donadio",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Headhunter",
+      "id": 51006,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Headhunter",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Caitlyn's arsenal of alien weaponry isn't meant to level the playing field. It's to ensure that every hunt, every target, and every shot she takes goes exactly the way she wants it to.",
+      "release": "2014-09-03",
+      "set": [
+        "Headhunter"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51006.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51006.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51006.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin06/caitlynloadscreen_6.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Michelle Hoefener"
+      ]
+    },
+    {
+      "name": "Lunar Wraith",
+      "id": 51010,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Lunar Wraith",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Golden",
+          "id": 51012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51012.png",
+          "colors": [
+            "#FFC948",
+            "#FFC948"
+          ],
+          "descriptions": [
+            {
+              "description": "Loot exclusive gained from the 2018 Lunar Revel missions.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "A malignant spirit said to appear during Lunar Revel, Caitlyn is known to meddle in the affairs of gods and mortals alike. Her attention has been catastrophic to all who draw it, and even seeing her is considered an ill omen.",
+      "release": "2016-01-27",
+      "set": [
+        "Lunar Revel"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51010.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51010.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51010.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin10/caitlynloadscreen_10.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Pulsefire",
+      "id": 51011,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Pulsefire",
+      "lootEligible": true,
+      "cost": 1820,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Legendary",
+      "chromas": [
+        {
+          "name": "Chrono",
+          "id": 51021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51021.png",
+          "colors": [
+            "#162D57",
+            "#A50031"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2020 Pulsefire event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "A legendary chrono-law enforcer feared in every age, Caitlyn's mission is to protect the fragile enigma that is time. Those who dare threaten its integrity inevitably find themselves firmly locked in the sights of her temporal plasma blaster.",
+      "release": "2017-05-24",
+      "set": [
+        "Pulsefire"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51011.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51011.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51011.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin11/caitlynloadscreen_11.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Pan Chengwei"
+      ]
+    },
+    {
+      "name": "Pool Party",
+      "id": 51013,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Pool Party",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Aquamarine",
+          "id": 51018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51018.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 51016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51016.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 51017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51017.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 51015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51015.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 51014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51014.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "For Caitlyn, nothing says a perfect summer's day like lounging at a luxurious poolside, eating shaved ice and drinking tropical libations. And shooting people. She really loves shooting people.",
+      "release": "2018-08-02",
+      "set": [
+        "Pool Party"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51013.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51013.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51013.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin13/caitlynloadscreen_13.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "Arcade",
+      "id": 51019,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Arcade",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [],
+      "lore": "Acclaimed hero of the “Sniper Cop” rail shooter series, Caitlyn enforced the laws of Arcadia prior to the Battle Boss uprising. She brings her sharp eye and eager trigger finger to the fight to save her world, only stopping long enough to flick her gun off-screen for a reload.",
+      "release": "2019-06-28",
+      "set": [
+        "Arcade: Heroes"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51019.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51019.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51019.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin19/caitlynloadscreen_19.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin19/caitlynloadscreen_19_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Jeremy 'Jermu' Anninos"
+      ]
+    },
+    {
+      "name": "Prestige Arcade",
+      "id": 51020,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Prestige Arcade",
+      "lootEligible": true,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "200 Mythic Essence",
+      "rarity": "Mythic",
+      "chromas": [],
+      "lore": "Appearing most recently in “Sniper Cop 7” as a golden-clad secret character, Caitlyn's popularity has finally transcended games as a medium.",
+      "release": "2019-06-28",
+      "set": [
+        "Arcade: Heroes"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51020.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51020.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51020.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin20/caitlynloadscreen_20_le.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Malex Zhang",
+        "Kudos Productions"
+      ]
+    },
+    {
+      "name": "Battle Academia",
+      "id": 51022,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Battle Academia",
+      "lootEligible": true,
+      "cost": 1820,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Legendary",
+      "chromas": [
+        {
+          "name": "Obsidian",
+          "id": 51026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51026.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 51027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51027.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 51025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51025.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 51023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51023.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 51024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51024.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "A feared and respected second year, head of the Luminary Club, and class president of Labrys God-Weapon Academy. Caitlyn enrolled herself in the famously troubled school specifically to whip the delinquents there into prime fighting shape, hoping to one day become the greatest battlefield general in history. With her perfect record, she's not too far off.",
+      "release": "2021-03-18",
+      "set": [
+        "Battle Academia"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51022.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51022.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51022.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin22/caitlynloadscreen_22.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin22/caitlynloadscreen_22_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Viktoria Gavrilenko",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Arcane",
+      "id": 51028,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Arcane",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Rare",
+      "chromas": [],
+      "lore": "Celebrating the RiotX Arcane event.",
+      "release": "2021-11-22",
+      "set": [
+        "Arcane"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51028.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51028.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51028.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin28/caitlynloadscreen_28.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Francis Tneh",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Prestige Arcade (2022)",
+      "id": 51029,
+      "isBase": false,
+      "availability": "Limited",
+      "formatName": "Prestige Arcade Caitlyn (2022)",
+      "lootEligible": false,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "Given to players who owned the original skin prior to patch 12.5",
+      "rarity": "Mythic",
+      "chromas": [],
+      "lore": "Appearing most recently in “Sniper Cop 7” as a golden-clad secret character, Caitlyn's popularity has finally transcended games as a medium.",
+      "release": "2022-04-01",
+      "set": [
+        "Arcade: Heroes"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51029.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51029.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51029.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin29/caitlynloadscreen_29.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Malex Zhang",
+        "Kudos Productions"
+      ]
+    },
+    {
+      "name": "Snow Moon",
+      "id": 51030,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Snow Moon",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 51033,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51033.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 51035,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51035.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 51038,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51038.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 51036,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51036.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 51031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51031.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 51032,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51032.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 51034,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51034.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 51037,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51037.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "A tool of chilling acuity, Caitlyn is the Snow Moon's most elite sniper. It was her craving for a calculating nature, stripped of the moorings of sympathy, that drew her to serve. There was once warmth in her heart; in dreams, she sees a figure, wild and untamed, in a world not meant for her.",
+      "release": "2022-06-23",
+      "set": [
+        "Snow Moon"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51030.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51030.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51030.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin30/caitlynloadscreen_30.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Alex 'alexplank' Flores"
+      ]
+    },
+    {
+      "name": "Heartthrob",
+      "id": 51039,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Heartthrob",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 51046,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51046.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 51047,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51047.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Peridot",
+          "id": 51044,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51044.png",
+          "colors": [
+            "#B6E084",
+            "#B6E084"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 51043,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51043.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 51040,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51040.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            },
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sandstone",
+          "id": 51045,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51045.png",
+          "colors": [
+            "#DED6B0",
+            "#DED6B0"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 51042,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51042.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 51041,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51041.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        }
+      ],
+      "lore": "I hate the way you walk around, like you're Princess Caitlyn of the mall, and I'm just some gutter rat. I hate the way you look at me when there's no one else around, but wouldn't be caught dead with me in town. Maybe our whole thing was just a huge mistake. So if you want me to go, I'm gone. But ask, and I will stay. -Vi",
+      "release": "2023-02-10",
+      "set": [
+        "Heartthrobs and Heartaches"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51039.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51039.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51039.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin39/caitlynloadscreen_39.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Francis Tneh",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "DRX",
+      "id": 51048,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "DRX",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Elite",
+          "id": 51049,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/51/51049.png",
+          "colors": [
+            "#E4E489",
+            "#195FC8"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive during DRX World Championship showcase.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            },
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Honoring Deft's winning performance as Caitlyn during the 2022 World Championship.",
+      "release": "2023-06-01",
+      "set": [
+        "World Champions: 2022"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/51/51048.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/51/51048.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/51/51048.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin48/caitlynloadscreen_48.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin48/caitlynloadscreen_48_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Kirsten Potter"
+      ],
+      "splashArtist": [
+        "Horace 'Hozure' Hsu"
+      ]
+    }
+  ]
+}

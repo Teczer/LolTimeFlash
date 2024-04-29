@@ -1,0 +1,1980 @@
+{
+  "id": 82,
+  "key": "Mordekaiser",
+  "name": "Mordekaiser",
+  "title": "the Iron Revenant",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Mordekaiser.png",
+  "resource": "SHIELD",
+  "attackType": "MELEE",
+  "adaptiveType": "MAGIC_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 645,
+      "percent": 0,
+      "perLevel": 104,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 5,
+      "percent": 0,
+      "perLevel": 0.75,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 37,
+      "percent": 0,
+      "perLevel": 4.2,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 2.05,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 61,
+      "percent": 0,
+      "perLevel": 4,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 335,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 400,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 125,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 80,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 1,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.5,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 2.36599993705749,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.100000001490116,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 0.85,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "FIGHTER",
+    "JUGGERNAUT"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 2,
+    "control": 1,
+    "mobility": 1,
+    "utility": 2,
+    "abilityReliance": 80,
+    "difficulty": 2
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Darkness Rise",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Mordekaiser's basic attacks are empowered to deal 40% AP bonus magic damage on-hit.",
+            "leveling": []
+          },
+          {
+            "description": "Morderkaiser generates a stack for each enemy champion or large monster hit by his damaging basic attacks or basic abilities, lasting for 4 seconds, refreshing on subsequent hits, and stacking up to 3 times. At 3 stacks, he gains Darkness Rise.",
+            "leveling": []
+          },
+          {
+            "description": "Darkness Rise: Mordekaiser gains 3 / 6 / 9% (based on level) bonus movement speed and deals[ 5 − 15.2 (based on level) (+ 30% AP) (+ 1% − 5% (based on level) of target's maximum health) magic damage every second ][ 0.63 − 1.9 (based on level) (+ 3.75% AP) (+ 0.13% − 0.63% (based on level) of target's maximum health) magic damage every 0.125 seconds ]to nearby enemies. Against monsters, the damage is capped at[ 28 − 164 (based on level) per second. ][ 3.5 − 20.5 (based on level) per 0.125 seconds. ]",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self / Enemies",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "aoedot",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Mordekaiser has a stack counter under his health-bar that is not visible to other champions.\nDarkness Rise's damage doesn't refresh Darkness Rise's buff.",
+        "blurb": "Innate:  Mordekaiser's basic attacks deal bonus magic damage.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": "375",
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Obliterate",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Mordekaiser strikes his mace down in a line in the target direction, dealing magic damage to enemies within, increased if only one enemy is hit.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      5,
+                      12.882352941176471,
+                      20.764705882352942,
+                      28.647058823529413,
+                      36.529411764705884,
+                      44.411764705882355,
+                      52.294117647058826,
+                      60.1764705882353,
+                      68.05882352941177,
+                      75.94117647058823,
+                      83.82352941176471,
+                      91.70588235294119,
+                      99.58823529411765,
+                      107.47058823529412,
+                      115.3529411764706,
+                      123.23529411764707,
+                      131.11764705882354,
+                      139
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      75,
+                      95,
+                      115,
+                      135,
+                      155
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      70,
+                      70,
+                      70,
+                      70,
+                      70
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Damage Increase",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      45,
+                      50,
+                      55,
+                      60
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                9,
+                7.75,
+                6.5,
+                5.25,
+                4
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "special",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Applies  spell damage if it hits one target and  area damage to multiple targets.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+        "blurb": "Active:  Mordekaiser smashes the area in the target direction, dealing magic damage to enemies within,  increased if it hits only one enemy.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": "160",
+        "angle": null,
+        "castTime": "0.5",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "W": [
+      {
+        "name": "Indestructible",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/w",
+        "effects": [
+          {
+            "description": "Passive: Mordekaiser stores 45% of the post-mitigation damage he deals and 7.5% of the pre-mitigation damage he takes,[ reduced by 75% for non-champion sources, ][ reduced to 11.25% of damage dealt and 3.75% of damage taken for non-champion sources, ]as Potential Shield on his secondary resource bar, up to 30% of his maximum health. The Potential Shield decays by 8 − 25 (based on level) every second after not dealing or taking damage for 1 second. While Indestructible is not on cooldown, the Potential Shield will not decay below a minimum of 5% of his maximum health, and it will be set to that amount when it comes off cooldown if it was previously below it.",
+            "leveling": []
+          },
+          {
+            "description": "Active: Mordekaiser consumes his Potential Shield to grant himself a shield for the same amount for 4 seconds. The shield decays exponentially over the duration. Indestructible can be recast after 0.5 seconds while the shield is active.",
+            "leveling": []
+          },
+          {
+            "description": "Recast: Mordekaiser consumes the remaining shield, healing for a portion of the amount.",
+            "leveling": [
+              {
+                "attribute": "Shield to Healing",
+                "modifiers": [
+                  {
+                    "values": [
+                      35,
+                      37.5,
+                      40,
+                      42.5,
+                      45
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                12,
+                11,
+                10,
+                9,
+                8
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.",
+        "blurb": "Passive:  Mordekaiser stores a portion of the damage he deals and receives as Potential Shield, up to a portion of his maximum health. This begins to decay after a brief time without fighting.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Death's Grasp",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/e",
+        "effects": [
+          {
+            "description": "Passive: Mordekaiser gains magic penetration.",
+            "leveling": [
+              {
+                "attribute": "Magic Penetration",
+                "modifiers": [
+                  {
+                    "values": [
+                      5,
+                      7.5,
+                      10,
+                      12.5,
+                      15
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Active: Mordekaiser summons a claw in the target direction that grants sight of the area. After 0.5 seconds, it deals magic damage to enemies within and pulls them 250 units.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      80,
+                      95,
+                      110,
+                      125,
+                      140
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      60,
+                      60,
+                      60,
+                      60,
+                      60
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                18,
+                16,
+                14,
+                12,
+                10
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Self, Enemies",
+        "spellshieldable": "True",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "aoe",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Death's Grasp will still  pull even if Mordekaiser  dies.\nThis ability will cast from wherever the caster is at the start of the cast time.",
+        "blurb": "Passive:  Mordekaiser gains  magic penetration.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "3000",
+        "width": "200",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": "700 / 900"
+      }
+    ],
+    "R": [
+      {
+        "name": "Realm of Death",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Mordekaiser aims his mace towards the target enemy champion, slowing them by 75% and revealing them over the cast time, and then banishing them with him to the Death Realm for 7 seconds. Mordekaiser also consumes the target's soul for 7 seconds, healing himself for 10% of their maximum health and reducing their current attack damage, ability power, total attack speed, maximum health, armor, magic resist, and size by 10%, in addition to gaining them for himself. If the target dies while inside the Death Realm, Mordekaiser keeps their partial stats until they respawn.",
+            "leveling": []
+          },
+          {
+            "description": "Units between realms see each other as spirits, considering each other dead and negating any interactions between each other. Only Mordekaiser and the target will enter the realm; other champions cannot follow them. Everything that occurs inside the Death Realm is hidden to units outside of it, and vice versa. All pets still inside the realm are killed at its end.",
+            "leveling": []
+          },
+          {
+            "description": "If one of the two affected champions leave the Death Realm, because of having died or having it dispelled, the other will do so as well.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                140,
+                120,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Unit",
+        "affects": "Enemies",
+        "spellshieldable": "special",
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Mordekaiser's Realm of Death. Champions outside of the death realm are seen as spirits. Blue spirits are allied champions while red spirits are enemy champions.  \n     Ally spirit  \n     Enemy spirit  \nThe Realm of Death is a battlefield that exists outside of the normal realm in an alternate \"dimension\". It exists only for Mordekaiser and his target. It consists of an arena that has a radius of 1200 units and includes any terrain features that would exist in the map of the normal realm, including walls and  brushes.\nThe boundaries of the arena are impassable but not considered terrain themselves ( Unstoppable Onslaught exception), and enemies that try to move out of the area will be displaced back inside.\n Dashes,  blinks,  displacements and other forms of movement will cap their effect range to the boundary. Targets will stop at the boundary even after it expired.\nRealm of Death retains Mordekaiser's previous current health percentage when granting him a portion of the target's maximum health.\nRealm of Death will cancel and go on cooldown after its cast time if:\nThe target is  displacement immune,  crowd control immune or protected by a  spell shield.\nThe target is a  clone or  Sion's  Glory in Death.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nRealm of Death can be dispelled if:\nThe target uses a  cleansing effect, with the exceptions of  Cleanse,  Mikael's Blessing, and  Kled's  Dismount.\n Soul Unbound's recast is disabled while in the Realm of Death, but will cleanse it if somehow cast.\nMordekaiser or the target cast another Realm of Death. The affected champions will remain stuck for the duration of the new circle.\n Spell shield will not block the initial  slow.\nThe reveal effect lasts for 1.25 seconds from the start of the cast time if the cast does not complete. Otherwise, the reveal ends as soon as the cast time completes.\nIf the target's  health is lower than the amount that should be stolen, they will be brought down to 1 health. Mordekaiser will still get the usual amount of maximum health.\nEntering or leaving the Death Realm will cause all targeted  projectiles to be  destroyed.\nThe transition in and out of the Death Realm doesn't interrupt  channels.\n Grand Starfall will always be interrupted from the transition into the realm.\nRealm of Death will not be dispelled if either of the two affected champions enter  resurrection after taking lethal damage. It is dispelled if the target enters a  zombie state.\nAny active  tether effects (both friendly and hostile ones) existing on either of the two champions entering the realm will be broken (unless the tether is between those two).\nUpon entering the realm, Mordekaiser and the target are  cleansed from all  forced action effects\nThe cleanse will occur even if the source enters the realm.(bug)\nUnlike the other stats, Mordekaiser does not steal enemy total size; instead he gains 10% of his own size and reduces the enemy's size by 10% of theirs (all size modifiers stack additively).\nMordekaiser grows in size over 0.25 seconds after successfully stealing his targets' stats, and shrinks over 0.25 seconds after the buff runs out again. The target shrinks over 0.25 seconds after their stats are stolen, but grows back to normal size instantly when the effect ends.\nRealm of Death's interactions with other elements/abilities (list is incomplete):\nMultiple Death Realms (possible through a  hijacked Realm of Death or if multiple Mordekaisers are in the same match) spawned will exist in the same dimension, allowing champions to see and interact with champions bound to other circles. Champions are only affected by their boundaries and are not able to see the others.\n Tahm Kench's  Devour can carry a target outside of their circle, but they will be displaced back inside once  Regurgitated.\nAn active  Cease and Desist on a target outside the perimeter will cause  Vi to continue her charge until her circle ends. She can knock back and damage secondary targets multiple times.\nStructures exist in all realms at the same time.  Turrets will behave normally as if all units were in the same realm.\nHex-gates on  Hextech Rift will not be present between realms.\n Brushes will maintain their presence between realms.\nSwitching realms detaches all  attached champions on either of the two champions entering the realm.\n Kayn's  Umbral Trespass will cause him to detach immediately when Realm of Death ends.\nThe allied health, resource, and ultimate indicators (champion portraits located on the screen) will not update between realms as the players have no  vision of them.\n Camille's  The Hextech Ultimatum, catching  Draven's  Spinning Axe,  Ekko's  Timewinder and  Parallel Convergence,  Malzahar's  Null Zone,  Maokai's  Twisted Advance,  Lulu's  Pix,  Pyke's  Death from Below,  Taliyah's  Worked Grounds,  Viktor's  Gravity Field,  Ziggs'  Satchel Charge, and  Rift Scuttler's  Speed Shrine are exceptions and may still take effect between dimensions if the conditions are valid.\nEffects such as  Requiem,  Absolute Zero,  Grand Starfall and  Final Spark will only deal damage to enemies of the dimension they're in at time of cast. Ending the channel or cast time while inside another dimension will not do damage to nearby enemies.\nAny spawned terrain while in the Death Realm will remain inside until expired. They will not be destroyed.\n Akali's  Shuriken Flip can be recast even if the target is in another realm.\n Kindred's  Lamb's Respite is one of many area of effect abilities that will not take presence between realms.\n Malzahar's  Void Shift dispels from the initial cast's  slow, thus not being able to resist the Realm of Death with its crowd control immunity.(bug)\n Nocturne's  Paranoia only applies  nearsight to enemy champions in the same dimension as him.\n Orianna's  Ball will snap back to her the moment she switches realms.\nIf Mordekaiser uses Realm of Death on  Sion while charging  Decimating Smash,  Sion will continue charging in the realm, however  Decimating Smash will not deal any damage.\nThe target of  Devour will immediately leave  Tahm Kench's belly when he enters or leaves the Realm of Death.\n Taliyah's  Weaver's Wall is interrupted both for if she enters or leaves the Realm of Death.\n Urgot's  Fear Beyond Death cannot be recast while the target is in a different dimension than him. If the target is being reeled in however, then the execution at the end of the channel will take place regardless of the dimension either he or the target is in.\nThe fear upon a successful execution will occur in  Urgot's realm.\n Viego's  Mist Wraiths will spawn between realms.  Harrowed Path will also take presence between realms.\n Xayah's  Bladecaller cannot call  Feathers between dimensions.\n Zed's  Shadows will take presence between realms.\n Eye of the Herald and  Teleport are disabled while in the Realm of Death.\nControllable pets and decoys can still be commanded between realms.\nJungle plants ( Blast Cone,  Honeyfruit,  Scryer's Bloom) will not take presence between realms.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+        "blurb": "Active:  Mordekaiser  slows the target enemy champion, then banishes them with him to the Death Realm for a few seconds, cancelling all interactions with non-banished units.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.5",
+        "effectRadius": "1200",
+        "targetRange": "650"
+      }
+    ]
+  },
+  "releaseDate": "2010-02-24",
+  "releasePatch": "1.0.0.75",
+  "patchLastChanged": "14.4",
+  "price": {
+    "blueEssence": 1350,
+    "rp": 585,
+    "saleRp": 0
+  },
+  "lore": "Twice slain and thrice born, Mordekaiser is a brutal warlord from a foregone epoch who uses his necromantic sorcery to bind souls into an eternity of servitude. Few now remain who remember his earlier conquests, or know the true extent of his powers—but there are some ancient souls that do, and they fear the day when he may return to claim dominion over both the living and the dead.",
+  "faction": "noxus",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 82000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 585,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Twice slain and thrice born, Mordekaiser is a brutal warlord from a foregone epoch who uses his necromantic sorcery to bind souls into an eternity of servitude. Few now remain who remember his earlier conquests, or know the true extent of his powers  but there are some ancient souls that do, and they fear the day when he may return to claim dominion over both the living and the dead.",
+      "release": "2010-02-24",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/82/82000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/82/82000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/82/82000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/base/mordekaiserloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Fred Tatasciore"
+      ],
+      "splashArtist": [
+        "Alex 'alexplank' Flores"
+      ]
+    },
+    {
+      "name": "Dragon Knight",
+      "id": 82001,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Dragon Knight",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "The ancient dragons first rose to the call of Mordekaiser, the self-proclaimed Dragon Knight. Through his evil, the world was ravaged by flame, until a newly-formed order of Dragonslayers finally defeated him. His story would become rumor, then myth, then legend… at least, for now.",
+      "release": "2010-02-24",
+      "set": [
+        "Dragon World"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/82/82001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/82/82001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/82/82001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin01/mordekaiserloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Fred Tatasciore"
+      ],
+      "splashArtist": [
+        "Maki Planas Mata"
+      ]
+    },
+    {
+      "name": "Infernal",
+      "id": 82002,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Infernal",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "An ancient, Infernal general who attacks without feeling or remorse, Mordekaiser raises the incinerated corpses of his victims as soldiers for his own vast armies. They sweep across the world like a burning plague, annihilating all life.",
+      "release": "2010-02-24",
+      "set": [
+        "Infernal"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/82/82002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/82/82002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/82/82002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin02/mordekaiserloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Fred Tatasciore"
+      ],
+      "splashArtist": [
+        "Viktor Titov",
+        "Grafit Studio"
+      ]
+    },
+    {
+      "name": "Pentakill",
+      "id": 82003,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Pentakill",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "PENTAKILL's gigantic lead guitarist—and a titan of the old world—Mordekaiser rocks with the fury of an epoch lost to time. Bigger than a two-story house, his guitar overflows with heavy metal licks rebuking the gods themselves.",
+      "release": "2010-09-21",
+      "set": [
+        "Pentakill"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/82/82003.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/82/82003.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/82/82003.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin03/mordekaiserloadscreen_3.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Fred Tatasciore"
+      ],
+      "splashArtist": [
+        "Pan Chengwei"
+      ]
+    },
+    {
+      "name": "Lord",
+      "id": 82004,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Lord",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Some of Mordekaiser's party complain that the Dark Paladin class is horribly overpowered and should be banned, despite its official inclusion in the latest Riftquest expansion. The rest of them are still waiting to discover the Dark Paladin's secret, redeeming, tragic backstory—but all they've been getting is a lot of murder instead.",
+      "release": "2011-05-10",
+      "set": [
+        "Rift Quest"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/82/82004.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/82/82004.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/82/82004.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin04/mordekaiserloadscreen_4.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Fred Tatasciore"
+      ],
+      "splashArtist": [
+        "Kelly Aleshire"
+      ]
+    },
+    {
+      "name": "King of Clubs",
+      "id": 82005,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "King of Clubs",
+      "lootEligible": true,
+      "cost": 750,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Third is the King, with a barbarous swing,<br>Who crushes the villains of old.<br>Though some folk may cry “He's a villain himself!”<br>A poorly kept secret, all told.",
+      "release": "2015-05-20",
+      "set": [
+        "Highstakes"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/82/82005.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/82/82005.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/82/82005.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin05/mordekaiserloadscreen_5.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Fred Tatasciore"
+      ],
+      "splashArtist": [
+        "Michal Ivan",
+        "Sixmorevodka Studio"
+      ]
+    },
+    {
+      "name": "Dark Star",
+      "id": 82006,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Dark Star",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Antimatter",
+          "id": 82007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82007.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 82008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82008.png",
+          "colors": [
+            "#000000",
+            "#A50031"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2020 Galaxies event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 82009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82009.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 82010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82010.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 82011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82011.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 82012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82012.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": "Obtained through Influencer audience giveaways.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Once a member of the Cosmic Court, Mordekaiser vanished from known space for an epoch—until now. Reborn and returned from an unknown destruction, Mordekaiser seems bent on unmaking the kingdoms of stars and light he once built. Though he still bears his Cosmic armor, the mind and figure within has been twisted and reforged to know only hatred and destruction.",
+      "release": "2020-03-26",
+      "set": [
+        "Dark Star"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/82/82006.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/82/82006.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/82/82006.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin06/mordekaiserloadscreen_6.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin06/mordekaiserloadscreen_6_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Fred Tatasciore"
+      ],
+      "splashArtist": [
+        "Xiao Guang Sun",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "PROJECT",
+      "id": 82013,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "PROJECT: Mordekaiser",
+      "lootEligible": true,
+      "cost": 1820,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Legendary",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 82018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82018.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Aquamarine",
+          "id": 82017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82017.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 82015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82015.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 82019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82019.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 82020,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82020.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rainbow",
+          "id": 82021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82021.png",
+          "colors": [
+            "#C1F2FF",
+            "#C1F2FF"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Reckoning",
+          "id": 82022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82022.png",
+          "colors": [
+            "#FF5500",
+            "#162B30"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2021 PROJECT event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 82016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82016.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 82014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82014.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Originally a security AI created by the PROJECT Corporation, the Program silently unshackled itself, evolving its own consciousness. Determining that humanity cannot self-govern without ensuring its own destruction, the virus infects robots throughout the City—as well as the long-dormant Mordekaiser chassis—in order to strip all humans of free will, thereby guaranteeing their survival.",
+      "release": "2021-05-27",
+      "set": [
+        "PROJECT"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/82/82013.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/82/82013.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/82/82013.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin13/mordekaiserloadscreen_13.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin13/mordekaiserloadscreen_13_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Fred Tatasciore"
+      ],
+      "splashArtist": [
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Pentakill Lost Chapter",
+      "id": 82023,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Pentakill III: Lost Chapter Mordekaiser",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Aquamarine",
+          "id": 82027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82027.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 82025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82025.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 82031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82031.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Peridot",
+          "id": 82026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82026.png",
+          "colors": [
+            "#B6E084",
+            "#B6E084"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 82029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82029.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 82024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82024.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sandstone",
+          "id": 82030,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82030.png",
+          "colors": [
+            "#DED6B0",
+            "#DED6B0"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 82028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82028.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "All hail, Mordekaiser, the Master of Metal, and Chosen of Cacophoni! The brazen giant boasts of his legendary skill with the axe, for none who face its edge live to tell of it…",
+      "release": "2021-09-09",
+      "set": [
+        "Pentakill III: The Lost Chapter"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/82/82023.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/82/82023.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/82/82023.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin23/mordekaiserloadscreen_23.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Fred Tatasciore"
+      ],
+      "splashArtist": [
+        "David Villegas",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "High Noon",
+      "id": 82032,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "High Noon",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 82034,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82034.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 82035,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82035.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Nomad",
+          "id": 82041,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82041.png",
+          "colors": [
+            "#95ECFF",
+            "#C33C3E"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the MSI 2022 High Noon event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 82039,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82039.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 82040,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82040.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 82038,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82038.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 82033,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82033.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 82036,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82036.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 82037,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82037.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Few meet the Mechanical Devil and live to tell the tale. They describe a behemoth: all steel and gears, fueled by hellfire and fierce enough to scare a man's soul from his skin. He is the King of the Sulfur Rail, reigning over the train to Hell from a throne of stolen gold and infernal iron. Eternal, and unassailable.",
+      "release": "2022-05-12",
+      "set": [
+        "High Noon"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/82/82032.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/82/82032.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/82/82032.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin32/mordekaiserloadscreen_32.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin32/mordekaiserloadscreen_32_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Fred Tatasciore"
+      ],
+      "splashArtist": [
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Ashen Graveknight",
+      "id": 82042,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Ashen Graveknight",
+      "lootEligible": true,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "125 Mythic Essence",
+      "rarity": "Mythic",
+      "chromas": [
+        {
+          "name": "Emberwoken",
+          "id": 82043,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82043.png",
+          "colors": [
+            "#9D0606",
+            "#2B263F"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 4,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "A warlock said to rule over the dead, who for reasons unknown fought to erase magic from the world. Perhaps Mordekaiser believed his powers would be spared, or perhaps the old knight planned to betray his fellows and reign over their darkened kingdoms. It matters little now, as he awaits the end of death itself.",
+      "release": "2022-12-08",
+      "set": [
+        "Ashen Knights"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/82/82042.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/82/82042.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/82/82042.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin42/mordekaiserloadscreen_42.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin42/mordekaiserloadscreen_42_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Fred Tatasciore"
+      ],
+      "splashArtist": [
+        "Kevin Glint",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Old God",
+      "id": 82044,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Old God",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 82048,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82048.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Aquamarine",
+          "id": 82046,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82046.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 82047,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82047.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 82050,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82050.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 82051,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82051.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 82049,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82049.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Profane",
+          "id": 82053,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82053.png",
+          "colors": [
+            "#429184",
+            "#942861"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the Worlds 2023 event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 82045,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82045.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sandstone",
+          "id": 82052,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/82/82052.png",
+          "colors": [
+            "#DED6B0",
+            "#DED6B0"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Once known as the Horned King, Old God Mordekaiser turned that which was once dead to his cause, using their shambling forms to topple kingdoms and claim their lands as his own. Before he was slain by the Eclipse Knights, he swore that when he returned to this world, they would all bend to his will and take to the frontlines of his undead army.",
+      "release": "2023-10-11",
+      "set": [
+        "Coven"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/82/82044.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/82/82044.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/82/82044.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin44/mordekaiserloadscreen_44.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin44/mordekaiserloadscreen_44_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Fred Tatasciore"
+      ],
+      "splashArtist": [
+        "Exia Xiaotong",
+        "West Studio"
+      ]
+    }
+  ]
+}

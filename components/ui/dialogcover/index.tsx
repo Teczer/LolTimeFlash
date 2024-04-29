@@ -9,49 +9,52 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet'
+
 import { CiImageOn } from 'react-icons/ci'
 import Image from 'next/image'
 import { Input } from '../input'
 import { Button } from '../button'
-import { useRouter } from 'next/navigation'
+import { getChampion } from '@/app/api/shieldbow/methods'
+import { useBackgroundImage } from '@/app/store/useBackgroundImage'
 
 // Définition des types
 type ChampionName = string
+interface AllSkinsSplashArts {
+  championName: string
+  splashArts: string[]
+}
 
 const ChangeCoverButton: React.FC = () => {
   const [rawChampions, setRawChampions] = useState<ChampionName[]>([])
   const [filteredChampions, setFilteredChampions] = useState<ChampionName[]>([])
   const [searchQuery, setSearchQuery] = useState<string>('')
-  const router = useRouter()
+
+  const [allSkinsSplashArts, setAllSkinsSplashArts] = useState<
+    AllSkinsSplashArts[]
+  >([])
+
+  const { setImage } = useBackgroundImage()
+
+  async function getChampionNextApi() {
+    const nextApiResponse = await getChampion()
+    setAllSkinsSplashArts(nextApiResponse)
+    console.log('nextApiResponse', nextApiResponse)
+  }
+
   useEffect(() => {
     // Appel à la fonction fetchChampions une seule fois après le rendu initial
-    fetchChampions()
+    getChampionNextApi()
   }, []) // Dépendance vide pour garantir que le useEffect ne s'exécute qu'une seule fois
-
-  // Fonction pour récupérer les données des champions depuis l'API
-  const fetchChampions = async () => {
-    try {
-      const response = await fetch(
-        'https://ddragon.leagueoflegends.com/cdn/14.6.1/data/en_US/champion.json',
-      )
-      const data = await response.json()
-      // Récupérer les noms des champions
-      const championNames: ChampionName[] = Object.keys(data.data)
-      // Stocker les noms des champions dans l'état
-      setRawChampions(championNames)
-      setFilteredChampions(championNames)
-    } catch (error) {
-      console.error('Error fetching champion data:', error)
-    }
-  }
-
-  // Fonction pour construire l'URL de l'image du splash art d'un champion
-  const getChampionSplashUrl = (
-    championName: ChampionName,
-    skinNum: number,
-  ) => {
-    return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_${skinNum}.jpg`
-  }
 
   // Fonction pour construire l'URL de l'image du splash art d'un champion
   const getChampionSquareUrl = (championName: ChampionName) => {
@@ -66,15 +69,15 @@ const ChangeCoverButton: React.FC = () => {
     } else {
       setFilteredChampions(
         rawChampions.filter((championName) =>
-          championName.toLowerCase().startsWith(query.toLowerCase()),
-        ),
+          championName.toLowerCase().startsWith(query.toLowerCase())
+        )
       )
     }
   }
 
   return (
-    <Dialog>
-      <DialogTrigger asChild>
+    <Sheet>
+      <SheetTrigger asChild>
         <Button
           className="fixed top-6 right-6 sm:top-10 sm:right-20"
           variant="outline"
@@ -82,12 +85,10 @@ const ChangeCoverButton: React.FC = () => {
         >
           <CiImageOn className="h-6 w-6" />
         </Button>
-      </DialogTrigger>
-      <DialogContent
-        className={'lg:max-w-screen-lg overflow-y-scroll max-h-[65%]'}
-      >
-        <DialogHeader>
-          <DialogTitle className="text-center">Select a new Cover</DialogTitle>
+      </SheetTrigger>
+      <SheetContent className="overflow-y-scroll">
+        <SheetHeader>
+          <SheetTitle>Select a New Cover</SheetTitle>
           <Input
             className="font-sans"
             type="text"
@@ -95,59 +96,61 @@ const ChangeCoverButton: React.FC = () => {
             value={searchQuery}
             onChange={(e) => handleSearch(e.target.value)}
           />
-        </DialogHeader>
-        <DialogDescription className="flex flex-col justify-start items-center w-full gap-3">
-          {/* Affichage de la liste des champions filtrée avec leurs images de splash art */}
-          {filteredChampions.map((championName: ChampionName) => (
-            <div
-              className="w-full h-[130px] bg-[#052431] flex flex-row justify-start items-start rounded-sm p-4"
-              key={championName}
-            >
-              <div className="h-full flex flex-col gap-2 justifty-start items-center px-4">
-                <Image
-                  unoptimized
-                  className="w-14 object-cover border"
-                  key={championName}
-                  src={getChampionSquareUrl(championName)}
-                  alt={`${championName} Square`}
-                  width={200}
-                  height={200}
-                />
-                <h2 className="text-white text-md textstroke">
-                  {championName}
-                </h2>
-              </div>
-              <ul className="w-full h-full flex flex-row flex-wrap justify-center items-start gap-6">
-                {/* Boucle à travers les skins d'un champion et affichage de leurs images */}
-                {[0, 1, 2].map((skinNum: number) => (
-                  <li
-                    key={skinNum}
-                    onClick={() => {
-                      localStorage.setItem(
-                        'cover-bg',
-                        `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_${skinNum}.jpg`,
-                      )
-                      location.reload()
-                    }}
-                  >
+        </SheetHeader>
+        <SheetFooter className="flex flex-col justify-start items-center w-full gap-3">
+          <div className="flex flex-col justify-start items-center w-full gap-3 h-full mt-4">
+            {allSkinsSplashArts.map((champion, index) => {
+              return (
+                <div
+                  className="flex w-full h-auto bg-[#052431] rounded-sm"
+                  key={index}
+                >
+                  <div className="w-1/5 h-auto flex flex-col gap-2 justify-start items-center p-4 border">
                     <Image
-                      unoptimized
-                      quality={75}
-                      className="w-[160px] object-cover rounded-sm cursor-pointer transition-all hover:scale-110"
-                      src={getChampionSplashUrl(championName, skinNum)}
-                      alt={`${championName} Skin ${skinNum}`}
-                      width={500}
-                      height={500}
-                      onError={() => {}}
+                      className="w-14 object-cover border"
+                      key={champion.championName}
+                      src={getChampionSquareUrl(champion.championName)}
+                      alt={`${champion.championName} Square`}
+                      width={200}
+                      height={200}
                     />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </DialogDescription>
-      </DialogContent>
-    </Dialog>
+                    <h2 className="text-white text-md textstroke">
+                      {champion.championName}
+                    </h2>
+                  </div>
+
+                  <div
+                    className="w-4/5 h-full flex flex-wrap gap-2 justify-center items-center p-4 border-y border-r"
+                    key={index}
+                  >
+                    {champion.splashArts.map((splash, index) => {
+                      return (
+                        <li
+                          key={index}
+                          onClick={() => {
+                            setImage(splash)
+                            localStorage.setItem('cover-bg', splash)
+                          }}
+                        >
+                          <Image
+                            quality={75}
+                            className="w-28 object-cover rounded-sm cursor-pointer transition-all hover:scale-110"
+                            src={splash}
+                            alt={splash}
+                            width={500}
+                            height={500}
+                          />
+                        </li>
+                      )
+                    })}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </SheetFooter>
+      </SheetContent>
+    </Sheet>
   )
 }
 

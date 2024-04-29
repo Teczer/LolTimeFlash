@@ -1,0 +1,1668 @@
+{
+  "id": 901,
+  "key": "Smolder",
+  "name": "Smolder",
+  "title": "the Fiery Fledgling",
+  "fullName": "Ignacarious Gigantareno Rex Le Spes Offerentis",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Smolder.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 575,
+      "percent": 0,
+      "perLevel": 100,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 3,
+      "percent": 0,
+      "perLevel": 0.6,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 300,
+      "percent": 0,
+      "perLevel": 40,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 8.5,
+      "percent": 0,
+      "perLevel": 0.7,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 26,
+      "percent": 0,
+      "perLevel": 4.7,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 55,
+      "percent": 0,
+      "perLevel": 2.3,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 330,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 900,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 130,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.638,
+      "percent": 0,
+      "perLevel": 4,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.638,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.13377659,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 550,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "MAGE",
+    "MARKSMAN"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 1,
+    "mobility": 1,
+    "utility": 1,
+    "abilityReliance": 10,
+    "difficulty": 2
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Dragon Practice",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Smolder generates a stack of Dragon Practice each time he hits an enemy champion with an ability, or whenever Super Scorcher Breath kills a minion or monster. His basic abilities deal bonus magic damage based on stacks.\n Super Scorcher Breath: Deals bonus magic damage equal to 40% − 52% (based on critical strike chance) of Dragon Practice stacks.\n Achooo!: Explosions deal bonus magic damage equal to 55% of Dragon Practice stacks.\n Flap, Flap, Flap: Attacks each deal bonus magic damage equal to 20% of Dragon Practice stacks.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self/Enemies",
+        "spellshieldable": "true",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "proc",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Super Scorcher Breath still grants stacks if the target dies while the initial missile is in flight.\n Achooo! can only grant a stack of Dragon Practice with the first hit against each enemy champion.",
+        "blurb": "Innate:  Smolder generates a stack of Dragon Practice from damaging champions with abilities, or when  Super Scorcher Breath kills  minions and  monsters. His basic abilities deal bonus magic damage based on stacks.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Super Scorcher Breath",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Smolder spits a fireball at the target enemy that deals physical damage, increased by 0% − 50% (based on critical strike chance), and applies on-hit and on-attack effects at 100% effectiveness and life steal at 50% effectiveness.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      15,
+                      25,
+                      35,
+                      45,
+                      55
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      15,
+                      15,
+                      15,
+                      15,
+                      15
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Non-Champion Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      16.5,
+                      27.5,
+                      38.5,
+                      49.5,
+                      60.5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      110,
+                      110,
+                      110,
+                      110,
+                      110
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      16.5,
+                      16.5,
+                      16.5,
+                      16.5,
+                      16.5
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      22.5,
+                      37.5,
+                      52.5,
+                      67.5,
+                      82.5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      150,
+                      150,
+                      150,
+                      150,
+                      150
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      22.5,
+                      22.5,
+                      22.5,
+                      22.5,
+                      22.5
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Non-Champion Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      24.75,
+                      41.25,
+                      57.75,
+                      74.25,
+                      90.75
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      165,
+                      165,
+                      165,
+                      165,
+                      165
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      24.75,
+                      24.75,
+                      24.75,
+                      24.75,
+                      24.75
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Super Scorcher Breath becomes empowered with new effects based on Dragon Practice stacks:",
+            "leveling": []
+          },
+          {
+            "description": "Tier 1 - 25 stacks: The fireball explodes upon collision to deal the same physical damage to nearby enemies and apply on-hit effects at 100% effectiveness and life steal at 50% effectiveness.",
+            "leveling": []
+          },
+          {
+            "description": "Tier 2 - 125 stacks: The fireball sends forth 1 (+ 1.5 per 100 Dragon Practice stacks) bolts of fire in an arc upon collision that explode at maximum range, dealing 75% of the same damage to enemies hit and applying on-hit effects at 75% effectiveness and life steal at 50% effectiveness.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      11.25,
+                      18.75,
+                      26.25,
+                      33.75,
+                      41.25
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      75,
+                      75,
+                      75,
+                      75,
+                      75
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      11.25,
+                      11.25,
+                      11.25,
+                      11.25,
+                      11.25
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Non-Champion Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      12.375,
+                      20.625,
+                      28.875,
+                      37.125,
+                      45.375
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      82.5,
+                      82.5,
+                      82.5,
+                      82.5,
+                      82.5
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      12.375,
+                      12.375,
+                      12.375,
+                      12.375,
+                      12.375
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      16.875,
+                      28.125,
+                      39.375,
+                      50.625,
+                      61.875
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      112.5,
+                      112.5,
+                      112.5,
+                      112.5,
+                      112.5
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      16.875,
+                      16.875,
+                      16.875,
+                      16.875,
+                      16.875
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Non-Champion Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      18.5625,
+                      30.9375,
+                      43.3125,
+                      55.6875,
+                      68.0625
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      123.75,
+                      123.75,
+                      123.75,
+                      123.75,
+                      123.75
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      18.5625,
+                      18.5625,
+                      18.5625,
+                      18.5625,
+                      18.5625
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Tier 3 - 225 stacks: Enemies hit are set on fire for 3 seconds, causing them to take bonus true damage equal to[ 2% per 100 bonus AD (+ 1% per 100 AP) (+ 0.8% per 100 Dragon Practice stacks) of their maximum health over the duration, capped at 300 against monsters. ][ 0.67% per 100 bonus AD (+ 0.33% per 100 AP) (+ 0.27% per 100 Dragon Practice stacks) of their maximum health each second, capped at 100 per tick against monsters. ]Subsequent applications of the burn stack, though not refreshing the duration of the previous burn. Enemy champions afflicted with the burn are also executed once Smolder damages them while they are below 6.5% of their maximum health.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                23,
+                26,
+                29,
+                32,
+                35
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                5.5,
+                5,
+                4.5,
+                4,
+                3.5
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Unit",
+        "affects": "Enemies",
+        "spellshieldable": "true",
+        "resource": "MANA",
+        "damageType": "MIXED_DAMAGE",
+        "spellEffects": "special",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Applies  default damage for the burn,  spell damage for the fireball, and  area damage for the explosions.\nSmolder can't declare basic attacks for a brief moment after the cast time.\nOnly Smolder's damage counts for triggering the execute.\nIf the target is below the threshold while afflicted with the burn, they will be executed on the next instance of damage dealt by Smolder, which includes the burn tick.\nIf Super Scorcher Breath would damage the target to below the execution threshold, they are executed on the same damage instance.\nAt 125  Dragon Practice stacks, the fireball will launch 2 bolts.\nAt 225  Dragon Practice stacks, the burn's damage based on the target's health ratio will increase by at least 1.8% and the execution threshold for the burn will be at least 7.625% of the target's maximum health.\nSuper Scorcher Breath can only hit enemies once per cast.\nThe minion and monster damage modifier applies only to the physical damage.\nThe bolts apply the bonus magic damage from  Dragon Practice at 75% damage.\nThis damage does not benefit from life steal.\nOnly Super Scorcher Breath's initial fireball missile can be  blocked and  dodged.\nThe application of the burn is negated in both cases.\nThe fireball can still explode on-collision and fire the bolts in both cases.",
+        "blurb": "Active:  Smolder spits a fireball that deals physical damage to the target enemy.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1800 / 900",
+        "width": null,
+        "angle": "15°",
+        "castTime": "0.25",
+        "effectRadius": "285 / 150",
+        "targetRange": "550 (+ 100% bonus range)"
+      }
+    ],
+    "W": [
+      {
+        "name": "Achooo!",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Smolder sneezes a fiery glob in the target direction that deals physical damage to enemies hit and slows them by 35% for 1.5 seconds, slowing down in missile speed after travelling 1200 units. Hitting an enemy champion creates an explosion that deals physical damage to nearby enemies, with subsequent explosions against the same target dealing 75% damage of the previous explosion's damage.",
+            "leveling": [
+              {
+                "attribute": "Glob Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      50,
+                      80,
+                      110,
+                      140,
+                      170
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      25,
+                      25,
+                      25,
+                      25,
+                      25
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      20,
+                      20,
+                      20,
+                      20,
+                      20
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Explosion Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      25,
+                      40,
+                      55,
+                      70,
+                      85
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      25,
+                      25,
+                      25,
+                      25,
+                      25
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      80,
+                      80,
+                      80,
+                      80,
+                      80
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Achooo! deals 140% damage against minions and monsters.",
+            "leveling": [
+              {
+                "attribute": "Glob Non-Champion Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      112,
+                      154,
+                      196,
+                      238
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      35,
+                      35,
+                      35,
+                      35,
+                      35
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      28,
+                      28,
+                      28,
+                      28,
+                      28
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Explosion Non-Champion Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      35,
+                      56,
+                      77,
+                      98,
+                      119
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      35,
+                      35,
+                      35,
+                      35,
+                      35
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      112,
+                      112,
+                      112,
+                      112,
+                      112
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                60,
+                60,
+                60,
+                60,
+                60
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                14,
+                13,
+                12,
+                11,
+                10
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "special",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Smolder can't declare basic attacks for a brief moment after the cast time.\n Spell shield can block either the glob or the explosion, but not both.",
+        "blurb": "Active:  Smolder sneezes forth a glob that deals physical damage to enemies hit and  slows them. Hitting an enemy  champion creates an explosion that deals physical damage to nearby enemies.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "2000 / 400",
+        "width": "115",
+        "angle": null,
+        "castTime": "0.35",
+        "effectRadius": "385",
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Flap, Flap, Flap",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Smolder takes flight for 1.25 seconds, gaining 75% bonus movement speed, unobstructed vision, and the ability to ignore terrain collision. While in flight, he automatically fires up to 5 (+ 0.75 per 100 Dragon Practice stacks) bolts at the nearest and most wounded visible enemy, dealing physical damage with each hit and prioritizing enemy champions.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage per Hit",
+                "modifiers": [
+                  {
+                    "values": [
+                      15,
+                      20,
+                      25,
+                      30,
+                      35
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      10,
+                      10,
+                      10,
+                      10,
+                      10
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Minimum Total Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      75,
+                      100,
+                      125,
+                      150,
+                      175
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Flap, Flap, Flap ends immediately if Smolder casts one of his abilities or becomes immobilized.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                65,
+                65,
+                65,
+                65,
+                65
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                24,
+                22,
+                20,
+                18,
+                16
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self, Enemies",
+        "spellshieldable": "special",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spell",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The number of additional bolts based on  Dragon Practice stacks are rounded down.\nSmolder reveals himself while attacking enemies, even inside terrain.\n Spell shield will block only one bolt.\nSelf  immobilizations such as  Zhonya's Hourglass also count for ending Flap, Flap, Flap.\n Recall is disabled while Smolder is inside terrain.\nFlap, Flap, Flap can interact with player-generated terrain.\nIf Smolder is inside terrain when the effect ends, he will be placed correspondingly to the nearest valid space.\nSmolder's  attack range is reduced to 0 during Flap, Flap, Flap, further reduced to -203 with  Rapid Firecannon.\nThe following table refers for interactions while Smolder is flying:\n\n\nAttacking\n\nCauses Smolder to move towards the attack target.\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\n\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Zhonya's Hourglass\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Recall  Hexflash  Mark  Dash\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Immobilizing effects",
+        "blurb": "Active:  Smolder takes flight for a short time, gaining  bonus movement speed and the ability to ignore terrain collision. While in flight, he automatically fires bolts at a nearby enemy, dealing physical damage with each hit. The number of attacks increases based on  critical strike chance.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1800",
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "R": [
+      {
+        "name": "MMOOOMMMM!",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Smolder shouts for his mother to attack from above, causing her to exhale a wave of fire from behind him and towards the target direction, granting sight of its surroundings as it travels. The wave heals Smolder and deals physical damage to enemies hit, with those in the center taking 50% increased damage and becoming slowed by 40% for 2 seconds.",
+            "leveling": [
+              {
+                "attribute": "Self Heal",
+                "modifiers": [
+                  {
+                    "values": [
+                      100,
+                      135,
+                      170
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      75,
+                      75,
+                      75
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      200,
+                      300,
+                      400
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      110,
+                      110,
+                      110
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Increased Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      300,
+                      450,
+                      600
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      165,
+                      165,
+                      165
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      150,
+                      150,
+                      150
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                140,
+                130,
+                120
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies, Self",
+        "spellshieldable": "true",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "MMOOOMMMM!'s cooldown starts at the end of the cast time.\nSmolder can move 0.4 seconds into MMOOOMMMM!'s cast time.\nThis ability will cast from wherever the caster is at the start of the cast time.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+        "blurb": "Active:  Smolder shouts for his mother to attack from above, causing her to exhale a wave of fire along his path. The wave  heals Smolder and deals physical damage to enemies hit, enemies within the center are dealt  increased damage and  slowed.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1700",
+        "width": "125",
+        "angle": null,
+        "castTime": "0.75",
+        "effectRadius": "1000",
+        "targetRange": null
+      }
+    ]
+  },
+  "releaseDate": "2024-01-31",
+  "releasePatch": "14.2",
+  "patchLastChanged": "14.7",
+  "price": {
+    "blueEssence": 6300,
+    "rp": 975,
+    "saleRp": 0
+  },
+  "lore": "Hidden amongst the craggy cliffs of the Noxian frontier, under the watchful eyes of his mother, a young dragon is learning what it means to be heir to the Camavoran imperial dragon lineage. Playful and eager to grow up, Smolder looks for any excuse to practice his burgeoning abilities. Though he's still a fledgling, his skills are nothing to sneeze at, easily setting fire to anything that burns.",
+  "faction": "unaffiliated",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 901000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Hidden amongst the craggy cliffs of the Noxian frontier, under the watchful eyes of his mother, a young dragon is learning what it means to be heir to the Camavoran imperial dragon lineage. Playful and eager to grow up, Smolder looks for any excuse to practice his burgeoning abilities. Though he's still a fledgling, his skills are nothing to sneeze at, easily setting fire to anything that burns.",
+      "release": "2024-01-31",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/901/901000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/901/901000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/901/901000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/smolder/skins/base/smolderloadscreen_0.smolder.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Georgie Cordova Kidder"
+      ],
+      "splashArtist": [
+        "Rudy Siswanto"
+      ]
+    },
+    {
+      "name": "Heavenscale",
+      "id": 901001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Heavenscale",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 901008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/901/901008.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Aquamarine",
+          "id": 901005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/901/901005.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 901003,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/901/901003.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Lustrous",
+          "id": 901010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/901/901010.png",
+          "colors": [
+            "#DFA6DF",
+            "#E0D7D7"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2024 Heavenscale event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            },
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 901009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/901/901009.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 901007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/901/901007.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Peridot",
+          "id": 901004,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/901/901004.png",
+          "colors": [
+            "#B6E084",
+            "#B6E084"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 901002,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/901/901002.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2024.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            },
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 901006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/901/901006.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            }
+          ]
+        }
+      ],
+      "lore": "The youngest member of the royal family and cousin to the prince, Smolder likes nothing more than to tag along on any adventures Lee Sin gets up to. He may have missed the part of the plan that involves disguising himself as a human, but hey—he will show them that dragons don't need to dress up to be the life of the party!",
+      "release": "2024-01-31",
+      "set": [
+        "Heavenscale"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/901/901001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/901/901001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/901/901001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/smolder/skins/skin01/smolderloadscreen_1.smolder.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/smolder/skins/skin01/smolderloadscreen_1_le.smolder.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Georgie Cordova Kidder"
+      ],
+      "splashArtist": [
+        "Fortune 'Fortuneee' K"
+      ]
+    }
+  ]
+}

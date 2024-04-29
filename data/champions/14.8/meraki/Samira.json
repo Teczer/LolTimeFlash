@@ -1,0 +1,1604 @@
+{
+  "id": 360,
+  "key": "Samira",
+  "name": "Samira",
+  "title": "the Desert Rose",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Samira.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 630,
+      "percent": 0,
+      "perLevel": 108,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 3.25,
+      "percent": 0,
+      "perLevel": 0.55,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 349,
+      "percent": 0,
+      "perLevel": 38,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 8.2,
+      "percent": 0,
+      "perLevel": 0.7,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 26,
+      "percent": 0,
+      "perLevel": 4.7,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 57,
+      "percent": 0,
+      "perLevel": 3.3,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 335,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 800,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 100,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 40.68,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.658,
+      "percent": 0,
+      "perLevel": 3.3,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.658,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.150000006,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 500,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "MARKSMAN"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 2,
+    "control": 1,
+    "mobility": 3,
+    "utility": 1,
+    "abilityReliance": 0,
+    "difficulty": 2
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Daredevil Impulse",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Samira's damaging basic attacks and abilities against at least one enemy champion different from the previous damaging hit made against champions generate a stack of Style for 6 seconds, refreshing on subsequent hits and stacking up to 6 times.",
+            "leveling": []
+          },
+          {
+            "description": "Style: For each stack, Samira gains 2 / 2.5 / 3 / 3.5% (based on level) bonus movement speed, up to a maximum of 12 / 15 / 18 / 21% (based on level). At maximum stacks, Samira can cast Inferno Trigger.",
+            "leveling": []
+          },
+          {
+            "description": "Innate: Samira's basic attacks against targets in 200 range use her blade, becoming non-projectile. Blade attacks post-hit, Blade Whirl, Wild Rush, and the slash and explosives of Flair deal 2 − 19 (based on level) (+ 3.5% − 10.5% (based on level) AD) bonus magic damage, increased by 0% − 100% (based on target's missing health).",
+            "leveling": []
+          },
+          {
+            "description": "Samira's basic attack against an immobilized target is empowered to have an uncancellable windup and deal the attack's damage over 6 strikes in 0.5 seconds. If the target is a monster or is airborne, the attack also knocks them up for 0.5 seconds. Samira will dash into her attack range of the target if they are nearby, though not through terrain.",
+            "leveling": []
+          },
+          {
+            "description": "The empowered attack resets Samira's basic attack timer, is affected by critical strike modifiers, applies on-hit effects only once, and cannot occur on the same target more than once every few seconds.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self, Enemies",
+        "spellshieldable": "special",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "special",
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The stack count is represented by the grades       to the left of her health bar for Samira herself, and a stack counter underneath the bar that is visible to all players.\nThe empowered attack can trigger on  immobilizes from both ally and enemy sources.\nThose applied by the neutral team (e.g.  Dragon's initial knock back) can be targeted.\nIt cannot trigger against enemies knocked  airborne by a  Blast Cone triggered by anyone.(bug)\nThe empowered attack's interaction with immunities to crowd control:\nIt will not trigger against  crowd control immune and  displacement immune targets.\nThe knock up will be resisted by  Riposte, but the ability does not trigger its on- immobilization effect.(bug)\nThe empowered attack will not apply the knock up against  suspended enemies.\nThe empowered attack will only apply the knock up if the target is still  immobilized or  airborne upon being hit. It will not apply if they are no longer disabled when hit.\nThe empowered attack cannot be used against a target with a  spell shield.\nThe application of the knock up can occur on any of the missiles of the empowered attack if it had not already occurred on the first missile.\nA missile that is parried by  Riposte or is  dodged,  blocked, or missed while Samira is  blinded cannot apply the knock up.\nWhile  grounded or  rooted, Samira cannot  dash into range to use the empowered attack. She can only use it if her target is within her  attack range while under this condition.\nThe on-target cooldown will apply even if the empowered attack is parried.\nThe empowered attack rolls  critical strike for each shot of the flurry.\nThe bonus magic damage dealt with the blade is  default damage. The empowered attack is first 1 instance of  basic damage and then 5 instances of  default damage.\nThe attacks do not deal the bonus damage against structures.\nThe empowered attack is unaffected by  attack speed modifiers.\n Guinsoo's Rageblade's Phantom Hit and  Runaan's Hurricane's bolts will not apply the bonus magic damage, since it is a hit effect of specifically the melee attack casts.\nAttacks with the gun and blade do not count as different attacks for stacking Style.\nBasic attacks using the blade are still classified as  ranged.\nThe melee attack's range condition is unaffected by  attack range modifiers (e.g.  Rapid Firecannon).\nBlade range is calculated edge-to-edge just like basic attack ranges are, hence both Samira gaining bonus size or her target increases the total distance at which Samira can attack them with the blade.\nSince the  knock up requires an exterior source to  immobilize the enemy,  Aftershock will be swapped with  Grasp of the Undying for Samira at the start of the game.\nSince  Inferno Trigger's cooldown is static,  Ultimate Hunter will be swapped with  Treasure Hunter for Samira at the start of the game.\nAbilities blocked by  spell shields will still grant Samira Style stacks.\nSamira still gains Style stacks from damaging attacks and abilities landed against  clones.",
+        "blurb": "Innate:  Samira's different basic attacks and damaging abilities against enemy  champions generate a Style stack, up to a cap.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": "10",
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": "650 / 727.5 / 805 / 882.5 / 960 (based on level)"
+      }
+    ],
+    "Q": [
+      {
+        "name": "Flair",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Samira fires a shot in the target direction that deals physical damage to the first enemy hit.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      0,
+                      5,
+                      10,
+                      15,
+                      20
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      85,
+                      95,
+                      105,
+                      115,
+                      125
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If a targetable enemy is in front of Samira at the time of cast, she will instead slash with her blade in a cone, dealing the same damage to enemies hit.",
+            "leveling": []
+          },
+          {
+            "description": "If Flair is cast during Wild Rush, Samira deploys explosives in her wake that detonate upon the end of the dash, dealing the same damage to enemies hit.",
+            "leveling": []
+          },
+          {
+            "description": "Flair can critically strike for (25% + 50%) bonus physical damage and will apply life steal at 66.6% effectiveness.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                30,
+                30,
+                30,
+                30,
+                30
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                6,
+                5,
+                4,
+                3,
+                2
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Self, Enemies",
+        "spellshieldable": "true",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "special",
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Applies  spell damage on the shot and  area damage on the slash and explosives.\n Life steal will always benefit from the damage dealt at 66.6% effectiveness and does not take into account of the ability's spell effects, whereas on the other hand for  omnivamp does, and it will modify the  healing accordingly.\nFlair's shot against an enemy champion will aggro nearby enemy minions.\nFlair can be cast during  Wild Rush even if  Blade Whirl or  Inferno Trigger are active.\nThe slash and explosives roll their  critical strike against each target individually.\nThe shot and the slash do not count as different abilities for stacking  Style.\nSamira's next attack after using Flair will occasionally come out faster.(bug)\nSamira can use  Wild Rush during Flair's cast time.\nThis ability will cast from wherever the caster is at the end of the cast time.\nFlair will fire or slash from wherever Samira is at the end of the cast time.\nSamira will always slash in her facing direction, and she will turn to face the target direction only once at the start of the cast time.\nFlair can be buffered 0.5 seconds before it comes off cooldown.\nOnly the shot will be destroyed by  projectile-intercepting effects.\nThe explosive placement is illustrated in  Wild Rush regardless of whether Flair is available.\nThe VFX always covers the the full dash's distance even if  Wild Rush is interrupted mid-dash.",
+        "blurb": "Active:  Samira fires a shot in the target direction that deals physical damage to the first enemy hit.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "2600",
+        "width": "120 / 130",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": "340"
+      }
+    ],
+    "W": [
+      {
+        "name": "Blade Whirl",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Samira spins her blade over 0.75 seconds, destroying all hostile non- turret projectiles within the area for the duration.",
+            "leveling": []
+          },
+          {
+            "description": "Samira slashes twice during Blade Whirl, each one dealing physical damage to all nearby enemies. The first slash occurs immediately and the second one occurs after the duration.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      20,
+                      35,
+                      50,
+                      65,
+                      80
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      80,
+                      80,
+                      80,
+                      80,
+                      80
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      70,
+                      100,
+                      130,
+                      160
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      160,
+                      160,
+                      160,
+                      160,
+                      160
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Samira cannot attack nor cast Flair during Blade Whirl. Casting Inferno Trigger will end Blade Whirl early.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                60,
+                60,
+                60,
+                60,
+                60
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                30,
+                28,
+                26,
+                24,
+                22
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Enemies",
+        "spellshieldable": "true",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "aoe",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Spell shield will block the damage from one slash.\nWhile the ability has a cast time - the cast time has no effect on the ability's usability. All effects begin immediately and Samira can move throughout.\nBlade Whirl can be buffered 0.5 seconds before it comes off cooldown.\nBoth slashes count as the same ability for stacking  Style.\nThe effect ending early includes the second slash not being performed, if applicable.\nEntering  stasis will also end Blade Whirl early.\nOther item actives and channeling  Teleport or  Recall will not end the effect early.\nSamira can ignore the lockout for  Flair and basic attacks if she uses  Wild Rush and queues up  Flair and/or a basic attack at the start of it.(bug)",
+        "blurb": "Active:  Samira briefly spins her blade twice, dealing physical damage to nearby enemies each time. During this time, she destroys all incoming enemy  projectiles.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.1",
+        "effectRadius": "325",
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Wild Rush",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Samira dashes a fixed distance in the direction of the target enemy or enemy structure, dealing magic damage to enemies she passes through. She also gains bonus attack speed for 3 seconds.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      50,
+                      60,
+                      70,
+                      80,
+                      90
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      20,
+                      20,
+                      20,
+                      20,
+                      20
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Bonus Attack Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      20,
+                      25,
+                      30,
+                      35,
+                      40
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Scoring a takedown against an enemy champion within 3 seconds of damaging them resets Wild Rush's cooldown.",
+            "leveling": []
+          },
+          {
+            "description": "Flair and Inferno Trigger can be cast during the dash. Casting Blade Whirl will buffer it to cast at the end of the dash.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                40,
+                40,
+                40,
+                40
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                20,
+                18,
+                16,
+                14,
+                12
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Unit",
+        "affects": "Self, Enemies",
+        "spellshieldable": "true",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "aoe",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Samira gains the attack speed buff at the start of the dash, and it lasts for 3 seconds from that point on.\nWild Rush does not deal its damage to turrets.\nWild Rush prioritizes targeting champions over turrets.\nWild Rush can be buffered 0.5 seconds before it comes off cooldown.\n Inferno Trigger will be buffered to cast at the end of the dash if  Flair was cast during the dash.\nCasting  Flash during Wild Rush will interrupt the dash but deal damage to nearby enemies at the location.\nIf  Flair was cast during this time, an explosive will also be placed at that location.\nWild Rush will also reset if Samira kills or gets assist credit on a  clone that dies (to hostiles).(bug)",
+        "blurb": "Active:  Samira  dashes at the target enemy or enemy structure, dealing magic damage to enemies she passes through. She also gains  bonus attack speed for a short time.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1600",
+        "width": "300",
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": "600"
+      }
+    ],
+    "R": [
+      {
+        "name": "Inferno Trigger",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Samira unleashes a torrent of shots for 2.277 seconds, reducing her movement speed by 30% and rapidly shooting at nearby enemies over 2.013 seconds at sporadic times in 0.2-second intervals each, dealing physical damage with each shot, reduced by 75% against minions.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage Per Shot",
+                "modifiers": [
+                  {
+                    "values": [
+                      5,
+                      15,
+                      25
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      50,
+                      150,
+                      250
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      500,
+                      500,
+                      500
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Minion Damage Per Shot",
+                "modifiers": [
+                  {
+                    "values": [
+                      1.25,
+                      3.75,
+                      6.25
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      12.5,
+                      12.5,
+                      12.5
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Minion Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      12.5,
+                      37.5,
+                      62.5
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      125,
+                      125,
+                      125
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Each shot can critically strike for (75% + 50%) bonus physical damage and applies life steal at 50% effectiveness.",
+            "leveling": []
+          },
+          {
+            "description": "A nearby visible enemy is required to cast this ability, and targets do not have to be visible to be shot at. Style stacks are consumed at the end of the effect.",
+            "leveling": []
+          },
+          {
+            "description": "Samira cannot attack nor cast Flair and Blade Whirl during Inferno Trigger, but she can still move. Inferno Trigger will end prematurely by all forms of cast-inhibiting crowd control as well as disarm.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                6,
+                6,
+                6
+              ],
+              "units": [
+                " Style",
+                " Style",
+                " Style"
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                5,
+                5,
+                5
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": false
+        },
+        "targeting": "Auto",
+        "affects": "Enemies",
+        "spellshieldable": "special",
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "aoedot",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Samira's facing direction remains as it had been or, if she is moving, towards that direction during Inferno Trigger.\nThe  movement speed reduction stacks additively with other movement speed bonuses.\nIt is a negative bonus, not a  slow, and is thus not reduced by  slow resist.\nInferno Trigger's area of effect is fixed around Samira.\n Spell shield will block the damage of one shot.\nInferno Trigger will not end if there are no enemies that remain in range.\nInferno Trigger can be buffered 0.5 seconds before it becomes unsealed or off cooldown.\nThe bottom of the player's screen will have a fiery visual effect while Samira is at S rank and Inferno Trigger has at least one rank.",
+        "blurb": "Active:  Samira unleashes a torrent of shots, reducing her  movement speed and rapidly firing shots that deal physical damage to nearby enemies.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "600",
+        "targetRange": null
+      }
+    ]
+  },
+  "releaseDate": "2020-09-21",
+  "releasePatch": "10.19",
+  "patchLastChanged": "13.23",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 790,
+    "saleRp": 0
+  },
+  "lore": "Samira stares death in the eye with unyielding confidence, seeking thrill wherever she goes. After her Shuriman home was destroyed as a child, Samira found her true calling in Noxus, where she built a reputation as a stylish daredevil taking on dangerous missions of the highest caliber. Wielding black-powder pistols and a custom-engineered blade, Samira thrives in life-or-death circumstances, eliminating any who stand in her way with flash and flair.",
+  "faction": "noxus",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 360000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Samira stares death in the eye with unyielding confidence, seeking thrill wherever she goes. After her Shuriman home was destroyed as a child, Samira found her true calling in Noxus, where she built a reputation as a stylish daredevil taking on dangerous missions of the highest caliber. Wielding black-powder pistols and a custom-engineered blade, Samira thrives in life-or-death circumstances, eliminating any who stand in her way with flash and flair.",
+      "release": "2020-09-21",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/360/360000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/360/360000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/360/360000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/samira/skins/base/samiraloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Emily O’Brien"
+      ],
+      "splashArtist": [
+        "Jessica 'OwleyCat' Oyhenart"
+      ]
+    },
+    {
+      "name": "PsyOps",
+      "id": 360001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "PsyOps",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 360005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360005.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 360004,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360004.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Hunter",
+          "id": 360008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360008.png",
+          "colors": [
+            "#B2D1E4",
+            "#3CABFF"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2020 PsyOps event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 360009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360009.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Peridot",
+          "id": 360007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360007.png",
+          "colors": [
+            "#B6E084",
+            "#B6E084"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 360006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360006.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "tencent"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 360002,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360002.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 360003,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360003.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Fearless and deadly, Samira was once a renowned soldier of fortune. A born thrill seeker, she fights not for fame or wealth, but to push the limits of her skill. Through intense training, her innate psychic powers have been fully unleashed, allowing her to turn every mission and every kill into a thrilling display of stylish flair.",
+      "release": "2020-09-21",
+      "set": [
+        "Black Rose Group"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/360/360001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/360/360001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/360/360001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/samira/skins/skin01/samiraloadscreen_1.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/samira/skins/skin01/samiraloadscreen_1_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": true,
+      "voiceActor": [
+        "Emily O’Brien"
+      ],
+      "splashArtist": [
+        "Jennifer Wuestling"
+      ]
+    },
+    {
+      "name": "Space Groove",
+      "id": 360010,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Space Groove",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 360015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360015.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Aquamarine",
+          "id": 360014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360014.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Disco",
+          "id": 360019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360019.png",
+          "colors": [
+            "#9DFFEF",
+            "#AA55FF"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2021 Space Groove event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 360013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360013.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 360012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360012.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 360016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360016.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rainbow",
+          "id": 360018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360018.png",
+          "colors": [
+            "#C1F2FF",
+            "#C1F2FF"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 360017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360017.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 360011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360011.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "A groovy, thrill-seeking bodyguard and elite warrior from the Hot Tub Nebula, Samira took a job directly from the Three Party Goddesses to save Lux from an impending invasion of the Normal World. Now, as the pair liberate planets across the galaxy, Samira must do everything in her power to keep Lux safe—both from Lissandra and from Lux's own lack of self preservation instincts.",
+      "release": "2021-04-01",
+      "set": [
+        "Space Groove"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/360/360010.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/360/360010.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/360/360010.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/samira/skins/skin10/samiraloadscreen_10.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/samira/skins/skin10/samiraloadscreen_10_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Emily O’Brien"
+      ],
+      "splashArtist": [
+        "Xiao Guang Sun",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "High Noon",
+      "id": 360020,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "High Noon",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 360026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360026.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 360024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360024.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Nomad",
+          "id": 360029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360029.png",
+          "colors": [
+            "#95ECFF",
+            "#C33C3E"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the MSI 2022 High Noon event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 360027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360027.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 360022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360022.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 360021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360021.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 360023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360023.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 360025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360025.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 360028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/360/360028.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "The poster was straightforward enough: “WANTED: Tahm Kench - Devil, DEAD OR ALIVE”, followed by a generous sum. Only the Mechanical Devil's got that kinda cash to pay. Samira ain't sure why the other bounty hunters seemed so spooked by a little ol' devil hunt. Well, let 'em shy away. This gunpowder witch don't scare easy.",
+      "release": "2022-05-26",
+      "set": [
+        "High Noon"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/360/360020.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/360/360020.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/360/360020.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/samira/skins/skin20/samiraloadscreen_20.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/samira/skins/skin20/samiraloadscreen_20_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Emily O’Brien"
+      ],
+      "splashArtist": [
+        "Jeremy Chong",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Soul Fighter",
+      "id": 360030,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Soul Fighter",
+      "lootEligible": true,
+      "cost": 3250,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Ultimate",
+      "chromas": [],
+      "lore": "A renowned bounty hunter who can't sit still cause she's ALWAYS on the hunt for her next thrill! This weapons master can use every dangerous tool in (and out!) of her arsenal to fight with STYLE in the Tournament of Souls! Our gracious host better sleep with one eye open, because rumor has it this queen wants to collect his crown! Make way for… SAMIRA!",
+      "release": "2023-07-20",
+      "set": [
+        "Soul Fighter"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/360/360030.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/360/360030.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/360/360030.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/samira/skins/skin30/samiraloadscreen_30.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/samira/skins/skin30/samiraloadscreen_30_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Emily O’Brien"
+      ],
+      "splashArtist": [
+        "Jennifer Wuestling"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Ignorer les fichiers et répertoires générés par npm
+node_modules
+**/node_modules
+npm-debug.log
+yarn-error.log
+
+# Ignorer les fichiers de cache de pnpm
+.pnpm
+.pnpm-debug.log
+
+# Ignorer les fichiers spécifiques à Next.js
+.next
+out
+
+# Ignorer les fichiers et répertoires spécifiques à Git
+.git
+.gitignore
+
+# Ignorer les fichiers de configuration
+*.log
+*.swp
+.DS_Store

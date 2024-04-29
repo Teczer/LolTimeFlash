@@ -15,6 +15,12 @@ const nextConfig = {
       {
         hostname: 'ddragon.leagueoflegends.com',
       },
+      {
+        hostname: 'raw.communitydragon.org',
+      },
+      {
+        hostname: 'https://res.cloudinary.com',
+      },
     ],
   },
 }

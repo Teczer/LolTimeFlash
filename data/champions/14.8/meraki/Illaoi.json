@@ -1,0 +1,1419 @@
+{
+  "id": 420,
+  "key": "Illaoi",
+  "name": "Illaoi",
+  "title": "the Kraken Priestess",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Illaoi.png",
+  "resource": "MANA",
+  "attackType": "MELEE",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 656,
+      "percent": 0,
+      "perLevel": 115,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 9.5,
+      "percent": 0,
+      "perLevel": 0.8,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 350,
+      "percent": 0,
+      "perLevel": 60,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 7.5,
+      "percent": 0,
+      "perLevel": 0.75,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 5,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 2.05,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 68,
+      "percent": 0,
+      "perLevel": 5,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 350,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 600,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 100,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 2.5,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.625,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.375,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.75,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 125,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1.1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 0.8,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 0.9,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "FIGHTER",
+    "JUGGERNAUT",
+    "TANK"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 2,
+    "control": 1,
+    "mobility": 1,
+    "utility": 1,
+    "abilityReliance": 65,
+    "difficulty": 2
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Prophet of an Elder God",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Periodically, Illaoi spawns a Tentacle on the nearest terrain perpendicular to her location, if no other Tentacles are already nearby it. Tentacles fully spawn after a 2 second delay and are untargetable in the meantime.",
+            "leveling": []
+          },
+          {
+            "description": "Tentacles are commanded to attack by Illaoi's abilities, dealing 9 − 162 (based on level) (+ 100% AD) (+ 40% AP) physical damage to all enemies struck, increased by 0% − 30% (based on Tentacle Smash's rank).Enemies struck by multiple slams within 0.5 seconds of another, take 50% damage for the second and 25% damage for all other additional slams.",
+            "leveling": []
+          },
+          {
+            "description": "Each Tentacle also heals Illaoi for 5% of her missing health if it hits at least one enemy champion.",
+            "leveling": []
+          },
+          {
+            "description": "See Pets for more details about Tentacles.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                20,
+                19.25,
+                18.5,
+                17.75,
+                17,
+                16.25,
+                15.5,
+                14.75,
+                14,
+                13.25,
+                12.5,
+                11.75,
+                11,
+                10.25,
+                9.5,
+                8.75,
+                8,
+                7.25
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": false
+        },
+        "targeting": "Passive",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Illaoi cannot spawn Tentacles on ally invulnerable  structures (bug), in addition to neither her nor the Vessel being able to spawn them in Nexus Obelisk's attack range.\nEven after Nexus turrets have lost their invulnerability, Illaoi still has issues spawning Tentacles on them (probably because of the nearby invulnerable Nexus). (bug)\nTentacles will prioritize spawning on map terrain before player-made ones.\nIf multiple Tentacles hit simultaneously, the received healing is calculated iteratively based on the new amount of missing health, as per this formula: (maximum health − current health) × (1 − 0.955n), with 'n' the number of Tentacle hits.",
+        "blurb": "Innate: Periodically, a Tentacle will spawn next to nearby terrain. It can be killed by enemy basic attacks and will become dormant if  Illaoi leaves it alone.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": "1000",
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Tentacle Smash",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/q",
+        "effects": [
+          {
+            "description": "Passive: Tentacle damage is increased.",
+            "leveling": [
+              {
+                "attribute": "Damage Increase",
+                "modifiers": [
+                  {
+                    "values": [
+                      10,
+                      15,
+                      20,
+                      25,
+                      30
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Active: Illaoi slams down a Tentacle in the target direction.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                45,
+                50,
+                55,
+                60
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                9,
+                8,
+                7,
+                6
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nTentacle Smash's hitbox is fixed in front of Illaoi, while the indicator on the ground is fixed to the targeted direction.\n PENDING FOR TEST: Tentacle Smash visual indicator of the hitbox is visible to enemies even when cast in the fog of war.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Test of Spirit and  Leap of Faith are buffered.  Harsh Lesson is usable.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection\n\n\nPotential bug: If you hit someone with illaoi Q, while having the conquerer rune, the damage of the slam is always amplified by one bonus conquerer stack.",
+        "blurb": "Passive:  Tentacle damage is increased.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": "200",
+        "angle": null,
+        "castTime": "0.75",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "W": [
+      {
+        "name": "Harsh Lesson",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Illaoi's next basic attack within 6 seconds gains 225 bonus range and causes her to leap to the target's location if they're beyond her normal basic attack range.",
+            "leveling": []
+          },
+          {
+            "description": "The attack deals bonus physical damage, with a minimum threshold, and capped at 300 against non-champions, and commands all Tentacles in range to attack the target. The minimum bonus damage can also be applied against turrets.",
+            "leveling": [
+              {
+                "attribute": "Bonus Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      3,
+                      3.5,
+                      4,
+                      4.5,
+                      5
+                    ],
+                    "units": [
+                      "%  of target's maximum health",
+                      "%  of target's maximum health",
+                      "%  of target's maximum health",
+                      "%  of target's maximum health",
+                      "%  of target's maximum health"
+                    ]
+                  },
+                  {
+                    "values": [
+                      4,
+                      4,
+                      4,
+                      4,
+                      4
+                    ],
+                    "units": [
+                      "% per 100 AD",
+                      "% per 100 AD",
+                      "% per 100 AD",
+                      "% per 100 AD",
+                      "% per 100 AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Minimum Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      20,
+                      30,
+                      40,
+                      50,
+                      60
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Harsh Lesson resets Illaoi's basic attack timer.",
+            "leveling": []
+          },
+          {
+            "description": "Harsh Lesson can be activated during Illaoi's other abilities, other than while pulling a Spirit.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                30,
+                30,
+                30,
+                30,
+                30
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                4,
+                4,
+                4,
+                4,
+                4
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self",
+        "spellshieldable": "false",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spell",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The bonus damage doesn't apply  life steal but it does apply  spell vamp and Omnivamp.\nHarsh Lesson is made of two different abilities which are decided by Illaoi's range to the target, being either  melee or within  dash range.\nThe close range ability:\nHas an  uncancellable windup.\nCan be used while  grounded or  rooted. If Illaoi attack commands and then casts Harsh Lesson while rooted, she is able to use the close range version within its dash range. (bug)\nStarting the attack before triggering  Guardian Angel's passive and hitting while she's in it will not cause the Tentacles to slam. (bug)\nThe attack will still hit if the target becomes  untargetable, but will not if it  dies. (bug)\nTentacles will slam if the attack is  blocked, but not if it's  dodged or if it  misses. (bug)\nDoes trigger  Hail of Blades.\nTriggers  Energized effects on-hit.\nIf the empowered attack duration ends during the attack animation, the attack won't be empowered. (bug)\nAfter hitting the target, Illaoi can quickly cast other abilities.\nAbilities cannot be buffered during the windup.\n PENDING FOR TEST: The attack goes through  spell shields.\nThe dash range ability:\nDoes not have an uncancellable windup, meaning effects that can interrupt the dash will cancel the attack and put the ability on cooldown.\nCan be cast but cannot be used while  grounded or  rooted because Illaoi loses the  bonus attack range.\nThe attack will not hit if the target becomes  untargetable, but does hit if it  dies. (bug)\nTentacles will slam if the attack is  dodged,  blocked or if it  misses.\nDoes not trigger  Hail of Blades. (bug)\nTriggers  Energized effects during the jump. (bug)\nHaving enough attack speed will perform an unusual dunk. (bug)\nIf the empowered attack duration ends during the dash, the buff will linger until the attack has finished.\nAfter hitting the target, Illaoi has a short delay before she can cast other abilities. (bug)\nAbilities can be buffered during the windup.\nThe attack goes through  spell shields, but also triggers them. (bug)\nIf the target dies at the instant Harsh Lesson is about to hit the target, the attack will hit, be consumed, but will not make the Tentacles slam. (bug)\nThe Tentacle attacking because of Harsh Lesson is considered to be of the same cast instance, and thus will not grant additional stacks of  Conqueror,  Electrocute,  Phase Rush and Tribute. (bug)\nHarsh Lesson triggers  Bone Plating and one of its plates with the same attack. (bug)\nIt also triggers  Arcane Comet and reduces its cooldown twice.\nWhile the ability is active, Tentacles are commanded to attack on-hit, interacting with  Guinsoo's Rageblade without consuming the empowered attack.\nAttack moving while charging  Hexflash will delay the attack.",
+        "blurb": "Active:  Illaoi's next basic attack gains  bonus attack range and causes her to  leap to her target, dealing bonus physical damage and commanding nearby Tentacles to attack the target.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Test of Spirit",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Illaoi launches a tendril in the target direction that stops at the first enemy hit, pulling their Spirit out in front of Illaoi over 0.75 seconds if they're a champion. The target is tethered to the Spirit for 7 seconds, revealing them in addition to granting sight of the area around them while the tether remains.",
+            "leveling": []
+          },
+          {
+            "description": "The Spirit spawns with the target's current health, armor and magic resist, and redirects a portion of the pre-mitigation damage received to the tethered champion.",
+            "leveling": [
+              {
+                "attribute": "Damage Transmission",
+                "modifiers": [
+                  {
+                    "values": [
+                      25,
+                      30,
+                      35,
+                      40,
+                      45
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  },
+                  {
+                    "values": [
+                      8,
+                      8,
+                      8,
+                      8,
+                      8
+                    ],
+                    "units": [
+                      "% per 100 AD",
+                      "% per 100 AD",
+                      "% per 100 AD",
+                      "% per 100 AD",
+                      "% per 100 AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "When the Spirit is killed or the target leaves tether range, the tether is severed, marking the target as a Vessel for 10 seconds and slowing them by 80% for 1.5 seconds once the tether returns back to them. Each Tentacle autonomously attacks the closest Vessel or Spirit, prioritizing the latter, once every 5.5 / 4.5 / 3.5 (based on level) seconds.",
+            "leveling": []
+          },
+          {
+            "description": "Enemies made a Vessel also spawn a Tentacle near themselves every 5 / 4 / 3 (based on level) seconds. Tentacles can spawn 250 units closer to each other than when spawned by Illaoi.",
+            "leveling": []
+          },
+          {
+            "description": "Illaoi is unable to act while firing the projectile and while the target's Spirit is being pulled.\nIllaoi cannot cast Test of Spirit again until the Spirit dies.\nVessels can dispel the debuff by scoring a takedown against Illaoi.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                35,
+                40,
+                45,
+                50,
+                55
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                16,
+                15,
+                14,
+                13,
+                12
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "Special",
+        "resource": "MANA",
+        "damageType": "MIXED_DAMAGE",
+        "spellEffects": null,
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Spirits are classified as  clones:\nSpirits can only be fully targeted by Illaoi's team and neutral monsters. The Spirit's allies cannot manually select it as a valid target for spells and abilities, but they can still do so with automatically targetted effects. (bug)\nSpirits take 50% damage from turrets. (bug)\nSpirits cannot be  healed nor  shielded ( Summon Aery excluded (bug)).\nThe Spirit levels up when the Vessel does, gaining the target's stats per level. If the target has a resource that also increases per level (i.e  mana), the Spirit's lifetime will increase instead. (bug)\nThe Spirit's destination is decided based on Illaoi's position and facing direction when the target is hit.\nThe Spirit is  untargetable while it is being pulled, and spawns with the tethered champion's default model and size.\nThe Spirit's lifetime is sometimes 0.25 seconds longer, while its untargetability is sometimes shorter, causing Tentacles to hit an inconsistent amount of times.\nRedirected damage is calculated by taking the pre-mitigation damage against the Spirit, applying Test of Spirit's damage modifier, and then capping it to the Spirit's current health. This damage will then be affected by damage modifiers (resistances and other effects) of the Vessel.\nThis order of operations allows Test of Spirit to deal more or less percentage of the Vessel's health than would be expected:\nBecause the Spirit's modifiers can be different from the Vessel's, and the damage being pre-mitigated, allowing the Spirit to have higher or lower effective health, respectively increasing or decreasing the maximum achievable damage from killing it.\nBecause the cap is supposed to block excess damage over the Spirit's current health, which does not reliably do so or does too well, depending on whether the Spirit's damage modifier is higher than Test of Spirit's or not, respectively. This causes an increasing difference of damage when the pre-mitigated damage is between Spirit current health ÷ Spiritmod and Spirit current health ÷ Emod. (bug)\nTo fix this case, pre-mitigated damage would need to be capped at the amount that kills the Spirit, and only then have Test of Spirit's damage modifier apply.\nIllaoi needs 937.5 / 875 / 812.5 / 750 / 687.5 total AD to reach 100% redirected damage. As per above, the damage is still dependent on the Spirit's and Vessel's damage modifiers and may not always be able to deal 100% of the target's current health as total redirected damage.\n Spell shields may only prevent the initial spirit grab and the slow upon becoming a Vessel. Spell shields will not prevent becoming a Vessel or Tentacles from attacking.\nThe tendril can be blocked by abilities such as  Yasuo's  Wind Wall, but the returning tether slow cannot, even if it can otherwise be  destroyed by effects that can do so (i.e  untargetability).\nThe tether slow will not be fired if the target is already  untargetable when the Spirit dies.\nThe spirit pull is not considered a  crowd control effect and will not be blocked by  crowd control immunity, with the exception of  Morgana's  Black Shield.(bug)\nThe projectile tentacle model is linked to Illaoi's model animation and size. However gameplay wise it is not, thus the actual hitbox being different than the position, width and length of the visible model. (bug)\nThe model will stop mid-air / vanish if Illaoi goes into  stasis,  sleep or  airborne, however the actual hitbox will continue its trajectory unseen.\n PENDING FOR TEST: The projectile is however seen by enemies if Illaoi is not  visible.\nThis ability will cast from wherever the caster is at the end of the cast time.\nAnd will fire towards the same pointed location.\nGrabbing the Spirit of a champion before it goes into  resurrection via  Chronoshift or  Guardian Angel will spawn the Spirit with 0 health, making it  invulnerable. (bug)\nThe same does not happen with other resurrection effects (i.e  Karthus'  Death Defied) since they leave the champion with more than 0 health.\nGrabbing the Spirit of  Viego will make the Spirit's lifetime (the white bar below the lifebar) disappear. (bug)\n PENDING FOR TEST: Grabbing the Spirit of an  Oathsworn will make the Spirit invisible. (bug)\nIllaoi is the only one able to see who's been Vesseled, by adding a layer of watery effects on their model. The Vessel will also be let known it's debuffed, by having a layer of watery effects on its screen instead.\nIf the target becomes a Vessel while  vanished, the layer on their model will fail to be added. (bug)\nThe Vessel status effect is a debuff that doesn't persist through death.\nIf the target is made a Vessel while  resurrecting, they will not revive as a Vessel.\nRunes consider the Spirit as a champion for their effects and stat-tracking. (bug)\nTentacles damage with  First Strike only reflects double bonus damage, not taking into account actual damage done to the Spirit (e.g if  First Strike would deal 3 bonus damage, what would get reflected is 6 damage). (bug)\nTransferred damage will apply on-damage effects, such as  Black Cleaver,  Morellonomicon,  Executioner's Calling,  Riftmaker,  Aspect of the Dragon burn damage, and  The Darkin Scythe.\nRedirected damage always counts as single target for the purpose of  Omnivamp.\nTransferred damage will not doubly apply on-hit or on-spell effects versus the target (e.g.  Liandry's Torment,  Phase Rush stacks). These effects are only applied versus the Spirit.\nAttacking the Vessel and its Spirit simultaneously will only apply one stack of  Black Cleaver to the Vessel. (bug)\nWhen the tether is broken (whether the Spirit's lifetime ran out or the target moved out of range), the Spirit will  vanish and move to Illaoi's location.\nAn  uncancellable windup attack may still kill the Spirit after it vanished to grant the gold, but without making the target a Vessel.\nThe Spirit is immune to  stasis (i.e.  Bard's  Tempered Fate).\n Fiora's  Riposte can be used to prevent becoming a Vessel if used before the Spirit is killed or while leaving the tether's range.\n Sion's Spirit cannot be spawned during  Glory in Death. Spirits created before Sion's  zombie state will remain active.\nIf the target that had its Spirit pulled from them is taken into the  Realm of Death, the tether will break, but they will not be made into a Vessel.\nThe following table refers for interactions while Illaoi is firing the projectile and while the target's Spirit is being pulled:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Tentacle Smash and  Leap of Faith are buffered.  Harsh Lesson is usable, but is buffered while pulling the Spirit. (bug)\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+        "blurb": "Active:  Illaoi reaches with a tendril in the target direction that stops upon the first enemy hit. If the target is a  champion, she rips their Spirit out from them to stand before her.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": "1500 /  1700",
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1900",
+        "width": "100",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "R": [
+      {
+        "name": "Leap of Faith",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Illaoi gains displacement immunity and leaps into the air for the cast time. She then slams her idol into the ground, dealing physical damage to nearby enemies. For each enemy champion hit, a Tentacle is summoned for 8 seconds (up to a maximum of 6 summons).",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      150,
+                      250,
+                      350
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      50,
+                      50,
+                      50
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "For the duration, Harsh Lesson's cooldown is halved, all Tentacles awakened by Illaoi are untargetable, will not show their hitboxes, nor go dormant, and will take half the amount of time to make an attack. This however does not affect the Tentacle attack from Tentacle Smash.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                120,
+                95,
+                70
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "Special",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nIllaoi spawns the  Tentacle 700 range away from her, unless there's a natural wall blocking the way making the Tentacle spawn on it, with an angle relative to the direction she's facing.\n1+ champions: one  Tentacle at 0 degrees. (towards Illaoi's facing direction)\n2+ champions: one  Tentacle at 60 degrees.\n3+ champions: one  Tentacle at 300 degrees.\n4+ champions: one  Tentacle at 120 degrees.\n5+ champions: one  Tentacle at 240 degrees.\n6+ champions: one  Tentacle at 180 degrees.\nTentacles may spawn on base barriers. If Illaoi is in the center of a base barrier, all Tentacles will spawn in the same position and stack over each other, making it appear as if there was only one Tentacle.\nIllaoi's facing direction is decided by the position of the cursor on cast, but can also be changed mid-cast through other effects, such as  Flash.\nIf there are no walls nearby, spawning the last  Tentacle will form a perfect hexagon.\n Spell shields will block the ability's damage but will not prevent Tentacles from spawning.\nIf Illaoi  dies within 0.25 seconds of dropping down, she will spawn buffed Tentacles, but she won't manage in time to buff the already spawned ones. (bug)\nIf Illaoi is near a Tentacle that is about to spawn, it will spawn buffed by Leap of Faith even if Illaoi is no longer nearby.\nUsing  Harsh Lesson after Illaoi drops down will command Tentacles to instantly attack, regardless if they were already attacking. Their old attack will keep on going and will hit while the second attack is on its animation attack. (bug)\nThis makes it possible for the same tentacle to reduce its own damage by having the second attack hit too fast, which is not otherwise possible.\nUsing  Harsh Lesson an instant before Leap of Faith's buff finishes will delay the Tentacle's attack. (bug)",
+        "blurb": "Active:  Illaoi becomes  unstoppable before dealing physical damage to nearby enemies. For each enemy  champion hit, a Tentacle is summoned around her for a period.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.5",
+        "effectRadius": "500",
+        "targetRange": null
+      }
+    ]
+  },
+  "releaseDate": "2015-11-24",
+  "releasePatch": "5.23",
+  "patchLastChanged": "14.4",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 790,
+    "saleRp": 0
+  },
+  "lore": "Illaoi's powerful physique is dwarfed only by her indomitable faith. As the prophet of the Great Kraken, she uses a huge, golden idol to rip her foes' spirits from their bodies and shatter their perception of reality. All who challenge the “Truth Bearer of Nagakabouros” soon discover Illaoi never battles alone—the god of the Serpent Isles fights by her side.",
+  "faction": "bilgewater",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 420000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 880,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Illaoi’s powerful physique is dwarfed only by her indomitable faith. As the prophet of the Great Kraken, she uses a huge, golden idol to rip her foes’ spirits from their bodies and shatter their perception of reality. All who challenge the 'Truth Bearer of Nagakabouros' soon discover Illaoi never battles alone—the god of the Serpent Isles fights by her side.",
+      "release": "2015-11-24",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/420/420000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/420/420000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/420/420000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/base/illaoiloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Rolonda Watts"
+      ],
+      "splashArtist": [
+        "Evan 'Somnicidal' Monteiro"
+      ]
+    },
+    {
+      "name": "Void Bringer",
+      "id": 420001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Void Bringer",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [],
+      "lore": null,
+      "release": "2015-11-24",
+      "set": [
+        "Curse of the Void"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/420/420001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/420/420001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/420/420001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/skin01/illaoiloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Rolonda Watts"
+      ],
+      "splashArtist": [
+        "Alvin Lee"
+      ]
+    },
+    {
+      "name": "Resistance",
+      "id": 420002,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Resistance",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Aquamarine",
+          "id": 420007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420007.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 420005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420005.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 420006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420006.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 420004,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420004.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 420009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420009.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 420003,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420003.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 420008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420008.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Chief enforcer of the human-led resistance, Illaoi was once the subject of a failed Battlecast conversion that left her with control over nearby machines. Seizing her newfound power, she has single handedly decimated Viktor's forces in countless battles, becoming a beacon of hope for rebels across the world.",
+      "release": "2018-03-15",
+      "set": [
+        "Battlecast"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/420/420002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/420/420002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/420/420002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/skin02/illaoiloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Rolonda Watts"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "Cosmic Invoker",
+      "id": 420010,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Cosmic Invoker",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 420015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420015.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 420012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420012.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 420013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420013.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 420017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420017.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 420016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420016.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 420011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420011.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 420014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420014.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "An entity who carries the raw power of cosmic creation in her hands, Illaoi can slam the orb she holds into the very fabric of reality, allowing time to flow forward even in places where life has been eradicated.",
+      "release": "2020-11-24",
+      "set": [
+        "Cosmic"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/420/420010.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/420/420010.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/420/420010.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/skin10/illaoiloadscreen_10.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Rolonda Watts"
+      ],
+      "splashArtist": [
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Snow Moon",
+      "id": 420018,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Snow Moon",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 420025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420025.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 420020,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420020.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 420022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420022.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 420026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420026.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 420024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420024.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 420019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420019.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 420021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420021.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 420023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/420/420023.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Illaoi, the High Priestess of the Snow Moon, imagines a world free of the madness that consumes it. Her vision can only be realized when every soul is cleansed, every demon ripped from its bindings. Maintaining order with an icy resolve, she'll stop at nothing, her own humanity a fleeting memory.",
+      "release": "2022-06-23",
+      "set": [
+        "Snow Moon"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/420/420018.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/420/420018.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/420/420018.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/skin18/illaoiloadscreen_18.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Rolonda Watts"
+      ],
+      "splashArtist": [
+        "David Villegas",
+        "West Studio"
+      ]
+    }
+  ]
+}

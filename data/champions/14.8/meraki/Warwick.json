@@ -1,0 +1,2109 @@
+{
+  "id": 19,
+  "key": "Warwick",
+  "name": "Warwick",
+  "title": "the Uncaged Wrath of Zaun",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Warwick.png",
+  "resource": "MANA",
+  "attackType": "MELEE",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 620,
+      "percent": 0,
+      "perLevel": 99,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 4,
+      "percent": 0,
+      "perLevel": 0.75,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 280,
+      "percent": 0,
+      "perLevel": 35,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 7.45,
+      "percent": 0,
+      "perLevel": 0.6,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 33,
+      "percent": 0,
+      "perLevel": 4.4,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 2.05,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 3,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 335,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 400,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 111.111099243164,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 55,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.638,
+      "percent": 0,
+      "perLevel": 2.3,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.638000011444091,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.125,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 125,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "DIVER",
+    "FIGHTER",
+    "TANK"
+  ],
+  "attributeRatings": {
+    "damage": 2,
+    "toughness": 2,
+    "control": 2,
+    "mobility": 1,
+    "utility": 1,
+    "abilityReliance": 30,
+    "difficulty": 1
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Eternal Hunger",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Warwick deals 12 − 46 (based on level) (+ 15% bonus AD) (+ 10% AP) bonus magic damage on-hit.\nWhile below 50% maximum health, Warwick also heals for 100% of the post-mitigation damage dealt by Eternal Hunger, increased to 250% while below 25% maximum health.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self",
+        "spellshieldable": "False",
+        "resource": null,
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Proc",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Eternal Hunger does not affect:\nstructures\nwards (except  effigies),\n Gangplank's  kegs\n Illaoi's  Tentacles\n PENDING FOR TEST: Other units with modified health behaviour.",
+        "blurb": "Innate:  Warwick deals bonus magic damage on-hit.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Jaws of the Beast",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Warwick lunges at the target enemy over 0.264 seconds and bites them, dealing magic damage, healing himself for a percentage of the post-mitigation damage dealt, as well as applying on-hit and on-attack effects, and life steal at 100% effectiveness. The damage based on the target's health ratio is capped against monsters.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      6,
+                      7,
+                      8,
+                      9,
+                      10
+                    ],
+                    "units": [
+                      "% of target's maximum health",
+                      "% of target's maximum health",
+                      "% of target's maximum health",
+                      "% of target's maximum health",
+                      "% of target's maximum health"
+                    ]
+                  },
+                  {
+                    "values": [
+                      120,
+                      120,
+                      120,
+                      120,
+                      120
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Monster Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      150,
+                      165,
+                      180,
+                      195,
+                      210
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      120,
+                      120,
+                      120,
+                      120,
+                      120
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Healing Percentage",
+                "modifiers": [
+                  {
+                    "values": [
+                      25,
+                      37.5,
+                      50,
+                      62.5,
+                      75
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "While Jaws of the Beast is active, Warwick is displacement immune and clamps his jaw on the target, following all of their movement. The ability can be held for additional effects.",
+            "leveling": []
+          },
+          {
+            "description": "Hold: Warwick performs the bite, and then begins to charge for 0.5 seconds, extended if the target is under effects of a dash or displacement. During the charge, he leaps behind the target.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                50,
+                60,
+                70,
+                80,
+                90
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                6,
+                6,
+                6,
+                6,
+                6
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Unit",
+        "affects": "Enemies, Self",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "basic",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Details\nJaws of the Beast deals  basic damage, but also triggers spell effects by dealing an additional 0  spell damage.\nJaws of the Beast has a 0.264 seconds cast delay, which is the amount of time required for the bite to occur from the start of the cast. This should not be confused with [cast times].\nIf the cast started beforehand, both the damage and the heal occur even after Warwick's  death, or during  resurrection.\nIf the target dies prior to Warwick reaching them, Jaws of the Beast refunds its cooldown when tapped. The ability can be still held, however, Warwick is no longer eligible for the refund in this case.  Correction: The refund can occasionally fail. (bug)\nThe healing is calculated only from Jaws of the Beast's damage, while additional effects, such as on-hits, are not.\nWhile the bite always occurs after the same delay, the time spent lunging does not, which depends on the range Jaws of the Beast was cast away from the target, up to 0.5 seconds when cast at maximum range.\nThis does not affect the  lockout timer, which is the same as the bite's delay.\nThe lunge always places Warwick to his attack range to the center of his target, while the dash will place him up to the edge of his attack range from the target's edge.\nIt has been special cased so Warwick does not follow an enemy's  Recall or a  Sion that revives from  Glory in Death.Correction: This may occasionally fail. Also note that as of currently, if Warwick manages to bite the target in those conditions, he will almost always end up following them to their base. (bug)\nJaws of the Beast's channel cannot be initiated while  grounded or  rooted. Warwick can only use the normal cast.\nThe channel will not be interrupted by either of the two effects, despite the lock-on being a movement channel.\nInteractions & Other\n\nIn order to hit the cap, the target monster needs to have at least 1667 / 1786 / 1875 / 1945 / 2000 health.\nJaws of the Beast is the only ability in the game that combines  channeling with  displacement immunity. Every  interrupting crowd control effect that is not resisted by the displacement immunity will prematurely stop the  dash.\nThe bite can still occur if cast before the crowd control application, but Warwick cannot start channeling.\nAbilities that apply both  stun and  airborne at the same time cause Warwick to ignore the displacement, but prematurely stop the channel and the dash.\nThe only exception to this is  Sion's  Glory in Death.\nWarwick will follow enemies that move via  attachment effects but the lock-on will not be extended.\nWhile Jaws of the Beast does not use Quick Casting by default, click-and-hold is comparable to the input required to use  Bone Skewer or  Comet Spear. It does not accept two-click input (e.g. First Cast and Recast) that abilities like  Piercing Arrow or  Decimating Smash use in Standard Casting.\nWarwick will attempt to basic attack the target after a short delay.\nThe following table refers for interactions while Warwick is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Primal Howl is usable.  Blood Hunt and  Infinite Duress are disabled.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects\n\nKnown Issues\n\nJaws of the Beast will also refund its  cooldown if it kills the target after being held for exactly its bite delay. (bug)\nThe ability can be shortly cast on a dead target, with the ability going on cooldown.(bug)",
+        "blurb": "Active:  Warwick lunges at his target and bites them, dealing magic damage that is increased based on the target's maximum health and  healing himself for a portion of the damage dealt. When held, he also  charges briefly,  leaping behind his target.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": "350"
+      }
+    ],
+    "W": [
+      {
+        "name": "Blood Hunt",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/w",
+        "effects": [
+          {
+            "description": "Passive: Warwick gains bonus attack speed upon basic attacking an enemy who is below 50% of their maximum health, but loses it when not attacking them or switching to a target above the threshold.",
+            "leveling": [
+              {
+                "attribute": "Bonus Attack Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      70,
+                      80,
+                      90,
+                      100,
+                      110
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Increased Attack Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      175,
+                      200,
+                      225,
+                      250,
+                      275
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Passive: Warwick senses all enemy champions on the map who are damaged below 50% of their maximum health by an allied source, marking them with Blood Hunt until they regenerate or heal above this threshold again. He sees trails leading toward them and gains bonus movement speed while following a trail. This bonus is lost for 0.5 seconds upon entering champion combat, but will build up again over 3.5 seconds.",
+            "leveling": [
+              {
+                "attribute": "Bonus Movement Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      35,
+                      42.5,
+                      50,
+                      57.5,
+                      65
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Increased Movement Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      87.5,
+                      106.25,
+                      125,
+                      143.75,
+                      162.5
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "The attack speed and movement speed Passive bonuses are increased to 250% against enemies who are below 20% of their maximum health.",
+            "leveling": []
+          },
+          {
+            "description": "Active: Warwick senses the nearest enemy champion in the area, marking them with Blood Hunt for 8 seconds, gaining both passive bonuses against them regardless of their current health.",
+            "leveling": []
+          },
+          {
+            "description": "Blood Hunt is placed on a 3-second static cooldown during champion combat. Additionally, while no enemy champions are marked, the current cooldown of Blood Hunt runs out twice as quickly - it is reduced by an additional second for each second passed.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                70,
+                70,
+                70,
+                70,
+                70
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                85,
+                70,
+                55,
+                40
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self / Enemies",
+        "spellshieldable": "False",
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Correction: The in-game description incorrectly states that the bonuses are tripled (300%) against enemies below  20% of their maximum health.\n Eternal Hunger had a similar issue which was eventually fixed when it was rewritten.\nIf Blood Hunt was cast with no enemy champions within range, the ability does nothing and goes on cooldown.\nAs mentioned by the description, Blood Hunt only marks enemy champions if they are damaged below the thresholds by an allied source. This includes Warwick himself, champions,  minions, and  turrets.\nThe only exception is the allied  Nexus Obelisk, because that deals  internalraw damage, which does not trigger damage-related events such as Blood Hunt's marking.\nNote that  monsters are neutral units.\nBlood Hunt can detect and target decoys.\nBlood Hunt will occur from wherever Warwick was at the start of the cast time.\nBlood Hunt has an indicator that appears above the target(s) when they are being hunted. Some skins have a unique indicator.\n Classic PROJECT Lunar Guardian Old God Winterblessed Prestige Winterblessed\nEach of  Old God's  Chromas have a unique color variation:\nRubyCitrineEmeraldSapphireRose QuartzObsidianAquamarinePearlDark Ritual\nCorrection: It should be noted that as of right now, skins that use the  original's assets are all using a purple-blueish indicator that was undocumentedly introduced. It was possibly meant for color blind mode, based on the color. It is unknown whether the change was intentional or is a wrongly implemented feature.",
+        "blurb": "Passive:  Warwick gains  attack speed against targets below 50% of their maximum health. Against champions, he also gains out of combat  movement speed.\nThese bonuses are massively increased, if the target is below 20% of their maximum health",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.5",
+        "effectRadius": "4000",
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Primal Howl",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Warwick gains damage reduction for up to 2.5 seconds. Primal Howl can be recast after 1 second, and does so automatically after the duration.",
+            "leveling": [
+              {
+                "attribute": "Damage Reduction",
+                "modifiers": [
+                  {
+                    "values": [
+                      35,
+                      40,
+                      45,
+                      50,
+                      55
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Recast: Warwick howls, ending Primal Howl's effects and fearing nearby enemies for 1 second, slowing them by 90%.",
+            "leveling": []
+          },
+          {
+            "description": "Starting Infinite Duress' channel while Primal Howl is active will initiate the recast without ending the damage reduction buff prematurely.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                40,
+                40,
+                40,
+                40
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                15,
+                14,
+                13,
+                12,
+                11
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nIf the ability is not manually recasted, the secondary effect will trigger without being considered as an ability activation.\nThe recast's howling animation has a 0.5-second  lockout time.\nThis will also cancel Warwick's basic attack.\nWarwick cannot attack or cast abilities during the animation, instead the last input will be buffered to play after it ends.\nWarwick will automatically recast if he enters  resurrection.",
+        "blurb": "Active:  Warwick gains damage reduction for a short time. Primal Howl can be recast within the duration, and does so automatically afterwards.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "375",
+        "targetRange": null
+      }
+    ],
+    "R": [
+      {
+        "name": "Infinite Duress",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Warwick leaps in the target direction with crowd control immunity, stopping upon hitting an enemy champion. He then knocks them down and channels for up to 1.5 seconds to suppress, reveal, and deal magic damage every 0.25 seconds, revealing himself in the process.",
+            "leveling": [
+              {
+                "attribute": "Total Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      175,
+                      350,
+                      525
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      167,
+                      167,
+                      167
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Warwick heals for 100% of all post-mitigation damage he deals to the target during Infinite Duress.",
+            "leveling": []
+          },
+          {
+            "description": "Infinite Duress applies on-hit and on-attack effects 3 times, and life steal at 100% effectiveness.",
+            "leveling": []
+          },
+          {
+            "description": "Primal Howl can be cast during the dash.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                110,
+                90,
+                70
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "basic",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Infinite Duress deals  basic damage, but also triggers spell effects by dealing an additional 0  spell damage.\nThe minimum range of the ability is 275 units, based on the minimum movement speed that a champion can have (110) while still being able to move. The \"base\" range of this ability is 837.5 because of his 335 base movement speed.\nConsidering movement speed soft caps, with  Blood Hunt, this range increases to 1112 / 1145.5 / 1179 / 1203.125 / 1224.0625, further increased to 1360.15625 / 1412.5 / 1464.84375 / 1517.1875 / 1569.53125 against enemy champions below 20% health.\nInfinite Duress deals a total of 6 damage instances:\nThe 1st, 3rd, and 5th ticks deals 2/9ths of the total damage as a single instance while applying both spell and on-hit effects.\nThe 2nd, 4th, and 6th ticks deal 1/9ths of the total damage as a single instance while applying spell effects but not on-hit effects.\nIf Warwick does not collide with a champion, he will slide a fixed distance past the maximum range during which he is no longer crowd control immune and unable to declare basic attacks or cast movement abilities, including  Flash, but being able to cast  Jaws of the Beast and  Blood Hunt, with the former also interrupting the slide.\nWarwick is able to cast  Primal Howl at any time during the dash.\nActivating  Zhonya's Hourglass during the dash interrupts it.\nEach hit counts as a separate hit for effects such as  Electrocute and  Eclipse's Ever Rising Moon.\nWarwick gains the  cc-immunity at the start of the cast time.\n Cleansing the  suppression does not interrupt the  channel and Warwick will continue to strike but not deal any damage.\nInfinite Duress is special cased to have its channel interrupted by  Fate's Call.\nIf the target is  crowd control immune or protected by  spell shield upon collision, Warwick will not start the  channel.\nIf the target is in a  zombie state, Warwick will stop the channel after ~0.5 seconds of hitting them.(bug)\nInfinite Duress covers Warwick's hitbox, meaning he will collide with enemy champions that are particularly close to him.\nThe following table refers for interactions while Warwick is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects\n\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+        "blurb": "Active:  Warwick  leaps a huge distance and stops on the first champion he collides with,  suppressing them while  channeling for a brief time. He mauls them over the duration, dealing magic damage and  healing for 100% of the damage dealt.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": "150",
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.1",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ]
+  },
+  "releaseDate": "2009-02-21",
+  "releasePatch": "Alpha Week 2",
+  "patchLastChanged": "13.9",
+  "price": {
+    "blueEssence": 450,
+    "rp": 260,
+    "saleRp": 0
+  },
+  "lore": "Warwick is a monster who hunts the gray alleys of Zaun. Transformed by agonizing experiments, his body is fused with an intricate system of chambers and pumps, machinery filling his veins with alchemical rage. Bursting out of the shadows, he preys upon those criminals who terrorize the city's depths. Warwick is drawn to blood, and driven mad by its scent. None who spill it can escape him.",
+  "faction": "zaun",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 19000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 260,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Warwick is a monster who hunts the gray alleys of Zaun. Transformed by agonizing experiments, his body is fused with an intricate system of chambers and pumps, machinery filling his veins with alchemical rage. Bursting out of the shadows, he preys upon those criminals who terrorize the city’s depths. Warwick is drawn to blood, and driven mad by its scent. None who spill it can escape him.",
+      "release": "2009-02-21",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/base/warwickloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Victor '3rdColossus' Maury"
+      ]
+    },
+    {
+      "name": "Urf the Manatee",
+      "id": 19002,
+      "isBase": false,
+      "availability": "Limited",
+      "formatName": "Urf the Manatee",
+      "lootEligible": false,
+      "cost": 5000,
+      "sale": 0,
+      "distribution": "Limited Availability",
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": null,
+      "release": "2010-03-31",
+      "set": [
+        "Urf the Manatee"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin02/warwickloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "Big Bad",
+      "id": 19003,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Big Bad",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Having recently eaten three stubborn hogs and a duck who couldn't run very fast, Warwick has pivoted into devouring kindly grandmothers and wearing their clothes. He then impersonates them to get close to their grandchildren, who he also devours. Warwick is a really bad guy.",
+      "release": "2010-04-27",
+      "set": [
+        "Storybook"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19003.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19003.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19003.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin03/warwickloadscreen_3.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Max Grecke"
+      ]
+    },
+    {
+      "name": "Grey",
+      "id": 19001,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Grey",
+      "lootEligible": false,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "Honor Capsule",
+      "rarity": "NoRarity",
+      "chromas": [
+        {
+          "name": "Sapphire",
+          "id": 19018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19018.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 19025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19025.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Meteorite",
+          "id": 19023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19023.png",
+          "colors": [
+            "#5F432B",
+            "#5F432B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Warwick was a man, once—a knight of great renown, pledged to serve at the side of Blade Queen Lissandra. In exchange for his loyalty she gifted him a shard of spectral moonlight, cursed to one day pierce his heart and sink him into the depths of depravity.",
+      "release": "2010-07-08",
+      "set": [
+        "Omen of the Dark"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin01/warwickloadscreen_1.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin01/warwickloadscreen_1_le.jpg",
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Mist XG"
+      ]
+    },
+    {
+      "name": "Tundra Hunter",
+      "id": 19004,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Tundra Hunter",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": null,
+      "release": "2010-08-15",
+      "set": [
+        "Freljord"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19004.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19004.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19004.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin04/warwickloadscreen_4.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Jessica 'OwleyCat' Oyhenart"
+      ]
+    },
+    {
+      "name": "Feral",
+      "id": 19005,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Feral",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Another of Singed's vile henchmen, Warwick is never far from his villainous master. Given wolf powers after being bitten by a radioactive wolf, Warwick has been further augmented by Singed's evil research! Will our brave heroes ever be able to stop him?!",
+      "release": "2010-11-16",
+      "set": [
+        "Silver Age"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19005.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19005.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19005.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin05/warwickloadscreen_5.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Mike Azevedo"
+      ]
+    },
+    {
+      "name": "Firefang",
+      "id": 19006,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Firefang",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "The Ashen Lord's hounds blaze with the fires of unspeakable molten hellscapes, and at their head is Warwick, the Firefang. Scouring the earth for anything untouched by flame, he relentlessly hunts the survivors of Infernal attacks, reducing them to sputtering cinders.",
+      "release": "2011-03-29",
+      "set": [
+        "Infernal"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19006.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19006.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19006.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin06/warwickloadscreen_6.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Xi Zhang"
+      ]
+    },
+    {
+      "name": "Hyena",
+      "id": 19007,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Hyena",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "In the old days, hyenas were known as opportunistic hunters famed for their violent infighting and chorus of inhuman laughter. Now, in the wasteland, not much has changed.",
+      "release": "2011-12-05",
+      "set": [
+        "Road Warrior"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19007.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19007.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19007.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin07/warwickloadscreen_7.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": true,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Izzy Medrano"
+      ]
+    },
+    {
+      "name": "Marauder",
+      "id": 19008,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Marauder",
+      "lootEligible": true,
+      "cost": 750,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Ancient writings concerning the rise and fall of the Magelords make curious references to “Runes”, and the cataclysmic properties they supposedly held. These mysteries are compounded by chimeric monstrosities such as Warwick, whose existence within the Marauder ranks defies any rational explanation.",
+      "release": "2015-02-17",
+      "set": [
+        "Marauder"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19008.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19008.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19008.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin08/warwickloadscreen_8.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Pan Chengwei"
+      ]
+    },
+    {
+      "name": "Urfwick",
+      "id": 19009,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Urfwick",
+      "lootEligible": false,
+      "cost": 150000,
+      "sale": 0,
+      "distribution": "Essence Emporium",
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": null,
+      "release": "2017-11-08",
+      "set": [
+        "Urf the Manatee"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19009.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19009.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19009.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin09/warwickloadscreen_9.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "Lunar Guardian",
+      "id": 19010,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Lunar Guardian",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Golden",
+          "id": 19015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19015.png",
+          "colors": [
+            "#FFC948",
+            "#FFC948"
+          ],
+          "descriptions": [
+            {
+              "description": "Loot exclusive gained from the 2019 Lunar Revel event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Jasper",
+          "id": 19012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19012.png",
+          "colors": [
+            "#9F4A25",
+            "#9F4A25"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 19013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19013.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 19011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19011.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "Bundle exclusive from the 2018 Lunar Revel event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "ID"
+            },
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            },
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 19014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19014.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Gifted to the Lunar Empress when she was a child, Warwick was raised alongside her to guard the immortal realm from an encroaching darkness. More beastly and feral than his companion Nasus, Warwick stands watch in the south, relentlessly pursuing foes to the ends of the world.",
+      "release": "2018-02-08",
+      "set": [
+        "Lunar Revel"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19010.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19010.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19010.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin10/warwickloadscreen_10.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin10/warwickloadscreen_10_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Esben Lash Rasmussen"
+      ]
+    },
+    {
+      "name": "PROJECT",
+      "id": 19016,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "PROJECT: Warwick",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 19028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19028.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Aquamarine",
+          "id": 19032,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19032.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 19031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19031.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Meteorite",
+          "id": 19026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19026.png",
+          "colors": [
+            "#5F432B",
+            "#5F432B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 19027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19027.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Reckoning",
+          "id": 19034,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19034.png",
+          "colors": [
+            "#FF5500",
+            "#162B30"
+          ],
+          "descriptions": [
+            {
+              "description": "Loot exclusive gained during the 2019 PROJECT event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 19033,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19033.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 19030,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19030.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2019.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 19029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19029.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Plucked from the wastelands by a PROJECT research cell, Warwick has been irrevocably transformed into a horrifying new stage of transhuman evolution—a weaponized monster stripped of all remorse, and programmed solely for violent suppression. Through the meddling of the ragtag outsiders, he escaped before being completed, and now rampages indiscriminately across the City.",
+      "release": "2019-08-01",
+      "set": [
+        "PROJECT"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19016.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19016.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19016.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin16/warwickloadscreen_16.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin16/warwickloadscreen_16_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Old God",
+      "id": 19035,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Old God",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Aquamarine",
+          "id": 19042,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19042.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 19037,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19037.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Dark Ritual",
+          "id": 19044,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19044.png",
+          "colors": [
+            "#162B30",
+            "#8E0A38"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2021 Coven event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 19038,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19038.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 19041,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19041.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 19043,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19043.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 19040,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19040.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 19036,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19036.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 19039,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19039.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Once known as Father Wolf, Warwick roamed the wood and reveled in moonlight's bloody hunt. The Eclipse Order thought to slay him in his den and end his barbarity—but death means nothing to Old Gods, and he did not stay down. Father Wolf howls into the night once more, now slavering for the taste of human flesh.",
+      "release": "2021-08-12",
+      "set": [
+        "Coven",
+        "Elderwood"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19035.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19035.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19035.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin35/warwickloadscreen_35.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin35/warwickloadscreen_35_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Augusto Quirino",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Winterblessed",
+      "id": 19045,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Winterblessed",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Citrine",
+          "id": 19048,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19048.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 19049,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19049.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Granite",
+          "id": 19053,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19053.png",
+          "colors": [
+            "#85827F",
+            "#85827F"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 19054,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19054.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 19051,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19051.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 19047,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19047.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 19050,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19050.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 19052,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19052.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Wreathguard",
+          "id": 19055,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/19/19055.png",
+          "colors": [
+            "#BF2020",
+            "#368B25"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the Season 2023 event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "The Beast Warwick sniffed his newborn sibling, the Automaton Shaco, as his maker beckoned the leaders to accept their gifts. The Hunter claimed the Beast as his prize, but the prospect of sharing so disgusted the Sage and Warden that chaos quickly erupted over who deserved what. All the while Warwick focused on Polaris, who watched with a wry smile.",
+      "release": "2022-12-08",
+      "set": [
+        "Winterblessed"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19045.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19045.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19045.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin45/warwickloadscreen_45.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin45/warwickloadscreen_45_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Rudy Siswanto"
+      ]
+    },
+    {
+      "name": "Prestige Winterblessed",
+      "id": 19046,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Prestige Winterblessed",
+      "lootEligible": true,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "125 Mythic Essence",
+      "rarity": "Mythic",
+      "chromas": [],
+      "lore": "It can get rough on the runway, but everybody knows better than to mess with Warwick. Between his razor sharp cuts, impeccable grooming, and wolfpack entourage, the Gala better think twice before it calls this one a beast.",
+      "release": "2022-12-08",
+      "set": [
+        "Winterblessed"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/19/19046.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/19/19046.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/19/19046.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin46/warwickloadscreen_46.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin46/warwickloadscreen_46_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Dave B. Mitchell"
+      ],
+      "splashArtist": [
+        "Francis Tneh",
+        "West Studio"
+      ]
+    }
+  ]
+}

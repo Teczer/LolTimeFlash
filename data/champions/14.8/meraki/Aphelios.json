@@ -1,0 +1,2350 @@
+{
+  "id": 523,
+  "key": "Aphelios",
+  "name": "Aphelios",
+  "title": "the Weapon of the Faithful",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Aphelios.png",
+  "resource": "MANA",
+  "attackType": "RANGED",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 580,
+      "percent": 0,
+      "perLevel": 102,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 3.25,
+      "percent": 0,
+      "perLevel": 0.55,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 348,
+      "percent": 0,
+      "perLevel": 42,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 6.5,
+      "percent": 0,
+      "perLevel": 0.4,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 26,
+      "percent": 0,
+      "perLevel": 4.2,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 30,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 55,
+      "percent": 0,
+      "perLevel": 2.3,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 325,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 800,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 110,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.64,
+      "percent": 0,
+      "perLevel": 2.1,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.6399999856948853,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.23000000417232513,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.5,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 550,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1.05,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "MARKSMAN"
+  ],
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 2,
+    "mobility": 1,
+    "utility": 1,
+    "abilityReliance": 20,
+    "difficulty": 3
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "The Hitman and the Seer",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Aphelios has access to an arsenal of 5 Moonstone Weapons, created by his sister Alune. He equips two weapons at any one time, one as his main weapon and one as his off-hand. Each weapon has a unique basic attack and passive effect.",
+            "leveling": []
+          },
+          {
+            "description": "Aphelios begins the game with Calibrum as his main weapon and Severum in his off-hand, with Gravitum, Infernum, and Crescendum queued in reserve. The queue order can be rearranged based on weapon usage.",
+            "leveling": []
+          },
+          {
+            "description": "Innate - Moonlight: Weapons spawn with 50 Moonlight for ammunition, which is consumed on basic attacks on-attack or to cast his abilities. Abilities that cause Aphelios to attack do not cost additional Moonlight on top of their ability cost. Once his main weapon is exhausted of Moonlight, it is moved to the end of the queue and Aphelios assembles his next available weapon over 1 second to equip it from his reserve, with its ability being placed on a 1.5-second cooldown before that time. Aphelios cannot cast Phase during the assembly.",
+            "leveling": []
+          },
+          {
+            "description": "Innate - Weapon Master: Aphelios cannot improve his abilities with skill points. He starts the game with Phase and gains access to abilities at level 2 and Moonlight Vigil at level 6, with the latter improving automatically at levels 11 and 16. Instead, Aphelios may spend his skill points to gain bonus attack damage, bonus attack speed or lethality.",
+            "leveling": [
+              {
+                "attribute": "Bonus Attack Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      4.5,
+                      9,
+                      13.5,
+                      18,
+                      22.5,
+                      27
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Bonus Attack Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      9,
+                      18,
+                      27,
+                      36,
+                      45,
+                      54
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Lethality",
+                "modifiers": [
+                  {
+                    "values": [
+                      5.5,
+                      11,
+                      16.5,
+                      22,
+                      27.5,
+                      33
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The level up for the bonus attack damage, attack speed, and armor penetration have hotkeys Q, W, E, respectively.\nAssigning points does not follow the same rules as conventional point expenditure. The quickest you can get an individual statistic to rank-6 is by assigning points at 1 / 2 / 3 / 5 / 7 / 9.\nAn ammunition counter will appear to the right side of the screen at 10 or less Moonlight.\nAbilities can still be used with less than the required amount of Moonlight, consuming all remaining Moonlight in the process.\n Runaan's Hurricane does not consume additional Moonlight for his basic attacks.\nThe icon for this ability changes based on the active skin and functions as Alune's portrait, similarly to Aphelios' portrait.",
+        "blurb": "Innate:  Aphelios wields 5 Lunari Weapons made by his sister Alune. He has access to two at a time: main weapon and off-hand weapon. Each weapon has a unique basic attack and a  active ability.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Calibrum",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/p",
+        "effects": [
+          {
+            "description": "Aphelios gains 100 bonus attack range while Calibrum is his main weapon. Enemies damaged by Calibrum through an ability are marked for 4.5 seconds, revealing them for the duration. Aphelios' next basic attack against a marked target uses the current off-hand weapon and has 1800 range, increased missile speed, and a brief cast time that lasts shorter based on Aphelios' proximity to the target.",
+            "leveling": []
+          },
+          {
+            "description": "The empowered attack will consume the marks from all targets, dealing 15 (+ 20% bonus AD) bonus physical damage to the main target for each mark consumed. If Calibrum is the current off-hand weapon, the main weapon is used for the attack instead.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self, Enemies",
+        "spellshieldable": null,
+        "resource": "OTHER",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "attack",
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Crescendum's outgoing basic attack can bypass  Yasuo's  Wind Wall and  Braum's  Unbreakable but cannot while returning.\nTriggered Marks apply on-hit effects, stack Energized and trigger  Runaan's Hurricane, but no other on-attack effects.\nThe mark will not be triggered by  Onslaught attacks.\nThe increased basic attack range is drawn for Aphelios to differentiate it from his normal attack range.\nThe empowered range for the mark will also be drawn as an indicator for Aphelios.\n Runaan's Hurricane bolts will use Calibrum's projectiles for Aphelios's attacks with Calibrum.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the empowered attack's cast time, it will still fire despite the target being invalid.(bug)\n     A blue circle outlining the range in which he may perform basic attacks.  \n     This glowing indicator will align directly behind each marked target.",
+        "blurb": "Aphelios has  bonus range while Calibrum is his main weapon. Abilities will mark targets, and he may attack them from far away with the current off-hand weapon, consuming all marks and dealing bonus physical damage for each mark consumed.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Severum",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/p",
+        "effects": [
+          {
+            "description": "Basic attacks with Severum are non-projectile and have an uncancellable windup. Severum's attacks heal Aphelios for 2% − 7.1% (based on level) of the post-mitigation damage dealt, increased to 5% − 17.75% (based on level) for attacks from abilities.",
+            "leveling": []
+          },
+          {
+            "description": "Healing from Severum in excess of Aphelios' maximum health is converted into a shield for an amount of up to 10 − 140 (based on level) (+ 6% maximum health), lingering for up to 30 seconds.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": "OTHER",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "attack",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Runaan's Hurricane bolts will use Severum's attack animation instead of firing projectiles for Aphelios'  attacks with Severum.",
+        "blurb": "Aphelios' basic attacks will  heal him, and create a  shield from excess healing.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Gravitum",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/p",
+        "effects": [
+          {
+            "description": "Basic attacks with Gravitum slow enemies by 30% for 2.5 seconds, decaying to 10% after 0.7 seconds.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Enemies",
+        "spellshieldable": "False",
+        "resource": "OTHER",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "attack",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Gravitum's debuff applies even if the target is immune to  slows (via  slow immunity or  cc-immunity).\nThe target will be affected after losing their immunity.\n Runaan's Hurricane's bolts will use Gravitum's projectiles when Aphelios attacks with Gravitum.",
+        "blurb": "Aphelios' basic attacks apply a decaying  slow.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Infernum",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/p",
+        "effects": [
+          {
+            "description": "Basic attacks with Infernum shoot a fire bolt that upon arrival splits into a cone of 4 lesser bolts behind the target, dealing damage to enemies they pass through. The fire bolt deals 110% AD physical damage to the primary target. Secondary targets hit by any bolt are dealt 82.5 / 110% (based on level) AD physical damage, reduced to 25.3 / 33% (based on level) AD against minions.",
+            "leveling": []
+          },
+          {
+            "description": "Critical strikes also apply to damage dealt to secondary targets and instead spray 6 missiles in a 50% wider cone that deals critical damage.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Enemies",
+        "spellshieldable": "False",
+        "resource": "OTHER",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "default",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Infernum's attack hit can be  dodged by or  missed against the primary target.\nThis will not prevent the missile from dealing damage to secondary targets nor from splashing against additional targets behind the primary target. The damage cannot be dodged as or missed against a secondary target.\n Runaan's Hurricane bolts will use Infernum's projectiles when Aphelios attacks with Infernum.\nThe bolts' attacks shoot 3 missiles, increased to 5 missiles when they  critically strike.",
+        "blurb": "Aphelios' basic attacks will hit all enemies in its trajectory, dealing increased damage to the main target and less damage to other targets. The attack will then spread into a cone behind his main target.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Crescendum",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/p",
+        "effects": [
+          {
+            "description": "Basic attacks with Crescendum hurl the blade at the target, which lingers for 0.25 seconds before homing back to Aphelios. He is unable to declare basic attacks until he retrieves Crescendum, but the attack timer is reset once caught.",
+            "leveling": []
+          },
+          {
+            "description": "Whenever Aphelios casts an ability that would require him to throw Crescendum, he instead fires a spectral Chakram at the target that similarly returns to him. Aphelios accumulates the Chakrams he catches, up to 20, which last for 5 seconds or until Crescendum is depleted of Moonlight. Attacks with Crescendum against champions will refresh the duration of Chakrams.",
+            "leveling": []
+          },
+          {
+            "description": "Basic attacks with Crescendum are empowered to deal 0% − 138.5% (based on number of Chakrams) AD bonus physical damage and have a 10.67% wind up percentage, decreased to 6.67% when critically striking. The bonus damage from Chakrams is affected by critical strike modifiers.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Enemies",
+        "spellshieldable": null,
+        "resource": "OTHER",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "attack",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Accumulated Chakrams accompany Crescendum whenever Aphelios performs a basic attack. This is merely a visual representation of the increased damage, and the separate blades are not considered separate damage sources nor  projectiles.\nAll Chakram stacks are lost if the Crescendum projectile is destroyed (i.e  Wind Wall,  Unbreakable).\nAt high attack speeds Crescendum will lower Aphelios' total attack speed, even when right next to his target.",
+        "blurb": "Aphelios throws a chakram as his basic attack and he cannot attack again until it returns to him. Other abilities will create mirror chakrams that he gathers, and his basic attacks deal bonus physical damage based on how many mirror chakrams he holds.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "600 (+ 75 per 10% bonus attack speed)",
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Weapons of the Faithful",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
+        "effects": [
+          {
+            "description": "The active effect of Aphelios' varies based on his current main weapon.",
+            "leveling": []
+          },
+          {
+            "description": "The individual actives do not share a cooldown.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "N/A",
+        "affects": null,
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": null,
+        "blurb": "The active effect of  Aphelios'  ability varies based on his current main weapon.\n Calibrum -  Moonshot: Long range shot that marks its target for a long-range follow-up attack.\n Severum -  Onslaught: Gain bonus  movement speed while attacking a single enemy with both weapons.\n Gravitum -  Binding Eclipse:  Root enemies who are  slowed by this weapon.\n Infernum -  Duskwave: Blast enemies in a cone and attack them with your off-hand weapon.\n Crescendum -  Sentry: Deploy a sentry with your off-hand weapon that attacks nearby enemies.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Moonshot",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Aphelios fires a bolt of energy in the target direction that deals 60 − 160 (based on level) (+ 42% − 60% (based on level) bonus AD) (+ 100% AP) physical damage to the first enemy hit.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              "units": [
+                " Moonlight",
+                " Moonlight",
+                " Moonlight",
+                " Moonlight",
+                " Moonlight"
+              ]
+            },
+            {
+              "values": [
+                60,
+                60,
+                60,
+                60,
+                60
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                9.882352941176471,
+                9.764705882352942,
+                9.647058823529411,
+                9.529411764705882,
+                9.411764705882353,
+                9.294117647058824,
+                9.176470588235293,
+                9.058823529411764,
+                8.941176470588236,
+                8.823529411764707,
+                8.705882352941176,
+                8.588235294117647,
+                8.470588235294118,
+                8.352941176470589,
+                8.235294117647058,
+                8.117647058823529,
+                8
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spell",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nMoonshot's name is modified based on Aphelios' off-hand weapon:\n Resurgent Moonshot\n Binding Moonshot\n Incendiary Moonshot\n Arcing Moonshot",
+        "blurb": "Active: Aphelios fires a bolt of energy in the target direction that deals physical damage to the first enemy hit.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1850",
+        "width": "120",
+        "angle": null,
+        "castTime": "0.4",
+        "effectRadius": null,
+        "targetRange": "1450"
+      },
+      {
+        "name": "Onslaught",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Aphelios enters an onslaught for 1.75 seconds, gaining 20% (+ 10% per 100 AP) bonus movement speed and automatically performing up to 6 (+ 2 per 100% bonus attack speed) attacks over the duration against the nearest visible enemy, prioritizing enemy champions.",
+            "leveling": []
+          },
+          {
+            "description": "Attacks alternate between Severum and his current off-hand weapon, each dealing 10 − 40 (based on level) (+ 20% − 35% (based on level) bonus AD) physical damage, affected by critical strike modifiers, and applying on-hit damage at 25% effectiveness.",
+            "leveling": []
+          },
+          {
+            "description": "Aphelios cannot cast Phase nor Moonlight Vigil during Onslaught, but he is still able to move. He cannot perform attacks while unable to declare basic attacks.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              "units": [
+                " Moonlight",
+                " Moonlight",
+                " Moonlight",
+                " Moonlight",
+                " Moonlight"
+              ]
+            },
+            {
+              "values": [
+                60,
+                60,
+                60,
+                60,
+                60
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                9.882352941176471,
+                9.764705882352942,
+                9.647058823529411,
+                9.529411764705882,
+                9.411764705882353,
+                9.294117647058824,
+                9.176470588235293,
+                9.058823529411764,
+                8.941176470588236,
+                8.823529411764707,
+                8.705882352941176,
+                8.588235294117647,
+                8.470588235294118,
+                8.352941176470589,
+                8.235294117647058,
+                8.117647058823529,
+                8
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self, Enemies",
+        "spellshieldable": null,
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "attack",
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Severum's attacks are not  intercepted, but the attacks from the off-hand weapon are during Onslaught.\nAphelios will also not perform the attacks while channeling  Recall.\nIf Aphelios is  taunted, he will still attack the nearest enemy.\nDuring Onslaught, Aphelios'   attack range is reduced[ to 410 ][ by 140 ]and his attack commands instead issue movement commands to walk into the respective range of his target.\nOnslaught's name is modified based on Aphelios'  off-hand weapon:\n Precision Onslaught\n Binding Onslaught\n Incendiary Onslaught\n Arcing Onslaught\nOnslaught's attacks stack  Energized, but do not apply any other on-attack effects.\n Crescendum will not deal damage if blocked by  Wind Wall, but the stacks will still be gained.\nCosmetically, the Moonlight cost is consumed through the duration.",
+        "blurb": "Active: Aphelios gains bonus  movement speed and quickly attacks a nearby enemy with  Severum and his current off-hand weapon, dealing physical damage. The number of attacks is increased based on his bonus attack speed.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "550",
+        "targetRange": null
+      },
+      {
+        "name": "Binding Eclipse",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
+        "effects": [
+          {
+            "description": "Gravitum - Active: Aphelios expunges all enemies with Gravitum's slow debuff, dealing 50 − 110 (based on level) (+ 26% − 35% (based on level) bonus AD) (+ 70% AP) magic damage and rooting them for 1 second.",
+            "leveling": []
+          },
+          {
+            "description": "Binding Eclipse also empowers in-flight Gravitum projectiles to instantly affect their targets upon applying the slow successively.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              "units": [
+                " Moonlight",
+                " Moonlight",
+                " Moonlight",
+                " Moonlight",
+                " Moonlight"
+              ]
+            },
+            {
+              "values": [
+                60,
+                60,
+                60,
+                60,
+                60
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                12,
+                11.882352941176471,
+                11.764705882352942,
+                11.647058823529411,
+                11.529411764705882,
+                11.411764705882353,
+                11.294117647058824,
+                11.176470588235293,
+                11.058823529411764,
+                10.941176470588236,
+                10.823529411764707,
+                10.705882352941176,
+                10.588235294117647,
+                10.470588235294118,
+                10.352941176470589,
+                10.235294117647058,
+                10.117647058823529,
+                10
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Spellaoe",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "No compensations are made if Binding Eclipse is used to empower in-flight Gravitum projectiles that are  destroyed or have the slow application negated by any means, wasting the effect in the process.\nBinding Eclipse cannot expunge enemies affected by Gravitum that are  untargetable.\nBinding Eclipse cannot be cast without a marked target.",
+        "blurb": "Active: Aphelios deals magic damage and  roots all targets that are  slowed by  Gravitum.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.3",
+        "effectRadius": "Global",
+        "targetRange": null
+      },
+      {
+        "name": "Duskwave",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Aphelios unleashes a wave of energy in a cone in the target direction, dealing 25 − 65 (based on level) (+ 56% − 80% (based on level) bonus AD) (+ 70% AP) physical damage to all enemies hit and locking onto each of them. After 0.25 seconds, Aphelios then fires a volley of attacks at each locked-on target from his current off-hand weapon, dealing 100% AD physical damage and applying on-hit effects at 100% effectiveness. The damage is affected by critical strike modifiers. There is no range limit for locked-on targets.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              "units": [
+                " Moonlight",
+                " Moonlight",
+                " Moonlight",
+                " Moonlight",
+                " Moonlight"
+              ]
+            },
+            {
+              "values": [
+                60,
+                60,
+                60,
+                60,
+                60
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                9,
+                8.823529411764707,
+                8.647058823529411,
+                8.470588235294118,
+                8.294117647058824,
+                8.117647058823529,
+                7.9411764705882355,
+                7.764705882352941,
+                7.588235294117647,
+                7.411764705882353,
+                7.235294117647059,
+                7.0588235294117645,
+                6.882352941176471,
+                6.705882352941176,
+                6.529411764705882,
+                6.352941176470588,
+                6.1764705882352935,
+                6
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "special",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The volley applies  area damage and the follow up attacks from the off-hand weapon deal  basic damage.\nThis ability will cast from wherever the caster is at the start of the cast time.\nThe hitbox also includes a very small portion behind Aphelios' character model.\nDuskwave's name is modified based on Aphelios' off-hand weapon:\n Precision Duskwave\n Resurgent Duskwave\n Binding Duskwave\n Arcing Duskwave\nAphelios is locked out of declaring attacks until the volley of attacks have been resolved.\nThe automatic attacks do not trigger any on-attack effects.\n Pix does not increase the damage of the volley.\nThe volley of attacks won't deal any damage, if they are  dodged,  blocked, or if Aphelios is  blinded.",
+        "blurb": "Active: Aphelios unleases a wave of energy in a cone, dealing physical damage to enemies hit and locking on to each of them, basic attacking them after a delay.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": "40°",
+        "castTime": "0.4",
+        "effectRadius": null,
+        "targetRange": "650"
+      },
+      {
+        "name": "Sentry",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Aphelios deploys a lunar sentry at the target location that arms after 0.35 seconds, lasting for up to 20 seconds, during which it is inactive and untargetable. The sentry activates if an enemy is within range of it, reducing its duration to 4 seconds and becoming targetable. Sentries have 6 health and take 3 damage per ranged basic attack and 4 damage per hit by abilities. Turret attacks destroy sentries instantly.",
+            "leveling": []
+          },
+          {
+            "description": "The sentry grants sight of its surroundings and autonomously attacks the nearest visible enemy in range with a replica of Aphelios' current off-hand weapon, dealing 31 − 100 (based on level) (+ 40% − 60% (based on level) bonus AD) (+ 50% AP) physical damage per hit. The sentry can critically strike and benefits from both Aphelios' attack speed and critical strike chance at 100% effectiveness.",
+            "leveling": []
+          },
+          {
+            "description": "See Pets for more details about the sentry. Sentry will cast at max range if cast beyond that.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              "units": [
+                " Moonlight",
+                " Moonlight",
+                " Moonlight",
+                " Moonlight",
+                " Moonlight"
+              ]
+            },
+            {
+              "values": [
+                60,
+                60,
+                60,
+                60,
+                60
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                9,
+                8.823529411764707,
+                8.647058823529411,
+                8.470588235294118,
+                8.294117647058824,
+                8.117647058823529,
+                7.9411764705882355,
+                7.764705882352941,
+                7.588235294117647,
+                7.411764705882353,
+                7.235294117647059,
+                7.0588235294117645,
+                6.882352941176471,
+                6.705882352941176,
+                6.529411764705882,
+                6.352941176470588,
+                6.1764705882352935,
+                6
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Enemies",
+        "spellshieldable": null,
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spell",
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Sentry's name is modified based on Aphelios' off-hand weapon:\n Precision Sentry\n Resurgent Sentry\n Heals Aphelios for any damage it deals.\nAttacks cannot be intercepted by  Wind Wall and  Unbreakable.\n Binding Sentry\n Incendiary Sentry\nThe Sentry will stop upon colliding with  Wind Wall. It will be deployed in front of the wall.\nThe Sentry's attacks can be  dodged and  blocked, but not missed from being  blinded.",
+        "blurb": "Active: Aphelios deploys a lunar sentry that gains a copy of his off-hand weapon and attacks with it, dealing physical damage.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "500",
+        "targetRange": "475"
+      }
+    ],
+    "W": [
+      {
+        "name": "Phase",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Aphelios switches between his main weapon and off-hand weapon over 0.25 seconds.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                0.8,
+                0.8,
+                0.8,
+                0.8,
+                0.8
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": false
+        },
+        "targeting": "Auto",
+        "affects": null,
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Switching does not interrupt any commands Aphelios was issued before or during Phase.",
+        "blurb": "Active:  Aphelios switches between his main weapon and off-hand weapon.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "None",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Weapon Queue System",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/e",
+        "effects": [
+          {
+            "description": "The icon of this ability reflects the next weapon that is in reserve.",
+            "leveling": []
+          },
+          {
+            "description": "Active: Aphelios receives a text prompt of the weapon Alune will create next.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Auto",
+        "affects": null,
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "This ability also includes the icon of the off-hand.",
+        "blurb": "The icon of this ability reflects the next weapon that is the next in  Aphelios' weapon queue.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "R": [
+      {
+        "name": "Moonlight Vigil",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Aphelios casts forth a lunar spotlight in the target direction that briefly grants sight of the area along its path and stops upon illuminating an enemy champion. Alune smites the area centered on the illuminated target, dealing 125 / 175 / 225 (based on level) (+ 20% bonus AD) (+ 100% AP) physical damage to enemy champions struck and locking-on to each target hit, as well as granting sight of the area for 2 seconds.",
+            "leveling": []
+          },
+          {
+            "description": "After 0.3 seconds of the illumination, attacks based on Aphelios' current main weapon will launch from the sky against each locked-on target, dealing 100% AD physical damage and applying on-hit effects at 100% effectiveness. These attacks can critically strike for (20% + 50%) AD bonus physical damage. There is no range limit for locked-on targets.\n Calibrum: Applies an empowered mark that deals 50 / 80 / 110 (based on level) bonus physical damage per mark consumed.\n Severum: Heals Aphelios for 250 / 350 / 450 (based on level) if at least one enemy champion is hit.\n Gravitum: Increases the initial slow to 99% and empowers Binding Eclipse to root targets affected by the enhanced slow for 1.35 seconds.\n Infernum: Deals 50 / 100 / 150 (based on level) (+ 25% bonus AD) bonus physical damage on the initial blast. Attacks splash in a 400 radius instead of a cone, dealing[ 90% of that damage. ][ 45 / 90 / 135 (based on level) (+ 22.5% bonus AD) physical damage. ]Enemy champions will take damage from overlapping areas.\n Crescendum: Generates 5 additional spectral Chakrams that return to Aphelios from the first enemy champion hit, for a total of 6, on top of those from other targets hit.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                120,
+                110,
+                100
+              ],
+              "units": [
+                " (based on level)",
+                " (based on level)",
+                " (based on level)"
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "special",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "aoe",
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The basic attacks always count as  projectiles unless  Severum is being used. The lunar beam, however, may always be intercepted regardless of which weapon is in play as the main weapon.\n Spell shield blocks the Moonlight Vigil's initial detonation damage but does not prevent the attacks from locking-on.\nThe basic attacks from Moonlight Vigil  critically strike independently from each other. Targets further away from the center of the blast are hit after a slightly longer delay. These attacks do not apply on-attack effects.\nChanging weapons while Moonlight Vigil is in flight does not change the effect it has when it hits.\nThis ability will cast from wherever the caster is at the start of the cast time.\nMoonlight Vigil's effect radius is centered around the location of the missile as it collides.\nWith  Calibrum, the extra damage from consuming the mark is a bonus damage on top of Calibrum's  normal mark consumption damage.\nWith  Infernum, 14 fire bolts splash from each target hit (18 for  critical strikes). This does not occur if the initial damage of Moonlight Vigil kills the target.\nWith  Infernum,the splash attacks damage is also modified by Infernum attack secondary target damage amplifier, which means it only deals 70.125% (=82.5%*85%) of attack damage to secondary targets before level 9.\nWith  Crescendum, 1 spectral chakram is gained for every target hit by the blast, meaning it is possible to gain up to 10 spectral chakrams with one use of Moonlight Vigil if it hits 5 enemy champions.\nWith  Severum, the extra flat heal is given only once, not per target. However, all damage done by Moonlight Vigil with it also heals him from Severum's  own passive effect.\nThe locked-on attacks' can be  dodged and  blocked, but won't be prevented if Aphelios is  blinded.\nPreventing the attack also prevents the additional effect (e.g. marking them with  Gravitum or granting  spectral chakrams).\nMoonlight Vigil has different visual effects changed accordingly to each weapon. This may vary depending on the skin, this showcases the default:\n Calibrum Severum Gravitum Infernum Crescendum",
+        "blurb": "Active:  Aphelios fires a concentrated blast of moonlight that explodes upon hitting an enemy champion, dealing physical damage to enemy champions in the area.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1000",
+        "width": null,
+        "angle": null,
+        "castTime": "0.6",
+        "effectRadius": "300",
+        "targetRange": "1300"
+      }
+    ]
+  },
+  "releaseDate": "2019-12-11",
+  "releasePatch": "9.24",
+  "patchLastChanged": "14.1",
+  "price": {
+    "blueEssence": 4800,
+    "rp": 880,
+    "saleRp": 0
+  },
+  "lore": "Emerging from moonlight's shadow with weapons drawn, Aphelios kills the enemies of his faith in brooding silence—speaking only through the certainty of his aim, and the firing of each gun. Though fueled by a poison that renders him mute, he is guided by his sister Alune. From her distant temple sanctuary, she pushes an arsenal of moonstone weapons into his hands. For as long as the moon shines overhead, Aphelios will never be alone.",
+  "faction": "mount-targon",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 523000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Emerging from moonlight’s shadow with weapons drawn, Aphelios kills the enemies of his faith in brooding silence—speaking only through the certainty of his aim, and the firing of each gun. Though fueled by a poison that renders him mute, he is guided by his sister Alune in her distant temple sanctuary from where she pushes an arsenal of moonstone weapons into his hands. For as long as the moon shines overhead, Aphelios will never be alone.",
+      "release": "2019-12-11",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/523/523000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/523/523000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/523/523000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/base/apheliosloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "N/A",
+        "Tania Gunadi"
+      ],
+      "splashArtist": [
+        "Pan Chengwei"
+      ]
+    },
+    {
+      "name": "Nightbringer",
+      "id": 523001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Nightbringer",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Emerald",
+          "id": 523007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523007.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 523006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523006.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pariah",
+          "id": 523003,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523003.png",
+          "colors": [
+            "#C33C3E",
+            "#0C0E15"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in 2019.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 523008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523008.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 523004,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523004.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2019.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 523005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523005.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 523002,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523002.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Separated at primordial birth, Aphelios, a fiend of chaos, and Alune, an archoness of order, were created as enemies. Yet, drawn each night to wander by shared visions of the moon, they found each other. Abandoning their natures, they struggle to show creation that darkness can shine, even as other divinities endlessly war…",
+      "release": "2019-12-11",
+      "set": [
+        "Nightbringer and Dawnbringer"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/523/523001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/523/523001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/523/523001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/skin01/apheliosloadscreen_1.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/skin01/apheliosloadscreen_1_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": true,
+      "voiceActor": [
+        "N/A",
+        "Tania Gunadi"
+      ],
+      "splashArtist": [
+        "Jennifer Wuestling"
+      ]
+    },
+    {
+      "name": "Lunar Beast",
+      "id": 523009,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Lunar Beast",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Citrine",
+          "id": 523011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523011.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 523016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523016.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 523015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523015.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "TENCENT"
+            },
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 523010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523010.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 523013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523013.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 523014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523014.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Vitality",
+          "id": 523012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523012.png",
+          "colors": [
+            "#88FF00",
+            "#9B1520"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the Lunar Beast 2021 event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Aphelios stays quiet, preferring to worship the Bull God according to obscure “old ways” that are unfamiliar to the rest of his squad. His teammates are welcoming, if curious, but have yet to realize that Aphelios and his sister Alune are actually the Bull God's progeny, placed among the squad to face this year's Lunar Beast.",
+      "release": "2021-02-04",
+      "set": [
+        "Lunar Beast"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/523/523009.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/523/523009.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/523/523009.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/skin09/apheliosloadscreen_9.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/skin09/apheliosloadscreen_9_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "N/A",
+        "Tania Gunadi"
+      ],
+      "splashArtist": [
+        "Francis Tneh",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "EDG",
+      "id": 523018,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "EDG",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Elite",
+          "id": 523019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523019.png",
+          "colors": [
+            "#131521",
+            "#9E1517"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive during MSI 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 2,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Honoring Viper's winning performance as Aphelios during the 2021 World Championship.",
+      "release": "2022-05-12",
+      "set": [
+        "World Champions: 2021"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/523/523018.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/523/523018.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/523/523018.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/skin18/apheliosloadscreen_18.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/skin18/apheliosloadscreen_18_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "N/A",
+        "Tania Gunadi"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "Spirit Blossom",
+      "id": 523020,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Spirit Blossom",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 523023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523023.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 523027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523027.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 523024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523024.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Night Blossom",
+          "id": 523029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523029.png",
+          "colors": [
+            "#0C0C0F",
+            "#B2D1E4"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the Worlds 2022 event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 523028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523028.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 523025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523025.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 523021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523021.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 523026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523026.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 523022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523022.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Ionians share whispered stories of the twin spirits of the night, Aphelios and Alune. It is said the darkening of the sky comes from the brother's armaments, tearing the fabric of blues and whites apart to create an obsidian canvas painted with stars. The sister's motives are more... mysterious.",
+      "release": "2022-10-06",
+      "set": [
+        "Spirit Blossom"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/523/523020.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/523/523020.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/523/523020.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/skin20/apheliosloadscreen_20.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/skin20/apheliosloadscreen_20_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "N/A",
+        "Tania Gunadi"
+      ],
+      "splashArtist": [
+        "Fortune 'Fortuneee' K"
+      ]
+    },
+    {
+      "name": "HEARTSTEEL",
+      "id": 523030,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "HEARTSTEEL",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Citrine",
+          "id": 523038,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523038.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 523033,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523033.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 523037,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523037.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rockstar",
+          "id": 523039,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523039.png",
+          "colors": [
+            "#CDE9EF",
+            "#E9628F"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the Worlds 2023 event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 523036,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523036.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 523031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523031.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 523035,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523035.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 523032,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523032.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 523034,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/523/523034.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "A multi-instrumental musical genius whose passion for his craft is nigh obsessive, Aphelios is the composer and creative backbone of HEARTSTEEL.  Though he rarely ever speaks, with this wild band of musical misfits and his twin sister (the band's manager Alune) by his side, Aphelios is ready to have his creative voice heard loud and clear.",
+      "release": "2023-11-08",
+      "set": [
+        "HEARTSTEEL"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/523/523030.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/523/523030.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/523/523030.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/skin30/apheliosloadscreen_30.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/skin30/apheliosloadscreen_30_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "N/A",
+        "Tania Gunadi"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen",
+        "Julia Yurtsev",
+        "Jennifer Wuestling"
+      ]
+    }
+  ]
+}

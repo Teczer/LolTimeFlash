@@ -1,0 +1,2299 @@
+{
+  "id": 14,
+  "key": "Sion",
+  "name": "Sion",
+  "title": "The Undead Juggernaut",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Sion.png",
+  "resource": "MANA",
+  "attackType": "MELEE",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 655,
+      "percent": 0,
+      "perLevel": 87,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 7.5,
+      "percent": 0,
+      "perLevel": 0.8,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 400,
+      "percent": 0,
+      "perLevel": 52,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 8,
+      "percent": 0,
+      "perLevel": 0.6,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 4.2,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 2.05,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 68,
+      "percent": 0,
+      "perLevel": 4,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 345,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 600,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 125,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 25.7665996551513,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 80,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.679,
+      "percent": 0,
+      "perLevel": 1.3,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.67900002002716,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.0509057976305484,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1.1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 0.9,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 0.8,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 0.92,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1.1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1.2,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "FIGHTER",
+    "TANK",
+    "VANGUARD"
+  ],
+  "attributeRatings": {
+    "damage": 2,
+    "toughness": 3,
+    "control": 3,
+    "mobility": 1,
+    "utility": 1,
+    "abilityReliance": 65,
+    "difficulty": 1
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Glory in Death",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Upon taking fatal damage, Sion enters stasis for 1.5 seconds to reanimate into a frenzy, restoring 100% of his maximum health but losing 2.3 − 24.4 (based on level) health every 0.264 seconds, increasing by[ 70% of the base value ][ 1.61 − 17.08 (based on level) ]per subsequent tick. Sion's health regeneration and any healing (except life steal) he receives during this time is 0% effective.",
+            "leveling": []
+          },
+          {
+            "description": "Sion can only move and use his basic attacks and item actives, and empowers himself with the following effects:\n 1.75 attack speed minimum and maximum\n 100% life steal\nDeals bonus physical damage on-hit equal to 10% of the target's maximum health, capped at 75 against non-champions\n Ghosting\nOne cast of Death Surge, which replaces all of his abilities",
+            "leveling": []
+          },
+          {
+            "description": "Sion's damage to structures is reduced to 40% under the effects of Glory in Death.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "proc",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Details\nSion's death timer starts when he dies and not when Glory in Death ends.\nIf Sion lives longer than what his death timer lasts for, he will not revive until Glory in Death has ended. When it ends, he instantly revives. This may result in some odd interactions and bugs at times.\nThe effect that heals Sion back to full health at the start of Glory in Death cannot be modified by  healing reductions and does not count towards the 'Damage Healed' statistic at the end of game lobby.\nThe health loss is unaffected by  Invulnerability.\nGlory in Death has a capped 60 seconds duration. If the player manages to survive for so long, Sion dies instantly, regardless of his current health.\nThe healing modifier during Glory in Death reduces all incoming healing, it does not matter if they are sourced from Sion himself or an ally. This does not affect life steal.\nThis healing modifier stacks additively with  Spirit Visage and does not stack with heal and shield power.\nThis means that purchasing Spirit Visage enables Sion to have regeneration and use healing effects at 25% effectiveness, and the life steal gained will be increased to 125% as expected.\nThe fixed attack speed is achieved by lowering and increasing the maximum and minimum attack speed to  1.75, respectively.\nThis also means that it's unaffected by other attack speed modifiers for the duration, such as bonus attack speed or  cripples.\nHowever,  Hail of Blades, which allows for the normal attack speed cap ( 2.5) to be surpassed, will also break this limit. This means that while it is active, Sion may exceed his  1.75 cap, but cannot fall below it.\nThis does not apply to  Lethal Tempo.\nWhen  Hail of Blades ends, the attack speed cap will revert to  2.5 and not to  1.75, however Sion still can't fall below  1.75.\nSome item passives do not persist through death and will be lost for the initial few seconds of Glory in Death.\n Phase Rush cooldown is reset upon entering Glory in Death.\nThe bonus on-hit damage granted by Glory in Death is unaffected by life steal, but is applied against structrures that are not turrets.\nHowever, it can be applied against structures that are not turrets.(bug)\nThe reduction of damage against structures includes Sion's attacks as well as on-hit effects that can be applied to structures, such as  Demolish,  Titanic Hydra and the magic damage based on AP conversion based on  adaptive force.\nIt even includes  true damage from sources such as  Elixir of Sorcery.(bug)\nSion, during Glory in Death, will not lose health while being carried by  Fate's Call.\nGlory in Death does not trigger on clones of Sion, such as with  Test of Spirit.\nGlory in Death's  untargetability from the  stasis does not  destroy in-flight  projectiles.\nProjectiles created while Sion is in the zombie form will still travel to him even after he dies.\nUpon death, the current cooldowns of Sion's summoner spells are increased to 4 seconds. Afterwards, he is still unable to use them until he respawns.\nHowever, it is possible for another lock-out effect to unlock them when their duration ends (excluding  crowd control with the exception of  stasis).\nAfter Glory in Death ends, the corpse of Sion will retain unit collision despite being dead on the ground.\nBuffs from jungle monsters that Sion acquired during Glory in Death will not be lost when the duration ends. ( Crest of Cinders,  Crest of Insight)\nInteractions & Other\n\nBy surviving for the full duration of 60 seconds, Sion will have suffered 41.8k − 443.7k (based on level) in health costs.\nSion can also heal from  spell vamp, althought the stat is currently unobtainable and it would be also unusable during Glory in Death, since there would be no available abilities that would apply it.\nEven though its visuals are present,  Dark Harvest can never be gained from Sion under the effect of Glory in Death.\nAt the start of Glory in Death, Sion's  mana drops to 0, but his  mana regeneration will remain in effect.\nZombie info\nZombie states trigger upon taking  lethal damage.\n Raw damage effects will not prevent zombie states from triggering.\nAll  resurrection effects will take precedence over effects that reanimate as a zombie.\nA champion that enters a zombie state will start their death timer upon triggering the effect.\nMost buffs and debuffs will be lost upon transitioning into a zombie state.\nThose that persist through death, such as  Brand's  Blaze, will remain.\nUndisplayed marker buffs, such as those imposed by  Veigar's  Event Horizon and  Viktor's  Gravity Field to prevent being affected multiple times by the same effect, will be lost.(bug)\nThis does not apply when transitioning from one zombie state to another zombie state.(bug)\nUnits within a zombie state cannot:\nUse  Recall or  Corrupting Potion /  Refillable Potion.\nActivate  resurrection effects.\nTake  Dark Passage, Catapult, or gates.\nPick up the  Eye of the Herald.\nBe targeted by the following:\n Bailout\n Chronoshift\n Umbral Trespass.\nBe affected by the following:\n Curse of the Black Mist\n Fear Beyond Death's chain missile\n Test of Spirit's initial missile\n Lamb's Respite\n Realm of Death\nFountain health restore",
+        "blurb": "Innate: Upon dying,  Sion  reanimates into a frenzy where he is restored to max health that rapidly decays, and reduces incoming  healing.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      },
+      {
+        "name": "Death Surge",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/p",
+        "effects": [
+          {
+            "description": "Active: Sion gains 67% bonus movement speed(bug) that decays over 2.376 seconds.\nOnce at least one ability has been learned, Death Surge can be cast using any ability key, even for the abilities that haven't been learned yet.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Death Surge will grant the bonus movement speed after a brief delay.\nThe buff is intended to grant 75% decaying movement speed, but instead grants 67% movement speed decaying with -8% per stat update.\nPrecisely this leaves him at 0% − 0% (based on time passed) bonus movement speed.\nDeath Surge has a shared cooldown across each ability key, regardless of which key is used to activate it. Thus, activating Death Surge with any ability key will put the others on cooldown.\nDeath Surge's cooldown resets upon death.\nDeath Surge's cooldown is affected by  ability haste and thus the ability is technically able to be used up to twice during a single instance of Glory in Death, but this isn't practical.\nDeath Surge is not affected by  Ultimate Hunter, even if cast from the ultimate ability slot.\nDespite showing the cooldown being reduced, Death Surge in the ultimate ability slot will be not reduced by  Axiom Arc's Flux on  takedown.(bug)\nDeath Surge's cooldown is not reduced by  Navori Quickblades' Deft Strike.",
+        "blurb": "Active:  Sion gains a burst of  movement speed for a short time.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Decimating Smash",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Sion charges for up to 2 seconds to increase Decimating Smash's range over an area, knock up duration, stun duration, and damage every 0.25 seconds, which has up to a maximum bonus for the base damage and up to a 200% bonus for the scaling damage.",
+            "leveling": [
+              {
+                "attribute": "Maximum Base Damage Increase",
+                "modifiers": [
+                  {
+                    "values": [
+                      125,
+                      158.33,
+                      175,
+                      185,
+                      191.67
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Minimum Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      60,
+                      80,
+                      100,
+                      120
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      50,
+                      60,
+                      70,
+                      80
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      90,
+                      155,
+                      220,
+                      285,
+                      350
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      120,
+                      150,
+                      180,
+                      210,
+                      240
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Decimating Smash can be recast within the duration, and does so automatically afterwards. If the charge is interrupted, Decimating Smash is placed on a 2-second cooldown.",
+            "leveling": []
+          },
+          {
+            "description": "Recast: Sion flails his axe in the target direction, dealing physical damage to enemies hit and slowing them by 50% for 0.25 seconds. Decimating Smash deals 150% damage against monsters and 60% damage against minions.",
+            "leveling": [
+              {
+                "attribute": "Minimum Monster Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      60,
+                      90,
+                      120,
+                      150,
+                      180
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      60,
+                      75,
+                      90,
+                      105,
+                      120
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Monster Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      135,
+                      232.5,
+                      330,
+                      427.5,
+                      525
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      180,
+                      225,
+                      270,
+                      315,
+                      360
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Minimum Minion Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      24,
+                      36,
+                      48,
+                      60,
+                      72
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      24,
+                      30,
+                      36,
+                      42,
+                      48
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Minion Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      54,
+                      93,
+                      132,
+                      171,
+                      210
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      72,
+                      90,
+                      108,
+                      126,
+                      144
+                    ],
+                    "units": [
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD",
+                      "% AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If Decimating Smash was charged for at least 1 second, Sion instead slams his axe down in the target direction, dealing physical damage to enemies hit, knocking them up for 0.5 − 1 (based on channel time) seconds, and stunning them for 1.25 − 2.25 (based on channel time) seconds.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                45,
+                45,
+                45,
+                45,
+                45
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                9,
+                8,
+                7,
+                6
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": "FALSE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "For the target to be hit, their center needs to be inside the red or blue areas (based on charge time), and their edge must hit the yellow part of the cone. If their edge also hits the white part of the cone they will be excluded from being hit. Cone is at 16 degrees and starts 800 range behind Sion's center. White cone has a radius of 720, while yellow cone has a radius of 1550.  \nSion himself remains  locked out of all actions for 0.25 seconds when releasing Decimating Smash.\n Soul Furnace can be cast during this time, but  Roar of the Slayer and  Unstoppable Onslaught cannot and neither will they be buffered.\n Displacement immunity will also resist the application of the  stun.\nSince the  stun duration is longer than the  airborne duration, and both start at the same time,  Tenacity is still fully effective against Decimating Smash up to a cap.\nThis virtual cap is 60%-55.5%  Tenacity based on channel time beyond 1 second. Every value below this cap will lower the CC duration with no diminished returns.\nA flash of the axe and change in brightness of the indicator on the ground indicates when the 1 second time frame is reached.\nThe damage of Decimating Smash is calculated when it is released. Gaining AD or upgrading the ability during its channel will update the damage of the coming hit.\nEven though the cooldown starts when the ability is released, it will not be changed by gaining or losing AH, or upgrading the ability, during the cast time.\nThe indicator is visible to the enemy only if they  see Sion himself.\nIf the channel is released before 1 second, enemies may see a particle at the far end of the hitbox, if it itself isn't outside of their  vision.\nIf the channel is released after 1 second, the only remaining indication is the visual effects and audio that plays on any units the spell strikes (these play on-target), provided the enemy does have  vision on those.\nForced movement without a  stun component (or the stun being  cleansed previously) will not stop Sion from starting or continuing to channel. Its direction will not change with Sion's travel, however the location will update with him.\nThe location of the indicator updates at the beginning of the ability, at 1 second and at release.\nThe indicator of the ability is slightly shorter at its front than the hitbox of the ability is for  Original Sion,  Mecha Zero Sion and related skins and chromas, while on  Worldbreaker Sion, the indicator is slightly thinner at the front than the hitbox is, instead.\nThe following table refers for interactions while Sion is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Soul Furnace and its  recast are usable.  Roar of the Slayer and  Unstoppable Onslaught are disabled. This ability recasts to end channel.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall\n\n\nInterrupted by\n\n Hexflash (Recasts)\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+        "blurb": "Active:  Sion  charges for a short time, increasing the  range of his strike over an area. After a brief moment, it becomes empowered with a new effect.\nDecimating Smash can be recast within the duration, and automatically does so afterwards.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "W": [
+      {
+        "name": "Soul Furnace",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/w",
+        "effects": [
+          {
+            "description": "Passive: Sion gains 4 bonus health whenever he kills an enemy, increased to 15 for large enemies and takedowns against enemy champions.",
+            "leveling": []
+          },
+          {
+            "description": "Active: Sion grants himself a shield that lasts for up to 6 seconds. Soul Furnace can be recast after 3 seconds while the shield holds, and does so automatically at the end of the duration.",
+            "leveling": [
+              {
+                "attribute": "Shield Strength",
+                "modifiers": [
+                  {
+                    "values": [
+                      60,
+                      75,
+                      90,
+                      105,
+                      120
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      40,
+                      40,
+                      40,
+                      40
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      8,
+                      10,
+                      12,
+                      14,
+                      16
+                    ],
+                    "units": [
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Recast: Sion consumes the shield to deal magic damage to nearby enemies, capped at 400 against minions and monsters.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      65,
+                      90,
+                      115,
+                      140
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      40,
+                      40,
+                      40,
+                      40
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      10,
+                      11,
+                      12,
+                      13,
+                      14
+                    ],
+                    "units": [
+                      "% of target's maximum health",
+                      "% of target's maximum health",
+                      "% of target's maximum health",
+                      "% of target's maximum health",
+                      "% of target's maximum health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Both of Soul Furnace's casts can be activated during Sion's other abilities.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                65,
+                70,
+                75,
+                80,
+                85
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                15,
+                14,
+                13,
+                12,
+                11
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self, Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "A buff icon in the HUD will show the current shield strength, so that the player can better calculate the timing of the second cast.\nThe initial shown value does not interact with  shield strength modifiers. Whenever the shield takes damage, it updates to the proper current shield amount, however.\nThe initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDetonating the ability manually does not.\nGaining or losing AP or health, or ranking up the skill while the shield is active will not change its shield value but it will change the damage of the shield's detonation.\nThe cooldown of Soul Furnace begins once the shield is removed.\nGaining or losing  ability haste between the first cast and breaking of the shield will affect the resuming cooldown accordingly.\nSoul Furnace also automatically detonates if Sion is killed without the shield being destroyed, e.g. by dying to the  Nexus Obelisk, even if Sion could not have detonated it manually yet.\nSoul Furnace's bonus health can be obtained by any of Sion's damage sources (basic attacks, abilities, summoner spells, item actives).\nThis does not include last hits transferred to Sion artificially.\nIf the gold efficiency of a  Ruby Crystal is considered 100%, each last hit or  takedown after Soul Furnace has been learned can be considered worth an extra  10.6 or  40g.\nSion must learn Soul Furnace before he can stack up its passive.\nSion does not gain bonus health from units that enter  resurrection on-death.\nKilling the following unit types grants Sion 15 bonus health:\n Champions (kills and assists)\n Large minions and  large monsters (including both summoned and pit  Rift Herald)\n Large pets - Explicitly  Tibbers,  Daisy and  The Maiden\nKilling the following unit types grants Sion 4 bonus health:\n Minions and  small monsters\n Wards and other champion summoned units (e.g.  Noxious Trap,  Powder Keg,  Dark Procession)\nAll  pets, with the exceptions of those listed above and below\n Clones\nKilling the following unit types grants Sion no bonus health:\n Turrets (including  Sun Disk) and other structures\nJungle plants (destroying which does not grant kill credit).\nUnits destroyed by 'trampling' such as  Zyra's  seeds,  Zac's  goo or  Rek'Sai's  tunnels.",
+        "blurb": "Passive:  Sion gains  bonus health whenever he kills an enemy, increased against large enemies and  champion  takedowns.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "525",
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Roar of the Slayer",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Sion bellows a shockwave in the target direction that deals magic damage to the first enemy hit, slows them for 2.5 seconds and inflicts them with 20% armor reduction for 4 seconds.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      65,
+                      100,
+                      135,
+                      170,
+                      205
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      55,
+                      55,
+                      55,
+                      55,
+                      55
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      45,
+                      50,
+                      55,
+                      60
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "If the target is a minion or non-epic monster, they are also stunned for 0.75 seconds and knocked back for up to 1350 units further, though not through terrain, applying Roar of the Slayer's effects to enemies they pass through as well as briefly granting sight of the area around their trajectory.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                35,
+                40,
+                45,
+                50,
+                55
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                12,
+                11,
+                10,
+                9,
+                8
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Minions or monsters that are flung away are immune to minion damage and take their damage once they are stopped if they would die to Roar of the Slayer's damage, by either colliding with terrain, reaching the end of their trajectory, or having their displacement interrupted.\nUnlike the intial single-target projectile, a thrown minion or monster is not blocked by  Wind Wall or  Unbreakable.\nGaining or losing AP, or upgrading the ability while its projectile is traveling will change its damage for every future hit. This applies to both the intial single-target projectile, as well as the minion-projectile.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+        "blurb": "Active:  Sion bellows a shockwave in the target direction that deals magic damage and shortly  slows the first enemy hit,  reducing their armor for a few seconds.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "1800",
+        "width": "160",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "80",
+        "targetRange": null
+      }
+    ],
+    "R": [
+      {
+        "name": "Unstoppable Onslaught",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Sion becomes immune to crowd control and ghosted and, after a brief delay, charges forward in the direction of the cursor for up to 8 seconds, during which he is able to steer at a slow turn rate while automatically navigating his movement. Unstoppable Onslaught can be recast after 0.4 seconds during the channel.",
+            "leveling": []
+          },
+          {
+            "description": "The charge ramps up Sion's movement speed at the time of cast by 40 movement speed every 0.1 seconds, up to 950 total movement speed.",
+            "leveling": []
+          },
+          {
+            "description": "At the end of the charge's duration, Sion leaps forward 300 units, landing after 0.55 seconds and slamming the ground beneath him. Sion will stop upon colliding with an enemy champion or terrain during the charge, ending Unstoppable Onslaught with a slam. Crashing into terrain stuns Sion for 0.5 seconds.",
+            "leveling": []
+          },
+          {
+            "description": "Enemies hit by Sion's charge are dealt physical damage. The base damage increases by 0% − 166.67% (based on channel time) and the scaling increases by 0% − 100% (based on channel time).",
+            "leveling": [
+              {
+                "attribute": "Minimum Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      150,
+                      300,
+                      450
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      40,
+                      40
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      400,
+                      800,
+                      1200
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      80,
+                      80,
+                      80
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Enemies, including turrets, hit by the slam are dealt the same damage and are slowed for 3 seconds. Enemies in a smaller radius are also pulled towards Sion over 0.5 seconds and become stunned after a brief delay for 0.25 − 1.75 (based on channel time) seconds.",
+            "leveling": [
+              {
+                "attribute": "Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      40,
+                      45,
+                      50
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                140,
+                100,
+                60
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction / Auto",
+        "affects": "Self, Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Area of effect",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "When Sion casts Unstoppable Onslaught a global warning can be heard.\nUnstoppable Onslaught does not apply the knock up nor stun to enemies from slamming on collision with terrain.\nUnstoppable Onslaught does not  knock up non-champions hit by the charge.(bug)\nUnstoppable Onslaught can be activated twice or held down and released on both normal cast and quick cast. There is no other difference between normal cast and quick cast for this ability, either.\nThe initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade.\nThe recast does not.\nAn enemy can only be affected by Unstoppable Onslaught once every 1 second.\nAfter reaching maximum damage and stun duration (at 3 seconds) Sion will transition from using his haste animation to his unique charging one.\nReaching the threshold on  Mecha Zero Sion changes his particle effects instead, most notably the 'Boosters' behind the vehicle.\nThe turning angle is not based on time and can easily be seen in practice when a Sion charges in-place due to bugs.\nSion's movement speed gains during the charge are unaffected by movement speed caps. Effects that would increase or decrease his movement speed do not affect him as well.\n Nami's  Surging Tides is the only known effect that can affect Sion's movement speed during the charge and that can place him above the normal MS value. However, without further multipliers, surpassing the 950 movement speed cap will require  Nami to have over 2150 ability power.\nSion does not always crash with terrain immediately upon touching it, enabling the player to turn beyond his maximum turning angle.\nCasting the ability at point blank of a terrain will most often automatically change the charge's direction.\nThis is not usually possible with player-generated terrain.\nUnstoppable Onslaught cannot charge through but can leap over player-generated terrain.\nSion loses the  crowd control immunity after finishing the  leap.\nSion is not immune to an allied  Bard's  Tempered Fate if it hits Sion during the 0.05-second delay before he starts the channel, he will not resist the effect and will initiate the slam immediately while in  stasis.(bug)\nUnstoppable Onslaught cannot strike the same non-champion twice in less than 1 second.\nEven though the cooldown of Unstoppable Onslaught starts at the end of the effect, gaining or losing ability haste, or upgrading the ability during the effect, will not change the resuming cooldown.\n Removing the  airborne before 0.5 seconds will not prevent the  stun from being applied.\n Displacement immunity will also resist the application of the  stun.\nSion can occasionally cast Unstoppable Onslaught while  rooted. In this case, he will stand in place until the root's debuff duration ends. During this time, the damage, stun duration and movement speed granted by the ability will still ramp up, and enemies that come into contact with him will be affected by the collision normally.(bug)\nA similar case allows him to cast it during crowd control that would disable it. However, the channel would be interrupted almost immediately, and he will initiate the leap as well.\n Fate's Call deferment of Unstoppable Onslaught will still allow Sion to leap forward at the end of the channel.\nMoving the cursor onto HUD elements (e.g mini map / champion portraits) does not jeopardize the cast and steering of Unstoppable Onslaught. The targeting will act as if the ground was targeted below the display element.\n PENDING FOR TEST: The distance between Sion's center and the center of the ground slam scales slightly with movement speed. This is suspected because running into a wall within half a second of charge time after starting at multiple thousands of movement speed shows a considerable difference, however this could also be due to a bug.\n PENDING FOR TEST: The leap appears to always have the same speed regardless of Sion's, at roughly 750.\nThe following table refers for interactions while Sion is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Soul Furnace and its  recast are usable.  Decimating Smash and  Roar of the Slayer are disabled. This ability recasts to end channel.\n\n\nMovement\n\nAllowed, but cannot input movement commands.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Recall  Hexflash  Mark  Dash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath\n\nIf Unstoppable Onslaught's channel is interrupted despite the immunity to crowd control or  Decimating Smash is cast within 0.25 seconds after starting the charge, it will also initiate the leap. If the channel ends due to collision or death, there is no  leap and the effect occurs immediately.",
+        "blurb": "Active:  Sion becomes  Cc-immune and  charges forward for a period, gradually gaining bonus movement speed and dealing physical damage to enemies hit based on the charge time.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ]
+  },
+  "releaseDate": "2009-02-21",
+  "releasePatch": "Alpha Week 2",
+  "patchLastChanged": "14.6",
+  "price": {
+    "blueEssence": 1350,
+    "rp": 585,
+    "saleRp": 0
+  },
+  "lore": "A war hero from a bygone era, Sion was revered in Noxus for choking the life out of a Demacian king with his bare hands—but, denied oblivion, he was resurrected to serve his empire even in death. His indiscriminate slaughter claimed all who stood in his way, regardless of allegiance, proving he no longer retained his former humanity. Even so, with crude armor bolted onto rotten flesh, Sion continues to charge into battle with reckless abandon, struggling to remember his true self between the swings of his mighty axe.",
+  "faction": "noxus",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 14000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 585,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "A war hero from a bygone era, Sion was revered in Noxus for choking the life out of a Demacian king with his bare hands—but, denied oblivion, he was resurrected to serve his empire even in death. His indiscriminate slaughter claimed all who stood in his way, regardless of allegiance, proving he no longer retained his former humanity. Even so, with crude armor bolted onto rotten flesh, Sion continues to charge into battle with reckless abandon, struggling to remember his true self between the swings of his mighty axe.",
+      "release": "2009-02-21",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/14/14000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/14/14000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/14/14000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/base/sionloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Scott McNeil"
+      ],
+      "splashArtist": [
+        "Joshua 'HUGEnFAST' Brian Smith"
+      ]
+    },
+    {
+      "name": "Hextech",
+      "id": 14001,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Hextech",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Over the years, many have asked—should art be chained by the fleeting concept of morality? Or should science bend a knee to the laws of man? Some believe progress is not made by holding ourselves back, and though we may give birth to monsters… Hextech will always guide our path...",
+      "release": "2010-06-01",
+      "set": [
+        "Hextech"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/14/14001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/14/14001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/14/14001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin01/sionloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Scott McNeil"
+      ],
+      "splashArtist": [
+        "Izzy Medrano"
+      ]
+    },
+    {
+      "name": "Barbarian",
+      "id": 14002,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Barbarian",
+      "lootEligible": true,
+      "cost": 750,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Avoiding every social cue his roleplaying group throws his way, Sion has repeatedly rolled barbarians only to die immediately after rejoining the table. At this point he's spent more time working on character sheets than actually playing Rift Quest, and it shows: his newest barbarian's backstory reads, “Is a barbarian.”",
+      "release": "2010-09-26",
+      "set": [
+        "Rift Quest"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/14/14002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/14/14002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/14/14002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin02/sionloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Scott McNeil"
+      ],
+      "splashArtist": [
+        "Jessica 'OwleyCat' Oyhenart",
+        "Christian Fell"
+      ]
+    },
+    {
+      "name": "Lumberjack",
+      "id": 14003,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Lumberjack",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "He's a lumberjack, and he's okay.",
+      "release": "2011-01-24",
+      "set": [
+        "Day Job"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/14/14003.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/14/14003.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/14/14003.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin03/sionloadscreen_3.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Scott McNeil"
+      ],
+      "splashArtist": [
+        "Christian Fell"
+      ]
+    },
+    {
+      "name": "Warmonger",
+      "id": 14004,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Warmonger",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "No memory of the man that Sion was remains. His life is spite, a curse on those who would dare to strike him down. But through it all—each ill-fated century—he remains, his decaying form bound together by his armor's dark magic.",
+      "release": "2011-07-18",
+      "set": [
+        "Legacy"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/14/14004.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/14/14004.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/14/14004.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin04/sionloadscreen_4.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Scott McNeil"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Mecha Zero",
+      "id": 14005,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Mecha Zero",
+      "lootEligible": true,
+      "cost": 1820,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Legendary",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 14010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14010.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Meteorite",
+          "id": 14013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14013.png",
+          "colors": [
+            "#5F432B",
+            "#5F432B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 14012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14012.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 14007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14007.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 14009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14009.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 14006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14006.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 14008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14008.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 14011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14011.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "The ultimate ground-based mecha unit, 0-SION becomes like a freight train once given a combat directive, and will literally stop at nothing to dismantle an opponent—no matter how much damage it takes. There are lingering concerns that it could go rogue, but so far these worries have been unfounded.",
+      "release": "2016-04-13",
+      "set": [
+        "Mecha"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/14/14005.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/14/14005.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/14/14005.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin05/sionloadscreen_5.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin05/sionloadscreen_5_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Scott McNeil"
+      ],
+      "splashArtist": [
+        "Christian Fell"
+      ]
+    },
+    {
+      "name": "Worldbreaker",
+      "id": 14014,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Worldbreaker",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 14020,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14020.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Aquamarine",
+          "id": 14017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14017.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 14019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14019.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 14021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14021.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 14016,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14016.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 14015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14015.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 14018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14018.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "A once towering fortress toppled during the last annihilation, the thing called Sion was given consciousness by Malzahar, and raised up to become the purest titan of death and destruction. Now, imbued with ravenous hatred, he blasts the terrain with every step, hellbent on culling any instance of life.",
+      "release": "2020-04-09",
+      "set": [
+        "Worldbreaker"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/14/14014.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/14/14014.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/14/14014.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin14/sionloadscreen_14.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Scott McNeil"
+      ],
+      "splashArtist": [
+        "Zuoan Dong",
+        "Kudos Productions"
+      ]
+    },
+    {
+      "name": "Blackfrost",
+      "id": 14022,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Blackfrost",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 14026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14026.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Aquamarine",
+          "id": 14024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14024.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 14025,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14025.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 14028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14028.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 14029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14029.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 14027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14027.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 14023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14023.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "A fearsome jötunn who once stood at the front of Lissandra's vast armies, Sion fell in battle only for his master's magic to weave itself beneath his massive frame, resurrecting him as a monster of rage and cold.",
+      "release": "2021-04-15",
+      "set": [
+        "Blackfrost"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/14/14022.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/14/14022.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/14/14022.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin22/sionloadscreen_22.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Scott McNeil"
+      ],
+      "splashArtist": [
+        "Sora Kim",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "High Noon",
+      "id": 14030,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "High Noon",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Aquamarine",
+          "id": 14035,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14035.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 14032,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14032.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 14033,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14033.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Nomad",
+          "id": 14039,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14039.png",
+          "colors": [
+            "#95ECFF",
+            "#C33C3E"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the MSI 2022 High Noon event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 14038,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14038.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 14037,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14037.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 14036,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14036.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 14031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14031.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 14034,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14034.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "As soon as Sion knew life, he knew rage: rage that ripped the restraints from the operating table; rage that crushed the bones of those men who tried to play at the miracle of Creation; rage that he ain't, nor ever would be, the second clockwork angel they had hoped to construct. Sion knows rage, and so will the world.",
+      "release": "2022-05-26",
+      "set": [
+        "High Noon"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/14/14030.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/14/14030.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/14/14030.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin30/sionloadscreen_30.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin30/sionloadscreen_30_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Scott McNeil"
+      ],
+      "splashArtist": [
+        "Jiunn Kuo",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Cosmic Paladin",
+      "id": 14040,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Cosmic Paladin",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 14048,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14048.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Catseye",
+          "id": 14043,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14043.png",
+          "colors": [
+            "#FFEE59",
+            "#FFEE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 14045,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14045.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": "Obtained through Influencer audience giveaways.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 14046,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14046.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 14047,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14047.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 14044,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14044.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 14041,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14041.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 14042,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/14/14042.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Sion was a warrior who found a way to fight his planet's destruction at the hands of the Dark Star to his dying breath. Bel'Veth, fascinated by his stubborn tenacity, raised him from that dying world. Now he fights by her side, a battering ram of force and violence turned towards a singular purpose: eliminating the Dark Star.",
+      "release": "2023-08-30",
+      "set": [
+        "Cosmic"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/14/14040.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/14/14040.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/14/14040.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin40/sionloadscreen_40.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Scott McNeil"
+      ],
+      "splashArtist": [
+        "Sora Kim",
+        "West Studio"
+      ]
+    }
+  ]
+}

@@ -2,10 +2,15 @@
 
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { useEffect, useState } from 'react'
+import { useBackgroundImage } from '@/app/store/useBackgroundImage'
 
 const WrapperBackground = ({ children }: { children: React.ReactNode }) => {
   const [selectedCover, setSelectedCover] = useState<string>('')
   const isMobile = useMediaQuery('(max-width: 768px)')
+
+  const { image } = useBackgroundImage()
+
+  console.log('image', image)
 
   useEffect(() => {
     const userCoverBackground =
@@ -17,7 +22,7 @@ const WrapperBackground = ({ children }: { children: React.ReactNode }) => {
       setSelectedCover(userCoverBackground)
     } else {
       setSelectedCover(
-        'https://cdnb.artstation.com/p/assets/images/images/004/656/221/large/chengwei-pan-diana1.jpg?1485328717',
+        'https://cdnb.artstation.com/p/assets/images/images/004/656/221/large/chengwei-pan-diana1.jpg?1485328717'
       )
     }
   }, [])
@@ -36,7 +41,7 @@ const WrapperBackground = ({ children }: { children: React.ReactNode }) => {
               rgba(3, 16, 30, 1), 
               rgba(3, 16, 30, 1), 
               rgba(3, 16, 30, 1)
-            ), url(${selectedCover})`,
+            ), url(${image || selectedCover})`,
       }}
     >
       {children}

@@ -1,0 +1,1786 @@
+{
+  "id": 77,
+  "key": "Udyr",
+  "name": "Udyr",
+  "title": "the Spirit Walker",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Udyr.png",
+  "resource": "MANA",
+  "attackType": "MELEE",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 664,
+      "percent": 0,
+      "perLevel": 92,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 6,
+      "percent": 0,
+      "perLevel": 0.75,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 271,
+      "percent": 0,
+      "perLevel": 50,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 7.5,
+      "percent": 0,
+      "perLevel": 0.45,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 31,
+      "percent": 0,
+      "perLevel": 4.7,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 2.05,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 62,
+      "percent": 0,
+      "perLevel": 4,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 350,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 400,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 125,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.65,
+      "percent": 0,
+      "perLevel": 3,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.6499999761581421,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.3,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.6,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": -0.10199999809265137,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 125,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 0.92,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1.1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "FIGHTER",
+    "JUGGERNAUT",
+    "TANK"
+  ],
+  "attributeRatings": {
+    "damage": 2,
+    "toughness": 3,
+    "control": 2,
+    "mobility": 2,
+    "utility": 1,
+    "abilityReliance": 35,
+    "difficulty": 1
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Bridge Between",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate - Awakened Spirit: Udyr has no ultimate ability and instead has 4 basic abilities that each incur a 1.5-second global cooldown when cast. Each ability grants a Stance that empowers his next two basic attacks, and switching Stances will replace the empowered attacks from the previous Stance.",
+            "leveling": []
+          },
+          {
+            "description": "Periodically, after Udyr enters a Stance, he can cast it again at no cost after 0.25 seconds to Awaken it, refreshing the cooldown and empowering the Stance with an additional effect.This effect is placed on cooldown at the start of the game.",
+            "leveling": []
+          },
+          {
+            "description": "Innate - Monk Training: After casting an ability, Udyr empowers his next two basic attacks within 4 seconds to gain 30% bonus attack speed and refund 5% of Awakened Spirit's total cooldown, though not if the remaining cooldown is less than 1 second.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                50,
+                40,
+                30,
+                20
+              ],
+              "units": [
+                " (based on level)",
+                " (based on level)",
+                " (based on level)",
+                " (based on level)"
+              ]
+            }
+          ],
+          "affectedByCdr": false
+        },
+        "targeting": "Passive",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Cloud Dragon Soul's increased movement speed buff is special cased to activate on all of Udyr's spell casts due to not having a traditional ultimate.\nAwakened Spirit's cooldown is affected by Ultimate Haste.\nAwakened Spirit's cast is treated as an ultimate ability for the purpose of  Experimental Hexplate's Overdrive.\nAwakened  Wilding Claw and  Wingborne Storm are special-cased to trigger  Malignance's Hatefog.\nAwakened Spirit's cooldown is tracked by a secondary resource bar on his health bar.\nSwitching Stances will not cause any additional effects granted by the previous one to end prematurely.\nThe global cooldown will not incur on abilities that are currently on a greater cooldown.\nThe empowered attacks will not get consumed if they are parried.\nAwakened Spirit's cast also activates Monk Training and empowers the next 2 attacks by the stances unawakened effects as well, overriding unused unawakened stance attacks.",
+        "blurb": "Innate - Awakened Spirit:  Udyr has no ultimate ability and instead he has 4 basic abilities that each incur a  brief global cooldown. Each ability grants a Stance that empowers his next two basic attacks.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Wilding Claw",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active - Stance: Udyr enters Claw Stance, empowering his next two basic attacks to gain 50 bonus range and deal bonus physical damage.",
+            "leveling": [
+              {
+                "attribute": "Bonus Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      3,
+                      4,
+                      5,
+                      6,
+                      7,
+                      8
+                    ],
+                    "units": [
+                      "%  of target's maximum health",
+                      "%  of target's maximum health",
+                      "%  of target's maximum health",
+                      "%  of target's maximum health",
+                      "%  of target's maximum health",
+                      "%  of target's maximum health"
+                    ]
+                  },
+                  {
+                    "values": [
+                      4,
+                      4,
+                      4,
+                      4,
+                      4,
+                      4
+                    ],
+                    "units": [
+                      "% per 100 bonus AD",
+                      "% per 100 bonus AD",
+                      "% per 100 bonus AD",
+                      "% per 100 bonus AD",
+                      "% per 100 bonus AD",
+                      "% per 100 bonus AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      6,
+                      8,
+                      10,
+                      12,
+                      14,
+                      16
+                    ],
+                    "units": [
+                      "%  of target's maximum health",
+                      "%  of target's maximum health",
+                      "%  of target's maximum health",
+                      "%  of target's maximum health",
+                      "%  of target's maximum health",
+                      "%  of target's maximum health"
+                    ]
+                  },
+                  {
+                    "values": [
+                      8,
+                      8,
+                      8,
+                      8,
+                      8,
+                      8
+                    ],
+                    "units": [
+                      "% per 100 bonus AD",
+                      "% per 100 bonus AD",
+                      "% per 100 bonus AD",
+                      "% per 100 bonus AD",
+                      "% per 100 bonus AD",
+                      "% per 100 bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Additionally, Udyr gains bonus attack speed and deals bonus physical damage on-hit for 4 seconds.",
+            "leveling": [
+              {
+                "attribute": "Bonus Attack Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      20,
+                      32,
+                      44,
+                      56,
+                      68,
+                      80
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Bonus Physical Damage On-Hit",
+                "modifiers": [
+                  {
+                    "values": [
+                      5,
+                      11,
+                      17,
+                      23,
+                      29,
+                      35
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      25,
+                      25,
+                      25,
+                      25,
+                      25,
+                      25
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Recast - Awaken: Udyr gains an additional 20% − 70% (based on level) bonus attack speed. The empowered attacks deal an additional 2% − 4% (based on level) (+ 2% per 100 bonus AD) of target's maximum health bonus physical damage. Udyr's next two basic attacks in any Stance are empowered to strike with lightning[ 6 times over 1 second ][ every 0.2 seconds ], dealing bonus magic damage equal to 1.5% − 3% (based on level) (+ 0.8% per 100 AP) of the target's maximum health per hit, chaining to up to 3 nearby visible enemies and being able to hit the same target multiple times. This deals a minimum of 40 − 160 (based on level) against minions and is capped at 20 (+ 100% bonus AD) (+ 50% AP) against monsters.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                20,
+                20,
+                20,
+                20,
+                20,
+                20
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                6,
+                6,
+                6,
+                6,
+                6,
+                6
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self, Enemies",
+        "spellshieldable": "special",
+        "resource": "MANA",
+        "damageType": "MIXED_DAMAGE",
+        "spellEffects": "special",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Deals  spell damage to the primary target and applies  area damage on the lightning strikes.\nThe lightning strikes can deal up to 9% − 18% (based on level) (+ 4.8% per 100 AP) of the target's maximum health bonus magic damage per empowered basic attack against an isolated target.\nIf both empowered attacks are used on the same isolated target, the lightning strikes can deal up to 18% − 36% (based on level) (+ 9.6% per 100 AP) of the target's maximum health bonus magic damage.\nThe lightning strikes from two separate empowered attacks can overlap with each other on the same target for additional damage.\n Spell shield will only block an empowered attack's application of the lightning strikes.\nThe empowered attacks will not trigger nor be consumed if they hit a structure or ward or are parried.",
+        "blurb": "Claw Stance:  Udyr first two basic attacks deal bonus physical damage equal to a portion of the target's maximum health. Additionally, he gains  attack speed and bonus on-hit physical damage for a few seconds.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "450",
+        "targetRange": null
+      }
+    ],
+    "W": [
+      {
+        "name": "Iron Mantle",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active - Stance: Udyr enters Mantle Stance, empowering his next two basic attacks to gain life steal and heal him for 1.2% of his maximum health (+ 8% AP) on-hit.",
+            "leveling": [
+              {
+                "attribute": "Life Steal",
+                "modifiers": [
+                  {
+                    "values": [
+                      15,
+                      16,
+                      17,
+                      18,
+                      19,
+                      20
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Additionally, Udyr grants himself a shield for 4 seconds.",
+            "leveling": [
+              {
+                "attribute": "Shield Strength",
+                "modifiers": [
+                  {
+                    "values": [
+                      45,
+                      60,
+                      75,
+                      90,
+                      105,
+                      120
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      40,
+                      40,
+                      40,
+                      40,
+                      40,
+                      40
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      2,
+                      2.3,
+                      2.6,
+                      2.9,
+                      3.2,
+                      3.5
+                    ],
+                    "units": [
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Recast - Awaken: Udyr increases the shield's strength, stacking with the remaining shield from the first cast, and heals every 0.25 seconds over the next 4 seconds, as well as causes the empowered attacks to instead gain doubled life steal and heal him for 2.4% of his maximum health (+ 16% AP) on-hit.",
+            "leveling": [
+              {
+                "attribute": "Increased Shield Strength",
+                "modifiers": [
+                  {
+                    "values": [
+                      20,
+                      27.647058823529413,
+                      35.294117647058826,
+                      42.94117647058823,
+                      50.58823529411765,
+                      58.23529411764706,
+                      65.88235294117646,
+                      73.52941176470588,
+                      81.1764705882353,
+                      88.82352941176471,
+                      96.47058823529412,
+                      104.11764705882354,
+                      111.76470588235294,
+                      119.41176470588236,
+                      127.05882352941177,
+                      134.7058823529412,
+                      142.3529411764706,
+                      150
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      45,
+                      60,
+                      75,
+                      90,
+                      105,
+                      120
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      65,
+                      65,
+                      65,
+                      65,
+                      65,
+                      65
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      8,
+                      8,
+                      8,
+                      8,
+                      8,
+                      8
+                    ],
+                    "units": [
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Healing",
+                "modifiers": [
+                  {
+                    "values": [
+                      10,
+                      13.823529411764707,
+                      17.647058823529413,
+                      21.470588235294116,
+                      25.294117647058826,
+                      29.11764705882353,
+                      32.94117647058823,
+                      36.76470588235294,
+                      40.58823529411765,
+                      44.411764705882355,
+                      48.23529411764706,
+                      52.05882352941177,
+                      55.88235294117647,
+                      59.70588235294118,
+                      63.529411764705884,
+                      67.3529411764706,
+                      71.1764705882353,
+                      75
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      22.5,
+                      30,
+                      37.5,
+                      45,
+                      52.5,
+                      60
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      32.5,
+                      32.5,
+                      32.5,
+                      32.5,
+                      32.5,
+                      32.5
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      4,
+                      4,
+                      4,
+                      4,
+                      4,
+                      4
+                    ],
+                    "units": [
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Heal per Tick",
+                "modifiers": [
+                  {
+                    "values": [
+                      0.63,
+                      0.8688235294117648,
+                      1.1076470588235294,
+                      1.3464705882352943,
+                      1.585294117647059,
+                      1.8241176470588236,
+                      2.0629411764705883,
+                      2.3017647058823534,
+                      2.540588235294118,
+                      2.7794117647058827,
+                      3.0182352941176473,
+                      3.257058823529412,
+                      3.4958823529411767,
+                      3.7347058823529413,
+                      3.9735294117647064,
+                      4.212352941176471,
+                      4.451176470588236,
+                      4.69
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      1.41,
+                      1.88,
+                      2.34,
+                      2.81,
+                      3.28,
+                      3.75
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      2.03,
+                      2.03,
+                      2.03,
+                      2.03,
+                      2.03,
+                      2.03
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  },
+                  {
+                    "values": [
+                      0.25,
+                      0.25,
+                      0.25,
+                      0.25,
+                      0.25,
+                      0.25
+                    ],
+                    "units": [
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health",
+                      "% maximum health"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Increased Life Steal",
+                "modifiers": [
+                  {
+                    "values": [
+                      30,
+                      32,
+                      34,
+                      36,
+                      38,
+                      40
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Healing on-hit is reduced to 60% against minions.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                39,
+                38,
+                37,
+                36,
+                35,
+                34,
+                33,
+                32,
+                31,
+                30,
+                29,
+                28,
+                27,
+                26,
+                25,
+                24,
+                23
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                6,
+                6,
+                6,
+                6,
+                6,
+                6
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": "spell",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The empowered attacks apply spell effects to the target.\nThe empowered attacks will not trigger nor be consumed if they hit a structure or ward or are parried.",
+        "blurb": "Mantle Stance:  Udyr gains a  shield and his next two basic attacks gain  life steal and  heal him.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Blazing Stampede",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active - Stance: Udyr enters Stampede Stance, empowering his basic attacks to have an uncancellable windup and pounce on the target to stun them for 0.75 seconds. This cannot affect the same target more than once every few seconds.",
+            "leveling": []
+          },
+          {
+            "description": "Additionally, Udyr becomes ghosted and gains bonus movement speed for 4 seconds, which decays to 30% effectiveness over 1.5 seconds.",
+            "leveling": [
+              {
+                "attribute": "Bonus Movement Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      30,
+                      37,
+                      44,
+                      51,
+                      58,
+                      65
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Decayed Bonus Movement Speed",
+                "modifiers": [
+                  {
+                    "values": [
+                      9,
+                      11.1,
+                      13.2,
+                      15.3,
+                      17.4,
+                      19.5
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Recast - Awaken: Udyr gains 75 bonus attack range and an additional 30% − 40% (based on level) bonus movement speed. He also gains immunity to crowd control for 1.5 seconds.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                39,
+                38,
+                37,
+                36,
+                35,
+                34,
+                33,
+                32,
+                31,
+                30,
+                29,
+                28,
+                27,
+                26,
+                25,
+                24,
+                23
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                6,
+                6,
+                6,
+                6,
+                6,
+                6
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self, Enemies",
+        "spellshieldable": "true",
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Spell shield will prevent the immunity to the stun from being applied.(bug)\nUdyr cannot dash while  grounded or  rooted, but he will still declare the empowered attack.\nThe empowered attack will still apply its effects even if the dash is interrupted.\nThe empowered attacks will not trigger nor be consumed if they hit a structure or ward or are parried.\nThe immunity to the stun is not applied in any case.",
+        "blurb": "Stampede Stance:  Udyr gains a burst of  movement speed that decays over a few seconds. His attacks in this stance briefly  stun his target, but this cannot affect them more than once every few seconds.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": "6 / 5.6 / 5.2 / 4.8 / 4.4 / 4",
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "R": [
+      {
+        "name": "Wingborne Storm",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active - Stance: Udyr enters Storm Stance, empowering his next two basic attacks to deal 10 − 30 (based on level) (+ 30% AP) magic damage to nearby enemies.",
+            "leveling": []
+          },
+          {
+            "description": "Additionally, Udyr summons a blizzard around himself for 4 seconds that deals magic damage every 0.5 seconds to nearby enemies and slows them. Minions take 50 / 60 / 70 / 80% (based on level) damage.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage per Tick",
+                "modifiers": [
+                  {
+                    "values": [
+                      10,
+                      19,
+                      28,
+                      37,
+                      46,
+                      55
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      17.5,
+                      17.5,
+                      17.5,
+                      17.5,
+                      17.5,
+                      17.5
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Total Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      80,
+                      152,
+                      224,
+                      296,
+                      368,
+                      440
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      140,
+                      140,
+                      140,
+                      140,
+                      140,
+                      140
+                    ],
+                    "units": [
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP",
+                      "% AP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      15,
+                      18,
+                      21,
+                      24,
+                      27,
+                      30
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Recast - Awaken: Udyr ends the blizzard if it is active and unleashes a glacial storm for 4 seconds that is able to move on its own, as well as causes the empowered attacks to instead deal their damage to enemies within that storm. The storm follows the closest nearby visible target and applies the same effects but deals bonus magic damage equal to[ 1% − 2% (based on level) (+ 0.4375% per 100 AP) of the target's maximum health per tick, capped at 10 − 50 (based on level) ][ 8% − 16% (based on level) (+ 3.5% per 100 AP) of the target's maximum health over the duration, capped at 80 − 400 (based on level) ]against monsters, and slows by an additional 5%.",
+            "leveling": [
+              {
+                "attribute": "Increased Slow",
+                "modifiers": [
+                  {
+                    "values": [
+                      20,
+                      23,
+                      26,
+                      29,
+                      32,
+                      35
+                    ],
+                    "units": [
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%",
+                      "%"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "The unleashed storm grants sight of its surroundings and prioritizes following the last enemy Udyr has attacked while he is nearby, then enemy champions, then non-champions, then Udyr.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                39,
+                38,
+                37,
+                36,
+                35,
+                34,
+                33,
+                32,
+                31,
+                30,
+                29,
+                28,
+                27,
+                26,
+                25,
+                24,
+                23
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                6,
+                6,
+                6,
+                6,
+                6,
+                6
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self, Enemies",
+        "spellshieldable": "false",
+        "resource": "MANA",
+        "damageType": "MAGIC_DAMAGE",
+        "spellEffects": "aoedot",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The storm that Udyr surrounds himself with is independent from the unleashed storm.\nHe can still cast Wingborne Storm to surround himself with a storm while an unleashed storm from an Awakened cast is active.\nUsing the Awakened cast ends the storm around Udyr if it is active and summons a separate storm that is able to move on its own.\nThe slow debuff has a duration equal to the storm's remaining duration and is removed immediately when the unit leaves the storm's area of effect.\nUnits receive the debuff whenever they are in the storm, even after having it removed from leaving the area.\nIf the target Udyr has most recently attacked is invalid and there are no nearby enemies then the storm will follow him instead.\nThe storm can follow Udyr regardless of how far away he is from it.\nThe storm will remain active even if Udyr dies. Any commands it was issued to follow a target will not be interrupted.\nThe storm will follow its target even if they are not  visible, but only for up to 1 second.\nIf it does not gain vision of its target within that time, it changes its target.\nThe storm is obstructed by terrain. If it encounters terrain, then it will automatically navigate its path towards the target.\nThe empowered attacks will not trigger nor be consumed if they hit a structure or ward or are parried.",
+        "blurb": "Storm Stance:  Udyr summons a blizzard around himself for a few seconds that continuously deals magic damage and  slows enemies inside. His next two basic attacks each cause the blizzard to deal a burst of additional magic damage to enemies inside it.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "109.5 − 250 (based on level)",
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "370 /  1300",
+        "targetRange": null
+      }
+    ]
+  },
+  "releaseDate": "2009-12-02",
+  "releasePatch": "1.0.0.61",
+  "patchLastChanged": "14.3",
+  "price": {
+    "blueEssence": 1350,
+    "rp": 585,
+    "saleRp": 0
+  },
+  "lore": "The most powerful spirit walker alive, Udyr communes with all the spirits of the Freljord, whether by empathically understanding their needs, or by channeling and transforming their ethereal energy into his own primal fighting style. He seeks balance within, so that his mind does not get lost amidst others, but he also seeks balance without—for the Freljord's mystical landscape can only thrive with the growth that comes from conflict and struggle, and Udyr knows that sacrifices must be made to keep peaceful stagnance at bay.",
+  "faction": "freljord",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 77000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 585,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "The most powerful spirit walker alive, Udyr communes with all the spirits of the Freljord, whether by empathically understanding their needs, or by channeling and transforming their ethereal energy into his own primal fighting style. He seeks balance within, so that his mind does not get lost amidst others, but he also seeks balance without—for the Freljord's mystical landscape can only thrive with the growth that comes from conflict and struggle, and Udyr knows that sacrifices must be made to keep peaceful stagnance at bay.",
+      "release": "2009-12-02",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/77/77000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/77/77000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/77/77000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/base/udyrloadscreen_0.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Sean Rohani"
+      ],
+      "splashArtist": [
+        "Terence 'Terrylefruit' Cantal"
+      ]
+    },
+    {
+      "name": "Black Belt",
+      "id": 77001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Black Belt",
+      "lootEligible": true,
+      "cost": 520,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Students of the Hiraclaw Dojo know that the best way to tell people you're good at punching is to have a giant screen-printed fist on your clothes. That's a karate fact, according to sensei Udyr. Which is why their parents all buy them the special Hiraclaw gi (only $89.95).",
+      "release": "2010-07-18",
+      "set": [
+        "Day Job"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/77/77001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/77/77001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/77/77001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/skin01/udyrloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Sean Rohani"
+      ],
+      "splashArtist": [
+        "Silvia Meiliani",
+        "Caravan Studio"
+      ]
+    },
+    {
+      "name": "Primal",
+      "id": 77002,
+      "isBase": false,
+      "availability": "Legacy",
+      "formatName": "Primal",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Cursed to roam the land as something between man and beast, Udyr no longer distinguishes between hunters and hunted. Once he gets close enough to strike, they are all his prey.",
+      "release": "2010-12-06",
+      "set": [
+        "Prehistoric Hunters"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/77/77002.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/77/77002.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/77/77002.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/skin02/udyrloadscreen_2.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Sean Rohani"
+      ],
+      "splashArtist": [
+        "Rio Sabda",
+        "Caravan Studio"
+      ]
+    },
+    {
+      "name": "Spirit Guard",
+      "id": 77003,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Spirit Guard",
+      "lootEligible": true,
+      "cost": 3250,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Ultimate",
+      "chromas": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "lore": "Udyr's time in Ionia, training at Hirana Monastery, taught him control and calmed the storm in his heart. Though the Freljord called him home, Udyr chose to stay and help Ionia regain spiritual harmony, as it had done for him. As he gets closer to this goal, he knows that his work to do the same for the whole of Runeterra has only just begun.",
+      "release": "2013-07-16",
+      "set": [
+        "Spirit Guard"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/77/77003.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/77/77003.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/77/77003.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/skin03/udyrloadscreen_3.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Sean Rohani"
+      ],
+      "splashArtist": [
+        "Rudy Siswanto"
+      ]
+    },
+    {
+      "name": "Definitely Not",
+      "id": 77004,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Definitely Not",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Wear the onesie. Become the beast.",
+      "release": "2015-03-31",
+      "set": [
+        "Definitely Not"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/77/77004.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/77/77004.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/77/77004.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/skin04/udyrloadscreen_4.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Sean Rohani"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Dragon Oracle",
+      "id": 77005,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Dragon Oracle",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [],
+      "lore": "Every dragon that dies leaves behind a blazing spirit. Through Udyr, a mystic who doubted the old tales, these dragon spirits have the chance to touch life once again. He believes that dragons are only as evil as those who command them and, in channeling the spirits and their flames, seeks to prove it to the slayers.",
+      "release": "2019-08-15",
+      "set": [
+        "Dragon World"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/77/77005.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/77/77005.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/77/77005.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/skin05/udyrloadscreen_5.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Sean Rohani"
+      ],
+      "splashArtist": []
+    },
+    {
+      "name": "Inkshadow",
+      "id": 77006,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Inkshadow",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Inked",
+          "id": 77011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/77/77011.png",
+          "colors": [
+            "#B5CED6",
+            "#33D889"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2023 Inkshadow event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 77010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/77/77010.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 77009,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/77/77009.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 77007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/77/77007.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 77008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/77/77008.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Udyr has given up much as tattoo artist for the Inkshadow Warriors, sacrificing pieces of himself to multiple spirits and covering his body in their arcane contracts to enhance his natural second sight. He sees the souls of his canvases, knows the price they must pay, and connects them to the spirits who will give them the power to do what must be done.",
+      "release": "2023-05-03",
+      "set": [
+        "Inkshadow"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/77/77006.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/77/77006.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/77/77006.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/skin06/udyrloadscreen_6.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/skin06/udyrloadscreen_6_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Sean Rohani"
+      ],
+      "splashArtist": [
+        "Augusto Quirino",
+        "West Studio"
+      ]
+    }
+  ]
+}

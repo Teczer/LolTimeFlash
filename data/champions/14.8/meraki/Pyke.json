@@ -1,0 +1,2144 @@
+{
+  "id": 555,
+  "key": "Pyke",
+  "name": "Pyke",
+  "title": "the Bloodharbor Ripper",
+  "fullName": "",
+  "icon": "http://ddragon.leagueoflegends.com/cdn/14.7.1/img/champion/Pyke.png",
+  "resource": "MANA",
+  "attackType": "MELEE",
+  "adaptiveType": "PHYSICAL_DAMAGE",
+  "stats": {
+    "health": {
+      "flat": 670,
+      "percent": 0,
+      "perLevel": 110,
+      "percentPerLevel": 0
+    },
+    "healthRegen": {
+      "flat": 7,
+      "percent": 0,
+      "perLevel": 0.5,
+      "percentPerLevel": 0
+    },
+    "mana": {
+      "flat": 415,
+      "percent": 0,
+      "perLevel": 50,
+      "percentPerLevel": 0
+    },
+    "manaRegen": {
+      "flat": 8,
+      "percent": 0,
+      "perLevel": 1,
+      "percentPerLevel": 0
+    },
+    "armor": {
+      "flat": 47,
+      "percent": 0,
+      "perLevel": 4.7,
+      "percentPerLevel": 0
+    },
+    "magicResistance": {
+      "flat": 32,
+      "percent": 0,
+      "perLevel": 2.05,
+      "percentPerLevel": 0
+    },
+    "attackDamage": {
+      "flat": 62,
+      "percent": 0,
+      "perLevel": 2,
+      "percentPerLevel": 0
+    },
+    "movespeed": {
+      "flat": 330,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "acquisitionRadius": {
+      "flat": 400,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "selectionRadius": {
+      "flat": 120,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "pathingRadius": {
+      "flat": 35,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "gameplayRadius": {
+      "flat": 65,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamage": {
+      "flat": 175,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackSpeed": {
+      "flat": 0.667,
+      "percent": 0,
+      "perLevel": 2.5,
+      "percentPerLevel": 0
+    },
+    "attackSpeedRatio": {
+      "flat": 0.666999995708465,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackCastTime": {
+      "flat": 0.300000011920928,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackTotalTime": {
+      "flat": 1.5,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackDelayOffset": {
+      "flat": 0,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "attackRange": {
+      "flat": 150,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageTaken": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramDamageDealt": {
+      "flat": 1.1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "aramShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageTaken": {
+      "flat": 0.95,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfDamageDealt": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfHealing": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    },
+    "urfShielding": {
+      "flat": 1,
+      "percent": 0,
+      "perLevel": 0,
+      "percentPerLevel": 0
+    }
+  },
+  "roles": [
+    "ASSASSIN",
+    "CATCHER",
+    "SUPPORT"
+  ],
+  "attributeRatings": {
+    "damage": 2,
+    "toughness": 1,
+    "control": 3,
+    "mobility": 3,
+    "utility": 1,
+    "abilityReliance": 50,
+    "difficulty": 2
+  },
+  "abilities": {
+    "P": [
+      {
+        "name": "Gift of the Drowned Ones",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/p",
+        "effects": [
+          {
+            "description": "Innate: Pyke's maximum health cannot increase except through growth (per level), instead he gains[ 1 bonus attack damage per 14 bonus health. ][ bonus attack damage equal to 7.143% of bonus health. ]",
+            "leveling": []
+          },
+          {
+            "description": "Innate: Pyke gains 1 bonus movement speed while in the river.",
+            "leveling": []
+          },
+          {
+            "description": "Innate: Pyke stores 9% (+ 0.2% per 1 Lethality) of the post-mitigation damage he takes from enemy champions as grey health on his health bar, increased to 40% (+ 0.4% per 1 Lethality) while there are two or more visible enemy champions nearby. He can store up to 80 (+ 800% bonus AD) grey health, with an upper cap of 55% of his maximum health.",
+            "leveling": []
+          },
+          {
+            "description": "While Pyke is not visible to enemies, he rapidly consumes his grey health to heal for the same amount.",
+            "leveling": []
+          }
+        ],
+        "cost": null,
+        "cooldown": null,
+        "targeting": "Passive",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": null,
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Game elements that increase health based on the champion's health (e.g  Overgrowth) will increase the health before getting converted by Gift of the Drowned Ones, thus granting increased bonus AD.\n Spirit Visage and  Grievous Wounds take effect after Gift of the Drowned Ones's healing cap.\nPyke's grey health does not have a time limit, and will stay on his health bar until Pyke leaves enemy vision or dies.\nSince Pyke's maximum health cannot be increased, Gift of the Drowned Ones reaches the upper cap of 55% of maximum health at 40.25 − 180.5 (based on level) bonus attack damage.\n Untargetable champions count towards Pyke's modified grey health storing.\nAmount of attack damage granted from list of items that grants health, converted with Gift of the Drowned Ones:\nThis table is automatically generated based on the data from Module:ItemData/data.\n\nItemCostAmountAvailabilityAbyssal Mask Abyssal Mask2400 21.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidAnathema's Chains Anathema's Chains2500 46.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidBami's Cinder Bami's Cinder1000 21.4Nexus Blitz, Classic Summoner's Rift 5v5, All Random All MidBlack Cleaver Black Cleaver3000 83.6Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidBloodsong Bloodsong400 14.3Classic Summoner's Rift 5v5Bounty of Worlds Bounty of Worlds400 14.3Classic Summoner's Rift 5v5Catalyst of Aeons Catalyst of Aeons1300 25Nexus Blitz, Classic Summoner's Rift 5v5, All Random All MidCelestial Opposition Celestial Opposition400 14.3Classic Summoner's Rift 5v5Chempunk Chainsword Chempunk Chainsword2800 72.9Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidCosmic Drive Cosmic Drive3000 17.9Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidCry of the Shrieking City Cry of the Shrieking City2200 21.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidCrystalline Bracer Crystalline Bracer800 14.3Nexus Blitz, Classic Summoner's Rift 5v5, All Random All MidDark Seal Dark Seal350 3.6Classic Summoner's Rift 5v5Dead Man's Plate Dead Man's Plate2900 21.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidDoran's Blade Doran's Blade450 17.1Nexus Blitz, Classic Summoner's Rift 5v5Doran's Ring Doran's Ring400 6.4Nexus Blitz, Classic Summoner's Rift 5v5Doran's Shield Doran's Shield450 7.9Nexus Blitz, Classic Summoner's Rift 5v5Dream Maker Dream Maker400 14.3Classic Summoner's Rift 5v5Dreamshatter Dreamshatter3300 102.9Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidEchoes of Helia Echoes of Helia2200 14.3Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidEdge of Night Edge of Night2800 67.9Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidExperimental Hexplate Experimental Hexplate3000 76.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidFimbulwinter Fimbulwinter2400 28.6Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidForce of Nature Force of Nature2800 28.6Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidFrozen Fist Frozen Fist2600 28.6Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidGiant's Belt Giant's Belt900 25Nexus Blitz, Classic Summoner's Rift 5v5, All Random All MidGuardian's Blade Guardian's Blade950 40.7Arena, All Random All MidGuardian's Hammer Guardian's Hammer950 35.7Arena, All Random All MidGuardian's Horn Guardian's Horn950 10.7Arena, All Random All MidGuardian's Orb Guardian's Orb950 10.7Arena, All Random All MidHaunting Guise Haunting Guise1300 14.3Nexus Blitz, Classic Summoner's Rift 5v5, All Random All MidHeartsteel Heartsteel3000 64.3Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidHeavensfall Heavensfall3100 102.9Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidHextech Rocketbelt Hextech Rocketbelt2600 21.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidHollow Radiance Hollow Radiance2800 42.9Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidHope Adrift Hope Adrift2800 42.9Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidHullbreaker Hullbreaker3000 90Nexus Blitz, Arena, Classic Summoner's Rift 5v5Icathia's Curse Icathia's Curse3100 32.1Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidIceborn Gauntlet Iceborn Gauntlet2600 21.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidInfinite Convergence Infinite Convergence2600 39.3Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidInfinity Force Infinity Force3333 83.6Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidJak'Sho, The Protean Jak'Sho, The Protean3200 21.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidKaenic Rookern Kaenic Rookern2900 28.6Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidKindlegem Kindlegem800 14.3Nexus Blitz, Classic Summoner's Rift 5v5, All Random All MidKnight's Vow Knight's Vow2200 21.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidLeviathan Leviathan3000 82.1Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidLiandry's Lament Liandry's Lament3000 39.3Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidLiandry's Torment Liandry's Torment3000 21.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidLocket of the Iron Solari Locket of the Iron Solari2200 14.3Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidMejai's Soulstealer Mejai's Soulstealer1500 7.1Classic Summoner's Rift 5v5Mikael's Blessing Mikael's Blessing2300 17.9Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidMoonstone Renewer Moonstone Renewer2200 17.9Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidObsidian Cleaver Obsidian Cleaver3000 107.9Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidPhage Phage1100 29.3Nexus Blitz, Classic Summoner's Rift 5v5, All Random All MidRanduin's Omen Randuin's Omen2700 28.6Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidRedemption Redemption2300 14.3Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidReliquary of the Golden Dawn Reliquary of the Golden Dawn2200 25Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidRiftmaker Riftmaker3100 25Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidRod of Ages Rod of Ages2600 28.6Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidRuby Crystal Ruby Crystal400 10.7Nexus Blitz, Classic Summoner's Rift 5v5, All Random All MidRunic Compass Runic Compass400 7.1Classic Summoner's Rift 5v5Rylai's Crystal Scepter Rylai's Crystal Scepter2600 28.6Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidShojin's Resolve Shojin's Resolve3100 100.7Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidSolstice Sleigh Solstice Sleigh400 14.3Classic Summoner's Rift 5v5Spear of Shojin Spear of Shojin3100 76.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidSpectre's Cowl Spectre's Cowl1250 14.3Nexus Blitz, Classic Summoner's Rift 5v5, All Random All MidSpirit Visage Spirit Visage2900 32.1Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidStarcaster Starcaster2200 21.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidSterak's Gage Sterak's Gage3000 28.6Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidStridebreaker Stridebreaker3300 82.1Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidSundered Sky Sundered Sky3100 77.1Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidSunfire Aegis Sunfire Aegis2700 35.7Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidT.U.R.B.O. T.U.R.B.O.3000 97.1Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidThe Unspoken Parasite The Unspoken Parasite3200 39.3Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidThornmail Thornmail2700 25Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidTitanic Hydra Titanic Hydra3300 89.3Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidTrailblazer Trailblazer2500 14.3Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidTrinity Force Trinity Force3333 66.4Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidTunneler Tunneler1150 32.9Nexus Blitz, Classic Summoner's Rift 5v5, All Random All MidUnending Despair Unending Despair2800 28.6Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidUpgraded Aeropack Upgraded Aeropack2600 32.1Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidVigilant Wardstone Vigilant Wardstone2300 17.9Classic Summoner's Rift 5v5Warmog's Armor Warmog's Armor3100 53.6Nexus Blitz, Classic Summoner's Rift 5v5, All Random All MidWatchful Wardstone Watchful Wardstone1100 10.7Classic Summoner's Rift 5v5Winged Moonplate Winged Moonplate800 10.7Nexus Blitz, Classic Summoner's Rift 5v5, All Random All MidWinter's Approach Winter's Approach2400 28.6Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All MidWorld Atlas World Atlas400 2.1Classic Summoner's Rift 5v5Zaz'Zak's Realmspike Zaz'Zak's Realmspike400 14.3Classic Summoner's Rift 5v5Zeke's Convergence Zeke's Convergence2200 14.3Nexus Blitz, Arena, Classic Summoner's Rift 5v5, All Random All Mid",
+        "blurb": "Innate:  Pyke gains  attack damage equal to a portion of his  bonus health.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": null,
+        "effectRadius": "1500",
+        "targetRange": null
+      }
+    ],
+    "Q": [
+      {
+        "name": "Bone Skewer",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/q",
+        "effects": [
+          {
+            "description": "Active: Pyke charges while being slowed by 20% for up to 3 seconds to increase Bone Skewer's range over the first second of the channel. Bone Skewer can be recast within the duration.",
+            "leveling": []
+          },
+          {
+            "description": "Recast: Pyke hurls his harpoon in the target direction that deals physical damage to the first enemy hit and pulls them, during which they are also revealed, then slows them by 90% for 1 second.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      100,
+                      150,
+                      200,
+                      250,
+                      300
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      75,
+                      75,
+                      75,
+                      75,
+                      75
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Releasing the ability within 0.4 seconds causes Pyke to instead thrust his blade in the target direction, dealing the same damage to the closest enemy champion, or closest enemy otherwise.",
+            "leveling": []
+          },
+          {
+            "description": "If the charge is interrupted or completes without reactivation, Bone Skewer is cancelled and the ability is put on full cooldown but refunds 75% of the mana cost. Bone Skewer's mana cost is also refunded if it hits an enemy champion.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                70,
+                75,
+                80,
+                85,
+                90
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                10,
+                9.5,
+                9,
+                8.5,
+                8
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto / Direction",
+        "affects": "Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "Spell",
+        "projectile": "SPECIAL",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Only the charged version of Bone Skewer will be  intercepted.\nThe pull can fling an enemy behind Pyke if the harpoon hits at close range.\nThis ability will cast from wherever the caster is at the end of the cast time.\nPyke can still use summoner spells besides  Flash,  Teleport,  Hexflash, and  Mark /  Dash while hurling the harpoon but he cannot perform any other action.\nThe following table refers for interactions while Pyke is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled, but can use trinkets\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\n Hexflash (Recasts)\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+        "blurb": "Active:  Pyke  charges up to a short time, increasing the  range of his harpoon. After a brief period, it becomes empowered with a new effect.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": "140 / 200",
+        "angle": null,
+        "castTime": "0.25",
+        "effectRadius": "550",
+        "targetRange": "400 − 1100 (based on channel time)"
+      }
+    ],
+    "W": [
+      {
+        "name": "Ghostwater Dive",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/w",
+        "effects": [
+          {
+            "description": "Active: Pyke submerges into water for 5 seconds, entering camouflage and gaining 45% (+ 2% per 1 Lethality) bonus movement speed that decays over the duration. Attacking or casting abilities ends Ghostwater Dive immediately.",
+            "leveling": []
+          },
+          {
+            "description": "Enemy champions within 1500 units of Pyke are alerted of his presence and whether he can execute them with Death from Below.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                50,
+                50,
+                50,
+                50,
+                50
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                12,
+                11,
+                10,
+                9,
+                8
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Auto",
+        "affects": "Self",
+        "spellshieldable": null,
+        "resource": "MANA",
+        "damageType": null,
+        "spellEffects": null,
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "When an enemy is alerted, sharks will circle underneath their feet while a sound will be played to them that changes based on health threshold.",
+        "blurb": "Active:  Pyke submerges into water, entering  camouflage and gaining a burst of  movement speed for a few seconds. Nearby enemies are alerted of his presence.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": null,
+        "targetRange": null
+      }
+    ],
+    "E": [
+      {
+        "name": "Phantom Undertow",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/e",
+        "effects": [
+          {
+            "description": "Active: Pyke dashes in the target direction, leaving behind a Phantom.",
+            "leveling": []
+          },
+          {
+            "description": "After 1 second, the Phantom homes back to Pyke to stun enemies around it and those it passes through along the way for 1.25 (+ 0.1 per 10 Lethality) seconds. Enemy champions hit also take physical damage.",
+            "leveling": [
+              {
+                "attribute": "Physical Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      100,
+                      150,
+                      200,
+                      250,
+                      300
+                    ],
+                    "units": [
+                      "",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      100,
+                      100,
+                      100,
+                      100,
+                      100
+                    ],
+                    "units": [
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD",
+                      "% bonus AD"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                40,
+                40,
+                40,
+                40,
+                40
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                15,
+                14,
+                13,
+                12,
+                11
+              ],
+              "units": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Direction",
+        "affects": "Self, Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "PHYSICAL_DAMAGE",
+        "spellEffects": "spellaoe",
+        "projectile": "TRUE",
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "The  dash distance can be extended to up to 900 units (estimated) when targeting across terrain.\nLike most projectiles, the flying Phantom cannot hit targets whose  center is behind the position it originates at or beyond the position it catches up to Pyke at, but the spell can hit targets behind its origin as long as their  hitbox radius overlaps with the original unit Phantom's 110-radius check at the end of its lifespan.",
+        "blurb": "Active:  Pyke dashes in the target direction, leaving behind a phantom.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": "3000",
+        "width": "110",
+        "angle": null,
+        "castTime": "none",
+        "effectRadius": "110",
+        "targetRange": "550"
+      }
+    ],
+    "R": [
+      {
+        "name": "Death from Below",
+        "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/r",
+        "effects": [
+          {
+            "description": "Active: Pyke marks the target location with an X before striking it, executing enemy champions within the area that are below 250 − 550 (based on level) (+ 80% bonus AD) (+ 1.5 per 1 Lethality) health. Other enemies hit and enemy champions above the threshold are instead dealt[ 50% of the amount as physical damage. ][ 125 − 275 (based on level) (+ 40% bonus AD) (+ 0.75 per 1 Lethality) physical damage. ]",
+            "leveling": []
+          },
+          {
+            "description": "If Death from Below hits an enemy champion or at least one is killed inside the X by the execution or an ally, Pyke will blink to the center of the X. For the latter case Pyke can also recast the ability within 20 seconds at no cost.",
+            "leveling": []
+          },
+          {
+            "description": "Each successful execution grants one Your Cut to the last assisting ally, instead of its natural assist gold. Otherwise, Pyke is granted a Your Cut for each enemy champion killed inside the X by an ally during Death from Below's cast time.",
+            "leveling": []
+          }
+        ],
+        "cost": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                100,
+                100
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "modifiers": [
+            {
+              "values": [
+                100,
+                85,
+                70
+              ],
+              "units": [
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "affectedByCdr": true
+        },
+        "targeting": "Location",
+        "affects": "Self, Enemies",
+        "spellshieldable": "True",
+        "resource": "MANA",
+        "damageType": "MIXED_DAMAGE",
+        "spellEffects": "special",
+        "projectile": null,
+        "onHitEffects": null,
+        "occurrence": null,
+        "notes": "Applies  raw damage to executed targets and  area damage to targets above the threshold.\nDeath from Below's execute against an enemy champion will aggro nearby enemy minions.\nDeath from Below cannot execute  clones. They are always dealt 50% physical damage.\nIf the target is in a  zombie state, does not enter the  death state, or is killed by the ability while above the execution threshold, Death from Below does not grant  Your Cut nor the recast.\n Spell shield does not prevent Pyke from  blinking.\nIf an enemy champion dies inside the X during Death from Below's cast time, Pyke will be shown as having received an assist in the kill feed, but this will not trigger  takedown effects.\nDeath from Below cannot be  interrupted; Pyke will always appear at the target location if enemy champions are caught inside the X even if he is moved (e.g. by being  displaced) during the cast time.\nThe only exception is if he is being  suppressed, in which case he will not  blink.",
+        "blurb": "Active:  Pyke strikes the target location in a X pattern, which  executes enemy  champions hit that are at low health. Other enemies hit are instead dealt physical damage.",
+        "missileSpeed": null,
+        "rechargeRate": null,
+        "collisionRadius": null,
+        "tetherRadius": null,
+        "onTargetCdStatic": null,
+        "innerRadius": null,
+        "speed": null,
+        "width": null,
+        "angle": null,
+        "castTime": "0.5",
+        "effectRadius": "125 / 282.5  ×  100",
+        "targetRange": "750"
+      }
+    ]
+  },
+  "releaseDate": "2018-05-31",
+  "releasePatch": "8.11",
+  "patchLastChanged": "14.3",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 790,
+    "saleRp": 0
+  },
+  "lore": "A renowned harpooner from the slaughter docks of Bilgewater, Pyke should have met his death in the belly of a gigantic jaull-fish… and yet, he returned. Now, stalking the dank alleys and backways of his former hometown, he uses his new supernatural gifts to bring a swift and gruesome end to those who make their fortune by exploiting others—and a city that prides itself on hunting monsters now finds a monster hunting them.",
+  "faction": "bilgewater",
+  "skins": [
+    {
+      "name": "Original",
+      "id": 555000,
+      "isBase": true,
+      "availability": "Available",
+      "formatName": "Original",
+      "lootEligible": true,
+      "cost": 975,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "NoRarity",
+      "chromas": [],
+      "lore": "Renowned harpooner from the slaughter docks of Bilgewater, Pyke should have met his death in the belly of a gigantic jaull-fish… and yet, he returned. Now, stalking the dank alleys and backways of his former hometown, he uses his new supernatural gifts to bring a swift and gruesome end to those who make their fortune by exploiting others—and a city that prides itself on hunting monsters now finds a monster hunting them.",
+      "release": "2018-05-31",
+      "set": [],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/555/555000.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/555/555000.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/555/555000.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/base/pykeloadscreen.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": false,
+      "newAnimations": false,
+      "newRecall": false,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Darien Sills-Evans"
+      ],
+      "splashArtist": [
+        "Victor '3rdColossus' Maury"
+      ]
+    },
+    {
+      "name": "Sand Wraith",
+      "id": 555001,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Sand Wraith",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Catseye",
+          "id": 555002,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555002.png",
+          "colors": [
+            "#E1EE59",
+            "#E1EE59"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 555003,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555003.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 555008,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555008.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 555006,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555006.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 555004,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555004.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 555005,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555005.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 555007,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555007.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 0,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "The vengeful ghost of an ancient caravan master betrayed by his guards, Pyke now lurks within the golden halls of the desert's remaining city-states. He hunts anyone and everyone who attracts his gaze, claiming they all condemned him to death.",
+      "release": "2018-05-31",
+      "set": [
+        "Guardian of the Sands"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/555/555001.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/555/555001.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/555/555001.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin01/pykeloadscreen_1.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": true,
+      "voiceActor": [
+        "Darien Sills-Evans"
+      ],
+      "splashArtist": [
+        "Mike Azevedo"
+      ]
+    },
+    {
+      "name": "Blood Moon",
+      "id": 555009,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Blood Moon",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Aquamarine",
+          "id": 555012,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555012.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 555011,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555011.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 555014,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555014.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 555015,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555015.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 555013,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555013.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 555010,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555010.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive during 2019.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "A demonic spearfisher lurking within the darkness of the Blood Moon's mirror dimension, Pyke casts his hooked blade across an endless, liquid night, dragging demons up from the bottom of the world and into their human hosts. Inexorably tied to the Blood Moon, Pyke's sudden appearance in Ionia is a dire omen indeed…",
+      "release": "2019-01-10",
+      "set": [
+        "Blood Moon"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/555/555009.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/555/555009.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/555/555009.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin09/pykeloadscreen_9.jpg",
+      "loadScreenVintagePath": null,
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Darien Sills-Evans"
+      ],
+      "splashArtist": [
+        "Viktor Titov",
+        "Grafit Studio"
+      ]
+    },
+    {
+      "name": "PROJECT",
+      "id": 555016,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "PROJECT: Pyke",
+      "lootEligible": true,
+      "cost": 1820,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Legendary",
+      "chromas": [
+        {
+          "name": "Amethyst",
+          "id": 555022,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555022.png",
+          "colors": [
+            "#9C68D7",
+            "#9C68D7"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Aquamarine",
+          "id": 555021,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555021.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 555017,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555017.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 555020,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555020.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Reckoning",
+          "id": 555024,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555024.png",
+          "colors": [
+            "#FF5500",
+            "#162B30"
+          ],
+          "descriptions": [
+            {
+              "description": "Loot exclusive gained during the 2019 PROJECT event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 555023,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555023.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 555018,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555018.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2019.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 555019,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555019.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "An early PROJECT prototype, Pyke's untested upgrades left him violently unstable—too much so for his handlers, who junked him and threw his remains outside the walls of the City. Yet his cybernetic brain survived, rebuilding Pyke with salvaged scrap parts from all around him, and now their fragmented, overlapping memories mix with his own as they scream out for revenge.",
+      "release": "2019-08-01",
+      "set": [
+        "PROJECT"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/555/555016.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/555/555016.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/555/555016.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin16/pykeloadscreen_16.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin16/pykeloadscreen_16_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Darien Sills-Evans"
+      ],
+      "splashArtist": [
+        "Bo 'chenbowow' Chen"
+      ]
+    },
+    {
+      "name": "PsyOps",
+      "id": 555025,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "PsyOps",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Emerald",
+          "id": 555030,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555030.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": "Obtained through Influencer audience giveaways.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Hunter",
+          "id": 555032,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555032.png",
+          "colors": [
+            "#B2D1E4",
+            "#3CABFF"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2020 PsyOps event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 555033,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555033.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 555031,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555031.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 555026,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555026.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2020.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sandstone",
+          "id": 555027,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555027.png",
+          "colors": [
+            "#DED6B0",
+            "#DED6B0"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 555028,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555028.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 555029,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555029.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "A member of the Black Rose Group's leadership and a powerful spiritual medium, Pyke's mastery of psychic power allows him to jump across the barrier separating the living and the dead. This process has slowly eaten at his mind, leaving him a half-deranged killer screaming at literal ghosts.",
+      "release": "2020-09-17",
+      "set": [
+        "Black Rose Group"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/555/555025.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/555/555025.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/555/555025.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin25/pykeloadscreen_25.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin25/pykeloadscreen_25_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Darien Sills-Evans"
+      ],
+      "splashArtist": [
+        "Sean 'Raiko' Tay",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Sentinel",
+      "id": 555034,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Sentinel",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Aquamarine",
+          "id": 555041,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555041.png",
+          "colors": [
+            "#6ABBEE",
+            "#6ABBEE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Citrine",
+          "id": 555036,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555036.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 555037,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555037.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 555040,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555040.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Resolute",
+          "id": 555043,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555043.png",
+          "colors": [
+            "#080808",
+            "#8E0A38"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2021 Sentinel event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 555035,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555035.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2021.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Sapphire",
+          "id": 555039,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555039.png",
+          "colors": [
+            "#2756CE",
+            "#2756CE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 555038,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555038.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 555042,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555042.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Pyke may seem an unlikely Sentinel to take up the oath, but Viego's name is next on his list. Pacified—for now—by the influence of Nagakabouros, the real danger is that he might snap at any moment, killing allies and enemies alike.",
+      "release": "2021-07-22",
+      "set": [
+        "Sentinels of Light"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/555/555034.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/555/555034.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/555/555034.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin34/pykeloadscreen_34.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin34/pykeloadscreen_34_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Darien Sills-Evans"
+      ],
+      "splashArtist": [
+        "Rayden Chen",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Ashen Knight",
+      "id": 555044,
+      "isBase": false,
+      "availability": "Rare",
+      "formatName": "Ashen Knight",
+      "lootEligible": true,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "125 Mythic Essence",
+      "rarity": "Mythic",
+      "chromas": [
+        {
+          "name": "Emberwoken",
+          "id": 555046,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555046.png",
+          "colors": [
+            "#9D0606",
+            "#2B263F"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 4,
+              "region": "riot"
+            }
+          ]
+        }
+      ],
+      "lore": "Condemned to death for petty crimes, then saved by the king and uplifted to glorious knighthood, Pyke served in the war against magic until the very end, only to be left alone in an ashen world without. Gripped by violent madness, he challenges all who pass, accusing them of being the ruler who abandoned him.",
+      "release": "2022-03-30",
+      "set": [
+        "Ashen Knights"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/555/555044.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/555/555044.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/555/555044.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin44/pykeloadscreen_44.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin44/pykeloadscreen_44_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Darien Sills-Evans"
+      ],
+      "splashArtist": [
+        "Jeremy 'Jermu' Anninos"
+      ]
+    },
+    {
+      "name": "Empyrean",
+      "id": 555045,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Empyrean",
+      "lootEligible": true,
+      "cost": 1820,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Legendary",
+      "chromas": [
+        {
+          "name": "Emerald",
+          "id": 555048,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555048.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Neon Flare",
+          "id": 555052,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555052.png",
+          "colors": [
+            "#FF655B",
+            "#95E237"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the Worlds 2022 Event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 555049,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555049.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 555050,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555050.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 555047,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555047.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2022.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 555051,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555051.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "Pyke remembers little before falling into the embrace of the Foreglow, only that he was defending his home. Waking in a new realm as the first Empyrean, he hears the whispers of other Pykes across the dimensions, taunting him from their homes. Why was his lost and not theirs? No answer will satisfy his searing rage, except vengeance.",
+      "release": "2022-11-03",
+      "set": [
+        "Empyrean"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/555/555045.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/555/555045.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/555/555045.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin45/pykeloadscreen_45.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin45/pykeloadscreen_45_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": true,
+      "newQuotes": false,
+      "voiceActor": [
+        "Darien Sills-Evans"
+      ],
+      "splashArtist": [
+        "Nathaniel Himawan",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Soul Fighter",
+      "id": 555053,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Soul Fighter",
+      "lootEligible": true,
+      "cost": 1350,
+      "sale": 0,
+      "distribution": null,
+      "rarity": "Epic",
+      "chromas": [
+        {
+          "name": "Citrine",
+          "id": 555057,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555057.png",
+          "colors": [
+            "#DF9117",
+            "#DF9117"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Emerald",
+          "id": 555060,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555060.png",
+          "colors": [
+            "#2DA130",
+            "#2DA130"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Limitless",
+          "id": 555063,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555063.png",
+          "colors": [
+            "#C8D0CE",
+            "#AF65D1"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a Loot exclusive in the 2023 Soul Fighter event.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Obsidian",
+          "id": 555062,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555062.png",
+          "colors": [
+            "#27211C",
+            "#27211C"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Pearl",
+          "id": 555061,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555061.png",
+          "colors": [
+            "#ECF9F8",
+            "#ECF9F8"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Rose Quartz",
+          "id": 555059,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555059.png",
+          "colors": [
+            "#E58BA5",
+            "#E58BA5"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "TENCENT"
+            }
+          ]
+        },
+        {
+          "name": "Ruby",
+          "id": 555055,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555055.png",
+          "colors": [
+            "#D33528",
+            "#D33528"
+          ],
+          "descriptions": [
+            {
+              "description": "This chroma was released as a bundle exclusive in 2023.",
+              "region": "riot"
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": 1,
+              "region": "riot"
+            }
+          ]
+        },
+        {
+          "name": "Tanzanite",
+          "id": 555056,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555056.png",
+          "colors": [
+            "#54209B",
+            "#54209B"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        },
+        {
+          "name": "Turquoise",
+          "id": 555058,
+          "chromaPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/555/555058.png",
+          "colors": [
+            "#73BFBE",
+            "#73BFBE"
+          ],
+          "descriptions": [
+            {
+              "description": null,
+              "region": null
+            }
+          ],
+          "rarities": [
+            {
+              "rarity": null,
+              "region": null
+            }
+          ]
+        }
+      ],
+      "lore": "This un-alived assailer has unfinished business: duking it out in the ring! Now, I can't say if returning from the dead proves the existence of the \"Lands Beyond.\" (I don't get paid enough to PONDER MY EXISTENCE!) But if rumors are true, and this fighter's friend brought him back from the brink... then we're in for a HELL of a fight! Here's Pyke!",
+      "release": "2023-07-20",
+      "set": [
+        "Soul Fighter"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/555/555053.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/555/555053.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/555/555053.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin53/pykeloadscreen_53.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin53/pykeloadscreen_53_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Darien Sills-Evans"
+      ],
+      "splashArtist": [
+        "Augusto Quirino",
+        "West Studio"
+      ]
+    },
+    {
+      "name": "Prestige Soul Fighter",
+      "id": 555054,
+      "isBase": false,
+      "availability": "Available",
+      "formatName": "Prestige Soul Fighter",
+      "lootEligible": true,
+      "cost": "Special",
+      "sale": 0,
+      "distribution": "125 Mythic Essence",
+      "rarity": "Mythic",
+      "chromas": [],
+      "lore": "Pyke's fashion-forward fit impresses not only the rich and famous at the Gala of Souls, but all those watching at home—and his fans from the Lands Beyond. The edgy aesthetics and glossy flame motifs all but guarantee him a spot on the list of any discerning judge. After all, if Pyke's not on your list, you'll end up on his...",
+      "release": "2023-07-20",
+      "set": [
+        "Soul Fighter"
+      ],
+      "splashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/555/555054.jpg",
+      "uncenteredSplashPath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/uncentered/555/555054.jpg",
+      "tilePath": "http://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/555/555054.jpg",
+      "loadScreenPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin54/pykeloadscreen_54.jpg",
+      "loadScreenVintagePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/skin54/pykeloadscreen_54_le.jpg",
+      "newEffects": true,
+      "newAnimations": true,
+      "newRecall": true,
+      "newVoice": false,
+      "newQuotes": false,
+      "voiceActor": [
+        "Darien Sills-Evans"
+      ],
+      "splashArtist": [
+        "Yuyu Wong",
+        "Kudos Productions"
+      ]
+    }
+  ]
+}
