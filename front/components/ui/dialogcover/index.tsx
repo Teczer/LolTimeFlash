@@ -26,13 +26,10 @@ import { Input } from '../input'
 import { Button } from '../button'
 import { getChampion } from '@/app/api/shieldbow/methods'
 import { useBackgroundImage } from '@/app/store/useBackgroundImage'
+import { AllSkinsSplashArts } from '@/app/api/shieldbow/route'
 
 // Définition des types
 type ChampionName = string
-interface AllSkinsSplashArts {
-  championName: string
-  splashArts: string[]
-}
 
 const ChangeCoverButton: React.FC = () => {
   const [rawChampions, setRawChampions] = useState<ChampionName[]>([])
@@ -102,10 +99,10 @@ const ChangeCoverButton: React.FC = () => {
             {allSkinsSplashArts.map((champion, index) => {
               return (
                 <div
-                  className="flex w-full h-auto bg-[#052431] rounded-sm"
+                  className="flex w-full h-auto bg-[#052431] border"
                   key={index}
                 >
-                  <div className="w-1/5 h-auto flex flex-col gap-2 justify-start items-center p-4 border">
+                  <div className="w-1/5 h-auto flex flex-col gap-2 justify-start items-center p-4">
                     <Image
                       className="w-14 object-cover border"
                       key={champion.championName}
@@ -119,31 +116,40 @@ const ChangeCoverButton: React.FC = () => {
                     </h2>
                   </div>
 
-                  <div
-                    className="w-4/5 h-full flex flex-wrap gap-2 justify-center items-center p-4 border-y border-r"
+                  <ul
+                    className="w-4/5 h-full flex flex-wrap gap-4 justify-center items-center p-4"
                     key={index}
                   >
                     {champion.splashArts.map((splash, index) => {
                       return (
                         <li
+                          className="cursor-pointer flex flex-col justify-start items-center transition-all hover:scale-110"
                           key={index}
                           onClick={() => {
-                            setImage(splash)
-                            localStorage.setItem('cover-bg', splash)
+                            setImage(splash.skinImageUrl)
+                            localStorage.setItem(
+                              'cover-bg',
+                              splash.skinImageUrl
+                            )
                           }}
                         >
                           <Image
                             quality={75}
-                            className="w-28 object-cover rounded-sm cursor-pointer transition-all hover:scale-110"
-                            src={splash}
-                            alt={splash}
+                            className="w-28 object-cover rounded-sm"
+                            src={splash.skinImageUrl}
+                            alt={splash.skinName}
                             width={500}
                             height={500}
                           />
+                          <span className="w-28 overflow-hidden text-xs whitespace-nowrap	text-ellipsis">
+                            {index === 0
+                              ? champion.championName
+                              : splash.skinName}
+                          </span>
                         </li>
                       )
                     })}
-                  </div>
+                  </ul>
                 </div>
               )
             })}
