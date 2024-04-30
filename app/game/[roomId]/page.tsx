@@ -203,11 +203,15 @@ export default function Home() {
   return (
     <main className="min-h-screen font-mono flex flex-col justify-center items-center gap-14 sm:gap-24">
       <audio ref={audioRef} src="/flash-song.mp3"></audio>
-      <Link className="fixed top-6 left-6 sm:top-10 sm:left-20" href={'/'}>
+      <a
+        onClick={() => socket.emit('disconnecting')}
+        className="fixed top-6 left-6 sm:top-10 sm:left-20"
+        href={'/'}
+      >
         <Button variant="outline" size="icon">
           <RxTrackPrevious className="h-4 w-4" />
         </Button>
-      </Link>
+      </a>
       <h1>ROOM ID: {params.roomId}</h1>
       <div className="w-full h-[400px] flex items-center justify-center gap-2 sm:flex sm:justify-around sm:items-center">
         {leagueRoles.map((role, index) => (
@@ -235,7 +239,7 @@ export default function Home() {
                     socket.emit(
                       'updateSummonerData',
                       updatedData,
-                      params.roomId,
+                      params.roomId
                     )
                     // Retourner les données mises à jour pour mettre à jour l'état local si nécessaire
                     return updatedData
@@ -274,7 +278,7 @@ export default function Home() {
                     socket.emit(
                       'updateSummonerData',
                       updatedData,
-                      params.roomId,
+                      params.roomId
                     )
 
                     // Retourner les données mises à jour pour mettre à jour l'état local si nécessaire
@@ -329,7 +333,7 @@ export default function Home() {
             {isSummonerIsTimed[role.name].isFlashed && (
               <p className="absolute text-2xl font-bold textstroke">
                 {Math.floor(
-                  (isSummonerIsTimed[role.name].isFlashed as number) / 60,
+                  (isSummonerIsTimed[role.name].isFlashed as number) / 60
                 )}
                 :
                 {(isSummonerIsTimed[role.name].isFlashed as number) % 60 < 10
