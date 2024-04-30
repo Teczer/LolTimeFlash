@@ -1,15 +1,18 @@
 version: '3'
 services:
-  timeflashlol:
-    container_name: timeflashlol
-    image: timeflashlol:latest
+  loltimeflashfront:
+    container_name: loltimeflashfront
+    image: loltimeflashfront:latest
     build:
       context: .
       dockerfile: ./Dockerfile
     restart: unless-stopped
     ports:
-      - 6444:6444
+      - 3000:3000
 
 volumes:
-  timeflashlolproject:
-
+  loltimeflashfrontdata:
+networks:
+  netloltimeflash:
+    name: netloltimeflash
+    external: true
