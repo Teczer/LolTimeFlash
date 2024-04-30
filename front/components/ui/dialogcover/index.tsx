@@ -1,41 +1,33 @@
 'use client'
 
+import Image from 'next/image'
+
 import { useEffect, useState } from 'react'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog'
+import { useBackgroundImage } from '@/app/store/useBackgroundImage'
+
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
 
-import { CiImageOn } from 'react-icons/ci'
-import Image from 'next/image'
+import { getChampion } from '@/app/api/shieldbow/methods'
+import { AllSkinsSplashArts, ChampionName } from '@/app/api/shieldbow/route'
+
 import { Input } from '../input'
 import { Button } from '../button'
-import { getChampion } from '@/app/api/shieldbow/methods'
-import { useBackgroundImage } from '@/app/store/useBackgroundImage'
-import { AllSkinsSplashArts } from '@/app/api/shieldbow/route'
-
-// Définition des types
-type ChampionName = string
+import { CiImageOn } from 'react-icons/ci'
 
 const ChangeCoverButton: React.FC = () => {
-  const [rawChampions, setRawChampions] = useState<ChampionName[]>([])
-  const [filteredChampions, setFilteredChampions] = useState<ChampionName[]>([])
+  const [filteredChampions, setFilteredChampions] = useState<
+    AllSkinsSplashArts[]
+  >([])
   const [searchQuery, setSearchQuery] = useState<string>('')
 
+  // PERMET DE GARDER L'ENSEMBLE DES DONNEES
   const [allSkinsSplashArts, setAllSkinsSplashArts] = useState<
     AllSkinsSplashArts[]
   >([])
@@ -45,32 +37,32 @@ const ChangeCoverButton: React.FC = () => {
   async function getChampionNextApi() {
     const nextApiResponse = await getChampion()
     setAllSkinsSplashArts(nextApiResponse)
-    console.log('nextApiResponse', nextApiResponse)
+    setFilteredChampions(nextApiResponse)
   }
 
-  useEffect(() => {
-    // Appel à la fonction fetchChampions une seule fois après le rendu initial
-    getChampionNextApi()
-  }, []) // Dépendance vide pour garantir que le useEffect ne s'exécute qu'une seule fois
-
-  // Fonction pour construire l'URL de l'image du splash art d'un champion
+  // Fonction pour construire l'URL de l'image de l'icone d'un champion
   const getChampionSquareUrl = (championName: ChampionName) => {
     return `https://ddragon.leagueoflegends.com/cdn/14.6.1/img/champion/${championName}.png`
   }
 
-  // Filtrer les champions en fonction de la recherche de l'utilisateur
+  // Filtrer les champions en fonction de l'input
   const handleSearch = (query: string) => {
     setSearchQuery(query)
     if (query === '') {
-      setFilteredChampions(rawChampions)
+      setFilteredChampions(allSkinsSplashArts)
     } else {
-      setFilteredChampions(
-        rawChampions.filter((championName) =>
-          championName.toLowerCase().startsWith(query.toLowerCase())
-        )
+      // Filtrer les skins des champions dont le nom correspond à la recherche de l'utilisateur
+      const filteredSkins = allSkinsSplashArts.filter((champion) =>
+        champion.championName.toLowerCase().startsWith(query.toLowerCase())
       )
+      setFilteredChampions(filteredSkins)
     }
   }
+
+  // CALL API
+  useEffect(() => {
+    getChampionNextApi()
+  }, [])
 
   return (
     <Sheet>
@@ -96,7 +88,7 @@ const ChangeCoverButton: React.FC = () => {
         </SheetHeader>
         <SheetFooter className="flex flex-col justify-start items-center w-full gap-3">
           <div className="flex flex-col justify-start items-center w-full gap-3 h-full mt-4">
-            {allSkinsSplashArts.map((champion, index) => {
+            {filteredChampions.map((champion, index) => {
               return (
                 <div
                   className="flex w-full h-auto bg-[#052431] border"

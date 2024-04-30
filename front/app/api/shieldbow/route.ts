@@ -1,9 +1,9 @@
 import { Client } from 'shieldbow'
 import { NextResponse } from 'next/server'
 
-type ChampionName = string
+export type ChampionName = string
 
-interface SkinData {
+export interface SkinData {
   skinName: string
   skinImageUrl: string
 }
