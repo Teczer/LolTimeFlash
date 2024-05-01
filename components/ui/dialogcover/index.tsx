@@ -109,7 +109,7 @@ const ChangeCoverButton: React.FC = () => {
                   </div>
 
                   <ul
-                    className="w-4/5 h-full flex flex-wrap gap-4 justify-center items-center p-4"
+                    className="w-4/5 h-full flex flex-wrap gap-4 justify-start items-center p-4"
                     key={index}
                   >
                     {champion.splashArts.map((splash, index) => {

@@ -49,7 +49,7 @@ export async function GET() {
     const champion = await client.champions.fetch(championData.championName)
     championData.splashArts = champion.skins.map((skin) => ({
       skinName: skin.name,
-      skinImageUrl: skin.splashArt,
+      skinImageUrl: skin.splashArt.replace('/pbe/', '/latest/'), // Remplacer /pbe/ par /latest/,
     }))
   })
 
