@@ -18,7 +18,7 @@ COPY . .
 RUN pnpm run build
 
 # Exposez le port sur lequel l'application sera en cours d'exécution
-EXPOSE 3000
+EXPOSE 6333
 
 # Démarrez l'application
-CMD ["pnpm", "start", "--", "-p", "3000"]
+CMD ["pnpm", "start", "--", "-p", "6333"]
