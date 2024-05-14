@@ -10,8 +10,6 @@ const WrapperBackground = ({ children }: { children: React.ReactNode }) => {
 
   const { image } = useBackgroundImage()
 
-  console.log('image', image)
-
   useEffect(() => {
     const userCoverBackground =
       typeof window !== 'undefined'

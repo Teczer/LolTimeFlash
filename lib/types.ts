@@ -1,5 +1,6 @@
-/* GAME TYPE */
-
+/**
+ * GAME Types
+ */
 export interface LeagueRoles {
   name: string
   src: string

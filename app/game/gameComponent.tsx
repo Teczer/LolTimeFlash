@@ -3,17 +3,19 @@
 import { useEffect, useRef, useState } from 'react'
 
 import Image from 'next/image'
+import { useParams } from 'next/navigation'
 
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import { useToast } from '@/components/ui/use-toast'
 
 import { cn } from '@/lib/utils'
 import { LeagueRoles, SummonerData } from '@/lib/types'
 import { gameDefaultData } from '@/lib/constants'
 
-import { useParams, useRouter } from 'next/navigation'
 import { MdClear } from 'react-icons/md'
 import { RxTrackPrevious } from 'react-icons/rx'
+import { FaCopy } from 'react-icons/fa'
 
 import { socket } from '@/app/socket'
 
@@ -48,7 +50,6 @@ export default function GameComponent({
   const { toast } = useToast()
   const audioRef = useRef<HTMLAudioElement>(null)
 
-  const router = useRouter()
   const params = useParams()
 
   const [isSummonerIsTimed, setIsSummonerIsTimed] = useState<{
@@ -85,6 +86,7 @@ export default function GameComponent({
   useEffect(() => {
     if (!useWebSocket) return
 
+    console.log('oui')
     socket.emit('join-room', params.roomId)
 
     socket.on('updateSummonerData', (newSummonersData) => {
@@ -183,16 +185,37 @@ export default function GameComponent({
       <Button
         className="fixed top-6 left-6 sm:top-10 sm:left-20"
         onClick={() => {
-          socket.disconnect()
-          router.push('/')
-          router.refresh()
+          window.location.href = '/'
         }}
         variant="outline"
         size="icon"
       >
         <RxTrackPrevious className="h-4 w-4" />
       </Button>
-      {useWebSocket && <h1>ROOM ID: {params.roomId}</h1>}
+      {useWebSocket && (
+        <div className="flex justify-center items-center gap-1">
+          <Input
+            className="font-bold bg-background"
+            type="text"
+            value={params.roomId}
+            readOnly
+          />
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => {
+              if (params.roomId) {
+                navigator.clipboard.writeText(params.roomId as string)
+                toast({
+                  title: 'Your lobby code has been copied to your clipboard!',
+                })
+              }
+            }}
+          >
+            <FaCopy className="h-4 w-4" />
+          </Button>
+        </div>
+      )}
       <div className="w-full h-[400px] flex items-center justify-center gap-2 sm:flex sm:justify-around sm:items-center">
         {leagueRoles.map((role, index) => (
           <div

@@ -26,7 +26,6 @@ export async function GET() {
       const data = await response.json()
       // Récupérer les noms des champions
       const championNames: ChampionName[] = Object.keys(data.data)
-      console.log('championNames', championNames)
       for (const championName of championNames) {
         championsData.push({
           championName: championName,
@@ -55,8 +54,6 @@ export async function GET() {
 
   // Attendre que toutes les promesses soient résolues
   await Promise.all(allSplashArtsPromises)
-
-  console.log('Champions Data:', championsData) // Données de tous les champions
 
   // Retourner les données des champions au format JSON
   return NextResponse.json(championsData)

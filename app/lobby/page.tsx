@@ -1,20 +1,23 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import Link from 'next/link'
+import { useToast } from '@/components/ui/use-toast'
 
 import { RxTrackPrevious } from 'react-icons/rx'
-
 import { GrFormNextLink } from 'react-icons/gr'
+import { FaCopy } from 'react-icons/fa'
 
 export default function Home() {
   const [joinLobbyCode, setJoinLobbyCode] = useState('')
   const [lobbyCode, setLobbyCode] = useState('')
   const router = useRouter()
+  const { toast } = useToast()
 
   function makeid(length: number) {
     var result = ''
@@ -47,7 +50,35 @@ export default function Home() {
             Create Lobby
           </Button>
         )}
-        {lobbyCode && <p>Your code is {lobbyCode}</p>}
+        {lobbyCode && (
+          <div className="w-full flex justify-start items-center gap-2">
+            <p>Your lobby code is :</p>
+            <div className="flex justify-center items-center gap-1">
+              <Input
+                className="font-sans bg-background"
+                type="text"
+                placeholder="Flash Timer"
+                value={lobbyCode || ''}
+                readOnly
+              />
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => {
+                  if (lobbyCode) {
+                    navigator.clipboard.writeText(lobbyCode)
+                    toast({
+                      title:
+                        'Your lobby code has been copied to your clipboard!',
+                    })
+                  }
+                }}
+              >
+                <FaCopy className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        )}
         {lobbyCode && (
           <Button
             onClick={() => {

@@ -40,3 +40,6 @@ bun.lockb
 # static data
 
 /data
+
+# env
+.env
