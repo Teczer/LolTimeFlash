@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import { useEffect, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useBackgroundImage } from '@/app/store/useBackgroundImage'
 
 import {
@@ -15,54 +15,34 @@ import {
 } from '@/components/ui/sheet'
 
 import { getChampion } from '@/app/api/shieldbow/methods'
-import { AllSkinsSplashArts, ChampionName } from '@/app/api/shieldbow/route'
+import { AllSkinsSplashArts } from '@/app/api/shieldbow/route'
 
 import { Input } from '../input'
 import { Button } from '../button'
 import { CiImageOn } from 'react-icons/ci'
+import { useQuery } from '@tanstack/react-query'
+import DialogCoverLoader from '../loader/dialogcoverloader'
 
 const ChangeCoverButton: React.FC = () => {
-  const [filteredChampions, setFilteredChampions] = useState<
-    AllSkinsSplashArts[]
-  >([])
+  const { setImage } = useBackgroundImage()
   const [searchQuery, setSearchQuery] = useState<string>('')
 
-  // PERMET DE GARDER L'ENSEMBLE DES DONNEES
-  const [allSkinsSplashArts, setAllSkinsSplashArts] = useState<
-    AllSkinsSplashArts[]
-  >([])
+  const {
+    data: allSkinsSplashArts,
+    isLoading,
+    isError,
+  } = useQuery<AllSkinsSplashArts[]>({
+    queryKey: ['allSkinsSplashArts'],
+    queryFn: async () => await getChampion(),
+  })
 
-  const { setImage } = useBackgroundImage()
+  const filteredItems = useMemo(() => {
+    return allSkinsSplashArts?.filter((champion) =>
+      champion.championName.toLowerCase().startsWith(searchQuery.toLowerCase())
+    )
+  }, [allSkinsSplashArts, searchQuery])
 
-  async function getChampionNextApi() {
-    const nextApiResponse = await getChampion()
-    setAllSkinsSplashArts(nextApiResponse)
-    setFilteredChampions(nextApiResponse)
-  }
-
-  // Fonction pour construire l'URL de l'image de l'icone d'un champion
-  const getChampionSquareUrl = (championName: ChampionName) => {
-    return `https://ddragon.leagueoflegends.com/cdn/14.6.1/img/champion/${championName}.png`
-  }
-
-  // Filtrer les champions en fonction de l'input
-  const handleSearch = (query: string) => {
-    setSearchQuery(query)
-    if (query === '') {
-      setFilteredChampions(allSkinsSplashArts)
-    } else {
-      // Filtrer les skins des champions dont le nom correspond à la recherche de l'utilisateur
-      const filteredSkins = allSkinsSplashArts.filter((champion) =>
-        champion.championName.toLowerCase().startsWith(query.toLowerCase())
-      )
-      setFilteredChampions(filteredSkins)
-    }
-  }
-
-  // CALL API
-  useEffect(() => {
-    getChampionNextApi()
-  }, [])
+  if (isError) return <p>An error</p>
 
   return (
     <Sheet>
@@ -83,37 +63,47 @@ const ChangeCoverButton: React.FC = () => {
             type="text"
             placeholder="Find a champion"
             value={searchQuery}
-            onChange={(e) => handleSearch(e.target.value)}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
         </SheetHeader>
         <SheetFooter className="flex flex-col justify-start items-center w-full gap-3">
-          <div className="flex flex-col justify-start items-center w-full gap-3 h-full mt-4">
-            {filteredChampions.map((champion, index) => {
-              return (
-                <div
-                  className="flex w-full h-auto bg-[#052431] border"
-                  key={index}
-                >
-                  <div className="w-1/5 h-auto flex flex-col gap-2 justify-start items-center p-4">
-                    <Image
-                      className="w-14 object-cover border"
-                      key={champion.championName}
-                      src={getChampionSquareUrl(champion.championName)}
-                      alt={`${champion.championName} Square`}
-                      width={200}
-                      height={200}
-                    />
-                    <h2 className="text-white text-md textstroke">
-                      {champion.championName}
-                    </h2>
-                  </div>
-
-                  <ul
-                    className="w-4/5 h-full flex flex-wrap gap-4 justify-start items-center p-4"
+          <ul className="flex flex-col justify-start items-center w-full gap-3 h-full mt-4">
+            {isLoading || !filteredItems
+              ? Array.from({ length: 3 }).map((_, index) => {
+                  return (
+                    <li
+                      className="flex w-full h-auto bg-[#052431] border"
+                      key={index}
+                    >
+                      <DialogCoverLoader />
+                    </li>
+                  )
+                })
+              : filteredItems.map((champion, index) => (
+                  <li
+                    className="flex w-full h-auto bg-[#052431] border"
                     key={index}
                   >
-                    {champion.splashArts.map((splash, index) => {
-                      return (
+                    {/* CHAMP ICON + NAME */}
+                    <div className="w-1/5 h-auto flex flex-col gap-2 justify-start items-center p-4">
+                      <Image
+                        className="w-14 object-cover border"
+                        src={`https://ddragon.leagueoflegends.com/cdn/14.6.1/img/champion/${champion.championName}.png`}
+                        alt={`${champion.championName} Square`}
+                        width={200}
+                        height={200}
+                      />
+                      <h2 className="text-white text-md textstroke">
+                        {champion.championName}
+                      </h2>
+                    </div>
+
+                    {/* LIST OF ALL CHAMPS SKINS */}
+                    <ul
+                      className="w-4/5 h-full flex flex-wrap gap-4 justify-start items-center p-4"
+                      key={index}
+                    >
+                      {champion.splashArts.map((splash, index) => (
                         <li
                           className="cursor-pointer flex flex-col justify-start items-center transition-all hover:scale-110"
                           key={index}
@@ -139,13 +129,11 @@ const ChangeCoverButton: React.FC = () => {
                               : splash.skinName}
                           </span>
                         </li>
-                      )
-                    })}
-                  </ul>
-                </div>
-              )
-            })}
-          </div>
+                      ))}
+                    </ul>
+                  </li>
+                ))}
+          </ul>
         </SheetFooter>
       </SheetContent>
     </Sheet>

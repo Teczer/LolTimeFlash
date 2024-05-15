@@ -6,6 +6,7 @@ import { GeistMono } from 'geist/font/mono'
 
 import './globals.css'
 import WrapperBackground from '@/components/ui/wrapperbackground'
+import QueryProvider from '@/components/QueryProvider'
 
 export const metadata: Metadata = {
   title: 'LolTimeFlash',
@@ -21,10 +22,14 @@ export default function RootLayout({
   return (
     <html className={`${GeistSans.className} ${GeistMono.className}`} lang="en">
       <body>
-        <WrapperBackground>
-          <Toaster />
-          <div className="min-h-screen max-w-screen-lg mx-auto">{children}</div>
-        </WrapperBackground>
+        <QueryProvider>
+          <WrapperBackground>
+            <Toaster />
+            <div className="min-h-screen max-w-screen-lg mx-auto">
+              {children}
+            </div>
+          </WrapperBackground>
+        </QueryProvider>
       </body>
     </html>
   )

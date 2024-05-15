@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
 import ChangeCoverButton from '@/components/ui/dialogcover'
+import FooterCopyrights from '@/components/ui/footercopyrights'
 
 export default function Home() {
   return (
@@ -28,16 +29,7 @@ export default function Home() {
       <Link href={'/game'}>
         <Button variant="outline">Solo Lobby</Button>
       </Link>
-      <p className="flex gap-2 fixed text-xs bottom-8">
-        Designed and built by {''}
-        <Link
-          href={'https://github.com/Teczer'}
-          target="_blank"
-          className="block font-bold transition-all hover:scale-110"
-        >
-          @Teczer_
-        </Link>
-      </p>
+      <FooterCopyrights />
     </main>
   )
 }
