@@ -12,26 +12,18 @@ import { useToast } from '@/components/ui/use-toast'
 import { RxTrackPrevious } from 'react-icons/rx'
 import { GrFormNextLink } from 'react-icons/gr'
 import { FaCopy } from 'react-icons/fa'
+import { cn, generateLobbyCodeId } from '@/lib/utils'
 
 export default function Home() {
-  const [joinLobbyCode, setJoinLobbyCode] = useState('')
-  const [lobbyCode, setLobbyCode] = useState('')
   const router = useRouter()
   const { toast } = useToast()
 
-  function makeid(length: number) {
-    var result = ''
-    var characters =
-      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-    var charactersLength = characters.length
-    for (var i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength))
-    }
-    return result
-  }
+  const [joinLobbyCode, setJoinLobbyCode] = useState<string>('')
+  const [lobbyCode, setLobbyCode] = useState<string>('')
+  const [isError, setIsError] = useState<boolean>(false)
 
   function createLobbyCode() {
-    const code = makeid(10)
+    const code: string = generateLobbyCodeId(10)
     setLobbyCode(code)
   }
 
@@ -77,18 +69,16 @@ export default function Home() {
                 <FaCopy className="h-4 w-4" />
               </Button>
             </div>
+            <Button
+              onClick={() => {
+                router.push(`/game/${lobbyCode}`)
+              }}
+              variant="outline"
+              size="icon"
+            >
+              <GrFormNextLink className="h-4 w-4" />
+            </Button>
           </div>
-        )}
-        {lobbyCode && (
-          <Button
-            onClick={() => {
-              router.push(`/game/${lobbyCode}`)
-            }}
-            variant="outline"
-            size="icon"
-          >
-            <GrFormNextLink className="h-4 w-4" />
-          </Button>
         )}
       </div>
       {/* BORDER */}
@@ -96,10 +86,20 @@ export default function Home() {
       {/* JOIN LOBBY */}
       <div className="flex flex-col justify-center items-center gap-4 sm:gap-8">
         <h1 className="text-xl">Join a Lobby</h1>
-        {/* LOBBY CODE */}
-        <div className="flex justify-center items-center gap-4">
+        <form
+          className="flex justify-center items-center gap-4"
+          onSubmit={(e) => {
+            e.preventDefault()
+            if (joinLobbyCode.length === 10) {
+              router.push(`/game/${joinLobbyCode}`)
+            } else {
+              setIsError(true)
+            }
+          }}
+        >
           <Input
             type="text"
+            className="font-sans bg-background"
             placeholder="Enter lobby code"
             value={joinLobbyCode}
             onChange={(e) => setJoinLobbyCode(e.target.value)}
@@ -108,12 +108,25 @@ export default function Home() {
             variant="outline"
             size="icon"
             onClick={() => {
-              router.push(`/game/${joinLobbyCode}`)
+              if (joinLobbyCode.length === 10) {
+                router.push(`/game/${joinLobbyCode}`)
+              } else {
+                setIsError(true)
+              }
             }}
           >
             <GrFormNextLink className="h-4 w-4" />
           </Button>
-        </div>
+        </form>
+        {isError && (
+          <p
+            className={cn('text-xs text-red-700 font-bold', {
+              'text-green-500': joinLobbyCode.length === 10,
+            })}
+          >
+            The lobby code must be 10 characters, {joinLobbyCode.length} actual.
+          </p>
+        )}
       </div>
     </main>
   )
