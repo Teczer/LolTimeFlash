@@ -7,10 +7,10 @@ import FooterCopyrights from '@/components/ui/footercopyrights'
 
 export default function Home() {
   return (
-    <main className="font-mono flex flex-col justify-center items-center gap-24 min-h-screen">
-      <div className="hidden sm:block">
+    <main className="flex flex-col justify-center items-center gap-24 min-h-screen">
+      {/* <div className="hidden sm:block">
         <ChangeCoverButton />
-      </div>
+      </div> */}
       <div className="flex justify-center items-center gap-4">
         <h1 className="text-xl font-bold textstroke sm:text-3xl">
           Welcome to LolTimeFlash!

@@ -1,12 +1,36 @@
 import type { Metadata } from 'next'
 import { Toaster } from '@/components/ui/toaster'
 
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
+import localFont from 'next/font/local'
 
 import './globals.css'
 import WrapperBackground from '@/components/ui/wrapperbackground'
 import QueryProvider from '@/components/QueryProvider'
+
+const BeaufortforLOL = localFont({
+  src: [
+    {
+      path: '../fonts/BeaufortforLOL-Medium.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/BeaufortforLOL-MediumItalic.otf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../fonts/BeaufortforLOL-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/BeaufortforLOL-BoldItalic.otf',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
+})
 
 export const metadata: Metadata = {
   title: 'LolTimeFlash',
@@ -20,12 +44,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html className={`${GeistSans.className} ${GeistMono.className}`} lang="en">
+    <html className={BeaufortforLOL.className} lang="en">
       <body>
         <QueryProvider>
           <WrapperBackground>
             <Toaster />
-            <div className="min-h-screen max-w-screen-lg mx-auto">
+            <div className="min-h-screen max-w-screen-2xl mx-auto">
               {children}
             </div>
           </WrapperBackground>

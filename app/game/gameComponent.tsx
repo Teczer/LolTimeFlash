@@ -180,7 +180,7 @@ export default function GameComponent({
   }
 
   return (
-    <main className="min-h-screen font-mono flex flex-col justify-center items-center gap-14 sm:gap-24">
+    <main className="h-screen flex flex-col justify-start items-center gap-6 p-6 sm:p-10 sm:justify-center sm:gap-0">
       <audio ref={audioRef} src="/flash-song.mp3"></audio>
       <Button
         className="fixed top-6 left-6 sm:top-10 sm:left-20"
@@ -216,17 +216,22 @@ export default function GameComponent({
           </Button>
         </div>
       )}
-      <div className="w-full h-[400px] flex items-center justify-center gap-2 sm:flex sm:justify-around sm:items-center">
+      <div className="w-full h-4/5 flex flex-wrap sm:flex-nowrap">
         {leagueRoles.map((role, index) => (
           <div
-            className="w-full h-full flex flex-col items-center justify-center gap-8"
+            className={cn(
+              'h-auto flex flex-col items-center justify-center gap-2 sm:gap-8',
+              index === leagueRoles.length - 1
+                ? 'col-span-2 flex justify-center w-full'
+                : 'w-2/4 sm:w-full'
+            )}
             key={index}
           >
             {/* COSMIC + LUCIDITY */}
-            <div className="w-full flex items-center justify-center gap-4">
+            <div className="w-full flex items-center justify-center gap-8 sm:gap-4">
               {/* COSMIC */}
               <button
-                className="transition-all hover:scale-110"
+                className="transition-all sm:hover:scale-110"
                 onClick={() => {
                   setIsSummonerIsTimed((prevState) => {
                     const updatedData = {
@@ -244,17 +249,17 @@ export default function GameComponent({
                         params.roomId
                       )
                     }
-                    // Retourner les données mises à jour pour mettre à jour l'état local si nécessaire
                     return updatedData
                   })
                 }}
               >
                 <Image
-                  className={`w-14 h-14 object-cover filter ${
+                  className={cn(
+                    'rounded-full size-12 object-cover filter sm:size-20',
                     isSummonerIsTimed[role.name].cosmicInsight
                       ? 'brightness-100'
                       : 'brightness-50'
-                  }`}
+                  )}
                   width={600}
                   height={600}
                   src="/rune-cdr.webp"
@@ -263,7 +268,7 @@ export default function GameComponent({
               </button>
               {/* LUCIDITY */}
               <button
-                className="transition-all hover:scale-110"
+                className="transition-all sm:hover:scale-110"
                 onClick={() => {
                   setIsSummonerIsTimed((prevState) => {
                     const updatedData = {
@@ -275,25 +280,23 @@ export default function GameComponent({
                     }
 
                     if (useWebSocket) {
-                      // Utiliser l'état mis à jour pour émettre les données via le socket
                       socket.emit(
                         'updateSummonerData',
                         updatedData,
                         params.roomId
                       )
                     }
-
-                    // Retourner les données mises à jour pour mettre à jour l'état local si nécessaire
                     return updatedData
                   })
                 }}
               >
                 <Image
-                  className={`w-14 h-14 object-cover rounded-full filter ${
+                  className={cn(
+                    'size-12 object-cover rounded-full filter sm:size-20',
                     isSummonerIsTimed[role.name].lucidityBoots
                       ? 'brightness-100'
                       : 'brightness-50'
-                  }`}
+                  )}
                   width={600}
                   height={600}
                   src="/lucidity-boots.png"
@@ -301,28 +304,36 @@ export default function GameComponent({
                 />
               </button>
             </div>
-            {/* FLASH ROLE */}
+            {/* FLASH ROLE + TIMER */}
             <button
-              className="w-52 h-52 transition-all hover:scale-110"
+              className="relative size-28 transition-all sm:hover:scale-110 sm:size-64"
               onClick={() => {
                 if (
                   typeof isSummonerIsTimed[role.name].isFlashed === 'number'
                 ) {
-                  // Afficher une notification si le bouton est désactivé (c'est-à-dire qu'un compte à rebours est en cours)
-                  toast({
-                    variant: 'destructive',
-                    title: 'You have to clear timer before retime summs',
-                    description: "Don't try to int your mates...",
-                  })
+                  clearTimer(role.name)
                 } else {
-                  // Sinon, démarrer le compte à rebours normalement
                   startFlashCooldown(role.name)
                 }
               }}
             >
+              {/* TIMER */}
+              {isSummonerIsTimed[role.name].isFlashed && (
+                <p className="absolute z-20 text-xl font-bold textstroke top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:text-[3rem]">
+                  {Math.floor(
+                    (isSummonerIsTimed[role.name].isFlashed as number) / 60
+                  )}
+                  :
+                  {(isSummonerIsTimed[role.name].isFlashed as number) % 60 < 10
+                    ? '0' +
+                      ((isSummonerIsTimed[role.name].isFlashed as number) % 60)
+                    : (isSummonerIsTimed[role.name].isFlashed as number) % 60}
+                </p>
+              )}
+              {/* IMAGE ROLE */}
               <Image
                 className={cn('w-64 object-cover cursor-pointer', {
-                  'filter brightness-50 cursor-not-allowed':
+                  'filter brightness-50':
                     isSummonerIsTimed[role.name].isFlashed,
                 })}
                 width={600}
@@ -331,31 +342,6 @@ export default function GameComponent({
                 alt={role.name}
               />
             </button>
-            {/* TIMER */}
-            {isSummonerIsTimed[role.name].isFlashed && (
-              <p className="absolute text-2xl font-bold textstroke">
-                {Math.floor(
-                  (isSummonerIsTimed[role.name].isFlashed as number) / 60
-                )}
-                :
-                {(isSummonerIsTimed[role.name].isFlashed as number) % 60 < 10
-                  ? '0' +
-                    ((isSummonerIsTimed[role.name].isFlashed as number) % 60)
-                  : (isSummonerIsTimed[role.name].isFlashed as number) % 60}
-              </p>
-            )}
-            {/* CANCEL BUTTON */}
-            {isSummonerIsTimed[role.name].isFlashed && (
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => {
-                  clearTimer(role.name)
-                }}
-              >
-                <MdClear />
-              </Button>
-            )}
           </div>
         ))}
       </div>

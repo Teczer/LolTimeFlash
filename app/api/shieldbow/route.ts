@@ -48,9 +48,11 @@ export async function GET() {
     const champion = await client.champions.fetch(championData.championName)
     championData.splashArts = champion.skins.map((skin) => ({
       skinName: skin.name,
-      skinImageUrl: skin.splashArt.replace('/pbe/', '/latest/'), // Remplacer /pbe/ par /latest/,
+      skinImageUrl: skin.splashArt, // Remplacer /pbe/ par /latest/,
     }))
   })
+
+  console.log('championsData', championsData)
 
   // Attendre que toutes les promesses soient résolues
   await Promise.all(allSplashArtsPromises)
