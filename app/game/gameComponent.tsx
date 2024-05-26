@@ -13,11 +13,11 @@ import { cn } from '@/lib/utils'
 import { LeagueRoles, SummonerData } from '@/lib/types'
 import { gameDefaultData } from '@/lib/constants'
 
-import { MdClear } from 'react-icons/md'
 import { RxTrackPrevious } from 'react-icons/rx'
 import { FaCopy } from 'react-icons/fa'
 
 import { socket } from '@/app/socket'
+import UsernameProvider from '@/components/UsernameProvider'
 
 const leagueRoles: LeagueRoles[] = [
   {
@@ -52,9 +52,18 @@ export default function GameComponent({
 
   const params = useParams()
 
+  const staticName = ['Teczer', 'Poultine', 'Thuram', 'Saoobi', 'Zaiiro']
+
   const [isSummonerIsTimed, setIsSummonerIsTimed] = useState<{
     [key: string]: SummonerData
   }>(gameDefaultData)
+
+  const userName =
+    typeof window !== 'undefined'
+      ? (localStorage.getItem('username') as string)
+      : 'DefaultName'
+
+  const [userList, setUserList] = useState<string[]>([userName])
 
   // COMPTE A REBOURS
   useEffect(() => {
@@ -180,171 +189,192 @@ export default function GameComponent({
   }
 
   return (
-    <main className="h-screen flex flex-col justify-start items-center gap-6 p-6 sm:p-10 sm:justify-center sm:gap-0">
-      <audio ref={audioRef} src="/flash-song.mp3"></audio>
-      <Button
-        className="fixed top-6 left-6 sm:top-10 sm:left-20"
-        onClick={() => {
-          window.location.href = '/'
-        }}
-        variant="outline"
-        size="icon"
-      >
-        <RxTrackPrevious className="h-4 w-4" />
-      </Button>
-      {useWebSocket && (
-        <div className="flex justify-center items-center gap-1">
-          <Input
-            className="font-bold bg-background"
-            type="text"
-            value={params.roomId}
-            readOnly
-          />
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={() => {
-              if (params.roomId) {
-                navigator.clipboard.writeText(params.roomId as string)
-                toast({
-                  title: 'Your lobby code has been copied to your clipboard!',
-                })
-              }
-            }}
-          >
-            <FaCopy className="h-4 w-4" />
-          </Button>
-        </div>
-      )}
-      <div className="w-full h-4/5 flex flex-wrap sm:flex-nowrap">
-        {leagueRoles.map((role, index) => (
-          <div
-            className={cn(
-              'h-auto flex flex-col items-center justify-center gap-2 sm:gap-8',
-              index === leagueRoles.length - 1
-                ? 'col-span-2 flex justify-center w-full'
-                : 'w-2/4 sm:w-full'
-            )}
-            key={index}
-          >
-            {/* COSMIC + LUCIDITY */}
-            <div className="w-full flex items-center justify-center gap-8 sm:gap-4">
-              {/* COSMIC */}
-              <button
-                className="transition-all sm:hover:scale-110"
-                onClick={() => {
-                  setIsSummonerIsTimed((prevState) => {
-                    const updatedData = {
-                      ...prevState,
-                      [role.name]: {
-                        ...prevState[role.name],
-                        cosmicInsight: !prevState[role.name].cosmicInsight,
-                      },
-                    }
+    <UsernameProvider>
+      <main className="h-screen flex flex-col justify-start items-center gap-6 p-6 sm:p-10 sm:justify-center sm:gap-0">
+        <audio ref={audioRef} src="/flash-song.mp3"></audio>
+        {/* BUTTON LEAVE */}
+        <Button
+          className="fixed top-6 left-6 sm:top-10 sm:left-20"
+          onClick={() => {
+            window.location.href = '/'
+          }}
+          variant="outline"
+          size="icon"
+        >
+          <RxTrackPrevious className="h-4 w-4" />
+        </Button>
 
-                    if (useWebSocket) {
-                      socket.emit(
-                        'updateSummonerData',
-                        updatedData,
-                        params.roomId
-                      )
-                    }
-                    return updatedData
-                  })
-                }}
-              >
-                <Image
-                  className={cn(
-                    'rounded-full size-12 object-cover filter sm:size-20',
-                    isSummonerIsTimed[role.name].cosmicInsight
-                      ? 'brightness-100'
-                      : 'brightness-50'
-                  )}
-                  width={600}
-                  height={600}
-                  src="/rune-cdr.webp"
-                  alt="rune-cdr"
-                />
-              </button>
-              {/* LUCIDITY */}
-              <button
-                className="transition-all sm:hover:scale-110"
-                onClick={() => {
-                  setIsSummonerIsTimed((prevState) => {
-                    const updatedData = {
-                      ...prevState,
-                      [role.name]: {
-                        ...prevState[role.name],
-                        lucidityBoots: !prevState[role.name].lucidityBoots,
-                      },
-                    }
-
-                    if (useWebSocket) {
-                      socket.emit(
-                        'updateSummonerData',
-                        updatedData,
-                        params.roomId
-                      )
-                    }
-                    return updatedData
-                  })
-                }}
-              >
-                <Image
-                  className={cn(
-                    'size-12 object-cover rounded-full filter sm:size-20',
-                    isSummonerIsTimed[role.name].lucidityBoots
-                      ? 'brightness-100'
-                      : 'brightness-50'
-                  )}
-                  width={600}
-                  height={600}
-                  src="/lucidity-boots.png"
-                  alt="lucidity-boots"
-                />
-              </button>
-            </div>
-            {/* FLASH ROLE + TIMER */}
-            <button
-              className="relative size-28 transition-all sm:hover:scale-110 sm:size-64"
+        {/* LOBBY PAST CODE */}
+        {useWebSocket && (
+          <div className="flex justify-center items-center gap-1">
+            <ul className="fixed top-6 right-6 w-1/6 h-auto p-4 flex flex-col items-center justify-center sm:top-10 sm:right-20">
+              {userList.map((name, index) => {
+                return (
+                  <li
+                    key={index}
+                    className="w-full flex items-center justify-start gap-2"
+                  >
+                    <span className="h-2 w-2 bg-green-600 rounded-full animate-pulse drop"></span>
+                    <p>{name}</p>
+                  </li>
+                )
+              })}
+            </ul>
+            <Input
+              className="font-bold bg-background"
+              type="text"
+              value={params.roomId}
+              readOnly
+            />
+            <Button
+              variant="outline"
+              size="icon"
               onClick={() => {
-                if (
-                  typeof isSummonerIsTimed[role.name].isFlashed === 'number'
-                ) {
-                  clearTimer(role.name)
-                } else {
-                  startFlashCooldown(role.name)
+                if (params.roomId) {
+                  navigator.clipboard.writeText(params.roomId as string)
+                  toast({
+                    title: 'Your lobby code has been copied to your clipboard!',
+                  })
                 }
               }}
             >
-              {/* TIMER */}
-              {isSummonerIsTimed[role.name].isFlashed && (
-                <p className="absolute z-20 text-xl font-bold textstroke top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:text-[3rem]">
-                  {Math.floor(
-                    (isSummonerIsTimed[role.name].isFlashed as number) / 60
-                  )}
-                  :
-                  {(isSummonerIsTimed[role.name].isFlashed as number) % 60 < 10
-                    ? '0' +
-                      ((isSummonerIsTimed[role.name].isFlashed as number) % 60)
-                    : (isSummonerIsTimed[role.name].isFlashed as number) % 60}
-                </p>
-              )}
-              {/* IMAGE ROLE */}
-              <Image
-                className={cn('w-64 object-cover cursor-pointer', {
-                  'filter brightness-50':
-                    isSummonerIsTimed[role.name].isFlashed,
-                })}
-                width={600}
-                height={600}
-                src={role.src}
-                alt={role.name}
-              />
-            </button>
+              <FaCopy className="h-4 w-4" />
+            </Button>
           </div>
-        ))}
-      </div>
-    </main>
+        )}
+        {/* LOGIC */}
+        <div className="w-full h-4/5 flex flex-wrap sm:flex-nowrap">
+          {leagueRoles.map((role, index) => (
+            <div
+              className={cn(
+                'h-auto flex flex-col items-center justify-center gap-2 sm:gap-8',
+                index === leagueRoles.length - 1
+                  ? 'col-span-2 flex justify-center w-full'
+                  : 'w-2/4 sm:w-full'
+              )}
+              key={index}
+            >
+              {/* COSMIC + LUCIDITY */}
+              <div className="w-full flex items-center justify-center gap-8 sm:gap-4">
+                {/* COSMIC */}
+                <button
+                  className="transition-all sm:hover:scale-110"
+                  onClick={() => {
+                    setIsSummonerIsTimed((prevState) => {
+                      const updatedData = {
+                        ...prevState,
+                        [role.name]: {
+                          ...prevState[role.name],
+                          cosmicInsight: !prevState[role.name].cosmicInsight,
+                        },
+                      }
+
+                      if (useWebSocket) {
+                        socket.emit(
+                          'updateSummonerData',
+                          updatedData,
+                          params.roomId
+                        )
+                      }
+                      return updatedData
+                    })
+                  }}
+                >
+                  <Image
+                    className={cn(
+                      'rounded-full size-12 object-cover filter sm:size-20',
+                      isSummonerIsTimed[role.name].cosmicInsight
+                        ? 'brightness-100'
+                        : 'brightness-50'
+                    )}
+                    width={600}
+                    height={600}
+                    src="/rune-cdr.webp"
+                    alt="rune-cdr"
+                  />
+                </button>
+                {/* LUCIDITY */}
+                <button
+                  className="transition-all sm:hover:scale-110"
+                  onClick={() => {
+                    setIsSummonerIsTimed((prevState) => {
+                      const updatedData = {
+                        ...prevState,
+                        [role.name]: {
+                          ...prevState[role.name],
+                          lucidityBoots: !prevState[role.name].lucidityBoots,
+                        },
+                      }
+
+                      if (useWebSocket) {
+                        socket.emit(
+                          'updateSummonerData',
+                          updatedData,
+                          params.roomId
+                        )
+                      }
+                      return updatedData
+                    })
+                  }}
+                >
+                  <Image
+                    className={cn(
+                      'size-12 object-cover rounded-full filter sm:size-20',
+                      isSummonerIsTimed[role.name].lucidityBoots
+                        ? 'brightness-100'
+                        : 'brightness-50'
+                    )}
+                    width={600}
+                    height={600}
+                    src="/lucidity-boots.png"
+                    alt="lucidity-boots"
+                  />
+                </button>
+              </div>
+              {/* FLASH ROLE + TIMER */}
+              <button
+                className="relative size-28 transition-all sm:hover:scale-110 sm:size-64"
+                onClick={() => {
+                  if (
+                    typeof isSummonerIsTimed[role.name].isFlashed === 'number'
+                  ) {
+                    clearTimer(role.name)
+                  } else {
+                    startFlashCooldown(role.name)
+                  }
+                }}
+              >
+                {/* TIMER */}
+                {isSummonerIsTimed[role.name].isFlashed && (
+                  <p className="absolute z-20 text-xl font-bold textstroke top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:text-[3rem]">
+                    {Math.floor(
+                      (isSummonerIsTimed[role.name].isFlashed as number) / 60
+                    )}
+                    :
+                    {(isSummonerIsTimed[role.name].isFlashed as number) % 60 <
+                    10
+                      ? '0' +
+                        ((isSummonerIsTimed[role.name].isFlashed as number) %
+                          60)
+                      : (isSummonerIsTimed[role.name].isFlashed as number) % 60}
+                  </p>
+                )}
+                {/* IMAGE ROLE */}
+                <Image
+                  className={cn('w-64 object-cover cursor-pointer', {
+                    'filter brightness-50':
+                      isSummonerIsTimed[role.name].isFlashed,
+                  })}
+                  width={600}
+                  height={600}
+                  src={role.src}
+                  alt={role.name}
+                />
+              </button>
+            </div>
+          ))}
+        </div>
+      </main>
+    </UsernameProvider>
   )
 }
