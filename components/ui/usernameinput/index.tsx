@@ -1,9 +1,12 @@
-import { useUsername } from '@/app/store/useUsername'
 import { useState } from 'react'
+
+import { useUsername } from '@/app/store/useUsername'
+import { useParams } from 'next/navigation'
+
 import { Input } from '../input'
 import { Button } from '../button'
+
 import { GrFormNextLink } from 'react-icons/gr'
-import { useParams } from 'next/navigation'
 
 const UsernameInput: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>('')

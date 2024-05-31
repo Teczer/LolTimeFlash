@@ -4,13 +4,17 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import ChangeCoverButton from '@/components/ui/dialogcover'
 import FooterCopyrights from '@/components/ui/footercopyrights'
+import SettingsButton from '@/components/settingsbutton'
 
 export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center gap-24 min-h-screen">
-      {/* <div className="hidden sm:block">
+      {/* <div className="fixed top-6 right-6 sm:top-10 sm:right-20">
         <ChangeCoverButton />
       </div> */}
+      <div className="fixed top-6 left-6 sm:top-10 sm:left-20">
+        <SettingsButton />
+      </div>
       <div className="flex justify-center items-center gap-4">
         <h1 className="text-xl font-bold textstroke sm:text-3xl">
           Welcome to LolTimeFlash!

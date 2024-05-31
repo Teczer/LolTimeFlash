@@ -17,6 +17,7 @@ const client = new Client('RGAPI-c981eb1e-52f5-4425-8106-cb5c612c6a0d')
 
 export async function GET() {
   console.log('yo')
+  return NextResponse.json('ouais')
   // let championsData: AllSkinsSplashArts[] = [] // Tableau pour stocker les données de chaque champion
 
   // const fetchChampions = async () => {

@@ -77,6 +77,9 @@ const config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'caret-blink': 'caret-blink 1.25s ease-out infinite',
       },
+      boxShadow: {
+        green: '0 1px 10px 1px rgba(34, 197, 94, 0.4)',
+      },
     },
   },
   plugins: [require('tailwindcss-animate'), require('tailwind-scrollbar')],

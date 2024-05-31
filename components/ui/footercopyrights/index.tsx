@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 const FooterCopyrights: React.FC = () => {
   return (
-    <p className="flex gap-2 fixed text-xs bottom-8">
-      Made with ❤️ by {''}
+    <p className="flex gap-1 fixed text-xs bottom-8">
+      Made with ❤️ by
       <Link
         href={'https://github.com/Teczer'}
         target="_blank"
