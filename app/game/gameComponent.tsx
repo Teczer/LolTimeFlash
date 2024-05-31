@@ -22,23 +22,23 @@ import { FaCopy } from 'react-icons/fa'
 const leagueRoles: LeagueRoles[] = [
   {
     name: 'TOP',
-    src: '/toprole-icon.png',
+    src: '/assets/toprole-icon.png',
   },
   {
     name: 'JUNGLE',
-    src: '/junglerole-icon.png',
+    src: '/assets/junglerole-icon.png',
   },
   {
     name: 'MID',
-    src: '/midrole-icon.png',
+    src: '/assets/midrole-icon.png',
   },
   {
     name: 'ADC',
-    src: '/adcrole-icon.png',
+    src: '/assets/adcrole-icon.png',
   },
   {
     name: 'SUPPORT',
-    src: '/supportrole-icon.png',
+    src: '/assets/supportrole-icon.png',
   },
 ]
 
@@ -377,7 +377,7 @@ export default function GameComponent({
                         )}
                         width={600}
                         height={600}
-                        src="/rune-cdr.webp"
+                        src="/assets/rune-cdr.webp"
                         alt="rune-cdr"
                       />
                     </button>
@@ -420,7 +420,7 @@ export default function GameComponent({
                         )}
                         width={600}
                         height={600}
-                        src="/lucidity-boots.png"
+                        src="/assets/lucidity-boots.png"
                         alt="lucidity-boots"
                       />
                     </button>

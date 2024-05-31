@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "prettier": "bunx prettier . --write"
+    "start": "next start"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",

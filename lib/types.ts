@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image'
+
 /**
  * GAME Types
  */
