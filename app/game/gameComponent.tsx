@@ -22,23 +22,23 @@ import { FaCopy } from 'react-icons/fa'
 const leagueRoles: LeagueRoles[] = [
   {
     name: 'TOP',
-    src: '/assets/toprole-icon.png',
+    src: 'https://res.cloudinary.com/dw3mwclgk/image/upload/v1717152630/LolTimeFlash/toprole-icon.png',
   },
   {
     name: 'JUNGLE',
-    src: '/assets/junglerole-icon.png',
+    src: 'https://res.cloudinary.com/dw3mwclgk/image/upload/v1717152630/LolTimeFlash/junglerole-icon.png',
   },
   {
     name: 'MID',
-    src: '/assets/midrole-icon.png',
+    src: 'https://res.cloudinary.com/dw3mwclgk/image/upload/v1717152630/LolTimeFlash/midrole-icon.png',
   },
   {
     name: 'ADC',
-    src: '/assets/adcrole-icon.png',
+    src: 'https://res.cloudinary.com/dw3mwclgk/image/upload/v1717152630/LolTimeFlash/adcrole-icon.png',
   },
   {
     name: 'SUPPORT',
-    src: '/assets/supportrole-icon.png',
+    src: 'https://res.cloudinary.com/dw3mwclgk/image/upload/v1717152630/LolTimeFlash/supportrole-icon.png',
   },
 ]
 
@@ -244,7 +244,12 @@ export default function GameComponent({
 
   return (
     <UsernameProvider>
-      <main className="h-screen flex flex-col justify-start items-center gap-2 p-6 sm:p-10 sm:justify-center sm:gap-0">
+      <main
+        className={cn(
+          'h-screen flex flex-col items-center gap-2 p-6 sm:p-10 sm:gap-0',
+          params.roomId ? 'justify-start' : 'justify-center'
+        )}
+      >
         <audio ref={audioRef} src="/flash-song.mp3"></audio>
         {/* BUTTON LEAVE */}
         <Button
@@ -377,7 +382,7 @@ export default function GameComponent({
                         )}
                         width={600}
                         height={600}
-                        src="/assets/rune-cdr.webp"
+                        src="https://res.cloudinary.com/dw3mwclgk/image/upload/v1717152630/LolTimeFlash/rune-cdr.webp"
                         alt="rune-cdr"
                       />
                     </button>
@@ -420,7 +425,7 @@ export default function GameComponent({
                         )}
                         width={600}
                         height={600}
-                        src="/assets/lucidity-boots.png"
+                        src="https://res.cloudinary.com/dw3mwclgk/image/upload/v1717152629/LolTimeFlash/lucidity-boots.png"
                         alt="lucidity-boots"
                       />
                     </button>

@@ -20,6 +20,15 @@ const nextConfig = {
       {
         hostname: 'https://res.cloudinary.com',
       },
+      {
+        hostname: 'https://res-console.cloudinary.com',
+      },
+      {
+        hostname: 'res-console.cloudinary.com',
+      },
+      {
+        hostname: 'res.cloudinary.com',
+      },
     ],
   },
 }
