@@ -11,13 +11,7 @@ export const userVolume =
     : 'DefaultVolume'
 
 export const gameDefaultData: GameData = {
-  users: [
-    currentUsername,
-    'Thuram',
-    'Zaiiro',
-    'Saoobi',
-    'Poultinelaazdazdazdazd',
-  ],
+  users: [currentUsername],
   roles: {
     TOP: {
       isFlashed: false,

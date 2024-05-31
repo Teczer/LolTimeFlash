@@ -23,7 +23,7 @@ export default function Home() {
           className="w-10 object-cover rounded-md rotate-6 sm:w-20"
           width={500}
           height={500}
-          src={'/flash-icon.webp'}
+          src={'/assets/flash-icon.webp'}
           alt="flash-icon"
         />
       </div>
