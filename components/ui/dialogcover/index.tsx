@@ -85,7 +85,7 @@ const ChangeCoverButton: React.FC = () => {
                       <div className="w-1/5 h-auto flex flex-col gap-2 justify-start items-center p-4">
                         <Image
                           className="w-14 object-cover border"
-                          src={`https://ddragon.leagueoflegends.com/cdn/14.6.1/img/champion/${champion.championName}.png`}
+                          src={`https://ddragon.leagueoflegends.com/cdn/14.21.1/img/champion/${champion.championName}.png`}
                           alt={`${champion.championName} Square`}
                           width={200}
                           height={200}

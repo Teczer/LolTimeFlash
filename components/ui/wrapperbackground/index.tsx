@@ -34,9 +34,9 @@ const WrapperBackground = ({ children }: { children: React.ReactNode }) => {
         backgroundImage: isMobile
           ? `url(https://res.cloudinary.com/dw3mwclgk/image/upload/v1711629209/hrwisiiionr1ukmpclrd.png)`
           : `radial-gradient(at center top, 
-              rgba(12, 59, 106, 0.4), 
-              rgba(3, 16, 30, 0.6), 
-              rgba(3, 16, 30, 1), 
+              rgba(12, 59, 106, 0.2), 
+              rgba(3, 16, 30, 0.7), 
+              rgba(3, 16, 30, 0.98), 
               rgba(3, 16, 30, 1), 
               rgba(3, 16, 30, 1)
             ), url(${image || selectedCover})`,
