@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+**/node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -11,10 +12,14 @@
 
 # next.js
 /.next/
+**/.next/
 /out/
+**/out/
 
 # production
 /build
+**/build
+**/dist
 
 # misc
 .DS_Store
@@ -36,6 +41,13 @@ yarn-error.log*
 next-env.d.ts
 
 bun.lockb
+
+# turbo
+.turbo
+**/.turbo
+
+# old backend (to be removed in Phase 3)
+/BackLolTimeFlash
 
 # static data
 

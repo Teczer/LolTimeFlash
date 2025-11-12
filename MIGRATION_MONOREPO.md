@@ -386,9 +386,39 @@ socket.on('error', {
 
 ---
 
+## 🛠️ Scripts Utilitaires
+
+Deux scripts bash ont été créés pour faciliter la gestion du monorepo :
+
+### 🧹 `pnpm clean` - Nettoyage Complet
+Nettoie tous les caches, node_modules et builds à tous les niveaux :
+```bash
+pnpm clean
+```
+- Root : node_modules, .turbo, pnpm-lock.yaml
+- Frontend : node_modules, .next, .turbo, dist
+- Backend : node_modules, dist, .turbo
+- Packages : node_modules, dist
+- Old Backend : node_modules, pnpm-lock.yaml
+
+### 🚀 `pnpm get_started` - Setup Automatique
+Installe tout et affiche les commandes disponibles :
+```bash
+pnpm get_started
+```
+- Vérifie les versions Node/PNPM
+- Installe toutes les dépendances
+- Affiche la structure du projet
+- Liste toutes les commandes
+- Affiche les URLs des services
+
+> 📖 Voir `scripts/README.md` pour plus de détails
+
+---
+
 ## 🚀 Plan de Migration
 
-### Phase 1 : Setup Monorepo (Jour 1)
+### Phase 1 : Setup Monorepo (Jour 1) ✅ TERMINÉ
 
 #### 1.1 Restructuration
 ```bash
