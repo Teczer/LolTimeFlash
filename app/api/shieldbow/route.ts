@@ -1,4 +1,3 @@
-import { Client } from 'shieldbow'
 import { NextResponse } from 'next/server'
 
 export type ChampionName = string
@@ -13,45 +12,82 @@ export interface AllSkinsSplashArts {
   splashArts: SkinData[]
 }
 
-const client = new Client('RGAPI-c981eb1e-52f5-4425-8106-cb5c612c6a0d')
+// Data Dragon API endpoints
+const DATA_DRAGON_BASE = 'https://ddragon.leagueoflegends.com'
+const COMMUNITY_DRAGON_BASE = 'https://raw.communitydragon.org/latest'
+
+// Cache duration (revalidate every 24 hours)
+export const revalidate = 86400
 
 export async function GET() {
-  let championsData: AllSkinsSplashArts[] = []
+  try {
+    // 1. Get the latest version
+    const versionsResponse = await fetch(
+      `${DATA_DRAGON_BASE}/api/versions.json`
+    )
+    const versions: string[] = await versionsResponse.json()
+    const latestVersion = versions[0]
 
-  const fetchChampions = async () => {
-    try {
-      const response = await fetch(
-        'https://ddragon.leagueoflegends.com/cdn/14.21.1/data/en_US/champion.json'
-      )
-      const data = await response.json()
-      // Récupérer les noms des champions
-      const championNames: ChampionName[] = Object.keys(data.data)
-      for (const championName of championNames) {
-        championsData.push({
-          championName: championName,
-          splashArts: [],
-        })
-      }
-    } catch (error) {
-      console.error('Error fetching champion data:', error)
-    }
+    console.log('Latest LoL version:', latestVersion)
+
+    // 2. Get all champions list
+    const championsResponse = await fetch(
+      `${DATA_DRAGON_BASE}/cdn/${latestVersion}/data/en_US/champion.json`
+    )
+    const championsData = await championsResponse.json()
+    const champions = Object.values(championsData.data) as any[]
+
+    // 3. Fetch detailed data for each champion to get skins
+    const allChampionsData: AllSkinsSplashArts[] = await Promise.all(
+      champions.map(async (champion) => {
+        try {
+          // Fetch champion detailed data
+          const championDetailResponse = await fetch(
+            `${DATA_DRAGON_BASE}/cdn/${latestVersion}/data/en_US/champion/${champion.id}.json`
+          )
+          const championDetail = await championDetailResponse.json()
+          const championData = championDetail.data[champion.id]
+
+          // Map skins to our format
+          const splashArts: SkinData[] = championData.skins.map(
+            (skin: any) => ({
+              skinName: skin.name,
+              skinImageUrl: `${DATA_DRAGON_BASE}/cdn/img/champion/splash/${champion.id}_${skin.num}.jpg`,
+            })
+          )
+
+          return {
+            championName: champion.id,
+            splashArts,
+          }
+        } catch (error) {
+          console.error(`Error fetching ${champion.id}:`, error)
+          return {
+            championName: champion.id,
+            splashArts: [
+              {
+                skinName: 'Default',
+                skinImageUrl: `${DATA_DRAGON_BASE}/cdn/img/champion/splash/${champion.id}_0.jpg`,
+              },
+            ],
+          }
+        }
+      })
+    )
+
+    // Sort alphabetically by champion name
+    allChampionsData.sort((a, b) =>
+      a.championName.localeCompare(b.championName)
+    )
+
+    console.log(`Successfully fetched ${allChampionsData.length} champions`)
+
+    return NextResponse.json(allChampionsData)
+  } catch (error) {
+    console.error('Error fetching champions data:', error)
+    return NextResponse.json(
+      { error: 'Failed to fetch champions data' },
+      { status: 500 }
+    )
   }
-
-  await fetchChampions()
-
-  await client.initialize({
-    region: 'euw',
-  })
-
-  const allSplashArtsPromises = championsData.map(async (championData) => {
-    const champion = await client.champions.fetch(championData.championName)
-    championData.splashArts = champion.skins.map((skin) => ({
-      skinName: skin.name,
-      skinImageUrl: skin.splashArt, // Remplacer /pbe/ par /latest/,
-    }))
-  })
-
-  await Promise.all(allSplashArtsPromises)
-
-  return NextResponse.json(championsData)
 }
