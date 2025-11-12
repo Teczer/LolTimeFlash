@@ -49,7 +49,7 @@ export default function RootLayout({
         <QueryProvider>
           <WrapperBackground>
             <Toaster />
-            <div className="min-h-screen max-w-screen-2xl mx-auto">
+            <div className="mx-auto min-h-screen max-w-screen-2xl">
               {children}
             </div>
           </WrapperBackground>

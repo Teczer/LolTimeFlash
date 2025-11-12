@@ -4,9 +4,9 @@
 
 **League of Legends Website Tool: Easily Time and Communicate Summoner Spells - THE FLASH! 🌟**
 
-[![Next.js](https://img.shields.io/badge/Next.js-14.1.4-black?style=flat&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
-[![Socket.IO](https://img.shields.io/badge/Socket.IO-4.7.5-010101?style=flat&logo=socket.io)](https://socket.io/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.0.1-black?style=flat&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7.2-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Socket.IO](https://img.shields.io/badge/Socket.IO-4.8.1-010101?style=flat&logo=socket.io)](https://socket.io/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3.0-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
 
 [Features](#-features) • [Quick Start](#-quick-start) • [How It Works](#-how-it-works) • [Documentation](#-documentation)
@@ -94,7 +94,7 @@ LolTimeFlash automatically calculates Flash cooldowns based on enemy items and r
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Next.js 14.1.4 (App Router), TypeScript, Tailwind CSS
+- **Frontend**: Next.js 16.0.1 (App Router), TypeScript, Tailwind CSS
 - **State Management**: Zustand, TanStack Query
 - **Real-time**: Socket.IO (client + server)
 - **UI Components**: Radix UI, React Icons

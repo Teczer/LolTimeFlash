@@ -246,14 +246,14 @@ export default function GameComponent({
     <UsernameProvider>
       <main
         className={cn(
-          'h-screen flex flex-col items-center gap-2 p-6 sm:p-10 sm:gap-0',
+          'flex h-screen flex-col items-center gap-2 p-6 sm:gap-0 sm:p-10',
           params.roomId ? 'justify-start' : 'justify-center'
         )}
       >
         <audio ref={audioRef} src="/flash-song.mp3"></audio>
         {/* BUTTON LEAVE */}
         <Button
-          className="absolute top-6 left-6 sm:top-10 sm:left-20"
+          className="absolute left-6 top-6 sm:left-20 sm:top-10"
           onClick={() => {
             window.location.href = '/'
           }}
@@ -264,7 +264,7 @@ export default function GameComponent({
         </Button>
         {/* BUTTON SOUND */}
         <Button
-          className="absolute top-6 right-6 sm:top-24 sm:left-20"
+          className="absolute right-6 top-6 sm:left-20 sm:top-24"
           onClick={toggleVolume}
           variant="outline"
           size="icon"
@@ -278,15 +278,15 @@ export default function GameComponent({
 
         {/* LOBBY PAST CODE */}
         {useWebSocket && (
-          <div className="flex justify-center items-center gap-1">
-            <ul className="w-1/6 h-auto fixed z-50 p-4 flex flex-col items-center justify-center bottom-4 left-10 sm:bottom-auto sm:left-auto sm:top-10 sm:right-10">
+          <div className="flex items-center justify-center gap-1">
+            <ul className="fixed bottom-4 left-10 z-50 flex h-auto w-1/6 flex-col items-center justify-center p-4 sm:bottom-auto sm:left-auto sm:right-10 sm:top-10">
               {isSummonerIsTimed.users.map((user, index) => {
                 return (
                   <li
                     key={index}
-                    className="w-[300%] flex items-center justify-start gap-2 sm:w-full"
+                    className="flex w-[300%] items-center justify-start gap-2 sm:w-full"
                   >
-                    <span className="h-2 w-2 bg-green-600 rounded-full animate-pulse shadow-green"></span>
+                    <span className="h-2 w-2 animate-pulse rounded-full bg-green-600 shadow-green"></span>
                     <p className="w-full overflow-hidden text-ellipsis whitespace-nowrap">
                       {user}
                     </p>
@@ -295,12 +295,12 @@ export default function GameComponent({
               })}
             </ul>
             <div className="flex flex-col items-center justify-center gap-1">
-              <h3 className="w-auto text-lg whitespace-nowrap inline-block textstroke font-bold">
+              <h3 className="textstroke inline-block w-auto whitespace-nowrap text-lg font-bold">
                 ROOM ID
               </h3>
-              <div className="flex justify-start items-center gap-1">
+              <div className="flex items-center justify-start gap-1">
                 <Input
-                  className="font-bold bg-background"
+                  className="bg-background font-bold"
                   type="text"
                   value={params.roomId}
                   readOnly
@@ -326,7 +326,7 @@ export default function GameComponent({
           </div>
         )}
         {/* LOGIC */}
-        <div className="w-full h-4/5 flex flex-wrap sm:flex-nowrap">
+        <div className="flex h-4/5 w-full flex-wrap sm:flex-nowrap">
           {leagueRoles.map((role, index) => {
             const roleKey = getRoleKey(role.name)
 
@@ -334,15 +334,15 @@ export default function GameComponent({
               return (
                 <div
                   className={cn(
-                    'h-auto flex flex-col items-center justify-center gap-2 sm:gap-8',
+                    'flex h-auto flex-col items-center justify-center gap-2 sm:gap-8',
                     index === leagueRoles.length - 1
-                      ? 'col-span-2 flex justify-center w-full'
+                      ? 'col-span-2 flex w-full justify-center'
                       : 'w-2/4 sm:w-full'
                   )}
                   key={index}
                 >
                   {/* COSMIC + LUCIDITY */}
-                  <div className="w-full flex items-center justify-center gap-8 sm:gap-4">
+                  <div className="flex w-full items-center justify-center gap-8 sm:gap-4">
                     {/* COSMIC */}
                     <button
                       className="transition-all sm:hover:scale-110"
@@ -375,7 +375,7 @@ export default function GameComponent({
                     >
                       <Image
                         className={cn(
-                          'rounded-full size-12 object-cover filter sm:size-20',
+                          'size-12 rounded-full object-cover filter sm:size-20',
                           isSummonerIsTimed.roles[roleKey].cosmicInsight
                             ? 'brightness-100'
                             : 'brightness-50'
@@ -418,7 +418,7 @@ export default function GameComponent({
                     >
                       <Image
                         className={cn(
-                          'size-12 object-cover rounded-full filter sm:size-20',
+                          'size-12 rounded-full object-cover filter sm:size-20',
                           isSummonerIsTimed.roles[roleKey].lucidityBoots
                             ? 'brightness-100'
                             : 'brightness-50'
@@ -432,7 +432,7 @@ export default function GameComponent({
                   </div>
                   {/* FLASH ROLE + TIMER */}
                   <button
-                    className="relative size-28 transition-all sm:hover:scale-110 sm:size-64"
+                    className="relative size-28 transition-all sm:size-64 sm:hover:scale-110"
                     onClick={() => {
                       if (
                         typeof isSummonerIsTimed.roles[roleKey].isFlashed ===
@@ -446,7 +446,7 @@ export default function GameComponent({
                   >
                     {/* TIMER */}
                     {isSummonerIsTimed.roles[roleKey].isFlashed && (
-                      <p className="absolute z-20 text-xl font-bold textstroke top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:text-[3rem]">
+                      <p className="textstroke absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 transform text-xl font-bold sm:text-[3rem]">
                         {Math.floor(
                           (isSummonerIsTimed.roles[roleKey]
                             .isFlashed as number) / 60
@@ -466,8 +466,8 @@ export default function GameComponent({
                     )}
                     {/* IMAGE ROLE */}
                     <Image
-                      className={cn('w-64 object-cover cursor-pointer', {
-                        'filter brightness-50':
+                      className={cn('w-64 cursor-pointer object-cover', {
+                        'brightness-50 filter':
                           isSummonerIsTimed.roles[roleKey].isFlashed,
                       })}
                       width={600}

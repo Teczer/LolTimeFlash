@@ -25,29 +25,29 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen max-w-screen-2xl mx-auto">
-      <Link className="fixed top-6 left-6 sm:top-10 sm:left-20" href={'/'}>
+    <div className="mx-auto min-h-screen max-w-screen-2xl">
+      <Link className="fixed left-6 top-6 sm:left-20 sm:top-10" href={'/'}>
         <Button variant="outline" size="icon">
           <RxTrackPrevious className="h-4 w-4" />
         </Button>
       </Link>
       <form
         onSubmit={handleSubmit}
-        className="p-4 flex flex-col items-center justify-center gap-10 min-h-screen sm:p-20"
+        className="flex min-h-screen flex-col items-center justify-center gap-10 p-4 sm:p-20"
       >
         <h1 className="textstroke text-lg sm:text-2xl">
           Change or set your username
         </h1>
         {username && (
-          <p className="text-sm font-medium ">
+          <p className="text-sm font-medium">
             Your username is :
-            <span className="font-bold text-[#C89B3C] text-lg">
+            <span className="text-lg font-bold text-[#C89B3C]">
               {' '}
               {username}
             </span>
           </p>
         )}
-        <div className="w-full flex items-center justify-center gap-2 sm:w-1/2">
+        <div className="flex w-full items-center justify-center gap-2 sm:w-1/2">
           <Input
             type="text"
             className="w-1/2 bg-background"

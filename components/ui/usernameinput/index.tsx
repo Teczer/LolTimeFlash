@@ -21,16 +21,16 @@ const UsernameInput: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen max-w-screen-2xl mx-auto">
+    <div className="mx-auto min-h-screen max-w-screen-2xl">
       <form
         onSubmit={handleSubmit}
-        className="p-4 flex flex-col items-center justify-center gap-10 min-h-screen sm:p-20"
+        className="flex min-h-screen flex-col items-center justify-center gap-10 p-4 sm:p-20"
       >
         <h1 className="textstroke text-lg sm:text-2xl">
           You are joining lobby{' '}
           <span className="text-[#C89B3C]">{params.roomId}</span>
         </h1>
-        <div className="w-full flex items-center justify-center gap-2 sm:w-1/2">
+        <div className="flex w-full items-center justify-center gap-2 sm:w-1/2">
           <Input
             type="text"
             className="w-1/2 bg-background"

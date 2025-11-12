@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const FooterCopyrights: React.FC = () => {
   return (
-    <p className="flex gap-1 fixed text-xs bottom-8">
+    <p className="fixed bottom-8 flex gap-1 text-xs">
       Made with ❤️ by
       <Link
         href={'https://github.com/Teczer'}

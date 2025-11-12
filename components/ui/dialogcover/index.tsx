@@ -63,13 +63,13 @@ const ChangeCoverButton: React.FC = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </SheetHeader>
-          <SheetFooter className="flex flex-col justify-start items-center w-full gap-3">
-            <ul className="flex flex-col justify-start items-center w-full gap-3 h-full mt-4">
+          <SheetFooter className="flex w-full flex-col items-center justify-start gap-3">
+            <ul className="mt-4 flex h-full w-full flex-col items-center justify-start gap-3">
               {isLoading || !filteredItems
                 ? Array.from({ length: 3 }).map((_, index) => {
                     return (
                       <li
-                        className="flex w-full h-auto bg-[#052431] border"
+                        className="flex h-auto w-full border bg-[#052431]"
                         key={index}
                       >
                         <DialogCoverLoader />
@@ -78,31 +78,31 @@ const ChangeCoverButton: React.FC = () => {
                   })
                 : filteredItems.map((champion, index) => (
                     <li
-                      className="flex w-full h-auto bg-[#052431] border"
+                      className="flex h-auto w-full border bg-[#052431]"
                       key={index}
                     >
                       {/* CHAMP ICON + NAME */}
-                      <div className="w-1/5 h-auto flex flex-col gap-2 justify-start items-center p-4">
+                      <div className="flex h-auto w-1/5 flex-col items-center justify-start gap-2 p-4">
                         <Image
-                          className="w-14 object-cover border"
+                          className="w-14 border object-cover"
                           src={`https://ddragon.leagueoflegends.com/cdn/14.21.1/img/champion/${champion.championName}.png`}
                           alt={`${champion.championName} Square`}
                           width={200}
                           height={200}
                         />
-                        <h2 className="text-white text-md textstroke">
+                        <h2 className="text-md textstroke text-white">
                           {champion.championName}
                         </h2>
                       </div>
 
                       {/* LIST OF ALL CHAMPS SKINS */}
                       <ul
-                        className="w-4/5 h-full flex flex-wrap gap-4 justify-start items-center p-4"
+                        className="flex h-full w-4/5 flex-wrap items-center justify-start gap-4 p-4"
                         key={index}
                       >
                         {champion.splashArts.map((splash, index) => (
                           <li
-                            className="cursor-pointer flex flex-col justify-start items-center transition-all hover:scale-110"
+                            className="flex cursor-pointer flex-col items-center justify-start transition-all hover:scale-110"
                             key={index}
                             onClick={() => {
                               setImage(splash.skinImageUrl)
@@ -114,13 +114,13 @@ const ChangeCoverButton: React.FC = () => {
                           >
                             <Image
                               quality={75}
-                              className="w-28 object-cover rounded-sm"
+                              className="w-28 rounded-sm object-cover"
                               src={splash.skinImageUrl}
                               alt={splash.skinName}
                               width={500}
                               height={500}
                             />
-                            <span className="w-28 overflow-hidden text-xs whitespace-nowrap	text-ellipsis">
+                            <span className="w-28 overflow-hidden text-ellipsis whitespace-nowrap text-xs">
                               {index === 0
                                 ? champion.championName
                                 : splash.skinName}

@@ -1,26 +1,26 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import SettingsButton from '@/components/settingsbutton'
 import { Button } from '@/components/ui/button'
 import ChangeCoverButton from '@/components/ui/dialogcover'
 import FooterCopyrights from '@/components/ui/footercopyrights'
-import SettingsButton from '@/components/settingsbutton'
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center items-center gap-24 min-h-screen">
-      <div className="fixed top-6 right-6 sm:top-10 sm:right-20">
+    <main className="flex min-h-screen flex-col items-center justify-center gap-24">
+      <div className="fixed right-6 top-6 sm:right-20 sm:top-10">
         <ChangeCoverButton />
       </div>
-      <div className="fixed top-6 left-6 sm:top-10 sm:left-20">
+      <div className="fixed left-6 top-6 sm:left-20 sm:top-10">
         <SettingsButton />
       </div>
-      <div className="flex justify-center items-center gap-4">
-        <h1 className="text-xl font-bold textstroke sm:text-3xl">
+      <div className="flex items-center justify-center gap-4">
+        <h1 className="textstroke text-xl font-bold sm:text-3xl">
           Welcome to LolTimeFlash!
         </h1>
         <Image
-          className="w-10 object-cover rounded-md rotate-6 sm:w-20"
+          className="w-10 rotate-6 rounded-md object-cover sm:w-20"
           width={500}
           height={500}
           src={'/assets/flash-icon.webp'}

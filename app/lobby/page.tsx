@@ -28,14 +28,14 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-8 p-20 sm:flex sm:flex-row sm:justify-around sm:gap-0">
-      <Link className="fixed top-6 left-6 sm:top-10 sm:left-20" href={'/'}>
+    <main className="flex min-h-screen flex-col items-center justify-center gap-8 p-20 sm:flex sm:flex-row sm:justify-around sm:gap-0">
+      <Link className="fixed left-6 top-6 sm:left-20 sm:top-10" href={'/'}>
         <Button variant="outline" size="icon">
           <RxTrackPrevious className="h-4 w-4" />
         </Button>
       </Link>
       {/* CREATE LOBBY */}
-      <div className="flex flex-col justify-center items-center gap-4 sm:gap-8 sm:w-1/3">
+      <div className="flex flex-col items-center justify-center gap-4 sm:w-1/3 sm:gap-8">
         <h1 className="text-xl">Create a Lobby</h1>
         {!lobbyCode && (
           <Button variant="outline" onClick={() => createLobbyCode()}>
@@ -43,11 +43,11 @@ export default function Home() {
           </Button>
         )}
         {lobbyCode && (
-          <div className="w-full flex flex-col justify-start items-center gap-4">
+          <div className="flex w-full flex-col items-center justify-start gap-4">
             <p>Your lobby code is :</p>
-            <div className="flex justify-center items-center gap-1">
+            <div className="flex items-center justify-center gap-1">
               <Input
-                className="font-sans bg-background"
+                className="bg-background font-sans"
                 type="text"
                 placeholder="Flash Timer"
                 value={lobbyCode || ''}
@@ -82,12 +82,12 @@ export default function Home() {
         )}
       </div>
       {/* BORDER */}
-      <div className="bg-slate-500 w-4/5 h-[1px] sm:w-[1px] sm:h-[600px]"></div>
+      <div className="h-[1px] w-4/5 bg-slate-500 sm:h-[600px] sm:w-[1px]"></div>
       {/* JOIN LOBBY */}
-      <div className="flex flex-col justify-center items-center gap-4 sm:gap-8 sm:w-1/3">
+      <div className="flex flex-col items-center justify-center gap-4 sm:w-1/3 sm:gap-8">
         <h1 className="text-xl">Join a Lobby</h1>
         <form
-          className="flex justify-center items-center gap-4"
+          className="flex items-center justify-center gap-4"
           onSubmit={(e) => {
             e.preventDefault()
             if (joinLobbyCode.length === 10) {
@@ -99,7 +99,7 @@ export default function Home() {
         >
           <Input
             type="text"
-            className="font-sans bg-background"
+            className="bg-background font-sans"
             placeholder="Enter lobby code"
             value={joinLobbyCode}
             onChange={(e) => setJoinLobbyCode(e.target.value)}
@@ -120,7 +120,7 @@ export default function Home() {
         </form>
         {isError && (
           <p
-            className={cn('text-xs text-red-700 font-bold', {
+            className={cn('text-xs font-bold text-red-700', {
               'text-green-500': joinLobbyCode.length === 10,
             })}
           >

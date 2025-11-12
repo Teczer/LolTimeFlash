@@ -28,16 +28,16 @@
 
 #### Frontend
 
-- **Framework**: Next.js 14.1.4 (App Router)
-- **Language**: TypeScript 5.x
+- **Framework**: Next.js 16.0.1 (App Router)
+- **Language**: TypeScript 5.7.2
 - **Styling**:
   - Tailwind CSS 3.3.0
   - Custom CSS variables for theming
   - Radix UI components
 - **State Management**:
-  - Zustand 4.5.2 (global state)
-  - React Query (TanStack Query 5.36.0) for server state
-- **Real-time Communication**: Socket.IO Client 4.7.5
+  - Zustand 5.0.2 (global state)
+  - React Query (TanStack Query 5.90.8) for server state
+- **Real-time Communication**: Socket.IO Client 4.8.1
 - **UI Components**:
   - Radix UI (Dialog, Toast, Sheet)
   - Custom UI components library
@@ -46,7 +46,7 @@
 #### Backend/API
 
 - **Next.js API Routes** for server-side logic
-- **Socket.IO Server** 4.7.5 for real-time communication
+- **Socket.IO Server** 4.8.1 for real-time communication
 - **Data Dragon API** (Riot Games official static data API)
 
 #### Deployment
@@ -366,25 +366,21 @@ toast({
 ### Multiplayer Game Flow
 
 1. **Room Creation/Join**
-
    - User generates or enters 10-char room code
    - Navigates to `/game/[roomId]`
 
 2. **Socket Connection**
-
    - Component emits `join-room` with roomId and username
    - Server adds user to room
    - User list updates for all room members
 
 3. **Game State Synchronization**
-
    - User clicks Flash button for a role
    - Local state updates immediately
    - Socket emits `updateSummonerData` to room
    - All clients receive update and sync state
 
 4. **Toast Notifications**
-
    - Flash click triggers `show-toast` event
    - Server broadcasts `send-toast` to all room members
    - Each client displays notification and plays audio
@@ -500,12 +496,12 @@ docker-compose up --build
 
 ### Production Dependencies
 
-- **next**: 14.1.4 - React framework
-- **react**: ^18 - UI library
-- **socket.io**: ^4.7.5 - Real-time server
-- **socket.io-client**: ^4.7.5 - Real-time client
-- **zustand**: ^4.5.2 - State management
-- **@tanstack/react-query**: ^5.36.0 - Server state
+- **next**: 16.0.1 - React framework
+- **react**: ^19.2.0 - UI library
+- **socket.io**: ^4.8.1 - Real-time server
+- **socket.io-client**: ^4.8.1 - Real-time client
+- **zustand**: ^5.0.2 - State management
+- **@tanstack/react-query**: ^5.90.8 - Server state
 - **@radix-ui/\***: UI primitives
 - **tailwindcss**: ^3.3.0 - Styling
 - **react-icons**: ^5.0.1 - Icon library
@@ -513,10 +509,34 @@ docker-compose up --build
 
 ### Dev Dependencies
 
-- **typescript**: ^5
+- **typescript**: ^5.9.3
 - **@types/\***: Type definitions
-- **eslint**: ^8 - Linting
+- **eslint**: ^9.39.1 - Linting (flat config)
+- **eslint-config-prettier**: ^9.1.0 - ESLint + Prettier integration
+- **prettier**: ^3.6.2 - Code formatter
+- **prettier-plugin-tailwindcss**: ^0.6.14 - Auto-sort Tailwind classes
 - **autoprefixer**: ^10 - CSS processing
+
+### Code Quality Tools
+
+- **ESLint**: Configured with Next.js flat config format
+- **Prettier**: Auto-formatting with Tailwind class sorting
+- **TypeScript**: Strict mode enabled
+- **VSCode**: IntelliSense configuré pour Tailwind
+
+### Scripts disponibles
+
+```bash
+pnpm dev          # Dev avec Turbopack
+pnpm build        # Build production
+pnpm lint         # Linter
+pnpm lint:fix     # Fix automatique
+pnpm format       # Format avec Prettier
+pnpm format:check # Check formatting
+pnpm type-check   # Vérifier TypeScript
+pnpm clean        # Nettoyer cache
+pnpm clean:full   # Clean + reinstall
+```
 
 ---
 
@@ -634,35 +654,29 @@ export const gameDefaultData: GameData = {
 ### Potential Areas for Enhancement
 
 1. **Socket Server**: Not included in repository
-
    - Separate Socket.IO server needed
    - Room management logic required
    - Consider scaling for multiple concurrent rooms
 
 2. **TypeScript**: Mixed `.js` and `.ts` files
-
    - `socket.js` should be converted to `socket.ts`
 
 3. **Error Handling**:
-
    - No error boundaries for React components
    - Socket disconnection handling could be improved
    - API failure scenarios need better UI feedback
 
 4. **Testing**: No test suite present
-
    - Consider adding unit tests for utilities
    - E2E tests for room creation/joining flow
    - Socket event testing
 
 5. **Accessibility**:
-
    - Add ARIA labels for icon buttons
    - Keyboard navigation for Flash buttons
    - Screen reader announcements for timer updates
 
 6. **Performance**:
-
    - Consider debouncing socket emissions
    - Optimize re-renders in gameComponent
    - Lazy load champion splash art images
@@ -720,6 +734,60 @@ export const gameDefaultData: GameData = {
 
 ---
 
+## 🔄 Version History & Upgrades
+
+### Version 0.2.0 - November 2025
+
+**Major Dependency Upgrades**:
+
+- ✅ **Next.js**: 14.1.4 → 16.0.1 (Turbopack par défaut, React Compiler intégré)
+- ✅ **React**: 18 → 19.2.0 (Hooks optimisés, meilleure performance)
+- ✅ **Socket.IO**: 4.7.5 → 4.8.1
+- ✅ **TanStack Query**: 5.36.0 → 5.90.8
+- ✅ **Zustand**: 4.5.2 → 5.0.2
+- ✅ **TypeScript**: 5.x → 5.7.2
+- ✅ **ESLint**: 8 → 9.17.0
+
+**Breaking Changes**:
+
+- Next.js 16: `fetch()` n'est plus caché par défaut
+  - ✅ Déjà géré avec `export const revalidate = 86400` dans `/api/shieldbow/route.ts`
+- React 19: Hooks optimisés automatiquement (pas de changements requis)
+- Zustand 5: API reste compatible (pas de changements requis)
+
+**Installation**:
+
+```bash
+# Supprimer node_modules et lock file
+rm -rf node_modules pnpm-lock.yaml
+
+# Réinstaller les dépendances
+pnpm install
+
+# Tester l'application
+pnpm dev
+```
+
+**Nouveautés Next.js 16**:
+
+- 🚀 **Turbopack** activé par défaut (build/dev plus rapide)
+- 🚀 **React Compiler** intégré (mémoïsation automatique)
+- 🚀 Amélioration des performances de navigation
+- 🚀 Meilleure gestion du cache
+
+### Version 0.1.0 - Initial Release
+
+**Features**:
+
+- Real-time Flash cooldown tracking
+- Room-based multiplayer with Socket.IO
+- Data Dragon API integration
+- Customizable champion backgrounds
+- Audio notifications
+- Responsive design
+
+---
+
 ## 📝 License & Credits
 
 This project is a fan-made tool for League of Legends players. League of Legends and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
@@ -739,5 +807,5 @@ For questions, issues, or contributions:
 ---
 
 **Last Updated**: November 12, 2025
-**Version**: 0.1.0
+**Version**: 0.2.0
 **Status**: Active Development
