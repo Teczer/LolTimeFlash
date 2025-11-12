@@ -9,6 +9,7 @@
 ## 🎯 Vue d'ensemble
 
 Migration d'une architecture simple (frontend + backend séparés) vers un **monorepo moderne** avec :
+
 - Frontend : Next.js 16 (apps/web)
 - Backend : NestJS (apps/api) - À venir
 - Packages partagés : Types TypeScript (packages/shared)
@@ -20,11 +21,13 @@ Migration d'une architecture simple (frontend + backend séparés) vers un **mon
 ## 📅 Timeline
 
 ### ✅ Phase 1 : Setup Monorepo
+
 **Dates** : 12 novembre 2024  
 **Durée** : ~2 heures  
 **Status** : ✅ **COMPLÉTÉE**
 
 #### 🎯 Objectifs
+
 - [x] Créer la structure monorepo (apps/, packages/)
 - [x] Migrer le frontend dans apps/web/
 - [x] Configurer Turborepo + PNPM workspaces
@@ -34,6 +37,7 @@ Migration d'une architecture simple (frontend + backend séparés) vers un **mon
 #### ✅ Réalisations
 
 **Structure créée** :
+
 ```
 LolTimeFlash/
 ├── apps/
@@ -55,17 +59,20 @@ LolTimeFlash/
 **Fichiers déplacés** : 70+ fichiers du frontend migrés vers `apps/web/`
 
 **Configurations** :
+
 - ✅ PNPM workspaces configuré
 - ✅ Turborepo avec `tasks` (correction de `pipeline` → `tasks` pour v2.6.1)
 - ✅ TypeScript base config avec extends
 - ✅ Path aliases configurés (`@loltimeflash/shared`)
 
 **Scripts utilitaires** :
+
 - ✅ `pnpm clean` - Nettoie tous les caches (root, frontend, backend, packages)
 - ✅ `pnpm get_started` - Installation + affichage des commandes
 - ✅ Documentation complète dans `scripts/README.md`
 
 **Tests de validation** :
+
 - ✅ `pnpm install` → 474 packages installés
 - ✅ `pnpm dev` → Serveur Next.js démarre sur http://localhost:3000
 - ✅ `pnpm clean` → Nettoyage complet fonctionne
@@ -86,13 +93,13 @@ LolTimeFlash/
 
 #### 📊 Métriques
 
-| Métrique | Valeur |
-|----------|--------|
-| Fichiers migrés | 70+ |
-| Packages installés | 474 |
-| Temps de build (Turbopack) | ~1.5s |
-| Temps d'installation | ~8.8s |
-| Scripts créés | 2 (clean.sh, get_started.sh) |
+| Métrique                   | Valeur                       |
+| -------------------------- | ---------------------------- |
+| Fichiers migrés            | 70+                          |
+| Packages installés         | 474                          |
+| Temps de build (Turbopack) | ~1.5s                        |
+| Temps d'installation       | ~8.8s                        |
+| Scripts créés              | 2 (clean.sh, get_started.sh) |
 
 #### ✅ Ce qui fonctionne
 
@@ -120,11 +127,13 @@ LolTimeFlash/
 ---
 
 ## ✅ Phase 2 : Backend NestJS
+
 **Dates** : 12 novembre 2024 (16h00 - 16h30)  
 **Durée** : ~30 minutes  
 **Status** : ✅ **COMPLÉTÉE**
 
 #### 🎯 Objectifs
+
 - [x] Initialiser NestJS dans apps/api/
 - [x] Créer GameModule + Gateway Socket.IO
 - [x] Créer RoomModule + Service
@@ -135,6 +144,7 @@ LolTimeFlash/
 #### ✅ Réalisations
 
 **2.1 Setup NestJS** ✅
+
 - ✅ NestJS 11.0.1 initialisé avec CLI
 - ✅ Dependencies installées : @nestjs/websockets, @nestjs/platform-socket.io, socket.io@4.8.1
 - ✅ Validation : class-validator@0.14.1, class-transformer@0.5.1
@@ -142,12 +152,14 @@ LolTimeFlash/
 - ✅ TypeScript configuré (commonjs, decorators)
 
 **2.2 Architecture modulaire** ✅
+
 - ✅ **GameModule** : Gateway Socket.IO + Service (logique métier)
 - ✅ **RoomModule** : Service (gestion rooms Map en mémoire)
 - ✅ **AppModule** : Imports GameModule + RoomModule
 - ✅ main.ts : CORS, ValidationPipe global, port 4000
 
 **2.3 Socket.IO Gateway** ✅
+
 - ✅ **5 événements** client → serveur :
   - `room:join` : Rejoindre une room
   - `room:leave` : Quitter une room
@@ -166,12 +178,14 @@ LolTimeFlash/
 - ✅ Logs structurés avec NestJS Logger
 
 **2.4 DTOs avec validation** ✅
+
 - ✅ **JoinRoomDto** : roomId (10 chars alphanumeric), username (3-20 chars)
 - ✅ **FlashActionDto** : role (enum TOP/JUNGLE/MID/ADC/SUPPORT)
 - ✅ **ToggleItemDto** : role + item (lucidityBoots/cosmicInsight)
 - ✅ Decorators class-validator : @IsString, @IsEnum, @IsIn, @Length, @Matches
 
 **2.5 Types partagés (packages/shared)** ✅
+
 - ✅ **game.types.ts** : Role, SummonerData, RoleData, GameState, FlashEventData, ItemToggleData
 - ✅ **socket.types.ts** : ClientToServerEvents, ServerToClientEvents, SocketData
 - ✅ **cooldowns.ts** : FLASH_COOLDOWNS (BASE: 300s, WITH_BOOTS: 268s, WITH_RUNE: 255s, WITH_BOTH: 231s)
@@ -180,6 +194,7 @@ LolTimeFlash/
 - ✅ Package.json avec exports configurés
 
 **2.6 Services métier** ✅
+
 - ✅ **GameService** :
   - useFlash() : Calcule cooldown, update state, retourne FlashEventData
   - cancelFlash() : Remet Flash à disponible
@@ -191,6 +206,7 @@ LolTimeFlash/
   - updateRoom() : Update state avec timestamp
 
 **2.7 Tests de validation** ✅
+
 - ✅ Backend démarre sur http://localhost:4000
 - ✅ Socket.IO écoute sur port 4000
 - ✅ GameGateway subscribe aux 5 événements
@@ -207,9 +223,11 @@ LolTimeFlash/
 ---
 
 ## 🔮 Phase 3 : Refactor Frontend (FUTURE)
+
 **Status** : 📋 **PLANIFIÉE**
 
 #### 🎯 Objectifs
+
 - [ ] Supprimer le timer Socket (1s interval)
 - [ ] Implémenter nouveaux event handlers
 - [ ] Utiliser types partagés de packages/shared
@@ -219,9 +237,11 @@ LolTimeFlash/
 ---
 
 ## 🚀 Phase 4 : Polish & Deploy (FUTURE)
+
 **Status** : 📋 **PLANIFIÉE**
 
 #### 🎯 Objectifs
+
 - [ ] Logging (Winston)
 - [ ] Monitoring
 - [ ] CI/CD Pipeline (.github/workflows/)
@@ -235,28 +255,28 @@ LolTimeFlash/
 
 ### Performance Cible
 
-| Métrique | Avant | Après | Gain |
-|----------|-------|-------|------|
-| Messages Socket/min | 300 | 10 | **-97%** 🎯 |
-| Latence moyenne | 1000ms | <50ms | **-95%** 🎯 |
-| Payload moyen | ~5KB | <500B | **-90%** 🎯 |
+| Métrique            | Avant  | Après | Gain        |
+| ------------------- | ------ | ----- | ----------- |
+| Messages Socket/min | 300    | 10    | **-97%** 🎯 |
+| Latence moyenne     | 1000ms | <50ms | **-95%** 🎯 |
+| Payload moyen       | ~5KB   | <500B | **-90%** 🎯 |
 
 ### Code Quality
 
-| Métrique | Avant | Après | Status |
-|----------|-------|-------|--------|
-| TypeScript coverage | Partiel | 100% | 🟢 50% → 100% |
-| Tests coverage | 0% | 80%+ | 🔴 À faire |
-| Linting errors | ? | 0 | 🟢 0 errors |
+| Métrique            | Avant   | Après | Status        |
+| ------------------- | ------- | ----- | ------------- |
+| TypeScript coverage | Partiel | 100%  | 🟢 50% → 100% |
+| Tests coverage      | 0%      | 80%+  | 🔴 À faire    |
+| Linting errors      | ?       | 0     | 🟢 0 errors   |
 
 ### DevEx
 
-| Métrique | Valeur | Status |
-|----------|--------|--------|
-| Build time | <10s | 🟢 1.5s |
-| Hot reload | <1s | 🟢 ~500ms |
-| Install time | <15s | 🟢 8.8s |
-| Type safety | Shared types | 🟡 Phase 2 |
+| Métrique     | Valeur       | Status     |
+| ------------ | ------------ | ---------- |
+| Build time   | <10s         | 🟢 1.5s    |
+| Hot reload   | <1s          | 🟢 ~500ms  |
+| Install time | <15s         | 🟢 8.8s    |
+| Type safety  | Shared types | 🟡 Phase 2 |
 
 ---
 
@@ -290,18 +310,21 @@ pnpm test               # Tous les tests
 ## 📝 Notes de Migration
 
 ### Changements Majeurs
+
 1. **Structure monorepo** : Séparation claire frontend/backend/shared
 2. **Turborepo** : Build system moderne avec caching
 3. **PNPM workspaces** : Gestion dépendances optimisée
 4. **Scripts utilitaires** : Automatisation clean/setup
 
 ### Décisions Techniques
+
 - ✅ Turborepo choisi pour le build system (vs Nx)
 - ✅ PNPM choisi comme package manager (vs npm/yarn)
 - ✅ NestJS choisi pour le backend (vs Express)
 - ✅ Types partagés via package local (vs duplication)
 
 ### Points d'Attention
+
 - ⚠️ Old backend (`BackLolTimeFlash/`) encore présent (à supprimer Phase 3)
 - ⚠️ Socket.IO polling toutes les secondes (à refactor Phase 3)
 - ⚠️ Pas de tests (à ajouter Phase 4)
@@ -311,15 +334,18 @@ pnpm test               # Tous les tests
 ## 🐛 Issues Tracker
 
 ### Résolus ✅
+
 - [x] Turborepo `pipeline` → `tasks` (v2.6.1)
 - [x] Fichiers .next/ dans Git
 - [x] Dev server ne démarre pas
 
 ### En cours 🔄
-*Aucun*
+
+_Aucun_
 
 ### À faire 📋
-*Voir Phase 2, 3, 4*
+
+_Voir Phase 2, 3, 4_
 
 ---
 
@@ -334,4 +360,3 @@ pnpm test               # Tous les tests
 **Dernière modification** : 2024-11-12 16:30:00  
 **Prochaine étape** : Phase 3 - Refactor Frontend  
 **ETA Phase 3** : ~2-3 heures
-
