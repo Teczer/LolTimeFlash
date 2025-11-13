@@ -12,6 +12,13 @@ export type TRole = 'TOP' | 'JUNGLE' | 'MID' | 'ADC' | 'SUPPORT'
  * Summoner spell data for a single role
  */
 export interface ISummonerData {
+  /**
+   * Flash cooldown status
+   * - false: Flash is available
+   * - number: Countdown in seconds (local state)
+   * 
+   * Note: Backend stores timestamp (endsAt in ms), frontend converts to countdown
+   */
   isFlashed: false | number
   lucidityBoots: boolean
   cosmicInsight: boolean

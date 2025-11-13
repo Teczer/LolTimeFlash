@@ -500,49 +500,55 @@ _Aucun_
 
 ### ⚠️ Bugs Critiques à Fixer (PRIORITÉ)
 
-#### 🔥 BUG #1 : Timer Reset en Multiplayer
+#### ✅ BUG #1 : Timer Reset en Multiplayer - **RÉSOLU**
 
-**Status** : 🔴 **CRITIQUE** - À fixer en priorité après commit/push
+**Status** : 🟢 **FIXED** - 13 novembre 2024
 
 **Symptômes** :
-- En mode multiplayer, **tous les timers se réinitialisent à 5 minutes** (300s) quand :
-  - ✅ Un nouvel utilisateur rejoint la room
-  - ✅ On clique sur Flash d'un autre rôle
-  - ✅ On active/désactive un item (Lucidity Boots ou Cosmic Insight)
+- En mode multiplayer, **tous les timers se réinitialisaient à 5 minutes** (300s) quand :
+  - ✅ Un nouvel utilisateur rejoignait la room
+  - ✅ On cliquait sur Flash d'un autre rôle
+  - ✅ On activait/désactivait un item (Lucidity Boots ou Cosmic Insight)
 
-**Impact** :
-- ❌ Mode multiplayer inutilisable
-- ❌ Timers ne persistent pas entre les actions
-- ❌ Perte de données de cooldown en temps réel
+**Root Cause identifiée** :
+Le backend stockait `isFlashed: 300` (countdown initial) mais **ne décrémentait JAMAIS cette valeur**. Seul le frontend décrémentait localement.
 
-**Hypothèse** :
-- 🔍 Problème de synchronisation state côté **frontend**
-- 🔍 Possiblement un effet de bord dans `GameContext` ou `useGameTimer` qui reset le state
-- 🔍 `room:state` backend broadcast peut-être mal géré côté client
-- 🔍 Conflit entre state local (frontend timer) et state distant (backend)
+Quand le backend broadcast `room:state`, il envoyait toujours 300s au lieu du temps réel restant. Le frontend comparait 300 > 250 (local) et pensait que c'était un nouveau Flash → Reset !
 
-**Scope d'investigation** :
-- 📁 `apps/web/features/game/contexts/game.context.tsx`
-- 📁 `apps/web/features/game/hooks/use-game-timer.hook.ts`
-- 📁 `apps/web/features/game/screens/game-multiplayer.screen.tsx`
-- 📁 `apps/api/src/game/game.gateway.ts` (broadcast logic)
+**Solution implémentée** : 🎯 **Timestamp-based architecture**
 
-**Comportement attendu** :
-- ✅ Timers doivent continuer de décrémenter même quand d'autres actions se produisent
-- ✅ Nouveaux utilisateurs doivent recevoir l'état actuel des timers (pas 300s par défaut)
-- ✅ Toggle items ne doit affecter que le cooldown max (recalcul), pas reset à 300s
+1. **Backend** : Stocke `isFlashed = Date.now() + cooldown * 1000` (timestamp `endsAt`)
+   - Plus besoin de décrémenter côté backend
+   - Valeur toujours correcte lors des broadcasts
+   - Résiste aux redémarrages (si persistence ajoutée)
 
-**Notes** :
-- Mode solo fonctionne parfaitement ✅
-- Le bug n'apparaît **QUE** en multiplayer
-- Backend peut-être envoie un state "clean" au lieu de l'état actuel
+2. **Frontend** : Convertit `endsAt` → countdown local
+   - Calcule dynamiquement : `Math.ceil((endsAt - Date.now()) / 1000)`
+   - Timer hook décrémente localement pour l'UI
+   - Sync automatique quand nouveaux clients rejoignent
 
-**TODO** :
-- [ ] Investiguer `room:state` broadcast dans `game.gateway.ts`
-- [ ] Vérifier merge logic entre `backendGameState` et `currentGameState`
-- [ ] Analyser `useEffect` dependencies dans `game.context.tsx`
-- [ ] Tester avec console.logs les valeurs de `isFlashed` avant/après broadcast
-- [ ] Vérifier si le backend persiste bien les timers ou les reset
+3. **Bonus fix** : Toggle item garde maintenant la proportion
+   - Avant : Toggle Boots → Timer reset à nouveau max (268s)
+   - Après : Timer ajusté proportionnellement (ex: 83% restant conservé)
+
+**Fichiers modifiés** :
+- ✅ `packages/shared/src/types/game.types.ts` : Doc mise à jour
+- ✅ `apps/api/src/game/game.service.ts` : `isFlashed = endsAt` + recalcul proportionnel toggle
+- ✅ `apps/web/features/game/hooks/use-flash-cooldown.hook.ts` : `timestampToCountdown()`
+- ✅ `apps/web/features/game/screens/game-multiplayer.screen.tsx` : Conversion endsAt → countdown
+- ✅ `apps/web/features/game/contexts/game.context.tsx` : Toggle item proportionnel (solo mode)
+- ✅ `apps/web/features/game/types/game.types.ts` : Doc mise à jour
+
+**Tests de validation** :
+- ✅ TypeScript compile sans erreurs (`pnpm type-check`)
+- ✅ 0 linter errors
+- ✅ Tests manuels validés (backend + 2 clients simultanés)
+
+**Comportement validé** :
+- ✅ Timer continue de décrémenter même si d'autres actions se produisent
+- ✅ Nouveaux utilisateurs reçoivent l'état actuel des timers (pas de reset)
+- ✅ Toggle items ajuste proportionnellement le timer (conserve le % restant)
+- ✅ Mode multiplayer 100% fonctionnel
 
 ---
 

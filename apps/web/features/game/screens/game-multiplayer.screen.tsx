@@ -13,6 +13,7 @@ import { RoomInfo } from '../components/room-info.component'
 import { UserList } from '../components/user-list.component'
 import { LEAGUE_ROLES } from '../constants/game.constants'
 import { GameProvider, useGameContext } from '../contexts/game.context'
+import { timestampToCountdown } from '../hooks/use-flash-cooldown.hook'
 import type { TRole } from '../types/game.types'
 
 interface IMultiplayerContentProps {
@@ -37,35 +38,26 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
     username,
   })
 
-  // Sync backend state to local state (smart merge to preserve local timers)
+  // Sync backend state to local state
+  // Backend sends timestamps (endsAt), convert to countdown (seconds)
   useEffect(() => {
     if (backendGameState) {
       setGameState((prevState) => {
         const newRoles = { ...backendGameState.roles }
 
-        // Preserve local timer values if they're already counting down
+        // Convert backend timestamps (endsAt) to local countdown (seconds)
         for (const roleKey in newRoles) {
           const role = roleKey as TRole
-          const prevRoleData = prevState.roles[role]
-          const newRoleData = newRoles[role]
+          const backendRoleData = newRoles[role]
 
-          // If timer was already running locally, keep the local countdown
-          // Only update if the backend value changed (new Flash usage or cancel)
-          if (
-            typeof prevRoleData.isFlashed === 'number' &&
-            typeof newRoleData.isFlashed === 'number'
-          ) {
-            // If backend has a NEW higher value, it means someone triggered Flash again
-            // Otherwise, keep the local countdown
-            if (newRoleData.isFlashed > prevRoleData.isFlashed) {
-              // New Flash triggered, accept backend value
-              newRoles[role] = newRoleData
-            } else {
-              // Keep local countdown
-              newRoles[role] = {
-                ...newRoleData,
-                isFlashed: prevRoleData.isFlashed,
-              }
+          // If backend has a timestamp (number), convert to countdown
+          if (typeof backendRoleData.isFlashed === 'number') {
+            const countdown = timestampToCountdown(backendRoleData.isFlashed)
+
+            // If countdown reached 0, set to false
+            newRoles[role] = {
+              ...backendRoleData,
+              isFlashed: countdown > 0 ? countdown : false,
             }
           }
         }

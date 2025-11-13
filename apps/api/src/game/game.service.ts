@@ -24,8 +24,8 @@ export class GameService {
     )
     const endsAt = Date.now() + cooldown * 1000
 
-    // Update room state
-    room.roles[role].isFlashed = cooldown
+    // ✅ Store endsAt timestamp instead of countdown
+    room.roles[role].isFlashed = endsAt
     this.roomService.updateRoom(roomId, { roles: room.roles })
 
     return {
@@ -65,15 +65,43 @@ export class GameService {
       throw new Error(`Room ${roomId} not found`)
     }
 
+    const roleData = room.roles[role]
+    const currentValue = roleData[item]
+    const newValue = !currentValue
+
     // Toggle the item
-    const currentValue = room.roles[role][item]
-    room.roles[role][item] = !currentValue
+    roleData[item] = newValue
+
+    // ✅ If Flash is on cooldown, recalculate endsAt based on new cooldown
+    if (typeof roleData.isFlashed === 'number') {
+      const currentEndsAt = roleData.isFlashed
+      const now = Date.now()
+      const remainingTime = Math.max(0, currentEndsAt - now)
+      
+      // Calculate new cooldown with updated items
+      const newCooldownTotal = calculateFlashCooldown(
+        item === 'lucidityBoots' ? newValue : roleData.lucidityBoots,
+        item === 'cosmicInsight' ? newValue : roleData.cosmicInsight
+      )
+      
+      // Adjust endsAt: keep the same remaining percentage
+      const oldCooldownTotal = calculateFlashCooldown(
+        item === 'lucidityBoots' ? currentValue : roleData.lucidityBoots,
+        item === 'cosmicInsight' ? currentValue : roleData.cosmicInsight
+      )
+      
+      const percentageRemaining = remainingTime / (oldCooldownTotal * 1000)
+      const newRemainingTime = percentageRemaining * newCooldownTotal * 1000
+      
+      roleData.isFlashed = now + newRemainingTime
+    }
+
     this.roomService.updateRoom(roomId, { roles: room.roles })
 
     return {
       role,
       item,
-      value: !currentValue,
+      value: newValue,
       username,
     }
   }

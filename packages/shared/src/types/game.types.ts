@@ -10,7 +10,7 @@ export interface SummonerData {
   /**
    * Flash cooldown status
    * - false: Flash is available
-   * - number: Seconds remaining on cooldown
+   * - number: Timestamp (ms) when Flash will be available again (endsAt)
    */
   isFlashed: false | number
   

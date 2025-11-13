@@ -31,6 +31,15 @@ export const calculateFlashCooldown = (options: ICalculateCooldownOptions): numb
 }
 
 /**
+ * Convert endsAt timestamp to countdown in seconds
+ */
+export const timestampToCountdown = (endsAt: number): number => {
+  const now = Date.now()
+  const remainingMs = Math.max(0, endsAt - now)
+  return Math.ceil(remainingMs / 1000)
+}
+
+/**
  * Format cooldown time as MM:SS
  */
 export const formatCooldown = (seconds: number): string => {

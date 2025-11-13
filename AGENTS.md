@@ -675,35 +675,16 @@ export const gameDefaultData: GameData = {
 
 ## 🐛 Known Issues / Future Improvements
 
-### 🔥 Bugs Critiques (À fixer en PRIORITÉ)
+### ✅ Bugs Critiques Résolus
 
-#### BUG #1 : Timer Reset en Multiplayer 🔴
+#### ✅ BUG #1 : Timer Reset en Multiplayer - **FIXED** (13 nov 2024)
 
-**Status** : CRITIQUE - Mode multiplayer inutilisable
+**Solution** : Architecture timestamp-based
+- Backend stocke `endsAt` timestamp au lieu de countdown
+- Frontend convertit dynamiquement timestamp → countdown
+- Plus de reset lors des broadcasts/joins/toggles
 
-**Symptômes** :
-- Tous les timers se réinitialisent à **5 minutes (300s)** quand :
-  - Un nouvel utilisateur rejoint la room
-  - On clique sur Flash d'un autre rôle
-  - On active/désactive un item (Lucidity Boots/Cosmic Insight)
-
-**Impact** :
-- ❌ Mode multiplayer complètement cassé
-- ❌ Timers ne persistent pas entre les actions
-- ✅ Mode solo fonctionne parfaitement
-
-**Hypothèse** :
-- Problème de synchronisation state côté **frontend**
-- `room:state` broadcast peut-être mal géré côté client
-- Conflit entre state local (timer frontend) et state distant (backend)
-
-**Fichiers à investiguer** :
-- `apps/web/features/game/contexts/game.context.tsx`
-- `apps/web/features/game/hooks/use-game-timer.hook.ts`
-- `apps/web/features/game/screens/game-multiplayer.screen.tsx`
-- `apps/api/src/game/game.gateway.ts`
-
-**Voir** : `MIGRATION_STATUS.md` section "Bugs Critiques" pour détails complets
+**Détails complets** : Voir `MIGRATION_STATUS.md`
 
 ---
 
