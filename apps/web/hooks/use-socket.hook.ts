@@ -5,13 +5,14 @@
 
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import { io, Socket } from 'socket.io-client'
 import type {
   ClientToServerEvents,
-  ServerToClientEvents,
   GameState,
+  Role,
+  ServerToClientEvents,
 } from '@loltimeflash/shared'
+import { useEffect, useRef, useState } from 'react'
+import { io, Socket } from 'socket.io-client'
 
 type TTypedSocket = Socket<ServerToClientEvents, ClientToServerEvents>
 
@@ -24,19 +25,23 @@ interface IUseSocketOptions {
 interface IUseSocketReturn {
   socket: TTypedSocket | null
   isConnected: boolean
+  reconnectAttempts: number
   gameState: GameState | null
   joinRoom: (roomId: string, username: string) => void
   leaveRoom: (roomId: string) => void
-  useFlash: (roomId: string, role: string) => void
-  cancelFlash: (roomId: string, role: string) => void
-  toggleItem: (roomId: string, role: string, item: string) => void
+  useFlash: (role: Role) => void
+  cancelFlash: (role: Role) => void
+  toggleItem: (role: Role, item: 'lucidityBoots' | 'cosmicInsight') => void
 }
 
-export const useSocket = (options: IUseSocketOptions = {}): IUseSocketReturn => {
+export const useSocket = (
+  options: IUseSocketOptions = {}
+): IUseSocketReturn => {
   const { enabled = false, roomId, username } = options
 
   const socketRef = useRef<TTypedSocket | null>(null)
   const [isConnected, setIsConnected] = useState(false)
+  const [reconnectAttempts, setReconnectAttempts] = useState(0)
   const [gameState, setGameState] = useState<GameState | null>(null)
 
   // Initialize socket connection
@@ -56,11 +61,21 @@ export const useSocket = (options: IUseSocketOptions = {}): IUseSocketReturn => 
     socket.on('connect', () => {
       console.log('✅ Connected to backend:', socket.id)
       setIsConnected(true)
+      setReconnectAttempts(0) // Reset on successful connection
     })
 
-    socket.on('disconnect', () => {
-      console.log('❌ Disconnected from backend')
+    socket.on('disconnect', (reason) => {
+      console.warn('❌ Disconnected from backend:', reason)
       setIsConnected(false)
+    })
+
+    socket.io.on('reconnect_attempt', (attempt) => {
+      console.log(`🔄 Reconnection attempt ${attempt}...`)
+      setReconnectAttempts(attempt)
+    })
+
+    socket.io.on('reconnect_failed', () => {
+      console.error('❌ Reconnection failed after max attempts')
     })
 
     // Game events
@@ -119,30 +134,31 @@ export const useSocket = (options: IUseSocketOptions = {}): IUseSocketReturn => 
     }
   }
 
-  const useFlash = (roomId: string, role: string): void => {
+  const useFlash = (role: Role): void => {
     if (socketRef.current) {
-      socketRef.current.emit('game:flash', { role: role as any })
+      socketRef.current.emit('game:flash', { role })
     }
   }
 
-  const cancelFlash = (roomId: string, role: string): void => {
+  const cancelFlash = (role: Role): void => {
     if (socketRef.current) {
-      socketRef.current.emit('game:flash:cancel', { role: role as any })
+      socketRef.current.emit('game:flash:cancel', { role })
     }
   }
 
-  const toggleItem = (roomId: string, role: string, item: string): void => {
+  const toggleItem = (
+    role: Role,
+    item: 'lucidityBoots' | 'cosmicInsight'
+  ): void => {
     if (socketRef.current) {
-      socketRef.current.emit('game:toggle:item', {
-        role: role as any,
-        item: item as any,
-      })
+      socketRef.current.emit('game:toggle:item', { role, item })
     }
   }
 
   return {
     socket: socketRef.current,
     isConnected,
+    reconnectAttempts,
     gameState,
     joinRoom,
     leaveRoom,
@@ -151,4 +167,3 @@ export const useSocket = (options: IUseSocketOptions = {}): IUseSocketReturn => 
     toggleItem,
   }
 }
-

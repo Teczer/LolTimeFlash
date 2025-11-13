@@ -7,6 +7,7 @@
 
 import { useSocket } from '@/hooks/use-socket.hook'
 import { useEffect } from 'react'
+import { ConnectionStatus } from '../components/connection-status.component'
 import { GameControls } from '../components/game-controls.component'
 import { RoleCard } from '../components/role-card.component'
 import { RoomInfo } from '../components/room-info.component'
@@ -29,6 +30,7 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
   const {
     gameState: backendGameState,
     isConnected,
+    reconnectAttempts,
     useFlash: emitUseFlash,
     cancelFlash: emitCancelFlash,
     toggleItem: emitToggleItem,
@@ -78,10 +80,10 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
 
     if (typeof roleData.isFlashed === 'number') {
       // Cancel Flash
-      emitCancelFlash(roomId, role)
+      emitCancelFlash(role)
     } else {
       // Use Flash
-      emitUseFlash(roomId, role)
+      emitUseFlash(role)
     }
   }
 
@@ -89,11 +91,17 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
     role: TRole,
     item: 'lucidityBoots' | 'cosmicInsight'
   ) => {
-    emitToggleItem(roomId, role, item)
+    emitToggleItem(role, item)
   }
 
   return (
     <main className="flex h-screen flex-col items-center justify-start gap-2 p-6 sm:gap-0 sm:p-10">
+      {/* Connection Status */}
+      <ConnectionStatus
+        isConnected={isConnected}
+        reconnectAttempts={reconnectAttempts}
+      />
+
       {/* Controls */}
       <GameControls volume={audio.volume} onToggleVolume={audio.toggleVolume} />
 
@@ -122,13 +130,6 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
           )
         })}
       </div>
-
-      {/* Connection Status */}
-      {!isConnected && (
-        <div className="fixed bottom-4 right-4 rounded-md bg-red-500 px-4 py-2 text-white">
-          Disconnected
-        </div>
-      )}
     </main>
   )
 }

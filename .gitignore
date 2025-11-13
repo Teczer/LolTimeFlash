@@ -1,8 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-**/node_modules
+node_modules/
+**/node_modules/
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -18,8 +18,10 @@
 
 # production
 /build
-**/build
-**/dist
+build/
+**/build/
+dist/
+**/dist/
 
 # misc
 .DS_Store
@@ -50,8 +52,8 @@ bun.lockb
 /BackLolTimeFlash
 
 # static data
-
-/data
+data/
+**/data/
 
 # env
 .env

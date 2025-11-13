@@ -1,8 +1,8 @@
 # 📊 Migration Status - LolTimeFlash Monorepo
 
 > **Branch**: `tech/move-to-monorepo`  
-> **Dernière mise à jour**: 2024-11-12 19:30:00  
-> **Status global**: 🟢 Phase 3 Complétée (Architecture Refactor)
+> **Dernière mise à jour**: 2024-11-13 22:00:00  
+> **Status global**: 🟢 Phase 3.5 Complétée (Option A - Quick Polish)
 
 ---
 
@@ -385,6 +385,227 @@ apps/web/features/game/
 
 ---
 
+## ✅ Phase 3.5 : Option A - Quick Polish
+
+**Dates** : 13 novembre 2024 (20h00 - 22h00)  
+**Durée** : ~2 heures  
+**Status** : ✅ **COMPLÉTÉE**
+
+#### 🎯 Objectifs
+
+- [x] Git cleanup (node_modules, data, dist) ✅
+- [x] Refactor components/ architecture ✅
+- [x] Convert socket.js → socket.ts ✅
+- [x] Add Error Boundaries React ✅
+- [x] Improve Socket disconnect UX ✅
+
+#### ✅ Réalisations
+
+**3.5.1 Git Cleanup (545 fichiers)** ✅
+
+- ✅ Supprimé `node_modules`, `data/` (126 MB), `dist/` du tracking Git
+- ✅ Amélioré `.gitignore` : `node_modules/`, `data/`, `dist/`, `*.tsbuildinfo`
+- ✅ Aligné scripts `clean` entre root et apps/web (maintenant nettoie `node_modules`)
+
+**3.5.2 Components Architecture Refactor** ✅
+
+**Nouvelle structure créée** :
+
+```
+apps/web/
+├── components/
+│   ├── providers/                      ← NOUVEAU
+│   │   ├── query-provider.component.tsx
+│   │   └── username-provider.component.tsx
+│   ├── layout/                         ← NOUVEAU
+│   │   ├── background-wrapper.component.tsx
+│   │   ├── footer-copyrights.component.tsx
+│   │   └── settings-button.component.tsx
+│   ├── ui/                             ← NETTOYÉ (primitives only)
+│   │   ├── button.tsx
+│   │   ├── dialog.tsx
+│   │   ├── input.tsx
+│   │   └── ...
+│   └── error-boundary.component.tsx    ← NOUVEAU
+│
+├── features/
+│   ├── game/components/
+│   │   └── connection-status.component.tsx  ← NOUVEAU
+│   └── settings/components/            ← NOUVEAU
+│       ├── background-selector.component.tsx
+│       ├── background-selector-loader.component.tsx
+│       └── username-input-modal.component.tsx
+│
+└── hooks/
+    ├── use-media-query.hook.ts
+    ├── use-socket.hook.ts
+    └── use-toast.hook.ts               ← MOVED from ui/
+```
+
+**Conventions appliquées** :
+
+- ✅ kebab-case + suffixes (`.component.tsx`, `.hook.ts`)
+- ✅ Named exports (plus de default export)
+- ✅ Props interfaces avec `I` prefix
+- ✅ Separation of concerns (providers / layout / features)
+
+**3.5.3 TypeScript Improvements** ✅
+
+- ✅ **socket.js → socket.ts** : Types stricts avec `Socket<ServerToClientEvents, ClientToServerEvents>`
+- ✅ **ESLint config stricte** (`.eslintrc.json`) :
+  - `@typescript-eslint/no-unused-vars`: error
+  - `@typescript-eslint/no-explicit-any`: error
+  - `prefer-const`: error
+  - `no-console`: warn (allow warn/error)
+
+- ✅ **use-socket.hook.ts refactorisé** :
+  - Supprimé params `roomId` inutiles (backend récupère depuis `client.data`)
+  - Remplacé `role: string` → `role: Role` (type strict)
+  - Remplacé `item: string` → `item: 'lucidityBoots' | 'cosmicInsight'`
+  - Supprimé **TOUS** les `as any` → Types corrects du package shared
+  - Ajout tracking `reconnectAttempts` pour UX
+
+**3.5.4 Error Boundaries React** ✅
+
+Nouveau composant : `components/error-boundary.component.tsx`
+
+**Features** :
+
+- ✅ Catch toutes les erreurs JavaScript dans l'arbre React
+- ✅ Affiche UI fallback user-friendly avec emojis
+- ✅ Boutons "Reload Page" et "Go Home"
+- ✅ Détails de l'erreur en mode debug (expandable)
+- ✅ Logs console pour debugging
+- ✅ Intégré dans `app/layout.tsx` (protège toute l'app)
+
+**Code** :
+
+```tsx
+<ErrorBoundary>
+  <QueryProvider>
+    <BackgroundWrapper>
+      {children} {/* Toute l'app protégée */}
+    </BackgroundWrapper>
+  </QueryProvider>
+</ErrorBoundary>
+```
+
+**3.5.5 Socket Disconnect UX** ✅
+
+Nouveau composant : `features/game/components/connection-status.component.tsx`
+
+**Features** :
+
+- ✅ Indicateur animé en haut à droite
+- ✅ 3 états visuels :
+  - **Connected** : Point vert pulsant + "Connected"
+  - **Reconnecting (< 3 attempts)** : Spinner jaune + "Reconnecting..." + compteur
+  - **Connection lost (≥ 3 attempts)** : Spinner rouge + "Connection lost" + compteur + pulse
+- ✅ Auto-reconnect avec 5 tentatives (Socket.IO)
+- ✅ Logs détaillés dans console :
+  - `connect`, `disconnect`, `reconnect_attempt`, `reconnect_failed`
+- ✅ Reset du compteur sur reconnexion réussie
+
+**Améliorations use-socket.hook.ts** :
+
+```typescript
+socket.io.on('reconnect_attempt', (attempt) => {
+  console.log(`🔄 Reconnection attempt ${attempt}...`)
+  setReconnectAttempts(attempt)
+})
+```
+
+**Intégration** :
+
+- ✅ Remplacé l'ancien `<div>Disconnected</div>` par `<ConnectionStatus />`
+- ✅ Affichage en temps réel de l'état de connexion
+- ✅ UX claire pour l'utilisateur (sait quand il est déconnecté)
+
+#### 📊 Métriques
+
+|| Métrique | Avant | Après | Impact |
+|| ----------------------- | -------------- | --------------- | -------------- |
+|| Files in Git tracking | 545+ inutiles | 0 (cleaned) | -545 files |
+|| Data folder size | 126 MB | 0 (deleted) | -126 MB |
+|| Components architecture | Flat structure | Feature modules | ✅ Organized |
+|| ESLint errors | Not tracked | 0 | ✅ Strict |
+|| TypeScript any usage | 3 in socket | 0 | ✅ Type-safe |
+|| Error handling | None | ErrorBoundary | ✅ Resilient |
+|| Disconnect feedback | Simple div | Animated status | ✅ Clear UX |
+
+#### ✅ Ce qui fonctionne
+
+**Architecture** :
+
+- ✅ Components séparés (providers, layout, features)
+- ✅ Conventions appliquées uniformément
+- ✅ Imports alignés (named exports)
+
+**TypeScript** :
+
+- ✅ 0 erreurs (pnpm type-check)
+- ✅ 0 warnings ESLint
+- ✅ Types stricts partout (plus de `any`)
+- ✅ Socket typé avec interfaces shared
+
+**Error Handling** :
+
+- ✅ ErrorBoundary catch les crashes
+- ✅ UI fallback utilisable (reload/home)
+- ✅ Logs pour debugging
+
+**Socket UX** :
+
+- ✅ Indicateur connexion temps réel
+- ✅ Animations claires (pulse, spinner)
+- ✅ Compteur de tentatives visible
+- ✅ Auto-reconnect fonctionnel
+
+#### 📦 Fichiers créés/modifiés
+
+**Créés (13 nouveaux)** :
+
+- `components/error-boundary.component.tsx`
+- `components/providers/query-provider.component.tsx`
+- `components/providers/username-provider.component.tsx`
+- `components/layout/background-wrapper.component.tsx`
+- `components/layout/footer-copyrights.component.tsx`
+- `components/layout/settings-button.component.tsx`
+- `features/settings/components/background-selector.component.tsx`
+- `features/settings/components/background-selector-loader.component.tsx`
+- `features/settings/components/username-input-modal.component.tsx`
+- `features/game/components/connection-status.component.tsx`
+- `hooks/use-toast.hook.ts`
+- `app/socket.ts`
+- `.eslintrc.json`
+
+**Modifiés (9 fichiers)** :
+
+- `app/layout.tsx` (ErrorBoundary)
+- `app/page.tsx` (imports)
+- `app/lobby/page.tsx` (use-toast)
+- `app/game/[roomId]/page.tsx` (UsernameProvider)
+- `hooks/use-socket.hook.ts` (reconnect tracking, types)
+- `features/game/screens/game-multiplayer.screen.tsx` (ConnectionStatus)
+- `package.json` (clean script, @eslint/eslintrc)
+- `.gitignore` (patterns améliorés)
+- `AGENTS.md` (Tailwind v3 vs v4, Bug #1 résolu)
+
+**Supprimés (10 anciens)** :
+
+- `data/` (126 MB, 540+ fichiers)
+- `dist/`
+- `components/QueryProvider/`
+- `components/UsernameProvider/`
+- `components/settingsbutton/`
+- `components/ui/wrapperbackground/`
+- `components/ui/footercopyrights/`
+- `components/ui/dialogcover/`
+- `components/ui/usernameinput/`
+- `components/ui/loader/`
+- `components/ui/use-toast.ts`
+- `app/socket.js`
+
 ---
 
 ## 🚀 Phase 4 : Polish & Deploy (FUTURE)
@@ -505,6 +726,7 @@ _Aucun_
 **Status** : 🟢 **FIXED** - 13 novembre 2024
 
 **Symptômes** :
+
 - En mode multiplayer, **tous les timers se réinitialisaient à 5 minutes** (300s) quand :
   - ✅ Un nouvel utilisateur rejoignait la room
   - ✅ On cliquait sur Flash d'un autre rôle
@@ -532,6 +754,7 @@ Quand le backend broadcast `room:state`, il envoyait toujours 300s au lieu du te
    - Après : Timer ajusté proportionnellement (ex: 83% restant conservé)
 
 **Fichiers modifiés** :
+
 - ✅ `packages/shared/src/types/game.types.ts` : Doc mise à jour
 - ✅ `apps/api/src/game/game.service.ts` : `isFlashed = endsAt` + recalcul proportionnel toggle
 - ✅ `apps/web/features/game/hooks/use-flash-cooldown.hook.ts` : `timestampToCountdown()`
@@ -540,11 +763,13 @@ Quand le backend broadcast `room:state`, il envoyait toujours 300s au lieu du te
 - ✅ `apps/web/features/game/types/game.types.ts` : Doc mise à jour
 
 **Tests de validation** :
+
 - ✅ TypeScript compile sans erreurs (`pnpm type-check`)
 - ✅ 0 linter errors
 - ✅ Tests manuels validés (backend + 2 clients simultanés)
 
 **Comportement validé** :
+
 - ✅ Timer continue de décrémenter même si d'autres actions se produisent
 - ✅ Nouveaux utilisateurs reçoivent l'état actuel des timers (pas de reset)
 - ✅ Toggle items ajuste proportionnellement le timer (conserve le % restant)
@@ -566,6 +791,6 @@ _Voir Phase 4_
 
 ---
 
-**Dernière modification** : 2024-11-12 19:30:00  
+**Dernière modification** : 2024-11-13 22:00:00  
 **Prochaine étape** : Phase 4 - Polish & Deploy  
 **ETA Phase 4** : ~4-6 heures

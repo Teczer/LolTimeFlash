@@ -732,6 +732,37 @@ export const gameDefaultData: GameData = {
 3. Test locally before pushing
 4. Submit PR with description of changes
 
+### Commit Message Convention
+
+**Format**: `<gitmoji> <type>(<scope>): <description>`
+
+**Rules**:
+- ✅ Use gitmoji (🎨 ♻️ ✨ 🐛 📝 🚀 ✅ ⚡ 🔧 etc.)
+- ✅ Max 72 characters for the title
+- ✅ **NO body** (no line breaks, title only)
+- ✅ Use imperative mood ("add", "fix", "refactor", not "added", "fixed")
+- ✅ Lowercase after colon
+
+**Examples**:
+```bash
+♻️ refactor(game): migrate to timestamp-based timers
+✨ feat(socket): add connection status indicator
+🐛 fix(timer): prevent reset on user join
+🎨 style(ui): apply kebab-case naming convention
+📝 docs: update AGENTS.md with Phase 3.5 changes
+```
+
+**Common Gitmojis**:
+- 🎨 `:art:` - Code structure/format
+- ♻️ `:recycle:` - Refactor code
+- ✨ `:sparkles:` - New feature
+- 🐛 `:bug:` - Bug fix
+- 📝 `:memo:` - Documentation
+- 🚀 `:rocket:` - Deploy/performance
+- ✅ `:white_check_mark:` - Tests
+- ⚡ `:zap:` - Performance
+- 🔧 `:wrench:` - Configuration
+
 ### Testing Checklist
 
 - [ ] Solo mode works without errors
@@ -768,7 +799,74 @@ export const gameDefaultData: GameData = {
 
 ## 🔄 Version History & Upgrades
 
-### Version 0.2.0 - November 2025
+### Version 0.3.0 - November 2024 (Phase 3.5 - Option A)
+
+**Major Refactoring & Polish**:
+
+- ✅ **Git Cleanup**: Supprimé 545+ fichiers inutiles (`node_modules`, `data/` 126 MB, `dist/`)
+- ✅ **Components Architecture**: Réorganisation complète avec `providers/`, `layout/`, `features/`
+- ✅ **TypeScript Strict**: socket.js → socket.ts, ESLint strict rules, supprimé tous les `any`
+- ✅ **Error Boundaries**: Ajout React Error Boundary pour catch les crashes
+- ✅ **Socket Disconnect UX**: Indicateur de connexion animé avec reconnection tracking
+
+**Breaking Changes**:
+
+- socket.js → socket.ts (mais backward compatible car exports/imports mis à jour)
+- Components déplacés (imports automatiquement mis à jour)
+- ESLint strict (0 `any`, 0 unused vars autorisés)
+
+**Nouveaux Composants**:
+
+1. **ErrorBoundary** (`components/error-boundary.component.tsx`)
+   - Catch toutes les erreurs JavaScript
+   - UI fallback user-friendly
+   - Boutons "Reload Page" et "Go Home"
+
+2. **ConnectionStatus** (`features/game/components/connection-status.component.tsx`)
+   - Indicateur temps réel (Connected / Reconnecting / Connection Lost)
+   - Tracking reconnect attempts
+   - Animations claires (pulse, spinner)
+
+**Architecture Improvements**:
+
+```
+apps/web/components/
+├── providers/       ← NOUVEAU (query, username)
+├── layout/          ← NOUVEAU (background, footer, settings)
+├── ui/              ← NETTOYÉ (primitives only)
+└── error-boundary   ← NOUVEAU
+
+apps/web/features/
+├── game/components/
+│   └── connection-status.component.tsx  ← NOUVEAU
+└── settings/components/                  ← NOUVEAU
+    ├── background-selector.component.tsx
+    ├── background-selector-loader.component.tsx
+    └── username-input-modal.component.tsx
+```
+
+**Métriques**:
+
+- **Git**: -545 files, -126 MB
+- **TypeScript**: 100% typed (0 `any`)
+- **ESLint**: 0 errors, 0 warnings
+- **Error Handling**: ErrorBoundary catch crashes
+- **Socket UX**: Indicateur connexion + auto-reconnect (5 attempts)
+
+**Fichiers Supprimés**:
+
+- `app/socket.js`
+- `components/QueryProvider/`, `components/UsernameProvider/`
+- `components/settingsbutton/`, `components/ui/wrapperbackground/`
+- `components/ui/dialogcover/`, `components/ui/usernameinput/`
+- `components/ui/use-toast.ts`
+- `data/` (126 MB, 540+ fichiers)
+
+**Détails complets**: Voir `MIGRATION_STATUS.md` Phase 3.5
+
+---
+
+### Version 0.2.0 - November 2024
 
 **Major Dependency Upgrades**:
 
@@ -1164,6 +1262,6 @@ For questions, issues, or contributions:
 
 ---
 
-**Last Updated**: November 12, 2025
+**Last Updated**: November 13, 2024
 **Version**: 0.3.0
-**Status**: Active Development - Phase 3.5 (Architecture Refactor)
+**Status**: ✅ Phase 3.5 Complétée (Option A - Quick Polish)

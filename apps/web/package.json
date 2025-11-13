@@ -6,12 +6,12 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "eslint": "next lint .",
-    "eslint:fix": "next lint . --fix",
+    "eslint": "next lint",
+    "eslint:fix": "next lint --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "type-check": "tsc --noEmit",
-    "clean": "rm -rf node_modules pnpm-lock.yaml .next .turbo",
+    "clean": "rm -rf node_modules .next .turbo",
     "clean:full": "pnpm clean && pnpm install",
     "dev:clean": "pnpm clean:full && pnpm dev"
   },
@@ -40,6 +40,7 @@
     "zustand": "^5.0.8"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.3",
     "@types/react-dom": "^19.2.3",

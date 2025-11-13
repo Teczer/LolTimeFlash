@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
-import { Toaster } from '@/components/ui/toaster'
-
 import localFont from 'next/font/local'
-
+import { ErrorBoundary } from '@/components/error-boundary.component'
+import { QueryProvider } from '@/components/providers/query-provider.component'
+import { BackgroundWrapper } from '@/components/layout/background-wrapper.component'
+import { Toaster } from '@/components/ui/toaster'
 import './globals.css'
-import WrapperBackground from '@/components/ui/wrapperbackground'
-import QueryProvider from '@/components/QueryProvider'
 
 const BeaufortforLOL = localFont({
   src: [
@@ -46,14 +45,16 @@ export default function RootLayout({
   return (
     <html className={BeaufortforLOL.className} lang="en">
       <body>
-        <QueryProvider>
-          <WrapperBackground>
-            <Toaster />
-            <div className="mx-auto min-h-screen max-w-screen-2xl">
-              {children}
-            </div>
-          </WrapperBackground>
-        </QueryProvider>
+        <ErrorBoundary>
+          <QueryProvider>
+            <BackgroundWrapper>
+              <Toaster />
+              <div className="mx-auto min-h-screen max-w-screen-2xl">
+                {children}
+              </div>
+            </BackgroundWrapper>
+          </QueryProvider>
+        </ErrorBoundary>
       </body>
     </html>
   )

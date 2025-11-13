@@ -1,9 +1,9 @@
 'use client'
 
-import { useUsernameStore } from '@/app/store/username.store'
-import UsernameProvider from '@/components/UsernameProvider'
-import { GameMultiplayerScreen } from '@/features/game/screens/game-multiplayer.screen'
 import { use } from 'react'
+import { useUsernameStore } from '@/app/store/username.store'
+import { UsernameProvider } from '@/components/providers/username-provider.component'
+import { GameMultiplayerScreen } from '@/features/game/screens/game-multiplayer.screen'
 
 interface IGameRoomPageProps {
   params: Promise<{

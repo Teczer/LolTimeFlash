@@ -1,16 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
-import SettingsButton from '@/components/settingsbutton'
+import { SettingsButton } from '@/components/layout/settings-button.component'
+import { FooterCopyrights } from '@/components/layout/footer-copyrights.component'
+import { BackgroundSelector } from '@/features/settings/components/background-selector.component'
 import { Button } from '@/components/ui/button'
-import ChangeCoverButton from '@/components/ui/dialogcover'
-import FooterCopyrights from '@/components/ui/footercopyrights'
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-24">
       <div className="fixed right-6 top-6 sm:right-20 sm:top-10">
-        <ChangeCoverButton />
+        <BackgroundSelector />
       </div>
       <div className="fixed left-6 top-6 sm:left-20 sm:top-10">
         <SettingsButton />
