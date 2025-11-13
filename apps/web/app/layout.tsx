@@ -1,9 +1,9 @@
+import { ErrorBoundary } from '@/components/error-boundary.component'
+import { BackgroundWrapper } from '@/components/layout/background-wrapper.component'
+import { QueryProvider } from '@/components/providers/query-provider.component'
+import { Toaster } from '@/components/ui/toaster'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import { ErrorBoundary } from '@/components/error-boundary.component'
-import { QueryProvider } from '@/components/providers/query-provider.component'
-import { BackgroundWrapper } from '@/components/layout/background-wrapper.component'
-import { Toaster } from '@/components/ui/toaster'
 import './globals.css'
 
 const BeaufortforLOL = localFont({
@@ -44,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className={BeaufortforLOL.className} lang="en">
-      <body>
+      <body suppressHydrationWarning>
         <ErrorBoundary>
           <QueryProvider>
             <BackgroundWrapper>

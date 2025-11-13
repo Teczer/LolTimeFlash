@@ -42,6 +42,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# compiled files in packages (should not be committed)
+packages/shared/src/**/*.js
+packages/shared/src/**/*.js.map
+packages/shared/src/**/*.d.ts
+
 bun.lockb
 
 # turbo

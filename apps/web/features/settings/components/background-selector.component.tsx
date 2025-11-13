@@ -5,8 +5,8 @@
 
 'use client'
 
-import { getChampion } from '@/app/api/shieldbow/methods'
-import type { AllSkinsSplashArts } from '@/app/api/shieldbow/route'
+import { getChampionSkins } from '@/lib/api'
+import type { AllSkinsSplashArts } from '@loltimeflash/shared'
 import { useBackgroundImageStore } from '@/app/store/background-image.store'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -34,7 +34,7 @@ export const BackgroundSelector = () => {
     isError,
   } = useQuery<AllSkinsSplashArts[]>({
     queryKey: ['allSkinsSplashArts'],
-    queryFn: async () => await getChampion(),
+    queryFn: async () => await getChampionSkins(),
   })
 
   const filteredItems = useMemo(() => {

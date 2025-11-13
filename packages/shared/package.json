@@ -11,10 +11,9 @@
   },
   "scripts": {
     "type-check": "tsc --noEmit",
-    "clean": "rm -rf dist node_modules .turbo"
+    "clean": "rm -rf dist node_modules .turbo && find src -name '*.js' -o -name '*.js.map' -o -name '*.d.ts' | xargs rm -f"
   },
   "devDependencies": {
     "typescript": "^5.9.3"
   }
 }
-
