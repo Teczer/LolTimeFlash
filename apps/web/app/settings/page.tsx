@@ -1,10 +1,8 @@
 'use client'
 
-import { useState, FormEvent } from 'react'
+import { useState, FormEvent, useEffect } from 'react'
 
 import Link from 'next/link'
-
-import { currentUsername } from '@/lib/constants'
 
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
@@ -14,9 +12,13 @@ import { RxTrackPrevious } from 'react-icons/rx'
 
 export default function Home() {
   const [inputValue, setInputValue] = useState<string>('')
-  const [username, setUsername] = useState<string | null>(
-    currentUsername || null
-  )
+  const [username, setUsername] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setUsername(localStorage.getItem('username'))
+    }
+  }, [])
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()

@@ -95,8 +95,8 @@ export class GameGateway
       // Add user to room
       const room = this.roomService.addUserToRoom(roomId, username)
 
-      // Send current state to the joining user
-      client.emit('room:state', room)
+      // ✅ Broadcast updated room state to ALL clients in room (including joining client)
+      this.server.to(roomId).emit('room:state', room)
 
       // Notify others that user joined
       client.to(roomId).emit('room:user:joined', {
@@ -170,8 +170,14 @@ export class GameGateway
     try {
       const flashData = this.gameService.useFlash(roomId, role, username)
 
-      // Broadcast to all in room (including sender)
+      // Broadcast Flash event to all in room (including sender)
       this.server.to(roomId).emit('game:flash', flashData)
+
+      // ✅ Broadcast updated room state so all clients sync
+      const updatedRoom = this.roomService.getRoom(roomId)
+      if (updatedRoom) {
+        this.server.to(roomId).emit('room:state', updatedRoom)
+      }
 
       this.logger.log(`${username} used Flash on ${role} in room ${roomId}`)
     } catch (error) {
@@ -206,11 +212,17 @@ export class GameGateway
     try {
       this.gameService.cancelFlash(roomId, role)
 
-      // Broadcast to all in room
+      // Broadcast cancel event to all in room
       this.server.to(roomId).emit('game:flash:cancel', {
         role,
         username,
       })
+
+      // ✅ Broadcast updated room state
+      const updatedRoom = this.roomService.getRoom(roomId)
+      if (updatedRoom) {
+        this.server.to(roomId).emit('room:state', updatedRoom)
+      }
 
       this.logger.log(`${username} cancelled Flash on ${role} in room ${roomId}`)
     } catch (error) {
@@ -245,8 +257,14 @@ export class GameGateway
     try {
       const itemData = this.gameService.toggleItem(roomId, role, item, username)
 
-      // Broadcast to all in room
+      // Broadcast item toggle event to all in room
       this.server.to(roomId).emit('game:toggle:item', itemData)
+
+      // ✅ Broadcast updated room state
+      const updatedRoom = this.roomService.getRoom(roomId)
+      if (updatedRoom) {
+        this.server.to(roomId).emit('room:state', updatedRoom)
+      }
 
       this.logger.log(
         `${username} toggled ${item} to ${itemData.value} for ${role} in room ${roomId}`,

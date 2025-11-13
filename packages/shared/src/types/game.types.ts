@@ -12,7 +12,7 @@ export interface SummonerData {
    * - false: Flash is available
    * - number: Seconds remaining on cooldown
    */
-  isFlashed: boolean | number
+  isFlashed: false | number
   
   /**
    * Whether the player has Lucidity Boots (10.67% CDR)

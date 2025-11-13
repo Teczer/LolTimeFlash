@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { useUsername } from '@/app/store/useUsername'
+import { useUsernameStore } from '@/app/store/username.store'
 import { useParams } from 'next/navigation'
 
 import { Input } from '../input'
@@ -10,7 +10,7 @@ import { GrFormNextLink } from 'react-icons/gr'
 
 const UsernameInput: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>('')
-  const { setUsername } = useUsername()
+  const { setUsername } = useUsernameStore()
   const params = useParams()
 
   const handleSubmit = (e: React.FormEvent) => {

@@ -1,24 +1,28 @@
+/**
+ * Media Query Hook
+ * Tracks whether a CSS media query matches
+ */
+
 import { useState, useEffect } from 'react'
 
-const useMediaQuery = (query: string) => {
+export const useMediaQuery = (query: string): boolean => {
   const [matches, setMatches] = useState(false)
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(query)
     setMatches(mediaQuery.matches)
 
-    const handleResize = () => {
+    const handleChange = () => {
       setMatches(mediaQuery.matches)
     }
 
-    mediaQuery.addEventListener('change', handleResize)
+    mediaQuery.addEventListener('change', handleChange)
 
     return () => {
-      mediaQuery.removeEventListener('change', handleResize)
+      mediaQuery.removeEventListener('change', handleChange)
     }
   }, [query])
 
   return matches
 }
 
-export default useMediaQuery

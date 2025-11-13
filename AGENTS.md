@@ -524,6 +524,30 @@ docker-compose up --build
 - **TypeScript**: Strict mode enabled
 - **VSCode**: IntelliSense configuré pour Tailwind
 
+### ⚠️ Tailwind CSS v3 vs v4
+
+**Version actuelle** : Tailwind CSS v3.4.17
+
+**Pourquoi pas v4 ?**
+
+Tailwind CSS v4 (sorti janvier 2025) est une **réécriture complète** avec des changements cassants majeurs :
+
+1. **Nouveau moteur Oxide** : Abandonne PostCSS pour un moteur standalone
+2. **Configuration @theme** : Remplacement de `tailwind.config.ts` par config CSS
+3. **Incompatibilités plugins** :
+   - ❌ `tailwindcss-animate` v1.0.7 (pas compatible v4)
+   - ❌ `tailwind-scrollbar` v3.1.0 (pas compatible v4)
+   - ⚠️ `prettier-plugin-tailwindcss` (support partiel)
+
+4. **Migration complexe** : Réécriture complète de la config, tests, composants
+5. **Risques** : Bugs, régression, conflits avec Next.js 16
+
+**Décision** : 🟢 **Rester sur v3.4.17** (version stable et éprouvée)
+
+**Migration v4 planifiée** : Phase 4 ou 5, après stabilisation de l'architecture actuelle
+
+**Note Tailwind config** : Le dossier `features/` a été ajouté dans `tailwind.config.ts` content array pour scanner les nouveaux composants de la Phase 3.5 (Architecture Refactor).
+
 ### Scripts disponibles
 
 ```bash
@@ -651,34 +675,61 @@ export const gameDefaultData: GameData = {
 
 ## 🐛 Known Issues / Future Improvements
 
+### 🔥 Bugs Critiques (À fixer en PRIORITÉ)
+
+#### BUG #1 : Timer Reset en Multiplayer 🔴
+
+**Status** : CRITIQUE - Mode multiplayer inutilisable
+
+**Symptômes** :
+- Tous les timers se réinitialisent à **5 minutes (300s)** quand :
+  - Un nouvel utilisateur rejoint la room
+  - On clique sur Flash d'un autre rôle
+  - On active/désactive un item (Lucidity Boots/Cosmic Insight)
+
+**Impact** :
+- ❌ Mode multiplayer complètement cassé
+- ❌ Timers ne persistent pas entre les actions
+- ✅ Mode solo fonctionne parfaitement
+
+**Hypothèse** :
+- Problème de synchronisation state côté **frontend**
+- `room:state` broadcast peut-être mal géré côté client
+- Conflit entre state local (timer frontend) et state distant (backend)
+
+**Fichiers à investiguer** :
+- `apps/web/features/game/contexts/game.context.tsx`
+- `apps/web/features/game/hooks/use-game-timer.hook.ts`
+- `apps/web/features/game/screens/game-multiplayer.screen.tsx`
+- `apps/api/src/game/game.gateway.ts`
+
+**Voir** : `MIGRATION_STATUS.md` section "Bugs Critiques" pour détails complets
+
+---
+
 ### Potential Areas for Enhancement
 
-1. **Socket Server**: Not included in repository
-   - Separate Socket.IO server needed
-   - Room management logic required
-   - Consider scaling for multiple concurrent rooms
-
-2. **TypeScript**: Mixed `.js` and `.ts` files
+1. **TypeScript**: Mixed `.js` and `.ts` files
    - `socket.js` should be converted to `socket.ts`
 
-3. **Error Handling**:
+2. **Error Handling**:
    - No error boundaries for React components
    - Socket disconnection handling could be improved
    - API failure scenarios need better UI feedback
 
-4. **Testing**: No test suite present
+3. **Testing**: No test suite present
    - Consider adding unit tests for utilities
    - E2E tests for room creation/joining flow
    - Socket event testing
 
-5. **Accessibility**:
+4. **Accessibility**:
    - Add ARIA labels for icon buttons
    - Keyboard navigation for Flash buttons
    - Screen reader announcements for timer updates
 
-6. **Performance**:
+5. **Performance**:
    - Consider debouncing socket emissions
-   - Optimize re-renders in gameComponent
+   - Optimize re-renders
    - Lazy load champion splash art images
    - Implement progressive loading for champion selector
 
@@ -796,6 +847,332 @@ This project is a fan-made tool for League of Legends players. League of Legends
 
 ---
 
+## 💻 Code Conventions & Architecture
+
+### Project Structure (Next.js App Router)
+
+```
+apps/web/
+├── app/                          # Next.js App Router
+│   ├── (features)/              # Feature-based routing groups
+│   │   ├── game/
+│   │   ├── lobby/
+│   │   └── settings/
+│   ├── api/                     # API Routes
+│   ├── store/                   # Global Zustand stores
+│   └── layout.tsx
+├── components/                   # Shared UI components
+│   ├── ui/                      # Reusable UI primitives
+│   ├── layout/                  # Layout components
+│   └── providers/               # Context providers
+├── features/                    # Feature modules (future)
+│   └── [feature-name]/
+│       ├── components/          # Feature-specific components
+│       ├── hooks/              # Feature-specific hooks
+│       ├── store/              # Feature-specific stores
+│       ├── types/              # Feature-specific types
+│       ├── constants/          # Feature constants
+│       └── utils/              # Feature utilities
+├── hooks/                       # Global hooks
+├── lib/                         # Utilities & config
+│   ├── utils.ts
+│   ├── types.ts
+│   ├── constants.ts
+│   └── config.ts
+└── public/                      # Static assets
+```
+
+### File Naming Conventions
+
+All files use **kebab-case** with descriptive type suffixes:
+
+- **Components**: `component-name.component.tsx`
+- **Pages/Screens**: `page-name.page.tsx`
+- **Hooks**: `use-hook-name.hook.ts`
+- **Stores**: `store-name.store.ts`
+- **Utils**: `util-name.util.ts`
+- **Types**: `type-name.types.ts`
+- **Constants**: `constant-name.constant.ts`
+
+**Examples**:
+```
+✅ GOOD:
+- game-room.component.tsx
+- use-socket.hook.ts
+- username.store.ts
+- game.types.ts
+- flash-cooldown.constant.ts
+
+❌ BAD:
+- GameRoom.tsx
+- useSocket.ts
+- usernameStore.ts
+- gameTypes.ts
+- flashCooldown.ts
+```
+
+### TypeScript Conventions
+
+**Interfaces and Types**:
+- **Interfaces**: PascalCase with `I` prefix (e.g., `IUserData`, `IGameState`)
+- **Types**: PascalCase with `T` prefix (e.g., `TRole`, `TErrorData`)
+- Prefer interfaces for object shapes
+- Use type aliases for unions and complex types
+
+```typescript
+// ✅ GOOD
+interface IUserData {
+  username: string
+  id: string
+}
+
+type TRole = 'TOP' | 'JUNGLE' | 'MID' | 'ADC' | 'SUPPORT'
+
+// ❌ BAD
+interface UserData { ... }  // No I prefix
+type Role = '...'  // No T prefix
+```
+
+**Function Parameters**:
+- Always use explicit types
+- No implicit `any`
+
+```typescript
+// ✅ GOOD
+const handleClick = (role: TRole): void => {
+  console.log(role)
+}
+
+// ❌ BAD
+const handleClick = (role) => {  // Implicit any
+  console.log(role)
+}
+```
+
+### Component Conventions
+
+**Component Structure**:
+```typescript
+import { useState } from 'react'
+import { cn } from '@/lib/utils'
+
+interface ICardProps {
+  title: string
+  description?: string
+  onPress?: () => void
+  className?: string
+}
+
+export const Card = (props: ICardProps) => {
+  const { title, description, onPress, className } = props
+  const [isActive, setIsActive] = useState(false)
+
+  return (
+    <div className={cn('rounded-lg bg-white p-4', className)}>
+      <h3 className="text-lg font-semibold">{title}</h3>
+      {description && <p className="text-sm text-gray-600">{description}</p>}
+    </div>
+  )
+}
+```
+
+**Component Rules**:
+1. Use **named exports** (not default exports)
+2. Use **arrow function** syntax
+3. **Destructure props** inside component body
+4. Define **props interface** above component
+5. Use **TypeScript** for all props (no PropTypes)
+6. Import `cn` utility for conditional classes
+
+### Naming Conventions
+
+| Type | Convention | Example |
+|------|------------|---------|
+| Components | PascalCase | `GameRoom`, `FlashTimer` |
+| Functions | camelCase | `calculateCooldown`, `formatTime` |
+| Event Handlers | `handle` prefix | `handleClick`, `handleSubmit` |
+| Hooks | `use` prefix | `useSocket`, `useGameState` |
+| Constants | UPPER_SNAKE_CASE | `MAX_USERS`, `DEFAULT_COOLDOWN` |
+| Interfaces | `I` prefix | `IGameData`, `IUserState` |
+| Types | `T` prefix | `TRole`, `TSocketEvent` |
+| Stores | `Store` suffix | `useGameStore`, `useUserStore` |
+
+### Code Best Practices
+
+1. **Named Exports**: Always use named exports for better IDE support
+   ```typescript
+   // ✅ GOOD
+   export const GameRoom = () => { }
+   
+   // ❌ BAD
+   export default GameRoom
+   ```
+
+2. **Named Imports**: Import React hooks by name
+   ```typescript
+   // ✅ GOOD
+   import { useState, useEffect } from 'react'
+   
+   // ❌ BAD
+   import React from 'react'
+   React.useState()
+   ```
+
+3. **Early Returns**: Use guard clauses for better readability
+   ```typescript
+   // ✅ GOOD
+   if (!user) return null
+   if (isLoading) return <Loader />
+   return <Content />
+   
+   // ❌ BAD
+   if (user) {
+     if (!isLoading) {
+       return <Content />
+     } else {
+       return <Loader />
+     }
+   } else {
+     return null
+   }
+   ```
+
+4. **No Magic Values**: Use descriptive constants
+   ```typescript
+   // ✅ GOOD
+   const FLASH_BASE_COOLDOWN = 300
+   const timer = FLASH_BASE_COOLDOWN
+   
+   // ❌ BAD
+   const timer = 300  // What is 300?
+   ```
+
+5. **Avoid Type Assertions**: Fix types at the source
+   ```typescript
+   // ✅ GOOD
+   const role: TRole = 'TOP'
+   
+   // ❌ BAD
+   const role = 'TOP' as TRole  // Bypasses type checking
+   ```
+
+6. **Self-Documenting Code**: No comments unless necessary
+   ```typescript
+   // ✅ GOOD
+   const isFlashAvailable = flashCooldown === 0
+   
+   // ❌ BAD
+   // Check if flash is ready
+   const f = c === 0
+   ```
+
+### Zustand Store Pattern
+
+**Store Structure**:
+```typescript
+import { create } from 'zustand'
+import { persist, createJSONStorage } from 'zustand/middleware'
+
+interface IDefaultState {
+  username: string | null
+}
+
+interface IDefaultActions {
+  setUsername: (value: string) => void
+  reset: () => void
+}
+
+const DEFAULT_STATE: IDefaultState = {
+  username: null,
+}
+
+export const useUsernameStore = create<IDefaultState & IDefaultActions>()(
+  persist(
+    (set) => ({
+      ...DEFAULT_STATE,
+      setUsername: (value) => set({ username: value }),
+      reset: () => set(DEFAULT_STATE),
+    }),
+    {
+      name: 'username-storage',
+      storage: createJSONStorage(() => localStorage),
+    }
+  )
+)
+```
+
+**Store Best Practices**:
+1. Separate state and actions interfaces
+2. Always include `reset()` action
+3. Use `DEFAULT_STATE` constant
+4. Name stores with `use` prefix and `Store` suffix
+5. Use selective subscriptions to avoid re-renders
+
+```typescript
+// ✅ GOOD: Selective subscription
+const username = useUsernameStore(state => state.username)
+
+// ❌ BAD: Subscribe to entire store
+const { username, setUsername, reset } = useUsernameStore()
+```
+
+### Custom Hooks Pattern
+
+**Hook Structure**:
+```typescript
+import { useState, useEffect } from 'react'
+import type { IGameState } from '@/lib/types'
+
+interface IUseGameOptions {
+  roomId: string
+  enabled?: boolean
+}
+
+export const useGame = (options: IUseGameOptions) => {
+  const { roomId, enabled = true } = options
+  const [gameState, setGameState] = useState<IGameState | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    if (!enabled) return
+    
+    // Hook logic here
+  }, [enabled, roomId])
+
+  return {
+    gameState,
+    isLoading,
+  }
+}
+```
+
+### Path Aliases
+
+Configured in `tsconfig.json`:
+
+```typescript
+import { cn } from '@/lib/utils'
+import { useSocket } from '@/hooks/use-socket.hook'
+import type { IGameData } from '@/lib/types'
+import { Button } from '@/components/ui/button.component'
+```
+
+### Styling with Tailwind
+
+**Use `cn()` utility** for all conditional classes:
+
+```typescript
+import { cn } from '@/lib/utils'
+
+<div className={cn(
+  'base-class',
+  isActive && 'active-class',
+  className  // Allow prop override
+)} />
+```
+
+---
+
 ## 🆘 Support & Contact
 
 For questions, issues, or contributions:
@@ -807,5 +1184,5 @@ For questions, issues, or contributions:
 ---
 
 **Last Updated**: November 12, 2025
-**Version**: 0.2.0
-**Status**: Active Development
+**Version**: 0.3.0
+**Status**: Active Development - Phase 3.5 (Architecture Refactor)

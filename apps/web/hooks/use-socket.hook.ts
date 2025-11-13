@@ -1,0 +1,154 @@
+/**
+ * Socket Hook
+ * Manages WebSocket connection to NestJS backend
+ */
+
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+import { io, Socket } from 'socket.io-client'
+import type {
+  ClientToServerEvents,
+  ServerToClientEvents,
+  GameState,
+} from '@loltimeflash/shared'
+
+type TTypedSocket = Socket<ServerToClientEvents, ClientToServerEvents>
+
+interface IUseSocketOptions {
+  enabled?: boolean
+  roomId?: string
+  username?: string
+}
+
+interface IUseSocketReturn {
+  socket: TTypedSocket | null
+  isConnected: boolean
+  gameState: GameState | null
+  joinRoom: (roomId: string, username: string) => void
+  leaveRoom: (roomId: string) => void
+  useFlash: (roomId: string, role: string) => void
+  cancelFlash: (roomId: string, role: string) => void
+  toggleItem: (roomId: string, role: string, item: string) => void
+}
+
+export const useSocket = (options: IUseSocketOptions = {}): IUseSocketReturn => {
+  const { enabled = false, roomId, username } = options
+
+  const socketRef = useRef<TTypedSocket | null>(null)
+  const [isConnected, setIsConnected] = useState(false)
+  const [gameState, setGameState] = useState<GameState | null>(null)
+
+  // Initialize socket connection
+  useEffect(() => {
+    if (!enabled) return
+
+    const socket: TTypedSocket = io('http://localhost:4000', {
+      transports: ['websocket', 'polling'],
+      reconnection: true,
+      reconnectionAttempts: 5,
+      reconnectionDelay: 1000,
+    })
+
+    socketRef.current = socket
+
+    // Connection events
+    socket.on('connect', () => {
+      console.log('✅ Connected to backend:', socket.id)
+      setIsConnected(true)
+    })
+
+    socket.on('disconnect', () => {
+      console.log('❌ Disconnected from backend')
+      setIsConnected(false)
+    })
+
+    // Game events
+    socket.on('room:state', (updatedGameState) => {
+      console.log('🔄 Room state updated:', updatedGameState)
+      setGameState(updatedGameState)
+    })
+
+    socket.on('game:flash', (flashData) => {
+      console.log('⚡ Flash used:', flashData)
+    })
+
+    socket.on('game:flash:cancel', (cancelData) => {
+      console.log('❌ Flash cancelled:', cancelData)
+    })
+
+    socket.on('game:toggle:item', (itemData) => {
+      console.log('🔧 Item toggled:', itemData)
+    })
+
+    socket.on('room:user:joined', (data) => {
+      console.log('👤 User joined:', data.username)
+    })
+
+    socket.on('room:user:left', (data) => {
+      console.log('👋 User left:', data.username)
+    })
+
+    socket.on('error', (error) => {
+      console.error('❌ Socket error:', error)
+    })
+
+    return () => {
+      console.log('🔌 Cleaning up socket connection')
+      socket.disconnect()
+    }
+  }, [enabled])
+
+  // Auto-join room when connected
+  useEffect(() => {
+    if (isConnected && roomId && username && socketRef.current) {
+      console.log(`🚪 Auto-joining room: ${roomId} as ${username}`)
+      socketRef.current.emit('room:join', { roomId, username })
+    }
+  }, [isConnected, roomId, username])
+
+  const joinRoom = (roomId: string, username: string): void => {
+    if (socketRef.current) {
+      socketRef.current.emit('room:join', { roomId, username })
+    }
+  }
+
+  const leaveRoom = (roomId: string): void => {
+    if (socketRef.current) {
+      socketRef.current.emit('room:leave', { roomId })
+    }
+  }
+
+  const useFlash = (roomId: string, role: string): void => {
+    if (socketRef.current) {
+      socketRef.current.emit('game:flash', { role: role as any })
+    }
+  }
+
+  const cancelFlash = (roomId: string, role: string): void => {
+    if (socketRef.current) {
+      socketRef.current.emit('game:flash:cancel', { role: role as any })
+    }
+  }
+
+  const toggleItem = (roomId: string, role: string, item: string): void => {
+    if (socketRef.current) {
+      socketRef.current.emit('game:toggle:item', {
+        role: role as any,
+        item: item as any,
+      })
+    }
+  }
+
+  return {
+    socket: socketRef.current,
+    isConnected,
+    gameState,
+    joinRoom,
+    leaveRoom,
+    useFlash,
+    cancelFlash,
+    toggleItem,
+  }
+}
+

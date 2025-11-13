@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import { useMemo, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { useBackgroundImage } from '@/app/store/useBackgroundImage'
+import { useBackgroundImageStore } from '@/app/store/background-image.store'
 
 import {
   Sheet,
@@ -24,7 +24,7 @@ import { Button } from '../button'
 import { CiImageOn } from 'react-icons/ci'
 
 const ChangeCoverButton: React.FC = () => {
-  const { setImage } = useBackgroundImage()
+  const { setImage } = useBackgroundImageStore()
   const [searchQuery, setSearchQuery] = useState<string>('')
 
   const {

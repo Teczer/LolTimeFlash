@@ -3,12 +3,12 @@
 
 import React from 'react'
 import UsernameInput from '../ui/usernameinput'
-import { useUsername } from '@/app/store/useUsername'
+import { useUsernameStore } from '@/app/store/username.store'
 
 const UsernameProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const { username } = useUsername()
+  const { username } = useUsernameStore()
 
   if (!username) {
     return <UsernameInput />

@@ -1,5 +1,5 @@
-import GameComponent from './gameComponent'
+import { GameSoloScreen } from '@/features/game/screens/game-solo.screen'
 
 export default function Home() {
-  return <GameComponent useWebSocket={false} />
+  return <GameSoloScreen />
 }

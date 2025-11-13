@@ -1,14 +1,14 @@
 'use client'
 
-import useMediaQuery from '@/hooks/useMediaQuery'
+import { useMediaQuery } from '@/hooks/use-media-query.hook'
 import { useEffect, useState } from 'react'
-import { useBackgroundImage } from '@/app/store/useBackgroundImage'
+import { useBackgroundImageStore } from '@/app/store/background-image.store'
 
 const WrapperBackground = ({ children }: { children: React.ReactNode }) => {
   const [selectedCover, setSelectedCover] = useState<string>('')
   const isMobile = useMediaQuery('(max-width: 768px)')
 
-  const { image } = useBackgroundImage()
+  const { image } = useBackgroundImageStore()
 
   useEffect(() => {
     const userCoverBackground =
