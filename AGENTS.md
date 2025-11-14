@@ -737,7 +737,7 @@ export const gameDefaultData: GameData = {
 **Format**: `<gitmoji> <type>(<scope>): <description>`
 
 **Rules**:
-- ✅ Use gitmoji (🎨 ♻️ ✨ 🐛 📝 🚀 ✅ ⚡ 🔧 etc.)
+- ✅ Use gitmoji in **text format** (`:art:` `:recycle:` `:sparkles:` etc.), NOT emoji unicode (🎨 ♻️ ✨)
 - ✅ Max 72 characters for the title
 - ✅ **NO body** (no line breaks, title only)
 - ✅ Use imperative mood ("add", "fix", "refactor", not "added", "fixed")
@@ -745,23 +745,24 @@ export const gameDefaultData: GameData = {
 
 **Examples**:
 ```bash
-♻️ refactor(game): migrate to timestamp-based timers
-✨ feat(socket): add connection status indicator
-🐛 fix(timer): prevent reset on user join
-🎨 style(ui): apply kebab-case naming convention
-📝 docs: update AGENTS.md with Phase 3.5 changes
+:recycle: refactor(game): migrate to timestamp-based timers
+:sparkles: feat(socket): add connection status indicator
+:bug: fix(timer): prevent reset on user join
+:art: style(ui): apply kebab-case naming convention
+:memo: docs: update AGENTS.md with Phase 3.5 changes
+:zap: perf(game): optimize components with React.memo
 ```
 
 **Common Gitmojis**:
-- 🎨 `:art:` - Code structure/format
-- ♻️ `:recycle:` - Refactor code
-- ✨ `:sparkles:` - New feature
-- 🐛 `:bug:` - Bug fix
-- 📝 `:memo:` - Documentation
-- 🚀 `:rocket:` - Deploy/performance
-- ✅ `:white_check_mark:` - Tests
-- ⚡ `:zap:` - Performance
-- 🔧 `:wrench:` - Configuration
+- `:art:` - Code structure/format
+- `:recycle:` - Refactor code
+- `:sparkles:` - New feature
+- `:bug:` - Bug fix
+- `:memo:` - Documentation
+- `:rocket:` - Deploy/performance
+- `:white_check_mark:` - Tests
+- `:zap:` - Performance
+- `:wrench:` - Configuration
 
 ### Testing Checklist
 

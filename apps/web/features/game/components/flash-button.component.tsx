@@ -7,6 +7,7 @@
 
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
+import { memo } from 'react'
 import { formatCooldown } from '../hooks/use-flash-cooldown.hook'
 import type { TRole } from '../types/game.types'
 
@@ -18,7 +19,7 @@ interface IFlashButtonProps {
   className?: string
 }
 
-export const FlashButton = (props: IFlashButtonProps) => {
+const FlashButtonComponent = (props: IFlashButtonProps) => {
   const { role, iconSrc, cooldown, onClick, className } = props
 
   const isOnCooldown = typeof cooldown === 'number'
@@ -46,8 +47,8 @@ export const FlashButton = (props: IFlashButtonProps) => {
           'h-full w-full cursor-pointer',
           isOnCooldown ? 'brightness-50' : 'brightness-100'
         )}
-        width={112}
-        height={112}
+        width={600}
+        height={600}
         src={iconSrc}
         alt={role}
         priority
@@ -55,3 +56,7 @@ export const FlashButton = (props: IFlashButtonProps) => {
     </button>
   )
 }
+
+export const FlashButton = memo(FlashButtonComponent, (prev, next) => {
+  return prev.cooldown === next.cooldown
+})

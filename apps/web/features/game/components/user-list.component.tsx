@@ -1,8 +1,10 @@
+import { memo } from 'react'
+
 interface IUserListProps {
   users: string[]
 }
 
-export const UserList = (props: IUserListProps) => {
+const UserListComponent = (props: IUserListProps) => {
   const { users } = props
 
   if (users.length === 0) return null
@@ -23,3 +25,8 @@ export const UserList = (props: IUserListProps) => {
     </ul>
   )
 }
+
+export const UserList = memo(UserListComponent, (prev, next) => {
+  if (prev.users.length !== next.users.length) return false
+  return prev.users.every((user, index) => user === next.users[index])
+})

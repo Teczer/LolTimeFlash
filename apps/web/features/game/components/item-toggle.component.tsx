@@ -7,6 +7,7 @@
 
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
+import { memo } from 'react'
 
 interface IItemToggleProps {
   itemName: string
@@ -16,7 +17,7 @@ interface IItemToggleProps {
   className?: string
 }
 
-export const ItemToggle = (props: IItemToggleProps) => {
+const ItemToggleComponent = (props: IItemToggleProps) => {
   const { itemName, iconSrc, isActive, onClick, className } = props
 
   return (
@@ -31,8 +32,8 @@ export const ItemToggle = (props: IItemToggleProps) => {
           'size-12 rounded-full object-cover sm:size-20',
           isActive ? 'brightness-100' : 'brightness-50'
         )}
-        width={60}
-        height={60}
+        width={200}
+        height={200}
         src={iconSrc}
         alt={itemName}
         priority
@@ -40,3 +41,7 @@ export const ItemToggle = (props: IItemToggleProps) => {
     </button>
   )
 }
+
+export const ItemToggle = memo(ItemToggleComponent, (prev, next) => {
+  return prev.isActive === next.isActive
+})

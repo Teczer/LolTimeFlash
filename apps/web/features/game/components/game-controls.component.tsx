@@ -5,8 +5,9 @@
 
 'use client'
 
-import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
+import { useRouter } from 'next/navigation'
+import { memo } from 'react'
 import { ImVolumeMedium, ImVolumeMute2 } from 'react-icons/im'
 import { RxTrackPrevious } from 'react-icons/rx'
 
@@ -15,7 +16,7 @@ interface IGameControlsProps {
   onToggleVolume: () => void
 }
 
-export const GameControls = (props: IGameControlsProps) => {
+const GameControlsComponent = (props: IGameControlsProps) => {
   const { volume, onToggleVolume } = props
   const router = useRouter()
 
@@ -54,3 +55,6 @@ export const GameControls = (props: IGameControlsProps) => {
   )
 }
 
+export const GameControls = memo(GameControlsComponent, (prev, next) => {
+  return prev.volume === next.volume
+})

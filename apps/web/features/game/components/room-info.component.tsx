@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useToast } from '@/hooks/use-toast.hook'
@@ -7,7 +8,7 @@ interface IRoomInfoProps {
   roomId: string
 }
 
-export const RoomInfo = (props: IRoomInfoProps) => {
+const RoomInfoComponent = (props: IRoomInfoProps) => {
   const { roomId } = props
   const { toast } = useToast()
 
@@ -45,3 +46,7 @@ export const RoomInfo = (props: IRoomInfoProps) => {
     </div>
   )
 }
+
+export const RoomInfo = memo(RoomInfoComponent, (prev, next) => {
+  return prev.roomId === next.roomId
+})

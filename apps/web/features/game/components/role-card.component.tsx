@@ -6,6 +6,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
+import { memo } from 'react'
 import type { ILeagueRole, ISummonerData } from '../types/game.types'
 import { FlashButton } from './flash-button.component'
 import { ItemToggle } from './item-toggle.component'
@@ -20,7 +21,7 @@ interface IRoleCardProps {
   className?: string
 }
 
-export const RoleCard = (props: IRoleCardProps) => {
+const RoleCardComponent = (props: IRoleCardProps) => {
   const {
     role,
     data,
@@ -68,3 +69,14 @@ export const RoleCard = (props: IRoleCardProps) => {
     </div>
   )
 }
+
+export const RoleCard = memo(RoleCardComponent, (prev, next) => {
+  return (
+    prev.role.name === next.role.name &&
+    prev.role.src === next.role.src &&
+    prev.data.isFlashed === next.data.isFlashed &&
+    prev.data.lucidityBoots === next.data.lucidityBoots &&
+    prev.data.cosmicInsight === next.data.cosmicInsight &&
+    prev.isLastRole === next.isLastRole
+  )
+})

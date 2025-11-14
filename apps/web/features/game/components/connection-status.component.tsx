@@ -5,6 +5,7 @@
 
 'use client'
 
+import { memo } from 'react'
 import { cn } from '@/lib/utils'
 import { ImSpinner2 } from 'react-icons/im'
 
@@ -13,7 +14,7 @@ interface IConnectionStatusProps {
   reconnectAttempts?: number
 }
 
-export const ConnectionStatus = (props: IConnectionStatusProps) => {
+const ConnectionStatusComponent = (props: IConnectionStatusProps) => {
   const { isConnected, reconnectAttempts = 0 } = props
 
   if (isConnected) {
@@ -61,4 +62,14 @@ export const ConnectionStatus = (props: IConnectionStatusProps) => {
     </div>
   )
 }
+
+export const ConnectionStatus = memo(
+  ConnectionStatusComponent,
+  (prev, next) => {
+    return (
+      prev.isConnected === next.isConnected &&
+      prev.reconnectAttempts === next.reconnectAttempts
+    )
+  }
+)
 
