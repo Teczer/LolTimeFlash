@@ -56,7 +56,7 @@ echo "NEXT_PUBLIC_SOCKET_PORT=your_socket_server_url" > .env.local
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:6333](http://localhost:6333) in your browser.
 
 ### Docker Deployment
 

@@ -1,18 +1,58 @@
-version: '3'
 services:
-  loltimeflashfront:
-    container_name: loltimeflashfront
-    image: loltimeflashfront:latest
+  # NestJS Backend API
+  api:
+    container_name: loltimeflash-api
     build:
       context: .
-      dockerfile: ./Dockerfile
-    restart: unless-stopped
+      dockerfile: apps/api/Dockerfile
     ports:
-      - 6333:6333
+      - '8888:8888'
+    environment:
+      - NODE_ENV=production
+      - PORT=8888
+      - LOG_LEVEL=info
+    volumes:
+      - api-logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'wget', '--quiet', '--tries=1', '--spider', 'http://localhost:8888/monitoring/health']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - loltimeflash-network
+
+  # Next.js Frontend
+  web:
+    container_name: loltimeflash-web
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        - NEXT_PUBLIC_SOCKET_PORT=http://localhost:8888
+    ports:
+      - '6333:6333'
+    environment:
+      - NODE_ENV=production
+      - PORT=6333
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'wget', '--quiet', '--tries=1', '--spider', 'http://localhost:6333']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - loltimeflash-network
+
+networks:
+  loltimeflash-network:
+    driver: bridge
 
 volumes:
-  loltimeflashfrontdata:
-networks:
-  netloltimeflash:
-    name: netloltimeflash
-    external: true
+  api-logs:
+    driver: local

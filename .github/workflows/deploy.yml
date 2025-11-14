@@ -1,21 +1,17 @@
 name: Deploy
 
-# Controls when the action will run.
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [main]
+  workflow_dispatch: # Allow manual trigger
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  deploy:
+    name: Deploy to Production
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Docker [FRONT] LolTimeFlash Deploy
+      - name: 🚀 Deploy LolTimeFlash (Monorepo)
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.HOST }}
@@ -23,7 +19,86 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo "🚀 LolTimeFlash - Production Deploy"
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo ""
+
+            # Navigate to project
             cd teczer-deployement/LolTimeFlash
+            echo "📂 Current directory: $(pwd)"
+            echo ""
+
+            # Pull latest changes
+            echo "⬇️  Pulling latest changes from main..."
             sudo git pull origin main
+            echo "✅ Git pull completed"
+            echo ""
+
+            # Stop running containers
+            echo "🛑 Stopping running containers..."
+            sudo docker compose down
+            echo "✅ Containers stopped"
+            echo ""
+
+            # Clean old images (optional, comment if you want to keep cache)
+            echo "🧹 Cleaning old Docker images..."
+            sudo docker system prune -f
+            echo "✅ Cleanup completed"
+            echo ""
+
+            # Build new images
+            echo "🔨 Building Docker images..."
             sudo docker compose build
+            echo "✅ Build completed"
+            echo ""
+
+            # Start containers
+            echo "▶️  Starting containers..."
             sudo docker compose up -d
+            echo "✅ Containers started"
+            echo ""
+
+            # Wait for services to be ready
+            echo "⏳ Waiting for services to be ready (15s)..."
+            sleep 15
+            echo ""
+
+            # Health checks
+            echo "🏥 Running health checks..."
+
+            API_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8888/monitoring/health 2>/dev/null || echo "000")
+            if [ "$API_STATUS" = "200" ]; then
+              echo "✅ API Health: OK (HTTP 200)"
+            else
+              echo "❌ API Health: FAILED (HTTP $API_STATUS)"
+            fi
+
+            WEB_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:6333 2>/dev/null || echo "000")
+            if [ "$WEB_STATUS" = "200" ]; then
+              echo "✅ Web Health: OK (HTTP 200)"
+            else
+              echo "❌ Web Health: FAILED (HTTP $WEB_STATUS)"
+            fi
+
+            echo ""
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo "📊 Services Status"
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            sudo docker compose ps
+            echo ""
+
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo "🎉 Deployment Complete!"
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo ""
+            echo "📊 Services:"
+            echo "   • API:  http://localhost:8888"
+            echo "   • Docs: http://localhost:8888/api/docs"
+            echo "   • Web:  http://localhost:6333"
+            echo ""
+            echo "📝 Useful Commands:"
+            echo "   • View logs:    sudo docker compose logs -f"
+            echo "   • Restart:      sudo docker compose restart"
+            echo "   • Stop:         sudo docker compose down"
+            echo ""

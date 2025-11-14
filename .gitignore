@@ -1,7 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+node_modules/
+**/node_modules/
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -11,10 +12,16 @@
 
 # next.js
 /.next/
+**/.next/
 /out/
+**/out/
 
 # production
 /build
+build/
+**/build/
+dist/
+**/dist/
 
 # misc
 .DS_Store
@@ -35,11 +42,28 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# compiled files in packages (should not be committed)
+packages/shared/src/**/*.js
+packages/shared/src/**/*.js.map
+packages/shared/src/**/*.d.ts
+
 bun.lockb
 
-# static data
+# turbo
+.turbo
+**/.turbo
 
-/data
+# old backend (to be removed in Phase 3)
+/BackLolTimeFlash
+
+# static data
+data/
+**/data/
 
 # env
 .env
+
+# logs (Winston daily rotate files)
+logs/
+**/logs/
+*.log

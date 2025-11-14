@@ -1,22 +1,62 @@
-# Ignorer les fichiers et répertoires générés par npm
+# Dependencies
 node_modules
 **/node_modules
-npm-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Ignorer les fichiers de cache de pnpm
-.pnpm
-.pnpm-debug.log
-
-# Ignorer les fichiers spécifiques à Next.js
+# Build outputs
 .next
-out
+dist
+build
+.turbo
 
-# Ignorer les fichiers et répertoires spécifiques à Git
+# Testing
+coverage
+.nyc_output
+
+# Environment files (local only, not for Docker)
+.env
+.env*.local
+.env.development
+.env.test
+.env.production
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
 .git
 .gitignore
+.gitattributes
 
-# Ignorer les fichiers de configuration
+# CI/CD
+.github
+
+# Documentation
+*.md
+!README.md
+AGENTS.md
+MIGRATION_STATUS.md
+MIGRATION_MONOREPO.md
+
+# Logs
+logs
 *.log
-*.swp
-.DS_Store
+apps/api/logs
+
+# Misc
+.prettierrc
+.prettierignore
+.eslintrc
+eslint.config.*
+tsconfig.tsbuildinfo

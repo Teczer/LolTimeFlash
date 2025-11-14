@@ -1,0 +1,83 @@
+config:
+  target: 'http://localhost:8888'
+  phases:
+    # Warm-up phase
+    - duration: 30
+      arrivalRate: 5
+      name: 'Warm-up - 5 users/sec'
+
+    # Ramp-up phase
+    - duration: 60
+      arrivalRate: 10
+      rampTo: 50
+      name: 'Ramp-up - 10 to 50 users/sec'
+
+    # Sustained load
+    - duration: 120
+      arrivalRate: 50
+      name: 'Sustained load - 50 users/sec'
+
+    # Peak load
+    - duration: 60
+      arrivalRate: 100
+      name: 'Peak load - 100 users/sec'
+
+  processor: './processors/custom-metrics.js'
+
+  plugins:
+    metrics-by-endpoint: {}
+
+  # Performance thresholds
+  ensure:
+    thresholds:
+      - http.response_time.p95: 200 # 95% of requests under 200ms
+      - http.response_time.p99: 500 # 99% of requests under 500ms
+      - http.request_rate: 40 # At least 40 requests/sec
+      - http.codes.200: 95 # 95% success rate
+
+scenarios:
+  # Test Health Check endpoint
+  - name: 'Health Check'
+    weight: 10
+    flow:
+      - get:
+          url: '/monitoring/health'
+          expect:
+            - statusCode: 200
+            - contentType: json
+            - hasProperty: status
+
+  # Test Metrics endpoint
+  - name: 'Get Metrics'
+    weight: 5
+    flow:
+      - get:
+          url: '/monitoring/metrics'
+          expect:
+            - statusCode: 200
+            - contentType: json
+            - hasProperty: uptime
+
+  # Test Champions endpoint
+  - name: 'Get Champions Skins'
+    weight: 3
+    flow:
+      - get:
+          url: '/champions/skins'
+          expect:
+            - statusCode: 200
+            - contentType: json
+
+  # Mixed traffic simulation
+  - name: 'Mixed User Traffic'
+    weight: 82
+    flow:
+      - think: 1 # Wait 1 second
+      - get:
+          url: '/monitoring/health'
+      - think: 2
+      - get:
+          url: '/champions/skins'
+      - think: 1
+      - get:
+          url: '/monitoring/metrics/socket'

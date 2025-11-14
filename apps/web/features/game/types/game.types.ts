@@ -1,0 +1,58 @@
+/**
+ * Game feature types
+ * Following I/T prefix conventions
+ */
+
+/**
+ * League of Legends role type
+ */
+export type TRole = 'TOP' | 'JUNGLE' | 'MID' | 'ADC' | 'SUPPORT'
+
+/**
+ * Summoner spell data for a single role
+ */
+export interface ISummonerData {
+  /**
+   * Flash cooldown status
+   * - false: Flash is available
+   * - number: Countdown in seconds (local state)
+   * 
+   * Note: Backend stores timestamp (endsAt in ms), frontend converts to countdown
+   */
+  isFlashed: false | number
+  lucidityBoots: boolean
+  cosmicInsight: boolean
+}
+
+/**
+ * Complete role data for all 5 roles
+ */
+export interface IRoleData {
+  TOP: ISummonerData
+  JUNGLE: ISummonerData
+  MID: ISummonerData
+  SUPPORT: ISummonerData
+  ADC: ISummonerData
+}
+
+/**
+ * Complete game state
+ */
+export interface IGameData {
+  users: string[]
+  roles: IRoleData
+}
+
+/**
+ * League role with icon
+ */
+export interface ILeagueRole {
+  name: TRole
+  src: string
+}
+
+/**
+ * Game mode type
+ */
+export type TGameMode = 'solo' | 'multiplayer'
+
