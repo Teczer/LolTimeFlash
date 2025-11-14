@@ -16,6 +16,9 @@
     "build": "turbo run build",
     "build:web": "turbo run build --filter=web",
     "build:api": "turbo run build --filter=api",
+    "start": "turbo run start",
+    "start:web": "turbo run start --filter=web",
+    "start:api": "turbo run start --filter=api",
     "lint": "turbo run eslint",
     "lint:fix": "turbo run eslint:fix",
     "format": "turbo run format",
@@ -24,11 +27,25 @@
     "test": "turbo run test",
     "clean": "bash scripts/clean.sh",
     "get_started": "bash scripts/get_started.sh",
+    "docker": "bash scripts/docker.sh",
+    "docker:build": "bash scripts/docker.sh build",
+    "docker:up": "bash scripts/docker.sh up",
+    "docker:down": "bash scripts/docker.sh down",
+    "docker:restart": "bash scripts/docker.sh restart",
+    "docker:logs": "bash scripts/docker.sh logs",
+    "docker:clean": "bash scripts/docker.sh clean",
+    "docker:test": "bash scripts/docker.sh test",
     "sync:champions": "tsx scripts/sync-champions.ts",
-    "sync:champions:fresh": "tsx scripts/sync-champions.ts --fresh"
+    "sync:champions:fresh": "tsx scripts/sync-champions.ts --fresh",
+    "load-test:http": "artillery run load-tests/http-api.yml",
+    "load-test:socket": "artillery run load-tests/socket-io.yml",
+    "load-test:all": "artillery run load-tests/http-api.yml && artillery run load-tests/socket-io.yml",
+    "load-test:report": "artillery run --output load-tests/reports/$(date +%Y%m%d-%H%M%S).json load-tests/http-api.yml"
   },
   "devDependencies": {
     "@types/node": "^20.11.5",
+    "artillery": "^2.0.26",
+    "artillery-plugin-metrics-by-endpoint": "^1.20.0",
     "prettier": "^3.4.2",
     "sharp": "^0.33.5",
     "tsx": "^4.19.2",
@@ -37,7 +54,7 @@
   },
   "engines": {
     "node": ">=20.0.0",
-    "pnpm": ">=8.0.0"
+    "pnpm": ">=9.0.0"
   },
-  "packageManager": "pnpm@8.15.0"
+  "packageManager": "pnpm@9.10.0"
 }

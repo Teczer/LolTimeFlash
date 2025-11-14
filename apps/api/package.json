@@ -8,9 +8,9 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "dev": "nest start --watch",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
+    "dev": "nest start --watch --exec 'node dist/apps/api/src/main'",
+    "start": "node dist/apps/api/src/main",
+    "start:dev": "nest start --watch --exec 'node dist/apps/api/src/main'",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/apps/api/src/main",
     "eslint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
@@ -28,12 +28,15 @@
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/platform-socket.io": "^11.0.1",
+    "@nestjs/swagger": "^11.2.1",
     "@nestjs/websockets": "^11.0.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "winston": "^3.18.3",
+    "winston-daily-rotate-file": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",

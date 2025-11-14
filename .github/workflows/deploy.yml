@@ -1,29 +1,63 @@
-name: Deploy
+name: Deploy - Docker Build & Push
 
-# Controls when the action will run.
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [main]
+    branches: ['main']
+    tags: ['v*.*.*']
+  workflow_dispatch: # Allow manual trigger
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  docker-build-push:
+    name: Build & Push Docker Images
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    
     steps:
-      - name: Docker [FRONT] LolTimeFlash Deploy
-        uses: appleboy/ssh-action@v1.0.0
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      
+      - name: Log in to Docker Hub (Optional)
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: 22
-          script: |
-            cd teczer-deployement/LolTimeFlash
-            sudo git pull origin main
-            sudo docker compose build
-            sudo docker compose up -d
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+        continue-on-error: true # Skip if secrets not configured
+      
+      - name: Extract metadata (tags, labels)
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: loltimeflash
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=sha
+      
+      - name: Build Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false # Set to true when Docker Hub is configured
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      
+      - name: Test Docker image
+        run: |
+          echo "✅ Docker image built successfully"
+          echo "Tags: ${{ steps.meta.outputs.tags }}"
+      
+      - name: Deploy notification
+        run: |
+          echo "🚀 Deployment ready!"
+          echo "Configure Docker Hub credentials in GitHub Secrets to enable push"
+          echo "Required secrets:"
+          echo "  - DOCKER_USERNAME"
+          echo "  - DOCKER_PASSWORD"

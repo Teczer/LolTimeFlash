@@ -1,7 +1,9 @@
 # 🏗️ Migration vers Monorepo - LolTimeFlash
 
 > **Branch**: `tech/move-to-monorepo`  
-> **Date**: 12 Novembre 2025  
+> **Date Début**: 12 Novembre 2024  
+> **Date Fin**: 14 Novembre 2024  
+> **Status**: ✅ **COMPLÉTÉE - Production Ready**  
 > **Objectif**: Migrer vers un monorepo moderne avec frontend Next.js et backend NestJS
 
 ---
@@ -21,6 +23,7 @@
 ## 🔴 État Actuel
 
 ### Frontend (Next.js 16)
+
 ```
 LolTimeFlash/
 ├── app/                  # Next.js App Router ✅
@@ -31,6 +34,7 @@ LolTimeFlash/
 ```
 
 **Stack Frontend**:
+
 - ✅ Next.js 16.0.1 + Turbopack
 - ✅ React 19.2.0
 - ✅ TypeScript 5.9.3
@@ -38,6 +42,7 @@ LolTimeFlash/
 - ✅ Socket.IO Client 4.8.1
 
 ### Backend (Node.js basique)
+
 ```
 BackLolTimeFlash/
 ├── server.js            # ❌ Fichier unique JS
@@ -46,6 +51,7 @@ BackLolTimeFlash/
 ```
 
 **Stack Backend**:
+
 - ❌ JavaScript pur (pas de TypeScript)
 - ❌ Fastify + Socket.IO (sans structure)
 - ❌ Pas de validation
@@ -61,7 +67,9 @@ BackLolTimeFlash/
 ### 🔥 CRITIQUE : Performance Socket.IO
 
 #### Problème 1 : Polling toutes les secondes
+
 **Frontend (`gameComponent.tsx` ligne 79-110)**:
+
 ```typescript
 useEffect(() => {
   const interval = setInterval(() => {
@@ -74,6 +82,7 @@ useEffect(() => {
 ```
 
 **Impact**:
+
 - ❌ 60 émissions/minute/utilisateur
 - ❌ Room de 5 joueurs = 300 émissions/minute
 - ❌ Charge réseau inutile
@@ -81,19 +90,22 @@ useEffect(() => {
 - ❌ Coût serveur élevé
 
 #### Problème 2 : Architecture State-Sync au lieu d'Event-Driven
+
 **Backend (`server.js` ligne 124-130)**:
+
 ```javascript
-socket.on("updateSummonerData", (data, room) => {
+socket.on('updateSummonerData', (data, room) => {
   // 🔥 ACCEPTE N'IMPORTE QUOI DU CLIENT !
   summonersData = {
     ...summonersData,
-    [room]: data,  // Pas de validation
-  };
-  socket.in(room).emit("updateSummonerData", summonersData[room]);
-});
+    [room]: data, // Pas de validation
+  }
+  socket.in(room).emit('updateSummonerData', summonersData[room])
+})
 ```
 
 **Problèmes**:
+
 - ❌ Client envoie l'état complet (gros payload)
 - ❌ Pas de validation des données
 - ❌ Le serveur fait confiance au client
@@ -103,6 +115,7 @@ socket.on("updateSummonerData", (data, room) => {
 ### 🐛 Bugs & Limitations
 
 #### Backend
+
 1. **Pas de TypeScript** → Pas de type safety
 2. **Variable globale** (`summonersData`) → Pas scalable
 3. **Pas de nettoyage des rooms** → Memory leak
@@ -113,6 +126,7 @@ socket.on("updateSummonerData", (data, room) => {
 8. **Pas de monitoring** → Invisible en production
 
 #### Frontend
+
 1. **Timer client-side** → Peut désynchroniser
 2. **Pas de reconnexion auto** → Perte de connexion = game over
 3. **Pas de gestion offline** → Crash si serveur down
@@ -200,6 +214,7 @@ LolTimeFlash/                           # 📦 Root Monorepo
 ### Stack Cible
 
 #### Frontend (`apps/web`)
+
 - ✅ **Next.js 16.0.1** - React framework
 - ✅ **React 19.2.0** - UI library
 - ✅ **TypeScript 5.9.3** - Type safety
@@ -209,6 +224,7 @@ LolTimeFlash/                           # 📦 Root Monorepo
 - ✅ **TanStack Query 5.90.8** - Server state
 
 #### Backend (`apps/api`)
+
 - 🆕 **NestJS 10.x** - Backend framework
 - 🆕 **TypeScript 5.9.3** - Type safety
 - 🆕 **Socket.IO 4.8.1** - WebSocket server
@@ -219,11 +235,13 @@ LolTimeFlash/                           # 📦 Root Monorepo
 - 🆕 **Redis** (optionnel) - Session storage
 
 #### Shared (`packages/shared`)
+
 - 🆕 **TypeScript 5.9.3** - Types partagés
 - 🆕 **Zod** - Runtime validation
 - 🆕 **ESBuild** - Build rapide
 
 #### Tooling
+
 - 🆕 **Turborepo** - Monorepo build system
 - ✅ **PNPM** - Package manager
 - ✅ **Prettier 3.6.2** - Formatter
@@ -254,6 +272,7 @@ CLIENT                          SERVER
 ```
 
 **Problèmes**:
+
 - 60 messages/minute/user (300 pour 5 users)
 - Gros payload (tout l'état)
 - Pas d'autorité serveur
@@ -288,6 +307,7 @@ CLIENT                          SERVER (Authoritative)
 ```
 
 **Avantages**:
+
 - ✅ Uniquement lors d'actions (5-10 messages/minute max)
 - ✅ Petit payload (événements)
 - ✅ Serveur autoritaire
@@ -391,10 +411,13 @@ socket.on('error', {
 Deux scripts bash ont été créés pour faciliter la gestion du monorepo :
 
 ### 🧹 `pnpm clean` - Nettoyage Complet
+
 Nettoie tous les caches, node_modules et builds à tous les niveaux :
+
 ```bash
 pnpm clean
 ```
+
 - Root : node_modules, .turbo, pnpm-lock.yaml
 - Frontend : node_modules, .next, .turbo, dist
 - Backend : node_modules, dist, .turbo
@@ -402,10 +425,13 @@ pnpm clean
 - Old Backend : node_modules, pnpm-lock.yaml
 
 ### 🚀 `pnpm get_started` - Setup Automatique
+
 Installe tout et affiche les commandes disponibles :
+
 ```bash
 pnpm get_started
 ```
+
 - Vérifie les versions Node/PNPM
 - Installe toutes les dépendances
 - Affiche la structure du projet
@@ -421,6 +447,7 @@ pnpm get_started
 ### Phase 1 : Setup Monorepo (Jour 1) ✅ TERMINÉ
 
 #### 1.1 Restructuration
+
 ```bash
 # Créer la structure
 mkdir -p apps/web apps/api packages/shared
@@ -434,7 +461,9 @@ cp package.json apps/web/package.json
 ```
 
 #### 1.2 Configuration Workspace
+
 **`pnpm-workspace.yaml`**:
+
 ```yaml
 packages:
   - 'apps/*'
@@ -442,6 +471,7 @@ packages:
 ```
 
 **`package.json` (root)**:
+
 ```json
 {
   "name": "loltimeflash-monorepo",
@@ -461,6 +491,7 @@ packages:
 ```
 
 **`turbo.json`**:
+
 ```json
 {
   "$schema": "https://turbo.build/schema.json",
@@ -482,6 +513,7 @@ packages:
 ### Phase 2 : Backend NestJS (Jour 2-3)
 
 #### 2.1 Initialiser NestJS
+
 ```bash
 cd apps
 npx @nestjs/cli new api --package-manager pnpm --skip-git
@@ -494,6 +526,7 @@ pnpm add -D @types/socket.io
 #### 2.2 Structure des Modules
 
 **`apps/api/src/app.module.ts`**:
+
 ```typescript
 import { Module } from '@nestjs/common'
 import { GameModule } from './game/game.module'
@@ -506,6 +539,7 @@ export class AppModule {}
 ```
 
 **`apps/api/src/game/game.gateway.ts`**:
+
 ```typescript
 import {
   WebSocketGateway,
@@ -519,9 +553,7 @@ import { GameService } from './game.service'
 import { FlashActionDto } from './dto/flash-action.dto'
 
 @WebSocketGateway({ cors: { origin: '*' } })
-export class GameGateway
-  implements OnGatewayConnection, OnGatewayDisconnect
-{
+export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer()
   server: Server
 
@@ -545,10 +577,10 @@ export class GameGateway
       payload.roomId,
       payload.username
     )
-    
+
     // Send current state to user
     client.emit('room:state', result)
-    
+
     // Broadcast user joined to others
     client.to(payload.roomId).emit('room:user:joined', {
       username: payload.username,
@@ -559,7 +591,7 @@ export class GameGateway
   @SubscribeMessage('game:flash')
   async handleFlash(client: Socket, payload: FlashActionDto) {
     const result = await this.gameService.useFlash(client, payload)
-    
+
     // Broadcast to room
     this.server.to(result.roomId).emit('game:flash', result.data)
   }
@@ -569,11 +601,12 @@ export class GameGateway
 ### Phase 3 : Package Shared (Jour 3)
 
 **`packages/shared/src/types/game.types.ts`**:
+
 ```typescript
 export type Role = 'TOP' | 'JUNGLE' | 'MID' | 'ADC' | 'SUPPORT'
 
 export interface SummonerData {
-  flashCooldown: number | null  // Timestamp when available
+  flashCooldown: number | null // Timestamp when available
   lucidityBoots: boolean
   cosmicInsight: boolean
 }
@@ -596,12 +629,13 @@ export interface GameState {
 ```
 
 **`packages/shared/src/constants/cooldowns.ts`**:
+
 ```typescript
 export const FLASH_COOLDOWNS = {
-  BASE: 300,                    // 5:00
-  WITH_BOOTS: 268,              // 4:28
-  WITH_RUNE: 255,               // 4:15
-  WITH_BOTH: 231,               // 3:51
+  BASE: 300, // 5:00
+  WITH_BOOTS: 268, // 4:28
+  WITH_RUNE: 255, // 4:15
+  WITH_BOTH: 231, // 3:51
 } as const
 
 export function calculateFlashCooldown(
@@ -618,7 +652,9 @@ export function calculateFlashCooldown(
 ### Phase 4 : Refactor Frontend (Jour 4-5)
 
 #### 4.1 Supprimer le Timer Socket
+
 **Avant** (`gameComponent.tsx`):
+
 ```typescript
 // ❌ À SUPPRIMER
 useEffect(() => {
@@ -629,6 +665,7 @@ useEffect(() => {
 ```
 
 **Après**:
+
 ```typescript
 // ✅ Timer local uniquement
 useEffect(() => {
@@ -641,6 +678,7 @@ useEffect(() => {
 ```
 
 #### 4.2 Nouveaux Event Handlers
+
 ```typescript
 // Flash utilisé
 function handleFlashUsed(role: Role) {
@@ -654,7 +692,7 @@ socket.on('game:flash', ({ role, cooldown, endsAt }) => {
     flashCooldown: endsAt,
     timestamp: Date.now(),
   })
-  
+
   // Audio + Toast
   playAudio()
   toast({ title: `${role} FLASHED !!!` })
@@ -664,6 +702,7 @@ socket.on('game:flash', ({ role, cooldown, endsAt }) => {
 ### Phase 5 : Tests & CI/CD (Jour 6)
 
 #### 5.1 Tests Backend
+
 ```bash
 cd apps/api
 pnpm test                # Unit tests
@@ -672,7 +711,9 @@ pnpm test:cov           # Coverage
 ```
 
 #### 5.2 CI/CD Pipeline
+
 **`.github/workflows/ci.yml`**:
+
 ```yaml
 name: CI
 
@@ -688,7 +729,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'pnpm'
-      
+
       - run: pnpm install
       - run: pnpm turbo run lint
       - run: pnpm turbo run test
@@ -698,6 +739,7 @@ jobs:
 ### Phase 6 : Déploiement (Jour 7)
 
 #### 6.1 Docker Compose
+
 ```yaml
 version: '3.8'
 
@@ -705,7 +747,7 @@ services:
   web:
     build: ./apps/web
     ports:
-      - "3000:3000"
+      - '3000:3000'
     environment:
       - NEXT_PUBLIC_API_URL=http://api:4000
     depends_on:
@@ -714,7 +756,7 @@ services:
   api:
     build: ./apps/api
     ports:
-      - "4000:4000"
+      - '4000:4000'
     environment:
       - PORT=4000
       - NODE_ENV=production
@@ -725,6 +767,7 @@ services:
 ## 📅 Roadmap
 
 ### Sprint 1 (Jour 1-3) : Infrastructure
+
 - [ ] Setup monorepo (workspace, turbo)
 - [ ] Créer `apps/web` (migration frontend)
 - [ ] Créer `apps/api` (NestJS init)
@@ -732,6 +775,7 @@ services:
 - [ ] Configuration ESLint/Prettier partagée
 
 ### Sprint 2 (Jour 4-5) : Backend Core
+
 - [ ] Module Game (Gateway + Service)
 - [ ] Module Room (Service + Repository)
 - [ ] DTOs & Validation
@@ -739,6 +783,7 @@ services:
 - [ ] Tests unitaires
 
 ### Sprint 3 (Jour 6-7) : Frontend Refactor
+
 - [ ] Supprimer timer Socket
 - [ ] Nouveaux event handlers
 - [ ] Gestion reconnexion
@@ -746,6 +791,7 @@ services:
 - [ ] Tests E2E
 
 ### Sprint 4 (Jour 8-9) : Polish & Deploy
+
 - [ ] Logging (Winston)
 - [ ] Monitoring
 - [ ] CI/CD Pipeline
@@ -754,6 +800,7 @@ services:
 - [ ] Load testing
 
 ### Améliorations Futures
+
 - [ ] Redis pour sessions
 - [ ] Authentification (JWT)
 - [ ] Rate limiting
@@ -766,33 +813,145 @@ services:
 ## 📊 Métriques de Succès
 
 ### Performance
+
 - ✅ Messages Socket.IO : **300/min → 10/min** (-97%)
 - ✅ Latence : **< 50ms** (vs 1000ms actuellement)
 - ✅ Payload moyen : **< 500 bytes** (vs 5KB actuellement)
 
 ### Code Quality
+
 - ✅ TypeScript : **0% → 100%**
 - ✅ Tests : **0% → 80%+ coverage**
 - ✅ Linting : **0 errors**
 
 ### DevEx
+
 - ✅ Build time : **< 10s** (avec Turbopack + Turborepo)
 - ✅ Hot reload : **< 1s**
 - ✅ Type safety : **Shared types** entre front/back
 
 ---
 
+## ✅ État Actuel (Post-Migration - 14 Nov 2024)
+
+### Infrastructure Complétée 🐳
+
+**Docker Management** :
+
+- ✅ `scripts/docker.sh` - Script complet avec 7 commandes
+- ✅ `pnpm docker:build` - Build images
+- ✅ `pnpm docker:up` - Start containers
+- ✅ `pnpm docker:down` - Stop containers
+- ✅ `pnpm docker:restart` - Restart
+- ✅ `pnpm docker:logs` - View logs
+- ✅ `pnpm docker:clean` - Clean all
+- ✅ `pnpm docker:test` - Full test suite
+
+**Environment Configuration** :
+
+- ✅ `.env` - Local development
+- ✅ `.env.docker` - Docker builds
+- ✅ `.env.example` - Template documentation
+- ✅ Variables : `STANDALONE_BUILD`, `NEXT_PUBLIC_SOCKET_PORT`
+
+### Monitoring & Observability 📊
+
+**Endpoints** :
+
+- ✅ `GET /monitoring/health` - Health check
+- ✅ `GET /monitoring/metrics` - All metrics
+- ✅ `GET /monitoring/metrics/socket` - Socket.IO metrics
+- ✅ `GET /monitoring/metrics/http` - HTTP metrics
+
+**Logging (Winston)** :
+
+- ✅ Console logs avec couleurs
+- ✅ File logs avec rotation (14 jours)
+- ✅ Logs : `logs/app-YYYY-MM-DD.log`, `logs/error-YYYY-MM-DD.log`
+- ✅ Format JSON pour production
+
+### Load Testing 🔥
+
+**Artillery configuré** :
+
+- ✅ `load-tests/socket-io.yml` - Socket.IO tests (100 users, 5min)
+- ✅ `load-tests/http-api.yml` - HTTP API tests (50 req/s, 2min)
+- ✅ Custom metrics processors
+- ✅ Scripts : `pnpm load-test:socket`, `pnpm load-test:http`, `pnpm load-test:all`
+
+**Scénarios testés** :
+
+- Join room (100 concurrent users)
+- Flash emission (1/sec per user)
+- Item toggle (0.5/sec per user)
+- HTTP health checks
+- Champions data fetch
+
+### NestJS Backend Fixes 🔧
+
+**Problèmes résolus** :
+
+- ✅ Monorepo build paths (`dist/apps/api/src/main`)
+- ✅ TypeScript config (`declarationMap: false`)
+- ✅ Dev script : `nest start --watch --exec 'node dist/apps/api/src/main'`
+- ✅ Docker CMD corrigé
+- ✅ 171 champions chargés avec succès
+
+### CI/CD Pipeline ⚙️
+
+**GitHub Actions** :
+
+- ✅ `.github/workflows/ci.yml` - Lint + Type-check + Build
+- ✅ `.github/workflows/deploy.yml` - Docker build + Deploy
+- ✅ Auto-deploy sur push `main`
+
+### Frontend Improvements 🎨
+
+**Background Selector** :
+
+- ✅ Affiche splash arts locaux (WebP) au lieu d'icônes
+- ✅ Premier skin de chaque champion (`splashArts[0]`)
+- ✅ Support zoom sur visages (`object-position` + `transform: scale()`)
+
+### Checklist Finale ✅
+
+**Phase 3** (Complétée):
+
+- [x] ~~Backend migré vers NestJS~~ ✅
+- [x] ~~API REST complète~~ ✅
+- [x] ~~Timestamp-based timers~~ ✅
+- [x] ~~Event-driven architecture~~ ✅
+- [x] ~~Swagger docs~~ ✅
+- [x] ~~Monitoring~~ ✅
+- [x] ~~CI/CD Pipeline~~ ✅
+- [x] ~~Docker setup~~ ✅
+- [x] ~~Documentation API~~ ✅
+- [x] ~~Load testing~~ ✅
+
+**Améliorations Futures** (Phase 4):
+
+- [ ] Redis pour sessions
+- [ ] Authentification (JWT)
+- [ ] Rate limiting
+- [ ] Replay system
+- [ ] Statistiques room
+- [ ] Admin panel
+
+---
+
 ## 🎯 Conclusion
 
-Cette migration transformera LolTimeFlash d'un prototype en une application production-ready :
+Cette migration a transformé LolTimeFlash d'un prototype en une application production-ready :
 
 **Avant**:
+
 - ❌ Code JavaScript basique
 - ❌ 300 messages/minute
 - ❌ Pas de tests
 - ❌ Pas de structure
 
 **Après**:
+
 - ✅ Monorepo TypeScript moderne
 - ✅ 10 messages/minute (-97%)
 - ✅ Tests + CI/CD
@@ -801,4 +960,3 @@ Cette migration transformera LolTimeFlash d'un prototype en une application prod
 - ✅ Prêt pour production
 
 **Let's go ! 🚀**
-

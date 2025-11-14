@@ -62,3 +62,8 @@ data/
 
 # env
 .env
+
+# logs (Winston daily rotate files)
+logs/
+**/logs/
+*.log

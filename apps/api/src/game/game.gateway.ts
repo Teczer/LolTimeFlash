@@ -8,7 +8,7 @@ import {
   ConnectedSocket,
 } from '@nestjs/websockets'
 import { Server, Socket } from 'socket.io'
-import { Logger, UsePipes, ValidationPipe } from '@nestjs/common'
+import { UsePipes, ValidationPipe } from '@nestjs/common'
 import type {
   ClientToServerEvents,
   ServerToClientEvents,
@@ -17,6 +17,8 @@ import type {
 } from '../shared/types/socket.types'
 import { GameService } from './game.service'
 import { RoomService } from '../room/room.service'
+import { WinstonLoggerService } from '../logger/logger.service'
+import { MetricsService } from '../monitoring/metrics.service'
 import { JoinRoomDto, FlashActionDto, ToggleItemDto } from './dto'
 
 @WebSocketGateway({
@@ -37,18 +39,19 @@ export class GameGateway
     SocketData
   >
 
-  private readonly logger = new Logger(GameGateway.name)
-
   constructor(
     private readonly gameService: GameService,
     private readonly roomService: RoomService,
+    private readonly logger: WinstonLoggerService,
+    private readonly metricsService: MetricsService,
   ) {}
 
   /**
    * Handle client connection
    */
   handleConnection(client: Socket) {
-    this.logger.log(`Client connected: ${client.id}`)
+    this.metricsService.incrementConnection()
+    this.logger.logSocketEvent('connect', { clientId: client.id }, client.id)
   }
 
   /**
@@ -57,7 +60,8 @@ export class GameGateway
   handleDisconnect(client: Socket) {
     const { username, roomId } = client.data
     
-    this.logger.log(`Client disconnected: ${client.id} (${username})`)
+    this.metricsService.decrementConnection()
+    this.logger.logSocketEvent('disconnect', { username, roomId }, client.id)
 
     if (roomId && username) {
       const room = this.roomService.removeUserFromRoom(roomId, username)
@@ -69,7 +73,8 @@ export class GameGateway
           users: room.users,
         })
         
-        this.logger.log(`User ${username} left room ${roomId}`)
+        this.metricsService.incrementEventEmitted('room:user:left')
+        this.logger.logSocketEvent('room:user:left', { username, roomId, remainingUsers: room.users.length }, client.id)
       }
     }
   }
@@ -83,6 +88,7 @@ export class GameGateway
     @MessageBody() payload: JoinRoomDto,
   ) {
     const { roomId, username } = payload
+    this.metricsService.incrementEventReceived('room:join')
 
     try {
       // Join Socket.IO room
@@ -97,17 +103,19 @@ export class GameGateway
 
       // ✅ Broadcast updated room state to ALL clients in room (including joining client)
       this.server.to(roomId).emit('room:state', room)
+      this.metricsService.incrementEventEmitted('room:state')
 
       // Notify others that user joined
       client.to(roomId).emit('room:user:joined', {
         username,
         users: room.users,
       })
+      this.metricsService.incrementEventEmitted('room:user:joined')
 
-      this.logger.log(`User ${username} joined room ${roomId}`)
+      this.logger.logSocketEvent('room:join', { username, roomId, totalUsers: room.users.length }, client.id)
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-      this.logger.error(`Error joining room: ${errorMessage}`)
+      this.logger.logError(error instanceof Error ? error : new Error(errorMessage), 'GameGateway')
       client.emit('error', {
         code: 'JOIN_ROOM_ERROR',
         message: errorMessage,
@@ -125,6 +133,7 @@ export class GameGateway
   ) {
     const { roomId } = payload
     const { username } = client.data
+    this.metricsService.incrementEventReceived('room:leave')
 
     try {
       client.leave(roomId)
@@ -138,13 +147,14 @@ export class GameGateway
             username,
             users: room.users,
           })
+          this.metricsService.incrementEventEmitted('room:user:left')
         }
       }
 
-      this.logger.log(`User ${username} left room ${roomId}`)
+      this.logger.logSocketEvent('room:leave', { username, roomId }, client.id)
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-      this.logger.error(`Error leaving room: ${errorMessage}`)
+      this.logger.logError(error instanceof Error ? error : new Error(errorMessage), 'GameGateway')
     }
   }
 
@@ -158,6 +168,7 @@ export class GameGateway
   ) {
     const { role } = payload
     const { roomId, username } = client.data
+    this.metricsService.incrementEventReceived('game:flash')
 
     if (!roomId || !username) {
       client.emit('error', {
@@ -172,17 +183,19 @@ export class GameGateway
 
       // Broadcast Flash event to all in room (including sender)
       this.server.to(roomId).emit('game:flash', flashData)
+      this.metricsService.incrementEventEmitted('game:flash')
 
       // ✅ Broadcast updated room state so all clients sync
       const updatedRoom = this.roomService.getRoom(roomId)
       if (updatedRoom) {
         this.server.to(roomId).emit('room:state', updatedRoom)
+        this.metricsService.incrementEventEmitted('room:state')
       }
 
-      this.logger.log(`${username} used Flash on ${role} in room ${roomId}`)
+      this.logger.logSocketEvent('game:flash', { username, role, roomId, cooldown: flashData.cooldown }, client.id)
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-      this.logger.error(`Error using Flash: ${errorMessage}`)
+      this.logger.logError(error instanceof Error ? error : new Error(errorMessage), 'GameGateway')
       client.emit('error', {
         code: 'FLASH_ERROR',
         message: errorMessage,
@@ -200,6 +213,7 @@ export class GameGateway
   ) {
     const { role } = payload
     const { roomId, username } = client.data
+    this.metricsService.incrementEventReceived('game:flash:cancel')
 
     if (!roomId || !username) {
       client.emit('error', {
@@ -217,17 +231,19 @@ export class GameGateway
         role,
         username,
       })
+      this.metricsService.incrementEventEmitted('game:flash:cancel')
 
       // ✅ Broadcast updated room state
       const updatedRoom = this.roomService.getRoom(roomId)
       if (updatedRoom) {
         this.server.to(roomId).emit('room:state', updatedRoom)
+        this.metricsService.incrementEventEmitted('room:state')
       }
 
-      this.logger.log(`${username} cancelled Flash on ${role} in room ${roomId}`)
+      this.logger.logSocketEvent('game:flash:cancel', { username, role, roomId }, client.id)
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-      this.logger.error(`Error cancelling Flash: ${errorMessage}`)
+      this.logger.logError(error instanceof Error ? error : new Error(errorMessage), 'GameGateway')
       client.emit('error', {
         code: 'FLASH_CANCEL_ERROR',
         message: errorMessage,
@@ -245,6 +261,7 @@ export class GameGateway
   ) {
     const { role, item } = payload
     const { roomId, username } = client.data
+    this.metricsService.incrementEventReceived('game:toggle:item')
 
     if (!roomId || !username) {
       client.emit('error', {
@@ -259,19 +276,19 @@ export class GameGateway
 
       // Broadcast item toggle event to all in room
       this.server.to(roomId).emit('game:toggle:item', itemData)
+      this.metricsService.incrementEventEmitted('game:toggle:item')
 
       // ✅ Broadcast updated room state
       const updatedRoom = this.roomService.getRoom(roomId)
       if (updatedRoom) {
         this.server.to(roomId).emit('room:state', updatedRoom)
+        this.metricsService.incrementEventEmitted('room:state')
       }
 
-      this.logger.log(
-        `${username} toggled ${item} to ${itemData.value} for ${role} in room ${roomId}`,
-      )
+      this.logger.logSocketEvent('game:toggle:item', { username, role, item, value: itemData.value, roomId }, client.id)
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-      this.logger.error(`Error toggling item: ${errorMessage}`)
+      this.logger.logError(error instanceof Error ? error : new Error(errorMessage), 'GameGateway')
       client.emit('error', {
         code: 'TOGGLE_ITEM_ERROR',
         message: errorMessage,

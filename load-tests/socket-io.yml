@@ -1,0 +1,40 @@
+config:
+  target: 'http://localhost:4000'
+  phases:
+    # Gradual ramp-up for WebSocket connections
+    - duration: 30
+      arrivalRate: 2
+      name: 'Warm-up - 2 connections/sec'
+    
+    - duration: 60
+      arrivalRate: 10
+      name: 'Sustained - 10 connections/sec'
+    
+    - duration: 30
+      arrivalRate: 20
+      name: 'Peak - 20 connections/sec'
+  
+  # Socket.IO specific config
+  socketio:
+    transports: ['websocket']
+
+scenarios:
+  # Simple scenario: Just connect
+  - name: 'Connect Only'
+    weight: 50
+    engine: socketio
+    flow:
+      - think: 5
+  
+  # Join a room
+  - name: 'Join Room'
+    weight: 50
+    engine: socketio
+    flow:
+      - emit:
+          channel: 'room:join'
+          data:
+            roomId: 'test-room-1'
+            username: 'testuser'
+      - think: 10
+

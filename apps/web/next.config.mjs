@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Use standalone only when STANDALONE_BUILD=true (Docker builds)
+  // Leave empty for local dev to use 'next start' normally
+  ...(process.env.STANDALONE_BUILD === 'true' && { output: 'standalone' }),
   images: {
     remotePatterns: [
       {
