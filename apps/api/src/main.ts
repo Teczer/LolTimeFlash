@@ -44,7 +44,7 @@ async function bootstrap() {
     customCss: '.swagger-ui .topbar { display: none }',
   });
 
-  const port = process.env.PORT ?? 4000;
+  const port = process.env.PORT ?? 8888;
   await app.listen(port);
   
   logger.log(`🚀 API server is running on http://localhost:${port}`, 'Bootstrap');

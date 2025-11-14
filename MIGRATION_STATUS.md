@@ -74,7 +74,7 @@ LolTimeFlash/
 **Tests de validation** :
 
 - ✅ `pnpm install` → 474 packages installés
-- ✅ `pnpm dev` → Serveur Next.js démarre sur http://localhost:3000
+- ✅ `pnpm dev` → Serveur Next.js démarre sur http://localhost:6333
 - ✅ `pnpm clean` → Nettoyage complet fonctionne
 - ✅ `pnpm get_started` → Réinstallation complète fonctionne
 - ✅ Frontend opérationnel (routes, API, Socket.IO client)
@@ -103,7 +103,7 @@ LolTimeFlash/
 
 #### ✅ Ce qui fonctionne
 
-- ✅ Dev server Next.js (http://localhost:3000)
+- ✅ Dev server Next.js (http://localhost:6333)
 - ✅ Hot reload avec Turbopack
 - ✅ Toutes les routes frontend
 - ✅ API route `/api/shieldbow` (Data Dragon)
@@ -139,7 +139,7 @@ LolTimeFlash/
 - [x] Créer RoomModule + Service
 - [x] Configurer DTOs avec class-validator
 - [x] Créer types partagés dans packages/shared/
-- [x] Tester Socket.IO serveur sur http://localhost:4000
+- [x] Tester Socket.IO serveur sur http://localhost:8888
 
 #### ✅ Réalisations
 
@@ -156,7 +156,7 @@ LolTimeFlash/
 - ✅ **GameModule** : Gateway Socket.IO + Service (logique métier)
 - ✅ **RoomModule** : Service (gestion rooms Map en mémoire)
 - ✅ **AppModule** : Imports GameModule + RoomModule
-- ✅ main.ts : CORS, ValidationPipe global, port 4000
+- ✅ main.ts : CORS, ValidationPipe global, port 8888
 
 **2.3 Socket.IO Gateway** ✅
 
@@ -207,15 +207,15 @@ LolTimeFlash/
 
 **2.7 Tests de validation** ✅
 
-- ✅ Backend démarre sur http://localhost:4000
-- ✅ Socket.IO écoute sur port 4000
+- ✅ Backend démarre sur http://localhost:8888
+- ✅ Socket.IO écoute sur port 8888
 - ✅ GameGateway subscribe aux 5 événements
 - ✅ Logs NestJS confirment le démarrage :
   ```
   [Nest] GameGateway subscribed to "room:join" message
   [Nest] GameGateway subscribed to "game:flash" message
   ...
-  🚀 API server is running on http://localhost:4000
+  🚀 API server is running on http://localhost:8888
   🔌 Socket.IO is ready for connections
   ```
 - ✅ Route GET / répond "Hello World!"
@@ -1043,7 +1043,7 @@ Commandes disponibles :
 **Variables configurées** :
 
 - `STANDALONE_BUILD` - Contrôle `output: 'standalone'` de Next.js
-- `NEXT_PUBLIC_SOCKET_PORT` - URL Socket.IO (http://localhost:4000)
+- `NEXT_PUBLIC_SOCKET_PORT` - URL Socket.IO (http://localhost:8888)
 
 **6. Background Selector Fix** 🎨
 
@@ -1166,9 +1166,9 @@ Commandes disponibles :
 - ✅ `pnpm docker:build` - Build réussi (API + Web)
 - ✅ `pnpm docker:up` - Containers démarrent
 - ✅ `pnpm docker:test` - Health checks passent (API 200, Web 200)
-- ✅ API accessible sur http://localhost:4000
-- ✅ Docs Swagger sur http://localhost:4000/api/docs
-- ✅ Web accessible sur http://localhost:3000
+- ✅ API accessible sur http://localhost:8888
+- ✅ Docs Swagger sur http://localhost:8888/api/docs
+- ✅ Web accessible sur http://localhost:6333
 
 **Local Development** :
 

@@ -86,9 +86,9 @@ USER nestjs
 
 WORKDIR /app/apps/api
 
-EXPOSE 4000
+EXPOSE 8888
 
-ENV PORT=4000
+ENV PORT=8888
 ENV LOG_LEVEL=info
 
 CMD ["node", "dist/apps/api/src/main"]

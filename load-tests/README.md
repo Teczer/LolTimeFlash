@@ -4,7 +4,7 @@ This directory contains load testing scenarios for LolTimeFlash API and Socket.I
 
 ## 📋 Prerequisites
 
-- Backend running on `http://localhost:4000`
+- Backend running on `http://localhost:8888`
 - Artillery installed (`pnpm install`)
 
 ## 🚀 Running Tests
@@ -158,14 +158,14 @@ Add custom tracking in `processors/custom-metrics.js` or `processors/socket-metr
 
 ### High Failure Rate
 
-- Check if backend is running: `curl http://localhost:4000/monitoring/health`
+- Check if backend is running: `curl http://localhost:8888/monitoring/health`
 - Increase backend resources (RAM, CPU)
 - Lower `arrivalRate` in test config
 
 ### Slow Response Times
 
 - Check logs: `tail -f apps/api/logs/app-*.log`
-- Monitor metrics: `curl http://localhost:4000/monitoring/metrics`
+- Monitor metrics: `curl http://localhost:8888/monitoring/metrics`
 - Optimize slow endpoints
 
 ### Socket.IO Errors

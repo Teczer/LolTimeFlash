@@ -474,7 +474,7 @@ pnpm install
 
 ```bash
 pnpm dev
-# Runs on http://localhost:3000
+# Runs on http://localhost:6333
 ```
 
 ### Build for Production
@@ -680,6 +680,7 @@ export const gameDefaultData: GameData = {
 #### ✅ BUG #1 : Timer Reset en Multiplayer - **FIXED** (13 nov 2024)
 
 **Solution** : Architecture timestamp-based
+
 - Backend stocke `endsAt` timestamp au lieu de countdown
 - Frontend convertit dynamiquement timestamp → countdown
 - Plus de reset lors des broadcasts/joins/toggles
@@ -737,6 +738,7 @@ export const gameDefaultData: GameData = {
 **Format**: `<gitmoji> <type>(<scope>): <description>`
 
 **Rules**:
+
 - ✅ Use gitmoji in **text format** (`:art:` `:recycle:` `:sparkles:` etc.), NOT emoji unicode (🎨 ♻️ ✨)
 - ✅ Max 72 characters for the title
 - ✅ **NO body** (no line breaks, title only)
@@ -744,6 +746,7 @@ export const gameDefaultData: GameData = {
 - ✅ Lowercase after colon
 
 **Examples**:
+
 ```bash
 :recycle: refactor(game): migrate to timestamp-based timers
 :sparkles: feat(socket): add connection status indicator
@@ -754,6 +757,7 @@ export const gameDefaultData: GameData = {
 ```
 
 **Common Gitmojis**:
+
 - `:art:` - Code structure/format
 - `:recycle:` - Refactor code
 - `:sparkles:` - New feature
@@ -975,6 +979,7 @@ All files use **kebab-case** with descriptive type suffixes:
 - **Constants**: `constant-name.constant.ts`
 
 **Examples**:
+
 ```
 ✅ GOOD:
 - game-room.component.tsx
@@ -994,6 +999,7 @@ All files use **kebab-case** with descriptive type suffixes:
 ### TypeScript Conventions
 
 **Interfaces and Types**:
+
 - **Interfaces**: PascalCase with `I` prefix (e.g., `IUserData`, `IGameState`)
 - **Types**: PascalCase with `T` prefix (e.g., `TRole`, `TErrorData`)
 - Prefer interfaces for object shapes
@@ -1014,6 +1020,7 @@ type Role = '...'  // No T prefix
 ```
 
 **Function Parameters**:
+
 - Always use explicit types
 - No implicit `any`
 
@@ -1024,7 +1031,8 @@ const handleClick = (role: TRole): void => {
 }
 
 // ❌ BAD
-const handleClick = (role) => {  // Implicit any
+const handleClick = (role) => {
+  // Implicit any
   console.log(role)
 }
 ```
@@ -1032,6 +1040,7 @@ const handleClick = (role) => {  // Implicit any
 ### Component Conventions
 
 **Component Structure**:
+
 ```typescript
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
@@ -1057,6 +1066,7 @@ export const Card = (props: ICardProps) => {
 ```
 
 **Component Rules**:
+
 1. Use **named exports** (not default exports)
 2. Use **arrow function** syntax
 3. **Destructure props** inside component body
@@ -1066,45 +1076,48 @@ export const Card = (props: ICardProps) => {
 
 ### Naming Conventions
 
-| Type | Convention | Example |
-|------|------------|---------|
-| Components | PascalCase | `GameRoom`, `FlashTimer` |
-| Functions | camelCase | `calculateCooldown`, `formatTime` |
-| Event Handlers | `handle` prefix | `handleClick`, `handleSubmit` |
-| Hooks | `use` prefix | `useSocket`, `useGameState` |
-| Constants | UPPER_SNAKE_CASE | `MAX_USERS`, `DEFAULT_COOLDOWN` |
-| Interfaces | `I` prefix | `IGameData`, `IUserState` |
-| Types | `T` prefix | `TRole`, `TSocketEvent` |
-| Stores | `Store` suffix | `useGameStore`, `useUserStore` |
+| Type           | Convention       | Example                           |
+| -------------- | ---------------- | --------------------------------- |
+| Components     | PascalCase       | `GameRoom`, `FlashTimer`          |
+| Functions      | camelCase        | `calculateCooldown`, `formatTime` |
+| Event Handlers | `handle` prefix  | `handleClick`, `handleSubmit`     |
+| Hooks          | `use` prefix     | `useSocket`, `useGameState`       |
+| Constants      | UPPER_SNAKE_CASE | `MAX_USERS`, `DEFAULT_COOLDOWN`   |
+| Interfaces     | `I` prefix       | `IGameData`, `IUserState`         |
+| Types          | `T` prefix       | `TRole`, `TSocketEvent`           |
+| Stores         | `Store` suffix   | `useGameStore`, `useUserStore`    |
 
 ### Code Best Practices
 
 1. **Named Exports**: Always use named exports for better IDE support
+
    ```typescript
    // ✅ GOOD
-   export const GameRoom = () => { }
-   
+   export const GameRoom = () => {}
+
    // ❌ BAD
    export default GameRoom
    ```
 
 2. **Named Imports**: Import React hooks by name
+
    ```typescript
    // ✅ GOOD
    import { useState, useEffect } from 'react'
-   
+
    // ❌ BAD
    import React from 'react'
    React.useState()
    ```
 
 3. **Early Returns**: Use guard clauses for better readability
+
    ```typescript
    // ✅ GOOD
    if (!user) return null
    if (isLoading) return <Loader />
    return <Content />
-   
+
    // ❌ BAD
    if (user) {
      if (!isLoading) {
@@ -1118,29 +1131,32 @@ export const Card = (props: ICardProps) => {
    ```
 
 4. **No Magic Values**: Use descriptive constants
+
    ```typescript
    // ✅ GOOD
    const FLASH_BASE_COOLDOWN = 300
    const timer = FLASH_BASE_COOLDOWN
-   
+
    // ❌ BAD
-   const timer = 300  // What is 300?
+   const timer = 300 // What is 300?
    ```
 
 5. **Avoid Type Assertions**: Fix types at the source
+
    ```typescript
    // ✅ GOOD
    const role: TRole = 'TOP'
-   
+
    // ❌ BAD
-   const role = 'TOP' as TRole  // Bypasses type checking
+   const role = 'TOP' as TRole // Bypasses type checking
    ```
 
 6. **Self-Documenting Code**: No comments unless necessary
+
    ```typescript
    // ✅ GOOD
    const isFlashAvailable = flashCooldown === 0
-   
+
    // ❌ BAD
    // Check if flash is ready
    const f = c === 0
@@ -1149,6 +1165,7 @@ export const Card = (props: ICardProps) => {
 ### Zustand Store Pattern
 
 **Store Structure**:
+
 ```typescript
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
@@ -1182,6 +1199,7 @@ export const useUsernameStore = create<IDefaultState & IDefaultActions>()(
 ```
 
 **Store Best Practices**:
+
 1. Separate state and actions interfaces
 2. Always include `reset()` action
 3. Use `DEFAULT_STATE` constant
@@ -1190,7 +1208,7 @@ export const useUsernameStore = create<IDefaultState & IDefaultActions>()(
 
 ```typescript
 // ✅ GOOD: Selective subscription
-const username = useUsernameStore(state => state.username)
+const username = useUsernameStore((state) => state.username)
 
 // ❌ BAD: Subscribe to entire store
 const { username, setUsername, reset } = useUsernameStore()
@@ -1199,6 +1217,7 @@ const { username, setUsername, reset } = useUsernameStore()
 ### Custom Hooks Pattern
 
 **Hook Structure**:
+
 ```typescript
 import { useState, useEffect } from 'react'
 import type { IGameState } from '@/lib/types'
@@ -1215,7 +1234,7 @@ export const useGame = (options: IUseGameOptions) => {
 
   useEffect(() => {
     if (!enabled) return
-    
+
     // Hook logic here
   }, [enabled, roomId])
 

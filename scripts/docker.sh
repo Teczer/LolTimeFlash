@@ -81,9 +81,9 @@ docker_up() {
     success "Services are running!"
     echo ""
     echo "📊 Available at:"
-    echo -e "   • API:  ${CYAN}http://localhost:4000${NC}"
-    echo -e "   • API Docs: ${CYAN}http://localhost:4000/api/docs${NC}"
-    echo -e "   • Web:  ${CYAN}http://localhost:3000${NC}"
+    echo -e "   • API:  ${CYAN}http://localhost:8888${NC}"
+    echo -e "   • API Docs: ${CYAN}http://localhost:8888/api/docs${NC}"
+    echo -e "   • Web:  ${CYAN}http://localhost:6333${NC}"
     echo ""
 }
 
@@ -162,17 +162,17 @@ docker_test() {
     echo ""
     
     # Test API
-    API_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:4000/monitoring/health 2>/dev/null || echo "000")
+    API_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8888/monitoring/health 2>/dev/null || echo "000")
     if [ "$API_STATUS" = "200" ]; then
         success "API Health Check: OK (HTTP 200)"
-        API_HEALTH=$(curl -s http://localhost:4000/monitoring/health 2>/dev/null | jq -r '.status' 2>/dev/null || echo "unknown")
+        API_HEALTH=$(curl -s http://localhost:8888/monitoring/health 2>/dev/null | jq -r '.status' 2>/dev/null || echo "unknown")
         echo "   Status: $API_HEALTH"
     else
         error "API Health Check: FAILED (HTTP $API_STATUS)"
     fi
     
     # Test Web
-    WEB_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:3000 2>/dev/null || echo "000")
+    WEB_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:6333 2>/dev/null || echo "000")
     if [ "$WEB_STATUS" = "200" ]; then
         success "Web Frontend: OK (HTTP 200)"
     else
@@ -188,9 +188,9 @@ docker_test() {
     echo ""
     
     echo "📊 Services:"
-    echo -e "   • API:  ${CYAN}http://localhost:4000${NC}"
-    echo -e "   • Docs: ${CYAN}http://localhost:4000/api/docs${NC}"
-    echo -e "   • Web:  ${CYAN}http://localhost:3000${NC}"
+    echo -e "   • API:  ${CYAN}http://localhost:8888${NC}"
+    echo -e "   • Docs: ${CYAN}http://localhost:8888/api/docs${NC}"
+    echo -e "   • Web:  ${CYAN}http://localhost:6333${NC}"
     echo ""
     
     echo "📝 Useful Commands:"

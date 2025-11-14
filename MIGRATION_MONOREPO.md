@@ -747,18 +747,18 @@ services:
   web:
     build: ./apps/web
     ports:
-      - '3000:3000'
+      - '6333:6333'
     environment:
-      - NEXT_PUBLIC_API_URL=http://api:4000
+      - NEXT_PUBLIC_API_URL=http://api:8888
     depends_on:
       - api
 
   api:
     build: ./apps/api
     ports:
-      - '4000:4000'
+      - '8888:8888'
     environment:
-      - PORT=4000
+      - PORT=8888
       - NODE_ENV=production
 ```
 

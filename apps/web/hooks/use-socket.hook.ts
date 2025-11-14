@@ -11,6 +11,7 @@ import type {
   Role,
   ServerToClientEvents,
 } from '@loltimeflash/shared'
+import config from '@/lib/config'
 import { useEffect, useRef, useState } from 'react'
 import { io, Socket } from 'socket.io-client'
 
@@ -48,7 +49,7 @@ export const useSocket = (
   useEffect(() => {
     if (!enabled) return
 
-    const socket: TTypedSocket = io('http://localhost:4000', {
+    const socket: TTypedSocket = io(config.socketPort, {
       transports: ['websocket', 'polling'],
       reconnection: true,
       reconnectionAttempts: 5,

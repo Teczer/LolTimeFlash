@@ -27,7 +27,7 @@ FROM node:20.9.0-alpine AS builder
 RUN npm install --global pnpm@9.10.0
 
 # Build args for NEXT_PUBLIC_ env vars
-ARG NEXT_PUBLIC_SOCKET_PORT=http://localhost:4000
+ARG NEXT_PUBLIC_SOCKET_PORT=http://localhost:8888
 
 WORKDIR /app
 
@@ -75,9 +75,9 @@ RUN chown -R nextjs:nodejs /app
 
 USER nextjs
 
-EXPOSE 3000
+EXPOSE 6333
 
-ENV PORT=3000
+ENV PORT=6333
 ENV HOSTNAME="0.0.0.0"
 
 CMD ["node", "apps/web/server.js"]
