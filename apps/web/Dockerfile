@@ -28,6 +28,7 @@ RUN npm install --global pnpm@9.10.0
 
 # Build args for NEXT_PUBLIC_ env vars
 ARG NEXT_PUBLIC_SOCKET_PORT=http://localhost:8888
+ARG NEXT_PUBLIC_API_URL=http://localhost:8888
 
 WORKDIR /app
 
@@ -50,6 +51,7 @@ COPY apps/web ./apps/web
 WORKDIR /app/apps/web
 ENV STANDALONE_BUILD=true
 ENV NEXT_PUBLIC_SOCKET_PORT=$NEXT_PUBLIC_SOCKET_PORT
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 RUN pnpm build
 
 # Stage 3: Production runtime

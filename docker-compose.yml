@@ -39,6 +39,7 @@ services:
       dockerfile: apps/web/Dockerfile
       args:
         - NEXT_PUBLIC_SOCKET_PORT=${NEXT_PUBLIC_SOCKET_PORT:-http://localhost:8888}
+        - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:8888}
     ports:
       - '${WEB_PORT:-6333}:${WEB_PORT:-6333}'
     environment:
