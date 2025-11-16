@@ -11,34 +11,34 @@ jobs:
   lint:
     name: Lint & Type Check
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
-      
+          version: 9.10.0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.9.0'
           cache: 'pnpm'
-      
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      
+
       - name: Lint (Web)
         run: pnpm --filter=web lint
-      
+
       - name: Type check (Web)
         run: pnpm --filter=web type-check
-      
+
       - name: Lint (API)
         run: pnpm --filter=api lint
-      
+
       - name: Type check (API)
         run: pnpm --filter=api build
 
@@ -47,30 +47,31 @@ jobs:
     name: Build Frontend (Next.js)
     runs-on: ubuntu-latest
     needs: lint
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
-      
+          version: 9.10.0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.9.0'
           cache: 'pnpm'
-      
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      
+
       - name: Build Next.js
         run: pnpm --filter=web build
         env:
           NEXT_PUBLIC_SOCKET_PORT: http://localhost:8888
-      
+          NEXT_PUBLIC_API_URL: http://localhost:8888
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -83,28 +84,28 @@ jobs:
     name: Build Backend (NestJS)
     runs-on: ubuntu-latest
     needs: lint
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
-      
+          version: 9.10.0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.9.0'
           cache: 'pnpm'
-      
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      
+
       - name: Build NestJS
         run: pnpm --filter=api build
-      
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -117,29 +118,29 @@ jobs:
     name: Run Tests
     runs-on: ubuntu-latest
     needs: lint
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
-      
+          version: 9.10.0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.9.0'
           cache: 'pnpm'
-      
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      
+
       - name: Run tests (API)
         run: pnpm --filter=api test
         continue-on-error: true # Tests not implemented yet
-      
+
       - name: Run tests (Web)
         run: echo "No tests configured yet"
         continue-on-error: true
@@ -149,7 +150,7 @@ jobs:
     name: CI Success
     runs-on: ubuntu-latest
     needs: [lint, build-frontend, build-backend, test]
-    
+
     steps:
       - name: Success message
         run: |
@@ -159,4 +160,3 @@ jobs:
           echo "- Frontend build: ✅"
           echo "- Backend build: ✅"
           echo "- Tests: ✅"
-

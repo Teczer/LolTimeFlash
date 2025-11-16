@@ -37,7 +37,7 @@
 ### Prerequisites
 
 - Node.js 20.9.0 or higher
-- pnpm (recommended) or npm
+- pnpm 9.10.0 or higher (recommended) or npm
 
 ### Installation
 
