@@ -38,6 +38,30 @@ title() {
     echo -e "${CYAN}${BOLD}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 }
 
+# Fonction pour vérifier le fichier .env
+check_env_file() {
+    if [ ! -f ".env" ]; then
+        warning ".env file not found!"
+        echo ""
+        echo "For ${BOLD}local development${NC}:"
+        echo "  cp .env.local.template .env"
+        echo ""
+        echo "For ${BOLD}production deployment${NC}:"
+        echo "  cp .env.production.template .env"
+        echo "  nano .env  ${YELLOW}# Edit NEXT_PUBLIC_SOCKET_PORT${NC}"
+        echo ""
+        info "Using default values (localhost:8888 and localhost:6333)"
+        echo ""
+    else
+        success ".env file found"
+        # Afficher NEXT_PUBLIC_SOCKET_PORT si défini
+        if grep -q "NEXT_PUBLIC_SOCKET_PORT=" .env; then
+            SOCKET_URL=$(grep "NEXT_PUBLIC_SOCKET_PORT=" .env | cut -d '=' -f2)
+            info "Socket.IO URL: ${CYAN}${SOCKET_URL}${NC}"
+        fi
+    fi
+}
+
 # Fonction pour afficher l'aide
 show_help() {
     title "🐳 LolTimeFlash - Docker Manager"
@@ -64,6 +88,7 @@ show_help() {
 # Fonction pour build les images
 docker_build() {
     title "🏗️  Building Docker Images"
+    check_env_file
     info "Building API and Web images..."
     docker-compose build --no-cache
     success "Images built successfully!"
@@ -72,6 +97,7 @@ docker_build() {
 # Fonction pour démarrer les containers
 docker_up() {
     title "🚀 Starting Containers"
+    check_env_file
     info "Starting API and Web containers..."
     docker-compose up -d
     success "Containers started!"
@@ -138,6 +164,9 @@ docker_clean() {
 # Fonction pour tester l'application
 docker_test() {
     title "🧪 Docker Test Suite"
+    
+    check_env_file
+    echo ""
     
     # 1. Clean
     info "Step 1/4: Cleaning existing containers..."
