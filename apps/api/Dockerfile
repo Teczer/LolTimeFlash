@@ -73,9 +73,6 @@ COPY --from=builder /app/pnpm-workspace.yaml ./pnpm-workspace.yaml
 COPY --from=builder /app/pnpm-lock.yaml ./pnpm-lock.yaml
 COPY --from=builder /app/package.json ./package.json
 
-# Copy champions data needed by API
-COPY --from=builder /app/apps/web/public/champions ./apps/web/public/champions
-
 # Create logs directory
 RUN mkdir -p /app/logs && chown -R nestjs:nestjs /app
 
@@ -88,5 +85,5 @@ EXPOSE 8888
 ENV PORT=8888
 ENV LOG_LEVEL=info
 
-CMD ["node", "dist/apps/api/src/main"]
+CMD ["node", "dist/main"]
 

@@ -1,5 +1,5 @@
-import { Global, Module } from '@nestjs/common'
-import { WinstonLoggerService } from './logger.service'
+import { Global, Module } from '@nestjs/common';
+import { WinstonLoggerService } from './logger.service';
 
 @Global() // Rend le logger disponible partout sans avoir à l'importer
 @Module({
@@ -7,4 +7,3 @@ import { WinstonLoggerService } from './logger.service'
   exports: [WinstonLoggerService],
 })
 export class LoggerModule {}
-

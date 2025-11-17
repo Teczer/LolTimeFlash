@@ -1,7 +1,7 @@
 /**
  * League of Legends roles
  */
-export type Role = 'TOP' | 'JUNGLE' | 'MID' | 'ADC' | 'SUPPORT'
+export type Role = 'TOP' | 'JUNGLE' | 'MID' | 'ADC' | 'SUPPORT';
 
 /**
  * Summoner spell data for a single role
@@ -12,28 +12,28 @@ export interface SummonerData {
    * - false: Flash is available
    * - number: Seconds remaining on cooldown
    */
-  isFlashed: boolean | number
-  
+  isFlashed: boolean | number;
+
   /**
    * Whether the player has Lucidity Boots (10.67% CDR)
    */
-  lucidityBoots: boolean
-  
+  lucidityBoots: boolean;
+
   /**
    * Whether the player has Cosmic Insight rune (15% CDR)
    */
-  cosmicInsight: boolean
+  cosmicInsight: boolean;
 }
 
 /**
  * Complete role data for all 5 roles
  */
 export interface RoleData {
-  TOP: SummonerData
-  JUNGLE: SummonerData
-  MID: SummonerData
-  SUPPORT: SummonerData
-  ADC: SummonerData
+  TOP: SummonerData;
+  JUNGLE: SummonerData;
+  MID: SummonerData;
+  SUPPORT: SummonerData;
+  ADC: SummonerData;
 }
 
 /**
@@ -43,27 +43,27 @@ export interface GameState {
   /**
    * Room ID (10 character alphanumeric string)
    */
-  roomId: string
-  
+  roomId: string;
+
   /**
    * List of usernames in the room
    */
-  users: string[]
-  
+  users: string[];
+
   /**
    * Role data for all 5 enemy champions
    */
-  roles: RoleData
-  
+  roles: RoleData;
+
   /**
    * Room creation timestamp
    */
-  createdAt: Date
-  
+  createdAt: Date;
+
   /**
    * Last update timestamp
    */
-  updatedAt: Date
+  updatedAt: Date;
 }
 
 /**
@@ -73,22 +73,22 @@ export interface FlashEventData {
   /**
    * Role that used Flash
    */
-  role: Role
-  
+  role: Role;
+
   /**
    * Username of the player who triggered the event
    */
-  username: string
-  
+  username: string;
+
   /**
    * Cooldown duration in seconds
    */
-  cooldown: number
-  
+  cooldown: number;
+
   /**
    * Timestamp when Flash will be available again
    */
-  endsAt: number
+  endsAt: number;
 }
 
 /**
@@ -98,21 +98,20 @@ export interface ItemToggleData {
   /**
    * Role that toggled an item
    */
-  role: Role
-  
+  role: Role;
+
   /**
    * Item that was toggled
    */
-  item: 'lucidityBoots' | 'cosmicInsight'
-  
+  item: 'lucidityBoots' | 'cosmicInsight';
+
   /**
    * New value for the item
    */
-  value: boolean
-  
+  value: boolean;
+
   /**
    * Username of the player who triggered the event
    */
-  username: string
+  username: string;
 }
-

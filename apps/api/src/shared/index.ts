@@ -1,6 +1,5 @@
 // Types
-export * from './types'
+export * from './types';
 
 // Constants
-export * from './constants'
-
+export * from './constants';
