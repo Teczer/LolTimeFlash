@@ -1,5 +1,5 @@
+import { Image } from '@/components/ui/image.component'
 import type { AllSkinsSplashArts } from '@loltimeflash/shared'
-import Image from 'next/image'
 import { SkinItem } from './skin-item.component'
 
 interface IChampionItemProps {
@@ -14,14 +14,18 @@ export const ChampionItem = (props: IChampionItemProps) => {
     <li className="flex h-auto w-full border bg-[#052431]">
       {/* Champion Icon + Name */}
       <div className="flex h-auto w-1/5 flex-col items-center justify-start gap-2 p-4">
-        <Image
-          quality={75}
-          className="size-10 border object-cover"
-          src={champion.splashArts[0]?.skinImageUrl || ''}
-          alt={`${champion.championName} - ${champion.splashArts[0]?.skinName || 'Default'}`}
-          width={500}
-          height={500}
-        />
+        <div className="size-10 overflow-hidden rounded border">
+          <Image
+            quality={75}
+            className="h-full w-full object-cover"
+            src={champion.splashArts[0]?.skinImageUrl || ''}
+            alt={`${champion.championName} - ${champion.splashArts[0]?.skinName || 'Default'}`}
+            width={500}
+            height={500}
+            skeletonClassName="rounded"
+          />
+        </div>
+
         <h2 className="text-md textstroke text-white">
           {champion.championName}
         </h2>
@@ -34,8 +38,6 @@ export const ChampionItem = (props: IChampionItemProps) => {
             key={`${splash.skinImageUrl}-${skinIndex}`}
             skinName={splash.skinName}
             skinImageUrl={splash.skinImageUrl}
-            championName={champion.championName}
-            isDefault={skinIndex === 0}
             onSelect={onSkinSelect}
           />
         ))}
