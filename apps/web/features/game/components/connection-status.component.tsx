@@ -1,8 +1,3 @@
-/**
- * Connection Status Component
- * Shows WebSocket connection status with animations
- */
-
 'use client'
 
 import { memo } from 'react'

@@ -1,8 +1,3 @@
-/**
- * Username Store
- * Manages user's display name for multiplayer
- */
-
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 

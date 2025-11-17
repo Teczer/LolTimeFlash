@@ -1,8 +1,3 @@
-/**
- * Role Card Component
- * Complete card for a single role (items + flash button)
- */
-
 'use client'
 
 import { cn } from '@/lib/utils'

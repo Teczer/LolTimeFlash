@@ -1,8 +1,3 @@
-/**
- * Game Context - Shared state for game feature
- * Provides game state and actions to all child components
- */
-
 'use client'
 
 import { createContext, useCallback, useContext, useState } from 'react'

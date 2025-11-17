@@ -1,7 +1,3 @@
-/**
- * Audio hook for Flash sound effects
- */
-
 import { useRef, useState, useEffect } from 'react'
 import { FLASH_AUDIO_PATH, AUDIO_VOLUME } from '../constants/game.constants'
 

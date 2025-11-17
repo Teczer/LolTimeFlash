@@ -1,8 +1,3 @@
-/**
- * Solo Game Screen
- * Local-only Flash timer (no WebSocket)
- */
-
 'use client'
 
 import { GameProvider, useGameContext } from '../contexts/game.context'

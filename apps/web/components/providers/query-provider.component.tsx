@@ -1,8 +1,3 @@
-/**
- * React Query Provider
- * Provides TanStack Query client to the app
- */
-
 'use client'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'

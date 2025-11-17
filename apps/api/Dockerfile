@@ -45,9 +45,6 @@ COPY tsconfig.base.json ./
 # Copy backend source
 COPY apps/api ./apps/api
 
-# Copy champions data (needed by ChampionsService)
-COPY apps/web/public/champions ./apps/web/public/champions
-
 # Build NestJS
 WORKDIR /app/apps/api
 RUN pnpm build

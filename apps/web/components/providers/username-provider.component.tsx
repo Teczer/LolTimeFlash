@@ -1,9 +1,3 @@
-/**
- * Username Provider
- * Gates content until username is set
- * Shows UsernameInput modal if username is not present
- */
-
 'use client'
 
 import { useUsernameStore } from '@/app/store/username.store'

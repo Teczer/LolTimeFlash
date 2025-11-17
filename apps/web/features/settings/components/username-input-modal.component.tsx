@@ -1,8 +1,3 @@
-/**
- * Username Input Modal
- * Full-screen modal to collect username when joining a room
- */
-
 'use client'
 
 import { useUsernameStore } from '@/app/store/username.store'

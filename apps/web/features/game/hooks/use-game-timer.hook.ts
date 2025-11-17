@@ -1,7 +1,3 @@
-/**
- * Game timer hook - handles countdown logic
- */
-
 import { useEffect } from 'react'
 import type { IGameData, IRoleData } from '../types/game.types'
 

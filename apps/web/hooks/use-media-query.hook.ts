@@ -1,8 +1,3 @@
-/**
- * Media Query Hook
- * Tracks whether a CSS media query matches
- */
-
 import { useState, useEffect } from 'react'
 
 export const useMediaQuery = (query: string): boolean => {

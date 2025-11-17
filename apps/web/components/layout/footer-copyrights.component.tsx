@@ -1,8 +1,3 @@
-/**
- * Footer Copyrights
- * Fixed footer with author attribution
- */
-
 import Link from 'next/link'
 
 export const FooterCopyrights = () => {

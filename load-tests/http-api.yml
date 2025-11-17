@@ -58,26 +58,16 @@ scenarios:
             - contentType: json
             - hasProperty: uptime
 
-  # Test Champions endpoint
-  - name: 'Get Champions Skins'
-    weight: 3
-    flow:
-      - get:
-          url: '/champions/skins'
-          expect:
-            - statusCode: 200
-            - contentType: json
-
   # Mixed traffic simulation
   - name: 'Mixed User Traffic'
-    weight: 82
+    weight: 85
     flow:
       - think: 1 # Wait 1 second
       - get:
           url: '/monitoring/health'
       - think: 2
       - get:
-          url: '/champions/skins'
+          url: '/monitoring/metrics'
       - think: 1
       - get:
           url: '/monitoring/metrics/socket'

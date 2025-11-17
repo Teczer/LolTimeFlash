@@ -1,8 +1,3 @@
-/**
- * Flash Button Component
- * Displays role icon with timer overlay
- */
-
 'use client'
 
 import { cn } from '@/lib/utils'

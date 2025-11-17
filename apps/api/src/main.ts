@@ -34,7 +34,6 @@ async function bootstrap() {
     .setDescription('Real-time Flash cooldown tracker for League of Legends')
     .setVersion('1.0.0')
     .addTag('monitoring', 'Health checks and metrics endpoints')
-    .addTag('champions', 'Champion data and splash arts')
     .addTag('game', 'Socket.IO events (documented separately)')
     .build();
   

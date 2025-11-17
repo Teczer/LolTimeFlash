@@ -1,6 +1,4 @@
 /**
- * Error Boundary Component
- * Catches JavaScript errors in child components
  * Note: Error Boundaries must use class components (React limitation)
  */
 
@@ -49,9 +47,6 @@ export class ErrorBoundary extends Component<
   }
 }
 
-/**
- * Default Error Fallback UI
- */
 function ErrorFallback({ error }: { error: Error | null }) {
   const handleReload = () => {
     window.location.reload()

@@ -1,7 +1,3 @@
-/**
- * Flash cooldown calculation hook
- */
-
 import type { TRole, ISummonerData } from '../types/game.types'
 import {
   FLASH_BASE_COOLDOWN,

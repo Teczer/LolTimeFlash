@@ -1,8 +1,3 @@
-/**
- * Multiplayer Game Screen
- * Real-time sync via WebSocket
- */
-
 'use client'
 
 import { useSocket } from '@/hooks/use-socket.hook'

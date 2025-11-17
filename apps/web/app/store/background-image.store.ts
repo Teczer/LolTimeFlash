@@ -1,8 +1,3 @@
-/**
- * Background Image Store
- * Manages selected champion splash art background
- */
-
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 

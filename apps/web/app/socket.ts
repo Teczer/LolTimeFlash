@@ -1,8 +1,3 @@
-/**
- * Socket.IO Client
- * Global socket instance for real-time communication
- */
-
 'use client'
 
 import config from '@/lib/config'

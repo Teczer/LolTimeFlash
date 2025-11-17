@@ -1,8 +1,3 @@
-/**
- * Socket Hook
- * Manages WebSocket connection to NestJS backend
- */
-
 'use client'
 
 import type {

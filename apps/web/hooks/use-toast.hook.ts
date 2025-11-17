@@ -1,9 +1,3 @@
-/**
- * Toast Hook
- * Toast notification system (shadcn/ui)
- * Inspired by react-hot-toast library
- */
-
 'use client'
 
 import type { ToastActionElement, ToastProps } from '@/components/ui/toast'

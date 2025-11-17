@@ -1,8 +1,3 @@
-/**
- * Game feature constants
- * Following UPPER_SNAKE_CASE conventions
- */
-
 import type { IGameData, ILeagueRole, ISummonerData } from '../types/game.types'
 
 /**

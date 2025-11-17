@@ -1,9 +1,3 @@
-/**
- * Background Wrapper
- * Manages background image with gradient overlay
- * Mobile/Desktop responsive
- */
-
 'use client'
 
 import { useBackgroundImageStore } from '@/app/store/background-image.store'

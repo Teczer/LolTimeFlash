@@ -1,8 +1,3 @@
-/**
- * Settings Button
- * Navigation button to settings page
- */
-
 import Link from 'next/link'
 import { IoIosSettings } from 'react-icons/io'
 import { Button } from '@/components/ui/button'

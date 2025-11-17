@@ -1,9 +1,4 @@
 /**
- * Game feature types
- * Following I/T prefix conventions
- */
-
-/**
  * League of Legends role type
  */
 export type TRole = 'TOP' | 'JUNGLE' | 'MID' | 'ADC' | 'SUPPORT'

@@ -1,8 +1,3 @@
-/**
- * Item Toggle Component
- * Toggle button for Lucidity Boots or Cosmic Insight
- */
-
 'use client'
 
 import { cn } from '@/lib/utils'

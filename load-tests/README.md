@@ -27,8 +27,7 @@ pnpm load-test:http
 **Endpoints tested:**
 - `/monitoring/health` (10% traffic)
 - `/monitoring/metrics` (5% traffic)
-- `/champions/skins` (3% traffic)
-- Mixed traffic simulation (82%)
+- Mixed traffic simulation (85%)
 
 **Thresholds:**
 - P95 response time: < 200ms
