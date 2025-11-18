@@ -1,25 +1,25 @@
+import { UsePipes, ValidationPipe } from '@nestjs/common';
 import {
-  WebSocketGateway,
-  WebSocketServer,
-  SubscribeMessage,
+  ConnectedSocket,
+  MessageBody,
   OnGatewayConnection,
   OnGatewayDisconnect,
-  MessageBody,
-  ConnectedSocket,
+  SubscribeMessage,
+  WebSocketGateway,
+  WebSocketServer,
 } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
-import { UsePipes, ValidationPipe } from '@nestjs/common';
-import type {
-  ClientToServerEvents,
-  ServerToClientEvents,
-  InterServerEvents,
-  SocketData,
-} from '../shared/types/socket.types';
-import { GameService } from './game.service';
-import { RoomService } from '../room/room.service';
 import { WinstonLoggerService } from '../logger/logger.service';
 import { MetricsService } from '../monitoring/metrics.service';
-import { JoinRoomDto, FlashActionDto, ToggleItemDto } from './dto';
+import { RoomService } from '../room/room.service';
+import type {
+  ClientToServerEvents,
+  InterServerEvents,
+  ServerToClientEvents,
+  SocketData,
+} from '../shared/types/socket.types';
+import { FlashActionDto, JoinRoomDto, ToggleItemDto } from './dto';
+import { GameService } from './game.service';
 
 type TypedSocket = Socket<
   ClientToServerEvents,
@@ -79,6 +79,11 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
         });
 
         this.metricsService.incrementEventEmitted('room:user:left');
+
+        // ✅ Broadcast updated room state so all clients sync
+        this.server.to(roomId).emit('room:state', room);
+        this.metricsService.incrementEventEmitted('room:state');
+
         this.logger.logSocketEvent(
           'room:user:left',
           { username, roomId, remainingUsers: room.users.length },
@@ -165,6 +170,10 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
             users: room.users,
           });
           this.metricsService.incrementEventEmitted('room:user:left');
+
+          // ✅ Broadcast updated room state so all clients sync
+          this.server.to(roomId).emit('room:state', room);
+          this.metricsService.incrementEventEmitted('room:state');
         }
       }
 
