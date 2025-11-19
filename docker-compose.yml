@@ -11,6 +11,7 @@ services:
       - NODE_ENV=${NODE_ENV:-production}
       - PORT=${API_PORT:-8888}
       - LOG_LEVEL=${LOG_LEVEL:-info}
+      - RIOT_API_KEY=${RIOT_API_KEY}
     volumes:
       - api-logs:/app/logs
     restart: unless-stopped

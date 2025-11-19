@@ -1,14 +1,17 @@
 import { ValidationPipe } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
-import { config as appConfig } from './config/config';
 import { WinstonLoggerService } from './logger/logger.service';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     bufferLogs: true, // Buffer logs until logger is ready
   });
+
+  // Get ConfigService instance
+  const configService = app.get(ConfigService);
 
   // Use Winston logger
   const logger = app.get(WinstonLoggerService);
@@ -44,20 +47,26 @@ async function bootstrap() {
     customCss: '.swagger-ui .topbar { display: none }',
   });
 
-  await app.listen(appConfig.port);
+  // Get configuration values
+  const port = configService.get<number>('API_PORT') || 8888;
+  const nodeEnv = configService.get<string>('NODE_ENV') || 'development';
+  const logLevel = configService.get<string>('LOG_LEVEL') || 'info';
+  const isProduction = nodeEnv === 'production';
+  const apiUrl = isProduction
+    ? configService.get<string>('NEXT_PUBLIC_SOCKET_PORT') ||
+      'https://lolsocket.mehdihattou.com'
+    : `http://localhost:${port}`;
 
-  const serverUrl = appConfig.isProduction
-    ? appConfig.apiUrl
-    : `http://localhost:${appConfig.port}`;
+  await app.listen(port);
 
-  logger.log(`🚀 API server is running on ${serverUrl}`, 'Bootstrap');
+  logger.log(`🚀 API server is running on ${apiUrl}`, 'Bootstrap');
   logger.log(
-    `📚 API Documentation available at ${serverUrl}/api/docs`,
+    `📚 API Documentation available at ${apiUrl}/api/docs`,
     'Bootstrap',
   );
   logger.log(`🔌 Socket.IO is ready for connections`, 'Bootstrap');
   logger.log(
-    `📊 Logging configured with Winston (level: ${appConfig.logLevel})`,
+    `📊 Logging configured with Winston (level: ${logLevel})`,
     'Bootstrap',
   );
 }

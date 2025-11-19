@@ -102,8 +102,6 @@ LolTimeFlash/                       # Monorepo Root
 │   │   │   ├── logger/            # Logger Module
 │   │   │   │   ├── logger.service.ts  # Winston logger
 │   │   │   │   └── logger.module.ts
-│   │   │   ├── config/            # Configuration
-│   │   │   │   └── config.ts          # Environment config
 │   │   │   ├── app.module.ts      # Root module
 │   │   │   └── main.ts            # Application entry point
 │   │   │
@@ -724,6 +722,7 @@ pnpm docker:clean    # Remove images & volumes
 PORT=8888
 NODE_ENV=development
 LOG_LEVEL=info
+RIOT_API_KEY=RGAPI-your-key-here
 ```
 
 **Web** (`.env`):
@@ -731,6 +730,60 @@ LOG_LEVEL=info
 ```env
 NEXT_PUBLIC_SOCKET_PORT=http://localhost:8888
 NEXT_PUBLIC_API_URL=http://localhost:8888
+```
+
+### Configuration Pattern
+
+**LolTimeFlash utilise exclusivement `ConfigService` de NestJS** pour toutes les variables d'environnement.
+
+#### ✅ Pattern Recommandé : `ConfigService`
+
+**Utilisation** : Toutes les variables d'environnement (PORT, LOG_LEVEL, API_KEY, etc.)
+
+```typescript
+// apps/api/src/riot/riot.service.ts
+import { ConfigService } from '@nestjs/config'
+
+@Injectable()
+export class RiotService {
+  private readonly riotApiKey: string
+
+  constructor(private configService: ConfigService) {
+    this.riotApiKey = this.configService.get<string>('RIOT_API_KEY') || ''
+  }
+}
+
+// apps/api/src/main.ts
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule)
+  const configService = app.get(ConfigService)
+
+  const port = configService.get<number>('API_PORT') || 8888
+  await app.listen(port)
+}
+```
+
+**Avantages** :
+
+- ✅ Respecte le lifecycle NestJS (variables chargées par `ConfigModule.forRoot()`)
+- ✅ Testable via Dependency Injection
+- ✅ Type-safe avec validation possible (class-validator)
+- ✅ Une seule source de vérité pour toutes les variables
+- ✅ Fonctionne dans `main.ts` via `app.get(ConfigService)`
+
+**Configuration** (`apps/api/src/app.module.ts`):
+
+```typescript
+@Module({
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: '../../.env', // Load from project root
+    }),
+    // ... other modules
+  ],
+})
+export class AppModule {}
 ```
 
 ---
@@ -1201,7 +1254,7 @@ import { Role, GameState } from '@loltimeflash/shared'
 
 ## 🔄 Version History & Upgrades
 
-### Version 2.1.0 - November 2025 (Documentation & Docker Fixes)
+### Version 2.1.1 - November 2025 (Documentation & Docker Fixes)
 
 **Documentation Complete & Critical Fixes** :
 
@@ -1759,5 +1812,5 @@ For questions, issues, or contributions:
 ---
 
 **Last Updated**: November 19, 2025
-**Version**: 2.1.0 - NestJS Monorepo Architecture
+**Version**: 2.1.1 - NestJS Monorepo Architecture
 **Status**: ✅ Production Ready (API + Web + Docker)
