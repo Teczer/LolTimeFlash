@@ -27,6 +27,7 @@ const RoleCardComponent = (props: IRoleCardProps) => {
     className,
   } = props
 
+  console.log('data', data)
   return (
     <div
       className={cn(
@@ -57,9 +58,10 @@ const RoleCardComponent = (props: IRoleCardProps) => {
       {/* Flash Button */}
       <FlashButton
         role={role.name}
-        iconSrc={role.src}
+        iconSrc={data.champion?.championIconUrl || role.src}
         cooldown={data.isFlashed}
         onClick={onFlashClick}
+        summonerName={data.champion?.summonerName}
       />
     </div>
   )
@@ -72,6 +74,9 @@ export const RoleCard = memo(RoleCardComponent, (prev, next) => {
     prev.data.isFlashed === next.data.isFlashed &&
     prev.data.lucidityBoots === next.data.lucidityBoots &&
     prev.data.cosmicInsight === next.data.cosmicInsight &&
+    prev.data.champion?.championIconUrl ===
+      next.data.champion?.championIconUrl &&
+    prev.data.champion?.summonerName === next.data.champion?.summonerName &&
     prev.isLastRole === next.isLastRole
   )
 })

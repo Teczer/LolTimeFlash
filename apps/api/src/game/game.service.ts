@@ -1,10 +1,10 @@
-import { Injectable } from '@nestjs/common';
 import type {
-  Role,
   FlashEventData,
   ItemToggleData,
-} from '../shared/types/game.types';
-import { calculateFlashCooldown } from '../shared/constants/cooldowns';
+  Role,
+} from '@loltimeflash/shared';
+import { calculateFlashCooldown } from '@loltimeflash/shared';
+import { Injectable } from '@nestjs/common';
 import { RoomService } from '../room/room.service';
 
 @Injectable()
@@ -108,5 +108,38 @@ export class GameService {
       value: newValue,
       username,
     };
+  }
+
+  /**
+   * Handle champion data update from Riot API
+   */
+  updateChampionData(
+    roomId: string,
+    roleMapping: Partial<
+      Record<Role, import('@loltimeflash/shared').ChampionUpdateData>
+    >,
+  ): void {
+    const room = this.roomService.getRoom(roomId);
+
+    if (!room) {
+      throw new Error(`Room ${roomId} not found`);
+    }
+
+    // Update each role with champion data
+    for (const roleKey in roleMapping) {
+      const role = roleKey as Role;
+      const championData = roleMapping[role];
+
+      if (championData && room.roles[role]) {
+        room.roles[role].champion = {
+          championId: championData.championId,
+          championName: championData.championName,
+          championIconUrl: championData.championIconUrl,
+          summonerName: championData.summonerName,
+        };
+      }
+    }
+
+    this.roomService.updateRoom(roomId, { roles: room.roles });
   }
 }

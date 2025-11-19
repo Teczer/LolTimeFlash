@@ -1,6 +1,6 @@
+import type { Role } from '@loltimeflash/shared';
+import { ROLES } from '@loltimeflash/shared';
 import { IsEnum, IsIn } from 'class-validator';
-import { ROLES } from '../../shared/constants/roles';
-import type { Role } from '../../shared/types/game.types';
 
 const ITEMS = ['lucidityBoots', 'cosmicInsight'] as const;
 type Item = (typeof ITEMS)[number];

@@ -6,33 +6,36 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
+        protocol: 'https',
         hostname: 'ih1.redbubble.net',
       },
       {
+        protocol: 'https',
         hostname: 'lh3.googleusercontent.com',
       },
       {
+        protocol: 'https',
         hostname: 'cdnb.artstation.com',
       },
       {
+        protocol: 'https',
         hostname: 'ddragon.leagueoflegends.com',
+        pathname: '/cdn/**',
       },
       {
+        protocol: 'https',
         hostname: 'raw.communitydragon.org',
       },
       {
-        hostname: 'https://res.cloudinary.com',
-      },
-      {
-        hostname: 'https://res-console.cloudinary.com',
-      },
-      {
-        hostname: 'res-console.cloudinary.com',
-      },
-      {
+        protocol: 'https',
         hostname: 'res.cloudinary.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'res-console.cloudinary.com',
+      },
     ],
+    dangerouslyAllowSVG: true,
   },
 }
 export default nextConfig

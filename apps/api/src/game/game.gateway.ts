@@ -1,3 +1,10 @@
+import type {
+  ChampionRoleMapping,
+  ClientToServerEvents,
+  InterServerEvents,
+  ServerToClientEvents,
+  SocketData,
+} from '@loltimeflash/shared';
 import { UsePipes, ValidationPipe } from '@nestjs/common';
 import {
   ConnectedSocket,
@@ -12,12 +19,6 @@ import { Server, Socket } from 'socket.io';
 import { WinstonLoggerService } from '../logger/logger.service';
 import { MetricsService } from '../monitoring/metrics.service';
 import { RoomService } from '../room/room.service';
-import type {
-  ClientToServerEvents,
-  InterServerEvents,
-  ServerToClientEvents,
-  SocketData,
-} from '../shared/types/socket.types';
 import { FlashActionDto, JoinRoomDto, ToggleItemDto } from './dto';
 import { GameService } from './game.service';
 
@@ -350,6 +351,62 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
       );
       client.emit('error', {
         code: 'TOGGLE_ITEM_ERROR',
+        message: errorMessage,
+      });
+    }
+  }
+
+  /**
+   * Handle champion data update
+   */
+  @SubscribeMessage('game:champion:update')
+  handleChampionUpdate(
+    @ConnectedSocket() client: TypedSocket,
+    @MessageBody() payload: { roleMapping: ChampionRoleMapping },
+  ) {
+    const { roleMapping } = payload;
+    const { roomId, username } = client.data;
+    this.metricsService.incrementEventReceived('game:champion:update');
+
+    if (!roomId || !username) {
+      client.emit('error', {
+        code: 'NOT_IN_ROOM',
+        message: 'You must join a room first',
+      });
+      return;
+    }
+
+    try {
+      this.gameService.updateChampionData(roomId, roleMapping);
+
+      // Broadcast champion update event to all in room
+      this.server.to(roomId).emit('game:champion:update', {
+        roleMapping,
+        username,
+      });
+      this.metricsService.incrementEventEmitted('game:champion:update');
+
+      // ✅ Broadcast updated room state
+      const updatedRoom = this.roomService.getRoom(roomId);
+      if (updatedRoom) {
+        this.server.to(roomId).emit('room:state', updatedRoom);
+        this.metricsService.incrementEventEmitted('room:state');
+      }
+
+      this.logger.logSocketEvent(
+        'game:champion:update',
+        { username, roomId, roleCount: Object.keys(roleMapping).length },
+        client.id,
+      );
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : 'Unknown error';
+      this.logger.logError(
+        error instanceof Error ? error : new Error(errorMessage),
+        'GameGateway',
+      );
+      client.emit('error', {
+        code: 'CHAMPION_UPDATE_ERROR',
         message: errorMessage,
       });
     }

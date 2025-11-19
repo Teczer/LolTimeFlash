@@ -1,12 +1,12 @@
 'use client'
 
+import config from '@/lib/config'
 import type {
   ClientToServerEvents,
   GameState,
   Role,
   ServerToClientEvents,
 } from '@loltimeflash/shared'
-import config from '@/lib/config'
 import { useEffect, useRef, useState } from 'react'
 import { io, Socket } from 'socket.io-client'
 
@@ -28,6 +28,9 @@ interface IUseSocketReturn {
   useFlash: (role: Role) => void
   cancelFlash: (role: Role) => void
   toggleItem: (role: Role, item: 'lucidityBoots' | 'cosmicInsight') => void
+  updateChampionData: (
+    roleMapping: import('@loltimeflash/shared').ChampionRoleMapping
+  ) => void
 }
 
 export const useSocket = (
@@ -100,6 +103,10 @@ export const useSocket = (
       console.log('👋 User left:', data.username)
     })
 
+    socket.on('game:champion:update', (data) => {
+      console.log('🎮 Champion data updated:', data)
+    })
+
     socket.on('error', (error) => {
       console.error('❌ Socket error:', error)
     })
@@ -151,6 +158,14 @@ export const useSocket = (
     }
   }
 
+  const updateChampionData = (
+    roleMapping: import('@loltimeflash/shared').ChampionRoleMapping
+  ): void => {
+    if (socketRef.current) {
+      socketRef.current.emit('game:champion:update', { roleMapping })
+    }
+  }
+
   return {
     socket: socketRef.current,
     isConnected,
@@ -161,5 +176,6 @@ export const useSocket = (
     useFlash,
     cancelFlash,
     toggleItem,
+    updateChampionData,
   }
 }

@@ -1,11 +1,13 @@
 'use client'
 
 import { useSocket } from '@/hooks/use-socket.hook'
+import { mapEnemyParticipantsToRoles } from '@/lib/riot-role-mapping.util'
 import { useEffect } from 'react'
 import { ConnectionStatus } from '../components/connection-status.component'
 import { GameControls } from '../components/game-controls.component'
 import { RoleCard } from '../components/role-card.component'
 import { RoomInfo } from '../components/room-info.component'
+import { SummonerInput } from '../components/summoner-input.component'
 import { UserList } from '../components/user-list.component'
 import { LEAGUE_ROLES } from '../constants/game.constants'
 import { GameProvider, useGameContext } from '../contexts/game.context'
@@ -19,7 +21,8 @@ interface IMultiplayerContentProps {
 
 const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
   const { roomId, username } = props
-  const { gameState, setGameState, audio } = useGameContext()
+  const { gameState, setGameState, updateChampionData, audio } =
+    useGameContext()
 
   // Socket hook for real-time communication
   const {
@@ -29,6 +32,7 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
     useFlash: emitUseFlash,
     cancelFlash: emitCancelFlash,
     toggleItem: emitToggleItem,
+    updateChampionData: emitUpdateChampionData,
   } = useSocket({
     enabled: true,
     roomId,
@@ -40,27 +44,35 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
   useEffect(() => {
     if (backendGameState) {
       setGameState((prevState) => {
-        const newRoles = { ...backendGameState.roles }
+        const newRoles = { ...prevState.roles }
 
-        // Convert backend timestamps (endsAt) to local countdown (seconds)
-        for (const roleKey in newRoles) {
+        // Update roles with backend data while preserving champion info
+        for (const roleKey in backendGameState.roles) {
           const role = roleKey as TRole
-          const backendRoleData = newRoles[role]
+          const backendRoleData = backendGameState.roles[role]
+          const currentRoleData = newRoles[role]
 
-          // If backend has a timestamp (number), convert to countdown
+          // Convert backend timestamps (endsAt) to local countdown (seconds)
+          let isFlashedValue: number | false = backendRoleData.isFlashed
+
           if (typeof backendRoleData.isFlashed === 'number') {
             const countdown = timestampToCountdown(backendRoleData.isFlashed)
+            isFlashedValue = countdown > 0 ? countdown : false
+          }
 
-            // If countdown reached 0, set to false
-            newRoles[role] = {
-              ...backendRoleData,
-              isFlashed: countdown > 0 ? countdown : false,
-            }
+          // Merge backend data with existing champion data
+          newRoles[role] = {
+            isFlashed: isFlashedValue,
+            lucidityBoots: backendRoleData.lucidityBoots,
+            cosmicInsight: backendRoleData.cosmicInsight,
+            // Preserve champion data from backend or keep existing
+            champion: backendRoleData.champion || currentRoleData?.champion,
           }
         }
 
         return {
-          ...backendGameState,
+          ...prevState,
+          users: backendGameState.users,
           roles: newRoles,
         }
       })
@@ -89,8 +101,28 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
     emitToggleItem(role, item)
   }
 
+  const handleGameDataFetched = (data: {
+    enemies: Array<{
+      championId: number
+      riotId?: string
+      summonerName?: string
+      championIconUrl?: string
+      spell1Id: number
+      spell2Id: number
+    }>
+  }) => {
+    // Map enemy participants to roles
+    const roleMapping = mapEnemyParticipantsToRoles(data.enemies)
+
+    // Update local game state with champion data
+    updateChampionData(roleMapping)
+
+    // Emit to socket for synchronization across room
+    emitUpdateChampionData(roleMapping)
+  }
+
   return (
-    <main className="flex h-screen flex-col items-center justify-start gap-2 p-6 sm:gap-0 sm:p-10">
+    <main className="flex h-screen flex-col items-center justify-start gap-2 p-6 sm:gap-2 sm:p-10">
       {/* Connection Status */}
       <ConnectionStatus
         isConnected={isConnected}
@@ -106,12 +138,15 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
         <RoomInfo roomId={roomId} />
       </div>
 
+      {/* Summoner Input */}
+      <SummonerInput onGameDataFetched={handleGameDataFetched} />
+
       {/* Role Grid */}
       <div className="flex h-4/5 w-full flex-wrap sm:flex-nowrap">
         {LEAGUE_ROLES.map((role, index) => {
           const roleData = gameState.roles[role.name]
           const isLastRole = index === LEAGUE_ROLES.length - 1
-
+          console.log('roleData', roleData)
           return (
             <RoleCard
               key={role.name}

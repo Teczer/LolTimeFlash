@@ -4,6 +4,31 @@
 export type TRole = 'TOP' | 'JUNGLE' | 'MID' | 'ADC' | 'SUPPORT'
 
 /**
+ * Champion data for a role
+ */
+export interface IChampionData {
+  /**
+   * Champion ID (e.g., 266 for Aatrox)
+   */
+  championId: number
+  
+  /**
+   * Champion name (e.g., "Aatrox")
+   */
+  championName: string
+  
+  /**
+   * Champion icon URL
+   */
+  championIconUrl: string
+  
+  /**
+   * Summoner name of the player
+   */
+  summonerName: string
+}
+
+/**
  * Summoner spell data for a single role
  */
 export interface ISummonerData {
@@ -17,6 +42,11 @@ export interface ISummonerData {
   isFlashed: false | number
   lucidityBoots: boolean
   cosmicInsight: boolean
+  
+  /**
+   * Champion data (optional, populated from live game)
+   */
+  champion?: IChampionData
 }
 
 /**
@@ -36,6 +66,16 @@ export interface IRoleData {
 export interface IGameData {
   users: string[]
   roles: IRoleData
+  
+  /**
+   * Summoner name of the player (for Riot API integration)
+   */
+  summonerName?: string
+  
+  /**
+   * Region of the player (e.g., 'euw1', 'na1')
+   */
+  region?: string
 }
 
 /**

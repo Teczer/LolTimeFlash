@@ -3,11 +3,14 @@
 import { GameProvider, useGameContext } from '../contexts/game.context'
 import { GameControls } from '../components/game-controls.component'
 import { RoleCard } from '../components/role-card.component'
+import { SummonerInput } from '../components/summoner-input.component'
 import { LEAGUE_ROLES } from '../constants/game.constants'
 import type { TRole } from '../types/game.types'
+import { mapEnemyParticipantsToRoles } from '@/lib/riot-role-mapping.util'
 
 const SoloGameContent = () => {
-  const { gameState, useFlash, cancelFlash, toggleItem, audio } = useGameContext()
+  const { gameState, useFlash, cancelFlash, toggleItem, updateChampionData, audio } =
+    useGameContext()
 
   const handleFlashClick = (role: TRole) => {
     const roleData = gameState.roles[role]
@@ -21,10 +24,30 @@ const SoloGameContent = () => {
     }
   }
 
+  const handleGameDataFetched = (data: {
+    enemies: Array<{
+      championId: number
+      riotId?: string
+      summonerName?: string
+      championIconUrl?: string
+      spell1Id: number
+      spell2Id: number
+    }>
+  }) => {
+    // Map enemy participants to roles
+    const roleMapping = mapEnemyParticipantsToRoles(data.enemies)
+    
+    // Update game state with champion data
+    updateChampionData(roleMapping)
+  }
+
   return (
-    <main className="flex h-screen flex-col items-center gap-2 p-6 sm:gap-0 sm:p-10 justify-center">
+    <main className="flex h-screen flex-col items-center gap-2 p-6 sm:gap-4 sm:p-10 justify-center">
       {/* Controls */}
       <GameControls volume={audio.volume} onToggleVolume={audio.toggleVolume} />
+
+      {/* Summoner Input */}
+      <SummonerInput onGameDataFetched={handleGameDataFetched} />
 
       {/* Role Grid */}
       <div className="flex h-4/5 w-full flex-wrap sm:flex-nowrap">
