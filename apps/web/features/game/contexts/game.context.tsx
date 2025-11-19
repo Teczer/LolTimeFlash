@@ -40,17 +40,20 @@ export const GameProvider = (props: IGameProviderProps) => {
   // Timer countdown (decrements every second)
   useGameTimer({ gameState, setGameState })
 
-  // Use Flash for a role
+  // ✅ Use Flash for a role (timestamp-based)
   const useFlash = useCallback(
     (role: TRole) => {
       setGameState((prev) => {
         const roleData = prev.roles[role]
 
-        // Calculate cooldown based on items
-        const cooldown = calculateFlashCooldown({
+        // Calculate cooldown based on items (in seconds)
+        const cooldownSeconds = calculateFlashCooldown({
           lucidityBoots: roleData.lucidityBoots,
           cosmicInsight: roleData.cosmicInsight,
         })
+
+        // ✅ Convert to timestamp (endsAt = now + cooldown)
+        const endsAt = Date.now() + cooldownSeconds * 1000
 
         return {
           ...prev,
@@ -58,7 +61,7 @@ export const GameProvider = (props: IGameProviderProps) => {
             ...prev.roles,
             [role]: {
               ...roleData,
-              isFlashed: cooldown,
+              isFlashed: endsAt, // Store timestamp instead of countdown
             },
           },
         }
@@ -84,19 +87,21 @@ export const GameProvider = (props: IGameProviderProps) => {
     }))
   }, [])
 
-  // Toggle item (Boots or Rune)
+  // ✅ Toggle item (Boots or Rune) - timestamp-based
   const toggleItem = useCallback(
     (role: TRole, item: 'lucidityBoots' | 'cosmicInsight') => {
       setGameState((prev) => {
         const roleData = prev.roles[role]
         const newItemValue = !roleData[item]
 
-        // If Flash is on cooldown, recalculate proportionally
+        // If Flash is on cooldown, recalculate timestamp proportionally
         let newFlashValue = roleData.isFlashed
         if (typeof roleData.isFlashed === 'number') {
-          const currentCountdown = roleData.isFlashed
+          const endsAt = roleData.isFlashed
+          const now = Date.now()
+          const remainingMs = Math.max(0, endsAt - now)
 
-          // Calculate old and new max cooldowns
+          // Calculate old and new max cooldowns (in seconds)
           const oldMaxCooldown = calculateFlashCooldown({
             lucidityBoots: roleData.lucidityBoots,
             cosmicInsight: roleData.cosmicInsight,
@@ -110,8 +115,11 @@ export const GameProvider = (props: IGameProviderProps) => {
           })
 
           // Keep the same percentage remaining
-          const percentageRemaining = currentCountdown / oldMaxCooldown
-          newFlashValue = Math.ceil(percentageRemaining * newMaxCooldown)
+          const percentageRemaining = remainingMs / (oldMaxCooldown * 1000)
+          const newRemainingMs = percentageRemaining * newMaxCooldown * 1000
+
+          // ✅ Recalculate new endsAt timestamp
+          newFlashValue = now + newRemainingMs
         }
 
         return {

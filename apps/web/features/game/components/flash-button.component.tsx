@@ -2,8 +2,11 @@
 
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
-import { memo } from 'react'
-import { formatCooldown } from '../hooks/use-flash-cooldown.hook'
+import { memo, useEffect, useState } from 'react'
+import {
+  formatCooldown,
+  getRemainingTime,
+} from '../hooks/use-flash-cooldown.hook'
 import type { TRole } from '../types/game.types'
 
 interface IFlashButtonProps {
@@ -19,7 +22,23 @@ const FlashButtonComponent = (props: IFlashButtonProps) => {
   const { role, iconSrc, cooldown, onClick, summonerName, className } = props
   const isDDragonIcon = iconSrc.includes('ddragon.leagueoflegends.com')
 
-  const isOnCooldown = typeof cooldown === 'number'
+  // ✅ Force re-render every second to update countdown display
+  const [tick, setTick] = useState(0)
+
+  useEffect(() => {
+    // Only run interval if cooldown is active
+    if (typeof cooldown === 'number') {
+      const interval = setInterval(() => {
+        setTick((prev) => prev + 1) // Force re-render
+      }, 1000) // Update every second
+
+      return () => clearInterval(interval)
+    }
+  }, [cooldown])
+
+  // ✅ Calculate remaining time dynamically from timestamp (recalculated on every tick)
+  const remainingSeconds = getRemainingTime(cooldown)
+  const isOnCooldown = remainingSeconds > 0
 
   return (
     <div className="flex flex-col items-center gap-2">
@@ -35,7 +54,7 @@ const FlashButtonComponent = (props: IFlashButtonProps) => {
         {/* Timer overlay */}
         {isOnCooldown && (
           <p className="textstroke absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 transform text-xl font-bold sm:text-[3rem]">
-            {formatCooldown(cooldown)}
+            {formatCooldown(remainingSeconds)}
           </p>
         )}
 
@@ -66,5 +85,7 @@ const FlashButtonComponent = (props: IFlashButtonProps) => {
 }
 
 export const FlashButton = memo(FlashButtonComponent, (prev, next) => {
+  // ✅ Re-render when cooldown or iconSrc changes
+  // Internal tick state will force re-renders every second during countdown
   return prev.cooldown === next.cooldown && prev.iconSrc === next.iconSrc
 })

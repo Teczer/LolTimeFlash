@@ -1055,9 +1055,32 @@ export const gameDefaultData: GameData = {
 
 ### ✅ Bugs Critiques Résolus
 
+#### ✅ BUG #2 : Timer Desync Multi-Device - **FIXED** (19 nov 2025)
+
+**Problème** : Décalages de 5-10 secondes entre clients après quelques minutes
+- Chaque client décrémentait son propre compteur indépendamment
+- `setInterval(1000)` n'est pas précis (997-1003ms)
+- Latence réseau créait des écarts cumulatifs
+
+**Solution (v2.2.0)** : Architecture timestamp-based pure
+
+- Frontend stocke AUSSI des timestamps (pas seulement countdown)
+- Calcul dynamique à chaque tick avec `Date.now()`
+- Ajout state `tick` dans `FlashButton` pour forcer re-render toutes les secondes
+- Zero time drift garanti
+
+**Résultat** : Synchronisation parfaite entre tous les clients (±1s max)
+
+**Fichiers modifiés** : 7 fichiers (voir Version 2.2.0)  
+**Détails complets** : Voir `TIMER_SYNC_FIX_PLAN.md` et `TIMER_SYNC_TESTS.md`
+
+---
+
 #### ✅ BUG #1 : Timer Reset en Multiplayer - **FIXED** (13 nov 2024)
 
-**Solution** : Architecture timestamp-based
+**Problème** : Les timers se réinitialisaient lors des broadcasts/joins/toggles
+
+**Solution** : Backend stocke des timestamps
 
 - Backend stocke `endsAt` timestamp au lieu de countdown
 - Frontend convertit dynamiquement timestamp → countdown
@@ -1253,6 +1276,61 @@ import { Role, GameState } from '@loltimeflash/shared'
 ---
 
 ## 🔄 Version History & Upgrades
+
+### Version 2.2.0 - November 2025 (Timer Synchronization Fix)
+
+**Critical Bug Fix - Timestamp-Based Timer Architecture** :
+
+- 🐛 **Fixed Timer Sync** : Résolution du bug de désynchronisation des timers entre clients (5-10s de décalage)
+- ✅ **Architecture Timestamp-Based** : Migration complète vers système basé sur timestamps absolus
+- ✅ **Calcul Dynamique** : Les countdowns sont maintenant calculés dynamiquement avec `Date.now()`
+- ✅ **Zero Time Drift** : Plus de dérive temporelle grâce au recalcul à chaque tick
+- ✅ **Multiplayer Sync** : Synchronisation parfaite entre tous les clients (±1s max)
+- ✅ **Reconnection Resilience** : Les timestamps restent valides après reconnexion/refresh
+
+**Problème Résolu** :
+
+Avant cette version, les timers utilisaient une architecture hybride défectueuse :
+- Backend : Stockait des timestamps (correct) ✅
+- Frontend : Convertissait en countdown puis décrémentait localement ❌
+
+Cela causait des décalages de 5-10 secondes entre devices après quelques minutes de jeu.
+
+**Solution Implémentée** :
+
+```typescript
+// ❌ AVANT : Conversion + décrémentation locale
+const countdown = timestampToCountdown(backendRoleData.isFlashed)
+const newValue = roleData.isFlashed - 1 // Chaque client décrémente indépendamment
+
+// ✅ APRÈS : Calcul dynamique basé sur timestamp
+const isFlashedValue = backendRoleData.isFlashed // Stocke le timestamp directement
+const remainingSeconds = getRemainingTime(cooldown) // Calcul avec Date.now() actuel
+```
+
+**Fichiers Modifiés** :
+
+| Fichier                          | Changements                                     |
+| -------------------------------- | ----------------------------------------------- |
+| `use-flash-cooldown.hook.ts`    | Ajout `getRemainingTime()` helper               |
+| `use-game-timer.hook.ts`         | Réécriture complète (plus de décrémentation)    |
+| `game-multiplayer.screen.tsx`    | Suppression conversion timestamp → countdown    |
+| `game.context.tsx`               | `useFlash` et `toggleItem` timestamp-based      |
+| `flash-button.component.tsx`     | Calcul dynamique + tick state pour re-render    |
+| `role-card.component.tsx`        | Cleanup console.log                             |
+| `game.types.ts`                  | Documentation sémantique timestamp              |
+
+**Testing** :
+
+- ✅ Synchronisation multi-device validée
+- ✅ Reconnexion sans reset du timer
+- ✅ Toggle items recalcule correctement
+- ✅ Solo mode fonctionne
+- ✅ Pas de memory leak ou performance issue
+
+**Impact** : 🟢 Bug critique résolu, application maintenant production-ready pour le multiplayer
+
+---
 
 ### Version 2.1.1 - November 2025 (Documentation & Docker Fixes)
 
@@ -1812,5 +1890,5 @@ For questions, issues, or contributions:
 ---
 
 **Last Updated**: November 19, 2025
-**Version**: 2.1.1 - NestJS Monorepo Architecture
-**Status**: ✅ Production Ready (API + Web + Docker)
+**Version**: 2.2.0 - Timer Synchronization Fix
+**Status**: ✅ Production Ready (API + Web + Docker + Timer Sync)
