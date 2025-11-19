@@ -27,7 +27,6 @@ const RoleCardComponent = (props: IRoleCardProps) => {
     className,
   } = props
 
-  console.log('data', data)
   return (
     <div
       className={cn(

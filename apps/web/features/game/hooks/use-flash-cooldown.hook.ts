@@ -27,7 +27,22 @@ export const calculateFlashCooldown = (options: ICalculateCooldownOptions): numb
 }
 
 /**
+ * ✅ Get remaining time for a Flash cooldown (timestamp-based)
+ * Dynamically calculates countdown based on endsAt timestamp
+ * @param isFlashed - Flash status (false or endsAt timestamp in ms)
+ * @returns Remaining seconds (or 0 if not on cooldown)
+ */
+export const getRemainingTime = (isFlashed: false | number): number => {
+  if (isFlashed === false) return 0
+
+  const now = Date.now()
+  const remainingMs = Math.max(0, isFlashed - now)
+  return Math.ceil(remainingMs / 1000)
+}
+
+/**
  * Convert endsAt timestamp to countdown in seconds
+ * @deprecated Use getRemainingTime() instead
  */
 export const timestampToCountdown = (endsAt: number): number => {
   const now = Date.now()

@@ -12,7 +12,6 @@ import { SummonerInput } from '../components/summoner-input.component'
 import { UserList } from '../components/user-list.component'
 import { LEAGUE_ROLES } from '../constants/game.constants'
 import { GameProvider, useGameContext } from '../contexts/game.context'
-import { timestampToCountdown } from '../hooks/use-flash-cooldown.hook'
 import type { TRole } from '../types/game.types'
 
 interface IMultiplayerContentProps {
@@ -40,8 +39,8 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
     username,
   })
 
-  // Sync backend state to local state
-  // Backend sends timestamps (endsAt), convert to countdown (seconds)
+  // ✅ Sync backend state to local state
+  // Backend sends timestamps (endsAt), store them directly (no conversion)
   useEffect(() => {
     if (backendGameState) {
       setGameState((prevState) => {
@@ -53,13 +52,9 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
           const backendRoleData = backendGameState.roles[role]
           const currentRoleData = newRoles[role]
 
-          // Convert backend timestamps (endsAt) to local countdown (seconds)
-          let isFlashedValue: number | false = backendRoleData.isFlashed
-
-          if (typeof backendRoleData.isFlashed === 'number') {
-            const countdown = timestampToCountdown(backendRoleData.isFlashed)
-            isFlashedValue = countdown > 0 ? countdown : false
-          }
+          // ✅ Store backend timestamps directly (no conversion to countdown)
+          // Countdown will be calculated dynamically in components using getRemainingTime()
+          const isFlashedValue: number | false = backendRoleData.isFlashed
 
           // Merge backend data with existing champion data
           newRoles[role] = {
@@ -130,7 +125,6 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
     emitUpdateChampionData(roleMapping, gameInfo)
   }
 
-  console.log('gameState', gameState)
   return (
     <main className="flex h-screen flex-col items-center justify-start gap-2 p-6 sm:gap-2 sm:p-10">
       {/* Connection Status */}
@@ -164,7 +158,7 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
         {LEAGUE_ROLES.map((role, index) => {
           const roleData = gameState.roles[role.name]
           const isLastRole = index === LEAGUE_ROLES.length - 1
-          console.log('roleData', roleData)
+
           return (
             <RoleCard
               key={role.name}

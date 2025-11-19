@@ -33,11 +33,14 @@ export interface IChampionData {
  */
 export interface ISummonerData {
   /**
-   * Flash cooldown status
+   * ✅ Flash cooldown status (TIMESTAMP-BASED)
    * - false: Flash is available
-   * - number: Countdown in seconds (local state)
+   * - number: Timestamp in milliseconds when Flash will be available (endsAt)
    * 
-   * Note: Backend stores timestamp (endsAt in ms), frontend converts to countdown
+   * Example: 1700000300000 means Flash will be ready at this Date.now() timestamp
+   * 
+   * Note: Components calculate countdown dynamically using getRemainingTime(isFlashed)
+   * This prevents time drift and ensures synchronization across all clients
    */
   isFlashed: false | number
   lucidityBoots: boolean
