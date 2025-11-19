@@ -1201,7 +1201,26 @@ import { Role, GameState } from '@loltimeflash/shared'
 
 ## 🔄 Version History & Upgrades
 
-### Version 0.4.0 - November 2025 (NestJS Monorepo)
+### Version 2.1.0 - November 2025 (Documentation & Docker Fixes)
+
+**Documentation Complete & Critical Fixes** :
+
+- ✅ **Docker Fixes** : 3 bugs critiques résolus (API runtime, Web TypeScript resolution, scripts paths)
+- ✅ **Documentation** : README + AGENTS.md complètement mis à jour (1638 lignes)
+- ✅ **Shared Types Architecture** : Flux documenté avec diagrammes
+- ✅ **Cleanup** : Suppression de 5 fichiers temporaires de migration
+- ✅ **Demo Section** : README prêt pour video/GIF marketing
+- ✅ **Production Ready** : Docker test suite passe complètement
+
+**Fixes Appliqués** :
+
+- `apps/api/Dockerfile` : CMD path fix (`dist/src/main`)
+- `apps/api/package.json` : Scripts start/start:prod corrigés
+- `apps/web/Dockerfile` : TypeScript resolution fix (copy apps/api/libs)
+
+---
+
+### Version 2.0.0 - November 2025 (NestJS Monorepo)
 
 **Major Architecture Refactor** :
 
@@ -1740,5 +1759,5 @@ For questions, issues, or contributions:
 ---
 
 **Last Updated**: November 19, 2025
-**Version**: 0.4.0 - NestJS Monorepo Architecture
+**Version**: 2.1.0 - NestJS Monorepo Architecture
 **Status**: ✅ Production Ready (API + Web + Docker)
