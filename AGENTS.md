@@ -24,188 +24,362 @@
 
 ## 🏗️ Architecture
 
+### Overview
+
+LolTimeFlash est une **application monorepo** composée d'un backend NestJS et d'un frontend Next.js qui communiquent en temps réel via WebSocket.
+
 ### Tech Stack
 
-#### Frontend
+#### Frontend (Next.js)
 
-- **Framework**: Next.js 16.0.1 (App Router)
+- **Framework**: Next.js 16.0.1 (App Router + Turbopack)
 - **Language**: TypeScript 5.7.2
 - **Styling**:
-  - Tailwind CSS 3.3.0
+  - Tailwind CSS 3.4.17
   - Custom CSS variables for theming
   - Radix UI components
 - **State Management**:
-  - Zustand 5.0.2 (global state)
+  - Zustand 5.0.8 (global state with persistence)
   - React Query (TanStack Query 5.90.8) for server state
 - **Real-time Communication**: Socket.IO Client 4.8.1
 - **UI Components**:
   - Radix UI (Dialog, Toast, Sheet)
   - Custom UI components library
-- **Icons**: React Icons 5.0.1
+- **Icons**: React Icons 5.5.0
+- **Port**: 6333
 
-#### Backend/API
+#### Backend (NestJS)
 
-- **Next.js API Routes** for server-side logic
-- **Socket.IO Server** 4.8.1 for real-time communication
-- **Data Dragon API** (Riot Games official static data API)
+- **Framework**: NestJS 11.0 (Monorepo with internal libraries)
+- **Language**: TypeScript 5.7.3
+- **Real-time**: Socket.IO Server 4.8.1 (WebSocket Gateway)
+- **Logging**: Winston 3.18.3 with daily file rotation
+- **Validation**: class-validator + class-transformer
+- **API Documentation**: Swagger (NestJS OpenAPI)
+- **Monitoring**: Health checks endpoint + metrics
+- **Port**: 8888
+
+#### Shared Types
+
+- **Location**: `apps/api/libs/shared` (source of truth)
+- **Wrapper**: `packages/shared` (for Next.js compatibility)
+- **Architecture**: NestJS internal library accessible par les deux apps
 
 #### Deployment
 
-- **Containerization**: Docker + Docker Compose
+- **Containerization**: Docker + Docker Compose (multi-stage builds)
 - **Base Image**: Node 20.9.0 Alpine
-- **Package Manager**: pnpm
-- **Port**: 6333
+- **Package Manager**: pnpm 9.10.0
+- **Build System**: Turborepo for parallel builds
+- **CI/CD Ready**: Optimized Dockerfiles with layer caching
 
 ---
 
 ## 📁 Project Structure
 
 ```
-LolTimeFlash/
-├── app/                          # Next.js App Router
-│   ├── api/                      # API Routes
-│   │   └── shieldbow/           # Riot API integration
-│   │       ├── route.ts         # Champion skins endpoint
-│   │       └── methods.ts       # API helper methods
-│   ├── game/                    # Game pages
-│   │   ├── [roomId]/           # Dynamic room route
-│   │   │   └── page.tsx        # Multiplayer game page
-│   │   ├── gameComponent.tsx   # Main game logic component
-│   │   └── page.tsx            # Solo game page
-│   ├── lobby/                   # Lobby system
-│   │   └── page.tsx            # Create/Join room page
-│   ├── settings/                # User settings
-│   │   └── page.tsx            # Username management
-│   ├── store/                   # Zustand state stores
-│   │   ├── useBackgroundImage.ts
-│   │   └── useUsername.ts
-│   ├── socket.js               # Socket.IO client setup
-│   ├── layout.tsx              # Root layout
-│   ├── page.tsx                # Home page
-│   └── globals.css             # Global styles
+LolTimeFlash/                       # Monorepo Root
 │
-├── components/                  # React components
-│   ├── ui/                     # UI component library
-│   │   ├── button.tsx
-│   │   ├── input.tsx
-│   │   ├── dialog.tsx
-│   │   ├── sheet.tsx
-│   │   ├── toast.tsx
-│   │   ├── dialogcover/       # Background selector
-│   │   ├── wrapperbackground/ # Background wrapper
-│   │   └── usernameinput/     # Username input modal
-│   ├── QueryProvider/          # React Query provider
-│   ├── UsernameProvider/       # Username gate component
-│   └── settingsbutton/         # Settings navigation button
+├── apps/                           # Applications
+│   ├── api/                        # NestJS Backend
+│   │   ├── src/
+│   │   │   ├── game/              # Game Module
+│   │   │   │   ├── game.gateway.ts    # WebSocket Gateway
+│   │   │   │   ├── game.service.ts    # Game business logic
+│   │   │   │   ├── game.module.ts     # Module definition
+│   │   │   │   └── dto/              # Data Transfer Objects
+│   │   │   ├── room/              # Room Management Module
+│   │   │   │   ├── room.service.ts    # Room state management
+│   │   │   │   └── room.module.ts     # Module definition
+│   │   │   ├── riot/              # Riot API Module
+│   │   │   │   ├── riot.service.ts    # Data Dragon integration
+│   │   │   │   ├── riot.controller.ts # REST endpoints
+│   │   │   │   └── riot.module.ts     # Module definition
+│   │   │   ├── monitoring/        # Monitoring Module
+│   │   │   │   ├── metrics.service.ts # Metrics collection
+│   │   │   │   ├── monitoring.controller.ts # Health checks
+│   │   │   │   └── monitoring.module.ts
+│   │   │   ├── logger/            # Logger Module
+│   │   │   │   ├── logger.service.ts  # Winston logger
+│   │   │   │   └── logger.module.ts
+│   │   │   ├── config/            # Configuration
+│   │   │   │   └── config.ts          # Environment config
+│   │   │   ├── app.module.ts      # Root module
+│   │   │   └── main.ts            # Application entry point
+│   │   │
+│   │   ├── libs/                  # NestJS Internal Libraries
+│   │   │   └── shared/            # 🔑 SOURCE DE VÉRITÉ
+│   │   │       ├── src/
+│   │   │       │   ├── types/     # Shared TypeScript types
+│   │   │       │   │   ├── game.types.ts
+│   │   │       │   │   ├── socket.types.ts
+│   │   │       │   │   ├── champion.types.ts
+│   │   │       │   │   ├── riot-api.types.ts
+│   │   │       │   │   └── index.ts
+│   │   │       │   ├── constants/ # Shared constants
+│   │   │       │   │   ├── roles.ts
+│   │   │       │   │   ├── cooldowns.ts
+│   │   │       │   │   └── index.ts
+│   │   │       │   ├── shared.module.ts
+│   │   │       │   └── index.ts
+│   │   │       └── tsconfig.lib.json
+│   │   │
+│   │   ├── test/                  # E2E tests
+│   │   ├── logs/                  # Winston log files
+│   │   ├── Dockerfile             # API Docker build
+│   │   ├── nest-cli.json          # NestJS CLI config (monorepo mode)
+│   │   ├── tsconfig.json          # TypeScript config (@app/shared alias)
+│   │   ├── tsconfig.app.json      # App-specific TS config
+│   │   └── package.json           # API dependencies
+│   │
+│   └── web/                       # Next.js Frontend
+│       ├── app/                   # Next.js App Router
+│       │   ├── game/             # Game pages
+│       │   │   ├── [roomId]/page.tsx  # Multiplayer room
+│       │   │   └── page.tsx           # Solo mode
+│       │   ├── lobby/page.tsx    # Create/Join lobby
+│       │   ├── settings/page.tsx # User settings
+│       │   ├── store/            # Zustand stores
+│       │   │   ├── username.store.ts
+│       │   │   └── background-image.store.ts
+│       │   ├── socket.ts         # Socket.IO client
+│       │   ├── layout.tsx        # Root layout
+│       │   ├── page.tsx          # Home page
+│       │   └── globals.css       # Global styles
+│       │
+│       ├── components/           # Shared components
+│       │   ├── ui/              # UI primitives
+│       │   ├── layout/          # Layout components
+│       │   ├── providers/       # Context providers
+│       │   └── error-boundary.component.tsx
+│       │
+│       ├── features/            # Feature modules
+│       │   ├── game/
+│       │   │   ├── components/  # Game-specific components
+│       │   │   ├── contexts/    # Game context
+│       │   │   ├── hooks/       # Game hooks
+│       │   │   ├── screens/     # Game screens
+│       │   │   ├── types/       # Game types
+│       │   │   └── constants/   # Game constants
+│       │   └── settings/
+│       │       └── components/  # Settings components
+│       │
+│       ├── hooks/               # Global hooks
+│       │   ├── use-socket.hook.ts
+│       │   ├── use-toast.hook.ts
+│       │   └── use-media-query.hook.ts
+│       │
+│       ├── lib/                 # Utilities
+│       │   ├── config.ts        # App configuration
+│       │   ├── utils.ts         # Helper functions
+│       │   └── riot-api.service.ts
+│       │
+│       ├── public/              # Static assets
+│       │   ├── assets/          # Icons, images
+│       │   ├── champions/       # Champion splash arts (2000+ files)
+│       │   └── flash-song.mp3   # Audio notification
+│       │
+│       ├── Dockerfile           # Web Docker build
+│       ├── next.config.mjs      # Next.js config
+│       ├── tailwind.config.ts   # Tailwind config
+│       ├── tsconfig.json        # TypeScript config
+│       └── package.json         # Web dependencies
 │
-├── lib/                        # Utilities and helpers
-│   ├── config.ts              # Configuration
-│   ├── constants.ts           # Constants (default data, localStorage keys)
-│   ├── types.ts               # TypeScript type definitions
-│   └── utils.ts               # Utility functions (cn, generateLobbyCodeId)
+├── packages/                    # Shared packages
+│   └── shared/                  # 🔗 Wrapper pour Next.js
+│       ├── src/
+│       │   └── index.ts        # Re-exports depuis apps/api/libs/shared
+│       └── package.json         # Package definition
 │
-├── data/                       # Static data
-│   └── champions/             # Champion data by patch version
-│       ├── 14.8/
-│       └── 15.22/
+├── scripts/                     # Build & maintenance scripts
+│   ├── sync-champions.ts       # Download champion data
+│   ├── docker.sh               # Docker helper scripts
+│   └── clean.sh                # Cleanup script
 │
-├── public/                     # Static assets
-│   ├── assets/                # Game assets (role icons, items)
-│   └── flash-song.mp3         # Audio notification
-│
-├── fonts/                      # Custom fonts (Beaufort for LOL)
-├── hooks/                      # Custom React hooks
-│   └── useMediaQuery.tsx
-│
-├── docker-compose.yml          # Docker configuration
-├── Dockerfile                  # Docker build instructions
-├── package.json                # Dependencies
-├── tailwind.config.ts          # Tailwind configuration
-└── tsconfig.json               # TypeScript configuration
+├── docker-compose.yml          # Docker orchestration
+├── Dockerfile                  # (obsolète - supprimé)
+├── turbo.json                  # Turborepo configuration
+├── pnpm-workspace.yaml         # pnpm workspace definition
+├── pnpm-lock.yaml              # Lock file
+├── package.json                # Root package (scripts + devDeps)
+├── tsconfig.base.json          # Base TypeScript config
+├── .dockerignore               # Docker build optimization
+└── AGENTS.md                   # Cette documentation
 ```
+
+---
+
+## 🔄 Shared Types Architecture
+
+### Flux des Types
+
+```
+apps/api/libs/shared/src/types/      ← 🔑 SOURCE DE VÉRITÉ
+        ↓
+        ↓ (import direct via @app/shared)
+        ↓
+apps/api/src/**/*.ts                  ← Backend NestJS
+        ↓
+        ↓ (re-export via packages/shared)
+        ↓
+apps/web/**/*.tsx                     ← Frontend Next.js
+        (import via @loltimeflash/shared)
+```
+
+### Pourquoi cette architecture ?
+
+**Problème** : Next.js (webpack) ne peut pas résoudre les alias NestJS (`@app/shared`)
+
+**Solution** : Wrapper transparent dans `packages/shared`
+
+```typescript
+// apps/api/src/**/*.ts (Backend)
+import { Role, GameState } from '@app/shared'
+
+// apps/web/**/*.tsx (Frontend)
+import { Role, GameState } from '@loltimeflash/shared'
+
+// Les deux utilisent LES MÊMES types ! ✅
+```
+
+### Types Partagés Disponibles
+
+**Location**: `apps/api/libs/shared/src/types/`
+
+- `game.types.ts` - GameData, SummonerData, RoleData
+- `socket.types.ts` - ClientToServerEvents, ServerToClientEvents
+- `champion.types.ts` - ChampionData, SplashArt
+- `riot-api.types.ts` - RiotAPIResponse, DDragonData
+
+**Constants**: `apps/api/libs/shared/src/constants/`
+
+- `roles.ts` - ROLES array, Role type
+- `cooldowns.ts` - FLASH_COOLDOWN, CDR calculations
 
 ---
 
 ## 🔑 Key Components
 
-### 1. **gameComponent.tsx** - Core Game Logic
+### 1. **Backend - NestJS Gateway** (`apps/api`)
 
-**Location**: `app/game/gameComponent.tsx`
+#### **GameGateway** - WebSocket Hub
 
-**Purpose**: Main component handling Flash timer logic, cooldown calculations, and real-time synchronization.
+**Location**: `apps/api/src/game/game.gateway.ts`
+
+**Purpose**: Gère toutes les communications WebSocket temps réel
 
 **Key Features**:
 
-- **Flash Cooldown Calculation**:
-  - Base: 300s (5 minutes)
-  - With Lucidity Boots: 268s
-  - With Cosmic Insight: 255s
-  - With Both: 231s
-- **Timer Management**: Countdown timer using `useEffect` with 1-second intervals
-- **WebSocket Integration**: Emits and receives real-time updates
-- **Audio System**: Plays notification sound on Flash usage
-- **Volume Control**: Toggle audio on/off
-
-**Props**:
-
-- `useWebSocket: boolean` - Determines if it's solo mode (false) or multiplayer (true)
-
-**State Management**:
-
-```typescript
-interface GameData {
-  users: string[]
-  roles: {
-    TOP: SummonerData
-    JUNGLE: SummonerData
-    MID: SummonerData
-    SUPPORT: SummonerData
-    ADC: SummonerData
-  }
-}
-
-interface SummonerData {
-  isFlashed: boolean | number // false = available, number = seconds remaining
-  lucidityBoots: boolean
-  cosmicInsight: boolean
-}
-```
+- **Connection Handling**: Authentification et tracking des clients
+- **Room Management**: Join/leave rooms avec isolation
+- **Event Broadcasting**: Synchronisation état du jeu
+- **Error Handling**: Gestion gracieuse des déconnexions
 
 **Socket Events**:
 
-- `join-room`: Join a room with username
-- `updateSummonerData`: Broadcast game state changes
-- `send-toast`: Notify room members of Flash usage
-- `show-toast`: Trigger toast notification
+```typescript
+// Client → Server
+interface ClientToServerEvents {
+  'join-room': (roomId: string, username: string) => void
+  'flash-action': (data: FlashActionDto) => void
+  'toggle-item': (data: ToggleItemDto) => void
+}
+
+// Server → Client
+interface ServerToClientEvents {
+  'room-state': (state: GameState) => void
+  'user-joined': (username: string) => void
+  'user-left': (username: string) => void
+  'flash-notification': (role: Role, username: string) => void
+}
+```
+
+#### **RoomService** - State Management
+
+**Location**: `apps/api/src/room/room.service.ts`
+
+**Purpose**: Gestion centralisée de l'état des rooms
+
+**Features**:
+
+- In-memory Map<roomId, GameState>
+- Atomic state updates
+- Room cleanup on empty
+- State validation
 
 ---
 
-### 2. **Socket.IO Integration**
+### 2. **Frontend - Game Logic** (`apps/web`)
 
-**Location**: `app/socket.js`
+#### **GameContext** - State Container
+
+**Location**: `apps/web/features/game/contexts/game.context.tsx`
+
+**Purpose**: Context React pour gérer l'état global du jeu (solo et multiplayer)
+
+**Features**:
+
+- Flash timer management (timestamp-based)
+- Socket.IO integration
+- Audio notifications
+- State synchronization
+
+**Flash Cooldown Calculation**:
+
+| Configuration  | Cooldown | Formula                              |
+| -------------- | -------- | ------------------------------------ |
+| Base           | 300s     | -                                    |
+| Lucidity Boots | 268s     | 300 - (300 × 10.67%) = 268s          |
+| Cosmic Insight | 255s     | 300 - (300 × 15%) = 255s             |
+| **Both**       | **231s** | **300 - (300 × 10.67% + 300 × 15%)** |
+
+#### **Game Screens**
+
+**Solo Mode**: `apps/web/features/game/screens/game-solo.screen.tsx`
+
+- No WebSocket
+- Local state only
+- Practice mode
+
+**Multiplayer Mode**: `apps/web/features/game/screens/game-multiplayer.screen.tsx`
+
+- Real-time sync via Socket.IO
+- Room-based collaboration
+- Live user list
+
+---
+
+### 3. **Socket.IO Hook**
+
+**Location**: `apps/web/hooks/use-socket.hook.ts`
+
+**Purpose**: Custom hook encapsulant la logique Socket.IO
 
 **Configuration**:
 
-```javascript
-import { io } from 'socket.io-client'
-import config from '@/lib/config'
-
-export const socket = io(config.socketPort)
+```typescript
+const socket: Socket<ServerToClientEvents, ClientToServerEvents> = io(
+  config.socketPort,
+  {
+    autoConnect: true,
+    reconnection: true,
+    reconnectionAttempts: 5,
+  }
+)
 ```
 
-**Environment Variable**: `NEXT_PUBLIC_SOCKET_PORT`
+**Features**:
 
-**Room System**:
-
-- Each game session has a unique 10-character room ID
-- Users join rooms using `socket.emit('join-room', roomId, username)`
-- All game state updates are synchronized across room members
+- Typed events (TypeScript)
+- Auto-reconnect (5 attempts)
+- Connection status tracking
+- Event cleanup
 
 ---
 
-### 3. **Lobby System**
+### 4. **Lobby System**
 
-**Location**: `app/lobby/page.tsx`
+**Location**: `apps/web/app/lobby/page.tsx`
 
 **Features**:
 
@@ -230,38 +404,45 @@ function generateLobbyCodeId(length: number): string {
 
 ---
 
-### 4. **State Management**
+### 5. **State Management (Zustand)**
 
-#### **Zustand Stores**
+#### **Username Store**
 
-**useUsername Store** (`app/store/useUsername.ts`)
+**Location**: `apps/web/app/store/username.store.ts`
 
 ```typescript
-interface UsernameState {
+interface IUsernameState {
   username: string | null
   setUsername: (username: string) => void
+  reset: () => void
 }
 ```
 
-- Persists to localStorage
-- Used for room identification
+- Persists to localStorage (`username` key)
+- Global user identification
+- Auto-load on app start
 
-**useBackgroundImage Store** (`app/store/useBackgroundImage.ts`)
+#### **Background Store**
+
+**Location**: `apps/web/app/store/background-image.store.ts`
 
 ```typescript
-interface BackgroundImage {
+interface IBackgroundImageState {
   image: string
   setImage: (image: string) => void
+  reset: () => void
 }
 ```
 
-- Manages selected champion splash art background
+- Persists to localStorage (`cover-bg` key)
+- Champion splash art selection
+- Default: Riot Games background
 
 ---
 
-### 5. **Background Customization**
+### 6. **Background Customization**
 
-**Location**: `components/ui/dialogcover/index.tsx`
+**Location**: `apps/web/features/settings/components/background-selector.component.tsx`
 
 **Features**:
 
@@ -293,24 +474,26 @@ interface AllSkinsSplashArts {
 
 ---
 
-### 6. **Username Provider**
+### 7. **Username Provider**
 
-**Location**: `components/UsernameProvider/index.tsx`
+**Location**: `apps/web/components/providers/username-provider.component.tsx`
 
-**Purpose**: Gate component that blocks access until username is set
+**Purpose**: Gate component qui bloque l'accès jusqu'à ce que l'utilisateur définisse un username
 
 **Flow**:
 
-1. Checks if username exists in Zustand store
-2. If not, displays `UsernameInput` modal
-3. Once set, renders children components
-4. Username stored in localStorage for persistence
+1. Check Zustand store pour username
+2. Si absent → affiche modal `UsernameInputModal`
+3. Une fois défini → render children
+4. Persist automatiquement dans localStorage
 
 ---
 
-### 7. **Toast Notifications**
+### 8. **Toast Notifications**
 
 **Technology**: Radix UI Toast + Sonner
+
+**Location**: `apps/web/hooks/use-toast.hook.ts`
 
 **Usage**:
 
@@ -432,62 +615,200 @@ if (lucidityBoots && cosmicInsight) {
 
 ## 🚀 Deployment
 
-### Docker Setup
+### Docker Architecture
 
-**Dockerfile Highlights**:
+LolTimeFlash utilise **multi-stage builds** pour optimiser la taille des images et la sécurité.
 
-- Base: Node.js 20.9.0 Alpine (lightweight)
-- Package Manager: pnpm
-- Build Process:
-  1. Install dependencies
-  2. Build Next.js application (`pnpm build`)
-  3. Expose port 6333
-  4. Start production server
+#### API Docker (`apps/api/Dockerfile`)
 
-**docker-compose.yml**:
+**Stages**:
+
+1. **deps**: Installation des dépendances (pnpm install)
+2. **builder**: Build NestJS (`pnpm build`)
+3. **runner**: Production runtime (non-root user)
+
+**Key Points**:
+
+- Build output: `dist/src/main.js`
+- Non-root user: `nestjs:nestjs` (UID/GID 1001)
+- Logs persistés via volume
+- Health check endpoint: `/monitoring/health`
+
+#### Web Docker (`apps/web/Dockerfile`)
+
+**Stages**:
+
+1. **deps**: Installation + copy shared types
+2. **builder**: Build Next.js (`pnpm build`)
+3. **runner**: Production runtime (standalone mode)
+
+**Key Points**:
+
+- Build output: `.next/standalone`
+- Non-root user: `nextjs:nodejs` (UID/GID 1001)
+- Static assets copiés séparément
+- Champion data (2000+ webp) inclus
+
+#### Docker Compose (`docker-compose.yml`)
 
 ```yaml
 services:
-  loltimeflashfront:
-    container_name: loltimeflashfront
-    image: loltimeflashfront:latest
+  api:
+    build: ./apps/api
     ports:
-      - 6333:6333
-    restart: unless-stopped
+      - '8888:8888'
+    environment:
+      - NODE_ENV=production
+      - PORT=8888
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'wget',
+          '--quiet',
+          '--tries=1',
+          '--spider',
+          'http://localhost:8888/monitoring/health',
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    volumes:
+      - api-logs:/app/logs
+    networks:
+      - loltimeflash-network
+
+  web:
+    build: ./apps/web
+    ports:
+      - '6333:6333'
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_SOCKET_PORT=http://api:8888
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      - loltimeflash-network
+
+volumes:
+  api-logs:
+
+networks:
+  loltimeflash-network:
+    driver: bridge
+```
+
+### Docker Commands
+
+```bash
+# Development
+pnpm dev             # Run both apps locally
+
+# Docker
+pnpm docker:build    # Build images
+pnpm docker:up       # Start containers
+pnpm docker:down     # Stop containers
+pnpm docker:logs     # View logs
+pnpm docker:test     # Full test suite (build + up + health check)
+
+# Cleanup
+pnpm docker:clean    # Remove images & volumes
 ```
 
 ### Environment Variables
 
-- `NEXT_PUBLIC_SOCKET_PORT`: WebSocket server URL
+**API** (`.env`):
+
+```env
+PORT=8888
+NODE_ENV=development
+LOG_LEVEL=info
+```
+
+**Web** (`.env`):
+
+```env
+NEXT_PUBLIC_SOCKET_PORT=http://localhost:8888
+NEXT_PUBLIC_API_URL=http://localhost:8888
+```
 
 ---
 
 ## 🛠️ Development Workflow
 
-### Installation
+### First Time Setup
 
 ```bash
+# Clone repository
+git clone https://github.com/yourusername/LolTimeFlash.git
+cd LolTimeFlash
+
+# Install dependencies (monorepo)
 pnpm install
-```
 
-### Development Server
+# Set up environment
+cp .env.example .env  # Configure your env vars
 
-```bash
+# Run development servers
 pnpm dev
-# Runs on http://localhost:6333
+
+# API: http://localhost:8888
+# Web: http://localhost:6333
 ```
 
-### Build for Production
+### Development Commands
 
 ```bash
-pnpm build
-pnpm start
+# Start both apps (API + Web)
+pnpm dev              # Turbo runs both in parallel
+
+# Start individual apps
+pnpm dev:api          # API only (NestJS)
+pnpm dev:web          # Web only (Next.js)
+
+# Build
+pnpm build            # Build all apps
+pnpm build:api        # Build API
+pnpm build:web        # Build Web
+
+# Production
+pnpm start            # Start built apps
+pnpm start:api        # API production server
+pnpm start:web        # Web production server
+
+# Type checking
+pnpm type-check       # Check all TypeScript
+
+# Linting & Formatting
+pnpm lint             # Lint all apps
+pnpm lint:fix         # Auto-fix lint errors
+pnpm format           # Format with Prettier
+pnpm format:check     # Check formatting
+
+# Cleanup
+pnpm clean            # Clean build artifacts
+pnpm clean:full       # Clean + reinstall
 ```
 
-### Docker Build
+### Monorepo Structure
 
-```bash
-docker-compose up --build
+**Turborepo** gère les builds en parallèle et le caching :
+
+```json
+// turbo.json
+{
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"], // Build dependencies first
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "dev": {
+      "cache": false, // No caching for dev
+      "persistent": true // Keep running
+    }
+  }
+}
 ```
 
 ---
@@ -806,7 +1127,106 @@ export const gameDefaultData: GameData = {
 
 ---
 
+## 📘 NestJS Monorepo Architecture
+
+### Pourquoi NestJS + Next.js ?
+
+**Séparation des responsabilités** :
+
+- **NestJS** : WebSocket + game logic + monitoring + logging
+- **Next.js** : UI + routing + client state + SEO
+
+**Avantages** :
+
+✅ **Types partagés** - Zero duplication, une seule source de vérité  
+✅ **Scalabilité** - Microservices ready, chaque app peut scale indépendamment  
+✅ **Performance** - Build optimisé avec Turborepo + Docker multi-stage  
+✅ **DevEx** - Hot reload, TypeScript strict, ESLint unifié  
+✅ **Production** - Health checks, logs, metrics, error handling
+
+### NestJS Internal Library (`apps/api/libs/shared`)
+
+**Concept** : Library interne NestJS accessible par les deux apps
+
+**Configuration** (`apps/api/nest-cli.json`) :
+
+```json
+{
+  "monorepo": true,
+  "projects": {
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src"
+    }
+  }
+}
+```
+
+**Import dans l'API** :
+
+```typescript
+// apps/api/src/**/*.ts
+import { Role, GameState } from '@app/shared'
+// Résolu via tsconfig.json paths
+```
+
+**Import dans le Web** :
+
+```typescript
+// apps/web/**/*.tsx
+import { Role, GameState } from '@loltimeflash/shared'
+// Wrapper dans packages/shared re-exporte depuis apps/api/libs/shared
+```
+
+### Docker Build Optimization
+
+**Problème** : Build lent, layers non cachés
+
+**Solution** :
+
+1. **Multi-stage builds** - Séparation deps / builder / runner
+2. **Layer caching** - Dependencies copiés avant source code
+3. **.dockerignore** - Exclusion node_modules, .git, dist
+4. **Parallel builds** - Docker Compose build simultané
+
+**Résultat** :
+
+- Build initial: ~3-4min
+- Build incrémental: ~30s (si dependencies inchangées)
+- Image finale: ~200MB (Alpine + production deps only)
+
+---
+
 ## 🔄 Version History & Upgrades
+
+### Version 0.4.0 - November 2025 (NestJS Monorepo)
+
+**Major Architecture Refactor** :
+
+- ✅ **Backend NestJS** : Migration vers NestJS 11.0 avec architecture modulaire
+- ✅ **Monorepo Library** : `apps/api/libs/shared` comme source unique de vérité
+- ✅ **WebSocket Gateway** : GameGateway avec validation DTO et error handling
+- ✅ **Monitoring** : Health checks, metrics, Winston logging avec rotation
+- ✅ **Docker Optimisé** : Multi-stage builds, health checks, volumes persistants
+- ✅ **Type Safety** : Types partagés entre API et Web (zero duplication)
+- ✅ **Turborepo** : Builds parallèles et caching intelligent
+
+**Breaking Changes** :
+
+- API backend maintenant séparé (port 8888)
+- Environment variables restructurées
+- Docker Compose avec health checks requis
+
+**Migration Path** :
+
+1. `pnpm install` (nouvelles dépendances)
+2. Mettre à jour `.env` (voir section Environment Variables)
+3. `pnpm docker:test` pour vérifier Docker
+4. `pnpm dev` pour développement local
+
+---
 
 ### Version 0.3.0 - November 2024 (Phase 3.5 - Option A)
 
@@ -1319,6 +1739,6 @@ For questions, issues, or contributions:
 
 ---
 
-**Last Updated**: November 13, 2024
-**Version**: 0.3.0
-**Status**: ✅ Phase 3.5 Complétée (Option A - Quick Polish)
+**Last Updated**: November 19, 2025
+**Version**: 0.4.0 - NestJS Monorepo Architecture
+**Status**: ✅ Production Ready (API + Web + Docker)

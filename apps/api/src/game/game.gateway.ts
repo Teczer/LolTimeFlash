@@ -4,7 +4,7 @@ import type {
   InterServerEvents,
   ServerToClientEvents,
   SocketData,
-} from '@loltimeflash/shared';
+} from '@app/shared';
 import { UsePipes, ValidationPipe } from '@nestjs/common';
 import {
   ConnectedSocket,
@@ -362,9 +362,13 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @SubscribeMessage('game:champion:update')
   handleChampionUpdate(
     @ConnectedSocket() client: TypedSocket,
-    @MessageBody() payload: { roleMapping: ChampionRoleMapping },
+    @MessageBody()
+    payload: {
+      roleMapping: ChampionRoleMapping;
+      gameInfo?: { gameId: number; gameStartTime: number };
+    },
   ) {
-    const { roleMapping } = payload;
+    const { roleMapping, gameInfo } = payload;
     const { roomId, username } = client.data;
     this.metricsService.incrementEventReceived('game:champion:update');
 
@@ -377,12 +381,13 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     }
 
     try {
-      this.gameService.updateChampionData(roomId, roleMapping);
+      this.gameService.updateChampionData(roomId, roleMapping, gameInfo);
 
       // Broadcast champion update event to all in room
       this.server.to(roomId).emit('game:champion:update', {
         roleMapping,
         username,
+        gameInfo,
       });
       this.metricsService.incrementEventEmitted('game:champion:update');
 

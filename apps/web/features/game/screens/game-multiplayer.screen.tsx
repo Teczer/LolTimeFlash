@@ -5,6 +5,7 @@ import { mapEnemyParticipantsToRoles } from '@/lib/riot-role-mapping.util'
 import { useEffect } from 'react'
 import { ConnectionStatus } from '../components/connection-status.component'
 import { GameControls } from '../components/game-controls.component'
+import { GameInfoDisplay } from '../components/game-info-display.component'
 import { RoleCard } from '../components/role-card.component'
 import { RoomInfo } from '../components/room-info.component'
 import { SummonerInput } from '../components/summoner-input.component'
@@ -110,17 +111,26 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
       spell1Id: number
       spell2Id: number
     }>
+    gameId: number
+    gameStartTime: number
+    gameLength: number
   }) => {
     // Map enemy participants to roles
     const roleMapping = mapEnemyParticipantsToRoles(data.enemies)
 
-    // Update local game state with champion data
-    updateChampionData(roleMapping)
+    const gameInfo = {
+      gameId: data.gameId,
+      gameStartTime: data.gameStartTime,
+    }
+
+    // Update local game state with champion data and game info
+    updateChampionData(roleMapping, gameInfo)
 
     // Emit to socket for synchronization across room
-    emitUpdateChampionData(roleMapping)
+    emitUpdateChampionData(roleMapping, gameInfo)
   }
 
+  console.log('gameState', gameState)
   return (
     <main className="flex h-screen flex-col items-center justify-start gap-2 p-6 sm:gap-2 sm:p-10">
       {/* Connection Status */}
@@ -140,6 +150,14 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
 
       {/* Summoner Input */}
       <SummonerInput onGameDataFetched={handleGameDataFetched} />
+
+      {/* Game Info Display */}
+      {gameState.gameId && gameState.gameStartTime && (
+        <GameInfoDisplay
+          gameId={gameState.gameId}
+          gameStartTime={gameState.gameStartTime}
+        />
+      )}
 
       {/* Role Grid */}
       <div className="flex h-4/5 w-full flex-wrap sm:flex-nowrap">

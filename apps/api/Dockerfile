@@ -11,15 +11,18 @@ COPY pnpm-workspace.yaml ./
 COPY pnpm-lock.yaml ./
 COPY package.json ./
 
-# Copy shared packages
+# Copy shared packages (thin wrapper)
 COPY packages/shared/package.json ./packages/shared/
-COPY packages/shared/tsconfig.json ./packages/shared/
 COPY packages/shared/src ./packages/shared/src
 
-# Copy backend package.json
+# Copy backend package.json and configs
 COPY apps/api/package.json ./apps/api/
 COPY apps/api/tsconfig.json ./apps/api/
+COPY apps/api/tsconfig.app.json ./apps/api/
 COPY apps/api/nest-cli.json ./apps/api/
+
+# Copy NestJS shared library
+COPY apps/api/libs ./apps/api/libs
 
 # Install dependencies
 RUN pnpm install --frozen-lockfile
@@ -42,10 +45,21 @@ COPY package.json ./
 COPY turbo.json ./
 COPY tsconfig.base.json ./
 
-# Copy backend source
-COPY apps/api ./apps/api
+# Copy API configuration files
+COPY apps/api/package.json ./apps/api/
+COPY apps/api/tsconfig.json ./apps/api/
+COPY apps/api/tsconfig.app.json ./apps/api/
+COPY apps/api/tsconfig.build.json ./apps/api/
+COPY apps/api/nest-cli.json ./apps/api/
 
-# Build NestJS
+# Copy NestJS shared library (source of truth for types)
+COPY apps/api/libs ./apps/api/libs
+
+# Copy backend source
+COPY apps/api/src ./apps/api/src
+# Note: test directory is excluded (not needed for production build)
+
+# Build NestJS (will compile both app and library)
 WORKDIR /app/apps/api
 RUN pnpm build
 
@@ -85,5 +99,5 @@ EXPOSE 8888
 ENV PORT=8888
 ENV LOG_LEVEL=info
 
-CMD ["node", "dist/main"]
+CMD ["node", "dist/src/main"]
 

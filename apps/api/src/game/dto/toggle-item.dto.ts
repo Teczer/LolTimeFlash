@@ -1,5 +1,5 @@
-import type { Role } from '@loltimeflash/shared';
-import { ROLES } from '@loltimeflash/shared';
+import type { Role } from '@app/shared';
+import { ROLES } from '@app/shared';
 import { IsEnum, IsIn } from 'class-validator';
 
 const ITEMS = ['lucidityBoots', 'cosmicInsight'] as const;

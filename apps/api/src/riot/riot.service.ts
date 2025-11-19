@@ -1,8 +1,9 @@
 import type {
+  FetchLiveGameResponse,
   RiotActiveGame,
   RiotParticipant,
   RiotSummoner,
-} from '@loltimeflash/shared';
+} from '@app/shared';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
@@ -224,15 +225,7 @@ export class RiotService {
   async getLiveGameData(
     summonerName: string,
     region: string,
-  ): Promise<{
-    success: boolean;
-    data?: {
-      allies: RiotParticipant[];
-      enemies: any[];
-      gameStartTime: number;
-    };
-    error?: string;
-  }> {
+  ): Promise<FetchLiveGameResponse> {
     if (!this.riotApiKey) {
       throw new HttpException(
         'Riot API key not configured',
@@ -284,11 +277,6 @@ export class RiotService {
       };
     }
 
-    // 🔍 LOG: Display raw Riot API response
-    console.log('=== RAW RIOT API RESPONSE ===');
-    console.log(JSON.stringify(activeGame, null, 2));
-    console.log('=== END RAW RESPONSE ===');
-
     // Find player's team using PUUID
     const playerParticipant = activeGame.participants.find(
       (p) => p.puuid === account.puuid,
@@ -325,13 +313,19 @@ export class RiotService {
       }),
     );
 
-    return {
+    const response: FetchLiveGameResponse = {
       success: true,
       data: {
         allies,
         enemies: enemiesWithData,
+        gameId: activeGame.gameId,
         gameStartTime: activeGame.gameStartTime,
+        gameLength: activeGame.gameLength,
       },
     };
+
+    console.log('response', response);
+
+    return response;
   }
 }

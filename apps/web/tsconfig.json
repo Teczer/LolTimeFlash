@@ -17,7 +17,7 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@loltimeflash/shared": ["../../packages/shared/src"]
+      "@loltimeflash/shared": ["../../apps/api/libs/shared/src"]
     }
   },
   "include": [

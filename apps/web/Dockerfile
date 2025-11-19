@@ -11,10 +11,14 @@ COPY pnpm-workspace.yaml ./
 COPY pnpm-lock.yaml ./
 COPY package.json ./
 
-# Copy shared packages
+# Copy shared packages (thin wrapper that points to NestJS libs)
 COPY packages/shared/package.json ./packages/shared/
-COPY packages/shared/tsconfig.json ./packages/shared/
 COPY packages/shared/src ./packages/shared/src
+
+# Copy NestJS shared library (source of truth for types)
+COPY apps/api/libs ./apps/api/libs
+COPY apps/api/tsconfig.json ./apps/api/
+COPY apps/api/nest-cli.json ./apps/api/
 
 # Copy frontend package.json
 COPY apps/web/package.json ./apps/web/
@@ -43,6 +47,11 @@ COPY pnpm-lock.yaml ./
 COPY package.json ./
 COPY turbo.json ./
 COPY tsconfig.base.json ./
+
+# Copy NestJS shared library (needed for TypeScript path resolution)
+COPY --from=deps /app/apps/api/libs ./apps/api/libs
+COPY --from=deps /app/apps/api/tsconfig.json ./apps/api/
+COPY --from=deps /app/apps/api/nest-cli.json ./apps/api/
 
 # Copy frontend source
 COPY apps/web ./apps/web

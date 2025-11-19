@@ -8,4 +8,3 @@ import { RiotService } from './riot.service';
   exports: [RiotService],
 })
 export class RiotModule {}
-

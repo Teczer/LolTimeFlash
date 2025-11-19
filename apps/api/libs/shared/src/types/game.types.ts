@@ -1,7 +1,7 @@
 /**
  * League of Legends roles
  */
-export type Role = 'TOP' | 'JUNGLE' | 'MID' | 'ADC' | 'SUPPORT'
+export type Role = 'TOP' | 'JUNGLE' | 'MID' | 'ADC' | 'SUPPORT';
 
 /**
  * Champion data for a role
@@ -10,22 +10,22 @@ export interface ChampionData {
   /**
    * Champion ID (e.g., 266 for Aatrox)
    */
-  championId: number
+  championId: number;
 
   /**
    * Champion name (e.g., "Aatrox")
    */
-  championName: string
+  championName: string;
 
   /**
    * Champion icon URL
    */
-  championIconUrl: string
+  championIconUrl: string;
 
   /**
    * Summoner name of the player
    */
-  summonerName: string
+  summonerName: string;
 }
 
 /**
@@ -33,12 +33,12 @@ export interface ChampionData {
  * Note: Cosmic Insight is NOT auto-detected (Riot API doesn't provide detailed rune data)
  * Players must manually toggle it
  */
-export type ChampionUpdateData = ChampionData
+export type ChampionUpdateData = ChampionData;
 
 /**
  * Mapping of roles to champion data (for champion updates)
  */
-export type ChampionRoleMapping = Partial<Record<Role, ChampionUpdateData>>
+export type ChampionRoleMapping = Partial<Record<Role, ChampionUpdateData>>;
 
 /**
  * Summoner spell data for a single role
@@ -49,33 +49,33 @@ export interface SummonerData {
    * - false: Flash is available
    * - number: Timestamp (ms) when Flash will be available again (endsAt)
    */
-  isFlashed: false | number
+  isFlashed: false | number;
 
   /**
    * Whether the player has Lucidity Boots (10.67% CDR)
    */
-  lucidityBoots: boolean
+  lucidityBoots: boolean;
 
   /**
    * Whether the player has Cosmic Insight rune (15% CDR)
    */
-  cosmicInsight: boolean
+  cosmicInsight: boolean;
 
   /**
    * Champion data (optional, populated from live game)
    */
-  champion?: ChampionData
+  champion?: ChampionData;
 }
 
 /**
  * Complete role data for all 5 roles
  */
 export interface RoleData {
-  TOP: SummonerData
-  JUNGLE: SummonerData
-  MID: SummonerData
-  SUPPORT: SummonerData
-  ADC: SummonerData
+  TOP: SummonerData;
+  JUNGLE: SummonerData;
+  MID: SummonerData;
+  SUPPORT: SummonerData;
+  ADC: SummonerData;
 }
 
 /**
@@ -85,37 +85,47 @@ export interface GameState {
   /**
    * Room ID (10 character alphanumeric string)
    */
-  roomId: string
+  roomId: string;
 
   /**
    * List of usernames in the room
    */
-  users: string[]
+  users: string[];
 
   /**
    * Role data for all 5 enemy champions
    */
-  roles: RoleData
+  roles: RoleData;
+
+  /**
+   * Riot game ID (from live game)
+   */
+  gameId?: number;
+
+  /**
+   * Game start timestamp in milliseconds (from Riot API)
+   */
+  gameStartTime?: number;
 
   /**
    * Room creation timestamp
    */
-  createdAt: Date
+  createdAt: Date;
 
   /**
    * Last update timestamp
    */
-  updatedAt: Date
+  updatedAt: Date;
 
   /**
    * Summoner name of the player (for Riot API integration)
    */
-  summonerName?: string
+  summonerName?: string;
 
   /**
    * Region of the player (e.g., 'euw1', 'na1')
    */
-  region?: string
+  region?: string;
 }
 
 /**
@@ -125,22 +135,22 @@ export interface FlashEventData {
   /**
    * Role that used Flash
    */
-  role: Role
+  role: Role;
 
   /**
    * Username of the player who triggered the event
    */
-  username: string
+  username: string;
 
   /**
    * Cooldown duration in seconds
    */
-  cooldown: number
+  cooldown: number;
 
   /**
    * Timestamp when Flash will be available again
    */
-  endsAt: number
+  endsAt: number;
 }
 
 /**
@@ -150,20 +160,20 @@ export interface ItemToggleData {
   /**
    * Role that toggled an item
    */
-  role: Role
+  role: Role;
 
   /**
    * Item that was toggled
    */
-  item: 'lucidityBoots' | 'cosmicInsight'
+  item: 'lucidityBoots' | 'cosmicInsight';
 
   /**
    * New value for the item
    */
-  value: boolean
+  value: boolean;
 
   /**
    * Username of the player who triggered the event
    */
-  username: string
+  username: string;
 }

@@ -76,6 +76,16 @@ export interface IGameData {
    * Region of the player (e.g., 'euw1', 'na1')
    */
   region?: string
+
+  /**
+   * Riot game ID (from live game)
+   */
+  gameId?: number
+
+  /**
+   * Game start timestamp in milliseconds (from Riot API)
+   */
+  gameStartTime?: number
 }
 
 /**

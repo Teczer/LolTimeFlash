@@ -5,7 +5,7 @@ import { DEFAULT_GAME_DATA } from '../constants/game.constants'
 import { useAudio } from '../hooks/use-audio.hook'
 import { calculateFlashCooldown } from '../hooks/use-flash-cooldown.hook'
 import { useGameTimer } from '../hooks/use-game-timer.hook'
-import type { IGameData, TRole } from '../types/game.types'
+import type { IChampionData, IGameData, TRole } from '../types/game.types'
 
 interface IGameContextValue {
   gameState: IGameData
@@ -14,7 +14,8 @@ interface IGameContextValue {
   cancelFlash: (role: TRole) => void
   toggleItem: (role: TRole, item: 'lucidityBoots' | 'cosmicInsight') => void
   updateChampionData: (
-    roleMapping: Partial<Record<TRole, any>>
+    roleMapping: Partial<Record<TRole, IChampionData>>,
+    gameInfo?: { gameId: number; gameStartTime: number }
   ) => void
   audio: {
     play: () => Promise<void>
@@ -131,7 +132,10 @@ export const GameProvider = (props: IGameProviderProps) => {
 
   // Update champion data from Riot API
   const updateChampionData = useCallback(
-    (roleMapping: Partial<Record<TRole, any>>) => {
+    (
+      roleMapping: Partial<Record<TRole, IChampionData>>,
+      gameInfo?: { gameId: number; gameStartTime: number }
+    ) => {
       setGameState((prev) => {
         const newRoles = { ...prev.roles }
 
@@ -156,6 +160,10 @@ export const GameProvider = (props: IGameProviderProps) => {
         return {
           ...prev,
           roles: newRoles,
+          ...(gameInfo && {
+            gameId: gameInfo.gameId,
+            gameStartTime: gameInfo.gameStartTime,
+          }),
         }
       })
     },

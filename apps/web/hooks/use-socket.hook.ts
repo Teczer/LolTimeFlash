@@ -29,7 +29,8 @@ interface IUseSocketReturn {
   cancelFlash: (role: Role) => void
   toggleItem: (role: Role, item: 'lucidityBoots' | 'cosmicInsight') => void
   updateChampionData: (
-    roleMapping: import('@loltimeflash/shared').ChampionRoleMapping
+    roleMapping: import('@loltimeflash/shared').ChampionRoleMapping,
+    gameInfo?: { gameId: number; gameStartTime: number }
   ) => void
 }
 
@@ -159,10 +160,11 @@ export const useSocket = (
   }
 
   const updateChampionData = (
-    roleMapping: import('@loltimeflash/shared').ChampionRoleMapping
+    roleMapping: import('@loltimeflash/shared').ChampionRoleMapping,
+    gameInfo?: { gameId: number; gameStartTime: number }
   ): void => {
     if (socketRef.current) {
-      socketRef.current.emit('game:champion:update', { roleMapping })
+      socketRef.current.emit('game:champion:update', { roleMapping, gameInfo })
     }
   }
 

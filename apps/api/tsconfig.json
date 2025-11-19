@@ -23,8 +23,8 @@
     "strictPropertyInitialization": false,
     "isolatedModules": true,
     "paths": {
-      "@loltimeflash/shared": ["../../packages/shared/src"],
-      "@loltimeflash/shared/*": ["../../packages/shared/src/*"]
+      "@app/shared": ["libs/shared/src"],
+      "@app/shared/*": ["libs/shared/src/*"]
     }
   },
   "exclude": ["node_modules", "dist", "test"]

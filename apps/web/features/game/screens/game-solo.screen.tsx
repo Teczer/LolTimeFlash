@@ -4,6 +4,7 @@ import { GameProvider, useGameContext } from '../contexts/game.context'
 import { GameControls } from '../components/game-controls.component'
 import { RoleCard } from '../components/role-card.component'
 import { SummonerInput } from '../components/summoner-input.component'
+import { GameInfoDisplay } from '../components/game-info-display.component'
 import { LEAGUE_ROLES } from '../constants/game.constants'
 import type { TRole } from '../types/game.types'
 import { mapEnemyParticipantsToRoles } from '@/lib/riot-role-mapping.util'
@@ -33,12 +34,18 @@ const SoloGameContent = () => {
       spell1Id: number
       spell2Id: number
     }>
+    gameId: number
+    gameStartTime: number
+    gameLength: number
   }) => {
     // Map enemy participants to roles
     const roleMapping = mapEnemyParticipantsToRoles(data.enemies)
     
-    // Update game state with champion data
-    updateChampionData(roleMapping)
+    // Update game state with champion data and game info
+    updateChampionData(roleMapping, {
+      gameId: data.gameId,
+      gameStartTime: data.gameStartTime,
+    })
   }
 
   return (
@@ -48,6 +55,14 @@ const SoloGameContent = () => {
 
       {/* Summoner Input */}
       <SummonerInput onGameDataFetched={handleGameDataFetched} />
+
+      {/* Game Info Display */}
+      {gameState.gameId && gameState.gameStartTime && (
+        <GameInfoDisplay
+          gameId={gameState.gameId}
+          gameStartTime={gameState.gameStartTime}
+        />
+      )}
 
       {/* Role Grid */}
       <div className="flex h-4/5 w-full flex-wrap sm:flex-nowrap">

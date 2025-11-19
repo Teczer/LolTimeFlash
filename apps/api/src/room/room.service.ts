@@ -1,5 +1,5 @@
-import type { GameState } from '@loltimeflash/shared';
-import { DEFAULT_SUMMONER_DATA } from '@loltimeflash/shared';
+import type { GameState } from '@app/shared';
+import { DEFAULT_SUMMONER_DATA } from '@app/shared';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
