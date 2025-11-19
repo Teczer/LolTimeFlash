@@ -4,12 +4,30 @@
 
 **League of Legends Website Tool: Easily Time and Communicate Summoner Spells - THE FLASH! 🌟**
 
+[![Version](https://img.shields.io/badge/version-2.1.0-brightgreen?style=flat)](https://github.com/yourusername/LolTimeFlash/releases)
 [![Next.js](https://img.shields.io/badge/Next.js-16.0.1-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7.2-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 [![Socket.IO](https://img.shields.io/badge/Socket.IO-4.8.1-010101?style=flat&logo=socket.io)](https://socket.io/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3.0-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![NestJS](https://img.shields.io/badge/NestJS-11.0-E0234E?style=flat&logo=nestjs)](https://nestjs.com/)
 
-[Features](#-features) • [Quick Start](#-quick-start) • [How It Works](#-how-it-works) • [Documentation](#-documentation)
+[Demo](#-demo) • [Features](#-features) • [Quick Start](#-quick-start) • [How It Works](#-how-it-works) • [Documentation](#-documentation)
+
+</div>
+
+---
+
+## 🎬 Demo
+
+<div align="center">
+
+<!-- Replace this comment with your demo GIF/video -->
+<!-- Example: ![LolTimeFlash Demo](./docs/demo.gif) -->
+<!-- Or embed a video: [![Demo Video](./docs/thumbnail.png)](https://your-video-url.com) -->
+
+**🎥 Add your demo video or GIF here!**
+
+_Showcase the real-time Flash tracking, multiplayer synchronization, and customizable backgrounds_
 
 </div>
 
@@ -39,7 +57,7 @@
 - Node.js 20.9.0 or higher
 - pnpm 9.10.0 or higher (recommended) or npm
 
-### Installation
+### Local Development
 
 ```bash
 # Clone the repository
@@ -50,21 +68,30 @@ cd LolTimeFlash
 pnpm install
 
 # Set up environment variables
-echo "NEXT_PUBLIC_SOCKET_PORT=your_socket_server_url" > .env.local
+cp .env.example .env  # Configure your environment
 
-# Run the development server
+# Run development servers (API + Web)
 pnpm dev
+
+# API: http://localhost:8888
+# Web: http://localhost:6333
 ```
 
-Open [http://localhost:6333](http://localhost:6333) in your browser.
-
-### Docker Deployment
+### Docker Deployment (Recommended)
 
 ```bash
-# Build and run with Docker Compose
-docker-compose up --build
+# Quick start - build and run
+pnpm docker:test
 
-# Access at http://localhost:6333
+# Or manually
+pnpm docker:build   # Build images
+pnpm docker:up      # Start containers
+pnpm docker:logs    # View logs
+pnpm docker:down    # Stop containers
+
+# Access:
+# - Frontend: http://localhost:6333
+# - API Health: http://localhost:8888/monitoring/health
 ```
 
 ---
@@ -94,12 +121,28 @@ LolTimeFlash automatically calculates Flash cooldowns based on enemy items and r
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Next.js 16.0.1 (App Router), TypeScript, Tailwind CSS
-- **State Management**: Zustand, TanStack Query
-- **Real-time**: Socket.IO (client + server)
-- **UI Components**: Radix UI, React Icons
-- **API**: Data Dragon (Riot Games official API)
-- **Deployment**: Docker, Node.js Alpine
+### Frontend (Next.js)
+
+- **Framework**: Next.js 16.0.1 (App Router + Turbopack)
+- **Language**: TypeScript 5.7.2
+- **Styling**: Tailwind CSS 3.4.17
+- **State**: Zustand 5.0.8, TanStack Query 5.90.8
+- **Real-time**: Socket.IO Client 4.8.1
+- **UI**: Radix UI, React Icons
+
+### Backend (NestJS)
+
+- **Framework**: NestJS 11.0 (Monorepo Architecture)
+- **Real-time**: Socket.IO Server 4.8.1
+- **Logging**: Winston with daily rotation
+- **API**: Riot Games Data Dragon integration
+
+### Deployment
+
+- **Containerization**: Docker + Docker Compose
+- **Base Image**: Node 20.9.0 Alpine
+- **Package Manager**: pnpm 9.10.0
+- **Monorepo**: Turborepo for builds
 
 ---
 
@@ -107,19 +150,34 @@ LolTimeFlash automatically calculates Flash cooldowns based on enemy items and r
 
 ```
 LolTimeFlash/
-├── app/                    # Next.js App Router
-│   ├── api/               # API routes (Shieldbow/Riot API)
-│   ├── game/              # Game pages (solo + multiplayer)
-│   ├── lobby/             # Room creation/joining
-│   ├── settings/          # Username management
-│   └── store/             # Zustand state stores
-├── components/            # React components
-│   ├── ui/               # UI component library
-│   ├── QueryProvider/    # React Query setup
-│   └── UsernameProvider/ # Auth gate component
-├── lib/                   # Utilities and types
-├── public/               # Static assets (icons, audio)
-└── docker-compose.yml    # Docker configuration
+├── apps/
+│   ├── api/                      # NestJS Backend
+│   │   ├── src/
+│   │   │   ├── game/            # Game logic & WebSocket gateway
+│   │   │   ├── room/            # Room management service
+│   │   │   ├── riot/            # Riot API integration
+│   │   │   ├── monitoring/      # Health checks & metrics
+│   │   │   └── logger/          # Winston logging
+│   │   ├── libs/shared/         # NestJS internal library
+│   │   │   ├── types/           # Shared TypeScript types
+│   │   │   └── constants/       # Shared constants
+│   │   └── Dockerfile
+│   │
+│   └── web/                      # Next.js Frontend
+│       ├── app/                  # App Router pages
+│       ├── components/           # React components
+│       ├── features/             # Feature modules
+│       ├── hooks/                # Custom hooks
+│       ├── lib/                  # Utils & config
+│       ├── public/               # Static assets
+│       └── Dockerfile
+│
+├── packages/
+│   └── shared/                   # Shared types wrapper
+│
+├── scripts/                      # Build & sync scripts
+├── docker-compose.yml            # Docker orchestration
+└── turbo.json                    # Turborepo config
 ```
 
 ---
@@ -182,23 +240,22 @@ pnpm build
 
 ---
 
-## 🐛 Known Issues
-
-- Socket.IO server not included in repository (separate deployment required)
-- Mobile background customization disabled
-- Champion data loading can be slow on first request (24h cache afterward)
-
-See [AGENTS.md](./AGENTS.md#-known-issues--future-improvements) for full list and planned improvements.
-
----
-
 ## 📝 Environment Variables
 
-Create a `.env.local` file:
+Create a `.env` file at the root:
 
 ```env
-NEXT_PUBLIC_SOCKET_PORT=http://your-socket-server:port
+# API Configuration
+PORT=8888
+NODE_ENV=development
+LOG_LEVEL=info
+
+# Frontend Configuration
+NEXT_PUBLIC_SOCKET_PORT=http://localhost:8888
+NEXT_PUBLIC_API_URL=http://localhost:8888
 ```
+
+See [AGENTS.md](./AGENTS.md#-known-issues--future-improvements) for advanced configuration.
 
 ---
 

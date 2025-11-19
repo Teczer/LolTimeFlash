@@ -1,62 +1,51 @@
 # Dependencies
 node_modules
 **/node_modules
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+.pnp
+.pnp.js
 
 # Build outputs
-.next
 dist
+.next
+out
 build
 .turbo
+
+# Development
+.git
+.gitignore
+.vscode
+.idea
+*.log
+*.md
+README.md
+CHANGELOG.md
+MIGRATION*.md
+AGENTS.md
 
 # Testing
 coverage
 .nyc_output
+**/*.spec.ts
+**/*.test.ts
+**/test
+tests
 
-# Environment files (local only, not for Docker)
-.env
-.env*.local
+# Environment
+.env.local
 .env.development
 .env.test
-.env.production
-
-# IDE
-.vscode
-.idea
-*.swp
-*.swo
-*~
+**/.env.local
+**/.env.development
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Git
-.git
-.gitignore
-.gitattributes
-
-# CI/CD
-.github
-
-# Documentation
-*.md
-!README.md
-AGENTS.md
-MIGRATION_STATUS.md
-MIGRATION_MONOREPO.md
-
-# Logs
-logs
-*.log
-apps/api/logs
-
 # Misc
-.prettierrc
-.prettierignore
-.eslintrc
-eslint.config.*
-tsconfig.tsbuildinfo
+*.tsbuildinfo
+.eslintcache
+load-tests
+scripts/*.sh
+Dockerfile*
+docker-compose*.yml

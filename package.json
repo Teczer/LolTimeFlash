@@ -1,6 +1,6 @@
 {
   "name": "loltimeflash-monorepo",
-  "version": "0.3.0",
+  "version": "2.1.0",
   "private": true,
   "description": "LolTimeFlash - Real-time Flash timer tracking for League of Legends",
   "author": "LolTimeFlash Team",
@@ -10,9 +10,11 @@
     "packages/*"
   ],
   "scripts": {
+    "predev": "pnpm --filter @loltimeflash/shared run build",
     "dev": "turbo run dev",
     "dev:web": "turbo run dev --filter=web",
     "dev:api": "turbo run dev --filter=api",
+    "dev:shared": "pnpm --filter @loltimeflash/shared run dev",
     "build": "turbo run build",
     "build:web": "turbo run build --filter=web",
     "build:api": "turbo run build --filter=api",
@@ -47,6 +49,7 @@
     "@types/node": "^20.11.5",
     "artillery": "^2.0.26",
     "artillery-plugin-metrics-by-endpoint": "^1.20.0",
+    "concurrently": "^9.1.2",
     "prettier": "^3.4.2",
     "sharp": "^0.33.5",
     "tsx": "^4.19.2",

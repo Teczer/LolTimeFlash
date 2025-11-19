@@ -5,7 +5,7 @@ import { DEFAULT_GAME_DATA } from '../constants/game.constants'
 import { useAudio } from '../hooks/use-audio.hook'
 import { calculateFlashCooldown } from '../hooks/use-flash-cooldown.hook'
 import { useGameTimer } from '../hooks/use-game-timer.hook'
-import type { IGameData, TRole } from '../types/game.types'
+import type { IChampionData, IGameData, TRole } from '../types/game.types'
 
 interface IGameContextValue {
   gameState: IGameData
@@ -13,6 +13,10 @@ interface IGameContextValue {
   useFlash: (role: TRole) => void
   cancelFlash: (role: TRole) => void
   toggleItem: (role: TRole, item: 'lucidityBoots' | 'cosmicInsight') => void
+  updateChampionData: (
+    roleMapping: Partial<Record<TRole, IChampionData>>,
+    gameInfo?: { gameId: number; gameStartTime: number }
+  ) => void
   audio: {
     play: () => Promise<void>
     volume: 'on' | 'off'
@@ -126,12 +130,53 @@ export const GameProvider = (props: IGameProviderProps) => {
     []
   )
 
+  // Update champion data from Riot API
+  const updateChampionData = useCallback(
+    (
+      roleMapping: Partial<Record<TRole, IChampionData>>,
+      gameInfo?: { gameId: number; gameStartTime: number }
+    ) => {
+      setGameState((prev) => {
+        const newRoles = { ...prev.roles }
+
+        // Update each role with champion data
+        for (const roleKey in roleMapping) {
+          const role = roleKey as TRole
+          const championData = roleMapping[role]
+
+          if (championData) {
+            newRoles[role] = {
+              ...newRoles[role],
+              champion: {
+                championId: championData.championId,
+                championName: championData.championName,
+                championIconUrl: championData.championIconUrl,
+                summonerName: championData.summonerName,
+              },
+            }
+          }
+        }
+
+        return {
+          ...prev,
+          roles: newRoles,
+          ...(gameInfo && {
+            gameId: gameInfo.gameId,
+            gameStartTime: gameInfo.gameStartTime,
+          }),
+        }
+      })
+    },
+    []
+  )
+
   const value: IGameContextValue = {
     gameState,
     setGameState,
     useFlash,
     cancelFlash,
     toggleItem,
+    updateChampionData,
     audio: {
       play: audio.play,
       volume: audio.volume,

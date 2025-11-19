@@ -1,8 +1,9 @@
 import type {
-  Role,
-  GameState,
+  ChampionUpdateData,
   FlashEventData,
+  GameState,
   ItemToggleData,
+  Role,
 } from './game.types';
 
 /**
@@ -36,6 +37,17 @@ export interface ClientToServerEvents {
     role: Role;
     item: 'lucidityBoots' | 'cosmicInsight';
   }) => void;
+
+  /**
+   * Update champion data from live game
+   */
+  'game:champion:update': (payload: {
+    roleMapping: Partial<Record<Role, ChampionUpdateData>>;
+    gameInfo?: {
+      gameId: number;
+      gameStartTime: number;
+    };
+  }) => void;
 }
 
 /**
@@ -61,6 +73,18 @@ export interface ServerToClientEvents {
    * Item toggle broadcast
    */
   'game:toggle:item': (data: ItemToggleData) => void;
+
+  /**
+   * Champion data update broadcast
+   */
+  'game:champion:update': (data: {
+    roleMapping: Partial<Record<Role, ChampionUpdateData>>;
+    username: string;
+    gameInfo?: {
+      gameId: number;
+      gameStartTime: number;
+    };
+  }) => void;
 
   /**
    * User joined the room

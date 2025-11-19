@@ -1,6 +1,6 @@
+import type { GameState } from '@app/shared';
+import { DEFAULT_SUMMONER_DATA } from '@app/shared';
 import { Injectable } from '@nestjs/common';
-import type { GameState } from '../shared/types/game.types';
-import { DEFAULT_SUMMONER_DATA } from '../shared/constants/roles';
 
 @Injectable()
 export class RoomService {

@@ -53,5 +53,14 @@
 
   // TypeScript
   "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  // Spell Checker
+  "cSpell.words": [
+    "puuid",
+    "summonerId",
+    "ddragon",
+    "loltimeflash",
+    "nestjs"
+  ]
 }

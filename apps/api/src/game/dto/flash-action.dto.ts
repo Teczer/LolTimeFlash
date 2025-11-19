@@ -1,6 +1,6 @@
+import type { Role } from '@app/shared';
+import { ROLES } from '@app/shared';
 import { IsEnum } from 'class-validator';
-import { ROLES } from '../../shared/constants/roles';
-import type { Role } from '../../shared/types/game.types';
 
 export class FlashActionDto {
   @IsEnum(ROLES, {
