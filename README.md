@@ -25,7 +25,8 @@
 <!-- Example: ![LolTimeFlash Demo](./docs/demo.gif) -->
 <!-- Or embed a video: [![Demo Video](./docs/thumbnail.png)](https://your-video-url.com) -->
 
-**🎥 Add your demo video or GIF here!**
+
+![loltimeflash-demo-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/5b0b68e7-f13e-4d8c-8e78-1456a014b401)
 
 _Showcase the real-time Flash tracking, multiplayer synchronization, and customizable backgrounds_
 
@@ -276,7 +277,7 @@ This project is a fan-made tool for League of Legends players. League of Legends
 
 <div align="center">
 
-**Built with ❤️ by the League of Legends community**
+**Built with ❤️ by me**
 
 ⭐ Star this repo if you find it helpful!
 
