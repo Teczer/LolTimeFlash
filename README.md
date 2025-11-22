@@ -66,7 +66,7 @@ git clone https://github.com/yourusername/LolTimeFlash.git
 cd LolTimeFlash
 
 # Install dependencies
-pnpm install
+pnpm get_started
 
 # Set up environment variables
 cp .env.example .env  # Configure your environment
