@@ -14,12 +14,11 @@ const adjustPlusColor = 'rgba(84,140,180,0.6)'
 const TimerControlsComponent = (props: ITimerControlsProps) => {
   const { isOnCooldown, onAdjust, className } = props
 
-  if (!isOnCooldown) return null
-
   return (
     <div
       className={cn(
         'flex items-center justify-center gap-3 sm:gap-4',
+        !isOnCooldown && 'pointer-events-none invisible',
         className
       )}
     >
@@ -30,6 +29,7 @@ const TimerControlsComponent = (props: ITimerControlsProps) => {
         textColor="text-red-400"
         onClick={() => onAdjust(-2)}
         ariaLabel="Rewind 2 seconds (Zilean E)"
+        isVisible={isOnCooldown}
       />
 
       <TimerControlButton
@@ -39,6 +39,7 @@ const TimerControlsComponent = (props: ITimerControlsProps) => {
         textColor="text-[#548CA4]"
         onClick={() => onAdjust(+2)}
         ariaLabel="Speed up 2 seconds (Zilean W)"
+        isVisible={isOnCooldown}
       />
     </div>
   )
