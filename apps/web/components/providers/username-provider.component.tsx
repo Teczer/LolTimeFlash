@@ -1,8 +1,7 @@
 'use client'
 
-import { useUsernameStore } from '@/app/store/username.store'
 import { UsernameInputModal } from '@/features/settings/components/username-input-modal.component'
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 
 interface IUsernameProviderProps {
   children: ReactNode
@@ -10,7 +9,9 @@ interface IUsernameProviderProps {
 
 export const UsernameProvider = (props: IUsernameProviderProps) => {
   const { children } = props
-  const { username } = useUsernameStore()
+  const [username] = useState<string | null>(
+    typeof window !== 'undefined' ? localStorage.getItem('username') : null
+  )
 
   if (!username) {
     return <UsernameInputModal />
@@ -18,4 +19,3 @@ export const UsernameProvider = (props: IUsernameProviderProps) => {
 
   return <>{children}</>
 }
-
