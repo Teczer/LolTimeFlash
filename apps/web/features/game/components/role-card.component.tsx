@@ -2,9 +2,11 @@
 
 import { cn } from '@/lib/utils'
 import { memo } from 'react'
+import { getRemainingTime } from '../hooks/use-flash-cooldown.hook'
 import type { ILeagueRole, ISummonerData } from '../types/game.types'
 import { FlashButton } from './flash-button.component'
 import { ItemToggle } from './item-toggle.component'
+import { TimerControls } from './timer-controls.component'
 
 interface IRoleCardProps {
   role: ILeagueRole
@@ -12,6 +14,7 @@ interface IRoleCardProps {
   onFlashClick: () => void
   onToggleBoots: () => void
   onToggleRune: () => void
+  onAdjustTimer?: (seconds: number) => void
   isLastRole?: boolean
   className?: string
 }
@@ -23,9 +26,13 @@ const RoleCardComponent = (props: IRoleCardProps) => {
     onFlashClick,
     onToggleBoots,
     onToggleRune,
+    onAdjustTimer,
     isLastRole = false,
     className,
   } = props
+
+  const remainingSeconds = getRemainingTime(data.isFlashed)
+  const isOnCooldown = remainingSeconds > 0
 
   return (
     <div
@@ -62,6 +69,15 @@ const RoleCardComponent = (props: IRoleCardProps) => {
         onClick={onFlashClick}
         summonerName={data.champion?.summonerName}
       />
+
+      {/* Timer Controls (±2s buttons) */}
+      {onAdjustTimer && (
+        <TimerControls
+          isOnCooldown={isOnCooldown}
+          onAdjust={(seconds) => onAdjustTimer(seconds)}
+          className="mt-1"
+        />
+      )}
     </div>
   )
 }

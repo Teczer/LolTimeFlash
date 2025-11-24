@@ -1,5 +1,5 @@
 import type { FlashEventData, ItemToggleData, Role } from '@app/shared';
-import { calculateFlashCooldown } from '@app/shared';
+import { calculateFlashCooldown, REACTION_TIME_COMPENSATION } from '@app/shared';
 import { Injectable } from '@nestjs/common';
 import { RoomService } from '../room/room.service';
 
@@ -26,7 +26,10 @@ export class GameService {
       hasLucidityBoots,
       hasCosmicInsight,
     );
-    const endsAt: number = Date.now() + cooldown * 1000;
+    
+    // ✅ Apply reaction time compensation (3s advance)
+    const adjustedCooldown: number = cooldown - REACTION_TIME_COMPENSATION;
+    const endsAt: number = Date.now() + adjustedCooldown * 1000;
 
     // ✅ Store endsAt timestamp instead of countdown
     room.roles[role].isFlashed = endsAt;
@@ -35,7 +38,7 @@ export class GameService {
     const result: FlashEventData = {
       role,
       username,
-      cooldown,
+      cooldown: adjustedCooldown,
       endsAt,
     };
 
@@ -119,6 +122,33 @@ export class GameService {
     };
 
     return result;
+  }
+
+  /**
+   * Adjust Flash timer by adding/subtracting seconds
+   */
+  adjustFlashTimer(
+    roomId: string,
+    role: Role,
+    adjustmentSeconds: number,
+  ): void {
+    const room = this.roomService.getRoom(roomId);
+
+    if (!room) {
+      throw new Error(`Room ${roomId} not found`);
+    }
+
+    const roleData = room.roles[role];
+
+    // Only adjust if Flash is on cooldown
+    if (typeof roleData.isFlashed === 'number') {
+      const currentEndsAt: number = roleData.isFlashed;
+      const newEndsAt: number = currentEndsAt + adjustmentSeconds * 1000;
+
+      // Don't allow negative timers (min: current time)
+      roleData.isFlashed = Math.max(Date.now(), newEndsAt);
+      this.roomService.updateRoom(roomId, { roles: room.roles });
+    }
   }
 
   /**

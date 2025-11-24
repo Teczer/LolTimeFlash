@@ -48,6 +48,14 @@ export interface ClientToServerEvents {
       gameStartTime: number;
     };
   }) => void;
+
+  /**
+   * Adjust Flash timer manually (add or subtract seconds)
+   */
+  'game:flash:adjust': (payload: {
+    role: Role;
+    adjustmentSeconds: number;
+  }) => void;
 }
 
 /**
@@ -95,6 +103,15 @@ export interface ServerToClientEvents {
    * User left the room
    */
   'room:user:left': (data: { username: string; users: string[] }) => void;
+
+  /**
+   * Flash timer adjusted broadcast
+   */
+  'game:flash:adjusted': (data: {
+    role: Role;
+    adjustmentSeconds: number;
+    username: string;
+  }) => void;
 
   /**
    * Error event

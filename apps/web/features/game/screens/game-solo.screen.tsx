@@ -1,17 +1,24 @@
 'use client'
 
-import { GameProvider, useGameContext } from '../contexts/game.context'
+import { mapEnemyParticipantsToRoles } from '@/lib/riot-role-mapping.util'
 import { GameControls } from '../components/game-controls.component'
+import { GameInfoDisplay } from '../components/game-info-display.component'
 import { RoleCard } from '../components/role-card.component'
 import { SummonerInput } from '../components/summoner-input.component'
-import { GameInfoDisplay } from '../components/game-info-display.component'
 import { LEAGUE_ROLES } from '../constants/game.constants'
+import { GameProvider, useGameContext } from '../contexts/game.context'
 import type { TRole } from '../types/game.types'
-import { mapEnemyParticipantsToRoles } from '@/lib/riot-role-mapping.util'
 
 const SoloGameContent = () => {
-  const { gameState, useFlash, cancelFlash, toggleItem, updateChampionData, audio } =
-    useGameContext()
+  const {
+    gameState,
+    useFlash,
+    cancelFlash,
+    toggleItem,
+    adjustTimer,
+    updateChampionData,
+    audio,
+  } = useGameContext()
 
   const handleFlashClick = (role: TRole) => {
     const roleData = gameState.roles[role]
@@ -40,7 +47,7 @@ const SoloGameContent = () => {
   }) => {
     // Map enemy participants to roles
     const roleMapping = mapEnemyParticipantsToRoles(data.enemies)
-    
+
     // Update game state with champion data and game info
     updateChampionData(roleMapping, {
       gameId: data.gameId,
@@ -49,7 +56,7 @@ const SoloGameContent = () => {
   }
 
   return (
-    <main className="flex h-screen flex-col items-center gap-2 p-6 sm:gap-4 sm:p-10 justify-center">
+    <main className="flex h-screen flex-col items-center justify-center gap-2 p-6 sm:gap-4 sm:p-10">
       {/* Controls */}
       <GameControls volume={audio.volume} onToggleVolume={audio.toggleVolume} />
 
@@ -78,6 +85,7 @@ const SoloGameContent = () => {
               onFlashClick={() => handleFlashClick(role.name)}
               onToggleBoots={() => toggleItem(role.name, 'lucidityBoots')}
               onToggleRune={() => toggleItem(role.name, 'cosmicInsight')}
+              onAdjustTimer={(seconds) => adjustTimer(role.name, seconds)}
               isLastRole={isLastRole}
             />
           )
@@ -94,4 +102,3 @@ export const GameSoloScreen = () => {
     </GameProvider>
   )
 }
-
