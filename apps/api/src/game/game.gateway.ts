@@ -19,7 +19,7 @@ import { Server, Socket } from 'socket.io';
 import { WinstonLoggerService } from '../logger/logger.service';
 import { MetricsService } from '../monitoring/metrics.service';
 import { RoomService } from '../room/room.service';
-import { FlashActionDto, JoinRoomDto, ToggleItemDto } from './dto';
+import { AdjustTimerDto, FlashActionDto, JoinRoomDto, ToggleItemDto } from './dto';
 import { GameService } from './game.service';
 
 type TypedSocket = Socket<
@@ -412,6 +412,63 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
       );
       client.emit('error', {
         code: 'CHAMPION_UPDATE_ERROR',
+        message: errorMessage,
+      });
+    }
+  }
+
+  /**
+   * Handle Flash timer adjustment
+   */
+  @SubscribeMessage('game:flash:adjust')
+  handleAdjustTimer(
+    @ConnectedSocket() client: TypedSocket,
+    @MessageBody() payload: AdjustTimerDto,
+  ) {
+    const { role, adjustmentSeconds } = payload;
+    const { roomId, username } = client.data;
+    this.metricsService.incrementEventReceived('game:flash:adjust');
+
+    if (!roomId || !username) {
+      client.emit('error', {
+        code: 'NOT_IN_ROOM',
+        message: 'You must join a room first',
+      });
+      return;
+    }
+
+    try {
+      this.gameService.adjustFlashTimer(roomId, role, adjustmentSeconds);
+
+      // Broadcast adjustment to all in room
+      this.server.to(roomId).emit('game:flash:adjusted', {
+        role,
+        adjustmentSeconds,
+        username,
+      });
+      this.metricsService.incrementEventEmitted('game:flash:adjusted');
+
+      // ✅ Broadcast updated room state
+      const updatedRoom = this.roomService.getRoom(roomId);
+      if (updatedRoom) {
+        this.server.to(roomId).emit('room:state', updatedRoom);
+        this.metricsService.incrementEventEmitted('room:state');
+      }
+
+      this.logger.logSocketEvent(
+        'game:flash:adjust',
+        { username, role, adjustmentSeconds, roomId },
+        client.id,
+      );
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : 'Unknown error';
+      this.logger.logError(
+        error instanceof Error ? error : new Error(errorMessage),
+        'GameGateway',
+      );
+      client.emit('error', {
+        code: 'ADJUST_TIMER_ERROR',
         message: errorMessage,
       });
     }

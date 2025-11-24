@@ -13,6 +13,7 @@ interface IGameContextValue {
   useFlash: (role: TRole) => void
   cancelFlash: (role: TRole) => void
   toggleItem: (role: TRole, item: 'lucidityBoots' | 'cosmicInsight') => void
+  adjustTimer: (role: TRole, adjustmentSeconds: number) => void
   updateChampionData: (
     roleMapping: Partial<Record<TRole, IChampionData>>,
     gameInfo?: { gameId: number; gameStartTime: number }
@@ -52,8 +53,10 @@ export const GameProvider = (props: IGameProviderProps) => {
           cosmicInsight: roleData.cosmicInsight,
         })
 
-        // ✅ Convert to timestamp (endsAt = now + cooldown)
-        const endsAt = Date.now() + cooldownSeconds * 1000
+        // ✅ Apply 3s compensation and convert to timestamp
+        const REACTION_COMPENSATION = 3 // seconds
+        const adjustedCooldown = cooldownSeconds - REACTION_COMPENSATION
+        const endsAt = Date.now() + adjustedCooldown * 1000
 
         return {
           ...prev,
@@ -138,6 +141,35 @@ export const GameProvider = (props: IGameProviderProps) => {
     []
   )
 
+  // ✅ Adjust Flash timer manually (add or subtract seconds)
+  const adjustTimer = useCallback((role: TRole, adjustmentSeconds: number) => {
+    setGameState((prev) => {
+      const roleData = prev.roles[role]
+
+      // Only adjust if Flash is on cooldown
+      if (typeof roleData.isFlashed === 'number') {
+        const currentEndsAt = roleData.isFlashed
+        const newEndsAt = currentEndsAt + adjustmentSeconds * 1000
+
+        // Don't allow negative timers (min: current time)
+        const adjustedEndsAt = Math.max(Date.now(), newEndsAt)
+
+        return {
+          ...prev,
+          roles: {
+            ...prev.roles,
+            [role]: {
+              ...roleData,
+              isFlashed: adjustedEndsAt,
+            },
+          },
+        }
+      }
+
+      return prev
+    })
+  }, [])
+
   // Update champion data from Riot API
   const updateChampionData = useCallback(
     (
@@ -184,6 +216,7 @@ export const GameProvider = (props: IGameProviderProps) => {
     useFlash,
     cancelFlash,
     toggleItem,
+    adjustTimer,
     updateChampionData,
     audio: {
       play: audio.play,

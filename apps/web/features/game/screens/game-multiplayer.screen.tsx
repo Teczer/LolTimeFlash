@@ -32,6 +32,7 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
     useFlash: emitUseFlash,
     cancelFlash: emitCancelFlash,
     toggleItem: emitToggleItem,
+    adjustTimer: emitAdjustTimer,
     updateChampionData: emitUpdateChampionData,
   } = useSocket({
     enabled: true,
@@ -95,6 +96,10 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
     item: 'lucidityBoots' | 'cosmicInsight'
   ) => {
     emitToggleItem(role, item)
+  }
+
+  const handleAdjustTimer = (role: TRole, adjustmentSeconds: number) => {
+    emitAdjustTimer(role, adjustmentSeconds)
   }
 
   const handleGameDataFetched = (data: {
@@ -167,6 +172,7 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
               onFlashClick={() => handleFlashClick(role.name)}
               onToggleBoots={() => handleToggleItem(role.name, 'lucidityBoots')}
               onToggleRune={() => handleToggleItem(role.name, 'cosmicInsight')}
+              onAdjustTimer={(seconds) => handleAdjustTimer(role.name, seconds)}
               isLastRole={isLastRole}
             />
           )

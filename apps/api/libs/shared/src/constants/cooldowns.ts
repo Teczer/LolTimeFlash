@@ -49,3 +49,13 @@ export function formatCooldown(seconds: number): string {
   const remainingSeconds = seconds % 60;
   return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
 }
+
+/**
+ * Default reaction time compensation (in seconds)
+ * Applied when Flash is activated to account for human reaction delay
+ * This compensates for:
+ * - Average human reaction time (~1-2s)
+ * - Communication delay in team (~1s)
+ * - Safety margin for Flash return anticipation
+ */
+export const REACTION_TIME_COMPENSATION = 3;
