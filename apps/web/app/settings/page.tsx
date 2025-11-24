@@ -1,24 +1,21 @@
 'use client'
 
-import { useState, FormEvent, useEffect } from 'react'
+import { FormEvent, useState } from 'react'
 
 import Link from 'next/link'
 
-import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 
 import { GrFormNextLink } from 'react-icons/gr'
 import { RxTrackPrevious } from 'react-icons/rx'
 
 export default function Home() {
   const [inputValue, setInputValue] = useState<string>('')
-  const [username, setUsername] = useState<string | null>(null)
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setUsername(localStorage.getItem('username'))
-    }
-  }, [])
+  const [username, setUsername] = useState<string | null>(
+    typeof window !== 'undefined' ? localStorage.getItem('username') : null
+  )
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
@@ -52,7 +49,7 @@ export default function Home() {
         <div className="flex w-full items-center justify-center gap-2 sm:w-1/2">
           <Input
             type="text"
-            className="w-1/2 bg-background"
+            className="bg-background w-1/2"
             placeholder="Enter your username"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}

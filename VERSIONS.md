@@ -7,6 +7,47 @@
 
 ## 📚 Version History
 
+### Version 2.3.1 - November 2025 (Timer Controls UX Fixes & Username Refactor)
+
+**Bug Fixes** :
+
+- 🐛 **Layout Shift Fix** : `TimerControls` toujours rendu (invisible au lieu de `return null`) pour éviter le "bump" visuel
+- 🐛 **Transition Flash Fix** : Désactivation conditionnelle des transitions CSS quand composant invisible pour éviter le "flash" à l'apparition
+
+**Refactoring & Optimization** :
+
+- ♻️ **Username Storage Simplification** : Suppression de `username.store.ts` (Zustand) au profit de `localStorage` direct
+- ⚡ **useState Optimization** : Initialisation directe depuis `localStorage` dans `useState` (suppression des `useEffect` redondants)
+- 🏗️ **Architecture Cleanup** : Simplification de 3 fichiers (`username-provider`, `settings/page`, `game/[roomId]/page`)
+
+**Documentation** :
+
+- 📝 **VERSIONS.md** : Création d'un fichier dédié pour l'historique des versions
+- 📝 **AGENTS.md** : Cleanup (suppression "Known Issues", version history déplacée, ajout guidelines MR)
+
+**Fichiers Modifiés** :
+
+| Fichier                                                    | Changements                                  |
+| ---------------------------------------------------------- | -------------------------------------------- |
+| `apps/web/features/game/components/timer-controls.component.tsx` | Layout stability fix (invisible au lieu de null) |
+| `apps/web/features/game/components/timer-control-button.component.tsx` | Conditional transitions (isVisible prop) |
+| `apps/web/app/store/username.store.ts`                     | **Deleted** (remplacé par localStorage)      |
+| `apps/web/components/providers/username-provider.component.tsx` | Zustand → useState + localStorage           |
+| `apps/web/features/settings/components/username-input-modal.component.tsx` | Zustand → localStorage direct               |
+| `apps/web/app/settings/page.tsx`                           | useEffect → useState init                    |
+| `apps/web/app/game/[roomId]/page.tsx`                      | Zustand → useState + useEffect (puis useState init) |
+| `AGENTS.md`                                                | Cleanup + ajout guidelines MR                |
+| `VERSIONS.md`                                              | **Created** - Historique des versions        |
+
+**Impact** :
+
+- ✅ Aucun layout shift lors de l'apparition des boutons calibration
+- ✅ Transitions fluides sans effet de "flash"
+- ✅ Réduction de ~40 lignes de code (suppression store + useEffect inutiles)
+- ✅ Performance légèrement améliorée (moins de re-renders)
+
+---
+
 ### Version 2.3.0 - November 2025 (Timer Calibration Controls & UX Polish)
 
 **New Features - Timer Calibration & Visual Enhancements** :

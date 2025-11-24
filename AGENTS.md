@@ -138,7 +138,6 @@ LolTimeFlash/                       # Monorepo Root
 │       │   ├── lobby/page.tsx    # Create/Join lobby
 │       │   ├── settings/page.tsx # User settings
 │       │   ├── store/            # Zustand stores
-│       │   │   ├── username.store.ts
 │       │   │   └── background-image.store.ts
 │       │   ├── socket.ts         # Socket.IO client
 │       │   ├── layout.tsx        # Root layout
@@ -402,25 +401,25 @@ function generateLobbyCodeId(length: number): string {
 
 ---
 
-### 5. **State Management (Zustand)**
+### 5. **State Management**
 
-#### **Username Store**
+#### **Username Management**
 
-**Location**: `apps/web/app/store/username.store.ts`
+**Location**: Direct localStorage usage (no store)
+
+- Username is stored directly in localStorage (`username` key)
+- Simple and efficient for single value
+- Used in settings page and username provider
 
 ```typescript
-interface IUsernameState {
-  username: string | null
-  setUsername: (username: string) => void
-  reset: () => void
-}
+// Set username
+localStorage.setItem('username', username)
+
+// Get username
+const username = localStorage.getItem('username')
 ```
 
-- Persists to localStorage (`username` key)
-- Global user identification
-- Auto-load on app start
-
-#### **Background Store**
+#### **Background Store (Zustand)**
 
 **Location**: `apps/web/app/store/background-image.store.ts`
 
@@ -1362,14 +1361,14 @@ All files use **kebab-case** with descriptive type suffixes:
 ✅ GOOD:
 - game-room.component.tsx
 - use-socket.hook.ts
-- username.store.ts
+- background-image.store.ts
 - game.types.ts
 - flash-cooldown.constant.ts
 
 ❌ BAD:
 - GameRoom.tsx
 - useSocket.ts
-- usernameStore.ts
+- backgroundImageStore.ts
 - gameTypes.ts
 - flashCooldown.ts
 ```
@@ -1582,28 +1581,30 @@ export const Card = (props: ICardProps) => {
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 
-interface IDefaultState {
-  username: string | null
+interface IBackgroundImageState {
+  image: string
 }
 
-interface IDefaultActions {
-  setUsername: (value: string) => void
+interface IBackgroundImageActions {
+  setImage: (image: string) => void
   reset: () => void
 }
 
-const DEFAULT_STATE: IDefaultState = {
-  username: null,
+const DEFAULT_STATE: IBackgroundImageState = {
+  image: '',
 }
 
-export const useUsernameStore = create<IDefaultState & IDefaultActions>()(
+export const useBackgroundImageStore = create<
+  IBackgroundImageState & IBackgroundImageActions
+>()(
   persist(
     (set) => ({
       ...DEFAULT_STATE,
-      setUsername: (value) => set({ username: value }),
+      setImage: (image) => set({ image }),
       reset: () => set(DEFAULT_STATE),
     }),
     {
-      name: 'username-storage',
+      name: 'background-image-storage',
       storage: createJSONStorage(() => localStorage),
     }
   )
@@ -1617,13 +1618,14 @@ export const useUsernameStore = create<IDefaultState & IDefaultActions>()(
 3. Use `DEFAULT_STATE` constant
 4. Name stores with `use` prefix and `Store` suffix
 5. Use selective subscriptions to avoid re-renders
+6. **For single values, prefer direct localStorage** (like username)
 
 ```typescript
 // ✅ GOOD: Selective subscription
-const username = useUsernameStore((state) => state.username)
+const image = useBackgroundImageStore((state) => state.image)
 
 // ❌ BAD: Subscribe to entire store
-const { username, setUsername, reset } = useUsernameStore()
+const { image, setImage, reset } = useBackgroundImageStore()
 ```
 
 ### Custom Hooks Pattern
@@ -1695,5 +1697,5 @@ For questions, issues, or contributions:
 ---
 
 **Last Updated**: November 24, 2025
-**Version**: 2.3.0 - Timer Calibration Controls & UX Polish
+**Version**: 2.3.1 - Timer Controls UX Fixes & Username Refactor
 **Status**: ✅ Production Ready (API + Web + Docker + Timer Sync + Calibration)

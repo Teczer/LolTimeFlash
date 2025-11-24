@@ -1,6 +1,5 @@
 'use client'
 
-import { useUsernameStore } from '@/app/store/username.store'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useParams } from 'next/navigation'
@@ -9,14 +8,13 @@ import { GrFormNextLink } from 'react-icons/gr'
 
 export const UsernameInputModal = () => {
   const [inputValue, setInputValue] = useState<string>('')
-  const { setUsername } = useUsernameStore()
   const params = useParams()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     
     if (inputValue.trim()) {
-      setUsername(inputValue.trim())
+      localStorage.setItem('username', inputValue.trim())
       location.reload()
     }
   }
