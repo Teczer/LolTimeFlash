@@ -1,13 +1,15 @@
-'use client'
-
 import { cn } from '@/lib/utils'
 import { memo } from 'react'
+import { TimerControlButton } from './timer-control-button.component'
 
 interface ITimerControlsProps {
   isOnCooldown: boolean
   onAdjust: (seconds: number) => void
   className?: string
 }
+
+const adjustMinusColor = 'rgba(239,68,68,0.6)'
+const adjustPlusColor = 'rgba(84,140,180,0.6)'
 
 const TimerControlsComponent = (props: ITimerControlsProps) => {
   const { isOnCooldown, onAdjust, className } = props
@@ -17,47 +19,27 @@ const TimerControlsComponent = (props: ITimerControlsProps) => {
   return (
     <div
       className={cn(
-        'flex items-center justify-center gap-2 sm:gap-3',
+        'flex items-center justify-center gap-3 sm:gap-4',
         className
       )}
     >
-      <button
+      <TimerControlButton
+        iconSrc="/assets/w-zilean-icon.png"
+        label="-2s"
+        glowColor={adjustMinusColor}
+        textColor="text-red-400"
         onClick={() => onAdjust(-2)}
-        className={cn(
-          'group relative flex items-center justify-center gap-1',
-          'h-8 min-w-[60px] rounded-lg px-3 sm:h-10 sm:min-w-[70px] sm:px-4',
-          'border border-red-500/30 bg-gradient-to-br from-red-600/90 to-red-700/90',
-          'text-xs font-bold text-white shadow-lg sm:text-sm',
-          'transition-all duration-200',
-          'hover:border-red-400/50 hover:from-red-500/90 hover:to-red-600/90 hover:shadow-red-500/20',
-          'active:scale-95 active:shadow-inner',
-          'backdrop-blur-sm'
-        )}
-        aria-label="Subtract 2 seconds"
-        type="button"
-      >
-        <span className="text-base sm:text-lg">−</span>
-        <span>2s</span>
-      </button>
+        ariaLabel="Rewind 2 seconds (Zilean E)"
+      />
 
-      <button
+      <TimerControlButton
+        iconSrc="/assets/e-zilean-icon.png"
+        label="+2s"
+        glowColor={adjustPlusColor}
+        textColor="text-[#548CA4]"
         onClick={() => onAdjust(+2)}
-        className={cn(
-          'group relative flex items-center justify-center gap-1',
-          'h-8 min-w-[60px] rounded-lg px-3 sm:h-10 sm:min-w-[70px] sm:px-4',
-          'border border-green-500/30 bg-gradient-to-br from-green-600/90 to-green-700/90',
-          'text-xs font-bold text-white shadow-lg sm:text-sm',
-          'transition-all duration-200',
-          'hover:border-green-400/50 hover:from-green-500/90 hover:to-green-600/90 hover:shadow-green-500/20',
-          'active:scale-95 active:shadow-inner',
-          'backdrop-blur-sm'
-        )}
-        aria-label="Add 2 seconds"
-        type="button"
-      >
-        <span className="text-base sm:text-lg">+</span>
-        <span>2s</span>
-      </button>
+        ariaLabel="Speed up 2 seconds (Zilean W)"
+      />
     </div>
   )
 }

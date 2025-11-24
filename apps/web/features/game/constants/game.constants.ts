@@ -14,23 +14,23 @@ export const FLASH_COOLDOWN_WITH_BOTH = 231 // 3:51
 export const LEAGUE_ROLES: ILeagueRole[] = [
   {
     name: 'TOP',
-    src: 'https://res.cloudinary.com/dw3mwclgk/image/upload/v1717152630/LolTimeFlash/toprole-icon.png',
+    src: '/assets/toprole-icon.png',
   },
   {
     name: 'JUNGLE',
-    src: 'https://res.cloudinary.com/dw3mwclgk/image/upload/v1717152630/LolTimeFlash/junglerole-icon.png',
+    src: '/assets/junglerole-icon.png',
   },
   {
     name: 'MID',
-    src: 'https://res.cloudinary.com/dw3mwclgk/image/upload/v1717152630/LolTimeFlash/midrole-icon.png',
+    src: '/assets/midrole-icon.png',
   },
   {
     name: 'ADC',
-    src: 'https://res.cloudinary.com/dw3mwclgk/image/upload/v1717152630/LolTimeFlash/adcrole-icon.png',
+    src: '/assets/adcrole-icon.png',
   },
   {
     name: 'SUPPORT',
-    src: 'https://res.cloudinary.com/dw3mwclgk/image/upload/v1717152630/LolTimeFlash/supportrole-icon.png',
+    src: '/assets/supportrole-icon.png',
   },
 ]
 
@@ -66,4 +66,3 @@ export const FLASH_AUDIO_PATH = '/flash-song.mp3'
  * Audio volume level (0-1)
  */
 export const AUDIO_VOLUME = 0.15
-
