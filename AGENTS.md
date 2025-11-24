@@ -1697,5 +1697,5 @@ For questions, issues, or contributions:
 ---
 
 **Last Updated**: November 24, 2025
-**Version**: 2.3.1 - Timer Controls UX Fixes & Username Refactor
+**Version**: 2.3.1 - Username Storage Refactor
 **Status**: ✅ Production Ready (API + Web + Docker + Timer Sync + Calibration)
