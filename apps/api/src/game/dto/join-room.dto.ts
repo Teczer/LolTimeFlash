@@ -1,4 +1,7 @@
-import { IsString, IsNotEmpty, Length, Matches } from 'class-validator';
+import { IsNotEmpty, IsString, Length, Matches } from 'class-validator';
+
+const MIN_USERNAME_LENGTH = 3;
+const MAX_USERNAME_LENGTH = 12;
 
 export class JoinRoomDto {
   @IsString()
@@ -11,6 +14,8 @@ export class JoinRoomDto {
 
   @IsString()
   @IsNotEmpty()
-  @Length(3, 20, { message: 'Username must be between 3 and 20 characters' })
+  @Length(MIN_USERNAME_LENGTH, MAX_USERNAME_LENGTH, {
+    message: `Username must be between ${MIN_USERNAME_LENGTH} and ${MAX_USERNAME_LENGTH} characters`,
+  })
   username: string;
 }

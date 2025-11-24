@@ -1,6 +1,6 @@
 {
   "name": "loltimeflash-monorepo",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "private": true,
   "description": "LolTimeFlash - Real-time Flash timer tracking for League of Legends",
   "author": "LolTimeFlash Team",
