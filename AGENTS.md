@@ -1195,9 +1195,115 @@ None / [Description si applicable]
 - [ ] Mettre à jour `package.json` (version)
 - [ ] Mettre à jour `README.md` (badge version)
 - [ ] Ajouter une entrée dans `VERSIONS.md`
+- [ ] Créer le fichier de release dans `release-notes/vX.X.X.md`
 - [ ] Mettre à jour footer de `AGENTS.md` (date + version + status)
 - [ ] Tester en local (dev + build)
 - [ ] Tester en Docker (si applicable)
+
+---
+
+## 📦 GitHub Release Notes Guidelines
+
+### Format Standardisé
+
+Chaque release doit avoir un fichier `release-notes/vX.X.X.md` suivant ce format :
+
+**Titre de Release** : `X.X.X (Month DD, YYYY)`
+
+**Titre de Description** : `[Emoji] LolTimeFlash vX.X.X - [Feature Name]`
+
+**Structure** :
+
+```markdown
+X.X.X (Month DD, YYYY)
+
+[Emoji] LolTimeFlash vX.X.X - [Feature Name]
+
+### 🔄 Overview
+
+[1-2 phrases résumant la release]
+
+### ✨ What's New (ou 🐛 Bug Fixes / ♻️ Refactoring selon le type)
+
+- **Feature/Fix Name**: Description
+- **Feature/Fix Name**: Description
+
+### 📝 Documentation (si applicable)
+
+- Doc change 1
+- Doc change 2
+
+### 📦 Technical Changes
+
+**Backend** (si applicable):
+
+- Change 1
+- Change 2
+
+**Frontend** (si applicable):
+
+- Change 1
+- Change 2
+
+**Modified Files**:
+| File | Changes |
+|------|---------|
+| `path/to/file` | Description |
+
+### 🎯 Impact
+
+[Description de l'impact utilisateur/développeur]
+
+---
+
+**Full Changelog**: https://github.com/yourusername/LolTimeFlash/compare/vX.X.X...vY.Y.Y
+```
+
+### Exemples par Type de Release
+
+**MAJOR (X.0.0)** : Breaking changes, architecture majeure
+
+- Emoji titre: 🚀 ou 📦
+- Sections: Overview, Breaking Changes, New Features, Migration Guide, Technical Changes, Impact
+- Exemple: `🚀 LolTimeFlash v2.0.0 - NestJS Monorepo Architecture`
+
+**MINOR (X.Y.0)** : Nouvelles features, améliorations
+
+- Emoji titre: ✨
+- Sections: Overview, What's New, Documentation, Technical Changes, Impact
+- Exemple: `✨ LolTimeFlash v2.3.0 - Timer Calibration Controls & UX Polish`
+
+**PATCH (X.Y.Z)** : Bug fixes, hotfixes, optimizations
+
+- Emoji titre: 🐛 (fixes) ou ⚙️ (refactor) ou 📝 (docs)
+- Sections: Overview, Bug Fixes/Refactoring, Documentation, Technical Changes, Impact
+- Exemple: `⚙️ LolTimeFlash v2.3.1 - Username Storage Refactor`
+
+### Publication sur GitHub
+
+1. Créer le tag Git :
+
+```bash
+git tag -a vX.X.X -m "Release vX.X.X"
+git push origin vX.X.X
+```
+
+2. Créer la release sur GitHub :
+   - Aller sur Releases → Draft a new release
+   - Choisir le tag `vX.X.X`
+   - Titre : `X.X.X (Month DD, YYYY)`
+   - Description : Copier le contenu de `release-notes/vX.X.X.md`
+   - Publier
+
+### Fichiers à Mettre à Jour
+
+Pour chaque release :
+
+1. `package.json` - Version number
+2. `README.md` - Badge version
+3. `VERSIONS.md` - Entrée historique détaillée
+4. `release-notes/vX.X.X.md` - Notes de release GitHub
+5. `AGENTS.md` - Footer (date + version + status)
 
 ---
 
@@ -1697,5 +1803,5 @@ For questions, issues, or contributions:
 ---
 
 **Last Updated**: November 24, 2025
-**Version**: 2.3.1 - Username Storage Refactor
+**Version**: 2.3.2 - Username Validation & Lobby Refactor
 **Status**: ✅ Production Ready (API + Web + Docker + Timer Sync + Calibration)

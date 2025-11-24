@@ -7,6 +7,57 @@
 
 ## 📚 Version History
 
+### Version 2.3.2 - November 2025 (Username Validation & Lobby Refactor)
+
+**New Features** :
+
+- ✨ **Username Length Validation** : Validation stricte 3-12 caractères (backend + frontend)
+- 🎨 **Visual Validation Feedback** : Indicateurs check/croix en temps réel avec feedback couleur
+- 🏗️ **Lobby Architecture Refactor** : Réécriture complète en composants atomiques mémorisés
+- ⚡ **Performance Improvements** : Mémorisation des composants réduit les re-renders
+
+**Security** :
+
+- 🔐 **Backend Validation** : Protection contre la manipulation localStorage (username > 12 chars rejeté)
+
+**Technical Changes** :
+
+**Backend** :
+- Nouveau fichier : `apps/api/libs/shared/src/constants/username.ts` (MIN/MAX constants)
+- Mise à jour : `JoinRoomDto` validation (3-12 caractères avec constantes locales)
+
+**Frontend** :
+- Nouveau composant : `UsernameValidationFeedback.component.tsx` (feedback réutilisable)
+- Nouveaux composants lobby : `CreateLobbyForm`, `JoinLobbyForm`, `LobbyDivider`
+- Refactoring : `app/lobby/page.tsx` (134 → 28 lignes, -78%)
+- Architecture : Pattern `features/` avec barrel exports
+- Mémorisation : `React.memo()` sur tous les nouveaux composants
+
+**Fichiers Modifiés** :
+
+| Fichier                                                    | Changements                                  |
+| ---------------------------------------------------------- | -------------------------------------------- |
+| `apps/api/libs/shared/src/constants/username.ts`           | **Created** - Constantes longueur username   |
+| `apps/api/src/game/dto/join-room.dto.ts`                   | Validation 3-12 caractères                   |
+| `apps/web/features/settings/components/username-validation-feedback.component.tsx` | **Created** - Composant feedback |
+| `apps/web/features/lobby/components/create-lobby-form.component.tsx` | **Created** - Form création            |
+| `apps/web/features/lobby/components/join-lobby-form.component.tsx` | **Created** - Form join                  |
+| `apps/web/features/lobby/components/lobby-divider.component.tsx` | **Created** - Divider mémorisé           |
+| `apps/web/features/lobby/components/index.ts`              | **Created** - Barrel exports                 |
+| `apps/web/app/lobby/page.tsx`                              | **Refactored** - Réduction de 78%            |
+| `features/settings/components/username-input-modal.component.tsx` | Intégration feedback validation      |
+| `app/settings/page.tsx`                                    | Intégration feedback validation              |
+
+**Impact** :
+
+- ✅ Sécurité renforcée (validation backend)
+- ✅ UX améliorée (feedback visuel instantané)
+- ✅ Architecture propre (composants atomiques)
+- ✅ Performance optimisée (mémorisation)
+- ✅ Maintenabilité accrue (code -78% sur lobby)
+
+---
+
 ### Version 2.3.1 - November 2025 (Username Storage Refactor)
 
 **Refactoring & Optimization** :
