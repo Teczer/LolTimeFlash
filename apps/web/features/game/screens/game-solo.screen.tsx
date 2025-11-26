@@ -1,5 +1,6 @@
 'use client'
 
+import { MobileUserListDrawer } from '@/features/game/components/mobile-user-list-drawer.component'
 import { mapEnemyParticipantsToRoles } from '@/lib/riot-role-mapping.util'
 import { GameControls } from '../components/game-controls.component'
 import { GameInfoDisplay } from '../components/game-info-display.component'
@@ -61,7 +62,15 @@ const SoloGameContent = () => {
       <GameControls volume={audio.volume} onToggleVolume={audio.toggleVolume} />
 
       {/* Summoner Input */}
-      <SummonerInput onGameDataFetched={handleGameDataFetched} />
+      <div className="hidden sm:flex">
+        <SummonerInput onGameDataFetched={handleGameDataFetched} />
+      </div>
+
+      {/* Mobile User List Drawer */}
+      <MobileUserListDrawer
+        users={[]}
+        onGameDataFetched={handleGameDataFetched}
+      />
 
       {/* Game Info Display */}
       {gameState.gameId && gameState.gameStartTime && (
