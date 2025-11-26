@@ -7,6 +7,46 @@
 
 ## 📚 Version History
 
+### Version 2.3.3 - November 2025 (Components Architecture Refactor)
+
+**Refactoring** :
+
+- ♻️ **Components Organization** : Réorganisation des composants en dossiers logiques (`game/`, `room/`, `status/`, `controls/`)
+- 🔄 **Path Aliases Migration** : Migration de tous les imports relatifs vers des alias TypeScript (`@/features/game/...`)
+- 📁 **Simplified Structure** : Suppression des dossiers `ui/` et `input/` inutiles
+
+**Technical Changes** :
+
+**Frontend** :
+- Nouvelle structure : `components/game/`, `components/room/`, `components/status/`, `components/controls/`
+- Migration complète des imports relatifs vers `@/features/game/...`
+- Création de barrel exports (`index.ts`) pour chaque dossier
+- Amélioration du support IDE (autocomplete, refactoring)
+
+**Fichiers Modifiés** :
+
+| Fichier                                                      | Changements                                    |
+| ------------------------------------------------------------ | ---------------------------------------------- |
+| `apps/web/features/game/components/game/*`                  | Déplacés depuis root, imports mis à jour     |
+| `apps/web/features/game/components/room/*`                  | Déplacés depuis root, imports mis à jour     |
+| `apps/web/features/game/components/status/*`                | Déplacés depuis root, imports mis à jour     |
+| `apps/web/features/game/components/controls/*`              | Déplacés depuis root, imports mis à jour     |
+| `apps/web/features/game/components/*.tsx`                   | Imports mis à jour vers alias                 |
+| `apps/web/features/game/screens/*.tsx`                      | Imports mis à jour vers alias                 |
+| `apps/web/features/game/contexts/*.tsx`                     | Imports mis à jour vers alias                 |
+| `apps/web/features/game/hooks/*.ts`                         | Imports mis à jour vers alias                 |
+| `apps/web/features/game/constants/*.ts`                     | Imports mis à jour vers alias                 |
+
+**Impact** :
+
+- ✅ Organisation améliorée (composants groupés par fonctionnalité)
+- ✅ Imports cohérents (tous utilisent des alias)
+- ✅ Support IDE amélioré (autocomplete, refactoring)
+- ✅ Maintenabilité accrue (navigation facilitée)
+- ✅ Scalabilité améliorée (ajout de composants simplifié)
+
+---
+
 ### Version 2.3.2 - November 2025 (Username Validation & Lobby Refactor)
 
 **New Features** :
