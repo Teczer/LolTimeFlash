@@ -9,8 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { toast } from '@/hooks/use-toast.hook'
-import { fetchLiveGameData } from '@/lib/riot-api.service'
+import { useFetchLiveGame } from '@/features/game/hooks/use-fetch-live-game.hook'
 import { cn } from '@/lib/utils'
 import type { RiotRegion } from '@loltimeflash/shared'
 import { useState } from 'react'
@@ -44,48 +43,12 @@ export const SummonerInput = (props: ISummonerInputProps) => {
   const { onGameDataFetched, className } = props
   const [summonerName, setSummonerName] = useState('')
   const [region, setRegion] = useState<RiotRegion>('euw1')
-  const [isLoading, setIsLoading] = useState(false)
 
-  const handleFetchLiveGame = async () => {
-    if (!summonerName.trim()) {
-      toast({
-        title: '⚠️ Missing Information',
-        description: 'Please enter a summoner name (e.g., YourName#TAG)',
-        duration: 2000,
-      })
-      return
+  const { mutateAsync: fetchLiveGame, isPending: isLoading } = useFetchLiveGame(
+    {
+      onSuccess: onGameDataFetched,
     }
-
-    setIsLoading(true)
-
-    try {
-      const response = await fetchLiveGameData(summonerName, region)
-
-      if (response.success && response.data) {
-        const enemyCount = response.data.enemies?.length || 0
-        toast({
-          title: '✅ Success!',
-          description: `Found ${enemyCount} enemy champions in live game`,
-          duration: 2000,
-        })
-        onGameDataFetched(response.data)
-      } else {
-        toast({
-          title: '❌ Error',
-          description: response.error || 'Failed to fetch live game data',
-          duration: 3000,
-        })
-      }
-    } catch (error) {
-      toast({
-        title: '❌ Error',
-        description: 'Network error - please try again',
-        duration: 3000,
-      })
-    } finally {
-      setIsLoading(false)
-    }
-  }
+  )
 
   return (
     <div
@@ -104,25 +67,25 @@ export const SummonerInput = (props: ISummonerInputProps) => {
           value={summonerName}
           onChange={(e) => setSummonerName(e.target.value)}
           disabled={isLoading}
-          onKeyDown={(e) => {
+          onKeyDown={async (e) => {
             if (e.key === 'Enter') {
-              handleFetchLiveGame()
+              await fetchLiveGame({ summonerName, region })
             }
           }}
         />
 
         <Select
           value={region}
-          onValueChange={(value) => setRegion(value as RiotRegion)}
+          onValueChange={(value: RiotRegion) => setRegion(value)}
           disabled={isLoading}
         >
           <SelectTrigger className="w-full sm:w-32">
             <SelectValue placeholder="Select region" />
           </SelectTrigger>
           <SelectContent>
-            {REGIONS.map((r) => (
-              <SelectItem key={r.value} value={r.value}>
-                {r.label}
+            {REGIONS.map((region) => (
+              <SelectItem key={region.value} value={region.value}>
+                {region.label}
               </SelectItem>
             ))}
           </SelectContent>
@@ -130,7 +93,9 @@ export const SummonerInput = (props: ISummonerInputProps) => {
       </div>
 
       <Button
-        onClick={handleFetchLiveGame}
+        onClick={async () => {
+          await fetchLiveGame({ summonerName, region })
+        }}
         disabled={isLoading || !summonerName.trim()}
         variant="secondary"
       >

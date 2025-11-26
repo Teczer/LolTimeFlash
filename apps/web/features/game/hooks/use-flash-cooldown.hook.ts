@@ -1,10 +1,10 @@
-import type { TRole, ISummonerData } from '../types/game.types'
+import type { TRole, ISummonerData } from '@/features/game/types/game.types'
 import {
   FLASH_BASE_COOLDOWN,
   FLASH_COOLDOWN_WITH_BOOTS,
   FLASH_COOLDOWN_WITH_RUNE,
   FLASH_COOLDOWN_WITH_BOTH,
-} from '../constants/game.constants'
+} from '@/features/game/constants/game.constants'
 
 interface ICalculateCooldownOptions {
   lucidityBoots: boolean

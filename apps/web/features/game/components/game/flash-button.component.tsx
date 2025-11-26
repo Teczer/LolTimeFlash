@@ -1,13 +1,13 @@
 'use client'
 
-import { cn } from '@/lib/utils'
-import Image from 'next/image'
-import { memo, useEffect, useState } from 'react'
 import {
   formatCooldown,
   getRemainingTime,
-} from '../hooks/use-flash-cooldown.hook'
-import type { TRole } from '../types/game.types'
+} from '@/features/game/hooks/use-flash-cooldown.hook'
+import type { TRole } from '@/features/game/types/game.types'
+import { cn } from '@/lib/utils'
+import Image from 'next/image'
+import { memo, useEffect, useState } from 'react'
 
 interface IFlashButtonProps {
   role: TRole
@@ -22,21 +22,18 @@ const FlashButtonComponent = (props: IFlashButtonProps) => {
   const { role, iconSrc, cooldown, onClick, summonerName, className } = props
   const isDDragonIcon = iconSrc.includes('ddragon.leagueoflegends.com')
 
-  // ✅ Force re-render every second to update countdown display
   const [tick, setTick] = useState(0)
 
   useEffect(() => {
-    // Only run interval if cooldown is active
     if (typeof cooldown === 'number') {
       const interval = setInterval(() => {
-        setTick((prev) => prev + 1) // Force re-render
-      }, 1000) // Update every second
+        setTick((prev) => prev + 1)
+      }, 1000)
 
       return () => clearInterval(interval)
     }
   }, [cooldown])
 
-  // ✅ Calculate remaining time dynamically from timestamp (recalculated on every tick)
   const remainingSeconds = getRemainingTime(cooldown)
   const isOnCooldown = remainingSeconds > 0
 

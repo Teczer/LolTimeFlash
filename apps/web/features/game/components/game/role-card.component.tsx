@@ -2,8 +2,8 @@
 
 import { cn } from '@/lib/utils'
 import { memo } from 'react'
-import { getRemainingTime } from '../hooks/use-flash-cooldown.hook'
-import type { ILeagueRole, ISummonerData } from '../types/game.types'
+import { getRemainingTime } from '@/features/game/hooks/use-flash-cooldown.hook'
+import type { ILeagueRole, ISummonerData } from '@/features/game/types/game.types'
 import { FlashButton } from './flash-button.component'
 import { ItemToggle } from './item-toggle.component'
 import { TimerControls } from './timer-controls.component'

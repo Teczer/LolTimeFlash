@@ -1,19 +1,26 @@
 'use client'
 
+import { GameControls } from '@/features/game/components/controls'
+import { RoleCard } from '@/features/game/components/game'
+import {
+  MobileUserListDrawer,
+  RoomInfo,
+  UserList,
+} from '@/features/game/components/room'
+import {
+  ConnectionStatus,
+  GameInfoDisplay,
+} from '@/features/game/components/status'
+import { SummonerInput } from '@/features/game/components/summoner-input.component'
+import { LEAGUE_ROLES } from '@/features/game/constants/game.constants'
+import {
+  GameProvider,
+  useGameContext,
+} from '@/features/game/contexts/game.context'
+import type { TRole } from '@/features/game/types/game.types'
 import { useSocket } from '@/hooks/use-socket.hook'
 import { mapEnemyParticipantsToRoles } from '@/lib/riot-role-mapping.util'
 import { useEffect } from 'react'
-import { ConnectionStatus } from '../components/connection-status.component'
-import { GameControls } from '../components/game-controls.component'
-import { GameInfoDisplay } from '../components/game-info-display.component'
-import { MobileUserListDrawer } from '../components/mobile-user-list-drawer.component'
-import { RoleCard } from '../components/role-card.component'
-import { RoomInfo } from '../components/room-info.component'
-import { SummonerInput } from '../components/summoner-input.component'
-import { UserList } from '../components/user-list.component'
-import { LEAGUE_ROLES } from '../constants/game.constants'
-import { GameProvider, useGameContext } from '../contexts/game.context'
-import type { TRole } from '../types/game.types'
 interface IMultiplayerContentProps {
   roomId: string
   username: string

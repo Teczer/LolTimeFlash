@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react'
-import { FLASH_AUDIO_PATH, AUDIO_VOLUME } from '../constants/game.constants'
+import { FLASH_AUDIO_PATH, AUDIO_VOLUME } from '@/features/game/constants/game.constants'
 
 interface IUseAudioReturn {
   play: () => Promise<void>
