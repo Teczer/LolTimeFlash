@@ -38,7 +38,7 @@ const TimerControlButtonComponent = (props: ITimerControlButtonProps) => {
       aria-label={ariaLabel}
       type="button"
     >
-      <div className="relative h-12 w-12 sm:h-14 sm:w-14">
+      <div className="relative size-8 sm:size-14">
         <Image
           src={iconSrc}
           alt={ariaLabel}

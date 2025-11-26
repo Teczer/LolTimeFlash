@@ -1,7 +1,7 @@
 'use client'
 
-import { memo } from 'react'
 import { cn } from '@/lib/utils'
+import { memo } from 'react'
 import { ImSpinner2 } from 'react-icons/im'
 
 interface IConnectionStatusProps {
@@ -14,7 +14,7 @@ const ConnectionStatusComponent = (props: IConnectionStatusProps) => {
 
   if (isConnected) {
     return (
-      <div className="fixed right-4 top-4 flex items-center gap-2 rounded-md bg-green-500/20 px-3 py-2 backdrop-blur-sm">
+      <div className="fixed right-4 top-4 hidden items-center gap-2 rounded-md bg-green-500/20 px-3 py-2 backdrop-blur-sm sm:flex">
         <div className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
         <span className="text-sm font-medium text-green-500">Connected</span>
       </div>
@@ -24,9 +24,9 @@ const ConnectionStatusComponent = (props: IConnectionStatusProps) => {
   return (
     <div
       className={cn(
-        'fixed right-4 top-4 flex items-center gap-2 rounded-md px-3 py-2 backdrop-blur-sm',
+        'fixed right-4 top-4 hidden items-center gap-2 rounded-md px-3 py-2 backdrop-blur-sm sm:flex',
         reconnectAttempts >= 3
-          ? 'bg-red-500/20 animate-pulse'
+          ? 'animate-pulse bg-red-500/20'
           : 'bg-yellow-500/20'
       )}
     >
@@ -67,4 +67,3 @@ export const ConnectionStatus = memo(
     )
   }
 )
-

@@ -45,7 +45,7 @@ const FlashButtonComponent = (props: IFlashButtonProps) => {
       <button
         onClick={onClick}
         className={cn(
-          'relative size-28 transition-all sm:size-64 sm:hover:scale-110',
+          'relative size-20 transition-all sm:size-64 sm:hover:scale-110',
           isDDragonIcon && 'size-12 sm:size-36',
           className
         )}
