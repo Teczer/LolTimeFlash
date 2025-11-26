@@ -4,7 +4,7 @@
 
 **League of Legends Website Tool: Easily Time and Communicate Summoner Spells - THE FLASH! 🌟**
 
-[![Version](https://img.shields.io/badge/version-2.3.2-brightgreen?style=flat)](https://github.com/yourusername/LolTimeFlash/releases)
+[![Version](https://img.shields.io/badge/version-2.3.3-brightgreen?style=flat)](https://github.com/yourusername/LolTimeFlash/releases)
 [![Next.js](https://img.shields.io/badge/Next.js-16.0.1-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7.2-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 [![Socket.IO](https://img.shields.io/badge/Socket.IO-4.8.1-010101?style=flat&logo=socket.io)](https://socket.io/)

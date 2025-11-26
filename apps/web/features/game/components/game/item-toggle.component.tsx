@@ -24,7 +24,7 @@ const ItemToggleComponent = (props: IItemToggleProps) => {
       <Image
         draggable={false}
         className={cn(
-          'size-12 rounded-full object-cover sm:size-20',
+          'size-8 rounded-full object-cover sm:size-20',
           isActive ? 'brightness-100' : 'brightness-50'
         )}
         width={200}

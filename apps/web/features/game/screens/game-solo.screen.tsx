@@ -1,13 +1,17 @@
 'use client'
 
+import { GameControls } from '@/features/game/components/controls'
+import { RoleCard } from '@/features/game/components/game'
+import { MobileUserListDrawer } from '@/features/game/components/room'
+import { GameInfoDisplay } from '@/features/game/components/status'
+import { SummonerInput } from '@/features/game/components/summoner-input.component'
+import { LEAGUE_ROLES } from '@/features/game/constants/game.constants'
+import {
+  GameProvider,
+  useGameContext,
+} from '@/features/game/contexts/game.context'
+import type { TRole } from '@/features/game/types/game.types'
 import { mapEnemyParticipantsToRoles } from '@/lib/riot-role-mapping.util'
-import { GameControls } from '../components/game-controls.component'
-import { GameInfoDisplay } from '../components/game-info-display.component'
-import { RoleCard } from '../components/role-card.component'
-import { SummonerInput } from '../components/summoner-input.component'
-import { LEAGUE_ROLES } from '../constants/game.constants'
-import { GameProvider, useGameContext } from '../contexts/game.context'
-import type { TRole } from '../types/game.types'
 
 const SoloGameContent = () => {
   const {
@@ -61,7 +65,15 @@ const SoloGameContent = () => {
       <GameControls volume={audio.volume} onToggleVolume={audio.toggleVolume} />
 
       {/* Summoner Input */}
-      <SummonerInput onGameDataFetched={handleGameDataFetched} />
+      <div className="hidden sm:flex">
+        <SummonerInput onGameDataFetched={handleGameDataFetched} />
+      </div>
+
+      {/* Mobile User List Drawer */}
+      <MobileUserListDrawer
+        users={[]}
+        onGameDataFetched={handleGameDataFetched}
+      />
 
       {/* Game Info Display */}
       {gameState.gameId && gameState.gameStartTime && (

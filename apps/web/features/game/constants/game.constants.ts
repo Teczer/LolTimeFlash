@@ -1,4 +1,4 @@
-import type { IGameData, ILeagueRole, ISummonerData } from '../types/game.types'
+import type { IGameData, ILeagueRole, ISummonerData } from '@/features/game/types/game.types'
 
 /**
  * Flash cooldown durations in seconds

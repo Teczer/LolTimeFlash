@@ -1,19 +1,26 @@
 'use client'
 
+import { GameControls } from '@/features/game/components/controls'
+import { RoleCard } from '@/features/game/components/game'
+import {
+  MobileUserListDrawer,
+  RoomInfo,
+  UserList,
+} from '@/features/game/components/room'
+import {
+  ConnectionStatus,
+  GameInfoDisplay,
+} from '@/features/game/components/status'
+import { SummonerInput } from '@/features/game/components/summoner-input.component'
+import { LEAGUE_ROLES } from '@/features/game/constants/game.constants'
+import {
+  GameProvider,
+  useGameContext,
+} from '@/features/game/contexts/game.context'
+import type { TRole } from '@/features/game/types/game.types'
 import { useSocket } from '@/hooks/use-socket.hook'
 import { mapEnemyParticipantsToRoles } from '@/lib/riot-role-mapping.util'
 import { useEffect } from 'react'
-import { ConnectionStatus } from '../components/connection-status.component'
-import { GameControls } from '../components/game-controls.component'
-import { GameInfoDisplay } from '../components/game-info-display.component'
-import { RoleCard } from '../components/role-card.component'
-import { RoomInfo } from '../components/room-info.component'
-import { SummonerInput } from '../components/summoner-input.component'
-import { UserList } from '../components/user-list.component'
-import { LEAGUE_ROLES } from '../constants/game.constants'
-import { GameProvider, useGameContext } from '../contexts/game.context'
-import type { TRole } from '../types/game.types'
-
 interface IMultiplayerContentProps {
   roomId: string
   username: string
@@ -131,8 +138,9 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
   }
 
   return (
-    <main className="flex h-screen flex-col items-center justify-start gap-2 p-6 sm:gap-2 sm:p-10">
+    <main className="flex h-screen flex-col items-center justify-start gap-6 px-4 py-2 sm:gap-2 sm:p-10">
       {/* Connection Status */}
+
       <ConnectionStatus
         isConnected={isConnected}
         reconnectAttempts={reconnectAttempts}
@@ -141,6 +149,12 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
       {/* Controls */}
       <GameControls volume={audio.volume} onToggleVolume={audio.toggleVolume} />
 
+      {/* Mobile User List Drawer */}
+      <MobileUserListDrawer
+        users={gameState.users}
+        onGameDataFetched={handleGameDataFetched}
+      />
+
       {/* User List & Room Info */}
       <div className="flex items-center justify-center gap-1">
         <UserList users={gameState.users} />
@@ -148,7 +162,9 @@ const MultiplayerGameContent = (props: IMultiplayerContentProps) => {
       </div>
 
       {/* Summoner Input */}
-      <SummonerInput onGameDataFetched={handleGameDataFetched} />
+      <div className="hidden sm:flex">
+        <SummonerInput onGameDataFetched={handleGameDataFetched} />
+      </div>
 
       {/* Game Info Display */}
       {gameState.gameId && gameState.gameStartTime && (

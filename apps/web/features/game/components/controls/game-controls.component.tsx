@@ -23,7 +23,7 @@ const GameControlsComponent = (props: IGameControlsProps) => {
     <>
       {/* Back Button */}
       <Button
-        className="absolute left-6 top-6 sm:left-20 sm:top-10"
+        className="absolute left-6 top-10 sm:left-20 sm:top-10"
         onClick={handleGoBack}
         variant="outline"
         size="icon"
@@ -34,7 +34,7 @@ const GameControlsComponent = (props: IGameControlsProps) => {
 
       {/* Volume Button */}
       <Button
-        className="absolute right-6 top-6 sm:left-20 sm:top-24"
+        className="absolute hidden sm:left-20 sm:top-24 sm:flex"
         onClick={onToggleVolume}
         variant="outline"
         size="icon"

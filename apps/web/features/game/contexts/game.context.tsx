@@ -1,11 +1,11 @@
 'use client'
 
 import { createContext, useCallback, useContext, useState } from 'react'
-import { DEFAULT_GAME_DATA } from '../constants/game.constants'
-import { useAudio } from '../hooks/use-audio.hook'
-import { calculateFlashCooldown } from '../hooks/use-flash-cooldown.hook'
-import { useGameTimer } from '../hooks/use-game-timer.hook'
-import type { IChampionData, IGameData, TRole } from '../types/game.types'
+import { DEFAULT_GAME_DATA } from '@/features/game/constants/game.constants'
+import { useAudio } from '@/features/game/hooks/use-audio.hook'
+import { calculateFlashCooldown } from '@/features/game/hooks/use-flash-cooldown.hook'
+import { useGameTimer } from '@/features/game/hooks/use-game-timer.hook'
+import type { IChampionData, IGameData, TRole } from '@/features/game/types/game.types'
 
 interface IGameContextValue {
   gameState: IGameData

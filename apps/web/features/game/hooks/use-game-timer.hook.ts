@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import type { IGameData, IRoleData } from '../types/game.types'
+import type { IGameData, IRoleData } from '@/features/game/types/game.types'
 
 interface IUseGameTimerOptions {
   gameState: IGameData
