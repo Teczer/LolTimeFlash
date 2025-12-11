@@ -16,7 +16,7 @@ export const UsernameInputModal = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-
+    
     const trimmedValue = inputValue.trim()
 
     if (!trimmedValue) {
@@ -35,8 +35,8 @@ export const UsernameInputModal = () => {
     }
 
     localStorage.setItem('username', trimmedValue)
-    location.reload()
-  }
+      location.reload()
+    }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
@@ -54,20 +54,20 @@ export const UsernameInputModal = () => {
           You are joining lobby{' '}
           <span className="text-[#C89B3C]">{params.roomId}</span>
         </h1>
-
+        
         <div className="flex w-full flex-col items-center justify-center gap-2 sm:w-1/2">
           <div className="flex w-full items-center justify-center gap-2">
-            <Input
-              type="text"
+          <Input
+            type="text"
               className="bg-background w-1/2"
-              placeholder="Enter your username"
-              value={inputValue}
+            placeholder="Enter your username"
+            value={inputValue}
               onChange={handleChange}
-            />
+          />
 
-            <Button type="submit" variant="outline" size="icon">
-              <GrFormNextLink className="h-4 w-4" />
-            </Button>
+          <Button type="submit" variant="outline" size="icon">
+            <GrFormNextLink className="h-4 w-4" />
+          </Button>
           </div>
 
           {error && <p className="text-sm text-red-500">{error}</p>}
