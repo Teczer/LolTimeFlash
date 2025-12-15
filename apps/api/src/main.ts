@@ -54,7 +54,7 @@ async function bootstrap() {
   const isProduction = nodeEnv === 'production';
   const apiUrl = isProduction
     ? configService.get<string>('NEXT_PUBLIC_SOCKET_PORT') ||
-      'https://lolsocket.mehdihattou.com'
+      'https://lolsocket.loltimeflash.com'
     : `http://localhost:${port}`;
 
   await app.listen(port);
