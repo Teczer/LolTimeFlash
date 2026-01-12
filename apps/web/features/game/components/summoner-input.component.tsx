@@ -13,6 +13,7 @@ import { useFetchLiveGame } from '@/features/game/hooks/use-fetch-live-game.hook
 import { cn } from '@/lib/utils'
 import type { RiotRegion } from '@loltimeflash/shared'
 import { useState } from 'react'
+import { IoGameController } from 'react-icons/io5'
 import { LoadingSpinner } from './loading-spinner.component'
 
 interface ISummonerInputProps {
@@ -49,6 +50,10 @@ export const SummonerInput = (props: ISummonerInputProps) => {
       onSuccess: onGameDataFetched,
     }
   )
+
+  async function handleFetchLiveGame() {
+    await fetchLiveGame({ summonerName, region })
+  }
 
   return (
     <div
@@ -93,11 +98,9 @@ export const SummonerInput = (props: ISummonerInputProps) => {
       </div>
 
       <Button
-        onClick={async () => {
-          await fetchLiveGame({ summonerName, region })
-        }}
+        onClick={handleFetchLiveGame}
         disabled={isLoading || !summonerName.trim()}
-        variant="secondary"
+        variant="outline"
       >
         {isLoading ? (
           <span className="flex items-center gap-2">
@@ -105,7 +108,10 @@ export const SummonerInput = (props: ISummonerInputProps) => {
             Fetching...
           </span>
         ) : (
-          '🎮 Fetch Live Game'
+          <span className="flex items-center gap-2">
+            <IoGameController className="h-5 w-5" />
+            Fetch Live Game
+          </span>
         )}
       </Button>
     </div>
