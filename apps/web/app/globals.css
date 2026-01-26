@@ -4,55 +4,55 @@
 
 @layer base {
   :root {
-    --background: 209 87% 6%; /* #1 MAUVE */
-    --foreground: 240 6% 94%; /* #12 MAUVE */
-    --card: 260 4% 14%; /* #3 MAUVE */
-    --card-foreground: 0 0% 3.9%; /* BLACK */
-    --popover: 0 0% 100%; /* WHITE */
-    --popover-foreground: 0 0% 3.9%; /* BLACK */
-    --primary: 0 0% 98%; /* OLIVE 11.5 */
+    --background: 209 87% 6%;
+    --foreground: 240 6% 94%;
+    --card: 260 4% 14%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 98%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 107 4% 47%; /* OLIVE 10 */
-    --secondary-foreground: 0 0% 100%; /* WHITE */
-    --muted: 0 0% 96.1%; /* WHITE */
-    --muted-foreground: 0 0% 63.9%; /* GRAY */
+    --secondary: 107 4% 47%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 63.9%;
     --accent: 9 100% 97%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 25% 52%; /* #6 MAUVE */
-    --input: 257 5% 29%; /* #7 MAUVE */
-    --ring: 258 5% 39%; /* #8 MAUVE */
+    --border: 30 25% 52%;
+    --input: 257 5% 29%;
+    --ring: 258 5% 39%;
     --radius: 0.5rem;
-    --first-gradient: 292 79% 77%; /* #1 MAUVE */
-    --second-gradient: 246 100% 83%; /* #2 MAUVE */
-    --third-gradient: 260 4% 14%; /* #3 MAUVE */
+    --first-gradient: 292 79% 77%;
+    --second-gradient: 246 100% 83%;
+    --third-gradient: 260 4% 14%;
   }
 
   .dark {
-    --background: 209 87% 6%; /* #1 MAUVE */
-    --foreground: 240 6% 94%; /* #12 MAUVE */
-    --card: 260 4% 14%; /* #3 MAUVE */
-    --card-foreground: 0 0% 3.9%; /* BLACK */
-    --popover: 0 0% 100%; /* WHITE */
-    --popover-foreground: 0 0% 3.9%; /* BLACK */
-    --primary: 0 0% 98%; /* OLIVE 11.5 */
+    --background: 209 87% 6%;
+    --foreground: 240 6% 94%;
+    --card: 260 4% 14%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 98%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 107 4% 47%; /* OLIVE 10 */
-    --secondary-foreground: 0 0% 100%; /* WHITE */
-    --muted: 0 0% 96.1%; /* WHITE */
-    --muted-foreground: 0 0% 63.9%; /* GRAY */
+    --secondary: 107 4% 47%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 63.9%;
     --accent: 9 100% 97%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
-    --border: 270 5% 24%; /* #6 MAUVE */
-    --input: 257 5% 29%; /* #7 MAUVE */
-    --ring: 258 5% 39%; /* #8 MAUVE */
+    --border: 270 5% 24%;
+    --input: 257 5% 29%;
+    --ring: 258 5% 39%;
     --radius: 0.5rem;
-    --first-gradient: 292 79% 77%; /* #1 MAUVE */
-    --second-gradient: 246 100% 83%; /* #2 MAUVE */
-    --third-gradient: 260 4% 14%; /* #3 MAUVE */
+    --first-gradient: 292 79% 77%;
+    --second-gradient: 246 100% 83%;
+    --third-gradient: 260 4% 14%;
   }
 }
 
