@@ -27,7 +27,7 @@ interface IUseSocketReturn {
   leaveRoom: (roomId: string) => void
   useFlash: (role: Role) => void
   cancelFlash: (role: Role) => void
-  toggleItem: (role: Role, item: 'lucidityBoots' | 'cosmicInsight') => void
+  toggleItem: (role: Role, item: 'lucidityBoots') => void
   adjustTimer: (role: Role, adjustmentSeconds: number) => void
   updateChampionData: (
     roleMapping: import('@loltimeflash/shared').ChampionRoleMapping,
@@ -151,10 +151,7 @@ export const useSocket = (
     }
   }
 
-  const toggleItem = (
-    role: Role,
-    item: 'lucidityBoots' | 'cosmicInsight'
-  ): void => {
+  const toggleItem = (role: Role, item: 'lucidityBoots'): void => {
     if (socketRef.current) {
       socketRef.current.emit('game:toggle:item', { role, item })
     }

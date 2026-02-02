@@ -1,12 +1,14 @@
-import type { IGameData, ILeagueRole, ISummonerData } from '@/features/game/types/game.types'
+import type {
+  IGameData,
+  ILeagueRole,
+  ISummonerData,
+} from '@/features/game/types/game.types'
 
 /**
  * Flash cooldown durations in seconds
  */
 export const FLASH_BASE_COOLDOWN = 300 // 5 minutes
 export const FLASH_COOLDOWN_WITH_BOOTS = 268 // 4:28
-export const FLASH_COOLDOWN_WITH_RUNE = 255 // 4:15
-export const FLASH_COOLDOWN_WITH_BOTH = 231 // 3:51
 
 /**
  * League of Legends roles with icons
@@ -40,7 +42,6 @@ export const LEAGUE_ROLES: ILeagueRole[] = [
 export const DEFAULT_SUMMONER_DATA: ISummonerData = {
   isFlashed: false,
   lucidityBoots: false,
-  cosmicInsight: false,
 }
 
 /**

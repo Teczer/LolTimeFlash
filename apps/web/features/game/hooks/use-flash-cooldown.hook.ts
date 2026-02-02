@@ -1,29 +1,13 @@
-import type { TRole, ISummonerData } from '@/features/game/types/game.types'
 import {
   FLASH_BASE_COOLDOWN,
   FLASH_COOLDOWN_WITH_BOOTS,
-  FLASH_COOLDOWN_WITH_RUNE,
-  FLASH_COOLDOWN_WITH_BOTH,
 } from '@/features/game/constants/game.constants'
 
-interface ICalculateCooldownOptions {
-  lucidityBoots: boolean
-  cosmicInsight: boolean
-}
-
-export const calculateFlashCooldown = (options: ICalculateCooldownOptions): number => {
-  const { lucidityBoots, cosmicInsight } = options
-
-  if (lucidityBoots && cosmicInsight) {
-    return FLASH_COOLDOWN_WITH_BOTH
-  }
-  if (lucidityBoots) {
-    return FLASH_COOLDOWN_WITH_BOOTS
-  }
-  if (cosmicInsight) {
-    return FLASH_COOLDOWN_WITH_RUNE
-  }
-  return FLASH_BASE_COOLDOWN
+/**
+ * Calculate Flash cooldown based on Lucidity Boots
+ */
+export const calculateFlashCooldown = (hasBoots: boolean): number => {
+  return hasBoots ? FLASH_COOLDOWN_WITH_BOOTS : FLASH_BASE_COOLDOWN
 }
 
 /**
@@ -56,7 +40,7 @@ export const timestampToCountdown = (endsAt: number): number => {
 export const formatCooldown = (seconds: number): string => {
   const minutes = Math.floor(seconds / 60)
   const remainingSeconds = seconds % 60
-  const paddedSeconds = remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds
+  const paddedSeconds =
+    remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds
   return `${minutes}:${paddedSeconds}`
 }
-

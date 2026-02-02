@@ -1,5 +1,8 @@
 import type { FlashEventData, ItemToggleData, Role } from '@app/shared';
-import { calculateFlashCooldown, REACTION_TIME_COMPENSATION } from '@app/shared';
+import {
+  calculateFlashCooldown,
+  REACTION_TIME_COMPENSATION,
+} from '@app/shared';
 import { Injectable } from '@nestjs/common';
 import { RoomService } from '../room/room.service';
 
@@ -17,21 +20,16 @@ export class GameService {
       throw new Error(`Room ${roomId} not found`);
     }
 
-    // Extract values explicitly to help ESLint type inference
     const summonerData = room.roles[role];
     const hasLucidityBoots: boolean = summonerData.lucidityBoots;
-    const hasCosmicInsight: boolean = summonerData.cosmicInsight;
 
-    const cooldown: number = calculateFlashCooldown(
-      hasLucidityBoots,
-      hasCosmicInsight,
-    );
-    
-    // ✅ Apply reaction time compensation (3s advance)
+    const cooldown: number = calculateFlashCooldown(hasLucidityBoots);
+
+    // Apply reaction time compensation (3s advance)
     const adjustedCooldown: number = cooldown - REACTION_TIME_COMPENSATION;
     const endsAt: number = Date.now() + adjustedCooldown * 1000;
 
-    // ✅ Store endsAt timestamp instead of countdown
+    // Store endsAt timestamp instead of countdown
     room.roles[role].isFlashed = endsAt;
     this.roomService.updateRoom(roomId, { roles: room.roles });
 
@@ -60,12 +58,12 @@ export class GameService {
   }
 
   /**
-   * Handle item toggle (Lucidity Boots or Cosmic Insight)
+   * Handle item toggle (Lucidity Boots)
    */
   toggleItem(
     roomId: string,
     role: Role,
-    item: 'lucidityBoots' | 'cosmicInsight',
+    item: 'lucidityBoots',
     username: string,
   ): ItemToggleData {
     const room = this.roomService.getRoom(roomId);
@@ -74,36 +72,24 @@ export class GameService {
       throw new Error(`Room ${roomId} not found`);
     }
 
-    // Extract values explicitly to help ESLint type inference
     const roleData = room.roles[role];
-    const currentValue: boolean = roleData[item];
+    const currentValue: boolean = roleData.lucidityBoots;
     const newValue: boolean = !currentValue;
 
     // Toggle the item
-    roleData[item] = newValue;
+    roleData.lucidityBoots = newValue;
 
-    // ✅ If Flash is on cooldown, recalculate endsAt based on new cooldown
+    // If Flash is on cooldown, recalculate endsAt based on new cooldown
     if (typeof roleData.isFlashed === 'number') {
       const currentEndsAt: number = roleData.isFlashed;
       const now: number = Date.now();
       const remainingTime: number = Math.max(0, currentEndsAt - now);
 
-      // Extract boot/rune states
-      const hasBoots: boolean = roleData.lucidityBoots;
-      const hasInsight: boolean = roleData.cosmicInsight;
-
-      // Calculate new cooldown with updated items
-      const newCooldownTotal: number = calculateFlashCooldown(
-        item === 'lucidityBoots' ? newValue : hasBoots,
-        item === 'cosmicInsight' ? newValue : hasInsight,
-      );
+      // Calculate new and old cooldowns
+      const newCooldownTotal: number = calculateFlashCooldown(newValue);
+      const oldCooldownTotal: number = calculateFlashCooldown(currentValue);
 
       // Adjust endsAt: keep the same remaining percentage
-      const oldCooldownTotal: number = calculateFlashCooldown(
-        item === 'lucidityBoots' ? currentValue : hasBoots,
-        item === 'cosmicInsight' ? currentValue : hasInsight,
-      );
-
       const percentageRemaining: number =
         remainingTime / (oldCooldownTotal * 1000);
       const newRemainingTime: number =

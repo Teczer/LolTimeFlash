@@ -57,11 +57,6 @@ export interface SummonerData {
   lucidityBoots: boolean;
 
   /**
-   * Whether the player has Cosmic Insight rune (15% CDR)
-   */
-  cosmicInsight: boolean;
-
-  /**
    * Champion data (optional, populated from live game)
    */
   champion?: ChampionData;
@@ -165,7 +160,7 @@ export interface ItemToggleData {
   /**
    * Item that was toggled
    */
-  item: 'lucidityBoots' | 'cosmicInsight';
+  item: 'lucidityBoots';
 
   /**
    * New value for the item

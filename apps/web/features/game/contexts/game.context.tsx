@@ -1,18 +1,22 @@
 'use client'
 
-import { createContext, useCallback, useContext, useState } from 'react'
 import { DEFAULT_GAME_DATA } from '@/features/game/constants/game.constants'
 import { useAudio } from '@/features/game/hooks/use-audio.hook'
 import { calculateFlashCooldown } from '@/features/game/hooks/use-flash-cooldown.hook'
 import { useGameTimer } from '@/features/game/hooks/use-game-timer.hook'
-import type { IChampionData, IGameData, TRole } from '@/features/game/types/game.types'
+import type {
+  IChampionData,
+  IGameData,
+  TRole,
+} from '@/features/game/types/game.types'
+import { createContext, useCallback, useContext, useState } from 'react'
 
 interface IGameContextValue {
   gameState: IGameData
   setGameState: React.Dispatch<React.SetStateAction<IGameData>>
   useFlash: (role: TRole) => void
   cancelFlash: (role: TRole) => void
-  toggleItem: (role: TRole, item: 'lucidityBoots' | 'cosmicInsight') => void
+  toggleItem: (role: TRole, item: 'lucidityBoots') => void
   adjustTimer: (role: TRole, adjustmentSeconds: number) => void
   updateChampionData: (
     roleMapping: Partial<Record<TRole, IChampionData>>,
@@ -41,19 +45,16 @@ export const GameProvider = (props: IGameProviderProps) => {
   // Timer countdown (decrements every second)
   useGameTimer({ gameState, setGameState })
 
-  // ✅ Use Flash for a role (timestamp-based)
+  // Use Flash for a role (timestamp-based)
   const useFlash = useCallback(
     (role: TRole) => {
       setGameState((prev) => {
         const roleData = prev.roles[role]
 
-        // Calculate cooldown based on items (in seconds)
-        const cooldownSeconds = calculateFlashCooldown({
-          lucidityBoots: roleData.lucidityBoots,
-          cosmicInsight: roleData.cosmicInsight,
-        })
+        // Calculate cooldown based on Lucidity Boots
+        const cooldownSeconds = calculateFlashCooldown(roleData.lucidityBoots)
 
-        // ✅ Apply 3s compensation and convert to timestamp
+        // Apply 3s compensation and convert to timestamp
         const REACTION_COMPENSATION = 3 // seconds
         const adjustedCooldown = cooldownSeconds - REACTION_COMPENSATION
         const endsAt = Date.now() + adjustedCooldown * 1000
@@ -90,56 +91,44 @@ export const GameProvider = (props: IGameProviderProps) => {
     }))
   }, [])
 
-  // ✅ Toggle item (Boots or Rune) - timestamp-based
-  const toggleItem = useCallback(
-    (role: TRole, item: 'lucidityBoots' | 'cosmicInsight') => {
-      setGameState((prev) => {
-        const roleData = prev.roles[role]
-        const newItemValue = !roleData[item]
+  // Toggle Lucidity Boots - timestamp-based
+  const toggleItem = useCallback((role: TRole, item: 'lucidityBoots') => {
+    setGameState((prev) => {
+      const roleData = prev.roles[role]
+      const newItemValue = !roleData.lucidityBoots
 
-        // If Flash is on cooldown, recalculate timestamp proportionally
-        let newFlashValue = roleData.isFlashed
-        if (typeof roleData.isFlashed === 'number') {
-          const endsAt = roleData.isFlashed
-          const now = Date.now()
-          const remainingMs = Math.max(0, endsAt - now)
+      // If Flash is on cooldown, recalculate timestamp proportionally
+      let newFlashValue = roleData.isFlashed
+      if (typeof roleData.isFlashed === 'number') {
+        const endsAt = roleData.isFlashed
+        const now = Date.now()
+        const remainingMs = Math.max(0, endsAt - now)
 
-          // Calculate old and new max cooldowns (in seconds)
-          const oldMaxCooldown = calculateFlashCooldown({
-            lucidityBoots: roleData.lucidityBoots,
-            cosmicInsight: roleData.cosmicInsight,
-          })
+        // Calculate old and new max cooldowns (in seconds)
+        const oldMaxCooldown = calculateFlashCooldown(roleData.lucidityBoots)
+        const newMaxCooldown = calculateFlashCooldown(newItemValue)
 
-          const newMaxCooldown = calculateFlashCooldown({
-            lucidityBoots:
-              item === 'lucidityBoots' ? newItemValue : roleData.lucidityBoots,
-            cosmicInsight:
-              item === 'cosmicInsight' ? newItemValue : roleData.cosmicInsight,
-          })
+        // Keep the same percentage remaining
+        const percentageRemaining = remainingMs / (oldMaxCooldown * 1000)
+        const newRemainingMs = percentageRemaining * newMaxCooldown * 1000
 
-          // Keep the same percentage remaining
-          const percentageRemaining = remainingMs / (oldMaxCooldown * 1000)
-          const newRemainingMs = percentageRemaining * newMaxCooldown * 1000
+        // Recalculate new endsAt timestamp
+        newFlashValue = now + newRemainingMs
+      }
 
-          // ✅ Recalculate new endsAt timestamp
-          newFlashValue = now + newRemainingMs
-        }
-
-        return {
-          ...prev,
-          roles: {
-            ...prev.roles,
-            [role]: {
-              ...roleData,
-              [item]: newItemValue,
-              isFlashed: newFlashValue,
-            },
+      return {
+        ...prev,
+        roles: {
+          ...prev.roles,
+          [role]: {
+            ...roleData,
+            lucidityBoots: newItemValue,
+            isFlashed: newFlashValue,
           },
-        }
-      })
-    },
-    []
-  )
+        },
+      }
+    })
+  }, [])
 
   // ✅ Adjust Flash timer manually (add or subtract seconds)
   const adjustTimer = useCallback((role: TRole, adjustmentSeconds: number) => {

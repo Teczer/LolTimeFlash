@@ -64,8 +64,8 @@ const SoloGameContent = () => {
       {/* Controls */}
       <GameControls volume={audio.volume} onToggleVolume={audio.toggleVolume} />
 
-      {/* Summoner Input */}
-      <div className="hidden sm:flex">
+      {/* Summoner Input - Desktop only */}
+      <div className="hidden md:flex">
         <SummonerInput onGameDataFetched={handleGameDataFetched} />
       </div>
 
@@ -83,25 +83,67 @@ const SoloGameContent = () => {
         />
       )}
 
-      {/* Role Grid */}
-      <div className="flex h-4/5 w-full flex-wrap sm:flex-nowrap">
-        {LEAGUE_ROLES.map((role, index) => {
-          const roleData = gameState.roles[role.name]
-          const isLastRole = index === LEAGUE_ROLES.length - 1
+      {/* Role Grid - 2-1-2 on mobile/tablet, 5 columns on desktop */}
+      <div className="flex h-4/5 w-full flex-col justify-evenly md:flex-row md:items-center">
+        {/* Mobile/Tablet: 2-1-2 layout */}
+        <div className="flex flex-col items-center justify-evenly gap-4 md:hidden">
+          {/* Row 1: TOP, JUNGLE */}
+          <div className="flex w-full justify-evenly">
+            {LEAGUE_ROLES.slice(0, 2).map((role) => (
+              <RoleCard
+                key={role.name}
+                role={role}
+                data={gameState.roles[role.name]}
+                onFlashClick={() => handleFlashClick(role.name)}
+                onToggleBoots={() => toggleItem(role.name, 'lucidityBoots')}
+                onAdjustTimer={(seconds) => adjustTimer(role.name, seconds)}
+              />
+            ))}
+          </div>
 
-          return (
+          {/* Row 2: MID (centered) */}
+          <div className="flex justify-center">
+            <RoleCard
+              role={LEAGUE_ROLES[2]}
+              data={gameState.roles[LEAGUE_ROLES[2].name]}
+              onFlashClick={() => handleFlashClick(LEAGUE_ROLES[2].name)}
+              onToggleBoots={() =>
+                toggleItem(LEAGUE_ROLES[2].name, 'lucidityBoots')
+              }
+              onAdjustTimer={(seconds) =>
+                adjustTimer(LEAGUE_ROLES[2].name, seconds)
+              }
+            />
+          </div>
+
+          {/* Row 3: ADC, SUPPORT */}
+          <div className="flex w-full justify-evenly">
+            {LEAGUE_ROLES.slice(3, 5).map((role) => (
+              <RoleCard
+                key={role.name}
+                role={role}
+                data={gameState.roles[role.name]}
+                onFlashClick={() => handleFlashClick(role.name)}
+                onToggleBoots={() => toggleItem(role.name, 'lucidityBoots')}
+                onAdjustTimer={(seconds) => adjustTimer(role.name, seconds)}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: 5 columns layout */}
+        <div className="hidden w-full justify-evenly md:flex">
+          {LEAGUE_ROLES.map((role) => (
             <RoleCard
               key={role.name}
               role={role}
-              data={roleData}
+              data={gameState.roles[role.name]}
               onFlashClick={() => handleFlashClick(role.name)}
               onToggleBoots={() => toggleItem(role.name, 'lucidityBoots')}
-              onToggleRune={() => toggleItem(role.name, 'cosmicInsight')}
               onAdjustTimer={(seconds) => adjustTimer(role.name, seconds)}
-              isLastRole={isLastRole}
             />
-          )
-        })}
+          ))}
+        </div>
       </div>
     </main>
   )

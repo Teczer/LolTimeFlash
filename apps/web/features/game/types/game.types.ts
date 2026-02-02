@@ -11,17 +11,17 @@ export interface IChampionData {
    * Champion ID (e.g., 266 for Aatrox)
    */
   championId: number
-  
+
   /**
    * Champion name (e.g., "Aatrox")
    */
   championName: string
-  
+
   /**
    * Champion icon URL
    */
   championIconUrl: string
-  
+
   /**
    * Summoner name of the player
    */
@@ -33,19 +33,18 @@ export interface IChampionData {
  */
 export interface ISummonerData {
   /**
-   * ✅ Flash cooldown status (TIMESTAMP-BASED)
+   * Flash cooldown status (TIMESTAMP-BASED)
    * - false: Flash is available
    * - number: Timestamp in milliseconds when Flash will be available (endsAt)
-   * 
+   *
    * Example: 1700000300000 means Flash will be ready at this Date.now() timestamp
-   * 
+   *
    * Note: Components calculate countdown dynamically using getRemainingTime(isFlashed)
    * This prevents time drift and ensures synchronization across all clients
    */
   isFlashed: false | number
   lucidityBoots: boolean
-  cosmicInsight: boolean
-  
+
   /**
    * Champion data (optional, populated from live game)
    */
@@ -69,12 +68,12 @@ export interface IRoleData {
 export interface IGameData {
   users: string[]
   roles: IRoleData
-  
+
   /**
    * Summoner name of the player (for Riot API integration)
    */
   summonerName?: string
-  
+
   /**
    * Region of the player (e.g., 'euw1', 'na1')
    */
@@ -103,4 +102,3 @@ export interface ILeagueRole {
  * Game mode type
  */
 export type TGameMode = 'solo' | 'multiplayer'
-

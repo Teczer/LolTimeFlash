@@ -13,7 +13,7 @@
 ### Key Features
 
 - ⏰ Real-time Flash cooldown tracking for all 5 enemy roles (TOP, JUNGLE, MID, ADC, SUPPORT)
-- 🎯 Automatic cooldown calculation based on Lucidity Boots and Cosmic Insight rune
+- 🎯 Automatic cooldown calculation based on Lucidity Boots
 - 🔄 Live synchronization across all room members via WebSocket
 - 🎨 Customizable background with League of Legends champion splash arts
 - 👤 Username management and room-based multiplayer
@@ -323,12 +323,10 @@ interface ServerToClientEvents {
 
 **Flash Cooldown Calculation**:
 
-| Configuration  | Cooldown | Formula                              |
-| -------------- | -------- | ------------------------------------ |
-| Base           | 300s     | -                                    |
-| Lucidity Boots | 268s     | 300 - (300 × 10.67%) = 268s          |
-| Cosmic Insight | 255s     | 300 - (300 × 15%) = 255s             |
-| **Both**       | **231s** | **300 - (300 × 10.67% + 300 × 15%)** |
+| Configuration  | Cooldown | Formula                     |
+| -------------- | -------- | --------------------------- |
+| Base           | 300s     | -                           |
+| Lucidity Boots | 268s     | 300 - (300 × 10.67%) = 268s |
 
 #### **Game Screens**
 
@@ -585,12 +583,8 @@ toast({
 ```typescript
 let flashTime = 300 // Base cooldown
 
-if (lucidityBoots && cosmicInsight) {
-  flashTime = 231 // -69s (23% CDR)
-} else if (lucidityBoots && !cosmicInsight) {
+if (lucidityBoots) {
   flashTime = 268 // -32s (10.67% CDR from boots)
-} else if (!lucidityBoots && cosmicInsight) {
-  flashTime = 255 // -45s (15% CDR from rune)
 } else {
   flashTime = 300 // No CDR
 }
@@ -1011,11 +1005,11 @@ export const userVolume = localStorage.getItem('volume')
 export const gameDefaultData: GameData = {
   users: [currentUsername],
   roles: {
-    TOP: { isFlashed: false, lucidityBoots: false, cosmicInsight: false },
-    JUNGLE: { isFlashed: false, lucidityBoots: false, cosmicInsight: false },
-    MID: { isFlashed: false, lucidityBoots: false, cosmicInsight: false },
-    SUPPORT: { isFlashed: false, lucidityBoots: false, cosmicInsight: false },
-    ADC: { isFlashed: false, lucidityBoots: false, cosmicInsight: false },
+    TOP: { isFlashed: false, lucidityBoots: false },
+    JUNGLE: { isFlashed: false, lucidityBoots: false },
+    MID: { isFlashed: false, lucidityBoots: false },
+    SUPPORT: { isFlashed: false, lucidityBoots: false },
+    ADC: { isFlashed: false, lucidityBoots: false },
   },
 }
 ```
@@ -1647,13 +1641,9 @@ export const Card = (props: ICardProps) => {
    /**
     * Calculates Flash cooldown based on items and runes
     * @param lucidityBoots - Has Ionian Boots of Lucidity
-    * @param cosmicInsight - Has Cosmic Insight rune
     * @returns Cooldown in seconds
     */
-   export const calculateFlashCooldown = (
-     lucidityBoots: boolean,
-     cosmicInsight: boolean
-   ): number => {
+   export const calculateFlashCooldown = (lucidityBoots: boolean): number => {
      // Implementation
    }
 

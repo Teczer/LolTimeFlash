@@ -26,7 +26,7 @@ const MobileUserListDrawerComponent = (props: IMobileUserListDrawerProps) => {
     <Drawer>
       <DrawerTrigger asChild>
         <Button
-          className="absolute right-6 top-10 flex sm:hidden"
+          className="absolute right-6 top-10 flex md:hidden"
           variant="outline"
           size="icon"
           aria-label="Open user list drawer"

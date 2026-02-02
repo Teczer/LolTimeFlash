@@ -2,7 +2,7 @@ import type { Role } from '@app/shared';
 import { ROLES } from '@app/shared';
 import { IsEnum, IsIn } from 'class-validator';
 
-const ITEMS = ['lucidityBoots', 'cosmicInsight'] as const;
+const ITEMS = ['lucidityBoots'] as const;
 type Item = (typeof ITEMS)[number];
 
 export class ToggleItemDto {
@@ -12,7 +12,7 @@ export class ToggleItemDto {
   role: Role;
 
   @IsIn(ITEMS, {
-    message: 'Item must be either lucidityBoots or cosmicInsight',
+    message: 'Item must be lucidityBoots',
   })
   item: Item;
 }

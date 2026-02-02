@@ -31,12 +31,9 @@ export interface ClientToServerEvents {
   'game:flash:cancel': (payload: { role: Role }) => void;
 
   /**
-   * Toggle item (Lucidity Boots or Cosmic Insight)
+   * Toggle Lucidity Boots
    */
-  'game:toggle:item': (payload: {
-    role: Role;
-    item: 'lucidityBoots' | 'cosmicInsight';
-  }) => void;
+  'game:toggle:item': (payload: { role: Role; item: 'lucidityBoots' }) => void;
 
   /**
    * Update champion data from live game

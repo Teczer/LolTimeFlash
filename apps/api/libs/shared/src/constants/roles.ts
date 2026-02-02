@@ -25,5 +25,4 @@ export function isValidRole(role: string): role is Role {
 export const DEFAULT_SUMMONER_DATA = {
   isFlashed: false,
   lucidityBoots: false,
-  cosmicInsight: false,
 } as const;
